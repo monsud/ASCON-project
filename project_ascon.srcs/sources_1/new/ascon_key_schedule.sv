@@ -27,7 +27,7 @@ module ascon_key_schedule (
   output reg [127:0] state_out
 );
 
-  reg [127:0] w[15];
+  reg [127:0] w[16];
   reg [2:0] i;
 
   // Generate the 16 round keys
