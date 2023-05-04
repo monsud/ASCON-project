@@ -1,5 +1,6 @@
 # ASCON-project
-Implementation in hardware of ASCON: a lightweight cryptographic algorithm designed for use in constrained environments, such as low-power microcontrollers and sensors. It provides confidentiality and integrity protection for messages using a combination of a permutation and a keyed S-box.
+Implementation in hardware of ASCON: a lightweight cryptographic algorithm designed for use in constrained environments, such as low-power microcontrollers and sensors.
+
 The ASCON encryption algorithm involves the following steps:
 
 **Key setup:** Generate the key schedule from the secret key using a key schedule algorithm. This generates a set of round keys that will be used in the encryption and decryption process.
