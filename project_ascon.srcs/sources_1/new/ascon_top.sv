@@ -50,15 +50,13 @@ module ascon_top (
     .state_out(key_schedule_state)
   );
 
-  assign round_state = plaintext;
-
   genvar i;
   generate
     for (i = 0; i < 12; i = i + 1) begin
       ascon_round round_inst(
         .clk(clk),
         .rst(rst),
-        .state_in(round_state),
+        .state_in(key_schedule_state ^ plaintext),
         .state_out(round_state),
         .round_number(i)
       );
