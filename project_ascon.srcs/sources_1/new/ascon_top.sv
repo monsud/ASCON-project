@@ -32,7 +32,6 @@ module ascon_top (
   wire [127:0] key_schedule_state;
   wire [127:0] round_state;
   wire [127:0] finalization_state;
-  wire [127:0] truncation_state;
 
   // Instantiate initialization module
   ascon_initialization init_inst(

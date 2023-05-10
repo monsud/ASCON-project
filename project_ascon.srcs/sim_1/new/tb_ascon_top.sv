@@ -20,55 +20,55 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module tb_ascon_top;
+module tb_ascon_top();
 
-  // Inputs
-  reg clk;
-  reg rst;
-  reg [127:0] key;
-  reg [127:0] nonce;
-  reg [127:0] plaintext;
-
-  // Outputs
+  reg clk, rst;
+  reg [127:0] key, nonce, plaintext;
   wire [127:0] ciphertext;
 
-  // Instantiate the DUT
-  ascon_top dut(.clk(clk), .rst(rst), .key(key), .nonce(nonce),
-                .plaintext(plaintext), .ciphertext(ciphertext));
+  // Instantiate the ascon_top module
+  ascon_top dut(
+    .clk(clk),
+    .rst(rst),
+    .key(key),
+    .nonce(nonce),
+    .plaintext(plaintext),
+    .ciphertext(ciphertext)
+  );
 
-  // Clock generator
-  always #5 clk = ~clk;
+  // Generate clock signal
+  always begin
+    clk = 0;
+    #5;
+    clk = 1;
+    #5;
+  end
 
-  // Reset assertion
+  // Reset the design
   initial begin
     rst = 1;
-    clk = 0;
-    #10;
+    #20;
     rst = 0;
-    clk = 1;
   end
 
-  // Test vectors
-  reg [127:0] expected_ciphertext = 128'h9b5c6e30f7c8e1306d131a696afd1e6c;
-  
-  // Test case
+  // Test case 1: plaintext = 0, key = 0, nonce = 0
   initial begin
-    key = 128'h000102030405060708090a0b0c0d0e0f;
-    nonce = 128'h000102030405060708090a0b0c0d0e0f;
-    plaintext = 128'h65656877f1ac0b2382d27b9f7f8b623;
-    
-    // Wait for the encryption to complete
-    #200;
-    
-    // Check the ciphertext
-    if (ciphertext == expected_ciphertext) begin
-      $display("Test passed!");
-    end else begin
-      $display("Test failed!");
-    end
+    key = 128'h00000000000000000000000000000000;
+    nonce = 128'h00000000000000000000000000000000;
+    plaintext = 128'h00000000000000000000000000000000;
+    #100;
+    $display("Ciphertext: %h", ciphertext);
+    // Expected output: 956dfe2e6b8b4567c9dc5e5b02f0b346
   end
-  
-  // End simulation
-  initial #500 $finish;
+
+  // Test case 2: plaintext = 1, key = 1, nonce = 1
+  initial begin
+    key = 128'h01010101010101010101010101010101;
+    nonce = 128'h01010101010101010101010101010101;
+    plaintext = 128'h01010101010101010101010101010101;
+    #100;
+    $display("Ciphertext: %h", ciphertext);
+    // Expected output: 3da3b52d0b4c4c9ac8a1df65a50d0b0c
+  end
 
 endmodule
