@@ -4,22 +4,21 @@ Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'round_num' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_initalization.sv:36]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 128 for port 'state_in' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_initalization.sv:37]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 12 for port 'round_number' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_top.sv:63]
+WARNING: [VRFC 10-3091] actual bit length 256 differs from formal bit length 128 for port 'state_in' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_initalization.sv:36]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 12 for port 'round_number' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_initalization.sv:38]
 WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 4 for port 'round_num' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:36]
-WARNING: [VRFC 10-3823] variable 'state_out' might have multiple concurrent drivers [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_initalization.sv:48]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 12 for port 'round_number' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_top.sv:63]
 WARNING: [VRFC 10-3823] variable 'state_out' might have multiple concurrent drivers [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.ascon_add_constant
-Compiling module xil_defaultlib.ascon_initialization
-Compiling module xil_defaultlib.ascon_key_schedule
 Compiling module xil_defaultlib.ascon_sbox
 Compiling module xil_defaultlib.ascon_linear_diffusion
 Compiling module xil_defaultlib.ascon_round
+Compiling module xil_defaultlib.ascon_initialization
+Compiling module xil_defaultlib.ascon_key_schedule
 Compiling module xil_defaultlib.ascon_finalization
 Compiling module xil_defaultlib.ascon_truncation
 Compiling module xil_defaultlib.ascon_top_default
