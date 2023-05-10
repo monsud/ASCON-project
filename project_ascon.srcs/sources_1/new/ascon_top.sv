@@ -55,13 +55,14 @@ module ascon_top (
   genvar i;
   generate
     for (i = 0; i < 12; i = i + 1) begin
-      ascon_round round_inst(
+      ascon_round round_inst (
         .clk(clk),
         .rst(rst),
-        .state_in(key_schedule_state),
+        .state_in(key_schedule_state ^ plaintext),
         .state_out(round_state),
         .round_number(i)
       );
+      //assign key_schedule_state = round_state;
     end
   endgenerate
 
