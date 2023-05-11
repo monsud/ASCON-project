@@ -49,7 +49,7 @@ module ascon_round (
   );
   
   always_ff @(posedge clk, negedge rst) begin
-    if (!rst) begin
+    if (rst) begin
       state_ld <= 0;
       state_out <= 0;
     end

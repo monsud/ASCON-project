@@ -31,6 +31,7 @@ module ascon_top (
   wire [127:0] initialization_state;
   wire [127:0] key_schedule_state;
   wire [127:0] round_state;
+  wire [(128*12)-1:0] temp_round;
   wire [127:0] finalization_state;
 
   // Instantiate initialization module
@@ -53,18 +54,19 @@ module ascon_top (
 
   // Instantiate 12 rounds of ASCON
   genvar i;
+  assign temp_round[127:0] = key_schedule_state ^ plaintext;
   generate
     for (i = 0; i < 12; i = i + 1) begin
       ascon_round round_inst (
         .clk(clk),
         .rst(rst),
-        .state_in(key_schedule_state ^ plaintext),
-        .state_out(round_state),
+        .state_in(temp_round[i*128 + 127 : i*128]),
+        .state_out(temp_round[(i+1)*128 + 127 : (i+1)*128]),
         .round_number(i)
       );
-      //assign key_schedule_state = round_state;
     end
   endgenerate
+      assign round_state = temp_round[11*128 + 127:11*128];
 
   // Instantiate finalization module
   ascon_finalization final_inst(
