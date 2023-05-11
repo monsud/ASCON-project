@@ -13,8 +13,7 @@ INFO: [VRFC 10-311] analyzing module ascon_round
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_sbox.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ascon_sbox
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_top.sv" into library xil_defaultlib
+ERROR: [VRFC 10-2934] 'LENGTH' is already declared [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_top.sv:21]
+ERROR: [VRFC 10-2934] 'ROUNDS' is already declared [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_top.sv:22]
 INFO: [VRFC 10-311] analyzing module ascon_top
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_truncation.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ascon_truncation
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sim_1/new/tb_ascon_top.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_ascon_top
+ERROR: [VRFC 10-8530] module 'ascon_top' is ignored due to previous errors [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_top.sv:24]

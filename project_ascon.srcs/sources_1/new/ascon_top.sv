@@ -18,21 +18,23 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
+  localparam int LENGTH = 128;
+  localparam int ROUNDS = 12;
 
 module ascon_top (
   input clk,
   input rst,
-  input [127:0] key,
-  input [127:0] nonce,
-  input [127:0] plaintext,
-  output [127:0] ciphertext
+  input [LENGTH-1:0] key,
+  input [LENGTH-1:0] nonce,
+  input [LENGTH-1:0] plaintext,
+  output [LENGTH-1:0] ciphertext
 );
 
-  wire [127:0] initialization_state;
-  wire [127:0] key_schedule_state;
-  wire [127:0] round_state;
-  wire [(128*12)-1:0] temp_round;
-  wire [127:0] finalization_state;
+  wire [LENGTH-1:0] initialization_state;
+  wire [LENGTH-1:0] key_schedule_state;
+  wire [LENGTH-1:0] round_state;
+  wire [(LENGTH*ROUNDS)-1:0] temp_round;
+  wire [LENGTH-1:0] finalization_state;
 
   // Instantiate initialization module
   ascon_initialization init_inst(
@@ -54,19 +56,19 @@ module ascon_top (
 
   // Instantiate 12 rounds of ASCON
   genvar i;
-  assign temp_round[127:0] = key_schedule_state ^ plaintext;
+  assign temp_round[LENGTH-1:0] = key_schedule_state ^ plaintext;
   generate
-    for (i = 0; i < 12; i = i + 1) begin
+    for (i = 0; i < ROUNDS; i = i + 1) begin
       ascon_round round_inst (
         .clk(clk),
         .rst(rst),
-        .state_in(temp_round[i*128 + 127 : i*128]),
-        .state_out(temp_round[(i+1)*128 + 127 : (i+1)*128]),
+        .state_in(temp_round[i*LENGTH + LENGTH-1 : i*LENGTH]),
+        .state_out(temp_round[(i+1)*LENGTH + LENGTH-1 : (i+1)*LENGTH]),
         .round_number(i)
       );
     end
   endgenerate
-      assign round_state = temp_round[11*128 + 127:11*128];
+      assign round_state = temp_round[(ROUNDS-1)*LENGTH + LENGTH-1 : (ROUNDS-1)*LENGTH];
 
   // Instantiate finalization module
   ascon_finalization final_inst(
