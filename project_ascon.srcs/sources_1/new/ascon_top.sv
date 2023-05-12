@@ -24,10 +24,10 @@
 module ascon_top (
   input clk,
   input rst,
-  input [LENGTH-1:0] key,
-  input [LENGTH-1:0] nonce,
-  input [LENGTH-1:0] plaintext,
-  output [LENGTH-1:0] ciphertext
+  input [127:0] key,
+  input [127:0] nonce,
+  input [127:0] plaintext,
+  output [127:0] ciphertext
 );
 
   wire [LENGTH-1:0] initialization_state;
