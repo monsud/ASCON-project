@@ -1,0 +1,486 @@
+
+*** Running vivado
+    with args -log ascon_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ascon_top.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source ascon_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 377.207 ; gain = 63.566
+Command: synth_design -top ascon_top -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 3028
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 816.043 ; gain = 413.969
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ascon_top' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_top.sv:24]
+INFO: [Synth 8-6157] synthesizing module 'ascon_round' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'ascon_add_constant' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_add_constant.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'ascon_add_constant' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_add_constant.sv:23]
+WARNING: [Synth 8-689] width (12) of port connection 'round_num' does not match port width (4) of module 'ascon_add_constant' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:36]
+INFO: [Synth 8-6157] synthesizing module 'ascon_sbox' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_sbox.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'ascon_sbox' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_sbox.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'ascon_linear_diffusion' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_linear_diffusion.sv:22]
+INFO: [Synth 8-6155] done synthesizing module 'ascon_linear_diffusion' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_linear_diffusion.sv:22]
+INFO: [Synth 8-6155] done synthesizing module 'ascon_round' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'ascon_initialization' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_initalization.sv:22]
+WARNING: [Synth 8-689] width (256) of port connection 'state_in' does not match port width (128) of module 'ascon_round' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_initalization.sv:36]
+WARNING: [Synth 8-689] width (64) of port connection 'round_number' does not match port width (12) of module 'ascon_round' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_initalization.sv:38]
+INFO: [Synth 8-6155] done synthesizing module 'ascon_initialization' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_initalization.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'ascon_key_schedule' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_key_schedule.sv:22]
+INFO: [Synth 8-6155] done synthesizing module 'ascon_key_schedule' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_key_schedule.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'ascon_finalization' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_finalization.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'ascon_finalization' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_finalization.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'ascon_truncation' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_truncation.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'ascon_truncation' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_truncation.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'ascon_top' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_top.sv:24]
+WARNING: [Synth 8-7129] Port round_number[11] in module ascon_round is either unconnected or has no load
+WARNING: [Synth 8-7129] Port round_number[10] in module ascon_round is either unconnected or has no load
+WARNING: [Synth 8-7129] Port round_number[9] in module ascon_round is either unconnected or has no load
+WARNING: [Synth 8-7129] Port round_number[8] in module ascon_round is either unconnected or has no load
+WARNING: [Synth 8-7129] Port round_number[7] in module ascon_round is either unconnected or has no load
+WARNING: [Synth 8-7129] Port round_number[6] in module ascon_round is either unconnected or has no load
+WARNING: [Synth 8-7129] Port round_number[5] in module ascon_round is either unconnected or has no load
+WARNING: [Synth 8-7129] Port round_number[4] in module ascon_round is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[127] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[126] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[125] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[124] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[123] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[122] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[121] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[120] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[119] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[118] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[117] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[116] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[115] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[114] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[113] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[112] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[111] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[110] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[109] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[108] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[107] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[106] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[105] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[104] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[103] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[102] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[101] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[100] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[99] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[98] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[97] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[96] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[95] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[94] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[93] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[92] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[91] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[90] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[89] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[88] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[87] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[86] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[85] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[84] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[83] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[82] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[81] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[80] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[79] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[78] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[77] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[76] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[75] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[74] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[73] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[72] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[71] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[70] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[69] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[68] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[67] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[66] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[65] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[64] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[63] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[62] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[61] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[60] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[59] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[58] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[57] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[56] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[55] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[54] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[53] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[52] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[51] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[50] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[49] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[48] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[47] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[46] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[45] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[44] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[43] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[42] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[41] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[40] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[39] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[38] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[37] in module ascon_initialization is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[36] in module ascon_initialization is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 907.531 ; gain = 505.457
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 907.531 ; gain = 505.457
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 907.531 ; gain = 505.457
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 907.531 ; gain = 505.457
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input  128 Bit       Adders := 12    
+	   2 Input    4 Bit       Adders := 1     
++---XORs : 
+	   2 Input    128 Bit         XORs := 16    
+	   3 Input    128 Bit         XORs := 3     
+	   4 Input    128 Bit         XORs := 1     
+	   4 Input     64 Bit         XORs := 12    
+	   3 Input     64 Bit         XORs := 12    
+	   2 Input     32 Bit         XORs := 48    
++---Registers : 
+	              128 Bit    Registers := 33    
+	               64 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ascon_round:/state_out_reg[64]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'init_inst/round_inst/state_out_reg[64]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1116.453 ; gain = 714.379
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 1121.543 ; gain = 719.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 1121.773 ; gain = 719.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:42 ; elapsed = 00:00:46 . Memory (MB): peak = 1124.547 ; gain = 722.473
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:42 ; elapsed = 00:00:46 . Memory (MB): peak = 1124.547 ; gain = 722.473
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[127] with 1st driver pin 'state_ld[127]_i_2__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[127] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[127]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[126] with 1st driver pin 'state_ld[126]_i_2__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[126] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[126]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[125] with 1st driver pin 'state_ld[125]_i_2__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[125] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[125]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[124] with 1st driver pin 'state_ld[124]_i_2__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[124] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[124]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[123] with 1st driver pin 'state_ld[123]_i_2__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[123] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[123]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[122] with 1st driver pin 'state_ld[122]_i_2__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[122] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[122]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[121] with 1st driver pin 'state_ld[121]_i_2__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[121] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[121]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[120] with 1st driver pin 'state_ld[120]_i_2__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[120] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[120]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[119] with 1st driver pin 'state_ld[119]_i_2__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[119] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[119]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[118] with 1st driver pin 'state_ld[118]_i_2__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[118] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[118]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[117] with 1st driver pin 'state_ld[117]_i_2__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[117] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[117]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[116] with 1st driver pin 'state_ld[116]_i_2__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[116] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[116]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[115] with 1st driver pin 'state_ld[115]_i_2__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[115] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[115]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[114] with 1st driver pin 'state_ld[114]_i_2__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[114] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[114]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[113] with 1st driver pin 'state_ld[113]_i_2__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[113] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[113]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[112] with 1st driver pin 'state_ld[112]_i_2__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[112] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[112]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[111] with 1st driver pin 'state_ld[111]_i_2__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[111] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[111]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[110] with 1st driver pin 'state_ld[110]_i_2__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[110] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[110]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[109] with 1st driver pin 'state_ld[109]_i_2__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[109] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[109]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[108] with 1st driver pin 'state_ld[108]_i_2__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[108] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[108]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[107] with 1st driver pin 'state_ld[107]_i_2__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[107] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[107]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[106] with 1st driver pin 'state_ld[106]_i_2__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[106] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[106]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[105] with 1st driver pin 'state_ld[105]_i_2__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[105] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[105]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[104] with 1st driver pin 'state_ld[104]_i_2__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[104] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[104]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[103] with 1st driver pin 'state_ld[103]_i_2__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[103] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[103]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[102] with 1st driver pin 'state_ld[102]_i_2__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[102] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[102]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[101] with 1st driver pin 'state_ld[101]_i_2__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[101] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[101]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[100] with 1st driver pin 'state_ld[100]_i_2__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[100] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[100]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[99] with 1st driver pin 'state_ld[99]_i_2__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[99] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[99]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[98] with 1st driver pin 'state_ld[98]_i_2__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[98] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[98]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[97] with 1st driver pin 'state_ld[97]_i_2__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[97] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[97]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[96] with 1st driver pin 'state_ld[96]_i_2/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[96] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[96]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[95] with 1st driver pin 'state_ld[127]_i_3__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[95] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[95]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[94] with 1st driver pin 'state_ld[126]_i_3__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[94] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[94]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[93] with 1st driver pin 'state_ld[125]_i_3__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[93] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[93]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[92] with 1st driver pin 'state_ld[124]_i_3__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[92] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[92]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[91] with 1st driver pin 'state_ld[123]_i_3__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[91] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[91]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[90] with 1st driver pin 'state_ld[122]_i_3__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[90] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[90]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[89] with 1st driver pin 'state_ld[121]_i_3__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[89] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[89]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[88] with 1st driver pin 'state_ld[120]_i_3__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[88] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[88]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[87] with 1st driver pin 'state_ld[119]_i_3__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[87] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[87]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[86] with 1st driver pin 'state_ld[118]_i_3__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[86] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[86]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[85] with 1st driver pin 'state_ld[117]_i_3__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[85] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[85]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[84] with 1st driver pin 'state_ld[116]_i_3__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[84] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[84]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[83] with 1st driver pin 'state_ld[115]_i_3__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[83] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[83]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[82] with 1st driver pin 'state_ld[114]_i_3__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[82] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[82]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[81] with 1st driver pin 'state_ld[113]_i_3__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[81] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[81]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[80] with 1st driver pin 'state_ld[112]_i_3__8/O' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:62]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin temp_round_128[80] with 2nd driver pin 'genblk1[0].round_inst/state_out_reg[80]/Q' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv:54]
+INFO: [Common 17-14] Message 'Synth 8-6859' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|     1524|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:00:47 . Memory (MB): peak = 1124.547 ; gain = 722.473
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:00:47 . Memory (MB): peak = 1124.547 ; gain = 722.473
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:00:47 . Memory (MB): peak = 1124.547 ; gain = 722.473
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:42 ; elapsed = 00:00:47 . Memory (MB): peak = 1124.547 ; gain = 722.473
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+-------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                      | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+-------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|ascon_top   | ks_inst/round_key_reg[4][119] | 5      | 56    | YES          | NO                 | YES               | 56     | 0       | 
+|ascon_top   | ks_inst/temp_reg[127]         | 6      | 8     | YES          | NO                 | YES               | 8      | 0       | 
++------------+-------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |   191|
+|3     |LUT1   |   329|
+|4     |LUT2   |  1842|
+|5     |LUT3   |  1638|
+|6     |LUT4   |    13|
+|7     |LUT5   |    63|
+|8     |LUT6   |   127|
+|9     |SRL16E |    64|
+|10    |FDCE   |   632|
+|11    |FDPE   |     8|
+|12    |FDRE   |  3366|
+|13    |IBUF   |   386|
+|14    |OBUF   |   128|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------------------------+----------------------+------+
+|      |Instance                   |Module                |Cells |
++------+---------------------------+----------------------+------+
+|1     |top                        |                      |  8788|
+|2     |  \genblk1[0].round_inst   |ascon_round           |   254|
+|3     |  final_inst               |ascon_finalization    |   135|
+|4     |  trunc_inst               |ascon_truncation      |   127|
+|5     |  \genblk1[10].round_inst  |ascon_round_0         |   552|
+|6     |    add_inst               |ascon_add_constant_29 |   106|
+|7     |    sbox_inst              |ascon_sbox_30         |   125|
+|8     |  \genblk1[1].round_inst   |ascon_round_1         |   548|
+|9     |    add_inst               |ascon_add_constant_27 |   103|
+|10    |    sbox_inst              |ascon_sbox_28         |   125|
+|11    |  \genblk1[2].round_inst   |ascon_round_2         |   545|
+|12    |    add_inst               |ascon_add_constant_25 |   103|
+|13    |    sbox_inst              |ascon_sbox_26         |   125|
+|14    |  \genblk1[3].round_inst   |ascon_round_3         |   553|
+|15    |    add_inst               |ascon_add_constant_23 |   110|
+|16    |    sbox_inst              |ascon_sbox_24         |   126|
+|17    |  \genblk1[4].round_inst   |ascon_round_4         |   553|
+|18    |    add_inst               |ascon_add_constant_21 |   110|
+|19    |    sbox_inst              |ascon_sbox_22         |   126|
+|20    |  \genblk1[5].round_inst   |ascon_round_5         |   559|
+|21    |    add_inst               |ascon_add_constant_19 |   115|
+|22    |    sbox_inst              |ascon_sbox_20         |   126|
+|23    |  \genblk1[6].round_inst   |ascon_round_6         |   558|
+|24    |    add_inst               |ascon_add_constant_17 |   114|
+|25    |    sbox_inst              |ascon_sbox_18         |   125|
+|26    |  \genblk1[7].round_inst   |ascon_round_7         |   567|
+|27    |    add_inst               |ascon_add_constant_15 |   124|
+|28    |    sbox_inst              |ascon_sbox_16         |   125|
+|29    |  \genblk1[8].round_inst   |ascon_round_8         |   557|
+|30    |    add_inst               |ascon_add_constant_13 |   114|
+|31    |    sbox_inst              |ascon_sbox_14         |   126|
+|32    |  \genblk1[9].round_inst   |ascon_round_9         |   558|
+|33    |    add_inst               |ascon_add_constant_11 |   114|
+|34    |    sbox_inst              |ascon_sbox_12         |   126|
+|35    |  init_inst                |ascon_initialization  |  1121|
+|36    |    round_inst             |ascon_round_10        |   604|
+|37    |      add_inst             |ascon_add_constant    |    64|
+|38    |      sbox_inst            |ascon_sbox            |   158|
+|39    |  ks_inst                  |ascon_key_schedule    |  1077|
++------+---------------------------+----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 1124.547 ; gain = 722.473
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 3054 critical warnings and 276 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 1124.547 ; gain = 722.473
+Synthesis Optimization Complete : Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 1124.547 ; gain = 722.473
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.190 . Memory (MB): peak = 1137.602 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 191 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1258.473 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 557a530d
+INFO: [Common 17-83] Releasing license: Synthesis
+33 Infos, 104 Warnings, 102 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 1258.473 ; gain = 881.266
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/ascon_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ascon_top_utilization_synth.rpt -pb ascon_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue May 16 16:22:43 2023...

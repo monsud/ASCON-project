@@ -1,0 +1,146 @@
+
+*** Running vivado
+    with args -log ascon_top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source ascon_top.tcl -notrace
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source ascon_top.tcl -notrace
+Command: open_checkpoint C:/Users/david/Documents/ASCON-project/project_ascon.runs/impl_1/ascon_top.dcp
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.141 . Memory (MB): peak = 810.418 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 191 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 922.500 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2022.2 (64-bit) build 3671981
+OpenCheckpoint Checksum | Checksum: e84fd818
+----- Checksum: PlaceDB: 00000000 ShapeSum: e84fd818 RouteDB: 00000000 
+open_checkpoint: Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 926.555 ; gain = 611.008
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[0] has multiple drivers: genblk1[10].round_inst/temp_state[0]_i_1/O, and genblk1[10].round_inst/state_out_reg[0]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[100] has multiple drivers: genblk1[10].round_inst/temp_state[101]_i_1/O, and genblk1[10].round_inst/state_out_reg[101]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[101] has multiple drivers: genblk1[10].round_inst/temp_state[102]_i_1/O, and genblk1[10].round_inst/state_out_reg[102]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[102] has multiple drivers: genblk1[10].round_inst/temp_state[103]_i_1/O, and genblk1[10].round_inst/state_out_reg[103]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[103] has multiple drivers: genblk1[10].round_inst/temp_state[104]_i_1/O, and genblk1[10].round_inst/state_out_reg[104]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[104] has multiple drivers: genblk1[10].round_inst/temp_state[105]_i_1/O, and genblk1[10].round_inst/state_out_reg[105]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[105] has multiple drivers: genblk1[10].round_inst/temp_state[106]_i_1/O, and genblk1[10].round_inst/state_out_reg[106]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[106] has multiple drivers: genblk1[10].round_inst/temp_state[107]_i_1/O, and genblk1[10].round_inst/state_out_reg[107]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[107] has multiple drivers: genblk1[10].round_inst/temp_state[108]_i_1/O, and genblk1[10].round_inst/state_out_reg[108]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[108] has multiple drivers: genblk1[10].round_inst/temp_state[109]_i_1/O, and genblk1[10].round_inst/state_out_reg[109]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[109] has multiple drivers: genblk1[10].round_inst/temp_state[110]_i_1/O, and genblk1[10].round_inst/state_out_reg[110]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[110] has multiple drivers: genblk1[10].round_inst/temp_state[111]_i_1/O, and genblk1[10].round_inst/state_out_reg[111]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[111] has multiple drivers: genblk1[10].round_inst/temp_state[112]_i_1/O, and genblk1[10].round_inst/state_out_reg[112]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[112] has multiple drivers: genblk1[10].round_inst/temp_state[113]_i_1/O, and genblk1[10].round_inst/state_out_reg[113]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[113] has multiple drivers: genblk1[10].round_inst/temp_state[114]_i_1/O, and genblk1[10].round_inst/state_out_reg[114]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[114] has multiple drivers: genblk1[10].round_inst/temp_state[115]_i_1/O, and genblk1[10].round_inst/state_out_reg[115]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[115] has multiple drivers: genblk1[10].round_inst/temp_state[116]_i_1/O, and genblk1[10].round_inst/state_out_reg[116]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[116] has multiple drivers: genblk1[10].round_inst/temp_state[117]_i_1/O, and genblk1[10].round_inst/state_out_reg[117]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[117] has multiple drivers: genblk1[10].round_inst/temp_state[118]_i_1/O, and genblk1[10].round_inst/state_out_reg[118]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[118] has multiple drivers: genblk1[10].round_inst/temp_state[119]_i_1/O, and genblk1[10].round_inst/state_out_reg[119]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[119] has multiple drivers: genblk1[10].round_inst/temp_state[120]_i_1/O, and genblk1[10].round_inst/state_out_reg[120]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[120] has multiple drivers: genblk1[10].round_inst/temp_state[121]_i_1/O, and genblk1[10].round_inst/state_out_reg[121]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[121] has multiple drivers: genblk1[10].round_inst/temp_state[122]_i_1/O, and genblk1[10].round_inst/state_out_reg[122]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[122] has multiple drivers: genblk1[10].round_inst/temp_state[123]_i_1/O, and genblk1[10].round_inst/state_out_reg[123]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[123] has multiple drivers: genblk1[10].round_inst/temp_state[124]_i_1/O, and genblk1[10].round_inst/state_out_reg[124]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[124] has multiple drivers: genblk1[10].round_inst/temp_state[125]_i_1/O, and genblk1[10].round_inst/state_out_reg[125]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[125] has multiple drivers: genblk1[10].round_inst/temp_state[126]_i_1/O, and genblk1[10].round_inst/state_out_reg[126]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[126] has multiple drivers: genblk1[10].round_inst/temp_state[127]_i_1/O, and genblk1[10].round_inst/state_out_reg[127]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[1] has multiple drivers: genblk1[10].round_inst/temp_state[1]_i_1/O, and genblk1[10].round_inst/state_out_reg[1]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[2] has multiple drivers: genblk1[10].round_inst/temp_state[2]_i_1/O, and genblk1[10].round_inst/state_out_reg[2]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[3] has multiple drivers: genblk1[10].round_inst/temp_state[3]_i_1/O, and genblk1[10].round_inst/state_out_reg[3]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[64] has multiple drivers: genblk1[10].round_inst/temp_state[65]_i_1/O, and genblk1[10].round_inst/state_out_reg[65]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[65] has multiple drivers: genblk1[10].round_inst/temp_state[66]_i_1/O, and genblk1[10].round_inst/state_out_reg[66]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[66] has multiple drivers: genblk1[10].round_inst/temp_state[67]_i_1/O, and genblk1[10].round_inst/state_out_reg[67]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[67] has multiple drivers: genblk1[10].round_inst/temp_state[68]_i_1/O, and genblk1[10].round_inst/state_out_reg[68]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[68] has multiple drivers: genblk1[10].round_inst/temp_state[69]_i_1/O, and genblk1[10].round_inst/state_out_reg[69]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[69] has multiple drivers: genblk1[10].round_inst/temp_state[70]_i_1/O, and genblk1[10].round_inst/state_out_reg[70]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[70] has multiple drivers: genblk1[10].round_inst/temp_state[71]_i_1/O, and genblk1[10].round_inst/state_out_reg[71]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[71] has multiple drivers: genblk1[10].round_inst/temp_state[72]_i_1/O, and genblk1[10].round_inst/state_out_reg[72]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[72] has multiple drivers: genblk1[10].round_inst/temp_state[73]_i_1/O, and genblk1[10].round_inst/state_out_reg[73]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[73] has multiple drivers: genblk1[10].round_inst/temp_state[74]_i_1/O, and genblk1[10].round_inst/state_out_reg[74]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[74] has multiple drivers: genblk1[10].round_inst/temp_state[75]_i_1/O, and genblk1[10].round_inst/state_out_reg[75]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[75] has multiple drivers: genblk1[10].round_inst/temp_state[76]_i_1/O, and genblk1[10].round_inst/state_out_reg[76]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[76] has multiple drivers: genblk1[10].round_inst/temp_state[77]_i_1/O, and genblk1[10].round_inst/state_out_reg[77]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[77] has multiple drivers: genblk1[10].round_inst/temp_state[78]_i_1/O, and genblk1[10].round_inst/state_out_reg[78]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[78] has multiple drivers: genblk1[10].round_inst/temp_state[79]_i_1/O, and genblk1[10].round_inst/state_out_reg[79]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[79] has multiple drivers: genblk1[10].round_inst/temp_state[80]_i_1/O, and genblk1[10].round_inst/state_out_reg[80]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[80] has multiple drivers: genblk1[10].round_inst/temp_state[81]_i_1/O, and genblk1[10].round_inst/state_out_reg[81]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[81] has multiple drivers: genblk1[10].round_inst/temp_state[82]_i_1/O, and genblk1[10].round_inst/state_out_reg[82]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[82] has multiple drivers: genblk1[10].round_inst/temp_state[83]_i_1/O, and genblk1[10].round_inst/state_out_reg[83]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[83] has multiple drivers: genblk1[10].round_inst/temp_state[84]_i_1/O, and genblk1[10].round_inst/state_out_reg[84]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[84] has multiple drivers: genblk1[10].round_inst/temp_state[85]_i_1/O, and genblk1[10].round_inst/state_out_reg[85]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[85] has multiple drivers: genblk1[10].round_inst/temp_state[86]_i_1/O, and genblk1[10].round_inst/state_out_reg[86]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[86] has multiple drivers: genblk1[10].round_inst/temp_state[87]_i_1/O, and genblk1[10].round_inst/state_out_reg[87]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[87] has multiple drivers: genblk1[10].round_inst/temp_state[88]_i_1/O, and genblk1[10].round_inst/state_out_reg[88]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[88] has multiple drivers: genblk1[10].round_inst/temp_state[89]_i_1/O, and genblk1[10].round_inst/state_out_reg[89]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[89] has multiple drivers: genblk1[10].round_inst/temp_state[90]_i_1/O, and genblk1[10].round_inst/state_out_reg[90]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[90] has multiple drivers: genblk1[10].round_inst/temp_state[91]_i_1/O, and genblk1[10].round_inst/state_out_reg[91]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[91] has multiple drivers: genblk1[10].round_inst/temp_state[92]_i_1/O, and genblk1[10].round_inst/state_out_reg[92]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[92] has multiple drivers: genblk1[10].round_inst/temp_state[93]_i_1/O, and genblk1[10].round_inst/state_out_reg[93]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[93] has multiple drivers: genblk1[10].round_inst/temp_state[94]_i_1/O, and genblk1[10].round_inst/state_out_reg[94]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[94] has multiple drivers: genblk1[10].round_inst/temp_state[95]_i_1/O, and genblk1[10].round_inst/state_out_reg[95]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[95] has multiple drivers: genblk1[10].round_inst/temp_state[96]_i_1/O, and genblk1[10].round_inst/state_out_reg[96]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[96] has multiple drivers: genblk1[10].round_inst/temp_state[97]_i_1/O, and genblk1[10].round_inst/state_out_reg[97]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[97] has multiple drivers: genblk1[10].round_inst/temp_state[98]_i_1/O, and genblk1[10].round_inst/state_out_reg[98]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[98] has multiple drivers: genblk1[10].round_inst/temp_state[99]_i_1/O, and genblk1[10].round_inst/state_out_reg[99]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/UNCONN_OUT[99] has multiple drivers: genblk1[10].round_inst/temp_state[100]_i_1/O, and genblk1[10].round_inst/state_out_reg[100]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/add_inst/UNCONN_OUT[0] has multiple drivers: genblk1[10].round_inst/add_inst/temp_state[4]_i_1/O, and genblk1[10].round_inst/state_out_reg[4]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/add_inst/UNCONN_OUT[10] has multiple drivers: genblk1[10].round_inst/add_inst/temp_state[14]_i_1/O, and genblk1[10].round_inst/state_out_reg[14]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/add_inst/UNCONN_OUT[11] has multiple drivers: genblk1[10].round_inst/add_inst/temp_state[15]_i_2/O, and genblk1[10].round_inst/state_out_reg[15]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/add_inst/UNCONN_OUT[12] has multiple drivers: genblk1[10].round_inst/add_inst/temp_state[16]_i_1/O, and genblk1[10].round_inst/state_out_reg[16]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/add_inst/UNCONN_OUT[13] has multiple drivers: genblk1[10].round_inst/add_inst/temp_state[17]_i_1/O, and genblk1[10].round_inst/state_out_reg[17]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/add_inst/UNCONN_OUT[14] has multiple drivers: genblk1[10].round_inst/add_inst/temp_state[18]_i_1/O, and genblk1[10].round_inst/state_out_reg[18]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/add_inst/UNCONN_OUT[15] has multiple drivers: genblk1[10].round_inst/add_inst/temp_state[19]_i_1/O, and genblk1[10].round_inst/state_out_reg[19]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/add_inst/UNCONN_OUT[16] has multiple drivers: genblk1[10].round_inst/add_inst/temp_state[20]_i_1/O, and genblk1[10].round_inst/state_out_reg[20]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/add_inst/UNCONN_OUT[17] has multiple drivers: genblk1[10].round_inst/add_inst/temp_state[21]_i_1/O, and genblk1[10].round_inst/state_out_reg[21]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/add_inst/UNCONN_OUT[18] has multiple drivers: genblk1[10].round_inst/add_inst/temp_state[22]_i_1/O, and genblk1[10].round_inst/state_out_reg[22]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/add_inst/UNCONN_OUT[19] has multiple drivers: genblk1[10].round_inst/add_inst/temp_state[23]_i_2/O, and genblk1[10].round_inst/state_out_reg[23]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/add_inst/UNCONN_OUT[1] has multiple drivers: genblk1[10].round_inst/add_inst/temp_state[5]_i_1/O, and genblk1[10].round_inst/state_out_reg[5]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/add_inst/UNCONN_OUT[20] has multiple drivers: genblk1[10].round_inst/add_inst/temp_state[24]_i_1/O, and genblk1[10].round_inst/state_out_reg[24]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/add_inst/UNCONN_OUT[21] has multiple drivers: genblk1[10].round_inst/add_inst/temp_state[25]_i_1/O, and genblk1[10].round_inst/state_out_reg[25]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/add_inst/UNCONN_OUT[22] has multiple drivers: genblk1[10].round_inst/add_inst/temp_state[26]_i_1/O, and genblk1[10].round_inst/state_out_reg[26]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/add_inst/UNCONN_OUT[23] has multiple drivers: genblk1[10].round_inst/add_inst/temp_state[27]_i_1/O, and genblk1[10].round_inst/state_out_reg[27]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/add_inst/UNCONN_OUT[24] has multiple drivers: genblk1[10].round_inst/add_inst/temp_state[28]_i_1/O, and genblk1[10].round_inst/state_out_reg[28]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/add_inst/UNCONN_OUT[25] has multiple drivers: genblk1[10].round_inst/add_inst/temp_state[29]_i_1/O, and genblk1[10].round_inst/state_out_reg[29]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/add_inst/UNCONN_OUT[26] has multiple drivers: genblk1[10].round_inst/add_inst/temp_state[30]_i_1/O, and genblk1[10].round_inst/state_out_reg[30]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/add_inst/UNCONN_OUT[27] has multiple drivers: genblk1[10].round_inst/add_inst/temp_state[31]_i_2/O, and genblk1[10].round_inst/state_out_reg[31]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/add_inst/UNCONN_OUT[28] has multiple drivers: genblk1[10].round_inst/add_inst/temp_state[32]_i_1/O, and genblk1[10].round_inst/state_out_reg[32]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/add_inst/UNCONN_OUT[29] has multiple drivers: genblk1[10].round_inst/add_inst/temp_state[33]_i_1/O, and genblk1[10].round_inst/state_out_reg[33]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/add_inst/UNCONN_OUT[2] has multiple drivers: genblk1[10].round_inst/add_inst/temp_state[6]_i_1/O, and genblk1[10].round_inst/state_out_reg[6]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/add_inst/UNCONN_OUT[30] has multiple drivers: genblk1[10].round_inst/add_inst/temp_state[34]_i_1/O, and genblk1[10].round_inst/state_out_reg[34]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/add_inst/UNCONN_OUT[31] has multiple drivers: genblk1[10].round_inst/add_inst/temp_state[35]_i_1/O, and genblk1[10].round_inst/state_out_reg[35]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/add_inst/UNCONN_OUT[32] has multiple drivers: genblk1[10].round_inst/add_inst/temp_state[36]_i_1/O, and genblk1[10].round_inst/state_out_reg[36]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/add_inst/UNCONN_OUT[33] has multiple drivers: genblk1[10].round_inst/add_inst/temp_state[37]_i_1/O, and genblk1[10].round_inst/state_out_reg[37]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/add_inst/UNCONN_OUT[34] has multiple drivers: genblk1[10].round_inst/add_inst/temp_state[38]_i_1/O, and genblk1[10].round_inst/state_out_reg[38]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/add_inst/UNCONN_OUT[35] has multiple drivers: genblk1[10].round_inst/add_inst/temp_state[39]_i_2/O, and genblk1[10].round_inst/state_out_reg[39]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/add_inst/UNCONN_OUT[36] has multiple drivers: genblk1[10].round_inst/add_inst/temp_state[40]_i_1/O, and genblk1[10].round_inst/state_out_reg[40]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/add_inst/UNCONN_OUT[37] has multiple drivers: genblk1[10].round_inst/add_inst/temp_state[41]_i_1/O, and genblk1[10].round_inst/state_out_reg[41]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/add_inst/UNCONN_OUT[38] has multiple drivers: genblk1[10].round_inst/add_inst/temp_state[42]_i_1/O, and genblk1[10].round_inst/state_out_reg[42]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net genblk1[10].round_inst/add_inst/UNCONN_OUT[39] has multiple drivers: genblk1[10].round_inst/add_inst/temp_state[43]_i_1/O, and genblk1[10].round_inst/state_out_reg[43]/Q.
+INFO: [Common 17-14] Message 'DRC MDRV-1' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Project 1-461] DRC finished with 1524 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 975.566 ; gain = 27.914
+INFO: [Common 17-83] Releasing license: Implementation
+13 Infos, 0 Warnings, 0 Critical Warnings and 101 Errors encountered.
+opt_design failed
+ERROR: [Common 17-39] 'opt_design' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Tue May 16 17:17:41 2023...
