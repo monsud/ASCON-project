@@ -48,7 +48,7 @@ module ascon_round (
     .state_out(state_out_ld)
   );
   
-  always_ff @(posedge clk, negedge rst) begin
+  always_ff @(posedge clk) begin
     if (rst) begin
       state_ld <= 0;
       state_out <= 0;
