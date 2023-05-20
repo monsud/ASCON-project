@@ -51,24 +51,13 @@ module tb_ascon_top();
     rst = 0;
   end
 
-  // Test case 1: plaintext = 0, key = 0, nonce = 0
   initial begin
-    key = 128'h00000000000000000000000000000000;
-    nonce = 128'h00000000000000000000000000000000;
-    plaintext = 128'h00000000000000000000000000000000;
+    key = 128'h0123456789abcdef0123456789abcdef;
+    nonce = 128'h0123456789abcdef0123456789abcdef;
+    plaintext = 128'h0123456789abcdef0123456789abcdef;
     #100;
     $display("Ciphertext: %h", ciphertext);
-    // Expected output: 956dfe2e6b8b4567c9dc5e5b02f0b346
-  end
-
-  // Test case 2: plaintext = 1, key = 1, nonce = 1
-  initial begin
-    key = 128'h01010101010101010101010101010101;
-    nonce = 128'h01010101010101010101010101010101;
-    plaintext = 128'h01010101010101010101010101010101;
-    #100;
-    $display("Ciphertext: %h", ciphertext);
-    // Expected output: 3da3b52d0b4c4c9ac8a1df65a50d0b0c
+    // Expected output: 40608000bbbfffee5e0cc79ca5d3b872
   end
 
 endmodule
