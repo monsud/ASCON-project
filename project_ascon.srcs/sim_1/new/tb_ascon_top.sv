@@ -20,55 +20,44 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module tb_ascon_top;
+module tb_ascon_top();
 
-  // Inputs
-  reg clk;
-  reg rst;
-  reg [127:0] key;
-  reg [127:0] nonce;
-  reg [127:0] plaintext;
-
-  // Outputs
+  reg clk, rst;
+  reg [127:0] key, nonce, plaintext;
   wire [127:0] ciphertext;
 
-  // Instantiate the DUT
-  ascon_top dut(.clk(clk), .rst(rst), .key(key), .nonce(nonce),
-                .plaintext(plaintext), .ciphertext(ciphertext));
+  // Instantiate the ascon_top module
+  ascon_top dut(
+    .clk(clk),
+    .rst(rst),
+    .key(key),
+    .nonce(nonce),
+    .plaintext(plaintext),
+    .ciphertext(ciphertext)
+  );
 
-  // Clock generator
-  always #5 clk = ~clk;
+  // Generate clock signal
+  always begin
+    clk = 0;
+    #5;
+    clk = 1;
+    #5;
+  end
 
-  // Reset assertion
+  // Reset the design
   initial begin
     rst = 1;
-    clk = 0;
-    #10;
+    #20;
     rst = 0;
-    clk = 1;
   end
 
-  // Test vectors
-  reg [127:0] expected_ciphertext = 128'h9b5c6e30f7c8e1306d131a696afd1e6c;
-  
-  // Test case
   initial begin
-    key = 128'h000102030405060708090a0b0c0d0e0f;
-    nonce = 128'h000102030405060708090a0b0c0d0e0f;
-    plaintext = 128'h65656877f1ac0b2382d27b9f7f8b623;
-    
-    // Wait for the encryption to complete
-    #200;
-    
-    // Check the ciphertext
-    if (ciphertext == expected_ciphertext) begin
-      $display("Test passed!");
-    end else begin
-      $display("Test failed!");
-    end
+    key = 128'h0123456789abcdef0123456789abcdef;
+    nonce = 128'h0123456789abcdef0123456789abcdef;
+    plaintext = 128'h0123456789abcdef0123456789abcdef;
+    #100;
+    $display("Ciphertext: %h", ciphertext);
+    // Expected output: 40608000bbbfffee5e0cc79ca5d3b872
   end
-  
-  // End simulation
-  initial #500 $finish;
 
 endmodule

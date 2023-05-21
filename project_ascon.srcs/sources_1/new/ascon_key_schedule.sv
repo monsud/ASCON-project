@@ -20,38 +20,41 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module ascon_key_schedule (
-  input clk,
-  input rst,
-  input reg [127:0] state,
-  input [127:0] key,
+  input wire clk,
+  input wire rst,
+  input wire [127:0] state,
+  input wire [127:0] key,
   output reg [127:0] state_out
 );
 
-  reg [127:0] w[15];
-  reg [2:0] i;
+  // Internal registers
+  reg [127:0] round_key [5];
+  reg [127:0] temp;
 
-  // Generate the 16 round keys
-  always @ (posedge clk, posedge rst) begin
+  always @(posedge clk or posedge rst) begin
     if (rst) begin
-      w[0] <= key ^ 128'h00000000000000000000000000000002;
-      for (i = 0; i < 2; i = i + 1) begin : gen_round_keys
-        w[4*i+1] <= w[4*i] ^ state;
-        w[4*i+2] <= w[4*i+1] ^ key;
-        w[4*i+3] <= w[4*i+2] ^ state;
-        state <= w[4*i+3];
-      end
-      w[8] <= w[7] ^ key;
-      w[9] <= w[8] ^ state;
-      w[10] <= w[9] ^ key;
-      w[11] <= w[10] ^ state;
-      w[12] <= w[11] ^ key;
-      w[13] <= w[12] ^ state;
-      w[14] <= w[13] ^ key;
-      w[15] <= w[14] ^ state;
+      round_key[0] <= 0;
+      round_key[1] <= 0;
+      round_key[2] <= 0;
+      round_key[3] <= 0;
+      round_key[4] <= 0;
+      temp <= 0;
     end else begin
-      state_out <= state;
+      round_key[0] <= key ^ state;
+      round_key[1] <= round_key[0] ^ state[63:0] ^ state[127:64];
+      round_key[2] <= round_key[1] ^ state[95:32] ^ state[127:96];
+      round_key[3] <= round_key[2] ^ state[127:64] ^ state[31:0];
+      round_key[4] <= round_key[3] ^ state[95:32] ^ state[63:32] ^ state[127:96];
+      temp <= round_key[4] ^ (temp >> 8);
     end
   end
-  
+
+  assign state_out = temp;
+
 endmodule
+
+
+
+
+
 

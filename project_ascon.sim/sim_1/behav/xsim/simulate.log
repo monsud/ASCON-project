@@ -1,3 +1,2 @@
 Time resolution is 1 ps
-Test failed!
-$finish called at time : 500 ns : File "C:/Users/david/AsconMicrocontroller/project_ascon/project_ascon.srcs/sim_1/new/tb_ascon_top.sv" Line 72
+Ciphertext: 2d2a0bf4ae26d9f446529400b2c9c699

@@ -24,28 +24,22 @@ module ascon_finalization (
   input clk,
   input rst,
   input [127:0] state,
-  output reg [127:0] state_out
+  output [127:0] state_out
 );
 
-  reg [127:0] permuted_state;
+  reg [127:0] temp_state;
 
   always @(posedge clk) begin
     if (rst) begin
-      permuted_state <= 0;
-      state_out <= 0;
+      temp_state <= 0;
     end else begin
-      permuted_state <= {state[  0], state[ 63], state[ 32], state[ 95], 
-                         state[ 64], state[127], state[ 96], state[ 31], 
-                         state[ 96], state[ 63], state[  0], state[ 95], 
-                         state[ 32], state[127], state[ 64], state[ 31], 
-                         state[ 64], state[ 63], state[ 32], state[ 95], 
-                         state[  0], state[127], state[ 96], state[ 31], 
-                         state[ 32], state[ 63], state[ 64], state[ 95], 
-                         state[ 96], state[127], state[  0], state[ 31]};
-      state_out <= permuted_state;
+      temp_state <= state ^ 64'h8080808080808080;
     end
   end
 
+  assign state_out = temp_state;
+
 endmodule
+
 
 

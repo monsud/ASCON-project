@@ -20,35 +20,48 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module ascon_round (
-  input clk,
-  input rst,
-  input [127:0] state_in,
+  input        clk,
+  input        rst,
+  input  [127:0] state_in,
   output reg [127:0] state_out,
-  input [7:0] round_number
+  input  [11:0]    round_number
 );
 
-  reg [127:0] state_permuted;
-  reg [127:0] state_substituted;
-  reg [127:0] state_round_constant;
+  logic [127:0] round_constant;
+  logic [127:0] state_ld;
+  logic [127:0] state_out_sbox;
+  logic [127:0] state_out_ld;
   
-  // Permute the state
-  ascon_permutation permute_inst(.clk(clk), .rst(rst), .state(state_in), .perm_state(state_permuted));
-
-  // Add the round constant to the state
-  ascon_add_round_constant round_constant(.clk(clk), .rst(rst), .state(state_permuted), .round_number(round_number), .add_state(state_round_constant));
-
-  // Substitute the state
-  ascon_substitution substitution(.clk(clk), .rst(rst), .state(state_round_constant), .sub_state(state_substituted));
-
-  // XOR the state with the round constant
-  always @ (posedge clk, posedge rst) begin
+  ascon_add_constant add_inst (
+    .round_num(round_number),
+    .state_in(state_in),
+    .state_out(round_constant)
+  );
+  
+  ascon_sbox sbox_inst (
+    .state_in(round_constant),
+    .state_out(state_out_sbox)
+  );
+  
+  ascon_linear_diffusion ld_inst (
+    .state_in(state_out_sbox),
+    .state_out(state_out_ld)
+  );
+  
+  always_ff @(posedge clk) begin
     if (rst) begin
-      state_out <= 128'h00000000000000000000000000000000;
-    end else begin
-      state_out <= state_substituted ^ state_round_constant;
+      state_ld <= 0;
+      state_out <= 0;
+    end
+    else begin
+      state_ld <= state_out_ld;
+      state_out <= state_ld;
     end
   end
+  
+  assign state_out = state_ld ^ round_constant;
 
 endmodule
+
 
 

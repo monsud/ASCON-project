@@ -19,64 +19,42 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
-module ascon_initialization(
-  input clk, rst,
-  input logic [127:0] key,
-  input logic [127:0] nonce,
-  output logic [127:0] state_out
+module ascon_initialization (
+  input clk,
+  input rst,
+  input [127:0] key,
+  input [127:0] nonce,
+  output reg [127:0] state_out
 );
 
-  logic [127:0] iv_padded;
-  logic [127:0] w [5:0];
-  logic [7:0] t;
-
-  always_ff @(posedge clk, posedge rst) begin
+  wire [127:0] round_state;
+  reg [63:0] round_num;
+  
+  ascon_round round_inst (
+    .clk(clk),
+    .rst(rst),
+    .state_in({key, nonce}),
+    .state_out(round_state),
+    .round_number(round_num)
+  );
+  
+  always @(posedge clk or posedge rst) begin
     if (rst) begin
-      iv_padded <= '0;
-    end else begin
-      iv_padded <= {nonce, '0};
+      round_num <= 0;
+      state_out <= 128'h0000000000000000_8080808080808080;
+    end else if (round_num < 12) begin
+      round_num <= round_num + 1;
+      state_out <= round_state;
     end
-  end
-
-  always_ff @(posedge clk, posedge rst) begin
-    if (rst) begin
-      w[0] <= '0;
-      w[1] <= '0;
-      w[2] <= '0;
-    end else begin
-      w[0] <= 128'h617078653320332d736c6c642d657665;
-      w[1] <= '0;
-      w[2] <= key ^ 128'h00000000000000000000000000000001;
-    end
-  end
-
-  integer i;
-
-  always_ff @(posedge clk, posedge rst) begin
-    if (rst) begin
-      t <= 8'h00;
-      w[3] <= '0;
-      w[4] <= '0;
-      w[5] <= '0;
-    end else begin
-      for (i = 0; i < 4; i=i+1) begin : gen_round_constants
-        t = 3 << (2 * i);
-        w[3*i+3][7:0] = t ^ (t >> 1) ^ (t >> 2);
-        w[3*i+3][15:8] = t ^ (t >> 3) ^ (t >> 4);
-        w[3*i+3][23:16] = t ^ (t >> 5) ^ (t >> 6);
-        w[3*i+3][31:24] = t ^ (t >> 7) ^ (t >> 8);
-
-        w[3*i+4] = w[3*i+1] ^ w[3*i+3];
-        w[3*i+5] = w[3*i+2] ^ w[3*i+3];
-      end
-    end
-  end
-
-  always_comb begin
-    state_out = {iv_padded, w[0], w[1], w[2], w[3], w[4]};
   end
 
 endmodule
+
+
+
+
+
+
+
 
 
