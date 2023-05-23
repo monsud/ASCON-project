@@ -115,8 +115,6 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -124,14 +122,29 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param checkpoint.writeSynthRtdsInDcp 1
-  set_param synth.incrementalSynthesisCache C:/Users/david/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-7516-INSPIRON-7370/incrSyn
-  reset_param project.defaultXPMLibraries 
-  open_checkpoint C:/Users/david/Documents/ASCON-project/project_ascon.runs/impl_1/ascon_top.dcp
+OPTRACE "create in-memory project" START { }
+  create_project -in_memory -part xc7z020clg484-1
+  set_property board_part xilinx.com:zc702:part0:1.4 [current_project]
+  set_property design_mode GateLvl [current_fileset]
+  set_param project.singleFileAddWarning.threshold 0
+OPTRACE "create in-memory project" END { }
+OPTRACE "set parameters" START { }
   set_property webtalk.parent_dir C:/Users/david/Documents/ASCON-project/project_ascon.cache/wt [current_project]
   set_property parent.project_path C:/Users/david/Documents/ASCON-project/project_ascon.xpr [current_project]
   set_property ip_output_repo C:/Users/david/Documents/ASCON-project/project_ascon.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
+OPTRACE "set parameters" END { }
+OPTRACE "add files" START { }
+  add_files -quiet C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/ascon_top.dcp
+OPTRACE "read constraints: implementation" START { }
+  read_xdc C:/Users/david/Documents/ASCON-project/project_ascon.srcs/constrs_1/new/ascon_clock.xdc
+OPTRACE "read constraints: implementation" END { }
+OPTRACE "add files" END { }
+OPTRACE "link_design" START { }
+  link_design -top ascon_top -part xc7z020clg484-1 
+OPTRACE "link_design" END { }
+OPTRACE "gray box cells" START { }
+OPTRACE "gray box cells" END { }
 OPTRACE "init_design_reports" START { REPORT }
 OPTRACE "init_design_reports" END { }
 OPTRACE "init_design_write_hwdef" START { }

@@ -34,6 +34,7 @@ module ascon_top (
   wire [LENGTH-1:0] key_schedule_state;
   wire [LENGTH-1:0] round_state;
   wire [(LENGTH*ROUNDS) - 1:0] temp_round;
+  wire [(ROUNDS+1)*LENGTH -1:0] temp_round_out;
   wire [LENGTH-1:0] finalization_state;
 
   // Instantiate initialization module
@@ -58,17 +59,17 @@ module ascon_top (
   genvar i;
   assign temp_round[127:0] = key_schedule_state ^ plaintext;
   generate
-    for (i = 0; i < ROUNDS-1; i = i + 1) begin
+    for (i = 0; i <= ROUNDS-1; i = i + 1) begin
       ascon_round round_inst (
         .clk(clk),
         .rst(rst),
         .state_in(temp_round[i*LENGTH + LENGTH-1 : i*LENGTH]),
-        .state_out(temp_round[(i+1)*LENGTH + LENGTH-1 : (i+1)*LENGTH]),
+        .state_out(temp_round_out[(i+1)*LENGTH -1 : (i)*LENGTH]),
         .round_number(i)
       );
     end
   endgenerate
-      assign round_state = temp_round[(ROUNDS-1)*LENGTH + LENGTH-1 : (ROUNDS-1)*LENGTH];
+      assign round_state = temp_round_out[(ROUNDS-1)*LENGTH + LENGTH-1 : (ROUNDS-1)*LENGTH];
 
   // Instantiate finalization module
   ascon_finalization final_inst(
