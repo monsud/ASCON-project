@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1684835165">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1684836411">
   <File Type="ROUTE-PWR" Name="ascon_top_power_routed.rpt"/>
   <File Type="PA-TCL" Name="ascon_top.tcl"/>
   <File Type="BITSTR-MMI" Name="ascon_top.mmi"/>
@@ -159,6 +159,7 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/ascon_clock.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>

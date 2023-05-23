@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1684835164" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/ascon_top.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1684836410" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/ascon_top.dcp">
   <File Type="PA-TCL" Name="ascon_top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="ascon_top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="ascon_top_reports.tcl"/>
@@ -89,6 +89,7 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/ascon_clock.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>

@@ -7,4 +7,4 @@ set_input_delay -clock [get_pins {clk}] -max 1.000 [get_pins {plaintext}]
 set_output_delay -clock [get_pins {clk}] -max 1.000 [get_pins {ciphertext}]
 
 # Define the clock period constraint
-create_clock -period 10.000 [get_pins {clk}]
+create_clock -period 10.000 -name clk -waveform {0.000 5.000}

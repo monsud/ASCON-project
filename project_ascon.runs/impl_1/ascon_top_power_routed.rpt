@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date             : Tue May 23 11:49:18 2023
+| Date             : Tue May 23 12:10:23 2023
 | Host             : INSPIRON-7370 running 64-bit major release  (build 9200)
 | Command          : report_power -file ascon_top_power_routed.rpt -pb ascon_top_power_summary_routed.pb -rpx ascon_top_power_routed.rpx
 | Design           : ascon_top
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.121        |
+| Total On-Chip Power (W)  | 0.103        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.018        |
+| Dynamic (W)              | 0.000        |
 | Device Static (W)        | 0.103        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 83.6         |
-| Junction Temperature (C) | 26.4         |
+| Max Ambient (C)          | 83.8         |
+| Junction Temperature (C) | 26.2         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,15 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.006 |       15 |       --- |             --- |
-|   BUFG         |     0.006 |        1 |        32 |            3.13 |
+| Clocks         |     0.000 |        3 |       --- |             --- |
+| Slice Logic    |    <0.001 |       15 |       --- |             --- |
+|   BUFG         |    <0.001 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |        4 |       --- |             --- |
 |   LUT as Logic |     0.000 |        1 |     53200 |           <0.01 |
 |   Register     |     0.000 |        9 |    106400 |           <0.01 |
-| Signals        |     0.009 |       12 |       --- |             --- |
-| I/O            |     0.004 |      130 |       200 |           65.00 |
+| Signals        |    <0.001 |       12 |       --- |             --- |
+| I/O            |    <0.001 |      130 |       200 |           65.00 |
 | Static Power   |     0.103 |          |           |                 |
-| Total          |     0.121 |          |           |                 |
+| Total          |     0.103 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -70,7 +71,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.026 |       0.018 |      0.007 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.007 |       0.000 |      0.007 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.010 |       0.000 |      0.010 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -141,10 +142,8 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+-----------+-----------+
-| Name      | Power (W) |
-+-----------+-----------+
-| ascon_top |     0.018 |
-+-----------+-----------+
++------+-----------+
+| Name | Power (W) |
++------+-----------+
 
 
