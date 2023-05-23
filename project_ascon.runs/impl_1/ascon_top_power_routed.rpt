@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date             : Tue May 23 11:07:53 2023
+| Date             : Tue May 23 11:49:18 2023
 | Host             : INSPIRON-7370 running 64-bit major release  (build 9200)
 | Command          : report_power -file ascon_top_power_routed.rpt -pb ascon_top_power_summary_routed.pb -rpx ascon_top_power_routed.rpx
 | Design           : ascon_top
