@@ -20,14 +20,20 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module tb_ascon_top();
+module tb_ascon_top;
 
-  reg clk, rst;
-  reg [127:0] key, nonce, plaintext;
+  // Inputs
+  reg clk;
+  reg rst;
+  reg [127:0] key;
+  reg [127:0] nonce;
+  reg [127:0] plaintext;
+
+  // Outputs
   wire [127:0] ciphertext;
 
-  // Instantiate the ascon_top module
-  ascon_top dut(
+  // Instantiate the DUT (Design Under Test)
+  ascon_top dut (
     .clk(clk),
     .rst(rst),
     .key(key),
@@ -36,28 +42,34 @@ module tb_ascon_top();
     .ciphertext(ciphertext)
   );
 
-  // Generate clock signal
-  always begin
+  // Clock generation
+  always #5 clk = ~clk;
+
+  // Test stimulus
+  initial begin
+    // Initialize inputs
     clk = 0;
-    #5;
-    clk = 1;
-    #5;
-  end
-
-  // Reset the design
-  initial begin
     rst = 1;
-    #20;
-    rst = 0;
-  end
+    key = 128'h0123456789ABCDEF0123456789ABCDEF;
+    nonce = 128'h0123456789ABCDEF0123456789ABCDEF;
+    plaintext = 128'h0123456789ABCDEF0123456789ABCDEF;
 
-  initial begin
-    key = 128'h0123456789abcdef0123456789abcdef;
-    nonce = 128'h0123456789abcdef0123456789abcdef;
-    plaintext = 128'h0123456789abcdef0123456789abcdef;
-    #100;
+    // Wait for a few clock cycles
+    #10 rst = 0;
+
+    // Provide inputs and wait for a few clock cycles
+    #10 key = 128'hFEDCBA9876543210FEDCBA9876543210;
+    #10 nonce = 128'hFEDCBA9876543210FEDCBA9876543210;
+    #10 plaintext = 128'hFEDCBA9876543210FEDCBA9876543210;
+
+    // Wait for a few more clock cycles
+    #20;
+
+    // Display the final output
     $display("Ciphertext: %h", ciphertext);
-    // Expected output: 40608000bbbfffee5e0cc79ca5d3b872
+
+    // End the simulation
+    $finish;
   end
 
 endmodule

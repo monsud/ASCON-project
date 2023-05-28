@@ -24,7 +24,7 @@ module ascon_truncation
 (
   input clk,
   input rst,
-  input [127:0] state,
+  input [319:0] state,
   output reg [127:0] ciphertext
 );
 

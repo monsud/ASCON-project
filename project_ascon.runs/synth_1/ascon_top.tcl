@@ -91,6 +91,7 @@ read_verilog -library xil_defaultlib -sv {
   C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_initalization.sv
   C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_key_schedule.sv
   C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_linear_diffusion.sv
+  C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_permutation.sv
   C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv
   C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_sbox.sv
   C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_truncation.sv
@@ -105,9 +106,6 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/david/Documents/ASCON-project/project_ascon.srcs/constrs_1/new/ascon_clock.xdc
-set_property used_in_implementation false [get_files C:/Users/david/Documents/ASCON-project/project_ascon.srcs/constrs_1/new/ascon_clock.xdc]
-
 set_param ips.enableIPCacheLiteLoad 1
 
 read_checkpoint -auto_incremental -incremental C:/Users/david/Documents/ASCON-project/project_ascon.srcs/utils_1/imports/synth_1/ascon_top.dcp

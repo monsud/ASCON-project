@@ -23,7 +23,7 @@
 module ascon_add_constant(
   input [127:0] state_in,
   output [127:0] state_out,
-  input [3:0] round_num
+  input [11:0] round_num
 );
 
   localparam [127:0] c[12] = '{128'h0000000000000000, 128'h13198a2e03707344, 128'ha4093822299f31d0, 

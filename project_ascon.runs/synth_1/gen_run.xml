@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1684836410" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/ascon_top.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1685299650" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/ascon_top.dcp">
   <File Type="PA-TCL" Name="ascon_top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="ascon_top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="ascon_top_reports.tcl"/>
@@ -46,6 +46,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/ascon_permutation.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/ascon_round.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -82,14 +89,7 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="$PSRCDIR/constrs_1/new/ascon_clock.xdc">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-      </FileInfo>
-    </File>
     <Config>
-      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/ascon_clock.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>

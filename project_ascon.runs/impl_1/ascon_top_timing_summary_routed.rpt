@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Tue May 23 12:10:23 2023
+| Date         : Sun May 28 20:50:26 2023
 | Host         : INSPIRON-7370 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -report_unconstrained -file ascon_top_timing_summary_routed.rpt -pb ascon_top_timing_summary_routed.pb -rpx ascon_top_timing_summary_routed.rpx -warn_on_violation
 | Design       : ascon_top
@@ -143,17 +143,13 @@ Table of Contents
         inf        0.000                      0                   25          inf        0.000                      0                   25           NA           NA                      NA                    NA  
 
 
-All user specified timing constraints are met.
+There are no user specified timing constraints.
 
 
 ------------------------------------------------------------------------------------------------
 | Clock Summary
 | -------------
 ------------------------------------------------------------------------------------------------
-
-Clock  Waveform(ns)       Period(ns)      Frequency(MHz)
------  ------------       ----------      --------------
-clk    {0.000 5.000}      10.000          100.000         
 
 
 ------------------------------------------------------------------------------------------------
@@ -226,7 +222,7 @@ Slack:                    inf
   Destination:            trunc_inst/ciphertext_reg[63]_lopt_replica_3/R
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        7.087ns  (logic 1.025ns (14.462%)  route 6.062ns (85.538%))
+  Data Path Delay:        7.432ns  (logic 1.025ns (13.790%)  route 6.407ns (86.210%))
   Logic Levels:           1  (IBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -234,7 +230,7 @@ Slack:                    inf
     Y10                                               0.000     0.000 r  rst (IN)
                          net (fo=0)                   0.000     0.000    rst
     Y10                  IBUF (Prop_ibuf_I_O)         1.025     1.025 r  rst_IBUF_inst/O
-                         net (fo=9, routed)           6.062     7.087    trunc_inst/rst_IBUF
+                         net (fo=9, routed)           6.407     7.432    trunc_inst/rst_IBUF
     SLICE_X112Y8         FDRE                                         r  trunc_inst/ciphertext_reg[63]_lopt_replica_3/R
   -------------------------------------------------------------------    -------------------
 
@@ -244,7 +240,7 @@ Slack:                    inf
   Destination:            trunc_inst/ciphertext_reg[63]_lopt_replica_4/R
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        6.802ns  (logic 1.025ns (15.067%)  route 5.777ns (84.933%))
+  Data Path Delay:        7.243ns  (logic 1.025ns (14.150%)  route 6.218ns (85.850%))
   Logic Levels:           1  (IBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -252,8 +248,26 @@ Slack:                    inf
     Y10                                               0.000     0.000 r  rst (IN)
                          net (fo=0)                   0.000     0.000    rst
     Y10                  IBUF (Prop_ibuf_I_O)         1.025     1.025 r  rst_IBUF_inst/O
-                         net (fo=9, routed)           5.777     6.802    trunc_inst/rst_IBUF
+                         net (fo=9, routed)           6.218     7.243    trunc_inst/rst_IBUF
     SLICE_X112Y11        FDRE                                         r  trunc_inst/ciphertext_reg[63]_lopt_replica_4/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 rst
+                            (input port)
+  Destination:            trunc_inst/ciphertext_reg[63]_lopt_replica_5/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.889ns  (logic 1.025ns (14.876%)  route 5.864ns (85.124%))
+  Logic Levels:           1  (IBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    Y10                                               0.000     0.000 r  rst (IN)
+                         net (fo=0)                   0.000     0.000    rst
+    Y10                  IBUF (Prop_ibuf_I_O)         1.025     1.025 r  rst_IBUF_inst/O
+                         net (fo=9, routed)           5.864     6.889    trunc_inst/rst_IBUF
+    SLICE_X112Y19        FDRE                                         r  trunc_inst/ciphertext_reg[63]_lopt_replica_5/R
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -262,7 +276,7 @@ Slack:                    inf
   Destination:            trunc_inst/ciphertext_reg[63]_lopt_replica_6/R
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        6.754ns  (logic 1.025ns (15.174%)  route 5.729ns (84.826%))
+  Data Path Delay:        6.505ns  (logic 1.025ns (15.755%)  route 5.480ns (84.245%))
   Logic Levels:           1  (IBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -270,7 +284,7 @@ Slack:                    inf
     Y10                                               0.000     0.000 r  rst (IN)
                          net (fo=0)                   0.000     0.000    rst
     Y10                  IBUF (Prop_ibuf_I_O)         1.025     1.025 r  rst_IBUF_inst/O
-                         net (fo=9, routed)           5.729     6.754    trunc_inst/rst_IBUF
+                         net (fo=9, routed)           5.480     6.505    trunc_inst/rst_IBUF
     SLICE_X112Y27        FDRE                                         r  trunc_inst/ciphertext_reg[63]_lopt_replica_6/R
   -------------------------------------------------------------------    -------------------
 
@@ -280,7 +294,7 @@ Slack:                    inf
   Destination:            trunc_inst/ciphertext_reg[63]_lopt_replica_7/R
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        6.754ns  (logic 1.025ns (15.174%)  route 5.729ns (84.826%))
+  Data Path Delay:        6.505ns  (logic 1.025ns (15.755%)  route 5.480ns (84.245%))
   Logic Levels:           1  (IBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -288,26 +302,8 @@ Slack:                    inf
     Y10                                               0.000     0.000 r  rst (IN)
                          net (fo=0)                   0.000     0.000    rst
     Y10                  IBUF (Prop_ibuf_I_O)         1.025     1.025 r  rst_IBUF_inst/O
-                         net (fo=9, routed)           5.729     6.754    trunc_inst/rst_IBUF
+                         net (fo=9, routed)           5.480     6.505    trunc_inst/rst_IBUF
     SLICE_X112Y27        FDRE                                         r  trunc_inst/ciphertext_reg[63]_lopt_replica_7/R
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 rst
-                            (input port)
-  Destination:            trunc_inst/ciphertext_reg[63]_lopt_replica_5/R
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        6.114ns  (logic 1.025ns (16.762%)  route 5.089ns (83.238%))
-  Logic Levels:           1  (IBUF=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    Y10                                               0.000     0.000 r  rst (IN)
-                         net (fo=0)                   0.000     0.000    rst
-    Y10                  IBUF (Prop_ibuf_I_O)         1.025     1.025 r  rst_IBUF_inst/O
-                         net (fo=9, routed)           5.089     6.114    trunc_inst/rst_IBUF
-    SLICE_X112Y19        FDRE                                         r  trunc_inst/ciphertext_reg[63]_lopt_replica_5/R
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf

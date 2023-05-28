@@ -20,35 +20,29 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module ascon_initialization (
-  input clk,
-  input rst,
-  input [127:0] key,
-  input [127:0] nonce,
-  output reg [127:0] state_out
+  input wire clk,
+  input wire rst,
+  input wire [127:0] key,
+  input wire [127:0] nonce,
+  output wire [319:0] state_out
 );
 
-  wire [127:0] round_state;
-  reg [63:0] round_num;
-  
-  ascon_round round_inst (
+  // Internal wires
+  wire [319:0] state;
+
+  // Instantiate the ascon_permutation submodule
+  ascon_permutation perm_inst (
     .clk(clk),
     .rst(rst),
-    .state_in({key, nonce}),
-    .state_out(round_state),
-    .round_number(round_num)
+    .state_in({key, nonce, 64'h0}),
+    .state_out(state)
   );
-  
-  always @(posedge clk or posedge rst) begin
-    if (rst) begin
-      round_num <= 0;
-      state_out <= 128'h0000000000000000_8080808080808080;
-    end else if (round_num < 12) begin
-      round_num <= round_num + 1;
-      state_out <= round_state;
-    end
-  end
+
+  // Output the state after the initialization phase
+  assign state_out = state;
 
 endmodule
+
 
 
 

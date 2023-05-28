@@ -1,2 +1,3 @@
 Time resolution is 1 ps
-Ciphertext: 2d2a0bf4ae26d9f446529400b2c9c699
+Ciphertext: fffffffffffffffe7f7f7f7f7f7f7f7e
+$finish called at time : 60 ns : File "C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sim_1/new/tb_ascon_top.sv" Line 72

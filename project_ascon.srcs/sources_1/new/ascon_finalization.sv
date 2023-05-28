@@ -23,11 +23,11 @@
 module ascon_finalization (
   input clk,
   input rst,
-  input [127:0] state,
-  output [127:0] state_out
+  input [319:0] state,
+  output [319:0] state_out
 );
 
-  reg [127:0] temp_state;
+  reg [319:0] temp_state;
 
   always @(posedge clk) begin
     if (rst) begin
