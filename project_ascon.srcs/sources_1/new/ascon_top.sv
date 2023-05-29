@@ -32,9 +32,7 @@ module ascon_top (
 
   wire [LENGTH-1:0] initialization_state;
   wire [LENGTH-1:0] key_schedule_state;
-  wire [LENGTH-1:0] round_state;
-  wire [(LENGTH*ROUNDS) - 1:0] temp_round;
-  wire [(ROUNDS+1)*LENGTH -1:0] temp_round_out;
+  wire [LENGTH-1:0] round_state [12];
   wire [LENGTH-1:0] finalization_state;
 
   // Instantiate initialization module
@@ -55,37 +53,29 @@ module ascon_top (
     .state_out(key_schedule_state)
   );
 
-  // Instantiate 12 rounds of ASCON
+//   Instantiate 12 round modules
+  assign round_state[0] = key_schedule_state ^ plaintext;
   genvar i;
-  assign temp_round[127:0] = key_schedule_state ^ plaintext;
   generate
-    for (i = 0; i <= ROUNDS-1; i = i + 1) begin
+    for (i = 1; i < ROUNDS; i = i + 1) begin
       ascon_round round_inst (
         .clk(clk),
         .rst(rst),
-        .state_in(temp_round[i*LENGTH + LENGTH-1 : i*LENGTH]),
-        .state_out(temp_round_out[(i+1)*LENGTH -1 : (i)*LENGTH]),
+        .state_in(round_state[i-1]),
+        .state_out(round_state[i]),
         .round_number(i)
       );
     end
   endgenerate
-      assign round_state = temp_round_out[(ROUNDS-1)*LENGTH + LENGTH-1 : (ROUNDS-1)*LENGTH];
-
+  
   // Instantiate finalization module
   ascon_finalization final_inst(
     .clk(clk),
     .rst(rst),
-    .state(round_state),
-    .state_out(finalization_state)
+    .state(round_state[11]),
+    .state_out(ciphertext)
   );
-
-  // Instantiate truncation module
-  ascon_truncation trunc_inst(
-    .clk(clk),
-    .rst(rst),
-    .state(finalization_state),
-    .ciphertext(ciphertext)
-  );
+ 
 
 endmodule
 

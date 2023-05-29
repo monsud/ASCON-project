@@ -93,7 +93,7 @@ read_verilog -library xil_defaultlib -sv {
   C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_linear_diffusion.sv
   C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv
   C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_sbox.sv
-  C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_truncation.sv
+  C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_serializer.sv
   C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_top.sv
 }
 OPTRACE "Adding files" END { }
@@ -105,8 +105,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/david/Documents/ASCON-project/project_ascon.srcs/constrs_1/new/ascon_clock.xdc
-set_property used_in_implementation false [get_files C:/Users/david/Documents/ASCON-project/project_ascon.srcs/constrs_1/new/ascon_clock.xdc]
+read_xdc C:/Users/david/Documents/ASCON-project/project_ascon.srcs/constrs_1/new/ascon_top.xdc
+set_property used_in_implementation false [get_files C:/Users/david/Documents/ASCON-project/project_ascon.srcs/constrs_1/new/ascon_top.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 

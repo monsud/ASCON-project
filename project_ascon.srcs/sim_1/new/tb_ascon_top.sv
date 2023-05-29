@@ -57,7 +57,7 @@ module tb_ascon_top();
     plaintext = 128'h0123456789abcdef0123456789abcdef;
     #100;
     $display("Ciphertext: %h", ciphertext);
-    // Expected output: 40608000bbbfffee5e0cc79ca5d3b872
+    // Expected output: 19714801f49ff5de77edb2999a030f46
   end
 
 endmodule

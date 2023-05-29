@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 03.05.2023 20:57:43
+// Create Date: 29.05.2023 19:32:59
 // Design Name: 
-// Module Name: ascon_truncation
+// Module Name: ascon_deserializer
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -19,22 +19,22 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
-module ascon_truncation
-(
-  input clk,
-  input rst,
-  input [127:0] state,
-  output reg [127:0] ciphertext
+module ascon_deserializer (
+  input wire clk,
+  input wire rst,
+  input wire [31:0] chunk_in [3:0],
+  output wire [127:0] data_out
 );
+  reg [127:0] reg_data;
 
-  always @(posedge clk) begin
+  always @(posedge clk or posedge rst) begin
     if (rst) begin
-      ciphertext <= 0;
+      reg_data <= 0;
     end else begin
-      ciphertext <= state[127:0];
+      reg_data <= {chunk_in[3], chunk_in[2], chunk_in[1], chunk_in[0]};
     end
   end
 
+  assign data_out = reg_data;
 endmodule
 

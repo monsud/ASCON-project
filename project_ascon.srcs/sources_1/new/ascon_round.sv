@@ -20,46 +20,42 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module ascon_round (
-  input        clk,
-  input        rst,
-  input  [127:0] state_in,
+  input clk,
+  input rst,
+  input [127:0] state_in,
   output reg [127:0] state_out,
-  input  [11:0]    round_number
+  input [3:0] round_number
 );
+  wire [127:0] add_const_state;
+  wire [127:0] sbox_state;
+  wire [127:0] linear_state;
 
-  logic [127:0] round_constant;
-  logic [127:0] state_ld;
-  logic [127:0] state_out_sbox;
-  logic [127:0] state_out_ld;
-  
-  ascon_add_constant add_inst (
+  // Instantiate the ascon_add_constant module
+  ascon_add_constant constant_inst (
     .round_num(round_number),
     .state_in(state_in),
-    .state_out(round_constant)
+    .state_out(add_const_state)
   );
-  
+
+  // Instantiate the ascon_sbox module
   ascon_sbox sbox_inst (
-    .state_in(round_constant),
-    .state_out(state_out_sbox)
+    .state_in(add_const_state),
+    .state_out(sbox_state)
   );
-  
-  ascon_linear_diffusion ld_inst (
-    .state_in(state_out_sbox),
-    .state_out(state_out_ld)
+
+  // Instantiate the ascon_linear_diffusion module
+  ascon_linear_diffusion diffusion_inst (
+    .state_in(sbox_state),
+    .state_out(linear_state)
   );
-  
-  always_ff @(posedge clk) begin
+
+  always @(posedge clk or posedge rst) begin
     if (rst) begin
-      state_ld <= 0;
-      state_out <= 0;
-    end
-    else begin
-      state_ld <= state_out_ld;
-      state_out <= state_ld;
+      state_out <= 128'h00000000000000000000000000000000;
+    end else begin
+      state_out <= linear_state;
     end
   end
-  
-  assign state_out = state_ld ^ round_constant;
 
 endmodule
 

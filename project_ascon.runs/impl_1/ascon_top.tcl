@@ -137,7 +137,7 @@ OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/ascon_top.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Users/david/Documents/ASCON-project/project_ascon.srcs/constrs_1/new/ascon_clock.xdc
+  read_xdc C:/Users/david/Documents/ASCON-project/project_ascon.srcs/constrs_1/new/ascon_top.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

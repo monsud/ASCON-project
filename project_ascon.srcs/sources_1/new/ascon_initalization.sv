@@ -27,28 +27,26 @@ module ascon_initialization (
   output reg [127:0] state_out
 );
 
-  wire [127:0] round_state;
-  reg [63:0] round_num;
-  
+  reg [127:0] round_state;
+
   ascon_round round_inst (
     .clk(clk),
     .rst(rst),
-    .state_in({key, nonce}),
+    .state_in(key ^ nonce),
     .state_out(round_state),
-    .round_number(round_num)
+    .round_number(4'b0000)
   );
-  
+
   always @(posedge clk or posedge rst) begin
     if (rst) begin
-      round_num <= 0;
-      state_out <= 128'h0000000000000000_8080808080808080;
-    end else if (round_num < 12) begin
-      round_num <= round_num + 1;
+      state_out <= 128'h00000000000000000000000000000000;
+    end else begin
       state_out <= round_state;
     end
   end
 
 endmodule
+
 
 
 

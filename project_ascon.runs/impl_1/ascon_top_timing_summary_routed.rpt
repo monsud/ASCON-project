@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Tue May 23 12:10:23 2023
+| Date         : Mon May 29 18:13:48 2023
 | Host         : INSPIRON-7370 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -report_unconstrained -file ascon_top_timing_summary_routed.rpt -pb ascon_top_timing_summary_routed.pb -rpx ascon_top_timing_summary_routed.rpx -warn_on_violation
 | Design       : ascon_top
@@ -41,7 +41,7 @@ Timing Summary Report
 
 Rule       Severity          Description                  Violations  
 ---------  ----------------  ---------------------------  ----------  
-TIMING-17  Critical Warning  Non-clocked sequential cell  9           
+TIMING-17  Critical Warning  Non-clocked sequential cell  1000        
 
 Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
 
@@ -51,12 +51,12 @@ check_timing report
 
 Table of Contents
 -----------------
-1. checking no_clock (9)
+1. checking no_clock (1215)
 2. checking constant_clock (0)
 3. checking pulse_width_clock (0)
-4. checking unconstrained_internal_endpoints (17)
+4. checking unconstrained_internal_endpoints (2427)
 5. checking no_input_delay (1)
-6. checking no_output_delay (8)
+6. checking no_output_delay (127)
 7. checking multiple_clock (0)
 8. checking generated_clocks (0)
 9. checking loops (0)
@@ -64,9 +64,9 @@ Table of Contents
 11. checking partial_output_delay (0)
 12. checking latch_loops (0)
 
-1. checking no_clock (9)
-------------------------
- There are 9 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+1. checking no_clock (1215)
+---------------------------
+ There are 1215 register/latch pins with no clock driven by root clock pin: clk (HIGH)
 
 
 2. checking constant_clock (0)
@@ -79,9 +79,9 @@ Table of Contents
  There are 0 register/latch pins which need pulse_width check
 
 
-4. checking unconstrained_internal_endpoints (17)
--------------------------------------------------
- There are 17 pins that are not constrained for maximum delay. (HIGH)
+4. checking unconstrained_internal_endpoints (2427)
+---------------------------------------------------
+ There are 2427 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -93,9 +93,9 @@ Table of Contents
  There are 0 input ports with no input delay but user has a false path constraint.
 
 
-6. checking no_output_delay (8)
--------------------------------
- There are 8 ports with no output delay specified. (HIGH)
+6. checking no_output_delay (127)
+---------------------------------
+ There are 127 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 
@@ -140,20 +140,16 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-        inf        0.000                      0                   25          inf        0.000                      0                   25           NA           NA                      NA                    NA  
+        inf        0.000                      0                 2554          inf        0.000                      0                 2554           NA           NA                      NA                    NA  
 
 
-All user specified timing constraints are met.
+There are no user specified timing constraints.
 
 
 ------------------------------------------------------------------------------------------------
 | Clock Summary
 | -------------
 ------------------------------------------------------------------------------------------------
-
-Clock  Waveform(ns)       Period(ns)      Frequency(MHz)
------  ------------       ----------      --------------
-clk    {0.000 5.000}      10.000          100.000         
 
 
 ------------------------------------------------------------------------------------------------
@@ -213,8 +209,8 @@ Path Group:  (none)
 From Clock:  
   To Clock:  
 
-Max Delay            25 Endpoints
-Min Delay            25 Endpoints
+Max Delay          2554 Endpoints
+Min Delay          2554 Endpoints
 --------------------------------------------------------------------------------------
 
 
@@ -223,10 +219,10 @@ Max Delay Paths
 Slack:                    inf
   Source:                 rst
                             (input port)
-  Destination:            trunc_inst/ciphertext_reg[63]_lopt_replica_3/R
+  Destination:            final_inst/temp_state_reg[75]/R
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        7.087ns  (logic 1.025ns (14.462%)  route 6.062ns (85.538%))
+  Data Path Delay:        11.815ns  (logic 1.025ns (8.674%)  route 10.791ns (91.326%))
   Logic Levels:           1  (IBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -234,71 +230,89 @@ Slack:                    inf
     Y10                                               0.000     0.000 r  rst (IN)
                          net (fo=0)                   0.000     0.000    rst
     Y10                  IBUF (Prop_ibuf_I_O)         1.025     1.025 r  rst_IBUF_inst/O
-                         net (fo=9, routed)           6.062     7.087    trunc_inst/rst_IBUF
-    SLICE_X112Y8         FDRE                                         r  trunc_inst/ciphertext_reg[63]_lopt_replica_3/R
+                         net (fo=1215, routed)       10.791    11.815    final_inst/rst_IBUF
+    SLICE_X111Y39        FDRE                                         r  final_inst/temp_state_reg[75]/R
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 rst
                             (input port)
-  Destination:            trunc_inst/ciphertext_reg[63]_lopt_replica_4/R
+  Destination:            genblk1[10].round_inst/state_out_reg[127]/CLR
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        6.802ns  (logic 1.025ns (15.067%)  route 5.777ns (84.933%))
+  Data Path Delay:        11.677ns  (logic 1.025ns (8.776%)  route 10.652ns (91.224%))
   Logic Levels:           1  (IBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    Y10                                               0.000     0.000 r  rst (IN)
+    Y10                                               0.000     0.000 f  rst (IN)
                          net (fo=0)                   0.000     0.000    rst
-    Y10                  IBUF (Prop_ibuf_I_O)         1.025     1.025 r  rst_IBUF_inst/O
-                         net (fo=9, routed)           5.777     6.802    trunc_inst/rst_IBUF
-    SLICE_X112Y11        FDRE                                         r  trunc_inst/ciphertext_reg[63]_lopt_replica_4/R
+    Y10                  IBUF (Prop_ibuf_I_O)         1.025     1.025 f  rst_IBUF_inst/O
+                         net (fo=1215, routed)       10.652    11.677    genblk1[10].round_inst/rst_IBUF
+    SLICE_X111Y38        FDCE                                         f  genblk1[10].round_inst/state_out_reg[127]/CLR
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 rst
                             (input port)
-  Destination:            trunc_inst/ciphertext_reg[63]_lopt_replica_6/R
+  Destination:            genblk1[10].round_inst/state_out_reg[31]/CLR
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        6.754ns  (logic 1.025ns (15.174%)  route 5.729ns (84.826%))
+  Data Path Delay:        11.677ns  (logic 1.025ns (8.776%)  route 10.652ns (91.224%))
   Logic Levels:           1  (IBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    Y10                                               0.000     0.000 r  rst (IN)
+    Y10                                               0.000     0.000 f  rst (IN)
                          net (fo=0)                   0.000     0.000    rst
-    Y10                  IBUF (Prop_ibuf_I_O)         1.025     1.025 r  rst_IBUF_inst/O
-                         net (fo=9, routed)           5.729     6.754    trunc_inst/rst_IBUF
-    SLICE_X112Y27        FDRE                                         r  trunc_inst/ciphertext_reg[63]_lopt_replica_6/R
+    Y10                  IBUF (Prop_ibuf_I_O)         1.025     1.025 f  rst_IBUF_inst/O
+                         net (fo=1215, routed)       10.652    11.677    genblk1[10].round_inst/rst_IBUF
+    SLICE_X111Y38        FDCE                                         f  genblk1[10].round_inst/state_out_reg[31]/CLR
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 rst
                             (input port)
-  Destination:            trunc_inst/ciphertext_reg[63]_lopt_replica_7/R
+  Destination:            genblk1[10].round_inst/state_out_reg[63]/CLR
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        6.754ns  (logic 1.025ns (15.174%)  route 5.729ns (84.826%))
+  Data Path Delay:        11.677ns  (logic 1.025ns (8.776%)  route 10.652ns (91.224%))
   Logic Levels:           1  (IBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    Y10                                               0.000     0.000 r  rst (IN)
+    Y10                                               0.000     0.000 f  rst (IN)
                          net (fo=0)                   0.000     0.000    rst
-    Y10                  IBUF (Prop_ibuf_I_O)         1.025     1.025 r  rst_IBUF_inst/O
-                         net (fo=9, routed)           5.729     6.754    trunc_inst/rst_IBUF
-    SLICE_X112Y27        FDRE                                         r  trunc_inst/ciphertext_reg[63]_lopt_replica_7/R
+    Y10                  IBUF (Prop_ibuf_I_O)         1.025     1.025 f  rst_IBUF_inst/O
+                         net (fo=1215, routed)       10.652    11.677    genblk1[10].round_inst/rst_IBUF
+    SLICE_X111Y38        FDCE                                         f  genblk1[10].round_inst/state_out_reg[63]/CLR
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 rst
                             (input port)
-  Destination:            trunc_inst/ciphertext_reg[63]_lopt_replica_5/R
+  Destination:            genblk1[10].round_inst/state_out_reg[95]/CLR
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        6.114ns  (logic 1.025ns (16.762%)  route 5.089ns (83.238%))
+  Data Path Delay:        11.677ns  (logic 1.025ns (8.776%)  route 10.652ns (91.224%))
+  Logic Levels:           1  (IBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    Y10                                               0.000     0.000 f  rst (IN)
+                         net (fo=0)                   0.000     0.000    rst
+    Y10                  IBUF (Prop_ibuf_I_O)         1.025     1.025 f  rst_IBUF_inst/O
+                         net (fo=1215, routed)       10.652    11.677    genblk1[10].round_inst/rst_IBUF
+    SLICE_X111Y38        FDCE                                         f  genblk1[10].round_inst/state_out_reg[95]/CLR
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 rst
+                            (input port)
+  Destination:            final_inst/temp_state_reg[102]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        11.666ns  (logic 1.025ns (8.785%)  route 10.641ns (91.215%))
   Logic Levels:           1  (IBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -306,108 +320,80 @@ Slack:                    inf
     Y10                                               0.000     0.000 r  rst (IN)
                          net (fo=0)                   0.000     0.000    rst
     Y10                  IBUF (Prop_ibuf_I_O)         1.025     1.025 r  rst_IBUF_inst/O
-                         net (fo=9, routed)           5.089     6.114    trunc_inst/rst_IBUF
-    SLICE_X112Y19        FDRE                                         r  trunc_inst/ciphertext_reg[63]_lopt_replica_5/R
+                         net (fo=1215, routed)       10.641    11.666    final_inst/rst_IBUF
+    SLICE_X111Y47        FDRE                                         r  final_inst/temp_state_reg[102]/R
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 trunc_inst/ciphertext_reg[63]_lopt_replica_7/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            ciphertext[63]
-                            (output port)
+  Source:                 rst
+                            (input port)
+  Destination:            final_inst/temp_state_reg[101]/R
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        5.032ns  (logic 3.168ns (62.954%)  route 1.864ns (37.046%))
-  Logic Levels:           2  (FDRE=1 OBUF=1)
+  Data Path Delay:        11.541ns  (logic 1.025ns (8.880%)  route 10.516ns (91.120%))
+  Logic Levels:           1  (IBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X112Y27        FDRE                         0.000     0.000 r  trunc_inst/ciphertext_reg[63]_lopt_replica_7/C
-    SLICE_X112Y27        FDRE (Prop_fdre_C_Q)         0.518     0.518 r  trunc_inst/ciphertext_reg[63]_lopt_replica_7/Q
-                         net (fo=1, routed)           1.864     2.382    lopt_6
-    AB22                 OBUF (Prop_obuf_I_O)         2.650     5.032 r  ciphertext_OBUF[63]_inst/O
-                         net (fo=0)                   0.000     5.032    ciphertext[63]
-    AB22                                                              r  ciphertext[63] (OUT)
+    Y10                                               0.000     0.000 r  rst (IN)
+                         net (fo=0)                   0.000     0.000    rst
+    Y10                  IBUF (Prop_ibuf_I_O)         1.025     1.025 r  rst_IBUF_inst/O
+                         net (fo=1215, routed)       10.516    11.541    final_inst/rst_IBUF
+    SLICE_X113Y47        FDRE                                         r  final_inst/temp_state_reg[101]/R
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 trunc_inst/ciphertext_reg[63]_lopt_replica_3/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            ciphertext[31]
-                            (output port)
+  Source:                 rst
+                            (input port)
+  Destination:            final_inst/temp_state_reg[105]/R
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        4.988ns  (logic 3.135ns (62.852%)  route 1.853ns (37.148%))
-  Logic Levels:           2  (FDRE=1 OBUF=1)
+  Data Path Delay:        11.541ns  (logic 1.025ns (8.880%)  route 10.516ns (91.120%))
+  Logic Levels:           1  (IBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X112Y8         FDRE                         0.000     0.000 r  trunc_inst/ciphertext_reg[63]_lopt_replica_3/C
-    SLICE_X112Y8         FDRE (Prop_fdre_C_Q)         0.518     0.518 r  trunc_inst/ciphertext_reg[63]_lopt_replica_3/Q
-                         net (fo=1, routed)           1.853     2.371    lopt_2
-    AA13                 OBUF (Prop_obuf_I_O)         2.617     4.988 r  ciphertext_OBUF[31]_inst/O
-                         net (fo=0)                   0.000     4.988    ciphertext[31]
-    AA13                                                              r  ciphertext[31] (OUT)
+    Y10                                               0.000     0.000 r  rst (IN)
+                         net (fo=0)                   0.000     0.000    rst
+    Y10                  IBUF (Prop_ibuf_I_O)         1.025     1.025 r  rst_IBUF_inst/O
+                         net (fo=1215, routed)       10.516    11.541    final_inst/rst_IBUF
+    SLICE_X112Y47        FDRE                                         r  final_inst/temp_state_reg[105]/R
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 trunc_inst/ciphertext_reg[63]_lopt_replica_6/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            ciphertext[55]
-                            (output port)
+  Source:                 rst
+                            (input port)
+  Destination:            genblk1[10].round_inst/state_out_reg[126]/CLR
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        4.817ns  (logic 3.152ns (65.431%)  route 1.665ns (34.569%))
-  Logic Levels:           2  (FDRE=1 OBUF=1)
+  Data Path Delay:        11.529ns  (logic 1.025ns (8.889%)  route 10.504ns (91.111%))
+  Logic Levels:           1  (IBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X112Y27        FDRE                         0.000     0.000 r  trunc_inst/ciphertext_reg[63]_lopt_replica_6/C
-    SLICE_X112Y27        FDRE (Prop_fdre_C_Q)         0.518     0.518 r  trunc_inst/ciphertext_reg[63]_lopt_replica_6/Q
-                         net (fo=1, routed)           1.665     2.183    lopt_5
-    AA19                 OBUF (Prop_obuf_I_O)         2.634     4.817 r  ciphertext_OBUF[55]_inst/O
-                         net (fo=0)                   0.000     4.817    ciphertext[55]
-    AA19                                                              r  ciphertext[55] (OUT)
+    Y10                                               0.000     0.000 f  rst (IN)
+                         net (fo=0)                   0.000     0.000    rst
+    Y10                  IBUF (Prop_ibuf_I_O)         1.025     1.025 f  rst_IBUF_inst/O
+                         net (fo=1215, routed)       10.504    11.529    genblk1[10].round_inst/rst_IBUF
+    SLICE_X111Y37        FDCE                                         f  genblk1[10].round_inst/state_out_reg[126]/CLR
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 trunc_inst/ciphertext_reg[63]_lopt_replica_5/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            ciphertext[47]
-                            (output port)
+  Source:                 rst
+                            (input port)
+  Destination:            genblk1[10].round_inst/state_out_reg[30]/CLR
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        4.801ns  (logic 3.136ns (65.314%)  route 1.665ns (34.686%))
-  Logic Levels:           2  (FDRE=1 OBUF=1)
+  Data Path Delay:        11.529ns  (logic 1.025ns (8.889%)  route 10.504ns (91.111%))
+  Logic Levels:           1  (IBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X112Y19        FDRE                         0.000     0.000 r  trunc_inst/ciphertext_reg[63]_lopt_replica_5/C
-    SLICE_X112Y19        FDRE (Prop_fdre_C_Q)         0.518     0.518 r  trunc_inst/ciphertext_reg[63]_lopt_replica_5/Q
-                         net (fo=1, routed)           1.665     2.183    lopt_4
-    U16                  OBUF (Prop_obuf_I_O)         2.618     4.801 r  ciphertext_OBUF[47]_inst/O
-                         net (fo=0)                   0.000     4.801    ciphertext[47]
-    U16                                                               r  ciphertext[47] (OUT)
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 trunc_inst/ciphertext_reg[63]_lopt_replica_4/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            ciphertext[39]
-                            (output port)
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        4.794ns  (logic 3.129ns (65.264%)  route 1.665ns (34.736%))
-  Logic Levels:           2  (FDRE=1 OBUF=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X112Y11        FDRE                         0.000     0.000 r  trunc_inst/ciphertext_reg[63]_lopt_replica_4/C
-    SLICE_X112Y11        FDRE (Prop_fdre_C_Q)         0.518     0.518 r  trunc_inst/ciphertext_reg[63]_lopt_replica_4/Q
-                         net (fo=1, routed)           1.665     2.183    lopt_3
-    V15                  OBUF (Prop_obuf_I_O)         2.611     4.794 r  ciphertext_OBUF[39]_inst/O
-                         net (fo=0)                   0.000     4.794    ciphertext[39]
-    V15                                                               r  ciphertext[39] (OUT)
+    Y10                                               0.000     0.000 f  rst (IN)
+                         net (fo=0)                   0.000     0.000    rst
+    Y10                  IBUF (Prop_ibuf_I_O)         1.025     1.025 f  rst_IBUF_inst/O
+                         net (fo=1215, routed)       10.504    11.529    genblk1[10].round_inst/rst_IBUF
+    SLICE_X111Y37        FDCE                                         f  genblk1[10].round_inst/state_out_reg[30]/CLR
   -------------------------------------------------------------------    -------------------
 
 
@@ -417,176 +403,179 @@ Slack:                    inf
 Min Delay Paths
 --------------------------------------------------------------------------------------
 Slack:                    inf
-  Source:                 rst
-                            (input port)
-  Destination:            trunc_inst/ciphertext_reg[63]_lopt_replica_2/R
+  Source:                 genblk1[11].round_inst/state_out_reg[58]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            final_inst/temp_state_reg[58]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.743ns  (logic 0.253ns (34.046%)  route 0.490ns (65.954%))
-  Logic Levels:           1  (IBUF=1)
+  Data Path Delay:        0.243ns  (logic 0.128ns (52.590%)  route 0.115ns (47.410%))
+  Logic Levels:           1  (FDCE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    Y10                                               0.000     0.000 r  rst (IN)
-                         net (fo=0)                   0.000     0.000    rst
-    Y10                  IBUF (Prop_ibuf_I_O)         0.253     0.253 r  rst_IBUF_inst/O
-                         net (fo=9, routed)           0.490     0.743    trunc_inst/rst_IBUF
-    SLICE_X0Y23          FDRE                                         r  trunc_inst/ciphertext_reg[63]_lopt_replica_2/R
+    SLICE_X113Y30        FDCE                         0.000     0.000 r  genblk1[11].round_inst/state_out_reg[58]/C
+    SLICE_X113Y30        FDCE (Prop_fdce_C_Q)         0.128     0.128 r  genblk1[11].round_inst/state_out_reg[58]/Q
+                         net (fo=1, routed)           0.115     0.243    final_inst/D[58]
+    SLICE_X113Y29        FDRE                                         r  final_inst/temp_state_reg[58]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 rst
-                            (input port)
-  Destination:            trunc_inst/ciphertext_reg[63]_lopt_replica/R
+  Source:                 genblk1[1].round_inst/state_out_reg[28]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[2].round_inst/state_out_reg[25]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.901ns  (logic 0.253ns (28.079%)  route 0.648ns (71.921%))
-  Logic Levels:           1  (IBUF=1)
+  Data Path Delay:        0.262ns  (logic 0.128ns (48.889%)  route 0.134ns (51.111%))
+  Logic Levels:           1  (FDCE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    Y10                                               0.000     0.000 r  rst (IN)
-                         net (fo=0)                   0.000     0.000    rst
-    Y10                  IBUF (Prop_ibuf_I_O)         0.253     0.253 r  rst_IBUF_inst/O
-                         net (fo=9, routed)           0.648     0.901    trunc_inst/rst_IBUF
-    SLICE_X0Y15          FDRE                                         r  trunc_inst/ciphertext_reg[63]_lopt_replica/R
+    SLICE_X93Y26         FDCE                         0.000     0.000 r  genblk1[1].round_inst/state_out_reg[28]/C
+    SLICE_X93Y26         FDCE (Prop_fdce_C_Q)         0.128     0.128 r  genblk1[1].round_inst/state_out_reg[28]/Q
+                         net (fo=2, routed)           0.134     0.262    genblk1[2].round_inst/state_out_reg[25]_2[1]
+    SLICE_X93Y26         FDCE                                         r  genblk1[2].round_inst/state_out_reg[25]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 final_inst/temp_state_reg[63]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            trunc_inst/ciphertext_reg[63]_lopt_replica_5/D
+  Source:                 genblk1[11].round_inst/state_out_reg[39]_inv/C
+                            (rising edge-triggered cell FDPE)
+  Destination:            final_inst/temp_state_reg[39]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        1.073ns  (logic 0.164ns (15.283%)  route 0.909ns (84.717%))
-  Logic Levels:           1  (FDRE=1)
+  Data Path Delay:        0.277ns  (logic 0.164ns (59.205%)  route 0.113ns (40.795%))
+  Logic Levels:           1  (FDPE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X66Y24         FDRE                         0.000     0.000 r  final_inst/temp_state_reg[63]/C
-    SLICE_X66Y24         FDRE (Prop_fdre_C_Q)         0.164     0.164 r  final_inst/temp_state_reg[63]/Q
-                         net (fo=8, routed)           0.909     1.073    trunc_inst/ciphertext_reg[63]_0
-    SLICE_X112Y19        FDRE                                         r  trunc_inst/ciphertext_reg[63]_lopt_replica_5/D
+    SLICE_X112Y23        FDPE                         0.000     0.000 r  genblk1[11].round_inst/state_out_reg[39]_inv/C
+    SLICE_X112Y23        FDPE (Prop_fdpe_C_Q)         0.164     0.164 r  genblk1[11].round_inst/state_out_reg[39]_inv/Q
+                         net (fo=1, routed)           0.113     0.277    final_inst/D[39]
+    SLICE_X113Y23        FDRE                                         r  final_inst/temp_state_reg[39]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 rst
-                            (input port)
-  Destination:            trunc_inst/ciphertext_reg[63]/R
+  Source:                 genblk1[11].round_inst/state_out_reg[62]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            final_inst/temp_state_reg[62]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        1.098ns  (logic 0.253ns (23.042%)  route 0.845ns (76.958%))
-  Logic Levels:           1  (IBUF=1)
+  Data Path Delay:        0.277ns  (logic 0.164ns (59.205%)  route 0.113ns (40.795%))
+  Logic Levels:           1  (FDCE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    Y10                                               0.000     0.000 r  rst (IN)
-                         net (fo=0)                   0.000     0.000    rst
-    Y10                  IBUF (Prop_ibuf_I_O)         0.253     0.253 r  rst_IBUF_inst/O
-                         net (fo=9, routed)           0.845     1.098    trunc_inst/rst_IBUF
-    SLICE_X0Y8           FDRE                                         r  trunc_inst/ciphertext_reg[63]/R
+    SLICE_X112Y37        FDCE                         0.000     0.000 r  genblk1[11].round_inst/state_out_reg[62]/C
+    SLICE_X112Y37        FDCE (Prop_fdce_C_Q)         0.164     0.164 r  genblk1[11].round_inst/state_out_reg[62]/Q
+                         net (fo=1, routed)           0.113     0.277    final_inst/D[62]
+    SLICE_X113Y37        FDRE                                         r  final_inst/temp_state_reg[62]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 final_inst/temp_state_reg[63]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            trunc_inst/ciphertext_reg[63]_lopt_replica_6/D
+  Source:                 genblk1[11].round_inst/state_out_reg[36]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            final_inst/temp_state_reg[36]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        1.184ns  (logic 0.164ns (13.850%)  route 1.020ns (86.150%))
-  Logic Levels:           1  (FDRE=1)
+  Data Path Delay:        0.284ns  (logic 0.141ns (49.563%)  route 0.143ns (50.437%))
+  Logic Levels:           1  (FDCE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X66Y24         FDRE                         0.000     0.000 r  final_inst/temp_state_reg[63]/C
-    SLICE_X66Y24         FDRE (Prop_fdre_C_Q)         0.164     0.164 r  final_inst/temp_state_reg[63]/Q
-                         net (fo=8, routed)           1.020     1.184    trunc_inst/ciphertext_reg[63]_0
-    SLICE_X112Y27        FDRE                                         r  trunc_inst/ciphertext_reg[63]_lopt_replica_6/D
+    SLICE_X111Y23        FDCE                         0.000     0.000 r  genblk1[11].round_inst/state_out_reg[36]/C
+    SLICE_X111Y23        FDCE (Prop_fdce_C_Q)         0.141     0.141 r  genblk1[11].round_inst/state_out_reg[36]/Q
+                         net (fo=1, routed)           0.143     0.284    final_inst/D[36]
+    SLICE_X110Y23        FDRE                                         r  final_inst/temp_state_reg[36]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 final_inst/temp_state_reg[63]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            trunc_inst/ciphertext_reg[63]_lopt_replica_4/D
+  Source:                 genblk1[11].round_inst/state_out_reg[35]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            final_inst/temp_state_reg[35]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        1.227ns  (logic 0.164ns (13.369%)  route 1.063ns (86.631%))
-  Logic Levels:           1  (FDRE=1)
+  Data Path Delay:        0.292ns  (logic 0.141ns (48.237%)  route 0.151ns (51.763%))
+  Logic Levels:           1  (FDCE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X66Y24         FDRE                         0.000     0.000 r  final_inst/temp_state_reg[63]/C
-    SLICE_X66Y24         FDRE (Prop_fdre_C_Q)         0.164     0.164 r  final_inst/temp_state_reg[63]/Q
-                         net (fo=8, routed)           1.063     1.227    trunc_inst/ciphertext_reg[63]_0
-    SLICE_X112Y11        FDRE                                         r  trunc_inst/ciphertext_reg[63]_lopt_replica_4/D
+    SLICE_X111Y23        FDCE                         0.000     0.000 r  genblk1[11].round_inst/state_out_reg[35]/C
+    SLICE_X111Y23        FDCE (Prop_fdce_C_Q)         0.141     0.141 r  genblk1[11].round_inst/state_out_reg[35]/Q
+                         net (fo=1, routed)           0.151     0.292    final_inst/D[35]
+    SLICE_X113Y23        FDRE                                         r  final_inst/temp_state_reg[35]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 final_inst/temp_state_reg[63]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            trunc_inst/ciphertext_reg[63]_lopt_replica_7/D
+  Source:                 genblk1[11].round_inst/state_out_reg[63]_inv/C
+                            (rising edge-triggered cell FDPE)
+  Destination:            final_inst/temp_state_reg[63]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        1.244ns  (logic 0.164ns (13.179%)  route 1.080ns (86.821%))
-  Logic Levels:           1  (FDRE=1)
+  Data Path Delay:        0.294ns  (logic 0.141ns (47.936%)  route 0.153ns (52.064%))
+  Logic Levels:           1  (FDPE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X66Y24         FDRE                         0.000     0.000 r  final_inst/temp_state_reg[63]/C
-    SLICE_X66Y24         FDRE (Prop_fdre_C_Q)         0.164     0.164 r  final_inst/temp_state_reg[63]/Q
-                         net (fo=8, routed)           1.080     1.244    trunc_inst/ciphertext_reg[63]_0
-    SLICE_X112Y27        FDRE                                         r  trunc_inst/ciphertext_reg[63]_lopt_replica_7/D
+    SLICE_X111Y37        FDPE                         0.000     0.000 r  genblk1[11].round_inst/state_out_reg[63]_inv/C
+    SLICE_X111Y37        FDPE (Prop_fdpe_C_Q)         0.141     0.141 r  genblk1[11].round_inst/state_out_reg[63]_inv/Q
+                         net (fo=1, routed)           0.153     0.294    final_inst/D[63]
+    SLICE_X113Y37        FDRE                                         r  final_inst/temp_state_reg[63]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 final_inst/temp_state_reg[63]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            trunc_inst/ciphertext_reg[63]_lopt_replica_3/D
+  Source:                 genblk1[1].round_inst/state_out_reg[28]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[2].round_inst/state_out_reg[24]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        1.340ns  (logic 0.164ns (12.242%)  route 1.176ns (87.758%))
-  Logic Levels:           1  (FDRE=1)
+  Data Path Delay:        0.296ns  (logic 0.227ns (76.806%)  route 0.069ns (23.194%))
+  Logic Levels:           2  (FDCE=1 LUT1=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X66Y24         FDRE                         0.000     0.000 r  final_inst/temp_state_reg[63]/C
-    SLICE_X66Y24         FDRE (Prop_fdre_C_Q)         0.164     0.164 r  final_inst/temp_state_reg[63]/Q
-                         net (fo=8, routed)           1.176     1.340    trunc_inst/ciphertext_reg[63]_0
-    SLICE_X112Y8         FDRE                                         r  trunc_inst/ciphertext_reg[63]_lopt_replica_3/D
+    SLICE_X93Y26         FDCE                         0.000     0.000 r  genblk1[1].round_inst/state_out_reg[28]/C
+    SLICE_X93Y26         FDCE (Prop_fdce_C_Q)         0.128     0.128 f  genblk1[1].round_inst/state_out_reg[28]/Q
+                         net (fo=2, routed)           0.069     0.197    genblk1[1].round_inst/D[1]
+    SLICE_X93Y26         LUT1 (Prop_lut1_I0_O)        0.099     0.296 r  genblk1[1].round_inst/state_out[24]_i_1/O
+                         net (fo=1, routed)           0.000     0.296    genblk1[2].round_inst/state_out_reg[25]_2[0]
+    SLICE_X93Y26         FDCE                                         r  genblk1[2].round_inst/state_out_reg[24]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 final_inst/temp_state_reg[63]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            trunc_inst/ciphertext_reg[63]_lopt_replica_2/D
+  Source:                 genblk1[4].round_inst/state_out_reg[87]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[5].round_inst/state_out_reg[119]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        1.432ns  (logic 0.164ns (11.453%)  route 1.268ns (88.547%))
-  Logic Levels:           1  (FDRE=1)
+  Data Path Delay:        0.302ns  (logic 0.209ns (69.158%)  route 0.093ns (30.842%))
+  Logic Levels:           2  (FDCE=1 LUT3=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X66Y24         FDRE                         0.000     0.000 r  final_inst/temp_state_reg[63]/C
-    SLICE_X66Y24         FDRE (Prop_fdre_C_Q)         0.164     0.164 r  final_inst/temp_state_reg[63]/Q
-                         net (fo=8, routed)           1.268     1.432    trunc_inst/ciphertext_reg[63]_0
-    SLICE_X0Y23          FDRE                                         r  trunc_inst/ciphertext_reg[63]_lopt_replica_2/D
+    SLICE_X98Y35         FDCE                         0.000     0.000 r  genblk1[4].round_inst/state_out_reg[87]/C
+    SLICE_X98Y35         FDCE (Prop_fdce_C_Q)         0.164     0.164 r  genblk1[4].round_inst/state_out_reg[87]/Q
+                         net (fo=3, routed)           0.093     0.257    genblk1[4].round_inst/sbox_inst/Q[22]
+    SLICE_X99Y35         LUT3 (Prop_lut3_I1_O)        0.045     0.302 r  genblk1[4].round_inst/sbox_inst/state_out[119]_i_1/O
+                         net (fo=1, routed)           0.000     0.302    genblk1[5].round_inst/state_out_reg[127]_1[62]
+    SLICE_X99Y35         FDCE                                         r  genblk1[5].round_inst/state_out_reg[119]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 final_inst/temp_state_reg[63]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            trunc_inst/ciphertext_reg[63]_lopt_replica/D
+  Source:                 genblk1[4].round_inst/state_out_reg[87]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            genblk1[5].round_inst/state_out_reg[87]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        1.577ns  (logic 0.164ns (10.399%)  route 1.413ns (89.601%))
-  Logic Levels:           1  (FDRE=1)
+  Data Path Delay:        0.305ns  (logic 0.212ns (69.461%)  route 0.093ns (30.539%))
+  Logic Levels:           2  (FDCE=1 LUT3=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X66Y24         FDRE                         0.000     0.000 r  final_inst/temp_state_reg[63]/C
-    SLICE_X66Y24         FDRE (Prop_fdre_C_Q)         0.164     0.164 r  final_inst/temp_state_reg[63]/Q
-                         net (fo=8, routed)           1.413     1.577    trunc_inst/ciphertext_reg[63]_0
-    SLICE_X0Y15          FDRE                                         r  trunc_inst/ciphertext_reg[63]_lopt_replica/D
+    SLICE_X98Y35         FDCE                         0.000     0.000 r  genblk1[4].round_inst/state_out_reg[87]/C
+    SLICE_X98Y35         FDCE (Prop_fdce_C_Q)         0.164     0.164 r  genblk1[4].round_inst/state_out_reg[87]/Q
+                         net (fo=3, routed)           0.093     0.257    genblk1[4].round_inst/sbox_inst/Q[22]
+    SLICE_X99Y35         LUT3 (Prop_lut3_I0_O)        0.048     0.305 r  genblk1[4].round_inst/sbox_inst/state_out[87]_i_1/O
+                         net (fo=1, routed)           0.000     0.305    genblk1[5].round_inst/state_out_reg[127]_1[30]
+    SLICE_X99Y35         FDCE                                         r  genblk1[5].round_inst/state_out_reg[87]/D
   -------------------------------------------------------------------    -------------------
 
 
