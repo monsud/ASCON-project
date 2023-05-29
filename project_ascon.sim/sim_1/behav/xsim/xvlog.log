@@ -1,15 +1,24 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_add_constant.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ascon_add_constant
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_deserializer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ascon_deserializer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_finalization.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ascon_finalization
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_initalization.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ascon_initialization
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_key_schedule.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ascon_key_schedule
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_linear_diffusion.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ascon_linear_diffusion
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ascon_round
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_sbox.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ascon_sbox
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_serializer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ascon_serializer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ascon_top
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/top_module.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module top_module
-ERROR: [VRFC 10-4982] syntax error near ',' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/top_module.sv:40]
-ERROR: [VRFC 10-1247] port connections cannot be mixed ordered and named [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/top_module.sv:36]
-ERROR: [VRFC 10-4982] syntax error near ')' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/top_module.sv:41]
-ERROR: [VRFC 10-4982] syntax error near ',' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/top_module.sv:47]
-ERROR: [VRFC 10-1247] port connections cannot be mixed ordered and named [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/top_module.sv:43]
-ERROR: [VRFC 10-4982] syntax error near ')' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/top_module.sv:48]
-ERROR: [VRFC 10-4982] syntax error near ',' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/top_module.sv:54]
-ERROR: [VRFC 10-1247] port connections cannot be mixed ordered and named [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/top_module.sv:50]
-ERROR: [VRFC 10-4982] syntax error near ')' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/top_module.sv:55]
-ERROR: [VRFC 10-4982] syntax error near ',' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/top_module.sv:70]
-ERROR: [VRFC 10-1247] port connections cannot be mixed ordered and named [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/top_module.sv:66]
-ERROR: [VRFC 10-4982] syntax error near ')' [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/top_module.sv:71]
-ERROR: [VRFC 10-8530] module 'top_module' is ignored due to previous errors [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/top_module.sv:22]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sim_1/new/tb_ascon_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top_module

@@ -3,7 +3,7 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 29.05.2023 19:32:59
+// Create Date: 30.05.2023 01:04:41
 // Design Name: 
 // Module Name: ascon_deserializer
 // Project Name: 
@@ -19,22 +19,32 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module ascon_deserializer (
+module ascon_deserializer #(parameter int NUM_CHUNKS = 4)(
   input wire clk,
   input wire rst,
-  input wire [31:0] chunk_in [3:0],
+  input wire [31:0] data_in [NUM_CHUNKS-1:0],
   output wire [127:0] data_out
 );
-  reg [127:0] reg_data;
+  reg [127:0] shift_reg;
+  reg [1:0] counter;
 
   always @(posedge clk or posedge rst) begin
-    if (rst) begin
-      reg_data <= 0;
-    end else begin
-      reg_data <= {chunk_in[3], chunk_in[2], chunk_in[1], chunk_in[0]};
-    end
+    if (rst)
+      counter <= 2'b0;
+    else
+      counter <= counter + 1'b1;
   end
 
-  assign data_out = reg_data;
+  always @(posedge clk or posedge rst) begin
+    if (rst)
+      shift_reg <= '0;
+    else if (counter == 2'b00)
+      shift_reg <= {data_in[NUM_CHUNKS-1], data_in[NUM_CHUNKS-2], data_in[NUM_CHUNKS-3], data_in[NUM_CHUNKS-4]};
+    else if (counter != 2'b00)
+      shift_reg <= {shift_reg[95:0], data_in[NUM_CHUNKS-1]};
+  end
+
+  assign data_out = shift_reg;
+
 endmodule
 

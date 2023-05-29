@@ -3,7 +3,7 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 29.05.2023 17:59:56
+// Create Date: 30.05.2023 00:58:40
 // Design Name: 
 // Module Name: ascon_serializer
 // Project Name: 
@@ -19,33 +19,37 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module ascon_serializer (
+
+module ascon_serializer #(parameter int NUM_CHUNKS = 4)(
   input wire clk,
   input wire rst,
   input wire [127:0] data_in,
-  output wire [31:0] chunk_out [3:0]
+  output wire [31:0] data_out [NUM_CHUNKS-1:0]
 );
-  reg [31:0] reg_data [3:0];
+  reg [127:0] shift_reg;
+  reg [1:0] counter;
 
   always @(posedge clk or posedge rst) begin
-    if (rst) begin
-      reg_data[0] <= 0;
-      reg_data[1] <= 0;
-      reg_data[2] <= 0;
-      reg_data[3] <= 0;
-    end else begin
-      reg_data[0] <= data_in[31:0];
-      reg_data[1] <= data_in[63:32];
-      reg_data[2] <= data_in[95:64];
-      reg_data[3] <= data_in[127:96];
-    end
+    if (rst)
+      counter <= 2'b0;
+    else
+      counter <= counter + 1'b1;
   end
 
-  assign chunk_out[0] = reg_data[0];
-  assign chunk_out[1] = reg_data[1];
-  assign chunk_out[2] = reg_data[2];
-  assign chunk_out[3] = reg_data[3];
+  always @(posedge clk or posedge rst) begin
+    if (rst)
+      shift_reg <= '0;
+    else if (counter == 2'b00)
+      shift_reg <= data_in;
+    else if (counter != 2'b00)
+      shift_reg <= {shift_reg[95:0], shift_reg[127:96]};
+  end
+
+  generate
+    genvar i;
+    for (i = 0; i < NUM_CHUNKS; i = i + 1) begin : CHUNK_GEN
+      assign data_out[i] = shift_reg[(i+1)*32-1 : i*32];
+    end
+  endgenerate
+
 endmodule
-
-
-

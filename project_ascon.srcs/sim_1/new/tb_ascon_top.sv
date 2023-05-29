@@ -20,14 +20,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module tb_ascon_top();
+module tb_top_module();
 
   reg clk, rst;
   reg [127:0] key, nonce, plaintext;
   wire [127:0] ciphertext;
 
   // Instantiate the ascon_top module
-  ascon_top dut(
+  top_module dut(
     .clk(clk),
     .rst(rst),
     .key(key),
@@ -57,7 +57,7 @@ module tb_ascon_top();
     plaintext = 128'h0123456789abcdef0123456789abcdef;
     #100;
     $display("Ciphertext: %h", ciphertext);
-    // Expected output: 19714801f49ff5de77edb2999a030f46
+    // Expected output: e5fcffeeba6eab3845b014d713218801
   end
 
 endmodule

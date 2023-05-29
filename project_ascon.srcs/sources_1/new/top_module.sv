@@ -27,56 +27,53 @@ module top_module (
   input wire [127:0] plaintext,
   output wire [127:0] ciphertext
 );
+  wire [31:0] key_chunk [3:0];
+  wire [31:0] nonce_chunk [3:0];
+  wire [31:0] plaintext_chunk [3:0];
+  wire [31:0] ciphertext_chunk [3:0];
 
-  wire [31:0] serialized_key [3:0];
-  wire [31:0] serialized_nonce [3:0];
-  wire [31:0] serialized_plaintext [3:0];
-  wire [31:0] deserialized_ciphertext [3:0];
-
-  ascon_serializer key_serialize_inst (
+  // Serialize the 128-bit inputs
+  ascon_serializer #(.NUM_CHUNKS(4)) serializer_key (
     .clk(clk),
     .rst(rst),
     .data_in(key),
-    .chunk_out(serialized_key[3], serialized_key[2], serialized_key[1], serialized_key[0])
+    .data_out(key_chunk)
   );
 
-  ascon_serializer nonce_serializer_inst (
+  ascon_serializer #(.NUM_CHUNKS(4)) serializer_nonce (
     .clk(clk),
     .rst(rst),
     .data_in(nonce),
-    .chunk_out(serialized_nonce[3],serialized_nonce[2],serialized_nonce[1],serialized_nonce[0])
+    .data_out(nonce_chunk)
   );
 
-  ascon_serializer plaintext_serializer_inst (
+  ascon_serializer #(.NUM_CHUNKS(4)) serializer_plaintext (
     .clk(clk),
     .rst(rst),
     .data_in(plaintext),
-    .chunk_out(serialized_plaintext[3],serialized_plaintext[2],serialized_plaintext[1],serialized_plaintext[0])
+    .data_out(plaintext_chunk)
   );
 
+  // Ascon implementation
   ascon_top ascon_inst (
     .clk(clk),
     .rst(rst),
-    .key({serialized_key[3],serialized_key[2],serialized_key[1],serialized_key[0]}),
-    .nonce({serialized_nonce[3],serialized_nonce[2],serialized_nonce[1],serialized_nonce[0]}),
-    .plaintext({serialized_plaintext[3],serialized_plaintext[2],serialized_plaintext[1],serialized_plaintext[0]}),
-    .ciphertext(ciphertext)
+    .key({key_chunk[3], key_chunk[2], key_chunk[1], key_chunk[0]}),
+    .nonce({nonce_chunk[3], nonce_chunk[2], nonce_chunk[1], nonce_chunk[0]}),
+    .plaintext({plaintext_chunk[3], plaintext_chunk[2], plaintext_chunk[1], plaintext_chunk[0]}),
+    .ciphertext({ciphertext_chunk[3], ciphertext_chunk[2], ciphertext_chunk[1], ciphertext_chunk[0]})
   );
 
-  ascon_deserializer ciphertext_deserializer_inst (
+  // Deserialize the 128-bit output
+  ascon_deserializer #(.NUM_CHUNKS(4)) deserializer (
     .clk(clk),
     .rst(rst),
-    .data_in(ciphertext),
-    .chunk_out(deserialized_ciphertext[3],deserialized_ciphertext[2],deserialized_ciphertext[1],deserialized_ciphertext[0])
-  );
-
-  ascon_deserializer final_ciphertext_deserializer_inst (
-    .clk(clk),
-    .rst(rst),
-    .chunk_in({deserialized_ciphertext[3],deserialized_ciphertext[2],deserialized_ciphertext[1],deserialized_ciphertext[0]}),
+    .data_in(ciphertext_chunk),
     .data_out(ciphertext)
   );
 
 endmodule
+
+
 
 

@@ -11,7 +11,7 @@ sv xil_defaultlib  \
 "../../../../project_ascon.srcs/sources_1/new/ascon_serializer.sv" \
 "../../../../project_ascon.srcs/sources_1/new/ascon_top.sv" \
 "../../../../project_ascon.srcs/sources_1/new/top_module.sv" \
-"../../../../project_ascon.srcs/sim_1/new/tb_top_module.sv" \
+"../../../../project_ascon.srcs/sim_1/new/tb_ascon_top.sv" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"
