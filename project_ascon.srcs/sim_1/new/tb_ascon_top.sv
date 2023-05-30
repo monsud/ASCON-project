@@ -20,14 +20,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module tb_top_module();
+module tb_ascon_top();
 
   reg clk, rst;
   reg [127:0] key, nonce, plaintext;
   wire [127:0] ciphertext;
 
   // Instantiate the ascon_top module
-  top_module dut(
+  ascon_top dut(
     .clk(clk),
     .rst(rst),
     .key(key),

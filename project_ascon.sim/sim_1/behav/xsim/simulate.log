@@ -1,2 +1,3 @@
 Time resolution is 1 ps
-Ciphertext: 5689d8089c373433d930326241ae404c
+Test passed! Output data matches expected value.
+$finish called at time : 80 ns : File "C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sim_1/new/tb_serializer_deserializer.sv" Line 78

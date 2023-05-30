@@ -1,24 +1,4 @@
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_add_constant.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ascon_add_constant
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_deserializer.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ascon_deserializer
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_finalization.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ascon_finalization
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_initalization.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ascon_initialization
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_key_schedule.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ascon_key_schedule
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_linear_diffusion.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ascon_linear_diffusion
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_round.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ascon_round
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_sbox.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ascon_sbox
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_serializer.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ascon_serializer
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/ascon_top.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ascon_top
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/top_module.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module top_module
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sim_1/new/tb_ascon_top.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_top_module
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/new/serializer_deserializer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module serializer_deserializer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sim_1/new/tb_serializer_deserializer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_serializer_deserializer
