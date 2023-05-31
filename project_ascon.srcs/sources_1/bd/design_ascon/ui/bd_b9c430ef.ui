@@ -1,23 +1,42 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.25",
-   "Default View_TopLeft":"-498,-556",
+   "Default View_Layers":"/rst_ps7_0_50M_peripheral_aresetn:true|/processing_system7_0_FCLK_CLK0:true|/processing_system7_0_FCLK_RESET0_N:true|",
+   "Default View_ScaleFactor":"0.717936",
+   "Default View_TopLeft":"-1316,-632",
+   "Display-PortTypeClock":"true",
+   "Display-PortTypeReset":"true",
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+   "Interfaces View_Layers":"/rst_ps7_0_50M_peripheral_aresetn:false|/processing_system7_0_FCLK_CLK0:false|/processing_system7_0_FCLK_RESET0_N:false|",
+   "Interfaces View_ScaleFactor":"0.904545",
+   "Interfaces View_TopLeft":"-362,0",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS-threadsafe
 #  -string -flagsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 1 -x -190 -y -240 -defaultsOSRD
-preplace inst ascon_core_0 -pg 1 -lvl 2 -x 300 -y -240 -defaultsOSRD
-preplace inst rst_ps7_0_50M -pg 1 -lvl 2 -x 300 -y -440 -defaultsOSRD
-preplace netloc processing_system7_0_FCLK_CLK0 1 1 1 0 -480n
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 1 10 -460n
-preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 1 2 20 -340 470
-levelinfo -pg 1 -390 -190 300 490
-pagesize -pg 1 -db -bbox -sgen -390 -540 490 200
+preplace port DDR -pg 1 -lvl 6 -x 760 -y -470 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 6 -x 760 -y -440 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x -1030 -y -160 -defaultsOSRD
+preplace inst ascon_core_0 -pg 1 -lvl 5 -x 590 -y -380 -defaultsOSRD
+preplace inst rst_ps7_0_50M -pg 1 -lvl 3 -x -220 -y -610 -defaultsOSRD
+preplace inst axi_dwidth_converter_0 -pg 1 -lvl 4 -x 180 -y -280 -defaultsOSRD -resize 329 150
+preplace inst axi_dwidth_converter_1 -pg 1 -lvl 4 -x 180 -y -100 -defaultsOSRD -resize 341 163
+preplace inst axi_dwidth_converter_2 -pg 1 -lvl 4 -x 180 -y 90 -defaultsOSRD -resize 333 173
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 5 -1390 -320 -780 -340 -530 -340 -40 -400 440
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 2 -800 -630 N
+preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 3 2 -50 -450 450
+preplace netloc axi_dwidth_converter_0_s_axi_rdata 1 3 2 -10J -390 420
+preplace netloc axi_dwidth_converter_1_s_axi_rdata 1 3 2 -30 -440 430
+preplace netloc axi_dwidth_converter_2_s_axi_rdata 1 3 2 -20 -380 410
+preplace netloc processing_system7_0_DDR 1 1 5 -810 -490 N -490 N -490 N -490 740
+preplace netloc processing_system7_0_FIXED_IO 1 1 5 -790 -480 N -480 N -480 N -480 730
+preplace netloc axi_dwidth_converter_0_M_AXI 1 0 5 -1420 -430 N -430 N -430 N -430 400
+preplace netloc axi_dwidth_converter_1_M_AXI 1 0 5 -1410 -420 N -420 N -420 N -420 390
+preplace netloc axi_dwidth_converter_2_M_AXI 1 0 5 -1400 -410 N -410 N -410 N -410 380
+levelinfo -pg 1 -1440 -1030 -550 -220 180 590 760
+pagesize -pg 1 -db -bbox -sgen -1440 -750 870 520
 "
 }
 {
-   "da_axi4_cnt":"1",
-   "da_clkrst_cnt":"8",
-   "da_ps7_cnt":"2",
+   "da_axi4_cnt":"2",
+   "da_clkrst_cnt":"14",
+   "da_ps7_cnt":"3",
    "da_trigger_cnt":"5"
 }

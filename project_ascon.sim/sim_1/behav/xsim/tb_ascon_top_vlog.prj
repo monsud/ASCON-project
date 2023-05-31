@@ -1,0 +1,17 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../project_ascon.srcs/sources_1/new/ascon_add_constant.sv" \
+"../../../../project_ascon.srcs/sources_1/new/ascon_finalization.sv" \
+"../../../../project_ascon.srcs/sources_1/new/ascon_initalization.sv" \
+"../../../../project_ascon.srcs/sources_1/new/ascon_key_schedule.sv" \
+"../../../../project_ascon.srcs/sources_1/new/ascon_linear_diffusion.sv" \
+"../../../../project_ascon.srcs/sources_1/new/ascon_round.sv" \
+"../../../../project_ascon.srcs/sources_1/new/ascon_sbox.sv" \
+"../../../../project_ascon.srcs/sources_1/new/ascon_top.sv" \
+"../../../../project_ascon.srcs/sim_1/new/tb_ascon_top.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
