@@ -22,7 +22,7 @@
 
 module tb_ascon_top();
 
-  reg clk, rst;
+  reg clk, rst, enable;
   reg [127:0] key, nonce, plaintext;
   wire [127:0] ciphertext;
 
@@ -30,6 +30,7 @@ module tb_ascon_top();
   ascon_top dut(
     .clk(clk),
     .rst(rst),
+    .enable(enable),
     .key(key),
     .nonce(nonce),
     .plaintext(plaintext),
@@ -49,6 +50,13 @@ module tb_ascon_top();
     rst = 1;
     #20;
     rst = 0;
+  end
+  
+    // Enable signal on
+  initial begin
+    enable = 0;
+    #20;
+    enable = 1;
   end
 
   initial begin

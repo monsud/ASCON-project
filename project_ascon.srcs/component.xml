@@ -65,7 +65,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>1fd14263</spirit:value>
+            <spirit:value>7a9a1c0b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -81,7 +81,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>42a80f3f</spirit:value>
+            <spirit:value>46c94330</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -131,6 +131,19 @@
       </spirit:port>
       <spirit:port>
         <spirit:name>rst</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>enable</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
@@ -250,7 +263,7 @@
       <spirit:file>
         <spirit:name>sources_1/new/ascon_top.sv</spirit:name>
         <spirit:fileType>systemVerilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_709d450e</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_96440a17</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -328,15 +341,15 @@
       </xilinx:taxonomies>
       <xilinx:displayName>ascon_core_v1_0</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:coreRevision>7</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2023-05-31T15:24:55Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>8</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2023-06-01T14:21:10Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2022.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="bffbecdb"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="e178f9e6"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="27fe2e67"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="144df759"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="4e0ea3ae"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="5c636ee6"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="b3ec4e00"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
