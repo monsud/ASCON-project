@@ -1,10 +1,11 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
--- Date        : Thu Jun  1 16:56:46 2023
+-- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+-- Date        : Fri Jun  2 21:02:06 2023
 -- Host        : INSPIRON-7370 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top design_ascon_xbar_0 -prefix
---               design_ascon_xbar_0_ design_ascon_xbar_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_xbar_0/design_ascon_xbar_0_sim_netlist.vhdl
 -- Design      : design_ascon_xbar_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -14,7 +15,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity design_ascon_xbar_0_axi_crossbar_v2_1_28_addr_arbiter_sasd is
+entity design_ascon_xbar_0_axi_crossbar_v2_1_29_addr_arbiter_sasd is
   port (
     m_valid_i : out STD_LOGIC;
     SR : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -68,9 +69,11 @@ entity design_ascon_xbar_0_axi_crossbar_v2_1_28_addr_arbiter_sasd is
     mi_bvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
     mi_wready : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-end design_ascon_xbar_0_axi_crossbar_v2_1_28_addr_arbiter_sasd;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_ascon_xbar_0_axi_crossbar_v2_1_29_addr_arbiter_sasd : entity is "axi_crossbar_v2_1_29_addr_arbiter_sasd";
+end design_ascon_xbar_0_axi_crossbar_v2_1_29_addr_arbiter_sasd;
 
-architecture STRUCTURE of design_ascon_xbar_0_axi_crossbar_v2_1_28_addr_arbiter_sasd is
+architecture STRUCTURE of design_ascon_xbar_0_axi_crossbar_v2_1_29_addr_arbiter_sasd is
   signal \^q\ : STD_LOGIC_VECTOR ( 34 downto 0 );
   signal \^sr\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \^aa_grant_rnw\ : STD_LOGIC;
@@ -1467,7 +1470,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity design_ascon_xbar_0_axi_crossbar_v2_1_28_decerr_slave is
+entity design_ascon_xbar_0_axi_crossbar_v2_1_29_decerr_slave is
   port (
     mi_bvalid : out STD_LOGIC_VECTOR ( 0 to 0 );
     mi_wready : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -1492,9 +1495,11 @@ entity design_ascon_xbar_0_axi_crossbar_v2_1_28_decerr_slave is
     \gen_axilite.s_axi_bvalid_i_reg_1\ : in STD_LOGIC;
     aa_rready : in STD_LOGIC
   );
-end design_ascon_xbar_0_axi_crossbar_v2_1_28_decerr_slave;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_ascon_xbar_0_axi_crossbar_v2_1_29_decerr_slave : entity is "axi_crossbar_v2_1_29_decerr_slave";
+end design_ascon_xbar_0_axi_crossbar_v2_1_29_decerr_slave;
 
-architecture STRUCTURE of design_ascon_xbar_0_axi_crossbar_v2_1_28_decerr_slave is
+architecture STRUCTURE of design_ascon_xbar_0_axi_crossbar_v2_1_29_decerr_slave is
   signal \gen_axilite.s_axi_arready_i_i_1_n_0\ : STD_LOGIC;
   signal \gen_axilite.s_axi_bvalid_i_i_1_n_0\ : STD_LOGIC;
   signal \gen_axilite.s_axi_rvalid_i_i_1_n_0\ : STD_LOGIC;
@@ -1663,7 +1668,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity design_ascon_xbar_0_axi_crossbar_v2_1_28_splitter is
+entity design_ascon_xbar_0_axi_crossbar_v2_1_29_splitter is
   port (
     \m_ready_d_reg[0]_0\ : out STD_LOGIC;
     m_ready_d : out STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -1682,9 +1687,11 @@ entity design_ascon_xbar_0_axi_crossbar_v2_1_28_splitter is
     aresetn_d : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
-end design_ascon_xbar_0_axi_crossbar_v2_1_28_splitter;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_ascon_xbar_0_axi_crossbar_v2_1_29_splitter : entity is "axi_crossbar_v2_1_29_splitter";
+end design_ascon_xbar_0_axi_crossbar_v2_1_29_splitter;
 
-architecture STRUCTURE of design_ascon_xbar_0_axi_crossbar_v2_1_28_splitter is
+architecture STRUCTURE of design_ascon_xbar_0_axi_crossbar_v2_1_29_splitter is
   signal \^m_ready_d\ : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal \m_ready_d[0]_i_1_n_0\ : STD_LOGIC;
   signal \m_ready_d[1]_i_1_n_0\ : STD_LOGIC;
@@ -1796,7 +1803,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \design_ascon_xbar_0_axi_crossbar_v2_1_28_splitter__parameterized0\ is
+entity \design_ascon_xbar_0_axi_crossbar_v2_1_29_splitter__parameterized0\ is
   port (
     m_ready_d : out STD_LOGIC_VECTOR ( 1 downto 0 );
     aresetn_d : in STD_LOGIC;
@@ -1807,10 +1814,10 @@ entity \design_ascon_xbar_0_axi_crossbar_v2_1_28_splitter__parameterized0\ is
     aclk : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \design_ascon_xbar_0_axi_crossbar_v2_1_28_splitter__parameterized0\ : entity is "axi_crossbar_v2_1_28_splitter";
-end \design_ascon_xbar_0_axi_crossbar_v2_1_28_splitter__parameterized0\;
+  attribute ORIG_REF_NAME of \design_ascon_xbar_0_axi_crossbar_v2_1_29_splitter__parameterized0\ : entity is "axi_crossbar_v2_1_29_splitter";
+end \design_ascon_xbar_0_axi_crossbar_v2_1_29_splitter__parameterized0\;
 
-architecture STRUCTURE of \design_ascon_xbar_0_axi_crossbar_v2_1_28_splitter__parameterized0\ is
+architecture STRUCTURE of \design_ascon_xbar_0_axi_crossbar_v2_1_29_splitter__parameterized0\ is
   signal \^m_ready_d\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal \m_ready_d[0]_i_1_n_0\ : STD_LOGIC;
   signal \m_ready_d[1]_i_1_n_0\ : STD_LOGIC;
@@ -1869,7 +1876,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity design_ascon_xbar_0_axi_register_slice_v2_1_27_axic_register_slice is
+entity design_ascon_xbar_0_axi_register_slice_v2_1_28_axic_register_slice is
   port (
     sr_rvalid : out STD_LOGIC;
     aa_rready : out STD_LOGIC;
@@ -1891,9 +1898,11 @@ entity design_ascon_xbar_0_axi_register_slice_v2_1_27_axic_register_slice is
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     E : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-end design_ascon_xbar_0_axi_register_slice_v2_1_27_axic_register_slice;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_ascon_xbar_0_axi_register_slice_v2_1_28_axic_register_slice : entity is "axi_register_slice_v2_1_28_axic_register_slice";
+end design_ascon_xbar_0_axi_register_slice_v2_1_28_axic_register_slice;
 
-architecture STRUCTURE of design_ascon_xbar_0_axi_register_slice_v2_1_27_axic_register_slice is
+architecture STRUCTURE of design_ascon_xbar_0_axi_register_slice_v2_1_28_axic_register_slice is
   signal \^aa_rready\ : STD_LOGIC;
   signal \^aresetn_d_reg[1]_0\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal \m_payload_i[12]_i_2_n_0\ : STD_LOGIC;
@@ -3436,7 +3445,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity design_ascon_xbar_0_axi_crossbar_v2_1_28_crossbar_sasd is
+entity design_ascon_xbar_0_axi_crossbar_v2_1_29_crossbar_sasd is
   port (
     Q : out STD_LOGIC_VECTOR ( 34 downto 0 );
     \m_payload_i_reg[34]\ : out STD_LOGIC_VECTOR ( 33 downto 0 );
@@ -3471,9 +3480,11 @@ entity design_ascon_xbar_0_axi_crossbar_v2_1_28_crossbar_sasd is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
-end design_ascon_xbar_0_axi_crossbar_v2_1_28_crossbar_sasd;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_ascon_xbar_0_axi_crossbar_v2_1_29_crossbar_sasd : entity is "axi_crossbar_v2_1_29_crossbar_sasd";
+end design_ascon_xbar_0_axi_crossbar_v2_1_29_crossbar_sasd;
 
-architecture STRUCTURE of design_ascon_xbar_0_axi_crossbar_v2_1_28_crossbar_sasd is
+architecture STRUCTURE of design_ascon_xbar_0_axi_crossbar_v2_1_29_crossbar_sasd is
   signal aa_grant_rnw : STD_LOGIC;
   signal aa_rready : STD_LOGIC;
   signal addr_arbiter_inst_n_3 : STD_LOGIC;
@@ -3511,7 +3522,7 @@ architecture STRUCTURE of design_ascon_xbar_0_axi_crossbar_v2_1_28_crossbar_sasd
   signal splitter_aw_n_4 : STD_LOGIC;
   signal sr_rvalid : STD_LOGIC;
 begin
-addr_arbiter_inst: entity work.design_ascon_xbar_0_axi_crossbar_v2_1_28_addr_arbiter_sasd
+addr_arbiter_inst: entity work.design_ascon_xbar_0_axi_crossbar_v2_1_29_addr_arbiter_sasd
      port map (
       D(3) => m_atarget_hot0(3),
       D(2) => addr_arbiter_inst_n_41,
@@ -3580,7 +3591,7 @@ aresetn_d_reg: unisim.vcomponents.FDRE
       Q => aresetn_d,
       R => '0'
     );
-\gen_decerr.decerr_slave_inst\: entity work.design_ascon_xbar_0_axi_crossbar_v2_1_28_decerr_slave
+\gen_decerr.decerr_slave_inst\: entity work.design_ascon_xbar_0_axi_crossbar_v2_1_29_decerr_slave
      port map (
       Q(0) => m_atarget_hot(3),
       SR(0) => reset,
@@ -3671,7 +3682,7 @@ aresetn_d_reg: unisim.vcomponents.FDRE
       Q => m_atarget_hot(3),
       R => reset
     );
-reg_slice_r: entity work.design_ascon_xbar_0_axi_register_slice_v2_1_27_axic_register_slice
+reg_slice_r: entity work.design_ascon_xbar_0_axi_register_slice_v2_1_28_axic_register_slice
      port map (
       E(0) => p_1_in,
       Q(1 downto 0) => m_atarget_enc(1 downto 0),
@@ -3718,7 +3729,7 @@ reg_slice_r: entity work.design_ascon_xbar_0_axi_register_slice_v2_1_27_axic_reg
       I4 => m_axi_bresp(3),
       O => s_axi_bresp(1)
     );
-splitter_ar: entity work.\design_ascon_xbar_0_axi_crossbar_v2_1_28_splitter__parameterized0\
+splitter_ar: entity work.\design_ascon_xbar_0_axi_crossbar_v2_1_29_splitter__parameterized0\
      port map (
       aa_grant_rnw => aa_grant_rnw,
       aclk => aclk,
@@ -3728,7 +3739,7 @@ splitter_ar: entity work.\design_ascon_xbar_0_axi_crossbar_v2_1_28_splitter__par
       \m_ready_d_reg[1]_1\ => reg_slice_r_n_2,
       m_valid_i => m_valid_i
     );
-splitter_aw: entity work.design_ascon_xbar_0_axi_crossbar_v2_1_28_splitter
+splitter_aw: entity work.design_ascon_xbar_0_axi_crossbar_v2_1_29_splitter
      port map (
       Q(0) => m_atarget_hot(3),
       aa_grant_rnw => aa_grant_rnw,
@@ -3752,7 +3763,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar is
+entity design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar is
   port (
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC;
@@ -3846,106 +3857,108 @@ entity design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar is
     m_axi_rready : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   attribute C_AXI_ADDR_WIDTH : integer;
-  attribute C_AXI_ADDR_WIDTH of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is 32;
+  attribute C_AXI_ADDR_WIDTH of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is 32;
   attribute C_AXI_ARUSER_WIDTH : integer;
-  attribute C_AXI_ARUSER_WIDTH of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is 1;
+  attribute C_AXI_ARUSER_WIDTH of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is 1;
   attribute C_AXI_AWUSER_WIDTH : integer;
-  attribute C_AXI_AWUSER_WIDTH of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is 1;
+  attribute C_AXI_AWUSER_WIDTH of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is 1;
   attribute C_AXI_BUSER_WIDTH : integer;
-  attribute C_AXI_BUSER_WIDTH of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is 1;
+  attribute C_AXI_BUSER_WIDTH of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is 1;
   attribute C_AXI_DATA_WIDTH : integer;
-  attribute C_AXI_DATA_WIDTH of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is 32;
+  attribute C_AXI_DATA_WIDTH of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is 32;
   attribute C_AXI_ID_WIDTH : integer;
-  attribute C_AXI_ID_WIDTH of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is 1;
+  attribute C_AXI_ID_WIDTH of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is 1;
   attribute C_AXI_PROTOCOL : integer;
-  attribute C_AXI_PROTOCOL of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is 2;
+  attribute C_AXI_PROTOCOL of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is 2;
   attribute C_AXI_RUSER_WIDTH : integer;
-  attribute C_AXI_RUSER_WIDTH of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is 1;
+  attribute C_AXI_RUSER_WIDTH of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is 1;
   attribute C_AXI_SUPPORTS_USER_SIGNALS : integer;
-  attribute C_AXI_SUPPORTS_USER_SIGNALS of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is 0;
+  attribute C_AXI_SUPPORTS_USER_SIGNALS of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is 0;
   attribute C_AXI_WUSER_WIDTH : integer;
-  attribute C_AXI_WUSER_WIDTH of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is 1;
+  attribute C_AXI_WUSER_WIDTH of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is 1;
   attribute C_CONNECTIVITY_MODE : integer;
-  attribute C_CONNECTIVITY_MODE of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is 0;
+  attribute C_CONNECTIVITY_MODE of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is 0;
   attribute C_DEBUG : integer;
-  attribute C_DEBUG of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is 1;
+  attribute C_DEBUG of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is 1;
   attribute C_FAMILY : string;
-  attribute C_FAMILY of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is "zynq";
+  attribute C_FAMILY of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is "zynq";
   attribute C_M_AXI_ADDR_WIDTH : string;
-  attribute C_M_AXI_ADDR_WIDTH of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is "288'b000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000100000000000000000000000000010010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010011";
+  attribute C_M_AXI_ADDR_WIDTH of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is "288'b000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000100000000000000000000000000010010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010011";
   attribute C_M_AXI_BASE_ADDR : string;
-  attribute C_M_AXI_BASE_ADDR of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is "576'b111111111111111111111111111111111111111111111111111111111111111100000000000000000000000000000000010000010011000000000000000000000000000000000000000000000000000001000001001011110000000000000000000000000000000000000000000000000100000100101110000000000000000000000000000000000000000000000000010000010010110000000000000000000000000000000000000000000000000001000001001010000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000001000001001000000000000000000000";
+  attribute C_M_AXI_BASE_ADDR of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is "576'b111111111111111111111111111111111111111111111111111111111111111100000000000000000000000000000000010000010011000000000000000000000000000000000000000000000000000001000001001011110000000000000000000000000000000000000000000000000100000100101110000000000000000000000000000000000000000000000000010000010010110000000000000000000000000000000000000000000000000001000001001010000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000001000001001000000000000000000000";
   attribute C_M_AXI_READ_CONNECTIVITY : string;
-  attribute C_M_AXI_READ_CONNECTIVITY of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is "96'b000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001";
+  attribute C_M_AXI_READ_CONNECTIVITY of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is "96'b000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001";
   attribute C_M_AXI_READ_ISSUING : string;
-  attribute C_M_AXI_READ_ISSUING of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is "96'b000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001";
+  attribute C_M_AXI_READ_ISSUING of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is "96'b000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001";
   attribute C_M_AXI_SECURE : string;
-  attribute C_M_AXI_SECURE of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is "96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
+  attribute C_M_AXI_SECURE of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is "96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
   attribute C_M_AXI_WRITE_CONNECTIVITY : string;
-  attribute C_M_AXI_WRITE_CONNECTIVITY of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is "96'b000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001";
+  attribute C_M_AXI_WRITE_CONNECTIVITY of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is "96'b000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001";
   attribute C_M_AXI_WRITE_ISSUING : string;
-  attribute C_M_AXI_WRITE_ISSUING of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is "96'b000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001";
+  attribute C_M_AXI_WRITE_ISSUING of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is "96'b000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001";
   attribute C_NUM_ADDR_RANGES : integer;
-  attribute C_NUM_ADDR_RANGES of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is 3;
+  attribute C_NUM_ADDR_RANGES of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is 3;
   attribute C_NUM_MASTER_SLOTS : integer;
-  attribute C_NUM_MASTER_SLOTS of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is 3;
+  attribute C_NUM_MASTER_SLOTS of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is 3;
   attribute C_NUM_SLAVE_SLOTS : integer;
-  attribute C_NUM_SLAVE_SLOTS of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is 1;
+  attribute C_NUM_SLAVE_SLOTS of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is 1;
   attribute C_R_REGISTER : integer;
-  attribute C_R_REGISTER of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is 1;
+  attribute C_R_REGISTER of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is 1;
   attribute C_S_AXI_ARB_PRIORITY : integer;
-  attribute C_S_AXI_ARB_PRIORITY of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is 0;
+  attribute C_S_AXI_ARB_PRIORITY of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is 0;
   attribute C_S_AXI_BASE_ID : integer;
-  attribute C_S_AXI_BASE_ID of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is 0;
+  attribute C_S_AXI_BASE_ID of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is 0;
   attribute C_S_AXI_READ_ACCEPTANCE : integer;
-  attribute C_S_AXI_READ_ACCEPTANCE of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is 1;
+  attribute C_S_AXI_READ_ACCEPTANCE of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is 1;
   attribute C_S_AXI_SINGLE_THREAD : integer;
-  attribute C_S_AXI_SINGLE_THREAD of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is 1;
+  attribute C_S_AXI_SINGLE_THREAD of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is 1;
   attribute C_S_AXI_THREAD_ID_WIDTH : integer;
-  attribute C_S_AXI_THREAD_ID_WIDTH of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is 12;
+  attribute C_S_AXI_THREAD_ID_WIDTH of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is 12;
   attribute C_S_AXI_WRITE_ACCEPTANCE : integer;
-  attribute C_S_AXI_WRITE_ACCEPTANCE of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is 1;
+  attribute C_S_AXI_WRITE_ACCEPTANCE of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is 1;
   attribute DowngradeIPIdentifiedWarnings : string;
-  attribute DowngradeIPIdentifiedWarnings of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is "yes";
+  attribute DowngradeIPIdentifiedWarnings of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is "yes";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is "axi_crossbar_v2_1_29_axi_crossbar";
   attribute P_ADDR_DECODE : integer;
-  attribute P_ADDR_DECODE of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is 1;
+  attribute P_ADDR_DECODE of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is 1;
   attribute P_AXI3 : integer;
-  attribute P_AXI3 of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is 1;
+  attribute P_AXI3 of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is 1;
   attribute P_AXI4 : integer;
-  attribute P_AXI4 of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is 0;
+  attribute P_AXI4 of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is 0;
   attribute P_AXILITE : integer;
-  attribute P_AXILITE of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is 2;
+  attribute P_AXILITE of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is 2;
   attribute P_AXILITE_SIZE : string;
-  attribute P_AXILITE_SIZE of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is "3'b010";
+  attribute P_AXILITE_SIZE of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is "3'b010";
   attribute P_FAMILY : string;
-  attribute P_FAMILY of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is "zynq";
+  attribute P_FAMILY of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is "zynq";
   attribute P_INCR : string;
-  attribute P_INCR of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is "2'b01";
+  attribute P_INCR of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is "2'b01";
   attribute P_LEN : integer;
-  attribute P_LEN of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is 8;
+  attribute P_LEN of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is 8;
   attribute P_LOCK : integer;
-  attribute P_LOCK of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is 1;
+  attribute P_LOCK of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is 1;
   attribute P_M_AXI_ERR_MODE : string;
-  attribute P_M_AXI_ERR_MODE of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is "96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
+  attribute P_M_AXI_ERR_MODE of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is "96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
   attribute P_M_AXI_SUPPORTS_READ : string;
-  attribute P_M_AXI_SUPPORTS_READ of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is "3'b111";
+  attribute P_M_AXI_SUPPORTS_READ of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is "3'b111";
   attribute P_M_AXI_SUPPORTS_WRITE : string;
-  attribute P_M_AXI_SUPPORTS_WRITE of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is "3'b111";
+  attribute P_M_AXI_SUPPORTS_WRITE of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is "3'b111";
   attribute P_ONES : string;
-  attribute P_ONES of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is "65'b11111111111111111111111111111111111111111111111111111111111111111";
+  attribute P_ONES of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is "65'b11111111111111111111111111111111111111111111111111111111111111111";
   attribute P_RANGE_CHECK : integer;
-  attribute P_RANGE_CHECK of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is 1;
+  attribute P_RANGE_CHECK of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is 1;
   attribute P_S_AXI_BASE_ID : string;
-  attribute P_S_AXI_BASE_ID of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is "64'b0000000000000000000000000000000000000000000000000000000000000000";
+  attribute P_S_AXI_BASE_ID of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is "64'b0000000000000000000000000000000000000000000000000000000000000000";
   attribute P_S_AXI_HIGH_ID : string;
-  attribute P_S_AXI_HIGH_ID of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is "64'b0000000000000000000000000000000000000000000000000000000000000001";
+  attribute P_S_AXI_HIGH_ID of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is "64'b0000000000000000000000000000000000000000000000000000000000000001";
   attribute P_S_AXI_SUPPORTS_READ : string;
-  attribute P_S_AXI_SUPPORTS_READ of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is "1'b1";
+  attribute P_S_AXI_SUPPORTS_READ of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is "1'b1";
   attribute P_S_AXI_SUPPORTS_WRITE : string;
-  attribute P_S_AXI_SUPPORTS_WRITE of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is "1'b1";
-end design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar;
+  attribute P_S_AXI_SUPPORTS_WRITE of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar : entity is "1'b1";
+end design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar;
 
-architecture STRUCTURE of design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar is
+architecture STRUCTURE of design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar is
   signal \<const0>\ : STD_LOGIC;
   signal \^m_axi_araddr\ : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal \^m_axi_arprot\ : STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -4165,7 +4178,7 @@ GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
     );
-\gen_sasd.crossbar_sasd_0\: entity work.design_ascon_xbar_0_axi_crossbar_v2_1_28_crossbar_sasd
+\gen_sasd.crossbar_sasd_0\: entity work.design_ascon_xbar_0_axi_crossbar_v2_1_29_crossbar_sasd
      port map (
       Q(34 downto 32) => \^m_axi_arprot\(2 downto 0),
       Q(31 downto 16) => \^m_axi_awaddr\(95 downto 80),
@@ -4254,11 +4267,11 @@ entity design_ascon_xbar_0 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of design_ascon_xbar_0 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of design_ascon_xbar_0 : entity is "design_ascon_xbar_0,axi_crossbar_v2_1_28_axi_crossbar,{}";
+  attribute CHECK_LICENSE_TYPE of design_ascon_xbar_0 : entity is "design_ascon_xbar_0,axi_crossbar_v2_1_29_axi_crossbar,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of design_ascon_xbar_0 : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of design_ascon_xbar_0 : entity is "axi_crossbar_v2_1_28_axi_crossbar,Vivado 2022.2";
+  attribute X_CORE_INFO of design_ascon_xbar_0 : entity is "axi_crossbar_v2_1_29_axi_crossbar,Vivado 2023.1";
 end design_ascon_xbar_0;
 
 architecture STRUCTURE of design_ascon_xbar_0 is
@@ -4432,7 +4445,7 @@ architecture STRUCTURE of design_ascon_xbar_0 is
   attribute X_INTERFACE_INFO of s_axi_wstrb : signal is "xilinx.com:interface:aximm:1.0 S00_AXI WSTRB";
   attribute X_INTERFACE_INFO of s_axi_wvalid : signal is "xilinx.com:interface:aximm:1.0 S00_AXI WVALID";
 begin
-inst: entity work.design_ascon_xbar_0_axi_crossbar_v2_1_28_axi_crossbar
+inst: entity work.design_ascon_xbar_0_axi_crossbar_v2_1_29_axi_crossbar
      port map (
       aclk => aclk,
       aresetn => aresetn,

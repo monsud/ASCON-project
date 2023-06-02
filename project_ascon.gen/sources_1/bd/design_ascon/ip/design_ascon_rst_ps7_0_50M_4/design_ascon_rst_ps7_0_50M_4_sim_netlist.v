@@ -1,7 +1,8 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+// Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-// Date        : Thu Jun  1 16:57:43 2023
+// Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+// Date        : Fri Jun  2 20:52:21 2023
 // Host        : INSPIRON-7370 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_rst_ps7_0_50M_4/design_ascon_rst_ps7_0_50M_4_sim_netlist.v
@@ -12,7 +13,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "design_ascon_rst_ps7_0_50M_4,proc_sys_reset,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "proc_sys_reset,Vivado 2022.2" *) 
+(* CHECK_LICENSE_TYPE = "design_ascon_rst_ps7_0_50M_4,proc_sys_reset,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "proc_sys_reset,Vivado 2023.1" *) 
 (* NotValidForBitStream *)
 module design_ascon_rst_ps7_0_50M_4
    (slowest_sync_clk,
@@ -371,7 +372,7 @@ module design_ascon_rst_ps7_0_50M_4_lpf
   (* XILINX_LEGACY_PRIM = "SRL16" *) 
   (* XILINX_TRANSFORM_PINMAP = "VCC:CE" *) 
   (* box_type = "PRIMITIVE" *) 
-  (* srl_name = "U0/\EXT_LPF/POR_SRL_I " *) 
+  (* srl_name = "U0/\\EXT_LPF/POR_SRL_I " *) 
   SRL16E #(
     .INIT(16'hFFFF)) 
     POR_SRL_I

@@ -89,7 +89,7 @@ set_property ip_output_repo c:/Users/david/Documents/ASCON-project/project_ascon
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/hdl/design_ascon_wrapper.v
+read_verilog -library xil_defaultlib C:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/hdl/design_ascon_wrapper.v
 add_files C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/bd/design_ascon/design_ascon.bd
 set_property used_in_implementation false [get_files -all c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_processing_system7_0_3/design_ascon_processing_system7_0_3.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_rst_ps7_0_50M_4/design_ascon_rst_ps7_0_50M_4_board.xdc]
@@ -146,8 +146,8 @@ set_property used_in_implementation false [get_files -all c:/Users/david/Documen
 set_property used_in_implementation false [get_files -all c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_axi_gpio_13_3/design_ascon_axi_gpio_13_3_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_axi_gpio_13_3/design_ascon_axi_gpio_13_3_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_axi_gpio_13_3/design_ascon_axi_gpio_13_3.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_xbar_0/design_ascon_xbar_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_ascon_core_0_2/constrs_1/new/ascon_top.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_xbar_0/design_ascon_xbar_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_tier2_xbar_0_0/design_ascon_tier2_xbar_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_tier2_xbar_1_0/design_ascon_tier2_xbar_1_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_tier2_xbar_2_0/design_ascon_tier2_xbar_2_0_ooc.xdc]

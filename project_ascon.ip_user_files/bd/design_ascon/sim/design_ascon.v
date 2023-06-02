@@ -1,7 +1,8 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+//Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-//Date        : Thu Jun  1 16:53:28 2023
+//Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+//Date        : Fri Jun  2 20:45:42 2023
 //Host        : INSPIRON-7370 running 64-bit major release  (build 9200)
 //Command     : generate_target design_ascon.bd
 //Design      : design_ascon
@@ -435,112 +436,7 @@ module design_ascon
         .nonce(xlconcat_1_dout),
         .plaintext(xlconcat_2_dout),
         .rst(rst_ps7_0_50M_peripheral_aresetn));
-  design_ascon_axi_gpio_0_0 axi_gpio_0
-       (.gpio_io_o(axi_gpio_0_gpio_io_o),
-        .s_axi_aclk(processing_system7_0_FCLK_CLK0),
-        .s_axi_araddr(ps7_0_axi_periph_M00_AXI_ARADDR[8:0]),
-        .s_axi_aresetn(rst_ps7_0_50M_peripheral_aresetn),
-        .s_axi_arready(ps7_0_axi_periph_M00_AXI_ARREADY),
-        .s_axi_arvalid(ps7_0_axi_periph_M00_AXI_ARVALID),
-        .s_axi_awaddr(ps7_0_axi_periph_M00_AXI_AWADDR[8:0]),
-        .s_axi_awready(ps7_0_axi_periph_M00_AXI_AWREADY),
-        .s_axi_awvalid(ps7_0_axi_periph_M00_AXI_AWVALID),
-        .s_axi_bready(ps7_0_axi_periph_M00_AXI_BREADY),
-        .s_axi_bresp(ps7_0_axi_periph_M00_AXI_BRESP),
-        .s_axi_bvalid(ps7_0_axi_periph_M00_AXI_BVALID),
-        .s_axi_rdata(ps7_0_axi_periph_M00_AXI_RDATA),
-        .s_axi_rready(ps7_0_axi_periph_M00_AXI_RREADY),
-        .s_axi_rresp(ps7_0_axi_periph_M00_AXI_RRESP),
-        .s_axi_rvalid(ps7_0_axi_periph_M00_AXI_RVALID),
-        .s_axi_wdata(ps7_0_axi_periph_M00_AXI_WDATA),
-        .s_axi_wready(ps7_0_axi_periph_M00_AXI_WREADY),
-        .s_axi_wstrb(ps7_0_axi_periph_M00_AXI_WSTRB),
-        .s_axi_wvalid(ps7_0_axi_periph_M00_AXI_WVALID));
-  design_ascon_axi_gpio_0_1 axi_gpio_1
-       (.gpio_io_o(axi_gpio_1_gpio_io_o),
-        .s_axi_aclk(processing_system7_0_FCLK_CLK0),
-        .s_axi_araddr(ps7_0_axi_periph_M01_AXI_ARADDR[8:0]),
-        .s_axi_aresetn(rst_ps7_0_50M_peripheral_aresetn),
-        .s_axi_arready(ps7_0_axi_periph_M01_AXI_ARREADY),
-        .s_axi_arvalid(ps7_0_axi_periph_M01_AXI_ARVALID),
-        .s_axi_awaddr(ps7_0_axi_periph_M01_AXI_AWADDR[8:0]),
-        .s_axi_awready(ps7_0_axi_periph_M01_AXI_AWREADY),
-        .s_axi_awvalid(ps7_0_axi_periph_M01_AXI_AWVALID),
-        .s_axi_bready(ps7_0_axi_periph_M01_AXI_BREADY),
-        .s_axi_bresp(ps7_0_axi_periph_M01_AXI_BRESP),
-        .s_axi_bvalid(ps7_0_axi_periph_M01_AXI_BVALID),
-        .s_axi_rdata(ps7_0_axi_periph_M01_AXI_RDATA),
-        .s_axi_rready(ps7_0_axi_periph_M01_AXI_RREADY),
-        .s_axi_rresp(ps7_0_axi_periph_M01_AXI_RRESP),
-        .s_axi_rvalid(ps7_0_axi_periph_M01_AXI_RVALID),
-        .s_axi_wdata(ps7_0_axi_periph_M01_AXI_WDATA),
-        .s_axi_wready(ps7_0_axi_periph_M01_AXI_WREADY),
-        .s_axi_wstrb(ps7_0_axi_periph_M01_AXI_WSTRB),
-        .s_axi_wvalid(ps7_0_axi_periph_M01_AXI_WVALID));
-  design_ascon_axi_gpio_8_1 axi_gpio_10
-       (.gpio_io_o(axi_gpio_10_gpio_io_o),
-        .s_axi_aclk(processing_system7_0_FCLK_CLK0),
-        .s_axi_araddr(ps7_0_axi_periph_M10_AXI_ARADDR[8:0]),
-        .s_axi_aresetn(rst_ps7_0_50M_peripheral_aresetn),
-        .s_axi_arready(ps7_0_axi_periph_M10_AXI_ARREADY),
-        .s_axi_arvalid(ps7_0_axi_periph_M10_AXI_ARVALID),
-        .s_axi_awaddr(ps7_0_axi_periph_M10_AXI_AWADDR[8:0]),
-        .s_axi_awready(ps7_0_axi_periph_M10_AXI_AWREADY),
-        .s_axi_awvalid(ps7_0_axi_periph_M10_AXI_AWVALID),
-        .s_axi_bready(ps7_0_axi_periph_M10_AXI_BREADY),
-        .s_axi_bresp(ps7_0_axi_periph_M10_AXI_BRESP),
-        .s_axi_bvalid(ps7_0_axi_periph_M10_AXI_BVALID),
-        .s_axi_rdata(ps7_0_axi_periph_M10_AXI_RDATA),
-        .s_axi_rready(ps7_0_axi_periph_M10_AXI_RREADY),
-        .s_axi_rresp(ps7_0_axi_periph_M10_AXI_RRESP),
-        .s_axi_rvalid(ps7_0_axi_periph_M10_AXI_RVALID),
-        .s_axi_wdata(ps7_0_axi_periph_M10_AXI_WDATA),
-        .s_axi_wready(ps7_0_axi_periph_M10_AXI_WREADY),
-        .s_axi_wstrb(ps7_0_axi_periph_M10_AXI_WSTRB),
-        .s_axi_wvalid(ps7_0_axi_periph_M10_AXI_WVALID));
-  design_ascon_axi_gpio_8_2 axi_gpio_11
-       (.gpio_io_o(axi_gpio_11_gpio_io_o),
-        .s_axi_aclk(processing_system7_0_FCLK_CLK0),
-        .s_axi_araddr(ps7_0_axi_periph_M11_AXI_ARADDR[8:0]),
-        .s_axi_aresetn(rst_ps7_0_50M_peripheral_aresetn),
-        .s_axi_arready(ps7_0_axi_periph_M11_AXI_ARREADY),
-        .s_axi_arvalid(ps7_0_axi_periph_M11_AXI_ARVALID),
-        .s_axi_awaddr(ps7_0_axi_periph_M11_AXI_AWADDR[8:0]),
-        .s_axi_awready(ps7_0_axi_periph_M11_AXI_AWREADY),
-        .s_axi_awvalid(ps7_0_axi_periph_M11_AXI_AWVALID),
-        .s_axi_bready(ps7_0_axi_periph_M11_AXI_BREADY),
-        .s_axi_bresp(ps7_0_axi_periph_M11_AXI_BRESP),
-        .s_axi_bvalid(ps7_0_axi_periph_M11_AXI_BVALID),
-        .s_axi_rdata(ps7_0_axi_periph_M11_AXI_RDATA),
-        .s_axi_rready(ps7_0_axi_periph_M11_AXI_RREADY),
-        .s_axi_rresp(ps7_0_axi_periph_M11_AXI_RRESP),
-        .s_axi_rvalid(ps7_0_axi_periph_M11_AXI_RVALID),
-        .s_axi_wdata(ps7_0_axi_periph_M11_AXI_WDATA),
-        .s_axi_wready(ps7_0_axi_periph_M11_AXI_WREADY),
-        .s_axi_wstrb(ps7_0_axi_periph_M11_AXI_WSTRB),
-        .s_axi_wvalid(ps7_0_axi_periph_M11_AXI_WVALID));
-  design_ascon_axi_gpio_8_3 axi_gpio_12
-       (.gpio_io_o(axi_gpio_12_gpio_io_o),
-        .s_axi_aclk(processing_system7_0_FCLK_CLK0),
-        .s_axi_araddr(ps7_0_axi_periph_M12_AXI_ARADDR[8:0]),
-        .s_axi_aresetn(rst_ps7_0_50M_peripheral_aresetn),
-        .s_axi_arready(ps7_0_axi_periph_M12_AXI_ARREADY),
-        .s_axi_arvalid(ps7_0_axi_periph_M12_AXI_ARVALID),
-        .s_axi_awaddr(ps7_0_axi_periph_M12_AXI_AWADDR[8:0]),
-        .s_axi_awready(ps7_0_axi_periph_M12_AXI_AWREADY),
-        .s_axi_awvalid(ps7_0_axi_periph_M12_AXI_AWVALID),
-        .s_axi_bready(ps7_0_axi_periph_M12_AXI_BREADY),
-        .s_axi_bresp(ps7_0_axi_periph_M12_AXI_BRESP),
-        .s_axi_bvalid(ps7_0_axi_periph_M12_AXI_BVALID),
-        .s_axi_rdata(ps7_0_axi_periph_M12_AXI_RDATA),
-        .s_axi_rready(ps7_0_axi_periph_M12_AXI_RREADY),
-        .s_axi_rresp(ps7_0_axi_periph_M12_AXI_RRESP),
-        .s_axi_rvalid(ps7_0_axi_periph_M12_AXI_RVALID),
-        .s_axi_wdata(ps7_0_axi_periph_M12_AXI_WDATA),
-        .s_axi_wready(ps7_0_axi_periph_M12_AXI_WREADY),
-        .s_axi_wstrb(ps7_0_axi_periph_M12_AXI_WSTRB),
-        .s_axi_wvalid(ps7_0_axi_periph_M12_AXI_WVALID));
-  design_ascon_axi_gpio_13_0 axi_gpio_13
+  design_ascon_axi_gpio_13_0 axi_gpio_ciphertext_0
        (.gpio_io_i(xlslice_0_Dout),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(ps7_0_axi_periph_M13_AXI_ARADDR[8:0]),
@@ -561,7 +457,7 @@ module design_ascon
         .s_axi_wready(ps7_0_axi_periph_M13_AXI_WREADY),
         .s_axi_wstrb(ps7_0_axi_periph_M13_AXI_WSTRB),
         .s_axi_wvalid(ps7_0_axi_periph_M13_AXI_WVALID));
-  design_ascon_axi_gpio_13_1 axi_gpio_14
+  design_ascon_axi_gpio_13_1 axi_gpio_ciphertext_1
        (.gpio_io_i(xlslice_1_Dout),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(ps7_0_axi_periph_M14_AXI_ARADDR[8:0]),
@@ -582,7 +478,7 @@ module design_ascon
         .s_axi_wready(ps7_0_axi_periph_M14_AXI_WREADY),
         .s_axi_wstrb(ps7_0_axi_periph_M14_AXI_WSTRB),
         .s_axi_wvalid(ps7_0_axi_periph_M14_AXI_WVALID));
-  design_ascon_axi_gpio_13_2 axi_gpio_15
+  design_ascon_axi_gpio_13_2 axi_gpio_ciphertext_2
        (.gpio_io_i(xlslice_2_Dout),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(ps7_0_axi_periph_M15_AXI_ARADDR[8:0]),
@@ -603,7 +499,7 @@ module design_ascon
         .s_axi_wready(ps7_0_axi_periph_M15_AXI_WREADY),
         .s_axi_wstrb(ps7_0_axi_periph_M15_AXI_WSTRB),
         .s_axi_wvalid(ps7_0_axi_periph_M15_AXI_WVALID));
-  design_ascon_axi_gpio_13_3 axi_gpio_16
+  design_ascon_axi_gpio_13_3 axi_gpio_ciphertext_3
        (.gpio_io_i(xlslice_3_Dout),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(ps7_0_axi_periph_M16_AXI_ARADDR[8:0]),
@@ -624,49 +520,7 @@ module design_ascon
         .s_axi_wready(ps7_0_axi_periph_M16_AXI_WREADY),
         .s_axi_wstrb(ps7_0_axi_periph_M16_AXI_WSTRB),
         .s_axi_wvalid(ps7_0_axi_periph_M16_AXI_WVALID));
-  design_ascon_axi_gpio_0_2 axi_gpio_2
-       (.gpio_io_o(axi_gpio_2_gpio_io_o),
-        .s_axi_aclk(processing_system7_0_FCLK_CLK0),
-        .s_axi_araddr(ps7_0_axi_periph_M02_AXI_ARADDR[8:0]),
-        .s_axi_aresetn(rst_ps7_0_50M_peripheral_aresetn),
-        .s_axi_arready(ps7_0_axi_periph_M02_AXI_ARREADY),
-        .s_axi_arvalid(ps7_0_axi_periph_M02_AXI_ARVALID),
-        .s_axi_awaddr(ps7_0_axi_periph_M02_AXI_AWADDR[8:0]),
-        .s_axi_awready(ps7_0_axi_periph_M02_AXI_AWREADY),
-        .s_axi_awvalid(ps7_0_axi_periph_M02_AXI_AWVALID),
-        .s_axi_bready(ps7_0_axi_periph_M02_AXI_BREADY),
-        .s_axi_bresp(ps7_0_axi_periph_M02_AXI_BRESP),
-        .s_axi_bvalid(ps7_0_axi_periph_M02_AXI_BVALID),
-        .s_axi_rdata(ps7_0_axi_periph_M02_AXI_RDATA),
-        .s_axi_rready(ps7_0_axi_periph_M02_AXI_RREADY),
-        .s_axi_rresp(ps7_0_axi_periph_M02_AXI_RRESP),
-        .s_axi_rvalid(ps7_0_axi_periph_M02_AXI_RVALID),
-        .s_axi_wdata(ps7_0_axi_periph_M02_AXI_WDATA),
-        .s_axi_wready(ps7_0_axi_periph_M02_AXI_WREADY),
-        .s_axi_wstrb(ps7_0_axi_periph_M02_AXI_WSTRB),
-        .s_axi_wvalid(ps7_0_axi_periph_M02_AXI_WVALID));
-  design_ascon_axi_gpio_0_3 axi_gpio_3
-       (.gpio_io_o(axi_gpio_3_gpio_io_o),
-        .s_axi_aclk(processing_system7_0_FCLK_CLK0),
-        .s_axi_araddr(ps7_0_axi_periph_M03_AXI_ARADDR[8:0]),
-        .s_axi_aresetn(rst_ps7_0_50M_peripheral_aresetn),
-        .s_axi_arready(ps7_0_axi_periph_M03_AXI_ARREADY),
-        .s_axi_arvalid(ps7_0_axi_periph_M03_AXI_ARVALID),
-        .s_axi_awaddr(ps7_0_axi_periph_M03_AXI_AWADDR[8:0]),
-        .s_axi_awready(ps7_0_axi_periph_M03_AXI_AWREADY),
-        .s_axi_awvalid(ps7_0_axi_periph_M03_AXI_AWVALID),
-        .s_axi_bready(ps7_0_axi_periph_M03_AXI_BREADY),
-        .s_axi_bresp(ps7_0_axi_periph_M03_AXI_BRESP),
-        .s_axi_bvalid(ps7_0_axi_periph_M03_AXI_BVALID),
-        .s_axi_rdata(ps7_0_axi_periph_M03_AXI_RDATA),
-        .s_axi_rready(ps7_0_axi_periph_M03_AXI_RREADY),
-        .s_axi_rresp(ps7_0_axi_periph_M03_AXI_RRESP),
-        .s_axi_rvalid(ps7_0_axi_periph_M03_AXI_RVALID),
-        .s_axi_wdata(ps7_0_axi_periph_M03_AXI_WDATA),
-        .s_axi_wready(ps7_0_axi_periph_M03_AXI_WREADY),
-        .s_axi_wstrb(ps7_0_axi_periph_M03_AXI_WSTRB),
-        .s_axi_wvalid(ps7_0_axi_periph_M03_AXI_WVALID));
-  design_ascon_axi_gpio_4_0 axi_gpio_4
+  design_ascon_axi_gpio_4_0 axi_gpio_enable
        (.gpio_io_o(axi_gpio_4_gpio_io_o),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(ps7_0_axi_periph_M04_AXI_ARADDR[8:0]),
@@ -687,7 +541,91 @@ module design_ascon
         .s_axi_wready(ps7_0_axi_periph_M04_AXI_WREADY),
         .s_axi_wstrb(ps7_0_axi_periph_M04_AXI_WSTRB),
         .s_axi_wvalid(ps7_0_axi_periph_M04_AXI_WVALID));
-  design_ascon_axi_gpio_3_0 axi_gpio_5
+  design_ascon_axi_gpio_0_0 axi_gpio_key_0
+       (.gpio_io_o(axi_gpio_0_gpio_io_o),
+        .s_axi_aclk(processing_system7_0_FCLK_CLK0),
+        .s_axi_araddr(ps7_0_axi_periph_M00_AXI_ARADDR[8:0]),
+        .s_axi_aresetn(rst_ps7_0_50M_peripheral_aresetn),
+        .s_axi_arready(ps7_0_axi_periph_M00_AXI_ARREADY),
+        .s_axi_arvalid(ps7_0_axi_periph_M00_AXI_ARVALID),
+        .s_axi_awaddr(ps7_0_axi_periph_M00_AXI_AWADDR[8:0]),
+        .s_axi_awready(ps7_0_axi_periph_M00_AXI_AWREADY),
+        .s_axi_awvalid(ps7_0_axi_periph_M00_AXI_AWVALID),
+        .s_axi_bready(ps7_0_axi_periph_M00_AXI_BREADY),
+        .s_axi_bresp(ps7_0_axi_periph_M00_AXI_BRESP),
+        .s_axi_bvalid(ps7_0_axi_periph_M00_AXI_BVALID),
+        .s_axi_rdata(ps7_0_axi_periph_M00_AXI_RDATA),
+        .s_axi_rready(ps7_0_axi_periph_M00_AXI_RREADY),
+        .s_axi_rresp(ps7_0_axi_periph_M00_AXI_RRESP),
+        .s_axi_rvalid(ps7_0_axi_periph_M00_AXI_RVALID),
+        .s_axi_wdata(ps7_0_axi_periph_M00_AXI_WDATA),
+        .s_axi_wready(ps7_0_axi_periph_M00_AXI_WREADY),
+        .s_axi_wstrb(ps7_0_axi_periph_M00_AXI_WSTRB),
+        .s_axi_wvalid(ps7_0_axi_periph_M00_AXI_WVALID));
+  design_ascon_axi_gpio_0_1 axi_gpio_key_1
+       (.gpio_io_o(axi_gpio_1_gpio_io_o),
+        .s_axi_aclk(processing_system7_0_FCLK_CLK0),
+        .s_axi_araddr(ps7_0_axi_periph_M01_AXI_ARADDR[8:0]),
+        .s_axi_aresetn(rst_ps7_0_50M_peripheral_aresetn),
+        .s_axi_arready(ps7_0_axi_periph_M01_AXI_ARREADY),
+        .s_axi_arvalid(ps7_0_axi_periph_M01_AXI_ARVALID),
+        .s_axi_awaddr(ps7_0_axi_periph_M01_AXI_AWADDR[8:0]),
+        .s_axi_awready(ps7_0_axi_periph_M01_AXI_AWREADY),
+        .s_axi_awvalid(ps7_0_axi_periph_M01_AXI_AWVALID),
+        .s_axi_bready(ps7_0_axi_periph_M01_AXI_BREADY),
+        .s_axi_bresp(ps7_0_axi_periph_M01_AXI_BRESP),
+        .s_axi_bvalid(ps7_0_axi_periph_M01_AXI_BVALID),
+        .s_axi_rdata(ps7_0_axi_periph_M01_AXI_RDATA),
+        .s_axi_rready(ps7_0_axi_periph_M01_AXI_RREADY),
+        .s_axi_rresp(ps7_0_axi_periph_M01_AXI_RRESP),
+        .s_axi_rvalid(ps7_0_axi_periph_M01_AXI_RVALID),
+        .s_axi_wdata(ps7_0_axi_periph_M01_AXI_WDATA),
+        .s_axi_wready(ps7_0_axi_periph_M01_AXI_WREADY),
+        .s_axi_wstrb(ps7_0_axi_periph_M01_AXI_WSTRB),
+        .s_axi_wvalid(ps7_0_axi_periph_M01_AXI_WVALID));
+  design_ascon_axi_gpio_0_2 axi_gpio_key_2
+       (.gpio_io_o(axi_gpio_2_gpio_io_o),
+        .s_axi_aclk(processing_system7_0_FCLK_CLK0),
+        .s_axi_araddr(ps7_0_axi_periph_M02_AXI_ARADDR[8:0]),
+        .s_axi_aresetn(rst_ps7_0_50M_peripheral_aresetn),
+        .s_axi_arready(ps7_0_axi_periph_M02_AXI_ARREADY),
+        .s_axi_arvalid(ps7_0_axi_periph_M02_AXI_ARVALID),
+        .s_axi_awaddr(ps7_0_axi_periph_M02_AXI_AWADDR[8:0]),
+        .s_axi_awready(ps7_0_axi_periph_M02_AXI_AWREADY),
+        .s_axi_awvalid(ps7_0_axi_periph_M02_AXI_AWVALID),
+        .s_axi_bready(ps7_0_axi_periph_M02_AXI_BREADY),
+        .s_axi_bresp(ps7_0_axi_periph_M02_AXI_BRESP),
+        .s_axi_bvalid(ps7_0_axi_periph_M02_AXI_BVALID),
+        .s_axi_rdata(ps7_0_axi_periph_M02_AXI_RDATA),
+        .s_axi_rready(ps7_0_axi_periph_M02_AXI_RREADY),
+        .s_axi_rresp(ps7_0_axi_periph_M02_AXI_RRESP),
+        .s_axi_rvalid(ps7_0_axi_periph_M02_AXI_RVALID),
+        .s_axi_wdata(ps7_0_axi_periph_M02_AXI_WDATA),
+        .s_axi_wready(ps7_0_axi_periph_M02_AXI_WREADY),
+        .s_axi_wstrb(ps7_0_axi_periph_M02_AXI_WSTRB),
+        .s_axi_wvalid(ps7_0_axi_periph_M02_AXI_WVALID));
+  design_ascon_axi_gpio_0_3 axi_gpio_key_3
+       (.gpio_io_o(axi_gpio_3_gpio_io_o),
+        .s_axi_aclk(processing_system7_0_FCLK_CLK0),
+        .s_axi_araddr(ps7_0_axi_periph_M03_AXI_ARADDR[8:0]),
+        .s_axi_aresetn(rst_ps7_0_50M_peripheral_aresetn),
+        .s_axi_arready(ps7_0_axi_periph_M03_AXI_ARREADY),
+        .s_axi_arvalid(ps7_0_axi_periph_M03_AXI_ARVALID),
+        .s_axi_awaddr(ps7_0_axi_periph_M03_AXI_AWADDR[8:0]),
+        .s_axi_awready(ps7_0_axi_periph_M03_AXI_AWREADY),
+        .s_axi_awvalid(ps7_0_axi_periph_M03_AXI_AWVALID),
+        .s_axi_bready(ps7_0_axi_periph_M03_AXI_BREADY),
+        .s_axi_bresp(ps7_0_axi_periph_M03_AXI_BRESP),
+        .s_axi_bvalid(ps7_0_axi_periph_M03_AXI_BVALID),
+        .s_axi_rdata(ps7_0_axi_periph_M03_AXI_RDATA),
+        .s_axi_rready(ps7_0_axi_periph_M03_AXI_RREADY),
+        .s_axi_rresp(ps7_0_axi_periph_M03_AXI_RRESP),
+        .s_axi_rvalid(ps7_0_axi_periph_M03_AXI_RVALID),
+        .s_axi_wdata(ps7_0_axi_periph_M03_AXI_WDATA),
+        .s_axi_wready(ps7_0_axi_periph_M03_AXI_WREADY),
+        .s_axi_wstrb(ps7_0_axi_periph_M03_AXI_WSTRB),
+        .s_axi_wvalid(ps7_0_axi_periph_M03_AXI_WVALID));
+  design_ascon_axi_gpio_3_0 axi_gpio_nonce_0
        (.gpio_io_o(axi_gpio_5_gpio_io_o),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(ps7_0_axi_periph_M05_AXI_ARADDR[8:0]),
@@ -708,7 +646,7 @@ module design_ascon
         .s_axi_wready(ps7_0_axi_periph_M05_AXI_WREADY),
         .s_axi_wstrb(ps7_0_axi_periph_M05_AXI_WSTRB),
         .s_axi_wvalid(ps7_0_axi_periph_M05_AXI_WVALID));
-  design_ascon_axi_gpio_3_1 axi_gpio_6
+  design_ascon_axi_gpio_3_1 axi_gpio_nonce_1
        (.gpio_io_o(axi_gpio_6_gpio_io_o),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(ps7_0_axi_periph_M06_AXI_ARADDR[8:0]),
@@ -729,7 +667,7 @@ module design_ascon
         .s_axi_wready(ps7_0_axi_periph_M06_AXI_WREADY),
         .s_axi_wstrb(ps7_0_axi_periph_M06_AXI_WSTRB),
         .s_axi_wvalid(ps7_0_axi_periph_M06_AXI_WVALID));
-  design_ascon_axi_gpio_3_2 axi_gpio_7
+  design_ascon_axi_gpio_3_2 axi_gpio_nonce_2
        (.gpio_io_o(axi_gpio_7_gpio_io_o),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(ps7_0_axi_periph_M07_AXI_ARADDR[8:0]),
@@ -750,7 +688,7 @@ module design_ascon
         .s_axi_wready(ps7_0_axi_periph_M07_AXI_WREADY),
         .s_axi_wstrb(ps7_0_axi_periph_M07_AXI_WSTRB),
         .s_axi_wvalid(ps7_0_axi_periph_M07_AXI_WVALID));
-  design_ascon_axi_gpio_3_3 axi_gpio_8
+  design_ascon_axi_gpio_3_3 axi_gpio_nonce_3
        (.gpio_io_o(axi_gpio_8_gpio_io_o),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(ps7_0_axi_periph_M08_AXI_ARADDR[8:0]),
@@ -771,7 +709,7 @@ module design_ascon
         .s_axi_wready(ps7_0_axi_periph_M08_AXI_WREADY),
         .s_axi_wstrb(ps7_0_axi_periph_M08_AXI_WSTRB),
         .s_axi_wvalid(ps7_0_axi_periph_M08_AXI_WVALID));
-  design_ascon_axi_gpio_8_0 axi_gpio_9
+  design_ascon_axi_gpio_8_0 axi_gpio_plaintext_0
        (.gpio_io_o(axi_gpio_9_gpio_io_o),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(ps7_0_axi_periph_M09_AXI_ARADDR[8:0]),
@@ -792,6 +730,69 @@ module design_ascon
         .s_axi_wready(ps7_0_axi_periph_M09_AXI_WREADY),
         .s_axi_wstrb(ps7_0_axi_periph_M09_AXI_WSTRB),
         .s_axi_wvalid(ps7_0_axi_periph_M09_AXI_WVALID));
+  design_ascon_axi_gpio_8_1 axi_gpio_plaintext_1
+       (.gpio_io_o(axi_gpio_10_gpio_io_o),
+        .s_axi_aclk(processing_system7_0_FCLK_CLK0),
+        .s_axi_araddr(ps7_0_axi_periph_M10_AXI_ARADDR[8:0]),
+        .s_axi_aresetn(rst_ps7_0_50M_peripheral_aresetn),
+        .s_axi_arready(ps7_0_axi_periph_M10_AXI_ARREADY),
+        .s_axi_arvalid(ps7_0_axi_periph_M10_AXI_ARVALID),
+        .s_axi_awaddr(ps7_0_axi_periph_M10_AXI_AWADDR[8:0]),
+        .s_axi_awready(ps7_0_axi_periph_M10_AXI_AWREADY),
+        .s_axi_awvalid(ps7_0_axi_periph_M10_AXI_AWVALID),
+        .s_axi_bready(ps7_0_axi_periph_M10_AXI_BREADY),
+        .s_axi_bresp(ps7_0_axi_periph_M10_AXI_BRESP),
+        .s_axi_bvalid(ps7_0_axi_periph_M10_AXI_BVALID),
+        .s_axi_rdata(ps7_0_axi_periph_M10_AXI_RDATA),
+        .s_axi_rready(ps7_0_axi_periph_M10_AXI_RREADY),
+        .s_axi_rresp(ps7_0_axi_periph_M10_AXI_RRESP),
+        .s_axi_rvalid(ps7_0_axi_periph_M10_AXI_RVALID),
+        .s_axi_wdata(ps7_0_axi_periph_M10_AXI_WDATA),
+        .s_axi_wready(ps7_0_axi_periph_M10_AXI_WREADY),
+        .s_axi_wstrb(ps7_0_axi_periph_M10_AXI_WSTRB),
+        .s_axi_wvalid(ps7_0_axi_periph_M10_AXI_WVALID));
+  design_ascon_axi_gpio_8_2 axi_gpio_plaintext_2
+       (.gpio_io_o(axi_gpio_11_gpio_io_o),
+        .s_axi_aclk(processing_system7_0_FCLK_CLK0),
+        .s_axi_araddr(ps7_0_axi_periph_M11_AXI_ARADDR[8:0]),
+        .s_axi_aresetn(rst_ps7_0_50M_peripheral_aresetn),
+        .s_axi_arready(ps7_0_axi_periph_M11_AXI_ARREADY),
+        .s_axi_arvalid(ps7_0_axi_periph_M11_AXI_ARVALID),
+        .s_axi_awaddr(ps7_0_axi_periph_M11_AXI_AWADDR[8:0]),
+        .s_axi_awready(ps7_0_axi_periph_M11_AXI_AWREADY),
+        .s_axi_awvalid(ps7_0_axi_periph_M11_AXI_AWVALID),
+        .s_axi_bready(ps7_0_axi_periph_M11_AXI_BREADY),
+        .s_axi_bresp(ps7_0_axi_periph_M11_AXI_BRESP),
+        .s_axi_bvalid(ps7_0_axi_periph_M11_AXI_BVALID),
+        .s_axi_rdata(ps7_0_axi_periph_M11_AXI_RDATA),
+        .s_axi_rready(ps7_0_axi_periph_M11_AXI_RREADY),
+        .s_axi_rresp(ps7_0_axi_periph_M11_AXI_RRESP),
+        .s_axi_rvalid(ps7_0_axi_periph_M11_AXI_RVALID),
+        .s_axi_wdata(ps7_0_axi_periph_M11_AXI_WDATA),
+        .s_axi_wready(ps7_0_axi_periph_M11_AXI_WREADY),
+        .s_axi_wstrb(ps7_0_axi_periph_M11_AXI_WSTRB),
+        .s_axi_wvalid(ps7_0_axi_periph_M11_AXI_WVALID));
+  design_ascon_axi_gpio_8_3 axi_gpio_plaintext_3
+       (.gpio_io_o(axi_gpio_12_gpio_io_o),
+        .s_axi_aclk(processing_system7_0_FCLK_CLK0),
+        .s_axi_araddr(ps7_0_axi_periph_M12_AXI_ARADDR[8:0]),
+        .s_axi_aresetn(rst_ps7_0_50M_peripheral_aresetn),
+        .s_axi_arready(ps7_0_axi_periph_M12_AXI_ARREADY),
+        .s_axi_arvalid(ps7_0_axi_periph_M12_AXI_ARVALID),
+        .s_axi_awaddr(ps7_0_axi_periph_M12_AXI_AWADDR[8:0]),
+        .s_axi_awready(ps7_0_axi_periph_M12_AXI_AWREADY),
+        .s_axi_awvalid(ps7_0_axi_periph_M12_AXI_AWVALID),
+        .s_axi_bready(ps7_0_axi_periph_M12_AXI_BREADY),
+        .s_axi_bresp(ps7_0_axi_periph_M12_AXI_BRESP),
+        .s_axi_bvalid(ps7_0_axi_periph_M12_AXI_BVALID),
+        .s_axi_rdata(ps7_0_axi_periph_M12_AXI_RDATA),
+        .s_axi_rready(ps7_0_axi_periph_M12_AXI_RREADY),
+        .s_axi_rresp(ps7_0_axi_periph_M12_AXI_RRESP),
+        .s_axi_rvalid(ps7_0_axi_periph_M12_AXI_RVALID),
+        .s_axi_wdata(ps7_0_axi_periph_M12_AXI_WDATA),
+        .s_axi_wready(ps7_0_axi_periph_M12_AXI_WREADY),
+        .s_axi_wstrb(ps7_0_axi_periph_M12_AXI_WSTRB),
+        .s_axi_wvalid(ps7_0_axi_periph_M12_AXI_WVALID));
   design_ascon_processing_system7_0_3 processing_system7_0
        (.DDR_Addr(DDR_addr[14:0]),
         .DDR_BankAddr(DDR_ba[2:0]),
@@ -1229,19 +1230,19 @@ module design_ascon
         .mb_debug_sys_rst(1'b0),
         .peripheral_aresetn(rst_ps7_0_50M_peripheral_aresetn),
         .slowest_sync_clk(processing_system7_0_FCLK_CLK0));
-  design_ascon_xlconcat_0_0 xlconcat_0
+  design_ascon_xlconcat_0_0 xlconcat_key
        (.In0(axi_gpio_0_gpio_io_o),
         .In1(axi_gpio_1_gpio_io_o),
         .In2(axi_gpio_2_gpio_io_o),
         .In3(axi_gpio_3_gpio_io_o),
         .dout(xlconcat_0_dout));
-  design_ascon_xlconcat_0_1 xlconcat_1
+  design_ascon_xlconcat_0_1 xlconcat_nonce
        (.In0(axi_gpio_5_gpio_io_o),
         .In1(axi_gpio_6_gpio_io_o),
         .In2(axi_gpio_7_gpio_io_o),
         .In3(axi_gpio_8_gpio_io_o),
         .dout(xlconcat_1_dout));
-  design_ascon_xlconcat_1_0 xlconcat_2
+  design_ascon_xlconcat_1_0 xlconcat_plaintext
        (.In0(axi_gpio_9_gpio_io_o),
         .In1(axi_gpio_10_gpio_io_o),
         .In2(axi_gpio_11_gpio_io_o),

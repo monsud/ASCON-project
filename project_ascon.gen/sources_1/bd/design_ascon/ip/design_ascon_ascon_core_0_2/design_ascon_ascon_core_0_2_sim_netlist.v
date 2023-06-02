@@ -1,7 +1,8 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+// Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-// Date        : Thu Jun  1 17:05:27 2023
+// Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+// Date        : Fri Jun  2 20:53:49 2023
 // Host        : INSPIRON-7370 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_ascon_core_0_2/design_ascon_ascon_core_0_2_sim_netlist.v
@@ -13,7 +14,7 @@
 `timescale 1 ps / 1 ps
 
 (* CHECK_LICENSE_TYPE = "design_ascon_ascon_core_0_2,ascon_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "package_project" *) 
-(* X_CORE_INFO = "ascon_top,Vivado 2022.2" *) 
+(* X_CORE_INFO = "ascon_top,Vivado 2023.1" *) 
 (* NotValidForBitStream *)
 module design_ascon_ascon_core_0_2
    (clk,
@@ -72,7 +73,7 @@ module design_ascon_ascon_core_0_2_ascon_add_constant
     \state_out_reg[41] ,
     \state_out_reg[39] ,
     \state_out_reg[34] ,
-    \state_out_reg[96] ,
+    Q,
     \state_out_reg[36] ,
     \state_out_reg[40] ,
     \state_out_reg[44] ,
@@ -87,7 +88,7 @@ module design_ascon_ascon_core_0_2_ascon_add_constant
     \state_out_reg[52]_1 ,
     \state_out_reg[56]_0 ,
     S,
-    Q);
+    state_out0_carry__12_0);
   output [62:0]add_const_state;
   output [0:0]\state_out_reg[63] ;
   output [2:0]\state_out_reg[31] ;
@@ -103,7 +104,7 @@ module design_ascon_ascon_core_0_2_ascon_add_constant
   output [0:0]\state_out_reg[41] ;
   output [1:0]\state_out_reg[39] ;
   output [0:0]\state_out_reg[34] ;
-  input [63:0]\state_out_reg[96] ;
+  input [63:0]Q;
   input [2:0]\state_out_reg[36] ;
   input [1:0]\state_out_reg[40] ;
   input [1:0]\state_out_reg[44] ;
@@ -118,9 +119,9 @@ module design_ascon_ascon_core_0_2_ascon_add_constant
   input [3:0]\state_out_reg[52]_1 ;
   input [0:0]\state_out_reg[56]_0 ;
   input [1:0]S;
-  input [27:0]Q;
+  input [27:0]state_out0_carry__12_0;
 
-  wire [27:0]Q;
+  wire [63:0]Q;
   wire [1:0]S;
   wire [62:0]add_const_state;
   wire state_out0_carry__0_n_0;
@@ -135,6 +136,7 @@ module design_ascon_ascon_core_0_2_ascon_add_constant
   wire state_out0_carry__11_n_1;
   wire state_out0_carry__11_n_2;
   wire state_out0_carry__11_n_3;
+  wire [27:0]state_out0_carry__12_0;
   wire state_out0_carry__12_n_0;
   wire state_out0_carry__12_n_1;
   wire state_out0_carry__12_n_2;
@@ -212,261 +214,260 @@ module design_ascon_ascon_core_0_2_ascon_add_constant
   wire [1:0]\state_out_reg[60] ;
   wire [0:0]\state_out_reg[63] ;
   wire [1:0]\state_out_reg[6] ;
-  wire [63:0]\state_out_reg[96] ;
   wire [2:2]NLW_state_out0_carry__14_CO_UNCONNECTED;
   wire [3:3]NLW_state_out0_carry__14_O_UNCONNECTED;
 
   CARRY4 state_out0_carry
        (.CI(1'b0),
         .CO({state_out0_carry_n_0,state_out0_carry_n_1,state_out0_carry_n_2,state_out0_carry_n_3}),
-        .CYINIT(\state_out_reg[96] [0]),
-        .DI(\state_out_reg[96] [4:1]),
+        .CYINIT(Q[0]),
+        .DI(Q[4:1]),
         .O(add_const_state[3:0]),
-        .S({\state_out_reg[36] [2:1],\state_out_reg[96] [2],\state_out_reg[36] [0]}));
+        .S({\state_out_reg[36] [2:1],Q[2],\state_out_reg[36] [0]}));
   CARRY4 state_out0_carry__0
        (.CI(state_out0_carry_n_0),
         .CO({state_out0_carry__0_n_0,state_out0_carry__0_n_1,state_out0_carry__0_n_2,state_out0_carry__0_n_3}),
         .CYINIT(1'b0),
-        .DI(\state_out_reg[96] [8:5]),
+        .DI(Q[8:5]),
         .O(add_const_state[7:4]),
-        .S({\state_out_reg[40] ,\state_out_reg[96] [6:5]}));
+        .S({\state_out_reg[40] ,Q[6:5]}));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__0_i_1__6
-       (.I0(Q[2]),
+       (.I0(state_out0_carry__12_0[2]),
         .O(\state_out_reg[11] ));
   CARRY4 state_out0_carry__1
        (.CI(state_out0_carry__0_n_0),
         .CO({state_out0_carry__1_n_0,state_out0_carry__1_n_1,state_out0_carry__1_n_2,state_out0_carry__1_n_3}),
         .CYINIT(1'b0),
-        .DI(\state_out_reg[96] [12:9]),
+        .DI(Q[12:9]),
         .O(add_const_state[11:8]),
-        .S({\state_out_reg[44] [1],\state_out_reg[96] [11:10],\state_out_reg[44] [0]}));
+        .S({\state_out_reg[44] [1],Q[11:10],\state_out_reg[44] [0]}));
   CARRY4 state_out0_carry__10
        (.CI(state_out0_carry__9_n_0),
         .CO({state_out0_carry__10_n_0,state_out0_carry__10_n_1,state_out0_carry__10_n_2,state_out0_carry__10_n_3}),
         .CYINIT(1'b0),
-        .DI(\state_out_reg[96] [48:45]),
+        .DI(Q[48:45]),
         .O(add_const_state[47:44]),
-        .S(\state_out_reg[96] [48:45]));
+        .S(Q[48:45]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__10_i_1__5
-       (.I0(Q[22]),
+       (.I0(state_out0_carry__12_0[22]),
         .O(\state_out_reg[51] [2]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__10_i_2__4
-       (.I0(Q[21]),
+       (.I0(state_out0_carry__12_0[21]),
         .O(\state_out_reg[51] [1]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__10_i_3__1
-       (.I0(Q[20]),
+       (.I0(state_out0_carry__12_0[20]),
         .O(\state_out_reg[51] [0]));
   CARRY4 state_out0_carry__11
        (.CI(state_out0_carry__10_n_0),
         .CO({state_out0_carry__11_n_0,state_out0_carry__11_n_1,state_out0_carry__11_n_2,state_out0_carry__11_n_3}),
         .CYINIT(1'b0),
-        .DI(\state_out_reg[96] [52:49]),
+        .DI(Q[52:49]),
         .O(add_const_state[51:48]),
         .S(\state_out_reg[52]_1 ));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__11_i_1__6
-       (.I0(Q[23]),
+       (.I0(state_out0_carry__12_0[23]),
         .O(\state_out_reg[52] ));
   CARRY4 state_out0_carry__12
        (.CI(state_out0_carry__11_n_0),
         .CO({state_out0_carry__12_n_0,state_out0_carry__12_n_1,state_out0_carry__12_n_2,state_out0_carry__12_n_3}),
         .CYINIT(1'b0),
-        .DI(\state_out_reg[96] [56:53]),
+        .DI(Q[56:53]),
         .O(add_const_state[55:52]),
-        .S({\state_out_reg[56]_0 ,\state_out_reg[96] [55:53]}));
+        .S({\state_out_reg[56]_0 ,Q[55:53]}));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__12_i_1__7
-       (.I0(Q[27]),
+       (.I0(state_out0_carry__12_0[27]),
         .O(\state_out_reg[59] [3]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__12_i_2__3
-       (.I0(Q[26]),
+       (.I0(state_out0_carry__12_0[26]),
         .O(\state_out_reg[59] [2]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__12_i_3__2
-       (.I0(Q[25]),
+       (.I0(state_out0_carry__12_0[25]),
         .O(\state_out_reg[59] [1]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__12_i_4__1
-       (.I0(Q[24]),
+       (.I0(state_out0_carry__12_0[24]),
         .O(\state_out_reg[59] [0]));
   CARRY4 state_out0_carry__13
        (.CI(state_out0_carry__12_n_0),
         .CO({state_out0_carry__13_n_0,state_out0_carry__13_n_1,state_out0_carry__13_n_2,state_out0_carry__13_n_3}),
         .CYINIT(1'b0),
-        .DI(\state_out_reg[96] [60:57]),
+        .DI(Q[60:57]),
         .O(add_const_state[59:56]),
-        .S(\state_out_reg[96] [60:57]));
+        .S(Q[60:57]));
   CARRY4 state_out0_carry__14
        (.CI(state_out0_carry__13_n_0),
         .CO({\state_out_reg[63] ,NLW_state_out0_carry__14_CO_UNCONNECTED[2],state_out0_carry__14_n_2,state_out0_carry__14_n_3}),
         .CYINIT(1'b0),
-        .DI({1'b0,\state_out_reg[96] [63:61]}),
+        .DI({1'b0,Q[63:61]}),
         .O({NLW_state_out0_carry__14_O_UNCONNECTED[3],add_const_state[62:60]}),
-        .S({1'b1,S,\state_out_reg[96] [61]}));
+        .S({1'b1,S,Q[61]}));
   CARRY4 state_out0_carry__2
        (.CI(state_out0_carry__1_n_0),
         .CO({state_out0_carry__2_n_0,state_out0_carry__2_n_1,state_out0_carry__2_n_2,state_out0_carry__2_n_3}),
         .CYINIT(1'b0),
-        .DI(\state_out_reg[96] [16:13]),
+        .DI(Q[16:13]),
         .O(add_const_state[15:12]),
-        .S({\state_out_reg[96] [16],\state_out_reg[48] }));
+        .S({Q[16],\state_out_reg[48] }));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__2_i_1__7
-       (.I0(Q[5]),
+       (.I0(state_out0_carry__12_0[5]),
         .O(\state_out_reg[18] [2]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__2_i_2__7
-       (.I0(Q[4]),
+       (.I0(state_out0_carry__12_0[4]),
         .O(\state_out_reg[18] [1]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__2_i_3__3
-       (.I0(Q[3]),
+       (.I0(state_out0_carry__12_0[3]),
         .O(\state_out_reg[18] [0]));
   CARRY4 state_out0_carry__3
        (.CI(state_out0_carry__2_n_0),
         .CO({state_out0_carry__3_n_0,state_out0_carry__3_n_1,state_out0_carry__3_n_2,state_out0_carry__3_n_3}),
         .CYINIT(1'b0),
-        .DI(\state_out_reg[96] [20:17]),
+        .DI(Q[20:17]),
         .O(add_const_state[19:16]),
-        .S({\state_out_reg[52]_0 [2],\state_out_reg[96] [19],\state_out_reg[52]_0 [1:0]}));
+        .S({\state_out_reg[52]_0 [2],Q[19],\state_out_reg[52]_0 [1:0]}));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__3_i_1__7
-       (.I0(Q[8]),
+       (.I0(state_out0_carry__12_0[8]),
         .O(\state_out_reg[23] [2]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__3_i_2__6
-       (.I0(Q[7]),
+       (.I0(state_out0_carry__12_0[7]),
         .O(\state_out_reg[23] [1]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__3_i_3__3
-       (.I0(Q[6]),
+       (.I0(state_out0_carry__12_0[6]),
         .O(\state_out_reg[23] [0]));
   CARRY4 state_out0_carry__4
        (.CI(state_out0_carry__3_n_0),
         .CO({state_out0_carry__4_n_0,state_out0_carry__4_n_1,state_out0_carry__4_n_2,state_out0_carry__4_n_3}),
         .CYINIT(1'b0),
-        .DI(\state_out_reg[96] [24:21]),
+        .DI(Q[24:21]),
         .O(add_const_state[23:20]),
-        .S({\state_out_reg[56] [2],\state_out_reg[96] [23],\state_out_reg[56] [1:0]}));
+        .S({\state_out_reg[56] [2],Q[23],\state_out_reg[56] [1:0]}));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__4_i_1__7
-       (.I0(Q[10]),
+       (.I0(state_out0_carry__12_0[10]),
         .O(\state_out_reg[26] [1]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__4_i_2__4
-       (.I0(Q[9]),
+       (.I0(state_out0_carry__12_0[9]),
         .O(\state_out_reg[26] [0]));
   CARRY4 state_out0_carry__5
        (.CI(state_out0_carry__4_n_0),
         .CO({state_out0_carry__5_n_0,state_out0_carry__5_n_1,state_out0_carry__5_n_2,state_out0_carry__5_n_3}),
         .CYINIT(1'b0),
-        .DI(\state_out_reg[96] [28:25]),
+        .DI(Q[28:25]),
         .O(add_const_state[27:24]),
-        .S({\state_out_reg[96] [28],\state_out_reg[60] [1],\state_out_reg[96] [26],\state_out_reg[60] [0]}));
+        .S({Q[28],\state_out_reg[60] [1],Q[26],\state_out_reg[60] [0]}));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__5_i_1__7
-       (.I0(Q[13]),
+       (.I0(state_out0_carry__12_0[13]),
         .O(\state_out_reg[31] [2]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__5_i_2__5
-       (.I0(Q[12]),
+       (.I0(state_out0_carry__12_0[12]),
         .O(\state_out_reg[31] [1]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__5_i_3__0
-       (.I0(Q[11]),
+       (.I0(state_out0_carry__12_0[11]),
         .O(\state_out_reg[31] [0]));
   CARRY4 state_out0_carry__6
        (.CI(state_out0_carry__5_n_0),
         .CO({state_out0_carry__6_n_0,state_out0_carry__6_n_1,state_out0_carry__6_n_2,state_out0_carry__6_n_3}),
         .CYINIT(1'b0),
-        .DI(\state_out_reg[96] [32:29]),
+        .DI(Q[32:29]),
         .O(add_const_state[31:28]),
-        .S({\state_out_reg[32] [1],\state_out_reg[96] [31],\state_out_reg[32] [0],\state_out_reg[96] [29]}));
+        .S({\state_out_reg[32] [1],Q[31],\state_out_reg[32] [0],Q[29]}));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__6_i_1__7
-       (.I0(Q[14]),
+       (.I0(state_out0_carry__12_0[14]),
         .O(\state_out_reg[34] ));
   CARRY4 state_out0_carry__7
        (.CI(state_out0_carry__6_n_0),
         .CO({state_out0_carry__7_n_0,state_out0_carry__7_n_1,state_out0_carry__7_n_2,state_out0_carry__7_n_3}),
         .CYINIT(1'b0),
-        .DI(\state_out_reg[96] [36:33]),
+        .DI(Q[36:33]),
         .O(add_const_state[35:32]),
-        .S({\state_out_reg[36]_0 [2:1],\state_out_reg[96] [34],\state_out_reg[36]_0 [0]}));
+        .S({\state_out_reg[36]_0 [2:1],Q[34],\state_out_reg[36]_0 [0]}));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__7_i_1__6
-       (.I0(Q[16]),
+       (.I0(state_out0_carry__12_0[16]),
         .O(\state_out_reg[39] [1]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__7_i_2__4
-       (.I0(Q[15]),
+       (.I0(state_out0_carry__12_0[15]),
         .O(\state_out_reg[39] [0]));
   CARRY4 state_out0_carry__8
        (.CI(state_out0_carry__7_n_0),
         .CO({state_out0_carry__8_n_0,state_out0_carry__8_n_1,state_out0_carry__8_n_2,state_out0_carry__8_n_3}),
         .CYINIT(1'b0),
-        .DI(\state_out_reg[96] [40:37]),
+        .DI(Q[40:37]),
         .O(add_const_state[39:36]),
-        .S({\state_out_reg[96] [40],\state_out_reg[40]_0 ,\state_out_reg[96] [37]}));
+        .S({Q[40],\state_out_reg[40]_0 ,Q[37]}));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__8_i_1__7
-       (.I0(Q[17]),
+       (.I0(state_out0_carry__12_0[17]),
         .O(\state_out_reg[41] ));
   CARRY4 state_out0_carry__9
        (.CI(state_out0_carry__8_n_0),
         .CO({state_out0_carry__9_n_0,state_out0_carry__9_n_1,state_out0_carry__9_n_2,state_out0_carry__9_n_3}),
         .CYINIT(1'b0),
-        .DI(\state_out_reg[96] [44:41]),
+        .DI(Q[44:41]),
         .O(add_const_state[43:40]),
         .S(\state_out_reg[44]_0 ));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__9_i_1__7
-       (.I0(Q[19]),
+       (.I0(state_out0_carry__12_0[19]),
         .O(\state_out_reg[45] [1]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__9_i_2__6
-       (.I0(Q[18]),
+       (.I0(state_out0_carry__12_0[18]),
         .O(\state_out_reg[45] [0]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry_i_1__7
-       (.I0(Q[1]),
+       (.I0(state_out0_carry__12_0[1]),
         .O(\state_out_reg[6] [1]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry_i_2__4
-       (.I0(Q[0]),
+       (.I0(state_out0_carry__12_0[0]),
         .O(\state_out_reg[6] [0]));
 endmodule
 
@@ -487,7 +488,7 @@ module design_ascon_ascon_core_0_2_ascon_add_constant_10
     \state_out_reg[12] ,
     \state_out_reg[8] ,
     \state_out_reg[4] ,
-    Q,
+    \state_out_reg[96] ,
     \state_out_reg[36]_0 ,
     \state_out_reg[40] ,
     \state_out_reg[44]_0 ,
@@ -502,8 +503,8 @@ module design_ascon_ascon_core_0_2_ascon_add_constant_10
     \state_out_reg[52]_1 ,
     \state_out_reg[56]_1 ,
     \state_out_reg[60]_0 ,
-    \state_out_reg[96] ,
-    state_out0_carry__12_0);
+    \state_out_reg[96]_0 ,
+    Q);
   output [62:0]add_const_state;
   output [0:0]CO;
   output [0:0]\state_out_reg[56] ;
@@ -519,7 +520,7 @@ module design_ascon_ascon_core_0_2_ascon_add_constant_10
   output [1:0]\state_out_reg[12] ;
   output [1:0]\state_out_reg[8] ;
   output [2:0]\state_out_reg[4] ;
-  input [63:0]Q;
+  input [63:0]\state_out_reg[96] ;
   input [1:0]\state_out_reg[36]_0 ;
   input [1:0]\state_out_reg[40] ;
   input [0:0]\state_out_reg[44]_0 ;
@@ -534,11 +535,11 @@ module design_ascon_ascon_core_0_2_ascon_add_constant_10
   input [3:0]\state_out_reg[52]_1 ;
   input [3:0]\state_out_reg[56]_1 ;
   input [1:0]\state_out_reg[60]_0 ;
-  input [1:0]\state_out_reg[96] ;
-  input [33:0]state_out0_carry__12_0;
+  input [1:0]\state_out_reg[96]_0 ;
+  input [33:0]Q;
 
   wire [0:0]CO;
-  wire [63:0]Q;
+  wire [33:0]Q;
   wire [62:0]add_const_state;
   wire state_out0_carry__0_n_0;
   wire state_out0_carry__0_n_1;
@@ -552,7 +553,6 @@ module design_ascon_ascon_core_0_2_ascon_add_constant_10
   wire state_out0_carry__11_n_1;
   wire state_out0_carry__11_n_2;
   wire state_out0_carry__11_n_3;
-  wire [33:0]state_out0_carry__12_0;
   wire state_out0_carry__12_n_0;
   wire state_out0_carry__12_n_1;
   wire state_out0_carry__12_n_2;
@@ -630,291 +630,292 @@ module design_ascon_ascon_core_0_2_ascon_add_constant_10
   wire [1:0]\state_out_reg[60] ;
   wire [1:0]\state_out_reg[60]_0 ;
   wire [1:0]\state_out_reg[8] ;
-  wire [1:0]\state_out_reg[96] ;
+  wire [63:0]\state_out_reg[96] ;
+  wire [1:0]\state_out_reg[96]_0 ;
   wire [2:2]NLW_state_out0_carry__14_CO_UNCONNECTED;
   wire [3:3]NLW_state_out0_carry__14_O_UNCONNECTED;
 
   CARRY4 state_out0_carry
        (.CI(1'b0),
         .CO({state_out0_carry_n_0,state_out0_carry_n_1,state_out0_carry_n_2,state_out0_carry_n_3}),
-        .CYINIT(Q[0]),
-        .DI(Q[4:1]),
+        .CYINIT(\state_out_reg[96] [0]),
+        .DI(\state_out_reg[96] [4:1]),
         .O(add_const_state[3:0]),
-        .S({\state_out_reg[36]_0 [1],Q[3],\state_out_reg[36]_0 [0],Q[1]}));
+        .S({\state_out_reg[36]_0 [1],\state_out_reg[96] [3],\state_out_reg[36]_0 [0],\state_out_reg[96] [1]}));
   CARRY4 state_out0_carry__0
        (.CI(state_out0_carry_n_0),
         .CO({state_out0_carry__0_n_0,state_out0_carry__0_n_1,state_out0_carry__0_n_2,state_out0_carry__0_n_3}),
         .CYINIT(1'b0),
-        .DI(Q[8:5]),
+        .DI(\state_out_reg[96] [8:5]),
         .O(add_const_state[7:4]),
-        .S({\state_out_reg[40] ,Q[6:5]}));
+        .S({\state_out_reg[40] ,\state_out_reg[96] [6:5]}));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__0_i_1__5
-       (.I0(state_out0_carry__12_0[4]),
+       (.I0(Q[4]),
         .O(\state_out_reg[8] [1]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__0_i_2__3
-       (.I0(state_out0_carry__12_0[3]),
+       (.I0(Q[3]),
         .O(\state_out_reg[8] [0]));
   CARRY4 state_out0_carry__1
        (.CI(state_out0_carry__0_n_0),
         .CO({state_out0_carry__1_n_0,state_out0_carry__1_n_1,state_out0_carry__1_n_2,state_out0_carry__1_n_3}),
         .CYINIT(1'b0),
-        .DI(Q[12:9]),
+        .DI(\state_out_reg[96] [12:9]),
         .O(add_const_state[11:8]),
-        .S({Q[12:10],\state_out_reg[44]_0 }));
+        .S({\state_out_reg[96] [12:10],\state_out_reg[44]_0 }));
   CARRY4 state_out0_carry__10
        (.CI(state_out0_carry__9_n_0),
         .CO({state_out0_carry__10_n_0,state_out0_carry__10_n_1,state_out0_carry__10_n_2,state_out0_carry__10_n_3}),
         .CYINIT(1'b0),
-        .DI(Q[48:45]),
+        .DI(\state_out_reg[96] [48:45]),
         .O(add_const_state[47:44]),
-        .S(Q[48:45]));
+        .S(\state_out_reg[96] [48:45]));
   CARRY4 state_out0_carry__11
        (.CI(state_out0_carry__10_n_0),
         .CO({state_out0_carry__11_n_0,state_out0_carry__11_n_1,state_out0_carry__11_n_2,state_out0_carry__11_n_3}),
         .CYINIT(1'b0),
-        .DI(Q[52:49]),
+        .DI(\state_out_reg[96] [52:49]),
         .O(add_const_state[51:48]),
         .S(\state_out_reg[52]_1 ));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__11_i_1__5
-       (.I0(state_out0_carry__12_0[32]),
+       (.I0(Q[32]),
         .O(\state_out_reg[52] [3]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__11_i_2__4
-       (.I0(state_out0_carry__12_0[31]),
+       (.I0(Q[31]),
         .O(\state_out_reg[52] [2]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__11_i_3__3
-       (.I0(state_out0_carry__12_0[30]),
+       (.I0(Q[30]),
         .O(\state_out_reg[52] [1]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__11_i_4__0
-       (.I0(state_out0_carry__12_0[29]),
+       (.I0(Q[29]),
         .O(\state_out_reg[52] [0]));
   CARRY4 state_out0_carry__12
        (.CI(state_out0_carry__11_n_0),
         .CO({state_out0_carry__12_n_0,state_out0_carry__12_n_1,state_out0_carry__12_n_2,state_out0_carry__12_n_3}),
         .CYINIT(1'b0),
-        .DI(Q[56:53]),
+        .DI(\state_out_reg[96] [56:53]),
         .O(add_const_state[55:52]),
         .S(\state_out_reg[56]_1 ));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__12_i_1__6
-       (.I0(state_out0_carry__12_0[33]),
+       (.I0(Q[33]),
         .O(\state_out_reg[56] ));
   CARRY4 state_out0_carry__13
        (.CI(state_out0_carry__12_n_0),
         .CO({state_out0_carry__13_n_0,state_out0_carry__13_n_1,state_out0_carry__13_n_2,state_out0_carry__13_n_3}),
         .CYINIT(1'b0),
-        .DI(Q[60:57]),
+        .DI(\state_out_reg[96] [60:57]),
         .O(add_const_state[59:56]),
-        .S({Q[60],\state_out_reg[60]_0 ,Q[57]}));
+        .S({\state_out_reg[96] [60],\state_out_reg[60]_0 ,\state_out_reg[96] [57]}));
   CARRY4 state_out0_carry__14
        (.CI(state_out0_carry__13_n_0),
         .CO({CO,NLW_state_out0_carry__14_CO_UNCONNECTED[2],state_out0_carry__14_n_2,state_out0_carry__14_n_3}),
         .CYINIT(1'b0),
-        .DI({1'b0,Q[63:61]}),
+        .DI({1'b0,\state_out_reg[96] [63:61]}),
         .O({NLW_state_out0_carry__14_O_UNCONNECTED[3],add_const_state[62:60]}),
-        .S({1'b1,Q[63],\state_out_reg[96] }));
+        .S({1'b1,\state_out_reg[96] [63],\state_out_reg[96]_0 }));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__1_i_1__6
-       (.I0(state_out0_carry__12_0[6]),
+       (.I0(Q[6]),
         .O(\state_out_reg[12] [1]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__1_i_2__4
-       (.I0(state_out0_carry__12_0[5]),
+       (.I0(Q[5]),
         .O(\state_out_reg[12] [0]));
   CARRY4 state_out0_carry__2
        (.CI(state_out0_carry__1_n_0),
         .CO({state_out0_carry__2_n_0,state_out0_carry__2_n_1,state_out0_carry__2_n_2,state_out0_carry__2_n_3}),
         .CYINIT(1'b0),
-        .DI(Q[16:13]),
+        .DI(\state_out_reg[96] [16:13]),
         .O(add_const_state[15:12]),
-        .S({\state_out_reg[48] ,Q[13]}));
+        .S({\state_out_reg[48] ,\state_out_reg[96] [13]}));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__2_i_1__6
-       (.I0(state_out0_carry__12_0[9]),
+       (.I0(Q[9]),
         .O(\state_out_reg[15] [2]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__2_i_2__6
-       (.I0(state_out0_carry__12_0[8]),
+       (.I0(Q[8]),
         .O(\state_out_reg[15] [1]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__2_i_3__2
-       (.I0(state_out0_carry__12_0[7]),
+       (.I0(Q[7]),
         .O(\state_out_reg[15] [0]));
   CARRY4 state_out0_carry__3
        (.CI(state_out0_carry__2_n_0),
         .CO({state_out0_carry__3_n_0,state_out0_carry__3_n_1,state_out0_carry__3_n_2,state_out0_carry__3_n_3}),
         .CYINIT(1'b0),
-        .DI(Q[20:17]),
+        .DI(\state_out_reg[96] [20:17]),
         .O(add_const_state[19:16]),
-        .S({\state_out_reg[52]_0 ,Q[19:17]}));
+        .S({\state_out_reg[52]_0 ,\state_out_reg[96] [19:17]}));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__3_i_1__6
-       (.I0(state_out0_carry__12_0[12]),
+       (.I0(Q[12]),
         .O(\state_out_reg[20] [2]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__3_i_2__5
-       (.I0(state_out0_carry__12_0[11]),
+       (.I0(Q[11]),
         .O(\state_out_reg[20] [1]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__3_i_3__2
-       (.I0(state_out0_carry__12_0[10]),
+       (.I0(Q[10]),
         .O(\state_out_reg[20] [0]));
   CARRY4 state_out0_carry__4
        (.CI(state_out0_carry__3_n_0),
         .CO({state_out0_carry__4_n_0,state_out0_carry__4_n_1,state_out0_carry__4_n_2,state_out0_carry__4_n_3}),
         .CYINIT(1'b0),
-        .DI(Q[24:21]),
+        .DI(\state_out_reg[96] [24:21]),
         .O(add_const_state[23:20]),
-        .S({Q[24],\state_out_reg[56]_0 }));
+        .S({\state_out_reg[96] [24],\state_out_reg[56]_0 }));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__4_i_1__6
-       (.I0(state_out0_carry__12_0[15]),
+       (.I0(Q[15]),
         .O(\state_out_reg[24] [2]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__4_i_2__3
-       (.I0(state_out0_carry__12_0[14]),
+       (.I0(Q[14]),
         .O(\state_out_reg[24] [1]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__4_i_3__1
-       (.I0(state_out0_carry__12_0[13]),
+       (.I0(Q[13]),
         .O(\state_out_reg[24] [0]));
   CARRY4 state_out0_carry__5
        (.CI(state_out0_carry__4_n_0),
         .CO({state_out0_carry__5_n_0,state_out0_carry__5_n_1,state_out0_carry__5_n_2,state_out0_carry__5_n_3}),
         .CYINIT(1'b0),
-        .DI(Q[28:25]),
+        .DI(\state_out_reg[96] [28:25]),
         .O(add_const_state[27:24]),
-        .S({\state_out_reg[60] [1],Q[27],\state_out_reg[60] [0],Q[25]}));
+        .S({\state_out_reg[60] [1],\state_out_reg[96] [27],\state_out_reg[60] [0],\state_out_reg[96] [25]}));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__5_i_1__6
-       (.I0(state_out0_carry__12_0[17]),
+       (.I0(Q[17]),
         .O(\state_out_reg[27] [1]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__5_i_2__4
-       (.I0(state_out0_carry__12_0[16]),
+       (.I0(Q[16]),
         .O(\state_out_reg[27] [0]));
   CARRY4 state_out0_carry__6
        (.CI(state_out0_carry__5_n_0),
         .CO({state_out0_carry__6_n_0,state_out0_carry__6_n_1,state_out0_carry__6_n_2,state_out0_carry__6_n_3}),
         .CYINIT(1'b0),
-        .DI(Q[32:29]),
+        .DI(\state_out_reg[96] [32:29]),
         .O(add_const_state[31:28]),
-        .S({Q[32],\state_out_reg[32]_0 [1],Q[30],\state_out_reg[32]_0 [0]}));
+        .S({\state_out_reg[96] [32],\state_out_reg[32]_0 [1],\state_out_reg[96] [30],\state_out_reg[32]_0 [0]}));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__6_i_1__6
-       (.I0(state_out0_carry__12_0[19]),
+       (.I0(Q[19]),
         .O(\state_out_reg[32] [1]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__6_i_2__4
-       (.I0(state_out0_carry__12_0[18]),
+       (.I0(Q[18]),
         .O(\state_out_reg[32] [0]));
   CARRY4 state_out0_carry__7
        (.CI(state_out0_carry__6_n_0),
         .CO({state_out0_carry__7_n_0,state_out0_carry__7_n_1,state_out0_carry__7_n_2,state_out0_carry__7_n_3}),
         .CYINIT(1'b0),
-        .DI(Q[36:33]),
+        .DI(\state_out_reg[96] [36:33]),
         .O(add_const_state[35:32]),
-        .S({Q[36:34],\state_out_reg[36]_1 }));
+        .S({\state_out_reg[96] [36:34],\state_out_reg[36]_1 }));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__7_i_1__5
-       (.I0(state_out0_carry__12_0[22]),
+       (.I0(Q[22]),
         .O(\state_out_reg[36] [2]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__7_i_2__3
-       (.I0(state_out0_carry__12_0[21]),
+       (.I0(Q[21]),
         .O(\state_out_reg[36] [1]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__7_i_3__1
-       (.I0(state_out0_carry__12_0[20]),
+       (.I0(Q[20]),
         .O(\state_out_reg[36] [0]));
   CARRY4 state_out0_carry__8
        (.CI(state_out0_carry__7_n_0),
         .CO({state_out0_carry__8_n_0,state_out0_carry__8_n_1,state_out0_carry__8_n_2,state_out0_carry__8_n_3}),
         .CYINIT(1'b0),
-        .DI(Q[40:37]),
+        .DI(\state_out_reg[96] [40:37]),
         .O(add_const_state[39:36]),
-        .S({Q[40:39],\state_out_reg[40]_0 }));
+        .S({\state_out_reg[96] [40:39],\state_out_reg[40]_0 }));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__8_i_1__6
-       (.I0(state_out0_carry__12_0[24]),
+       (.I0(Q[24]),
         .O(\state_out_reg[39] [1]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__8_i_2__3
-       (.I0(state_out0_carry__12_0[23]),
+       (.I0(Q[23]),
         .O(\state_out_reg[39] [0]));
   CARRY4 state_out0_carry__9
        (.CI(state_out0_carry__8_n_0),
         .CO({state_out0_carry__9_n_0,state_out0_carry__9_n_1,state_out0_carry__9_n_2,state_out0_carry__9_n_3}),
         .CYINIT(1'b0),
-        .DI(Q[44:41]),
+        .DI(\state_out_reg[96] [44:41]),
         .O(add_const_state[43:40]),
         .S(\state_out_reg[44]_1 ));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__9_i_1__6
-       (.I0(state_out0_carry__12_0[28]),
+       (.I0(Q[28]),
         .O(\state_out_reg[44] [3]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__9_i_2__5
-       (.I0(state_out0_carry__12_0[27]),
+       (.I0(Q[27]),
         .O(\state_out_reg[44] [2]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__9_i_3__1
-       (.I0(state_out0_carry__12_0[26]),
+       (.I0(Q[26]),
         .O(\state_out_reg[44] [1]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__9_i_4__0
-       (.I0(state_out0_carry__12_0[25]),
+       (.I0(Q[25]),
         .O(\state_out_reg[44] [0]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry_i_1__6
-       (.I0(state_out0_carry__12_0[2]),
+       (.I0(Q[2]),
         .O(\state_out_reg[4] [2]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry_i_2__3
-       (.I0(state_out0_carry__12_0[1]),
+       (.I0(Q[1]),
         .O(\state_out_reg[4] [1]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry_i_3__2
-       (.I0(state_out0_carry__12_0[0]),
+       (.I0(Q[0]),
         .O(\state_out_reg[4] [0]));
 endmodule
 
@@ -922,7 +923,6 @@ endmodule
 module design_ascon_ascon_core_0_2_ascon_add_constant_12
    (add_const_state,
     \state_out_reg[63] ,
-    D,
     \state_out_reg[31] ,
     \state_out_reg[28] ,
     \state_out_reg[23] ,
@@ -937,7 +937,7 @@ module design_ascon_ascon_core_0_2_ascon_add_constant_12
     \state_out_reg[44] ,
     \state_out_reg[38] ,
     \state_out_reg[33] ,
-    \round_state[6] ,
+    Q,
     \state_out_reg[37] ,
     \state_out_reg[41] ,
     \state_out_reg[45] ,
@@ -954,10 +954,9 @@ module design_ascon_ascon_core_0_2_ascon_add_constant_12
     \state_out_reg[57]_0 ,
     \state_out_reg[61]_0 ,
     S,
-    Q);
+    state_out0_carry__13_0);
   output [61:0]add_const_state;
   output [0:0]\state_out_reg[63] ;
-  output [0:0]D;
   output [1:0]\state_out_reg[31] ;
   output [1:0]\state_out_reg[28] ;
   output [2:0]\state_out_reg[23] ;
@@ -972,7 +971,7 @@ module design_ascon_ascon_core_0_2_ascon_add_constant_12
   output [3:0]\state_out_reg[44] ;
   output [1:0]\state_out_reg[38] ;
   output [0:0]\state_out_reg[33] ;
-  input [64:0]\round_state[6] ;
+  input [62:0]Q;
   input [3:0]\state_out_reg[37] ;
   input [2:0]\state_out_reg[41] ;
   input [1:0]\state_out_reg[45] ;
@@ -989,13 +988,11 @@ module design_ascon_ascon_core_0_2_ascon_add_constant_12
   input [2:0]\state_out_reg[57]_0 ;
   input [3:0]\state_out_reg[61]_0 ;
   input [0:0]S;
-  input [32:0]Q;
+  input [32:0]state_out0_carry__13_0;
 
-  wire [0:0]D;
-  wire [32:0]Q;
+  wire [62:0]Q;
   wire [0:0]S;
   wire [61:0]add_const_state;
-  wire [64:0]\round_state[6] ;
   wire state_out0_carry__0_n_0;
   wire state_out0_carry__0_n_1;
   wire state_out0_carry__0_n_2;
@@ -1012,6 +1009,7 @@ module design_ascon_ascon_core_0_2_ascon_add_constant_12
   wire state_out0_carry__12_n_1;
   wire state_out0_carry__12_n_2;
   wire state_out0_carry__12_n_3;
+  wire [32:0]state_out0_carry__13_0;
   wire state_out0_carry__13_n_0;
   wire state_out0_carry__13_n_1;
   wire state_out0_carry__13_n_2;
@@ -1093,295 +1091,286 @@ module design_ascon_ascon_core_0_2_ascon_add_constant_12
   CARRY4 state_out0_carry
        (.CI(1'b0),
         .CO({state_out0_carry_n_0,state_out0_carry_n_1,state_out0_carry_n_2,state_out0_carry_n_3}),
-        .CYINIT(\round_state[6] [1]),
-        .DI(\round_state[6] [5:2]),
+        .CYINIT(Q[0]),
+        .DI(Q[4:1]),
         .O(add_const_state[3:0]),
         .S(\state_out_reg[37] ));
   CARRY4 state_out0_carry__0
        (.CI(state_out0_carry_n_0),
         .CO({state_out0_carry__0_n_0,state_out0_carry__0_n_1,state_out0_carry__0_n_2,state_out0_carry__0_n_3}),
         .CYINIT(1'b0),
-        .DI(\round_state[6] [9:6]),
+        .DI(Q[8:5]),
         .O(add_const_state[7:4]),
-        .S({\round_state[6] [9],\state_out_reg[41] }));
+        .S({Q[8],\state_out_reg[41] }));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__0_i_1__4
-       (.I0(Q[3]),
+       (.I0(state_out0_carry__13_0[3]),
         .O(\state_out_reg[8] [1]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__0_i_2__2
-       (.I0(Q[2]),
+       (.I0(state_out0_carry__13_0[2]),
         .O(\state_out_reg[8] [0]));
   CARRY4 state_out0_carry__1
        (.CI(state_out0_carry__0_n_0),
         .CO({state_out0_carry__1_n_0,state_out0_carry__1_n_1,state_out0_carry__1_n_2,state_out0_carry__1_n_3}),
         .CYINIT(1'b0),
-        .DI(\round_state[6] [13:10]),
+        .DI(Q[12:9]),
         .O(add_const_state[11:8]),
-        .S({\state_out_reg[45] [1],\round_state[6] [12:11],\state_out_reg[45] [0]}));
+        .S({\state_out_reg[45] [1],Q[11:10],\state_out_reg[45] [0]}));
   CARRY4 state_out0_carry__10
        (.CI(state_out0_carry__9_n_0),
         .CO({state_out0_carry__10_n_0,state_out0_carry__10_n_1,state_out0_carry__10_n_2,state_out0_carry__10_n_3}),
         .CYINIT(1'b0),
-        .DI(\round_state[6] [49:46]),
+        .DI(Q[48:45]),
         .O(add_const_state[47:44]),
-        .S({\state_out_reg[49]_0 [1],\round_state[6] [48:47],\state_out_reg[49]_0 [0]}));
+        .S({\state_out_reg[49]_0 [1],Q[47:46],\state_out_reg[49]_0 [0]}));
   CARRY4 state_out0_carry__11
        (.CI(state_out0_carry__10_n_0),
         .CO({state_out0_carry__11_n_0,state_out0_carry__11_n_1,state_out0_carry__11_n_2,state_out0_carry__11_n_3}),
         .CYINIT(1'b0),
-        .DI(\round_state[6] [53:50]),
+        .DI(Q[52:49]),
         .O(add_const_state[51:48]),
-        .S({\state_out_reg[53]_0 ,\round_state[6] [50]}));
+        .S({\state_out_reg[53]_0 ,Q[49]}));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__11_i_1__4
-       (.I0(Q[26]),
+       (.I0(state_out0_carry__13_0[26]),
         .O(\state_out_reg[52] [3]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__11_i_2__3
-       (.I0(Q[25]),
+       (.I0(state_out0_carry__13_0[25]),
         .O(\state_out_reg[52] [2]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__11_i_3__2
-       (.I0(Q[24]),
+       (.I0(state_out0_carry__13_0[24]),
         .O(\state_out_reg[52] [1]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__11_i_4
-       (.I0(Q[23]),
+       (.I0(state_out0_carry__13_0[23]),
         .O(\state_out_reg[52] [0]));
   CARRY4 state_out0_carry__12
        (.CI(state_out0_carry__11_n_0),
         .CO({state_out0_carry__12_n_0,state_out0_carry__12_n_1,state_out0_carry__12_n_2,state_out0_carry__12_n_3}),
         .CYINIT(1'b0),
-        .DI(\round_state[6] [57:54]),
+        .DI(Q[56:53]),
         .O(add_const_state[55:52]),
-        .S({\state_out_reg[57]_0 [2],\round_state[6] [56],\state_out_reg[57]_0 [1:0]}));
+        .S({\state_out_reg[57]_0 [2],Q[55],\state_out_reg[57]_0 [1:0]}));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__12_i_1__5
-       (.I0(Q[30]),
+       (.I0(state_out0_carry__13_0[30]),
         .O(\state_out_reg[56] [3]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__12_i_2__2
-       (.I0(Q[29]),
+       (.I0(state_out0_carry__13_0[29]),
         .O(\state_out_reg[56] [2]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__12_i_3__1
-       (.I0(Q[28]),
+       (.I0(state_out0_carry__13_0[28]),
         .O(\state_out_reg[56] [1]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__12_i_4__0
-       (.I0(Q[27]),
+       (.I0(state_out0_carry__13_0[27]),
         .O(\state_out_reg[56] [0]));
   CARRY4 state_out0_carry__13
        (.CI(state_out0_carry__12_n_0),
         .CO({state_out0_carry__13_n_0,state_out0_carry__13_n_1,state_out0_carry__13_n_2,state_out0_carry__13_n_3}),
         .CYINIT(1'b0),
-        .DI(\round_state[6] [61:58]),
+        .DI(Q[60:57]),
         .O(add_const_state[59:56]),
         .S(\state_out_reg[61]_0 ));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__13_i_1__5
-       (.I0(Q[32]),
+       (.I0(state_out0_carry__13_0[32]),
         .O(\state_out_reg[59] [1]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__13_i_2__4
-       (.I0(Q[31]),
+       (.I0(state_out0_carry__13_0[31]),
         .O(\state_out_reg[59] [0]));
   CARRY4 state_out0_carry__14
        (.CI(state_out0_carry__13_n_0),
         .CO({NLW_state_out0_carry__14_CO_UNCONNECTED[3],\state_out_reg[63] ,NLW_state_out0_carry__14_CO_UNCONNECTED[1],state_out0_carry__14_n_3}),
         .CYINIT(1'b0),
-        .DI({1'b0,1'b0,\round_state[6] [63:62]}),
+        .DI({1'b0,1'b0,Q[62:61]}),
         .O({NLW_state_out0_carry__14_O_UNCONNECTED[3:2],add_const_state[61:60]}),
-        .S({1'b0,1'b1,S,\round_state[6] [62]}));
+        .S({1'b0,1'b1,S,Q[61]}));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__1_i_1__5
-       (.I0(Q[4]),
+       (.I0(state_out0_carry__13_0[4]),
         .O(\state_out_reg[9] ));
   CARRY4 state_out0_carry__2
        (.CI(state_out0_carry__1_n_0),
         .CO({state_out0_carry__2_n_0,state_out0_carry__2_n_1,state_out0_carry__2_n_2,state_out0_carry__2_n_3}),
         .CYINIT(1'b0),
-        .DI(\round_state[6] [17:14]),
+        .DI(Q[16:13]),
         .O(add_const_state[15:12]),
-        .S({\state_out_reg[49] ,\round_state[6] [15:14]}));
+        .S({\state_out_reg[49] ,Q[14:13]}));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__2_i_1__5
-       (.I0(Q[7]),
+       (.I0(state_out0_carry__13_0[7]),
         .O(\state_out_reg[16] [2]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__2_i_2__5
-       (.I0(Q[6]),
+       (.I0(state_out0_carry__13_0[6]),
         .O(\state_out_reg[16] [1]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__2_i_3__1
-       (.I0(Q[5]),
+       (.I0(state_out0_carry__13_0[5]),
         .O(\state_out_reg[16] [0]));
   CARRY4 state_out0_carry__3
        (.CI(state_out0_carry__2_n_0),
         .CO({state_out0_carry__3_n_0,state_out0_carry__3_n_1,state_out0_carry__3_n_2,state_out0_carry__3_n_3}),
         .CYINIT(1'b0),
-        .DI(\round_state[6] [21:18]),
+        .DI(Q[20:17]),
         .O(add_const_state[19:16]),
-        .S({\round_state[6] [21],\state_out_reg[53] }));
+        .S({Q[20],\state_out_reg[53] }));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__3_i_1__5
-       (.I0(Q[8]),
+       (.I0(state_out0_carry__13_0[8]),
         .O(\state_out_reg[20] ));
   CARRY4 state_out0_carry__4
        (.CI(state_out0_carry__3_n_0),
         .CO({state_out0_carry__4_n_0,state_out0_carry__4_n_1,state_out0_carry__4_n_2,state_out0_carry__4_n_3}),
         .CYINIT(1'b0),
-        .DI(\round_state[6] [25:22]),
+        .DI(Q[24:21]),
         .O(add_const_state[23:20]),
-        .S({\state_out_reg[57] ,\round_state[6] [22]}));
+        .S({\state_out_reg[57] ,Q[21]}));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__4_i_1__5
-       (.I0(Q[11]),
+       (.I0(state_out0_carry__13_0[11]),
         .O(\state_out_reg[23] [2]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__4_i_2__2
-       (.I0(Q[10]),
+       (.I0(state_out0_carry__13_0[10]),
         .O(\state_out_reg[23] [1]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__4_i_3__0
-       (.I0(Q[9]),
+       (.I0(state_out0_carry__13_0[9]),
         .O(\state_out_reg[23] [0]));
   CARRY4 state_out0_carry__5
        (.CI(state_out0_carry__4_n_0),
         .CO({state_out0_carry__5_n_0,state_out0_carry__5_n_1,state_out0_carry__5_n_2,state_out0_carry__5_n_3}),
         .CYINIT(1'b0),
-        .DI(\round_state[6] [29:26]),
+        .DI(Q[28:25]),
         .O(add_const_state[27:24]),
-        .S({\state_out_reg[61] [1],\round_state[6] [28:27],\state_out_reg[61] [0]}));
+        .S({\state_out_reg[61] [1],Q[27:26],\state_out_reg[61] [0]}));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__5_i_1__5
-       (.I0(Q[13]),
+       (.I0(state_out0_carry__13_0[13]),
         .O(\state_out_reg[28] [1]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__5_i_2__3
-       (.I0(Q[12]),
+       (.I0(state_out0_carry__13_0[12]),
         .O(\state_out_reg[28] [0]));
   CARRY4 state_out0_carry__6
        (.CI(state_out0_carry__5_n_0),
         .CO({state_out0_carry__6_n_0,state_out0_carry__6_n_1,state_out0_carry__6_n_2,state_out0_carry__6_n_3}),
         .CYINIT(1'b0),
-        .DI(\round_state[6] [33:30]),
+        .DI(Q[32:29]),
         .O(add_const_state[31:28]),
-        .S({\state_out_reg[33]_0 [1],\round_state[6] [32:31],\state_out_reg[33]_0 [0]}));
+        .S({\state_out_reg[33]_0 [1],Q[31:30],\state_out_reg[33]_0 [0]}));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__6_i_1__5
-       (.I0(Q[15]),
+       (.I0(state_out0_carry__13_0[15]),
         .O(\state_out_reg[31] [1]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__6_i_2__3
-       (.I0(Q[14]),
+       (.I0(state_out0_carry__13_0[14]),
         .O(\state_out_reg[31] [0]));
   CARRY4 state_out0_carry__7
        (.CI(state_out0_carry__6_n_0),
         .CO({state_out0_carry__7_n_0,state_out0_carry__7_n_1,state_out0_carry__7_n_2,state_out0_carry__7_n_3}),
         .CYINIT(1'b0),
-        .DI(\round_state[6] [37:34]),
+        .DI(Q[36:33]),
         .O(add_const_state[35:32]),
         .S(\state_out_reg[37]_0 ));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__7_i_1__4
-       (.I0(Q[16]),
+       (.I0(state_out0_carry__13_0[16]),
         .O(\state_out_reg[33] ));
   CARRY4 state_out0_carry__8
        (.CI(state_out0_carry__7_n_0),
         .CO({state_out0_carry__8_n_0,state_out0_carry__8_n_1,state_out0_carry__8_n_2,state_out0_carry__8_n_3}),
         .CYINIT(1'b0),
-        .DI(\round_state[6] [41:38]),
+        .DI(Q[40:37]),
         .O(add_const_state[39:36]),
-        .S({\state_out_reg[41]_0 [2:1],\round_state[6] [39],\state_out_reg[41]_0 [0]}));
+        .S({\state_out_reg[41]_0 [2:1],Q[38],\state_out_reg[41]_0 [0]}));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__8_i_1__5
-       (.I0(Q[18]),
+       (.I0(state_out0_carry__13_0[18]),
         .O(\state_out_reg[38] [1]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__8_i_2__2
-       (.I0(Q[17]),
+       (.I0(state_out0_carry__13_0[17]),
         .O(\state_out_reg[38] [0]));
   CARRY4 state_out0_carry__9
        (.CI(state_out0_carry__8_n_0),
         .CO({state_out0_carry__9_n_0,state_out0_carry__9_n_1,state_out0_carry__9_n_2,state_out0_carry__9_n_3}),
         .CYINIT(1'b0),
-        .DI(\round_state[6] [45:42]),
+        .DI(Q[44:41]),
         .O(add_const_state[43:40]),
-        .S({\round_state[6] [45:44],\state_out_reg[45]_0 }));
+        .S({Q[44:43],\state_out_reg[45]_0 }));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__9_i_1__5
-       (.I0(Q[22]),
+       (.I0(state_out0_carry__13_0[22]),
         .O(\state_out_reg[44] [3]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__9_i_2__4
-       (.I0(Q[21]),
+       (.I0(state_out0_carry__13_0[21]),
         .O(\state_out_reg[44] [2]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__9_i_3__0
-       (.I0(Q[20]),
+       (.I0(state_out0_carry__13_0[20]),
         .O(\state_out_reg[44] [1]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__9_i_4
-       (.I0(Q[19]),
+       (.I0(state_out0_carry__13_0[19]),
         .O(\state_out_reg[44] [0]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry_i_1__5
-       (.I0(Q[1]),
+       (.I0(state_out0_carry__13_0[1]),
         .O(\state_out_reg[4] [1]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry_i_2__2
-       (.I0(Q[0]),
+       (.I0(state_out0_carry__13_0[0]),
         .O(\state_out_reg[4] [0]));
-  LUT4 #(
-    .INIT(16'h6996)) 
-    \state_out[0]_i_1__5 
-       (.I0(\state_out_reg[63] ),
-        .I1(add_const_state[30]),
-        .I2(\round_state[6] [64]),
-        .I3(\round_state[6] [0]),
-        .O(D));
 endmodule
 
 (* ORIG_REF_NAME = "ascon_add_constant" *) 
 module design_ascon_ascon_core_0_2_ascon_add_constant_14
    (add_const_state,
     CO,
-    D,
     \state_out_reg[61] ,
     \state_out_reg[57] ,
     \state_out_reg[53] ,
@@ -1397,7 +1386,7 @@ module design_ascon_ascon_core_0_2_ascon_add_constant_14
     \state_out_reg[13] ,
     \state_out_reg[8] ,
     \state_out_reg[5] ,
-    \state_out_reg[0] ,
+    \state_out_reg[96] ,
     \state_out_reg[37]_0 ,
     \state_out_reg[41]_0 ,
     \state_out_reg[45] ,
@@ -1412,11 +1401,10 @@ module design_ascon_ascon_core_0_2_ascon_add_constant_14
     \state_out_reg[53]_1 ,
     \state_out_reg[57]_1 ,
     \state_out_reg[61]_1 ,
-    \state_out_reg[0]_0 ,
+    \state_out_reg[96]_0 ,
     Q);
   output [61:0]add_const_state;
   output [0:0]CO;
-  output [0:0]D;
   output [3:0]\state_out_reg[61] ;
   output [2:0]\state_out_reg[57] ;
   output [2:0]\state_out_reg[53] ;
@@ -1432,7 +1420,7 @@ module design_ascon_ascon_core_0_2_ascon_add_constant_14
   output [1:0]\state_out_reg[13] ;
   output [2:0]\state_out_reg[8] ;
   output [3:0]\state_out_reg[5] ;
-  input [64:0]\state_out_reg[0] ;
+  input [62:0]\state_out_reg[96] ;
   input [0:0]\state_out_reg[37]_0 ;
   input [3:0]\state_out_reg[41]_0 ;
   input [0:0]\state_out_reg[45] ;
@@ -1447,11 +1435,10 @@ module design_ascon_ascon_core_0_2_ascon_add_constant_14
   input [1:0]\state_out_reg[53]_1 ;
   input [3:0]\state_out_reg[57]_1 ;
   input [1:0]\state_out_reg[61]_1 ;
-  input [0:0]\state_out_reg[0]_0 ;
+  input [0:0]\state_out_reg[96]_0 ;
   input [41:0]Q;
 
   wire [0:0]CO;
-  wire [0:0]D;
   wire [41:0]Q;
   wire [61:0]add_const_state;
   wire state_out0_carry__0_n_0;
@@ -1515,8 +1502,6 @@ module design_ascon_ascon_core_0_2_ascon_add_constant_14
   wire state_out0_carry_n_1;
   wire state_out0_carry_n_2;
   wire state_out0_carry_n_3;
-  wire [64:0]\state_out_reg[0] ;
-  wire [0:0]\state_out_reg[0]_0 ;
   wire [1:0]\state_out_reg[13] ;
   wire [1:0]\state_out_reg[17] ;
   wire [2:0]\state_out_reg[20] ;
@@ -1546,21 +1531,23 @@ module design_ascon_ascon_core_0_2_ascon_add_constant_14
   wire [0:0]\state_out_reg[61]_0 ;
   wire [1:0]\state_out_reg[61]_1 ;
   wire [2:0]\state_out_reg[8] ;
+  wire [62:0]\state_out_reg[96] ;
+  wire [0:0]\state_out_reg[96]_0 ;
   wire [3:1]NLW_state_out0_carry__14_CO_UNCONNECTED;
   wire [3:2]NLW_state_out0_carry__14_O_UNCONNECTED;
 
   CARRY4 state_out0_carry
        (.CI(1'b0),
         .CO({state_out0_carry_n_0,state_out0_carry_n_1,state_out0_carry_n_2,state_out0_carry_n_3}),
-        .CYINIT(\state_out_reg[0] [1]),
-        .DI(\state_out_reg[0] [5:2]),
+        .CYINIT(\state_out_reg[96] [0]),
+        .DI(\state_out_reg[96] [4:1]),
         .O(add_const_state[3:0]),
-        .S({\state_out_reg[0] [5:3],\state_out_reg[37]_0 }));
+        .S({\state_out_reg[96] [4:2],\state_out_reg[37]_0 }));
   CARRY4 state_out0_carry__0
        (.CI(state_out0_carry_n_0),
         .CO({state_out0_carry__0_n_0,state_out0_carry__0_n_1,state_out0_carry__0_n_2,state_out0_carry__0_n_3}),
         .CYINIT(1'b0),
-        .DI(\state_out_reg[0] [9:6]),
+        .DI(\state_out_reg[96] [8:5]),
         .O(add_const_state[7:4]),
         .S(\state_out_reg[41]_0 ));
   LUT1 #(
@@ -1582,16 +1569,16 @@ module design_ascon_ascon_core_0_2_ascon_add_constant_14
        (.CI(state_out0_carry__0_n_0),
         .CO({state_out0_carry__1_n_0,state_out0_carry__1_n_1,state_out0_carry__1_n_2,state_out0_carry__1_n_3}),
         .CYINIT(1'b0),
-        .DI(\state_out_reg[0] [13:10]),
+        .DI(\state_out_reg[96] [12:9]),
         .O(add_const_state[11:8]),
-        .S({\state_out_reg[45] ,\state_out_reg[0] [12:10]}));
+        .S({\state_out_reg[45] ,\state_out_reg[96] [11:9]}));
   CARRY4 state_out0_carry__10
        (.CI(state_out0_carry__9_n_0),
         .CO({state_out0_carry__10_n_0,state_out0_carry__10_n_1,state_out0_carry__10_n_2,state_out0_carry__10_n_3}),
         .CYINIT(1'b0),
-        .DI(\state_out_reg[0] [49:46]),
+        .DI(\state_out_reg[96] [48:45]),
         .O(add_const_state[47:44]),
-        .S({\state_out_reg[0] [49:48],\state_out_reg[49]_1 }));
+        .S({\state_out_reg[96] [48:47],\state_out_reg[49]_1 }));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__10_i_1__4
@@ -1606,9 +1593,9 @@ module design_ascon_ascon_core_0_2_ascon_add_constant_14
        (.CI(state_out0_carry__10_n_0),
         .CO({state_out0_carry__11_n_0,state_out0_carry__11_n_1,state_out0_carry__11_n_2,state_out0_carry__11_n_3}),
         .CYINIT(1'b0),
-        .DI(\state_out_reg[0] [53:50]),
+        .DI(\state_out_reg[96] [52:49]),
         .O(add_const_state[51:48]),
-        .S({\state_out_reg[0] [53],\state_out_reg[53]_1 [1],\state_out_reg[0] [51],\state_out_reg[53]_1 [0]}));
+        .S({\state_out_reg[96] [52],\state_out_reg[53]_1 [1],\state_out_reg[96] [50],\state_out_reg[53]_1 [0]}));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__11_i_1__3
@@ -1628,7 +1615,7 @@ module design_ascon_ascon_core_0_2_ascon_add_constant_14
        (.CI(state_out0_carry__11_n_0),
         .CO({state_out0_carry__12_n_0,state_out0_carry__12_n_1,state_out0_carry__12_n_2,state_out0_carry__12_n_3}),
         .CYINIT(1'b0),
-        .DI(\state_out_reg[0] [57:54]),
+        .DI(\state_out_reg[96] [56:53]),
         .O(add_const_state[55:52]),
         .S(\state_out_reg[57]_1 ));
   LUT1 #(
@@ -1650,9 +1637,9 @@ module design_ascon_ascon_core_0_2_ascon_add_constant_14
        (.CI(state_out0_carry__12_n_0),
         .CO({state_out0_carry__13_n_0,state_out0_carry__13_n_1,state_out0_carry__13_n_2,state_out0_carry__13_n_3}),
         .CYINIT(1'b0),
-        .DI(\state_out_reg[0] [61:58]),
+        .DI(\state_out_reg[96] [60:57]),
         .O(add_const_state[59:56]),
-        .S({\state_out_reg[0] [61],\state_out_reg[61]_1 [1],\state_out_reg[0] [59],\state_out_reg[61]_1 [0]}));
+        .S({\state_out_reg[96] [60],\state_out_reg[61]_1 [1],\state_out_reg[96] [58],\state_out_reg[61]_1 [0]}));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__13_i_1__4
@@ -1677,9 +1664,9 @@ module design_ascon_ascon_core_0_2_ascon_add_constant_14
        (.CI(state_out0_carry__13_n_0),
         .CO({NLW_state_out0_carry__14_CO_UNCONNECTED[3],CO,NLW_state_out0_carry__14_CO_UNCONNECTED[1],state_out0_carry__14_n_3}),
         .CYINIT(1'b0),
-        .DI({1'b0,1'b0,\state_out_reg[0] [63:62]}),
+        .DI({1'b0,1'b0,\state_out_reg[96] [62:61]}),
         .O({NLW_state_out0_carry__14_O_UNCONNECTED[3:2],add_const_state[61:60]}),
-        .S({1'b0,1'b1,\state_out_reg[0]_0 ,\state_out_reg[0] [62]}));
+        .S({1'b0,1'b1,\state_out_reg[96]_0 ,\state_out_reg[96] [61]}));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__1_i_1__4
@@ -1694,9 +1681,9 @@ module design_ascon_ascon_core_0_2_ascon_add_constant_14
        (.CI(state_out0_carry__1_n_0),
         .CO({state_out0_carry__2_n_0,state_out0_carry__2_n_1,state_out0_carry__2_n_2,state_out0_carry__2_n_3}),
         .CYINIT(1'b0),
-        .DI(\state_out_reg[0] [17:14]),
+        .DI(\state_out_reg[96] [16:13]),
         .O(add_const_state[15:12]),
-        .S({\state_out_reg[0] [17:16],\state_out_reg[49]_0 }));
+        .S({\state_out_reg[96] [16:15],\state_out_reg[49]_0 }));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__2_i_1__4
@@ -1711,9 +1698,9 @@ module design_ascon_ascon_core_0_2_ascon_add_constant_14
        (.CI(state_out0_carry__2_n_0),
         .CO({state_out0_carry__3_n_0,state_out0_carry__3_n_1,state_out0_carry__3_n_2,state_out0_carry__3_n_3}),
         .CYINIT(1'b0),
-        .DI(\state_out_reg[0] [21:18]),
+        .DI(\state_out_reg[96] [20:17]),
         .O(add_const_state[19:16]),
-        .S({\state_out_reg[53]_0 ,\state_out_reg[0] [19:18]}));
+        .S({\state_out_reg[53]_0 ,\state_out_reg[96] [18:17]}));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__3_i_1__4
@@ -1733,9 +1720,9 @@ module design_ascon_ascon_core_0_2_ascon_add_constant_14
        (.CI(state_out0_carry__3_n_0),
         .CO({state_out0_carry__4_n_0,state_out0_carry__4_n_1,state_out0_carry__4_n_2,state_out0_carry__4_n_3}),
         .CYINIT(1'b0),
-        .DI(\state_out_reg[0] [25:22]),
+        .DI(\state_out_reg[96] [24:21]),
         .O(add_const_state[23:20]),
-        .S({\state_out_reg[0] [25],\state_out_reg[57]_0 ,\state_out_reg[0] [22]}));
+        .S({\state_out_reg[96] [24],\state_out_reg[57]_0 ,\state_out_reg[96] [21]}));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__4_i_1__4
@@ -1755,9 +1742,9 @@ module design_ascon_ascon_core_0_2_ascon_add_constant_14
        (.CI(state_out0_carry__4_n_0),
         .CO({state_out0_carry__5_n_0,state_out0_carry__5_n_1,state_out0_carry__5_n_2,state_out0_carry__5_n_3}),
         .CYINIT(1'b0),
-        .DI(\state_out_reg[0] [29:26]),
+        .DI(\state_out_reg[96] [28:25]),
         .O(add_const_state[27:24]),
-        .S({\state_out_reg[0] [29:27],\state_out_reg[61]_0 }));
+        .S({\state_out_reg[96] [28:26],\state_out_reg[61]_0 }));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__5_i_1__4
@@ -1772,7 +1759,7 @@ module design_ascon_ascon_core_0_2_ascon_add_constant_14
        (.CI(state_out0_carry__5_n_0),
         .CO({state_out0_carry__6_n_0,state_out0_carry__6_n_1,state_out0_carry__6_n_2,state_out0_carry__6_n_3}),
         .CYINIT(1'b0),
-        .DI(\state_out_reg[0] [33:30]),
+        .DI(\state_out_reg[96] [32:29]),
         .O(add_const_state[31:28]),
         .S(\state_out_reg[33]_0 ));
   LUT1 #(
@@ -1789,9 +1776,9 @@ module design_ascon_ascon_core_0_2_ascon_add_constant_14
        (.CI(state_out0_carry__6_n_0),
         .CO({state_out0_carry__7_n_0,state_out0_carry__7_n_1,state_out0_carry__7_n_2,state_out0_carry__7_n_3}),
         .CYINIT(1'b0),
-        .DI(\state_out_reg[0] [37:34]),
+        .DI(\state_out_reg[96] [36:33]),
         .O(add_const_state[35:32]),
-        .S(\state_out_reg[0] [37:34]));
+        .S(\state_out_reg[96] [36:33]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__7_i_1__3
@@ -1816,7 +1803,7 @@ module design_ascon_ascon_core_0_2_ascon_add_constant_14
        (.CI(state_out0_carry__7_n_0),
         .CO({state_out0_carry__8_n_0,state_out0_carry__8_n_1,state_out0_carry__8_n_2,state_out0_carry__8_n_3}),
         .CYINIT(1'b0),
-        .DI(\state_out_reg[0] [41:38]),
+        .DI(\state_out_reg[96] [40:37]),
         .O(add_const_state[39:36]),
         .S(\state_out_reg[41]_1 ));
   LUT1 #(
@@ -1838,9 +1825,9 @@ module design_ascon_ascon_core_0_2_ascon_add_constant_14
        (.CI(state_out0_carry__8_n_0),
         .CO({state_out0_carry__9_n_0,state_out0_carry__9_n_1,state_out0_carry__9_n_2,state_out0_carry__9_n_3}),
         .CYINIT(1'b0),
-        .DI(\state_out_reg[0] [45:42]),
+        .DI(\state_out_reg[96] [44:41]),
         .O(add_const_state[43:40]),
-        .S({\state_out_reg[45]_0 ,\state_out_reg[0] [43:42]}));
+        .S({\state_out_reg[45]_0 ,\state_out_reg[96] [42:41]}));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__9_i_1__4
@@ -1871,14 +1858,6 @@ module design_ascon_ascon_core_0_2_ascon_add_constant_14
     state_out0_carry_i_4__0
        (.I0(Q[0]),
         .O(\state_out_reg[5] [0]));
-  LUT4 #(
-    .INIT(16'h6996)) 
-    \state_out[0]_i_1__4 
-       (.I0(CO),
-        .I1(add_const_state[30]),
-        .I2(\state_out_reg[0] [64]),
-        .I3(\state_out_reg[0] [0]),
-        .O(D));
 endmodule
 
 (* ORIG_REF_NAME = "ascon_add_constant" *) 
@@ -6162,8 +6141,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
   wire [3:0]\temp_reg[22]_0 ;
   wire [3:0]\temp_reg[34]_0 ;
 
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][0]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][0]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][0]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6173,8 +6152,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[0]),
         .Q(\round_key_reg[2][0]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][100]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][100]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][100]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6184,8 +6163,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[100]),
         .Q(\round_key_reg[2][100]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][101]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][101]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][101]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6195,8 +6174,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[101]),
         .Q(\round_key_reg[2][101]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][102]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][102]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][102]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6206,8 +6185,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[102]),
         .Q(\round_key_reg[2][102]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][103]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][103]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][103]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6217,8 +6196,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[103]),
         .Q(\round_key_reg[2][103]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][104]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][104]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][104]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6228,8 +6207,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[104]),
         .Q(\round_key_reg[2][104]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][105]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][105]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][105]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6239,8 +6218,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[105]),
         .Q(\round_key_reg[2][105]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][106]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][106]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][106]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6250,8 +6229,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[106]),
         .Q(\round_key_reg[2][106]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][107]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][107]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][107]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6261,8 +6240,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[107]),
         .Q(\round_key_reg[2][107]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][108]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][108]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][108]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6272,8 +6251,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[108]),
         .Q(\round_key_reg[2][108]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][109]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][109]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][109]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6283,8 +6262,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[109]),
         .Q(\round_key_reg[2][109]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][10]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][10]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][10]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6294,8 +6273,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[10]),
         .Q(\round_key_reg[2][10]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][110]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][110]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][110]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6305,8 +6284,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[110]),
         .Q(\round_key_reg[2][110]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][111]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][111]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][111]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6316,8 +6295,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[111]),
         .Q(\round_key_reg[2][111]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][112]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][112]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][112]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6327,8 +6306,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[112]),
         .Q(\round_key_reg[2][112]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][113]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][113]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][113]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6338,8 +6317,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[113]),
         .Q(\round_key_reg[2][113]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][114]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][114]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][114]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6349,8 +6328,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[114]),
         .Q(\round_key_reg[2][114]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][115]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][115]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][115]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6360,8 +6339,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[115]),
         .Q(\round_key_reg[2][115]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][116]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][116]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][116]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6371,8 +6350,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[116]),
         .Q(\round_key_reg[2][116]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][117]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][117]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][117]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6382,8 +6361,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[117]),
         .Q(\round_key_reg[2][117]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][118]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][118]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][118]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6393,8 +6372,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[118]),
         .Q(\round_key_reg[2][118]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][119]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][119]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][119]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6404,8 +6383,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[119]),
         .Q(\round_key_reg[2][119]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][11]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][11]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][11]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6415,8 +6394,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[11]),
         .Q(\round_key_reg[2][11]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][12]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][12]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][12]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6426,8 +6405,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[12]),
         .Q(\round_key_reg[2][12]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][13]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][13]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][13]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6437,8 +6416,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[13]),
         .Q(\round_key_reg[2][13]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][14]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][14]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][14]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6448,8 +6427,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[14]),
         .Q(\round_key_reg[2][14]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][15]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][15]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][15]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6459,8 +6438,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[15]),
         .Q(\round_key_reg[2][15]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][16]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][16]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][16]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6470,8 +6449,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[16]),
         .Q(\round_key_reg[2][16]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][17]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][17]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][17]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6481,8 +6460,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[17]),
         .Q(\round_key_reg[2][17]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][18]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][18]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][18]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6492,8 +6471,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[18]),
         .Q(\round_key_reg[2][18]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][19]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][19]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][19]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6503,8 +6482,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[19]),
         .Q(\round_key_reg[2][19]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][1]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][1]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][1]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6514,8 +6493,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[1]),
         .Q(\round_key_reg[2][1]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][20]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][20]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][20]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6525,8 +6504,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[20]),
         .Q(\round_key_reg[2][20]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][21]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][21]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][21]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6536,8 +6515,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[21]),
         .Q(\round_key_reg[2][21]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][22]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][22]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][22]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6547,8 +6526,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[22]),
         .Q(\round_key_reg[2][22]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][23]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][23]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][23]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6558,8 +6537,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[23]),
         .Q(\round_key_reg[2][23]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][24]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][24]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][24]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6569,8 +6548,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[24]),
         .Q(\round_key_reg[2][24]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][25]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][25]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][25]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6580,8 +6559,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[25]),
         .Q(\round_key_reg[2][25]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][26]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][26]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][26]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6591,8 +6570,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[26]),
         .Q(\round_key_reg[2][26]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][27]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][27]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][27]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6602,8 +6581,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[27]),
         .Q(\round_key_reg[2][27]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][28]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][28]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][28]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6613,8 +6592,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[28]),
         .Q(\round_key_reg[2][28]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][29]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][29]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][29]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6624,8 +6603,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[29]),
         .Q(\round_key_reg[2][29]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][2]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][2]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][2]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6635,8 +6614,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[2]),
         .Q(\round_key_reg[2][2]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][30]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][30]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][30]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6646,8 +6625,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[30]),
         .Q(\round_key_reg[2][30]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][31]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][31]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][31]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6657,8 +6636,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[31]),
         .Q(\round_key_reg[2][31]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][32]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][32]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][32]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6668,8 +6647,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[32]),
         .Q(\round_key_reg[2][32]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][33]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][33]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][33]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6679,8 +6658,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[33]),
         .Q(\round_key_reg[2][33]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][34]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][34]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][34]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6690,8 +6669,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[34]),
         .Q(\round_key_reg[2][34]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][35]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][35]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][35]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6701,8 +6680,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[35]),
         .Q(\round_key_reg[2][35]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][36]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][36]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][36]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6712,8 +6691,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[36]),
         .Q(\round_key_reg[2][36]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][37]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][37]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][37]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6723,8 +6702,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[37]),
         .Q(\round_key_reg[2][37]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][38]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][38]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][38]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6734,8 +6713,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[38]),
         .Q(\round_key_reg[2][38]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][39]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][39]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][39]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6745,8 +6724,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[39]),
         .Q(\round_key_reg[2][39]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][3]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][3]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][3]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6756,8 +6735,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[3]),
         .Q(\round_key_reg[2][3]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][40]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][40]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][40]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6767,8 +6746,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[40]),
         .Q(\round_key_reg[2][40]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][41]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][41]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][41]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6778,8 +6757,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[41]),
         .Q(\round_key_reg[2][41]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][42]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][42]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][42]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6789,8 +6768,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[42]),
         .Q(\round_key_reg[2][42]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][43]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][43]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][43]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6800,8 +6779,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[43]),
         .Q(\round_key_reg[2][43]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][44]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][44]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][44]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6811,8 +6790,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[44]),
         .Q(\round_key_reg[2][44]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][45]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][45]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][45]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6822,8 +6801,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[45]),
         .Q(\round_key_reg[2][45]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][46]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][46]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][46]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6833,8 +6812,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[46]),
         .Q(\round_key_reg[2][46]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][47]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][47]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][47]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6844,8 +6823,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[47]),
         .Q(\round_key_reg[2][47]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][48]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][48]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][48]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6855,8 +6834,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[48]),
         .Q(\round_key_reg[2][48]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][49]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][49]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][49]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6866,8 +6845,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[49]),
         .Q(\round_key_reg[2][49]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][4]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][4]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][4]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6877,8 +6856,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[4]),
         .Q(\round_key_reg[2][4]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][50]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][50]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][50]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6888,8 +6867,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[50]),
         .Q(\round_key_reg[2][50]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][51]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][51]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][51]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6899,8 +6878,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[51]),
         .Q(\round_key_reg[2][51]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][52]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][52]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][52]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6910,8 +6889,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[52]),
         .Q(\round_key_reg[2][52]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][53]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][53]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][53]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6921,8 +6900,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[53]),
         .Q(\round_key_reg[2][53]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][54]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][54]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][54]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6932,8 +6911,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[54]),
         .Q(\round_key_reg[2][54]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][55]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][55]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][55]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6943,8 +6922,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[55]),
         .Q(\round_key_reg[2][55]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][56]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][56]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][56]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6954,8 +6933,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[56]),
         .Q(\round_key_reg[2][56]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][57]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][57]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][57]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6965,8 +6944,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[57]),
         .Q(\round_key_reg[2][57]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][58]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][58]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][58]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6976,8 +6955,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[58]),
         .Q(\round_key_reg[2][58]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][59]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][59]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][59]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6987,8 +6966,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[59]),
         .Q(\round_key_reg[2][59]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][5]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][5]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][5]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -6998,8 +6977,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[5]),
         .Q(\round_key_reg[2][5]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][60]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][60]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][60]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7009,8 +6988,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[60]),
         .Q(\round_key_reg[2][60]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][61]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][61]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][61]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7020,8 +6999,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[61]),
         .Q(\round_key_reg[2][61]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][62]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][62]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][62]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7031,8 +7010,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[62]),
         .Q(\round_key_reg[2][62]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][63]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][63]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][63]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7042,8 +7021,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[63]),
         .Q(\round_key_reg[2][63]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][64]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][64]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][64]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7053,8 +7032,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[64]),
         .Q(\round_key_reg[2][64]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][65]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][65]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][65]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7064,8 +7043,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[65]),
         .Q(\round_key_reg[2][65]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][66]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][66]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][66]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7075,8 +7054,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[66]),
         .Q(\round_key_reg[2][66]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][67]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][67]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][67]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7086,8 +7065,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[67]),
         .Q(\round_key_reg[2][67]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][68]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][68]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][68]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7097,8 +7076,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[68]),
         .Q(\round_key_reg[2][68]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][69]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][69]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][69]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7108,8 +7087,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[69]),
         .Q(\round_key_reg[2][69]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][6]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][6]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][6]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7119,8 +7098,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[6]),
         .Q(\round_key_reg[2][6]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][70]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][70]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][70]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7130,8 +7109,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[70]),
         .Q(\round_key_reg[2][70]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][71]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][71]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][71]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7141,8 +7120,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[71]),
         .Q(\round_key_reg[2][71]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][72]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][72]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][72]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7152,8 +7131,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[72]),
         .Q(\round_key_reg[2][72]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][73]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][73]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][73]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7163,8 +7142,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[73]),
         .Q(\round_key_reg[2][73]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][74]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][74]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][74]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7174,8 +7153,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[74]),
         .Q(\round_key_reg[2][74]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][75]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][75]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][75]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7185,8 +7164,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[75]),
         .Q(\round_key_reg[2][75]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][76]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][76]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][76]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7196,8 +7175,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[76]),
         .Q(\round_key_reg[2][76]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][77]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][77]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][77]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7207,8 +7186,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[77]),
         .Q(\round_key_reg[2][77]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][78]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][78]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][78]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7218,8 +7197,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[78]),
         .Q(\round_key_reg[2][78]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][79]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][79]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][79]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7229,8 +7208,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[79]),
         .Q(\round_key_reg[2][79]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][7]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][7]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][7]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7240,8 +7219,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[7]),
         .Q(\round_key_reg[2][7]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][80]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][80]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][80]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7251,8 +7230,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[80]),
         .Q(\round_key_reg[2][80]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][81]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][81]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][81]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7262,8 +7241,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[81]),
         .Q(\round_key_reg[2][81]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][82]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][82]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][82]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7273,8 +7252,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[82]),
         .Q(\round_key_reg[2][82]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][83]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][83]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][83]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7284,8 +7263,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[83]),
         .Q(\round_key_reg[2][83]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][84]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][84]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][84]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7295,8 +7274,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[84]),
         .Q(\round_key_reg[2][84]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][85]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][85]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][85]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7306,8 +7285,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[85]),
         .Q(\round_key_reg[2][85]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][86]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][86]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][86]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7317,8 +7296,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[86]),
         .Q(\round_key_reg[2][86]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][87]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][87]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][87]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7328,8 +7307,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[87]),
         .Q(\round_key_reg[2][87]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][88]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][88]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][88]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7339,8 +7318,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[88]),
         .Q(\round_key_reg[2][88]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][89]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][89]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][89]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7350,8 +7329,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[89]),
         .Q(\round_key_reg[2][89]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][8]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][8]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][8]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7361,8 +7340,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[8]),
         .Q(\round_key_reg[2][8]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][90]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][90]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][90]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7372,8 +7351,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[90]),
         .Q(\round_key_reg[2][90]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][91]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][91]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][91]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7383,8 +7362,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[91]),
         .Q(\round_key_reg[2][91]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][92]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][92]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][92]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7394,8 +7373,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[92]),
         .Q(\round_key_reg[2][92]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][93]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][93]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][93]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7405,8 +7384,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[93]),
         .Q(\round_key_reg[2][93]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][94]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][94]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][94]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7416,8 +7395,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[94]),
         .Q(\round_key_reg[2][94]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][95]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][95]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][95]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7427,8 +7406,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[95]),
         .Q(\round_key_reg[2][95]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][96]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][96]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][96]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7438,8 +7417,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[96]),
         .Q(\round_key_reg[2][96]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][97]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][97]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][97]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7449,8 +7428,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[97]),
         .Q(\round_key_reg[2][97]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][98]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][98]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][98]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7460,8 +7439,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[98]),
         .Q(\round_key_reg[2][98]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][99]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][99]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][99]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7471,8 +7450,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[99]),
         .Q(\round_key_reg[2][99]_srl3_ks_inst_round_key_reg_c_1_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[2] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[2][9]_srl3_ks_inst_round_key_reg_c_1 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[2] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[2][9]_srl3_ks_inst_round_key_reg_c_1 " *) 
   SRL16E \round_key_reg[2][9]_srl3_ks_inst_round_key_reg_c_1 
        (.A0(1'b0),
         .A1(1'b1),
@@ -7620,8 +7599,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .D(\round_key_reg[2][11]_srl3_ks_inst_round_key_reg_c_1_n_0 ),
         .Q(\round_key_reg[3][11]_ks_inst_round_key_reg_c_2_n_0 ),
         .R(1'b0));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[3] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[3][120]_srl4_ks_inst_round_key_reg_c_2 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[3] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[3][120]_srl4_ks_inst_round_key_reg_c_2 " *) 
   SRL16E \round_key_reg[3][120]_srl4_ks_inst_round_key_reg_c_2 
        (.A0(1'b1),
         .A1(1'b1),
@@ -7631,8 +7610,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[120]),
         .Q(\round_key_reg[3][120]_srl4_ks_inst_round_key_reg_c_2_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[3] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[3][121]_srl4_ks_inst_round_key_reg_c_2 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[3] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[3][121]_srl4_ks_inst_round_key_reg_c_2 " *) 
   SRL16E \round_key_reg[3][121]_srl4_ks_inst_round_key_reg_c_2 
        (.A0(1'b1),
         .A1(1'b1),
@@ -7642,8 +7621,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[121]),
         .Q(\round_key_reg[3][121]_srl4_ks_inst_round_key_reg_c_2_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[3] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[3][122]_srl4_ks_inst_round_key_reg_c_2 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[3] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[3][122]_srl4_ks_inst_round_key_reg_c_2 " *) 
   SRL16E \round_key_reg[3][122]_srl4_ks_inst_round_key_reg_c_2 
        (.A0(1'b1),
         .A1(1'b1),
@@ -7653,8 +7632,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[122]),
         .Q(\round_key_reg[3][122]_srl4_ks_inst_round_key_reg_c_2_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[3] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[3][123]_srl4_ks_inst_round_key_reg_c_2 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[3] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[3][123]_srl4_ks_inst_round_key_reg_c_2 " *) 
   SRL16E \round_key_reg[3][123]_srl4_ks_inst_round_key_reg_c_2 
        (.A0(1'b1),
         .A1(1'b1),
@@ -7664,8 +7643,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[123]),
         .Q(\round_key_reg[3][123]_srl4_ks_inst_round_key_reg_c_2_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[3] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[3][124]_srl4_ks_inst_round_key_reg_c_2 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[3] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[3][124]_srl4_ks_inst_round_key_reg_c_2 " *) 
   SRL16E \round_key_reg[3][124]_srl4_ks_inst_round_key_reg_c_2 
        (.A0(1'b1),
         .A1(1'b1),
@@ -7675,8 +7654,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[124]),
         .Q(\round_key_reg[3][124]_srl4_ks_inst_round_key_reg_c_2_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[3] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[3][125]_srl4_ks_inst_round_key_reg_c_2 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[3] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[3][125]_srl4_ks_inst_round_key_reg_c_2 " *) 
   SRL16E \round_key_reg[3][125]_srl4_ks_inst_round_key_reg_c_2 
        (.A0(1'b1),
         .A1(1'b1),
@@ -7686,8 +7665,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[125]),
         .Q(\round_key_reg[3][125]_srl4_ks_inst_round_key_reg_c_2_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[3] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[3][126]_srl4_ks_inst_round_key_reg_c_2 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[3] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[3][126]_srl4_ks_inst_round_key_reg_c_2 " *) 
   SRL16E \round_key_reg[3][126]_srl4_ks_inst_round_key_reg_c_2 
        (.A0(1'b1),
         .A1(1'b1),
@@ -7697,8 +7676,8 @@ module design_ascon_ascon_core_0_2_ascon_key_schedule
         .CLK(clk),
         .D(key[126]),
         .Q(\round_key_reg[3][126]_srl4_ks_inst_round_key_reg_c_2_n_0 ));
-  (* srl_bus_name = "inst/\ks_inst/round_key_reg[3] " *) 
-  (* srl_name = "inst/\ks_inst/round_key_reg[3][127]_srl4_ks_inst_round_key_reg_c_2 " *) 
+  (* srl_bus_name = "inst/\\ks_inst/round_key_reg[3] " *) 
+  (* srl_name = "inst/\\ks_inst/round_key_reg[3][127]_srl4_ks_inst_round_key_reg_c_2 " *) 
   SRL16E \round_key_reg[3][127]_srl4_ks_inst_round_key_reg_c_2 
        (.A0(1'b1),
         .A1(1'b1),
@@ -18224,8 +18203,9 @@ endmodule
 module design_ascon_ascon_core_0_2_ascon_round_5
    (add_const_state,
     \state_out_reg[63]_0 ,
-    \state_out_reg[33]_0 ,
+    D,
     \state_out_reg[125]_0 ,
+    \state_out_reg[33]_0 ,
     \state_out_reg[26]_0 ,
     \state_out_reg[24]_0 ,
     \state_out_reg[21]_0 ,
@@ -18240,7 +18220,6 @@ module design_ascon_ascon_core_0_2_ascon_round_5
     \state_out_reg[47]_0 ,
     \state_out_reg[45]_0 ,
     \state_out_reg[41]_0 ,
-    D,
     Q,
     \state_out_reg[36]_0 ,
     \state_out_reg[40]_0 ,
@@ -18258,16 +18237,17 @@ module design_ascon_ascon_core_0_2_ascon_round_5
     \state_out_reg[56]_1 ,
     \state_out_reg[60]_2 ,
     S,
+    CO,
     add_const_state_0,
     \state_out_reg[127]_0 ,
-    CO,
     enable,
     clk,
     rst);
   output [62:0]add_const_state;
   output [0:0]\state_out_reg[63]_0 ;
+  output [70:0]D;
+  output [118:0]\state_out_reg[125]_0 ;
   output [3:0]\state_out_reg[33]_0 ;
-  output [120:0]\state_out_reg[125]_0 ;
   output [0:0]\state_out_reg[26]_0 ;
   output [1:0]\state_out_reg[24]_0 ;
   output [1:0]\state_out_reg[21]_0 ;
@@ -18282,7 +18262,6 @@ module design_ascon_ascon_core_0_2_ascon_round_5
   output [1:0]\state_out_reg[47]_0 ;
   output [1:0]\state_out_reg[45]_0 ;
   output [3:0]\state_out_reg[41]_0 ;
-  output [69:0]D;
   input [119:0]Q;
   input [0:0]\state_out_reg[36]_0 ;
   input [2:0]\state_out_reg[40]_0 ;
@@ -18300,25 +18279,25 @@ module design_ascon_ascon_core_0_2_ascon_round_5
   input [1:0]\state_out_reg[56]_1 ;
   input [2:0]\state_out_reg[60]_2 ;
   input [1:0]S;
+  input [0:0]CO;
   input [61:0]add_const_state_0;
   input [70:0]\state_out_reg[127]_0 ;
-  input [0:0]CO;
   input enable;
   input clk;
   input rst;
 
   wire [0:0]CO;
-  wire [69:0]D;
+  wire [70:0]D;
   wire [119:0]Q;
   wire [1:0]S;
   wire [62:0]add_const_state;
   wire [61:0]add_const_state_0;
   wire clk;
   wire enable;
-  wire [127:65]\round_state[5] ;
+  wire [127:0]\round_state[5] ;
   wire rst;
   wire [60:1]sbox_state;
-  wire [120:0]\state_out_reg[125]_0 ;
+  wire [118:0]\state_out_reg[125]_0 ;
   wire [70:0]\state_out_reg[127]_0 ;
   wire [0:0]\state_out_reg[13]_0 ;
   wire [1:0]\state_out_reg[15]_0 ;
@@ -18356,7 +18335,7 @@ module design_ascon_ascon_core_0_2_ascon_round_5
        (.Q(Q[63:0]),
         .S(S),
         .add_const_state(add_const_state),
-        .state_out0_carry__13_0({\state_out_reg[125]_0 [60],\state_out_reg[125]_0 [58:54],\state_out_reg[125]_0 [52],\state_out_reg[125]_0 [50],\state_out_reg[125]_0 [47:44],\state_out_reg[125]_0 [41:38],\state_out_reg[125]_0 [33:30],\state_out_reg[125]_0 [26],\state_out_reg[125]_0 [24:23],\state_out_reg[125]_0 [21:20],\state_out_reg[125]_0 [15:13],\state_out_reg[125]_0 [9:6],\state_out_reg[125]_0 [2]}),
+        .state_out0_carry__13_0({\state_out_reg[125]_0 [59],\state_out_reg[125]_0 [57:53],\state_out_reg[125]_0 [51],\state_out_reg[125]_0 [49],\state_out_reg[125]_0 [46:43],\state_out_reg[125]_0 [40:37],\state_out_reg[125]_0 [32:29],\state_out_reg[125]_0 [25],\state_out_reg[125]_0 [23:22],\state_out_reg[125]_0 [20:19],\state_out_reg[125]_0 [14:12],\state_out_reg[125]_0 [8:5],\state_out_reg[125]_0 [1]}),
         .\state_out_reg[13] (\state_out_reg[13]_0 ),
         .\state_out_reg[15] (\state_out_reg[15]_0 ),
         .\state_out_reg[21] (\state_out_reg[21]_0 ),
@@ -18393,194 +18372,202 @@ module design_ascon_ascon_core_0_2_ascon_round_5
         .Q(Q[119:64]),
         .add_const_state({add_const_state[59:32],add_const_state[27:0]}),
         .add_const_state_0(add_const_state_0),
-        .\state_out_reg[127] (D[69:1]),
-        .\state_out_reg[31] ({\round_state[5] [127:126],\state_out_reg[125]_0 [120:93],\round_state[5] [97],\state_out_reg[125]_0 [92],\round_state[5] [95:94],\state_out_reg[125]_0 [91:64],\round_state[5] [65],\state_out_reg[125]_0 [1:0]}));
+        .\state_out_reg[127] (D[70:2]),
+        .\state_out_reg[31] ({\round_state[5] [127:126],\state_out_reg[125]_0 [118:91],\round_state[5] [97:94],\state_out_reg[125]_0 [90:63],\round_state[5] [65],\state_out_reg[125]_0 [0],\round_state[5] [0]}));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__14_i_1__1
-       (.I0(\state_out_reg[125]_0 [63]),
+       (.I0(\state_out_reg[125]_0 [62]),
         .O(\state_out_reg[63]_1 ));
+  LUT4 #(
+    .INIT(16'h6996)) 
+    \state_out[0]_i_1__4 
+       (.I0(CO),
+        .I1(add_const_state_0[30]),
+        .I2(\round_state[5] [96]),
+        .I3(\round_state[5] [0]),
+        .O(D[0]));
   LUT3 #(
     .INIT(8'h65)) 
     \state_out[1]_i_1 
-       (.I0(\state_out_reg[125]_0 [1]),
+       (.I0(\state_out_reg[125]_0 [0]),
         .I1(\round_state[5] [97]),
         .I2(add_const_state_0[31]),
-        .O(D[0]));
+        .O(D[1]));
   FDCE \state_out_reg[0] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [0]),
-        .Q(\state_out_reg[125]_0 [0]));
+        .Q(\round_state[5] [0]));
   FDCE \state_out_reg[100] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [43]),
-        .Q(\state_out_reg[125]_0 [95]));
+        .Q(\state_out_reg[125]_0 [93]));
   FDCE \state_out_reg[101] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [44]),
-        .Q(\state_out_reg[125]_0 [96]));
+        .Q(\state_out_reg[125]_0 [94]));
   FDCE \state_out_reg[102] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [45]),
-        .Q(\state_out_reg[125]_0 [97]));
+        .Q(\state_out_reg[125]_0 [95]));
   FDCE \state_out_reg[103] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [46]),
-        .Q(\state_out_reg[125]_0 [98]));
+        .Q(\state_out_reg[125]_0 [96]));
   FDCE \state_out_reg[104] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [47]),
-        .Q(\state_out_reg[125]_0 [99]));
+        .Q(\state_out_reg[125]_0 [97]));
   FDCE \state_out_reg[105] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [48]),
-        .Q(\state_out_reg[125]_0 [100]));
+        .Q(\state_out_reg[125]_0 [98]));
   FDCE \state_out_reg[106] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [49]),
-        .Q(\state_out_reg[125]_0 [101]));
+        .Q(\state_out_reg[125]_0 [99]));
   FDCE \state_out_reg[107] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [50]),
-        .Q(\state_out_reg[125]_0 [102]));
+        .Q(\state_out_reg[125]_0 [100]));
   FDCE \state_out_reg[108] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [51]),
-        .Q(\state_out_reg[125]_0 [103]));
+        .Q(\state_out_reg[125]_0 [101]));
   FDCE \state_out_reg[109] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [52]),
-        .Q(\state_out_reg[125]_0 [104]));
+        .Q(\state_out_reg[125]_0 [102]));
   FDCE \state_out_reg[10] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[10]),
-        .Q(\state_out_reg[125]_0 [10]));
+        .Q(\state_out_reg[125]_0 [9]));
   FDCE \state_out_reg[110] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [53]),
-        .Q(\state_out_reg[125]_0 [105]));
+        .Q(\state_out_reg[125]_0 [103]));
   FDCE \state_out_reg[111] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [54]),
-        .Q(\state_out_reg[125]_0 [106]));
+        .Q(\state_out_reg[125]_0 [104]));
   FDCE \state_out_reg[112] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [55]),
-        .Q(\state_out_reg[125]_0 [107]));
+        .Q(\state_out_reg[125]_0 [105]));
   FDCE \state_out_reg[113] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [56]),
-        .Q(\state_out_reg[125]_0 [108]));
+        .Q(\state_out_reg[125]_0 [106]));
   FDCE \state_out_reg[114] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [57]),
-        .Q(\state_out_reg[125]_0 [109]));
+        .Q(\state_out_reg[125]_0 [107]));
   FDCE \state_out_reg[115] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [58]),
-        .Q(\state_out_reg[125]_0 [110]));
+        .Q(\state_out_reg[125]_0 [108]));
   FDCE \state_out_reg[116] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [59]),
-        .Q(\state_out_reg[125]_0 [111]));
+        .Q(\state_out_reg[125]_0 [109]));
   FDCE \state_out_reg[117] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [60]),
-        .Q(\state_out_reg[125]_0 [112]));
+        .Q(\state_out_reg[125]_0 [110]));
   FDCE \state_out_reg[118] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [61]),
-        .Q(\state_out_reg[125]_0 [113]));
+        .Q(\state_out_reg[125]_0 [111]));
   FDCE \state_out_reg[119] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [62]),
-        .Q(\state_out_reg[125]_0 [114]));
+        .Q(\state_out_reg[125]_0 [112]));
   FDCE \state_out_reg[11] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[11]),
-        .Q(\state_out_reg[125]_0 [11]));
+        .Q(\state_out_reg[125]_0 [10]));
   FDCE \state_out_reg[120] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [63]),
-        .Q(\state_out_reg[125]_0 [115]));
+        .Q(\state_out_reg[125]_0 [113]));
   FDCE \state_out_reg[121] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [64]),
-        .Q(\state_out_reg[125]_0 [116]));
+        .Q(\state_out_reg[125]_0 [114]));
   FDCE \state_out_reg[122] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [65]),
-        .Q(\state_out_reg[125]_0 [117]));
+        .Q(\state_out_reg[125]_0 [115]));
   FDCE \state_out_reg[123] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [66]),
-        .Q(\state_out_reg[125]_0 [118]));
+        .Q(\state_out_reg[125]_0 [116]));
   FDCE \state_out_reg[124] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [67]),
-        .Q(\state_out_reg[125]_0 [119]));
+        .Q(\state_out_reg[125]_0 [117]));
   FDCE \state_out_reg[125] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [68]),
-        .Q(\state_out_reg[125]_0 [120]));
+        .Q(\state_out_reg[125]_0 [118]));
   FDCE \state_out_reg[126] 
        (.C(clk),
         .CE(enable),
@@ -18598,343 +18585,343 @@ module design_ascon_ascon_core_0_2_ascon_round_5
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[12]),
-        .Q(\state_out_reg[125]_0 [12]));
+        .Q(\state_out_reg[125]_0 [11]));
   FDCE \state_out_reg[13] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[13]),
-        .Q(\state_out_reg[125]_0 [13]));
+        .Q(\state_out_reg[125]_0 [12]));
   FDCE \state_out_reg[14] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[14]),
-        .Q(\state_out_reg[125]_0 [14]));
+        .Q(\state_out_reg[125]_0 [13]));
   FDCE \state_out_reg[15] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[15]),
-        .Q(\state_out_reg[125]_0 [15]));
+        .Q(\state_out_reg[125]_0 [14]));
   FDCE \state_out_reg[16] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[16]),
-        .Q(\state_out_reg[125]_0 [16]));
+        .Q(\state_out_reg[125]_0 [15]));
   FDCE \state_out_reg[17] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[17]),
-        .Q(\state_out_reg[125]_0 [17]));
+        .Q(\state_out_reg[125]_0 [16]));
   FDCE \state_out_reg[18] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[18]),
-        .Q(\state_out_reg[125]_0 [18]));
+        .Q(\state_out_reg[125]_0 [17]));
   FDCE \state_out_reg[19] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[19]),
-        .Q(\state_out_reg[125]_0 [19]));
+        .Q(\state_out_reg[125]_0 [18]));
   FDCE \state_out_reg[1] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[1]),
-        .Q(\state_out_reg[125]_0 [1]));
+        .Q(\state_out_reg[125]_0 [0]));
   FDCE \state_out_reg[20] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[20]),
-        .Q(\state_out_reg[125]_0 [20]));
+        .Q(\state_out_reg[125]_0 [19]));
   FDCE \state_out_reg[21] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[21]),
-        .Q(\state_out_reg[125]_0 [21]));
+        .Q(\state_out_reg[125]_0 [20]));
   FDCE \state_out_reg[22] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[22]),
-        .Q(\state_out_reg[125]_0 [22]));
+        .Q(\state_out_reg[125]_0 [21]));
   FDCE \state_out_reg[23] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[23]),
-        .Q(\state_out_reg[125]_0 [23]));
+        .Q(\state_out_reg[125]_0 [22]));
   FDCE \state_out_reg[24] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[24]),
-        .Q(\state_out_reg[125]_0 [24]));
+        .Q(\state_out_reg[125]_0 [23]));
   FDCE \state_out_reg[25] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[25]),
-        .Q(\state_out_reg[125]_0 [25]));
+        .Q(\state_out_reg[125]_0 [24]));
   FDCE \state_out_reg[26] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[26]),
-        .Q(\state_out_reg[125]_0 [26]));
+        .Q(\state_out_reg[125]_0 [25]));
   FDCE \state_out_reg[27] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[27]),
-        .Q(\state_out_reg[125]_0 [27]));
+        .Q(\state_out_reg[125]_0 [26]));
   FDCE \state_out_reg[28] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[28]),
-        .Q(\state_out_reg[125]_0 [28]));
+        .Q(\state_out_reg[125]_0 [27]));
   FDCE \state_out_reg[29] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [1]),
-        .Q(\state_out_reg[125]_0 [29]));
+        .Q(\state_out_reg[125]_0 [28]));
   FDCE \state_out_reg[2] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[2]),
-        .Q(\state_out_reg[125]_0 [2]));
+        .Q(\state_out_reg[125]_0 [1]));
   FDCE \state_out_reg[30] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [2]),
-        .Q(\state_out_reg[125]_0 [30]));
+        .Q(\state_out_reg[125]_0 [29]));
   FDCE \state_out_reg[31] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [3]),
-        .Q(\state_out_reg[125]_0 [31]));
+        .Q(\state_out_reg[125]_0 [30]));
   FDCE \state_out_reg[32] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [4]),
-        .Q(\state_out_reg[125]_0 [32]));
+        .Q(\state_out_reg[125]_0 [31]));
   FDCE \state_out_reg[33] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[33]),
-        .Q(\state_out_reg[125]_0 [33]));
+        .Q(\state_out_reg[125]_0 [32]));
   FDCE \state_out_reg[34] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[34]),
-        .Q(\state_out_reg[125]_0 [34]));
+        .Q(\state_out_reg[125]_0 [33]));
   FDCE \state_out_reg[35] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[35]),
-        .Q(\state_out_reg[125]_0 [35]));
+        .Q(\state_out_reg[125]_0 [34]));
   FDCE \state_out_reg[36] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[36]),
-        .Q(\state_out_reg[125]_0 [36]));
+        .Q(\state_out_reg[125]_0 [35]));
   FDCE \state_out_reg[37] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[37]),
-        .Q(\state_out_reg[125]_0 [37]));
+        .Q(\state_out_reg[125]_0 [36]));
   FDCE \state_out_reg[38] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[38]),
-        .Q(\state_out_reg[125]_0 [38]));
+        .Q(\state_out_reg[125]_0 [37]));
   FDCE \state_out_reg[39] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[39]),
-        .Q(\state_out_reg[125]_0 [39]));
+        .Q(\state_out_reg[125]_0 [38]));
   FDCE \state_out_reg[3] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[3]),
-        .Q(\state_out_reg[125]_0 [3]));
+        .Q(\state_out_reg[125]_0 [2]));
   FDCE \state_out_reg[40] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[40]),
-        .Q(\state_out_reg[125]_0 [40]));
+        .Q(\state_out_reg[125]_0 [39]));
   FDCE \state_out_reg[41] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[41]),
-        .Q(\state_out_reg[125]_0 [41]));
+        .Q(\state_out_reg[125]_0 [40]));
   FDCE \state_out_reg[42] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[42]),
-        .Q(\state_out_reg[125]_0 [42]));
+        .Q(\state_out_reg[125]_0 [41]));
   FDCE \state_out_reg[43] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[43]),
-        .Q(\state_out_reg[125]_0 [43]));
+        .Q(\state_out_reg[125]_0 [42]));
   FDCE \state_out_reg[44] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[44]),
-        .Q(\state_out_reg[125]_0 [44]));
+        .Q(\state_out_reg[125]_0 [43]));
   FDCE \state_out_reg[45] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[45]),
-        .Q(\state_out_reg[125]_0 [45]));
+        .Q(\state_out_reg[125]_0 [44]));
   FDCE \state_out_reg[46] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[46]),
-        .Q(\state_out_reg[125]_0 [46]));
+        .Q(\state_out_reg[125]_0 [45]));
   FDCE \state_out_reg[47] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[47]),
-        .Q(\state_out_reg[125]_0 [47]));
+        .Q(\state_out_reg[125]_0 [46]));
   FDCE \state_out_reg[48] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[48]),
-        .Q(\state_out_reg[125]_0 [48]));
+        .Q(\state_out_reg[125]_0 [47]));
   FDCE \state_out_reg[49] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[49]),
-        .Q(\state_out_reg[125]_0 [49]));
+        .Q(\state_out_reg[125]_0 [48]));
   FDCE \state_out_reg[4] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[4]),
-        .Q(\state_out_reg[125]_0 [4]));
+        .Q(\state_out_reg[125]_0 [3]));
   FDCE \state_out_reg[50] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[50]),
-        .Q(\state_out_reg[125]_0 [50]));
+        .Q(\state_out_reg[125]_0 [49]));
   FDCE \state_out_reg[51] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[51]),
-        .Q(\state_out_reg[125]_0 [51]));
+        .Q(\state_out_reg[125]_0 [50]));
   FDCE \state_out_reg[52] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[52]),
-        .Q(\state_out_reg[125]_0 [52]));
+        .Q(\state_out_reg[125]_0 [51]));
   FDCE \state_out_reg[53] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[53]),
-        .Q(\state_out_reg[125]_0 [53]));
+        .Q(\state_out_reg[125]_0 [52]));
   FDCE \state_out_reg[54] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[54]),
-        .Q(\state_out_reg[125]_0 [54]));
+        .Q(\state_out_reg[125]_0 [53]));
   FDCE \state_out_reg[55] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[55]),
-        .Q(\state_out_reg[125]_0 [55]));
+        .Q(\state_out_reg[125]_0 [54]));
   FDCE \state_out_reg[56] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[56]),
-        .Q(\state_out_reg[125]_0 [56]));
+        .Q(\state_out_reg[125]_0 [55]));
   FDCE \state_out_reg[57] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[57]),
-        .Q(\state_out_reg[125]_0 [57]));
+        .Q(\state_out_reg[125]_0 [56]));
   FDCE \state_out_reg[58] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[58]),
-        .Q(\state_out_reg[125]_0 [58]));
+        .Q(\state_out_reg[125]_0 [57]));
   FDCE \state_out_reg[59] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[59]),
-        .Q(\state_out_reg[125]_0 [59]));
+        .Q(\state_out_reg[125]_0 [58]));
   FDCE \state_out_reg[5] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[5]),
-        .Q(\state_out_reg[125]_0 [5]));
+        .Q(\state_out_reg[125]_0 [4]));
   FDCE \state_out_reg[60] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[60]),
-        .Q(\state_out_reg[125]_0 [60]));
+        .Q(\state_out_reg[125]_0 [59]));
   FDCE \state_out_reg[61] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [5]),
-        .Q(\state_out_reg[125]_0 [61]));
+        .Q(\state_out_reg[125]_0 [60]));
   FDCE \state_out_reg[62] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [6]),
-        .Q(\state_out_reg[125]_0 [62]));
+        .Q(\state_out_reg[125]_0 [61]));
   FDCE \state_out_reg[63] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [7]),
-        .Q(\state_out_reg[125]_0 [63]));
+        .Q(\state_out_reg[125]_0 [62]));
   FDCE \state_out_reg[65] 
        (.C(clk),
         .CE(enable),
@@ -18946,187 +18933,187 @@ module design_ascon_ascon_core_0_2_ascon_round_5
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [9]),
-        .Q(\state_out_reg[125]_0 [64]));
+        .Q(\state_out_reg[125]_0 [63]));
   FDCE \state_out_reg[67] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [10]),
-        .Q(\state_out_reg[125]_0 [65]));
+        .Q(\state_out_reg[125]_0 [64]));
   FDCE \state_out_reg[68] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [11]),
-        .Q(\state_out_reg[125]_0 [66]));
+        .Q(\state_out_reg[125]_0 [65]));
   FDCE \state_out_reg[69] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [12]),
-        .Q(\state_out_reg[125]_0 [67]));
+        .Q(\state_out_reg[125]_0 [66]));
   FDCE \state_out_reg[6] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[6]),
-        .Q(\state_out_reg[125]_0 [6]));
+        .Q(\state_out_reg[125]_0 [5]));
   FDCE \state_out_reg[70] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [13]),
-        .Q(\state_out_reg[125]_0 [68]));
+        .Q(\state_out_reg[125]_0 [67]));
   FDCE \state_out_reg[71] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [14]),
-        .Q(\state_out_reg[125]_0 [69]));
+        .Q(\state_out_reg[125]_0 [68]));
   FDCE \state_out_reg[72] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [15]),
-        .Q(\state_out_reg[125]_0 [70]));
+        .Q(\state_out_reg[125]_0 [69]));
   FDCE \state_out_reg[73] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [16]),
-        .Q(\state_out_reg[125]_0 [71]));
+        .Q(\state_out_reg[125]_0 [70]));
   FDCE \state_out_reg[74] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [17]),
-        .Q(\state_out_reg[125]_0 [72]));
+        .Q(\state_out_reg[125]_0 [71]));
   FDCE \state_out_reg[75] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [18]),
-        .Q(\state_out_reg[125]_0 [73]));
+        .Q(\state_out_reg[125]_0 [72]));
   FDCE \state_out_reg[76] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [19]),
-        .Q(\state_out_reg[125]_0 [74]));
+        .Q(\state_out_reg[125]_0 [73]));
   FDCE \state_out_reg[77] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [20]),
-        .Q(\state_out_reg[125]_0 [75]));
+        .Q(\state_out_reg[125]_0 [74]));
   FDCE \state_out_reg[78] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [21]),
-        .Q(\state_out_reg[125]_0 [76]));
+        .Q(\state_out_reg[125]_0 [75]));
   FDCE \state_out_reg[79] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [22]),
-        .Q(\state_out_reg[125]_0 [77]));
+        .Q(\state_out_reg[125]_0 [76]));
   FDCE \state_out_reg[7] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[7]),
-        .Q(\state_out_reg[125]_0 [7]));
+        .Q(\state_out_reg[125]_0 [6]));
   FDCE \state_out_reg[80] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [23]),
-        .Q(\state_out_reg[125]_0 [78]));
+        .Q(\state_out_reg[125]_0 [77]));
   FDCE \state_out_reg[81] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [24]),
-        .Q(\state_out_reg[125]_0 [79]));
+        .Q(\state_out_reg[125]_0 [78]));
   FDCE \state_out_reg[82] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [25]),
-        .Q(\state_out_reg[125]_0 [80]));
+        .Q(\state_out_reg[125]_0 [79]));
   FDCE \state_out_reg[83] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [26]),
-        .Q(\state_out_reg[125]_0 [81]));
+        .Q(\state_out_reg[125]_0 [80]));
   FDCE \state_out_reg[84] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [27]),
-        .Q(\state_out_reg[125]_0 [82]));
+        .Q(\state_out_reg[125]_0 [81]));
   FDCE \state_out_reg[85] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [28]),
-        .Q(\state_out_reg[125]_0 [83]));
+        .Q(\state_out_reg[125]_0 [82]));
   FDCE \state_out_reg[86] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [29]),
-        .Q(\state_out_reg[125]_0 [84]));
+        .Q(\state_out_reg[125]_0 [83]));
   FDCE \state_out_reg[87] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [30]),
-        .Q(\state_out_reg[125]_0 [85]));
+        .Q(\state_out_reg[125]_0 [84]));
   FDCE \state_out_reg[88] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [31]),
-        .Q(\state_out_reg[125]_0 [86]));
+        .Q(\state_out_reg[125]_0 [85]));
   FDCE \state_out_reg[89] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [32]),
-        .Q(\state_out_reg[125]_0 [87]));
+        .Q(\state_out_reg[125]_0 [86]));
   FDCE \state_out_reg[8] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[8]),
-        .Q(\state_out_reg[125]_0 [8]));
+        .Q(\state_out_reg[125]_0 [7]));
   FDCE \state_out_reg[90] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [33]),
-        .Q(\state_out_reg[125]_0 [88]));
+        .Q(\state_out_reg[125]_0 [87]));
   FDCE \state_out_reg[91] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [34]),
-        .Q(\state_out_reg[125]_0 [89]));
+        .Q(\state_out_reg[125]_0 [88]));
   FDCE \state_out_reg[92] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [35]),
-        .Q(\state_out_reg[125]_0 [90]));
+        .Q(\state_out_reg[125]_0 [89]));
   FDCE \state_out_reg[93] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [36]),
-        .Q(\state_out_reg[125]_0 [91]));
+        .Q(\state_out_reg[125]_0 [90]));
   FDCE \state_out_reg[94] 
        (.C(clk),
         .CE(enable),
@@ -19144,7 +19131,7 @@ module design_ascon_ascon_core_0_2_ascon_round_5
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [39]),
-        .Q(\state_out_reg[125]_0 [92]));
+        .Q(\round_state[5] [96]));
   FDCE \state_out_reg[97] 
        (.C(clk),
         .CE(enable),
@@ -19156,27 +19143,28 @@ module design_ascon_ascon_core_0_2_ascon_round_5
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [41]),
-        .Q(\state_out_reg[125]_0 [93]));
+        .Q(\state_out_reg[125]_0 [91]));
   FDCE \state_out_reg[99] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [42]),
-        .Q(\state_out_reg[125]_0 [94]));
+        .Q(\state_out_reg[125]_0 [92]));
   FDCE \state_out_reg[9] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[9]),
-        .Q(\state_out_reg[125]_0 [9]));
+        .Q(\state_out_reg[125]_0 [8]));
 endmodule
 
 (* ORIG_REF_NAME = "ascon_round" *) 
 module design_ascon_ascon_core_0_2_ascon_round_6
    (add_const_state,
     CO,
-    S,
+    D,
     Q,
+    S,
     \state_out_reg[61]_0 ,
     \state_out_reg[57]_0 ,
     \state_out_reg[53]_0 ,
@@ -19192,7 +19180,6 @@ module design_ascon_ascon_core_0_2_ascon_round_6
     \state_out_reg[13]_0 ,
     \state_out_reg[8]_0 ,
     \state_out_reg[5]_0 ,
-    D,
     \state_out_reg[29]_1 ,
     \state_out_reg[37]_1 ,
     \state_out_reg[41]_1 ,
@@ -19208,17 +19195,18 @@ module design_ascon_ascon_core_0_2_ascon_round_6
     \state_out_reg[53]_2 ,
     \state_out_reg[57]_2 ,
     \state_out_reg[61]_2 ,
-    \state_out_reg[0]_0 ,
+    \state_out_reg[96]_0 ,
+    \state_out_reg[96]_1 ,
     add_const_state_0,
     \state_out_reg[127]_0 ,
-    \state_out_reg[96]_0 ,
     enable,
     clk,
     rst);
   output [61:0]add_const_state;
   output [0:0]CO;
-  output [1:0]S;
-  output [119:0]Q;
+  output [70:0]D;
+  output [118:0]Q;
+  output [0:0]S;
   output [3:0]\state_out_reg[61]_0 ;
   output [2:0]\state_out_reg[57]_0 ;
   output [2:0]\state_out_reg[53]_0 ;
@@ -19234,8 +19222,7 @@ module design_ascon_ascon_core_0_2_ascon_round_6
   output [1:0]\state_out_reg[13]_0 ;
   output [2:0]\state_out_reg[8]_0 ;
   output [3:0]\state_out_reg[5]_0 ;
-  output [69:0]D;
-  input [120:0]\state_out_reg[29]_1 ;
+  input [118:0]\state_out_reg[29]_1 ;
   input [0:0]\state_out_reg[37]_1 ;
   input [3:0]\state_out_reg[41]_1 ;
   input [0:0]\state_out_reg[45]_0 ;
@@ -19250,34 +19237,32 @@ module design_ascon_ascon_core_0_2_ascon_round_6
   input [1:0]\state_out_reg[53]_2 ;
   input [3:0]\state_out_reg[57]_2 ;
   input [1:0]\state_out_reg[61]_2 ;
-  input [0:0]\state_out_reg[0]_0 ;
-  input [61:0]add_const_state_0;
-  input [69:0]\state_out_reg[127]_0 ;
   input [0:0]\state_out_reg[96]_0 ;
+  input [0:0]\state_out_reg[96]_1 ;
+  input [61:0]add_const_state_0;
+  input [70:0]\state_out_reg[127]_0 ;
   input enable;
   input clk;
   input rst;
 
   wire [0:0]CO;
-  wire [69:0]D;
-  wire [119:0]Q;
-  wire [1:0]S;
+  wire [70:0]D;
+  wire [118:0]Q;
+  wire [0:0]S;
   wire [61:0]add_const_state;
   wire [61:0]add_const_state_0;
   wire clk;
   wire enable;
-  wire [0:0]linear_state;
-  wire [127:65]\round_state[6] ;
+  wire [127:0]\round_state[6] ;
   wire rst;
   wire [61:2]sbox_state;
-  wire [0:0]\state_out_reg[0]_0 ;
-  wire [69:0]\state_out_reg[127]_0 ;
+  wire [70:0]\state_out_reg[127]_0 ;
   wire [1:0]\state_out_reg[13]_0 ;
   wire [1:0]\state_out_reg[17]_0 ;
   wire [2:0]\state_out_reg[20]_0 ;
   wire [2:0]\state_out_reg[25]_0 ;
   wire [1:0]\state_out_reg[29]_0 ;
-  wire [120:0]\state_out_reg[29]_1 ;
+  wire [118:0]\state_out_reg[29]_1 ;
   wire [1:0]\state_out_reg[33]_0 ;
   wire [3:0]\state_out_reg[33]_1 ;
   wire [3:0]\state_out_reg[37]_0 ;
@@ -19303,14 +19288,12 @@ module design_ascon_ascon_core_0_2_ascon_round_6
   wire [1:0]\state_out_reg[61]_2 ;
   wire [2:0]\state_out_reg[8]_0 ;
   wire [0:0]\state_out_reg[96]_0 ;
+  wire [0:0]\state_out_reg[96]_1 ;
 
   design_ascon_ascon_core_0_2_ascon_add_constant_14 constant_inst
        (.CO(CO),
-        .D(linear_state),
-        .Q({Q[61:57],Q[55:51],Q[49],Q[46],Q[43:40],Q[38:33],Q[30:29],Q[26:23],Q[20:16],Q[13],Q[10],Q[8:2]}),
+        .Q({Q[60:56],Q[54:50],Q[48],Q[45],Q[42:39],Q[37:32],Q[29:28],Q[25:22],Q[19:15],Q[12],Q[9],Q[7:1]}),
         .add_const_state(add_const_state),
-        .\state_out_reg[0] ({\state_out_reg[29]_1 [92],\state_out_reg[29]_1 [63:0]}),
-        .\state_out_reg[0]_0 (\state_out_reg[0]_0 ),
         .\state_out_reg[13] (\state_out_reg[13]_0 ),
         .\state_out_reg[17] (\state_out_reg[17]_0 ),
         .\state_out_reg[20] (\state_out_reg[20]_0 ),
@@ -19339,789 +19322,799 @@ module design_ascon_ascon_core_0_2_ascon_round_6
         .\state_out_reg[61] (\state_out_reg[61]_0 ),
         .\state_out_reg[61]_0 (\state_out_reg[61]_1 ),
         .\state_out_reg[61]_1 (\state_out_reg[61]_2 ),
-        .\state_out_reg[8] (\state_out_reg[8]_0 ));
+        .\state_out_reg[8] (\state_out_reg[8]_0 ),
+        .\state_out_reg[96] (\state_out_reg[29]_1 [62:0]),
+        .\state_out_reg[96]_0 (\state_out_reg[96]_0 ));
   design_ascon_ascon_core_0_2_ascon_sbox_15 sbox_inst
        (.D({sbox_state[61:34],sbox_state[29:2]}),
-        .Q({\round_state[6] [127:126],Q[119:92],\round_state[6] [97],Q[91],\round_state[6] [95:94],Q[90:63],\round_state[6] [65],Q[1:0]}),
+        .Q({\round_state[6] [127:126],Q[118:91],\round_state[6] [97:94],Q[90:63],\round_state[6] [65],Q[0],\round_state[6] [0]}),
         .add_const_state({add_const_state[59:32],add_const_state[27:0]}),
         .add_const_state_0(add_const_state_0),
-        .\state_out_reg[127] (D[69:1]),
-        .\state_out_reg[29] ({\state_out_reg[29]_1 [120:93],\state_out_reg[29]_1 [91:64]}),
-        .\state_out_reg[96] (\state_out_reg[96]_0 ));
+        .\state_out_reg[127] (D[70:2]),
+        .\state_out_reg[29] (\state_out_reg[29]_1 [118:63]),
+        .\state_out_reg[96] (\state_out_reg[96]_1 ));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__14_i_1__2
        (.I0(Q[62]),
-        .O(S[1]));
+        .O(S));
+  LUT4 #(
+    .INIT(16'h6996)) 
+    \state_out[0]_i_1__5 
+       (.I0(\state_out_reg[96]_1 ),
+        .I1(add_const_state_0[30]),
+        .I2(\round_state[6] [96]),
+        .I3(\round_state[6] [0]),
+        .O(D[0]));
   LUT3 #(
     .INIT(8'h65)) 
     \state_out[1]_i_1__0 
-       (.I0(Q[1]),
+       (.I0(Q[0]),
         .I1(\round_state[6] [97]),
         .I2(add_const_state_0[31]),
-        .O(D[0]));
+        .O(D[1]));
   FDCE \state_out_reg[0] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(linear_state),
-        .Q(Q[0]));
+        .D(\state_out_reg[127]_0 [0]),
+        .Q(\round_state[6] [0]));
   FDCE \state_out_reg[100] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [42]),
-        .Q(Q[94]));
+        .D(\state_out_reg[127]_0 [43]),
+        .Q(Q[93]));
   FDCE \state_out_reg[101] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [43]),
-        .Q(Q[95]));
+        .D(\state_out_reg[127]_0 [44]),
+        .Q(Q[94]));
   FDCE \state_out_reg[102] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [44]),
-        .Q(Q[96]));
+        .D(\state_out_reg[127]_0 [45]),
+        .Q(Q[95]));
   FDCE \state_out_reg[103] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [45]),
-        .Q(Q[97]));
+        .D(\state_out_reg[127]_0 [46]),
+        .Q(Q[96]));
   FDCE \state_out_reg[104] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [46]),
-        .Q(Q[98]));
+        .D(\state_out_reg[127]_0 [47]),
+        .Q(Q[97]));
   FDCE \state_out_reg[105] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [47]),
-        .Q(Q[99]));
+        .D(\state_out_reg[127]_0 [48]),
+        .Q(Q[98]));
   FDCE \state_out_reg[106] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [48]),
-        .Q(Q[100]));
+        .D(\state_out_reg[127]_0 [49]),
+        .Q(Q[99]));
   FDCE \state_out_reg[107] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [49]),
-        .Q(Q[101]));
+        .D(\state_out_reg[127]_0 [50]),
+        .Q(Q[100]));
   FDCE \state_out_reg[108] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [50]),
-        .Q(Q[102]));
+        .D(\state_out_reg[127]_0 [51]),
+        .Q(Q[101]));
   FDCE \state_out_reg[109] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [51]),
-        .Q(Q[103]));
+        .D(\state_out_reg[127]_0 [52]),
+        .Q(Q[102]));
   FDCE \state_out_reg[10] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[10]),
-        .Q(Q[10]));
+        .Q(Q[9]));
   FDCE \state_out_reg[110] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [52]),
-        .Q(Q[104]));
+        .D(\state_out_reg[127]_0 [53]),
+        .Q(Q[103]));
   FDCE \state_out_reg[111] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [53]),
-        .Q(Q[105]));
+        .D(\state_out_reg[127]_0 [54]),
+        .Q(Q[104]));
   FDCE \state_out_reg[112] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [54]),
-        .Q(Q[106]));
+        .D(\state_out_reg[127]_0 [55]),
+        .Q(Q[105]));
   FDCE \state_out_reg[113] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [55]),
-        .Q(Q[107]));
+        .D(\state_out_reg[127]_0 [56]),
+        .Q(Q[106]));
   FDCE \state_out_reg[114] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [56]),
-        .Q(Q[108]));
+        .D(\state_out_reg[127]_0 [57]),
+        .Q(Q[107]));
   FDCE \state_out_reg[115] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [57]),
-        .Q(Q[109]));
+        .D(\state_out_reg[127]_0 [58]),
+        .Q(Q[108]));
   FDCE \state_out_reg[116] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [58]),
-        .Q(Q[110]));
+        .D(\state_out_reg[127]_0 [59]),
+        .Q(Q[109]));
   FDCE \state_out_reg[117] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [59]),
-        .Q(Q[111]));
+        .D(\state_out_reg[127]_0 [60]),
+        .Q(Q[110]));
   FDCE \state_out_reg[118] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [60]),
-        .Q(Q[112]));
+        .D(\state_out_reg[127]_0 [61]),
+        .Q(Q[111]));
   FDCE \state_out_reg[119] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [61]),
-        .Q(Q[113]));
+        .D(\state_out_reg[127]_0 [62]),
+        .Q(Q[112]));
   FDCE \state_out_reg[11] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[11]),
-        .Q(Q[11]));
+        .Q(Q[10]));
   FDCE \state_out_reg[120] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [62]),
-        .Q(Q[114]));
+        .D(\state_out_reg[127]_0 [63]),
+        .Q(Q[113]));
   FDCE \state_out_reg[121] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [63]),
-        .Q(Q[115]));
+        .D(\state_out_reg[127]_0 [64]),
+        .Q(Q[114]));
   FDCE \state_out_reg[122] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [64]),
-        .Q(Q[116]));
+        .D(\state_out_reg[127]_0 [65]),
+        .Q(Q[115]));
   FDCE \state_out_reg[123] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [65]),
-        .Q(Q[117]));
+        .D(\state_out_reg[127]_0 [66]),
+        .Q(Q[116]));
   FDCE \state_out_reg[124] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [66]),
-        .Q(Q[118]));
+        .D(\state_out_reg[127]_0 [67]),
+        .Q(Q[117]));
   FDCE \state_out_reg[125] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [67]),
-        .Q(Q[119]));
+        .D(\state_out_reg[127]_0 [68]),
+        .Q(Q[118]));
   FDCE \state_out_reg[126] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [68]),
+        .D(\state_out_reg[127]_0 [69]),
         .Q(\round_state[6] [126]));
   FDCE \state_out_reg[127] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [69]),
+        .D(\state_out_reg[127]_0 [70]),
         .Q(\round_state[6] [127]));
   FDCE \state_out_reg[12] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[12]),
-        .Q(Q[12]));
+        .Q(Q[11]));
   FDCE \state_out_reg[13] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[13]),
-        .Q(Q[13]));
+        .Q(Q[12]));
   FDCE \state_out_reg[14] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[14]),
-        .Q(Q[14]));
+        .Q(Q[13]));
   FDCE \state_out_reg[15] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[15]),
-        .Q(Q[15]));
+        .Q(Q[14]));
   FDCE \state_out_reg[16] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[16]),
-        .Q(Q[16]));
+        .Q(Q[15]));
   FDCE \state_out_reg[17] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[17]),
-        .Q(Q[17]));
+        .Q(Q[16]));
   FDCE \state_out_reg[18] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[18]),
-        .Q(Q[18]));
+        .Q(Q[17]));
   FDCE \state_out_reg[19] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[19]),
-        .Q(Q[19]));
+        .Q(Q[18]));
   FDCE \state_out_reg[1] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [0]),
-        .Q(Q[1]));
+        .D(\state_out_reg[127]_0 [1]),
+        .Q(Q[0]));
   FDCE \state_out_reg[20] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[20]),
-        .Q(Q[20]));
+        .Q(Q[19]));
   FDCE \state_out_reg[21] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[21]),
-        .Q(Q[21]));
+        .Q(Q[20]));
   FDCE \state_out_reg[22] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[22]),
-        .Q(Q[22]));
+        .Q(Q[21]));
   FDCE \state_out_reg[23] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[23]),
-        .Q(Q[23]));
+        .Q(Q[22]));
   FDCE \state_out_reg[24] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[24]),
-        .Q(Q[24]));
+        .Q(Q[23]));
   FDCE \state_out_reg[25] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[25]),
-        .Q(Q[25]));
+        .Q(Q[24]));
   FDCE \state_out_reg[26] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[26]),
-        .Q(Q[26]));
+        .Q(Q[25]));
   FDCE \state_out_reg[27] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[27]),
-        .Q(Q[27]));
+        .Q(Q[26]));
   FDCE \state_out_reg[28] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[28]),
-        .Q(Q[28]));
+        .Q(Q[27]));
   FDCE \state_out_reg[29] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[29]),
-        .Q(Q[29]));
+        .Q(Q[28]));
   FDCE \state_out_reg[2] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[2]),
-        .Q(Q[2]));
+        .Q(Q[1]));
   FDCE \state_out_reg[30] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [1]),
-        .Q(Q[30]));
+        .D(\state_out_reg[127]_0 [2]),
+        .Q(Q[29]));
   FDCE \state_out_reg[31] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [2]),
-        .Q(Q[31]));
+        .D(\state_out_reg[127]_0 [3]),
+        .Q(Q[30]));
   FDCE \state_out_reg[32] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [3]),
-        .Q(Q[32]));
+        .D(\state_out_reg[127]_0 [4]),
+        .Q(Q[31]));
   FDCE \state_out_reg[33] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [4]),
-        .Q(Q[33]));
+        .D(\state_out_reg[127]_0 [5]),
+        .Q(Q[32]));
   FDCE \state_out_reg[34] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[34]),
-        .Q(Q[34]));
+        .Q(Q[33]));
   FDCE \state_out_reg[35] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[35]),
-        .Q(Q[35]));
+        .Q(Q[34]));
   FDCE \state_out_reg[36] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[36]),
-        .Q(Q[36]));
+        .Q(Q[35]));
   FDCE \state_out_reg[37] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[37]),
-        .Q(Q[37]));
+        .Q(Q[36]));
   FDCE \state_out_reg[38] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[38]),
-        .Q(Q[38]));
+        .Q(Q[37]));
   FDCE \state_out_reg[39] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[39]),
-        .Q(Q[39]));
+        .Q(Q[38]));
   FDCE \state_out_reg[3] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[3]),
-        .Q(Q[3]));
+        .Q(Q[2]));
   FDCE \state_out_reg[40] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[40]),
-        .Q(Q[40]));
+        .Q(Q[39]));
   FDCE \state_out_reg[41] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[41]),
-        .Q(Q[41]));
+        .Q(Q[40]));
   FDCE \state_out_reg[42] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[42]),
-        .Q(Q[42]));
+        .Q(Q[41]));
   FDCE \state_out_reg[43] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[43]),
-        .Q(Q[43]));
+        .Q(Q[42]));
   FDCE \state_out_reg[44] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[44]),
-        .Q(Q[44]));
+        .Q(Q[43]));
   FDCE \state_out_reg[45] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[45]),
-        .Q(Q[45]));
+        .Q(Q[44]));
   FDCE \state_out_reg[46] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[46]),
-        .Q(Q[46]));
+        .Q(Q[45]));
   FDCE \state_out_reg[47] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[47]),
-        .Q(Q[47]));
+        .Q(Q[46]));
   FDCE \state_out_reg[48] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[48]),
-        .Q(Q[48]));
+        .Q(Q[47]));
   FDCE \state_out_reg[49] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[49]),
-        .Q(Q[49]));
+        .Q(Q[48]));
   FDCE \state_out_reg[4] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[4]),
-        .Q(Q[4]));
+        .Q(Q[3]));
   FDCE \state_out_reg[50] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[50]),
-        .Q(Q[50]));
+        .Q(Q[49]));
   FDCE \state_out_reg[51] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[51]),
-        .Q(Q[51]));
+        .Q(Q[50]));
   FDCE \state_out_reg[52] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[52]),
-        .Q(Q[52]));
+        .Q(Q[51]));
   FDCE \state_out_reg[53] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[53]),
-        .Q(Q[53]));
+        .Q(Q[52]));
   FDCE \state_out_reg[54] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[54]),
-        .Q(Q[54]));
+        .Q(Q[53]));
   FDCE \state_out_reg[55] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[55]),
-        .Q(Q[55]));
+        .Q(Q[54]));
   FDCE \state_out_reg[56] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[56]),
-        .Q(Q[56]));
+        .Q(Q[55]));
   FDCE \state_out_reg[57] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[57]),
-        .Q(Q[57]));
+        .Q(Q[56]));
   FDCE \state_out_reg[58] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[58]),
-        .Q(Q[58]));
+        .Q(Q[57]));
   FDCE \state_out_reg[59] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[59]),
-        .Q(Q[59]));
+        .Q(Q[58]));
   FDCE \state_out_reg[5] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[5]),
-        .Q(Q[5]));
+        .Q(Q[4]));
   FDCE \state_out_reg[60] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[60]),
-        .Q(Q[60]));
+        .Q(Q[59]));
   FDCE \state_out_reg[61] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[61]),
-        .Q(Q[61]));
+        .Q(Q[60]));
   FDCE \state_out_reg[62] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [5]),
-        .Q(S[0]));
+        .D(\state_out_reg[127]_0 [6]),
+        .Q(Q[61]));
   FDCE \state_out_reg[63] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [6]),
+        .D(\state_out_reg[127]_0 [7]),
         .Q(Q[62]));
   FDCE \state_out_reg[65] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [7]),
+        .D(\state_out_reg[127]_0 [8]),
         .Q(\round_state[6] [65]));
   FDCE \state_out_reg[66] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [8]),
+        .D(\state_out_reg[127]_0 [9]),
         .Q(Q[63]));
   FDCE \state_out_reg[67] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [9]),
+        .D(\state_out_reg[127]_0 [10]),
         .Q(Q[64]));
   FDCE \state_out_reg[68] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [10]),
+        .D(\state_out_reg[127]_0 [11]),
         .Q(Q[65]));
   FDCE \state_out_reg[69] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [11]),
+        .D(\state_out_reg[127]_0 [12]),
         .Q(Q[66]));
   FDCE \state_out_reg[6] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[6]),
-        .Q(Q[6]));
+        .Q(Q[5]));
   FDCE \state_out_reg[70] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [12]),
+        .D(\state_out_reg[127]_0 [13]),
         .Q(Q[67]));
   FDCE \state_out_reg[71] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [13]),
+        .D(\state_out_reg[127]_0 [14]),
         .Q(Q[68]));
   FDCE \state_out_reg[72] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [14]),
+        .D(\state_out_reg[127]_0 [15]),
         .Q(Q[69]));
   FDCE \state_out_reg[73] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [15]),
+        .D(\state_out_reg[127]_0 [16]),
         .Q(Q[70]));
   FDCE \state_out_reg[74] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [16]),
+        .D(\state_out_reg[127]_0 [17]),
         .Q(Q[71]));
   FDCE \state_out_reg[75] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [17]),
+        .D(\state_out_reg[127]_0 [18]),
         .Q(Q[72]));
   FDCE \state_out_reg[76] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [18]),
+        .D(\state_out_reg[127]_0 [19]),
         .Q(Q[73]));
   FDCE \state_out_reg[77] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [19]),
+        .D(\state_out_reg[127]_0 [20]),
         .Q(Q[74]));
   FDCE \state_out_reg[78] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [20]),
+        .D(\state_out_reg[127]_0 [21]),
         .Q(Q[75]));
   FDCE \state_out_reg[79] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [21]),
+        .D(\state_out_reg[127]_0 [22]),
         .Q(Q[76]));
   FDCE \state_out_reg[7] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[7]),
-        .Q(Q[7]));
+        .Q(Q[6]));
   FDCE \state_out_reg[80] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [22]),
+        .D(\state_out_reg[127]_0 [23]),
         .Q(Q[77]));
   FDCE \state_out_reg[81] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [23]),
+        .D(\state_out_reg[127]_0 [24]),
         .Q(Q[78]));
   FDCE \state_out_reg[82] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [24]),
+        .D(\state_out_reg[127]_0 [25]),
         .Q(Q[79]));
   FDCE \state_out_reg[83] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [25]),
+        .D(\state_out_reg[127]_0 [26]),
         .Q(Q[80]));
   FDCE \state_out_reg[84] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [26]),
+        .D(\state_out_reg[127]_0 [27]),
         .Q(Q[81]));
   FDCE \state_out_reg[85] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [27]),
+        .D(\state_out_reg[127]_0 [28]),
         .Q(Q[82]));
   FDCE \state_out_reg[86] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [28]),
+        .D(\state_out_reg[127]_0 [29]),
         .Q(Q[83]));
   FDCE \state_out_reg[87] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [29]),
+        .D(\state_out_reg[127]_0 [30]),
         .Q(Q[84]));
   FDCE \state_out_reg[88] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [30]),
+        .D(\state_out_reg[127]_0 [31]),
         .Q(Q[85]));
   FDCE \state_out_reg[89] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [31]),
+        .D(\state_out_reg[127]_0 [32]),
         .Q(Q[86]));
   FDCE \state_out_reg[8] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[8]),
-        .Q(Q[8]));
+        .Q(Q[7]));
   FDCE \state_out_reg[90] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [32]),
+        .D(\state_out_reg[127]_0 [33]),
         .Q(Q[87]));
   FDCE \state_out_reg[91] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [33]),
+        .D(\state_out_reg[127]_0 [34]),
         .Q(Q[88]));
   FDCE \state_out_reg[92] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [34]),
+        .D(\state_out_reg[127]_0 [35]),
         .Q(Q[89]));
   FDCE \state_out_reg[93] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [35]),
+        .D(\state_out_reg[127]_0 [36]),
         .Q(Q[90]));
   FDCE \state_out_reg[94] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [36]),
+        .D(\state_out_reg[127]_0 [37]),
         .Q(\round_state[6] [94]));
   FDCE \state_out_reg[95] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [37]),
+        .D(\state_out_reg[127]_0 [38]),
         .Q(\round_state[6] [95]));
   FDCE \state_out_reg[96] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [38]),
-        .Q(Q[91]));
+        .D(\state_out_reg[127]_0 [39]),
+        .Q(\round_state[6] [96]));
   FDCE \state_out_reg[97] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [39]),
+        .D(\state_out_reg[127]_0 [40]),
         .Q(\round_state[6] [97]));
   FDCE \state_out_reg[98] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [40]),
-        .Q(Q[92]));
+        .D(\state_out_reg[127]_0 [41]),
+        .Q(Q[91]));
   FDCE \state_out_reg[99] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [41]),
-        .Q(Q[93]));
+        .D(\state_out_reg[127]_0 [42]),
+        .Q(Q[92]));
   FDCE \state_out_reg[9] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[9]),
-        .Q(Q[9]));
+        .Q(Q[8]));
 endmodule
 
 (* ORIG_REF_NAME = "ascon_round" *) 
@@ -20129,7 +20122,7 @@ module design_ascon_ascon_core_0_2_ascon_round_7
    (add_const_state,
     \state_out_reg[63]_0 ,
     D,
-    Q,
+    \state_out_reg[124]_0 ,
     \state_out_reg[31]_0 ,
     \state_out_reg[28]_0 ,
     \state_out_reg[23]_0 ,
@@ -20145,7 +20138,7 @@ module design_ascon_ascon_core_0_2_ascon_round_7
     \state_out_reg[44]_0 ,
     \state_out_reg[38]_0 ,
     \state_out_reg[33]_0 ,
-    \round_state[6] ,
+    Q,
     \state_out_reg[37]_0 ,
     \state_out_reg[41]_0 ,
     \state_out_reg[45]_0 ,
@@ -20171,7 +20164,7 @@ module design_ascon_ascon_core_0_2_ascon_round_7
   output [61:0]add_const_state;
   output [0:0]\state_out_reg[63]_0 ;
   output [70:0]D;
-  output [119:0]Q;
+  output [119:0]\state_out_reg[124]_0 ;
   output [1:0]\state_out_reg[31]_0 ;
   output [1:0]\state_out_reg[28]_0 ;
   output [2:0]\state_out_reg[23]_0 ;
@@ -20187,7 +20180,7 @@ module design_ascon_ascon_core_0_2_ascon_round_7
   output [3:0]\state_out_reg[44]_0 ;
   output [1:0]\state_out_reg[38]_0 ;
   output [0:0]\state_out_reg[33]_0 ;
-  input [120:0]\round_state[6] ;
+  input [118:0]Q;
   input [3:0]\state_out_reg[37]_0 ;
   input [2:0]\state_out_reg[41]_0 ;
   input [1:0]\state_out_reg[45]_0 ;
@@ -20206,25 +20199,24 @@ module design_ascon_ascon_core_0_2_ascon_round_7
   input [0:0]S;
   input [0:0]CO;
   input [62:0]add_const_state_0;
-  input [69:0]\state_out_reg[127]_0 ;
+  input [70:0]\state_out_reg[127]_0 ;
   input enable;
   input clk;
   input rst;
 
   wire [0:0]CO;
   wire [70:0]D;
-  wire [119:0]Q;
+  wire [118:0]Q;
   wire [0:0]S;
   wire [61:0]add_const_state;
   wire [62:0]add_const_state_0;
   wire clk;
   wire enable;
-  wire [0:0]linear_state;
-  wire [120:0]\round_state[6] ;
   wire [127:93]\round_state[7] ;
   wire rst;
   wire [61:2]sbox_state;
-  wire [69:0]\state_out_reg[127]_0 ;
+  wire [119:0]\state_out_reg[124]_0 ;
+  wire [70:0]\state_out_reg[127]_0 ;
   wire [2:0]\state_out_reg[16]_0 ;
   wire [0:0]\state_out_reg[20]_0 ;
   wire [2:0]\state_out_reg[23]_0 ;
@@ -20258,11 +20250,10 @@ module design_ascon_ascon_core_0_2_ascon_round_7
   wire [0:0]\state_out_reg[9]_0 ;
 
   design_ascon_ascon_core_0_2_ascon_add_constant_12 constant_inst
-       (.D(linear_state),
-        .Q({Q[59:58],Q[56:49],Q[44:41],Q[38:37],Q[33],Q[31],Q[29:28],Q[26],Q[23:20],Q[16:14],Q[9:7],Q[4],Q[2]}),
+       (.Q(Q[62:0]),
         .S(S),
         .add_const_state(add_const_state),
-        .\round_state[6] ({\round_state[6] [92],\round_state[6] [63:0]}),
+        .state_out0_carry__13_0({\state_out_reg[124]_0 [59:58],\state_out_reg[124]_0 [56:49],\state_out_reg[124]_0 [44:41],\state_out_reg[124]_0 [38:37],\state_out_reg[124]_0 [33],\state_out_reg[124]_0 [31],\state_out_reg[124]_0 [29:28],\state_out_reg[124]_0 [26],\state_out_reg[124]_0 [23:20],\state_out_reg[124]_0 [16:14],\state_out_reg[124]_0 [9:7],\state_out_reg[124]_0 [4],\state_out_reg[124]_0 [2]}),
         .\state_out_reg[16] (\state_out_reg[16]_0 ),
         .\state_out_reg[20] (\state_out_reg[20]_0 ),
         .\state_out_reg[23] (\state_out_reg[23]_0 ),
@@ -20296,20 +20287,20 @@ module design_ascon_ascon_core_0_2_ascon_round_7
   design_ascon_ascon_core_0_2_ascon_sbox_13 sbox_inst
        (.CO(CO),
         .D({sbox_state[61:34],sbox_state[29:2]}),
-        .Q({\round_state[7] [127:125],Q[119:92],\round_state[7] [96:93],Q[91:64],Q[0]}),
+        .Q(Q[118:63]),
         .add_const_state({add_const_state[59:32],add_const_state[27:0]}),
         .add_const_state_0(add_const_state_0),
-        .\round_state[6] ({\round_state[6] [120:93],\round_state[6] [91:64]}),
-        .\state_out_reg[127] (D[70:1]));
+        .\state_out_reg[127] (D[70:1]),
+        .\state_out_reg[31] ({\round_state[7] [127:125],\state_out_reg[124]_0 [119:92],\round_state[7] [96:93],\state_out_reg[124]_0 [91:64],\state_out_reg[124]_0 [0]}));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__14_i_1__3
-       (.I0(Q[62]),
+       (.I0(\state_out_reg[124]_0 [62]),
         .O(\state_out_reg[62]_0 [1]));
   LUT1 #(
     .INIT(2'h1)) 
     state_out0_carry__14_i_2__0
-       (.I0(Q[61]),
+       (.I0(\state_out_reg[124]_0 [61]),
         .O(\state_out_reg[62]_0 [0]));
   LUT4 #(
     .INIT(16'h9669)) 
@@ -20317,955 +20308,6 @@ module design_ascon_ascon_core_0_2_ascon_round_7
        (.I0(CO),
         .I1(add_const_state_0[31]),
         .I2(\round_state[7] [96]),
-        .I3(Q[0]),
-        .O(D[0]));
-  FDCE \state_out_reg[0] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(linear_state),
-        .Q(Q[0]));
-  FDCE \state_out_reg[100] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [42]),
-        .Q(Q[95]));
-  FDCE \state_out_reg[101] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [43]),
-        .Q(Q[96]));
-  FDCE \state_out_reg[102] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [44]),
-        .Q(Q[97]));
-  FDCE \state_out_reg[103] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [45]),
-        .Q(Q[98]));
-  FDCE \state_out_reg[104] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [46]),
-        .Q(Q[99]));
-  FDCE \state_out_reg[105] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [47]),
-        .Q(Q[100]));
-  FDCE \state_out_reg[106] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [48]),
-        .Q(Q[101]));
-  FDCE \state_out_reg[107] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [49]),
-        .Q(Q[102]));
-  FDCE \state_out_reg[108] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [50]),
-        .Q(Q[103]));
-  FDCE \state_out_reg[109] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [51]),
-        .Q(Q[104]));
-  FDCE \state_out_reg[10] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[10]),
-        .Q(Q[10]));
-  FDCE \state_out_reg[110] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [52]),
-        .Q(Q[105]));
-  FDCE \state_out_reg[111] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [53]),
-        .Q(Q[106]));
-  FDCE \state_out_reg[112] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [54]),
-        .Q(Q[107]));
-  FDCE \state_out_reg[113] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [55]),
-        .Q(Q[108]));
-  FDCE \state_out_reg[114] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [56]),
-        .Q(Q[109]));
-  FDCE \state_out_reg[115] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [57]),
-        .Q(Q[110]));
-  FDCE \state_out_reg[116] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [58]),
-        .Q(Q[111]));
-  FDCE \state_out_reg[117] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [59]),
-        .Q(Q[112]));
-  FDCE \state_out_reg[118] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [60]),
-        .Q(Q[113]));
-  FDCE \state_out_reg[119] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [61]),
-        .Q(Q[114]));
-  FDCE \state_out_reg[11] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[11]),
-        .Q(Q[11]));
-  FDCE \state_out_reg[120] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [62]),
-        .Q(Q[115]));
-  FDCE \state_out_reg[121] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [63]),
-        .Q(Q[116]));
-  FDCE \state_out_reg[122] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [64]),
-        .Q(Q[117]));
-  FDCE \state_out_reg[123] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [65]),
-        .Q(Q[118]));
-  FDCE \state_out_reg[124] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [66]),
-        .Q(Q[119]));
-  FDCE \state_out_reg[125] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [67]),
-        .Q(\round_state[7] [125]));
-  FDCE \state_out_reg[126] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [68]),
-        .Q(\round_state[7] [126]));
-  FDCE \state_out_reg[127] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [69]),
-        .Q(\round_state[7] [127]));
-  FDCE \state_out_reg[12] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[12]),
-        .Q(Q[12]));
-  FDCE \state_out_reg[13] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[13]),
-        .Q(Q[13]));
-  FDCE \state_out_reg[14] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[14]),
-        .Q(Q[14]));
-  FDCE \state_out_reg[15] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[15]),
-        .Q(Q[15]));
-  FDCE \state_out_reg[16] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[16]),
-        .Q(Q[16]));
-  FDCE \state_out_reg[17] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[17]),
-        .Q(Q[17]));
-  FDCE \state_out_reg[18] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[18]),
-        .Q(Q[18]));
-  FDCE \state_out_reg[19] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[19]),
-        .Q(Q[19]));
-  FDCE \state_out_reg[1] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [0]),
-        .Q(Q[1]));
-  FDCE \state_out_reg[20] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[20]),
-        .Q(Q[20]));
-  FDCE \state_out_reg[21] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[21]),
-        .Q(Q[21]));
-  FDCE \state_out_reg[22] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[22]),
-        .Q(Q[22]));
-  FDCE \state_out_reg[23] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[23]),
-        .Q(Q[23]));
-  FDCE \state_out_reg[24] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[24]),
-        .Q(Q[24]));
-  FDCE \state_out_reg[25] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[25]),
-        .Q(Q[25]));
-  FDCE \state_out_reg[26] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[26]),
-        .Q(Q[26]));
-  FDCE \state_out_reg[27] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[27]),
-        .Q(Q[27]));
-  FDCE \state_out_reg[28] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[28]),
-        .Q(Q[28]));
-  FDCE \state_out_reg[29] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[29]),
-        .Q(Q[29]));
-  FDCE \state_out_reg[2] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[2]),
-        .Q(Q[2]));
-  FDCE \state_out_reg[30] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [1]),
-        .Q(Q[30]));
-  FDCE \state_out_reg[31] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [2]),
-        .Q(Q[31]));
-  FDCE \state_out_reg[32] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [3]),
-        .Q(Q[32]));
-  FDCE \state_out_reg[33] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [4]),
-        .Q(Q[33]));
-  FDCE \state_out_reg[34] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[34]),
-        .Q(Q[34]));
-  FDCE \state_out_reg[35] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[35]),
-        .Q(Q[35]));
-  FDCE \state_out_reg[36] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[36]),
-        .Q(Q[36]));
-  FDCE \state_out_reg[37] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[37]),
-        .Q(Q[37]));
-  FDCE \state_out_reg[38] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[38]),
-        .Q(Q[38]));
-  FDCE \state_out_reg[39] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[39]),
-        .Q(Q[39]));
-  FDCE \state_out_reg[3] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[3]),
-        .Q(Q[3]));
-  FDCE \state_out_reg[40] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[40]),
-        .Q(Q[40]));
-  FDCE \state_out_reg[41] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[41]),
-        .Q(Q[41]));
-  FDCE \state_out_reg[42] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[42]),
-        .Q(Q[42]));
-  FDCE \state_out_reg[43] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[43]),
-        .Q(Q[43]));
-  FDCE \state_out_reg[44] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[44]),
-        .Q(Q[44]));
-  FDCE \state_out_reg[45] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[45]),
-        .Q(Q[45]));
-  FDCE \state_out_reg[46] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[46]),
-        .Q(Q[46]));
-  FDCE \state_out_reg[47] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[47]),
-        .Q(Q[47]));
-  FDCE \state_out_reg[48] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[48]),
-        .Q(Q[48]));
-  FDCE \state_out_reg[49] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[49]),
-        .Q(Q[49]));
-  FDCE \state_out_reg[4] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[4]),
-        .Q(Q[4]));
-  FDCE \state_out_reg[50] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[50]),
-        .Q(Q[50]));
-  FDCE \state_out_reg[51] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[51]),
-        .Q(Q[51]));
-  FDCE \state_out_reg[52] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[52]),
-        .Q(Q[52]));
-  FDCE \state_out_reg[53] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[53]),
-        .Q(Q[53]));
-  FDCE \state_out_reg[54] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[54]),
-        .Q(Q[54]));
-  FDCE \state_out_reg[55] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[55]),
-        .Q(Q[55]));
-  FDCE \state_out_reg[56] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[56]),
-        .Q(Q[56]));
-  FDCE \state_out_reg[57] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[57]),
-        .Q(Q[57]));
-  FDCE \state_out_reg[58] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[58]),
-        .Q(Q[58]));
-  FDCE \state_out_reg[59] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[59]),
-        .Q(Q[59]));
-  FDCE \state_out_reg[5] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[5]),
-        .Q(Q[5]));
-  FDCE \state_out_reg[60] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[60]),
-        .Q(Q[60]));
-  FDCE \state_out_reg[61] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[61]),
-        .Q(Q[61]));
-  FDCE \state_out_reg[62] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [5]),
-        .Q(Q[62]));
-  FDCE \state_out_reg[63] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [6]),
-        .Q(Q[63]));
-  FDCE \state_out_reg[65] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [7]),
-        .Q(Q[64]));
-  FDCE \state_out_reg[66] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [8]),
-        .Q(Q[65]));
-  FDCE \state_out_reg[67] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [9]),
-        .Q(Q[66]));
-  FDCE \state_out_reg[68] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [10]),
-        .Q(Q[67]));
-  FDCE \state_out_reg[69] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [11]),
-        .Q(Q[68]));
-  FDCE \state_out_reg[6] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[6]),
-        .Q(Q[6]));
-  FDCE \state_out_reg[70] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [12]),
-        .Q(Q[69]));
-  FDCE \state_out_reg[71] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [13]),
-        .Q(Q[70]));
-  FDCE \state_out_reg[72] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [14]),
-        .Q(Q[71]));
-  FDCE \state_out_reg[73] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [15]),
-        .Q(Q[72]));
-  FDCE \state_out_reg[74] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [16]),
-        .Q(Q[73]));
-  FDCE \state_out_reg[75] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [17]),
-        .Q(Q[74]));
-  FDCE \state_out_reg[76] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [18]),
-        .Q(Q[75]));
-  FDCE \state_out_reg[77] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [19]),
-        .Q(Q[76]));
-  FDCE \state_out_reg[78] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [20]),
-        .Q(Q[77]));
-  FDCE \state_out_reg[79] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [21]),
-        .Q(Q[78]));
-  FDCE \state_out_reg[7] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[7]),
-        .Q(Q[7]));
-  FDCE \state_out_reg[80] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [22]),
-        .Q(Q[79]));
-  FDCE \state_out_reg[81] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [23]),
-        .Q(Q[80]));
-  FDCE \state_out_reg[82] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [24]),
-        .Q(Q[81]));
-  FDCE \state_out_reg[83] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [25]),
-        .Q(Q[82]));
-  FDCE \state_out_reg[84] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [26]),
-        .Q(Q[83]));
-  FDCE \state_out_reg[85] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [27]),
-        .Q(Q[84]));
-  FDCE \state_out_reg[86] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [28]),
-        .Q(Q[85]));
-  FDCE \state_out_reg[87] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [29]),
-        .Q(Q[86]));
-  FDCE \state_out_reg[88] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [30]),
-        .Q(Q[87]));
-  FDCE \state_out_reg[89] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [31]),
-        .Q(Q[88]));
-  FDCE \state_out_reg[8] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[8]),
-        .Q(Q[8]));
-  FDCE \state_out_reg[90] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [32]),
-        .Q(Q[89]));
-  FDCE \state_out_reg[91] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [33]),
-        .Q(Q[90]));
-  FDCE \state_out_reg[92] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [34]),
-        .Q(Q[91]));
-  FDCE \state_out_reg[93] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [35]),
-        .Q(\round_state[7] [93]));
-  FDCE \state_out_reg[94] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [36]),
-        .Q(\round_state[7] [94]));
-  FDCE \state_out_reg[95] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [37]),
-        .Q(\round_state[7] [95]));
-  FDCE \state_out_reg[96] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [38]),
-        .Q(\round_state[7] [96]));
-  FDCE \state_out_reg[97] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [39]),
-        .Q(Q[92]));
-  FDCE \state_out_reg[98] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [40]),
-        .Q(Q[93]));
-  FDCE \state_out_reg[99] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(\state_out_reg[127]_0 [41]),
-        .Q(Q[94]));
-  FDCE \state_out_reg[9] 
-       (.C(clk),
-        .CE(enable),
-        .CLR(rst),
-        .D(sbox_state[9]),
-        .Q(Q[9]));
-endmodule
-
-(* ORIG_REF_NAME = "ascon_round" *) 
-module design_ascon_ascon_core_0_2_ascon_round_8
-   (add_const_state,
-    CO,
-    D,
-    \state_out_reg[124]_0 ,
-    S,
-    \state_out_reg[56]_0 ,
-    \state_out_reg[52]_0 ,
-    \state_out_reg[44]_0 ,
-    \state_out_reg[39]_0 ,
-    \state_out_reg[36]_0 ,
-    \state_out_reg[32]_0 ,
-    \state_out_reg[27]_0 ,
-    \state_out_reg[24]_0 ,
-    \state_out_reg[20]_0 ,
-    \state_out_reg[15]_0 ,
-    \state_out_reg[12]_0 ,
-    \state_out_reg[8]_0 ,
-    \state_out_reg[4]_0 ,
-    Q,
-    \state_out_reg[36]_1 ,
-    \state_out_reg[40]_0 ,
-    \state_out_reg[44]_1 ,
-    \state_out_reg[48]_0 ,
-    \state_out_reg[52]_1 ,
-    \state_out_reg[56]_1 ,
-    \state_out_reg[60]_0 ,
-    \state_out_reg[32]_1 ,
-    \state_out_reg[36]_2 ,
-    \state_out_reg[40]_1 ,
-    \state_out_reg[44]_2 ,
-    \state_out_reg[52]_2 ,
-    \state_out_reg[56]_2 ,
-    \state_out_reg[60]_1 ,
-    \state_out_reg[96]_0 ,
-    \state_out_reg[96]_1 ,
-    add_const_state_0,
-    \state_out_reg[127]_0 ,
-    enable,
-    clk,
-    rst);
-  output [62:0]add_const_state;
-  output [0:0]CO;
-  output [70:0]D;
-  output [119:0]\state_out_reg[124]_0 ;
-  output [1:0]S;
-  output [0:0]\state_out_reg[56]_0 ;
-  output [3:0]\state_out_reg[52]_0 ;
-  output [3:0]\state_out_reg[44]_0 ;
-  output [1:0]\state_out_reg[39]_0 ;
-  output [2:0]\state_out_reg[36]_0 ;
-  output [1:0]\state_out_reg[32]_0 ;
-  output [1:0]\state_out_reg[27]_0 ;
-  output [2:0]\state_out_reg[24]_0 ;
-  output [2:0]\state_out_reg[20]_0 ;
-  output [2:0]\state_out_reg[15]_0 ;
-  output [1:0]\state_out_reg[12]_0 ;
-  output [1:0]\state_out_reg[8]_0 ;
-  output [2:0]\state_out_reg[4]_0 ;
-  input [119:0]Q;
-  input [1:0]\state_out_reg[36]_1 ;
-  input [1:0]\state_out_reg[40]_0 ;
-  input [0:0]\state_out_reg[44]_1 ;
-  input [2:0]\state_out_reg[48]_0 ;
-  input [0:0]\state_out_reg[52]_1 ;
-  input [2:0]\state_out_reg[56]_1 ;
-  input [1:0]\state_out_reg[60]_0 ;
-  input [1:0]\state_out_reg[32]_1 ;
-  input [0:0]\state_out_reg[36]_2 ;
-  input [1:0]\state_out_reg[40]_1 ;
-  input [3:0]\state_out_reg[44]_2 ;
-  input [3:0]\state_out_reg[52]_2 ;
-  input [3:0]\state_out_reg[56]_2 ;
-  input [1:0]\state_out_reg[60]_1 ;
-  input [1:0]\state_out_reg[96]_0 ;
-  input [0:0]\state_out_reg[96]_1 ;
-  input [62:0]add_const_state_0;
-  input [70:0]\state_out_reg[127]_0 ;
-  input enable;
-  input clk;
-  input rst;
-
-  wire [0:0]CO;
-  wire [70:0]D;
-  wire [119:0]Q;
-  wire [1:0]S;
-  wire [62:0]add_const_state;
-  wire [62:0]add_const_state_0;
-  wire clk;
-  wire enable;
-  wire [127:93]\round_state[8] ;
-  wire rst;
-  wire [60:1]sbox_state;
-  wire [119:0]\state_out_reg[124]_0 ;
-  wire [70:0]\state_out_reg[127]_0 ;
-  wire [1:0]\state_out_reg[12]_0 ;
-  wire [2:0]\state_out_reg[15]_0 ;
-  wire [2:0]\state_out_reg[20]_0 ;
-  wire [2:0]\state_out_reg[24]_0 ;
-  wire [1:0]\state_out_reg[27]_0 ;
-  wire [1:0]\state_out_reg[32]_0 ;
-  wire [1:0]\state_out_reg[32]_1 ;
-  wire [2:0]\state_out_reg[36]_0 ;
-  wire [1:0]\state_out_reg[36]_1 ;
-  wire [0:0]\state_out_reg[36]_2 ;
-  wire [1:0]\state_out_reg[39]_0 ;
-  wire [1:0]\state_out_reg[40]_0 ;
-  wire [1:0]\state_out_reg[40]_1 ;
-  wire [3:0]\state_out_reg[44]_0 ;
-  wire [0:0]\state_out_reg[44]_1 ;
-  wire [3:0]\state_out_reg[44]_2 ;
-  wire [2:0]\state_out_reg[48]_0 ;
-  wire [2:0]\state_out_reg[4]_0 ;
-  wire [3:0]\state_out_reg[52]_0 ;
-  wire [0:0]\state_out_reg[52]_1 ;
-  wire [3:0]\state_out_reg[52]_2 ;
-  wire [0:0]\state_out_reg[56]_0 ;
-  wire [2:0]\state_out_reg[56]_1 ;
-  wire [3:0]\state_out_reg[56]_2 ;
-  wire [1:0]\state_out_reg[60]_0 ;
-  wire [1:0]\state_out_reg[60]_1 ;
-  wire [1:0]\state_out_reg[8]_0 ;
-  wire [1:0]\state_out_reg[96]_0 ;
-  wire [0:0]\state_out_reg[96]_1 ;
-
-  design_ascon_ascon_core_0_2_ascon_add_constant_10 constant_inst
-       (.CO(CO),
-        .Q(Q[63:0]),
-        .add_const_state(add_const_state),
-        .state_out0_carry__12_0({\state_out_reg[124]_0 [56],\state_out_reg[124]_0 [52:49],\state_out_reg[124]_0 [44:41],\state_out_reg[124]_0 [39:38],\state_out_reg[124]_0 [36:35],\state_out_reg[124]_0 [33:32],\state_out_reg[124]_0 [30],\state_out_reg[124]_0 [27],\state_out_reg[124]_0 [25:24],\state_out_reg[124]_0 [22:20],\state_out_reg[124]_0 [18:17],\state_out_reg[124]_0 [15:12],\state_out_reg[124]_0 [9:7],\state_out_reg[124]_0 [4:3],\state_out_reg[124]_0 [1]}),
-        .\state_out_reg[12] (\state_out_reg[12]_0 ),
-        .\state_out_reg[15] (\state_out_reg[15]_0 ),
-        .\state_out_reg[20] (\state_out_reg[20]_0 ),
-        .\state_out_reg[24] (\state_out_reg[24]_0 ),
-        .\state_out_reg[27] (\state_out_reg[27]_0 ),
-        .\state_out_reg[32] (\state_out_reg[32]_0 ),
-        .\state_out_reg[32]_0 (\state_out_reg[32]_1 ),
-        .\state_out_reg[36] (\state_out_reg[36]_0 ),
-        .\state_out_reg[36]_0 (\state_out_reg[36]_1 ),
-        .\state_out_reg[36]_1 (\state_out_reg[36]_2 ),
-        .\state_out_reg[39] (\state_out_reg[39]_0 ),
-        .\state_out_reg[40] (\state_out_reg[40]_0 ),
-        .\state_out_reg[40]_0 (\state_out_reg[40]_1 ),
-        .\state_out_reg[44] (\state_out_reg[44]_0 ),
-        .\state_out_reg[44]_0 (\state_out_reg[44]_1 ),
-        .\state_out_reg[44]_1 (\state_out_reg[44]_2 ),
-        .\state_out_reg[48] (\state_out_reg[48]_0 ),
-        .\state_out_reg[4] (\state_out_reg[4]_0 ),
-        .\state_out_reg[52] (\state_out_reg[52]_0 ),
-        .\state_out_reg[52]_0 (\state_out_reg[52]_1 ),
-        .\state_out_reg[52]_1 (\state_out_reg[52]_2 ),
-        .\state_out_reg[56] (\state_out_reg[56]_0 ),
-        .\state_out_reg[56]_0 (\state_out_reg[56]_1 ),
-        .\state_out_reg[56]_1 (\state_out_reg[56]_2 ),
-        .\state_out_reg[60] (\state_out_reg[60]_0 ),
-        .\state_out_reg[60]_0 (\state_out_reg[60]_1 ),
-        .\state_out_reg[8] (\state_out_reg[8]_0 ),
-        .\state_out_reg[96] (\state_out_reg[96]_0 ));
-  design_ascon_ascon_core_0_2_ascon_sbox_11 sbox_inst
-       (.D({sbox_state[60:33],sbox_state[28:1]}),
-        .Q(Q[119:64]),
-        .add_const_state({add_const_state[59:32],add_const_state[27:0]}),
-        .add_const_state_0(add_const_state_0),
-        .\state_out_reg[127] (D[70:1]),
-        .\state_out_reg[31] ({\round_state[8] [127:125],\state_out_reg[124]_0 [119:92],\round_state[8] [96:93],\state_out_reg[124]_0 [91:64],\state_out_reg[124]_0 [0]}),
-        .\state_out_reg[96] (\state_out_reg[96]_1 ));
-  LUT1 #(
-    .INIT(2'h1)) 
-    state_out0_carry__14_i_1__4
-       (.I0(\state_out_reg[124]_0 [63]),
-        .O(S[1]));
-  LUT1 #(
-    .INIT(2'h1)) 
-    state_out0_carry__14_i_2__1
-       (.I0(\state_out_reg[124]_0 [62]),
-        .O(S[0]));
-  LUT4 #(
-    .INIT(16'h9669)) 
-    \state_out[0]_i_1__7 
-       (.I0(\state_out_reg[96]_1 ),
-        .I1(add_const_state_0[31]),
-        .I2(\round_state[8] [96]),
         .I3(\state_out_reg[124]_0 [0]),
         .O(D[0]));
   FDCE \state_out_reg[0] 
@@ -21441,19 +20483,19 @@ module design_ascon_ascon_core_0_2_ascon_round_8
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [68]),
-        .Q(\round_state[8] [125]));
+        .Q(\round_state[7] [125]));
   FDCE \state_out_reg[126] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [69]),
-        .Q(\round_state[8] [126]));
+        .Q(\round_state[7] [126]));
   FDCE \state_out_reg[127] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [70]),
-        .Q(\round_state[8] [127]));
+        .Q(\round_state[7] [127]));
   FDCE \state_out_reg[12] 
        (.C(clk),
         .CE(enable),
@@ -21506,7 +20548,7 @@ module design_ascon_ascon_core_0_2_ascon_round_8
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(sbox_state[1]),
+        .D(\state_out_reg[127]_0 [1]),
         .Q(\state_out_reg[124]_0 [1]));
   FDCE \state_out_reg[20] 
        (.C(clk),
@@ -21566,7 +20608,7 @@ module design_ascon_ascon_core_0_2_ascon_round_8
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [1]),
+        .D(sbox_state[29]),
         .Q(\state_out_reg[124]_0 [29]));
   FDCE \state_out_reg[2] 
        (.C(clk),
@@ -21596,7 +20638,7 @@ module design_ascon_ascon_core_0_2_ascon_round_8
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(sbox_state[33]),
+        .D(\state_out_reg[127]_0 [5]),
         .Q(\state_out_reg[124]_0 [33]));
   FDCE \state_out_reg[34] 
        (.C(clk),
@@ -21782,7 +20824,7 @@ module design_ascon_ascon_core_0_2_ascon_round_8
        (.C(clk),
         .CE(enable),
         .CLR(rst),
-        .D(\state_out_reg[127]_0 [5]),
+        .D(sbox_state[61]),
         .Q(\state_out_reg[124]_0 [61]));
   FDCE \state_out_reg[62] 
        (.C(clk),
@@ -21987,25 +21029,25 @@ module design_ascon_ascon_core_0_2_ascon_round_8
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [36]),
-        .Q(\round_state[8] [93]));
+        .Q(\round_state[7] [93]));
   FDCE \state_out_reg[94] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [37]),
-        .Q(\round_state[8] [94]));
+        .Q(\round_state[7] [94]));
   FDCE \state_out_reg[95] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [38]),
-        .Q(\round_state[8] [95]));
+        .Q(\round_state[7] [95]));
   FDCE \state_out_reg[96] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(\state_out_reg[127]_0 [39]),
-        .Q(\round_state[8] [96]));
+        .Q(\round_state[7] [96]));
   FDCE \state_out_reg[97] 
        (.C(clk),
         .CE(enable),
@@ -22033,11 +21075,960 @@ module design_ascon_ascon_core_0_2_ascon_round_8
 endmodule
 
 (* ORIG_REF_NAME = "ascon_round" *) 
+module design_ascon_ascon_core_0_2_ascon_round_8
+   (add_const_state,
+    CO,
+    D,
+    Q,
+    S,
+    \state_out_reg[56]_0 ,
+    \state_out_reg[52]_0 ,
+    \state_out_reg[44]_0 ,
+    \state_out_reg[39]_0 ,
+    \state_out_reg[36]_0 ,
+    \state_out_reg[32]_0 ,
+    \state_out_reg[27]_0 ,
+    \state_out_reg[24]_0 ,
+    \state_out_reg[20]_0 ,
+    \state_out_reg[15]_0 ,
+    \state_out_reg[12]_0 ,
+    \state_out_reg[8]_0 ,
+    \state_out_reg[4]_0 ,
+    \state_out_reg[28]_0 ,
+    \state_out_reg[36]_1 ,
+    \state_out_reg[40]_0 ,
+    \state_out_reg[44]_1 ,
+    \state_out_reg[48]_0 ,
+    \state_out_reg[52]_1 ,
+    \state_out_reg[56]_1 ,
+    \state_out_reg[60]_0 ,
+    \state_out_reg[32]_1 ,
+    \state_out_reg[36]_2 ,
+    \state_out_reg[40]_1 ,
+    \state_out_reg[44]_2 ,
+    \state_out_reg[52]_2 ,
+    \state_out_reg[56]_2 ,
+    \state_out_reg[60]_1 ,
+    \state_out_reg[96]_0 ,
+    \state_out_reg[96]_1 ,
+    add_const_state_0,
+    \state_out_reg[127]_0 ,
+    enable,
+    clk,
+    rst);
+  output [62:0]add_const_state;
+  output [0:0]CO;
+  output [70:0]D;
+  output [119:0]Q;
+  output [1:0]S;
+  output [0:0]\state_out_reg[56]_0 ;
+  output [3:0]\state_out_reg[52]_0 ;
+  output [3:0]\state_out_reg[44]_0 ;
+  output [1:0]\state_out_reg[39]_0 ;
+  output [2:0]\state_out_reg[36]_0 ;
+  output [1:0]\state_out_reg[32]_0 ;
+  output [1:0]\state_out_reg[27]_0 ;
+  output [2:0]\state_out_reg[24]_0 ;
+  output [2:0]\state_out_reg[20]_0 ;
+  output [2:0]\state_out_reg[15]_0 ;
+  output [1:0]\state_out_reg[12]_0 ;
+  output [1:0]\state_out_reg[8]_0 ;
+  output [2:0]\state_out_reg[4]_0 ;
+  input [119:0]\state_out_reg[28]_0 ;
+  input [1:0]\state_out_reg[36]_1 ;
+  input [1:0]\state_out_reg[40]_0 ;
+  input [0:0]\state_out_reg[44]_1 ;
+  input [2:0]\state_out_reg[48]_0 ;
+  input [0:0]\state_out_reg[52]_1 ;
+  input [2:0]\state_out_reg[56]_1 ;
+  input [1:0]\state_out_reg[60]_0 ;
+  input [1:0]\state_out_reg[32]_1 ;
+  input [0:0]\state_out_reg[36]_2 ;
+  input [1:0]\state_out_reg[40]_1 ;
+  input [3:0]\state_out_reg[44]_2 ;
+  input [3:0]\state_out_reg[52]_2 ;
+  input [3:0]\state_out_reg[56]_2 ;
+  input [1:0]\state_out_reg[60]_1 ;
+  input [1:0]\state_out_reg[96]_0 ;
+  input [0:0]\state_out_reg[96]_1 ;
+  input [62:0]add_const_state_0;
+  input [70:0]\state_out_reg[127]_0 ;
+  input enable;
+  input clk;
+  input rst;
+
+  wire [0:0]CO;
+  wire [70:0]D;
+  wire [119:0]Q;
+  wire [1:0]S;
+  wire [62:0]add_const_state;
+  wire [62:0]add_const_state_0;
+  wire clk;
+  wire enable;
+  wire [127:93]\round_state[8] ;
+  wire rst;
+  wire [60:1]sbox_state;
+  wire [70:0]\state_out_reg[127]_0 ;
+  wire [1:0]\state_out_reg[12]_0 ;
+  wire [2:0]\state_out_reg[15]_0 ;
+  wire [2:0]\state_out_reg[20]_0 ;
+  wire [2:0]\state_out_reg[24]_0 ;
+  wire [1:0]\state_out_reg[27]_0 ;
+  wire [119:0]\state_out_reg[28]_0 ;
+  wire [1:0]\state_out_reg[32]_0 ;
+  wire [1:0]\state_out_reg[32]_1 ;
+  wire [2:0]\state_out_reg[36]_0 ;
+  wire [1:0]\state_out_reg[36]_1 ;
+  wire [0:0]\state_out_reg[36]_2 ;
+  wire [1:0]\state_out_reg[39]_0 ;
+  wire [1:0]\state_out_reg[40]_0 ;
+  wire [1:0]\state_out_reg[40]_1 ;
+  wire [3:0]\state_out_reg[44]_0 ;
+  wire [0:0]\state_out_reg[44]_1 ;
+  wire [3:0]\state_out_reg[44]_2 ;
+  wire [2:0]\state_out_reg[48]_0 ;
+  wire [2:0]\state_out_reg[4]_0 ;
+  wire [3:0]\state_out_reg[52]_0 ;
+  wire [0:0]\state_out_reg[52]_1 ;
+  wire [3:0]\state_out_reg[52]_2 ;
+  wire [0:0]\state_out_reg[56]_0 ;
+  wire [2:0]\state_out_reg[56]_1 ;
+  wire [3:0]\state_out_reg[56]_2 ;
+  wire [1:0]\state_out_reg[60]_0 ;
+  wire [1:0]\state_out_reg[60]_1 ;
+  wire [1:0]\state_out_reg[8]_0 ;
+  wire [1:0]\state_out_reg[96]_0 ;
+  wire [0:0]\state_out_reg[96]_1 ;
+
+  design_ascon_ascon_core_0_2_ascon_add_constant_10 constant_inst
+       (.CO(CO),
+        .Q({Q[56],Q[52:49],Q[44:41],Q[39:38],Q[36:35],Q[33:32],Q[30],Q[27],Q[25:24],Q[22:20],Q[18:17],Q[15:12],Q[9:7],Q[4:3],Q[1]}),
+        .add_const_state(add_const_state),
+        .\state_out_reg[12] (\state_out_reg[12]_0 ),
+        .\state_out_reg[15] (\state_out_reg[15]_0 ),
+        .\state_out_reg[20] (\state_out_reg[20]_0 ),
+        .\state_out_reg[24] (\state_out_reg[24]_0 ),
+        .\state_out_reg[27] (\state_out_reg[27]_0 ),
+        .\state_out_reg[32] (\state_out_reg[32]_0 ),
+        .\state_out_reg[32]_0 (\state_out_reg[32]_1 ),
+        .\state_out_reg[36] (\state_out_reg[36]_0 ),
+        .\state_out_reg[36]_0 (\state_out_reg[36]_1 ),
+        .\state_out_reg[36]_1 (\state_out_reg[36]_2 ),
+        .\state_out_reg[39] (\state_out_reg[39]_0 ),
+        .\state_out_reg[40] (\state_out_reg[40]_0 ),
+        .\state_out_reg[40]_0 (\state_out_reg[40]_1 ),
+        .\state_out_reg[44] (\state_out_reg[44]_0 ),
+        .\state_out_reg[44]_0 (\state_out_reg[44]_1 ),
+        .\state_out_reg[44]_1 (\state_out_reg[44]_2 ),
+        .\state_out_reg[48] (\state_out_reg[48]_0 ),
+        .\state_out_reg[4] (\state_out_reg[4]_0 ),
+        .\state_out_reg[52] (\state_out_reg[52]_0 ),
+        .\state_out_reg[52]_0 (\state_out_reg[52]_1 ),
+        .\state_out_reg[52]_1 (\state_out_reg[52]_2 ),
+        .\state_out_reg[56] (\state_out_reg[56]_0 ),
+        .\state_out_reg[56]_0 (\state_out_reg[56]_1 ),
+        .\state_out_reg[56]_1 (\state_out_reg[56]_2 ),
+        .\state_out_reg[60] (\state_out_reg[60]_0 ),
+        .\state_out_reg[60]_0 (\state_out_reg[60]_1 ),
+        .\state_out_reg[8] (\state_out_reg[8]_0 ),
+        .\state_out_reg[96] (\state_out_reg[28]_0 [63:0]),
+        .\state_out_reg[96]_0 (\state_out_reg[96]_0 ));
+  design_ascon_ascon_core_0_2_ascon_sbox_11 sbox_inst
+       (.D({sbox_state[60:33],sbox_state[28:1]}),
+        .Q({\round_state[8] [127:125],Q[119:92],\round_state[8] [96:93],Q[91:64],Q[0]}),
+        .add_const_state({add_const_state[59:32],add_const_state[27:0]}),
+        .add_const_state_0(add_const_state_0),
+        .\state_out_reg[127] (D[70:1]),
+        .\state_out_reg[28] (\state_out_reg[28]_0 [119:64]),
+        .\state_out_reg[96] (\state_out_reg[96]_1 ));
+  LUT1 #(
+    .INIT(2'h1)) 
+    state_out0_carry__14_i_1__4
+       (.I0(Q[63]),
+        .O(S[1]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    state_out0_carry__14_i_2__1
+       (.I0(Q[62]),
+        .O(S[0]));
+  LUT4 #(
+    .INIT(16'h9669)) 
+    \state_out[0]_i_1__7 
+       (.I0(\state_out_reg[96]_1 ),
+        .I1(add_const_state_0[31]),
+        .I2(\round_state[8] [96]),
+        .I3(Q[0]),
+        .O(D[0]));
+  FDCE \state_out_reg[0] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [0]),
+        .Q(Q[0]));
+  FDCE \state_out_reg[100] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [43]),
+        .Q(Q[95]));
+  FDCE \state_out_reg[101] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [44]),
+        .Q(Q[96]));
+  FDCE \state_out_reg[102] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [45]),
+        .Q(Q[97]));
+  FDCE \state_out_reg[103] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [46]),
+        .Q(Q[98]));
+  FDCE \state_out_reg[104] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [47]),
+        .Q(Q[99]));
+  FDCE \state_out_reg[105] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [48]),
+        .Q(Q[100]));
+  FDCE \state_out_reg[106] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [49]),
+        .Q(Q[101]));
+  FDCE \state_out_reg[107] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [50]),
+        .Q(Q[102]));
+  FDCE \state_out_reg[108] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [51]),
+        .Q(Q[103]));
+  FDCE \state_out_reg[109] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [52]),
+        .Q(Q[104]));
+  FDCE \state_out_reg[10] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[10]),
+        .Q(Q[10]));
+  FDCE \state_out_reg[110] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [53]),
+        .Q(Q[105]));
+  FDCE \state_out_reg[111] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [54]),
+        .Q(Q[106]));
+  FDCE \state_out_reg[112] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [55]),
+        .Q(Q[107]));
+  FDCE \state_out_reg[113] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [56]),
+        .Q(Q[108]));
+  FDCE \state_out_reg[114] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [57]),
+        .Q(Q[109]));
+  FDCE \state_out_reg[115] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [58]),
+        .Q(Q[110]));
+  FDCE \state_out_reg[116] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [59]),
+        .Q(Q[111]));
+  FDCE \state_out_reg[117] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [60]),
+        .Q(Q[112]));
+  FDCE \state_out_reg[118] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [61]),
+        .Q(Q[113]));
+  FDCE \state_out_reg[119] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [62]),
+        .Q(Q[114]));
+  FDCE \state_out_reg[11] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[11]),
+        .Q(Q[11]));
+  FDCE \state_out_reg[120] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [63]),
+        .Q(Q[115]));
+  FDCE \state_out_reg[121] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [64]),
+        .Q(Q[116]));
+  FDCE \state_out_reg[122] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [65]),
+        .Q(Q[117]));
+  FDCE \state_out_reg[123] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [66]),
+        .Q(Q[118]));
+  FDCE \state_out_reg[124] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [67]),
+        .Q(Q[119]));
+  FDCE \state_out_reg[125] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [68]),
+        .Q(\round_state[8] [125]));
+  FDCE \state_out_reg[126] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [69]),
+        .Q(\round_state[8] [126]));
+  FDCE \state_out_reg[127] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [70]),
+        .Q(\round_state[8] [127]));
+  FDCE \state_out_reg[12] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[12]),
+        .Q(Q[12]));
+  FDCE \state_out_reg[13] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[13]),
+        .Q(Q[13]));
+  FDCE \state_out_reg[14] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[14]),
+        .Q(Q[14]));
+  FDCE \state_out_reg[15] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[15]),
+        .Q(Q[15]));
+  FDCE \state_out_reg[16] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[16]),
+        .Q(Q[16]));
+  FDCE \state_out_reg[17] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[17]),
+        .Q(Q[17]));
+  FDCE \state_out_reg[18] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[18]),
+        .Q(Q[18]));
+  FDCE \state_out_reg[19] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[19]),
+        .Q(Q[19]));
+  FDCE \state_out_reg[1] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[1]),
+        .Q(Q[1]));
+  FDCE \state_out_reg[20] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[20]),
+        .Q(Q[20]));
+  FDCE \state_out_reg[21] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[21]),
+        .Q(Q[21]));
+  FDCE \state_out_reg[22] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[22]),
+        .Q(Q[22]));
+  FDCE \state_out_reg[23] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[23]),
+        .Q(Q[23]));
+  FDCE \state_out_reg[24] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[24]),
+        .Q(Q[24]));
+  FDCE \state_out_reg[25] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[25]),
+        .Q(Q[25]));
+  FDCE \state_out_reg[26] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[26]),
+        .Q(Q[26]));
+  FDCE \state_out_reg[27] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[27]),
+        .Q(Q[27]));
+  FDCE \state_out_reg[28] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[28]),
+        .Q(Q[28]));
+  FDCE \state_out_reg[29] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [1]),
+        .Q(Q[29]));
+  FDCE \state_out_reg[2] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[2]),
+        .Q(Q[2]));
+  FDCE \state_out_reg[30] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [2]),
+        .Q(Q[30]));
+  FDCE \state_out_reg[31] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [3]),
+        .Q(Q[31]));
+  FDCE \state_out_reg[32] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [4]),
+        .Q(Q[32]));
+  FDCE \state_out_reg[33] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[33]),
+        .Q(Q[33]));
+  FDCE \state_out_reg[34] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[34]),
+        .Q(Q[34]));
+  FDCE \state_out_reg[35] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[35]),
+        .Q(Q[35]));
+  FDCE \state_out_reg[36] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[36]),
+        .Q(Q[36]));
+  FDCE \state_out_reg[37] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[37]),
+        .Q(Q[37]));
+  FDCE \state_out_reg[38] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[38]),
+        .Q(Q[38]));
+  FDCE \state_out_reg[39] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[39]),
+        .Q(Q[39]));
+  FDCE \state_out_reg[3] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[3]),
+        .Q(Q[3]));
+  FDCE \state_out_reg[40] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[40]),
+        .Q(Q[40]));
+  FDCE \state_out_reg[41] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[41]),
+        .Q(Q[41]));
+  FDCE \state_out_reg[42] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[42]),
+        .Q(Q[42]));
+  FDCE \state_out_reg[43] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[43]),
+        .Q(Q[43]));
+  FDCE \state_out_reg[44] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[44]),
+        .Q(Q[44]));
+  FDCE \state_out_reg[45] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[45]),
+        .Q(Q[45]));
+  FDCE \state_out_reg[46] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[46]),
+        .Q(Q[46]));
+  FDCE \state_out_reg[47] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[47]),
+        .Q(Q[47]));
+  FDCE \state_out_reg[48] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[48]),
+        .Q(Q[48]));
+  FDCE \state_out_reg[49] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[49]),
+        .Q(Q[49]));
+  FDCE \state_out_reg[4] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[4]),
+        .Q(Q[4]));
+  FDCE \state_out_reg[50] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[50]),
+        .Q(Q[50]));
+  FDCE \state_out_reg[51] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[51]),
+        .Q(Q[51]));
+  FDCE \state_out_reg[52] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[52]),
+        .Q(Q[52]));
+  FDCE \state_out_reg[53] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[53]),
+        .Q(Q[53]));
+  FDCE \state_out_reg[54] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[54]),
+        .Q(Q[54]));
+  FDCE \state_out_reg[55] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[55]),
+        .Q(Q[55]));
+  FDCE \state_out_reg[56] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[56]),
+        .Q(Q[56]));
+  FDCE \state_out_reg[57] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[57]),
+        .Q(Q[57]));
+  FDCE \state_out_reg[58] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[58]),
+        .Q(Q[58]));
+  FDCE \state_out_reg[59] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[59]),
+        .Q(Q[59]));
+  FDCE \state_out_reg[5] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[5]),
+        .Q(Q[5]));
+  FDCE \state_out_reg[60] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[60]),
+        .Q(Q[60]));
+  FDCE \state_out_reg[61] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [5]),
+        .Q(Q[61]));
+  FDCE \state_out_reg[62] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [6]),
+        .Q(Q[62]));
+  FDCE \state_out_reg[63] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [7]),
+        .Q(Q[63]));
+  FDCE \state_out_reg[65] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [8]),
+        .Q(Q[64]));
+  FDCE \state_out_reg[66] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [9]),
+        .Q(Q[65]));
+  FDCE \state_out_reg[67] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [10]),
+        .Q(Q[66]));
+  FDCE \state_out_reg[68] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [11]),
+        .Q(Q[67]));
+  FDCE \state_out_reg[69] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [12]),
+        .Q(Q[68]));
+  FDCE \state_out_reg[6] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[6]),
+        .Q(Q[6]));
+  FDCE \state_out_reg[70] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [13]),
+        .Q(Q[69]));
+  FDCE \state_out_reg[71] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [14]),
+        .Q(Q[70]));
+  FDCE \state_out_reg[72] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [15]),
+        .Q(Q[71]));
+  FDCE \state_out_reg[73] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [16]),
+        .Q(Q[72]));
+  FDCE \state_out_reg[74] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [17]),
+        .Q(Q[73]));
+  FDCE \state_out_reg[75] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [18]),
+        .Q(Q[74]));
+  FDCE \state_out_reg[76] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [19]),
+        .Q(Q[75]));
+  FDCE \state_out_reg[77] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [20]),
+        .Q(Q[76]));
+  FDCE \state_out_reg[78] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [21]),
+        .Q(Q[77]));
+  FDCE \state_out_reg[79] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [22]),
+        .Q(Q[78]));
+  FDCE \state_out_reg[7] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[7]),
+        .Q(Q[7]));
+  FDCE \state_out_reg[80] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [23]),
+        .Q(Q[79]));
+  FDCE \state_out_reg[81] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [24]),
+        .Q(Q[80]));
+  FDCE \state_out_reg[82] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [25]),
+        .Q(Q[81]));
+  FDCE \state_out_reg[83] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [26]),
+        .Q(Q[82]));
+  FDCE \state_out_reg[84] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [27]),
+        .Q(Q[83]));
+  FDCE \state_out_reg[85] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [28]),
+        .Q(Q[84]));
+  FDCE \state_out_reg[86] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [29]),
+        .Q(Q[85]));
+  FDCE \state_out_reg[87] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [30]),
+        .Q(Q[86]));
+  FDCE \state_out_reg[88] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [31]),
+        .Q(Q[87]));
+  FDCE \state_out_reg[89] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [32]),
+        .Q(Q[88]));
+  FDCE \state_out_reg[8] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[8]),
+        .Q(Q[8]));
+  FDCE \state_out_reg[90] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [33]),
+        .Q(Q[89]));
+  FDCE \state_out_reg[91] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [34]),
+        .Q(Q[90]));
+  FDCE \state_out_reg[92] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [35]),
+        .Q(Q[91]));
+  FDCE \state_out_reg[93] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [36]),
+        .Q(\round_state[8] [93]));
+  FDCE \state_out_reg[94] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [37]),
+        .Q(\round_state[8] [94]));
+  FDCE \state_out_reg[95] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [38]),
+        .Q(\round_state[8] [95]));
+  FDCE \state_out_reg[96] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [39]),
+        .Q(\round_state[8] [96]));
+  FDCE \state_out_reg[97] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [40]),
+        .Q(Q[92]));
+  FDCE \state_out_reg[98] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [41]),
+        .Q(Q[93]));
+  FDCE \state_out_reg[99] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(\state_out_reg[127]_0 [42]),
+        .Q(Q[94]));
+  FDCE \state_out_reg[9] 
+       (.C(clk),
+        .CE(enable),
+        .CLR(rst),
+        .D(sbox_state[9]),
+        .Q(Q[9]));
+endmodule
+
+(* ORIG_REF_NAME = "ascon_round" *) 
 module design_ascon_ascon_core_0_2_ascon_round_9
    (add_const_state,
     \state_out_reg[63]_0 ,
     \state_out_reg[127]_0 ,
-    Q,
+    \state_out_reg[123]_0 ,
     \state_out_reg[31]_0 ,
     \state_out_reg[26]_0 ,
     \state_out_reg[23]_0 ,
@@ -22051,7 +22042,7 @@ module design_ascon_ascon_core_0_2_ascon_round_9
     \state_out_reg[41]_0 ,
     \state_out_reg[39]_0 ,
     \state_out_reg[34]_0 ,
-    \state_out_reg[28]_0 ,
+    Q,
     \state_out_reg[36]_0 ,
     \state_out_reg[40]_0 ,
     \state_out_reg[44]_0 ,
@@ -22075,7 +22066,7 @@ module design_ascon_ascon_core_0_2_ascon_round_9
   output [62:0]add_const_state;
   output [0:0]\state_out_reg[63]_0 ;
   output [78:0]\state_out_reg[127]_0 ;
-  output [108:0]Q;
+  output [108:0]\state_out_reg[123]_0 ;
   output [2:0]\state_out_reg[31]_0 ;
   output [1:0]\state_out_reg[26]_0 ;
   output [2:0]\state_out_reg[23]_0 ;
@@ -22089,7 +22080,7 @@ module design_ascon_ascon_core_0_2_ascon_round_9
   output [0:0]\state_out_reg[41]_0 ;
   output [1:0]\state_out_reg[39]_0 ;
   output [0:0]\state_out_reg[34]_0 ;
-  input [119:0]\state_out_reg[28]_0 ;
+  input [119:0]Q;
   input [2:0]\state_out_reg[36]_0 ;
   input [1:0]\state_out_reg[40]_0 ;
   input [1:0]\state_out_reg[44]_0 ;
@@ -22113,7 +22104,7 @@ module design_ascon_ascon_core_0_2_ascon_round_9
 
   wire [0:0]CO;
   wire [70:0]D;
-  wire [108:0]Q;
+  wire [119:0]Q;
   wire [1:0]S;
   wire [62:0]add_const_state;
   wire [59:0]add_const_state_0;
@@ -22123,11 +22114,11 @@ module design_ascon_ascon_core_0_2_ascon_round_9
   wire rst;
   wire [60:1]sbox_state;
   wire [0:0]\state_out_reg[11]_0 ;
+  wire [108:0]\state_out_reg[123]_0 ;
   wire [78:0]\state_out_reg[127]_0 ;
   wire [2:0]\state_out_reg[18]_0 ;
   wire [2:0]\state_out_reg[23]_0 ;
   wire [1:0]\state_out_reg[26]_0 ;
-  wire [119:0]\state_out_reg[28]_0 ;
   wire [2:0]\state_out_reg[31]_0 ;
   wire [1:0]\state_out_reg[32]_0 ;
   wire [0:0]\state_out_reg[34]_0 ;
@@ -22156,9 +22147,10 @@ module design_ascon_ascon_core_0_2_ascon_round_9
   wire [3:0]\NLW_state_out_reg[96]_i_2_O_UNCONNECTED ;
 
   design_ascon_ascon_core_0_2_ascon_add_constant constant_inst
-       (.Q({Q[56:53],Q[49:47],Q[45],Q[42:41],Q[38],Q[36:35],Q[31],Q[28:27],Q[25],Q[23:22],Q[20],Q[18:17],Q[15:13],Q[8],Q[3],Q[1]}),
+       (.Q(Q[63:0]),
         .S(S),
         .add_const_state(add_const_state),
+        .state_out0_carry__12_0({\state_out_reg[123]_0 [56:53],\state_out_reg[123]_0 [49:47],\state_out_reg[123]_0 [45],\state_out_reg[123]_0 [42:41],\state_out_reg[123]_0 [38],\state_out_reg[123]_0 [36:35],\state_out_reg[123]_0 [31],\state_out_reg[123]_0 [28:27],\state_out_reg[123]_0 [25],\state_out_reg[123]_0 [23:22],\state_out_reg[123]_0 [20],\state_out_reg[123]_0 [18:17],\state_out_reg[123]_0 [15:13],\state_out_reg[123]_0 [8],\state_out_reg[123]_0 [3],\state_out_reg[123]_0 [1]}),
         .\state_out_reg[11] (\state_out_reg[11]_0 ),
         .\state_out_reg[18] (\state_out_reg[18]_0 ),
         .\state_out_reg[23] (\state_out_reg[23]_0 ),
@@ -22185,16 +22177,15 @@ module design_ascon_ascon_core_0_2_ascon_round_9
         .\state_out_reg[59] (\state_out_reg[59]_0 ),
         .\state_out_reg[60] (\state_out_reg[60]_0 ),
         .\state_out_reg[63] (\state_out_reg[63]_0 ),
-        .\state_out_reg[6] (\state_out_reg[6]_0 ),
-        .\state_out_reg[96] (\state_out_reg[28]_0 [63:0]));
+        .\state_out_reg[6] (\state_out_reg[6]_0 ));
   design_ascon_ascon_core_0_2_ascon_sbox sbox_inst
        (.CO(\state_out_reg[96]_i_2_n_3 ),
         .D({sbox_state[60:33],sbox_state[28:1]}),
-        .Q({\round_state[9] [127:124],Q[108:85],\round_state[9] [99:92],Q[84:61],\round_state[9] [67:65],Q[0],\round_state[9] [2:0]}),
+        .Q(Q[119:64]),
         .add_const_state({add_const_state[59:32],add_const_state[27:0]}),
         .add_const_state_0(add_const_state_0),
         .\state_out_reg[127] ({\state_out_reg[127]_0 [78:4],\state_out_reg[127]_0 [2:1]}),
-        .\state_out_reg[28] (\state_out_reg[28]_0 [119:64]));
+        .\state_out_reg[31] ({\round_state[9] [127:124],\state_out_reg[123]_0 [108:85],\round_state[9] [99:92],\state_out_reg[123]_0 [84:61],\round_state[9] [67:65],\state_out_reg[123]_0 [0],\round_state[9] [2:0]}));
   LUT4 #(
     .INIT(16'h6996)) 
     \state_out[0]_i_1__8 
@@ -22206,7 +22197,7 @@ module design_ascon_ascon_core_0_2_ascon_round_9
   LUT3 #(
     .INIT(8'h65)) 
     \state_out[3]_i_1 
-       (.I0(Q[0]),
+       (.I0(\state_out_reg[123]_0 [0]),
         .I1(\round_state[9] [99]),
         .I2(add_const_state_0[31]),
         .O(\state_out_reg[127]_0 [3]));
@@ -22221,157 +22212,157 @@ module design_ascon_ascon_core_0_2_ascon_round_9
         .CE(enable),
         .CLR(rst),
         .D(D[43]),
-        .Q(Q[85]));
+        .Q(\state_out_reg[123]_0 [85]));
   FDCE \state_out_reg[101] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[44]),
-        .Q(Q[86]));
+        .Q(\state_out_reg[123]_0 [86]));
   FDCE \state_out_reg[102] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[45]),
-        .Q(Q[87]));
+        .Q(\state_out_reg[123]_0 [87]));
   FDCE \state_out_reg[103] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[46]),
-        .Q(Q[88]));
+        .Q(\state_out_reg[123]_0 [88]));
   FDCE \state_out_reg[104] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[47]),
-        .Q(Q[89]));
+        .Q(\state_out_reg[123]_0 [89]));
   FDCE \state_out_reg[105] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[48]),
-        .Q(Q[90]));
+        .Q(\state_out_reg[123]_0 [90]));
   FDCE \state_out_reg[106] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[49]),
-        .Q(Q[91]));
+        .Q(\state_out_reg[123]_0 [91]));
   FDCE \state_out_reg[107] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[50]),
-        .Q(Q[92]));
+        .Q(\state_out_reg[123]_0 [92]));
   FDCE \state_out_reg[108] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[51]),
-        .Q(Q[93]));
+        .Q(\state_out_reg[123]_0 [93]));
   FDCE \state_out_reg[109] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[52]),
-        .Q(Q[94]));
+        .Q(\state_out_reg[123]_0 [94]));
   FDCE \state_out_reg[10] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[10]),
-        .Q(Q[7]));
+        .Q(\state_out_reg[123]_0 [7]));
   FDCE \state_out_reg[110] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[53]),
-        .Q(Q[95]));
+        .Q(\state_out_reg[123]_0 [95]));
   FDCE \state_out_reg[111] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[54]),
-        .Q(Q[96]));
+        .Q(\state_out_reg[123]_0 [96]));
   FDCE \state_out_reg[112] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[55]),
-        .Q(Q[97]));
+        .Q(\state_out_reg[123]_0 [97]));
   FDCE \state_out_reg[113] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[56]),
-        .Q(Q[98]));
+        .Q(\state_out_reg[123]_0 [98]));
   FDCE \state_out_reg[114] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[57]),
-        .Q(Q[99]));
+        .Q(\state_out_reg[123]_0 [99]));
   FDCE \state_out_reg[115] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[58]),
-        .Q(Q[100]));
+        .Q(\state_out_reg[123]_0 [100]));
   FDCE \state_out_reg[116] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[59]),
-        .Q(Q[101]));
+        .Q(\state_out_reg[123]_0 [101]));
   FDCE \state_out_reg[117] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[60]),
-        .Q(Q[102]));
+        .Q(\state_out_reg[123]_0 [102]));
   FDCE \state_out_reg[118] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[61]),
-        .Q(Q[103]));
+        .Q(\state_out_reg[123]_0 [103]));
   FDCE \state_out_reg[119] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[62]),
-        .Q(Q[104]));
+        .Q(\state_out_reg[123]_0 [104]));
   FDCE \state_out_reg[11] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[11]),
-        .Q(Q[8]));
+        .Q(\state_out_reg[123]_0 [8]));
   FDCE \state_out_reg[120] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[63]),
-        .Q(Q[105]));
+        .Q(\state_out_reg[123]_0 [105]));
   FDCE \state_out_reg[121] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[64]),
-        .Q(Q[106]));
+        .Q(\state_out_reg[123]_0 [106]));
   FDCE \state_out_reg[122] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[65]),
-        .Q(Q[107]));
+        .Q(\state_out_reg[123]_0 [107]));
   FDCE \state_out_reg[123] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[66]),
-        .Q(Q[108]));
+        .Q(\state_out_reg[123]_0 [108]));
   FDCE \state_out_reg[124] 
        (.C(clk),
         .CE(enable),
@@ -22401,49 +22392,49 @@ module design_ascon_ascon_core_0_2_ascon_round_9
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[12]),
-        .Q(Q[9]));
+        .Q(\state_out_reg[123]_0 [9]));
   FDCE \state_out_reg[13] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[13]),
-        .Q(Q[10]));
+        .Q(\state_out_reg[123]_0 [10]));
   FDCE \state_out_reg[14] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[14]),
-        .Q(Q[11]));
+        .Q(\state_out_reg[123]_0 [11]));
   FDCE \state_out_reg[15] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[15]),
-        .Q(Q[12]));
+        .Q(\state_out_reg[123]_0 [12]));
   FDCE \state_out_reg[16] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[16]),
-        .Q(Q[13]));
+        .Q(\state_out_reg[123]_0 [13]));
   FDCE \state_out_reg[17] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[17]),
-        .Q(Q[14]));
+        .Q(\state_out_reg[123]_0 [14]));
   FDCE \state_out_reg[18] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[18]),
-        .Q(Q[15]));
+        .Q(\state_out_reg[123]_0 [15]));
   FDCE \state_out_reg[19] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[19]),
-        .Q(Q[16]));
+        .Q(\state_out_reg[123]_0 [16]));
   FDCE \state_out_reg[1] 
        (.C(clk),
         .CE(enable),
@@ -22455,61 +22446,61 @@ module design_ascon_ascon_core_0_2_ascon_round_9
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[20]),
-        .Q(Q[17]));
+        .Q(\state_out_reg[123]_0 [17]));
   FDCE \state_out_reg[21] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[21]),
-        .Q(Q[18]));
+        .Q(\state_out_reg[123]_0 [18]));
   FDCE \state_out_reg[22] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[22]),
-        .Q(Q[19]));
+        .Q(\state_out_reg[123]_0 [19]));
   FDCE \state_out_reg[23] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[23]),
-        .Q(Q[20]));
+        .Q(\state_out_reg[123]_0 [20]));
   FDCE \state_out_reg[24] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[24]),
-        .Q(Q[21]));
+        .Q(\state_out_reg[123]_0 [21]));
   FDCE \state_out_reg[25] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[25]),
-        .Q(Q[22]));
+        .Q(\state_out_reg[123]_0 [22]));
   FDCE \state_out_reg[26] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[26]),
-        .Q(Q[23]));
+        .Q(\state_out_reg[123]_0 [23]));
   FDCE \state_out_reg[27] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[27]),
-        .Q(Q[24]));
+        .Q(\state_out_reg[123]_0 [24]));
   FDCE \state_out_reg[28] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[28]),
-        .Q(Q[25]));
+        .Q(\state_out_reg[123]_0 [25]));
   FDCE \state_out_reg[29] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[1]),
-        .Q(Q[26]));
+        .Q(\state_out_reg[123]_0 [26]));
   FDCE \state_out_reg[2] 
        (.C(clk),
         .CE(enable),
@@ -22521,223 +22512,223 @@ module design_ascon_ascon_core_0_2_ascon_round_9
         .CE(enable),
         .CLR(rst),
         .D(D[2]),
-        .Q(Q[27]));
+        .Q(\state_out_reg[123]_0 [27]));
   FDCE \state_out_reg[31] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[3]),
-        .Q(Q[28]));
+        .Q(\state_out_reg[123]_0 [28]));
   FDCE \state_out_reg[32] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[4]),
-        .Q(Q[29]));
+        .Q(\state_out_reg[123]_0 [29]));
   FDCE \state_out_reg[33] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[33]),
-        .Q(Q[30]));
+        .Q(\state_out_reg[123]_0 [30]));
   FDCE \state_out_reg[34] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[34]),
-        .Q(Q[31]));
+        .Q(\state_out_reg[123]_0 [31]));
   FDCE \state_out_reg[35] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[35]),
-        .Q(Q[32]));
+        .Q(\state_out_reg[123]_0 [32]));
   FDCE \state_out_reg[36] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[36]),
-        .Q(Q[33]));
+        .Q(\state_out_reg[123]_0 [33]));
   FDCE \state_out_reg[37] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[37]),
-        .Q(Q[34]));
+        .Q(\state_out_reg[123]_0 [34]));
   FDCE \state_out_reg[38] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[38]),
-        .Q(Q[35]));
+        .Q(\state_out_reg[123]_0 [35]));
   FDCE \state_out_reg[39] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[39]),
-        .Q(Q[36]));
+        .Q(\state_out_reg[123]_0 [36]));
   FDCE \state_out_reg[3] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[3]),
-        .Q(Q[0]));
+        .Q(\state_out_reg[123]_0 [0]));
   FDCE \state_out_reg[40] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[40]),
-        .Q(Q[37]));
+        .Q(\state_out_reg[123]_0 [37]));
   FDCE \state_out_reg[41] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[41]),
-        .Q(Q[38]));
+        .Q(\state_out_reg[123]_0 [38]));
   FDCE \state_out_reg[42] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[42]),
-        .Q(Q[39]));
+        .Q(\state_out_reg[123]_0 [39]));
   FDCE \state_out_reg[43] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[43]),
-        .Q(Q[40]));
+        .Q(\state_out_reg[123]_0 [40]));
   FDCE \state_out_reg[44] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[44]),
-        .Q(Q[41]));
+        .Q(\state_out_reg[123]_0 [41]));
   FDCE \state_out_reg[45] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[45]),
-        .Q(Q[42]));
+        .Q(\state_out_reg[123]_0 [42]));
   FDCE \state_out_reg[46] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[46]),
-        .Q(Q[43]));
+        .Q(\state_out_reg[123]_0 [43]));
   FDCE \state_out_reg[47] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[47]),
-        .Q(Q[44]));
+        .Q(\state_out_reg[123]_0 [44]));
   FDCE \state_out_reg[48] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[48]),
-        .Q(Q[45]));
+        .Q(\state_out_reg[123]_0 [45]));
   FDCE \state_out_reg[49] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[49]),
-        .Q(Q[46]));
+        .Q(\state_out_reg[123]_0 [46]));
   FDCE \state_out_reg[4] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[4]),
-        .Q(Q[1]));
+        .Q(\state_out_reg[123]_0 [1]));
   FDCE \state_out_reg[50] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[50]),
-        .Q(Q[47]));
+        .Q(\state_out_reg[123]_0 [47]));
   FDCE \state_out_reg[51] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[51]),
-        .Q(Q[48]));
+        .Q(\state_out_reg[123]_0 [48]));
   FDCE \state_out_reg[52] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[52]),
-        .Q(Q[49]));
+        .Q(\state_out_reg[123]_0 [49]));
   FDCE \state_out_reg[53] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[53]),
-        .Q(Q[50]));
+        .Q(\state_out_reg[123]_0 [50]));
   FDCE \state_out_reg[54] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[54]),
-        .Q(Q[51]));
+        .Q(\state_out_reg[123]_0 [51]));
   FDCE \state_out_reg[55] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[55]),
-        .Q(Q[52]));
+        .Q(\state_out_reg[123]_0 [52]));
   FDCE \state_out_reg[56] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[56]),
-        .Q(Q[53]));
+        .Q(\state_out_reg[123]_0 [53]));
   FDCE \state_out_reg[57] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[57]),
-        .Q(Q[54]));
+        .Q(\state_out_reg[123]_0 [54]));
   FDCE \state_out_reg[58] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[58]),
-        .Q(Q[55]));
+        .Q(\state_out_reg[123]_0 [55]));
   FDCE \state_out_reg[59] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[59]),
-        .Q(Q[56]));
+        .Q(\state_out_reg[123]_0 [56]));
   FDCE \state_out_reg[5] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[5]),
-        .Q(Q[2]));
+        .Q(\state_out_reg[123]_0 [2]));
   FDCE \state_out_reg[60] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[60]),
-        .Q(Q[57]));
+        .Q(\state_out_reg[123]_0 [57]));
   FDCE \state_out_reg[61] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[5]),
-        .Q(Q[58]));
+        .Q(\state_out_reg[123]_0 [58]));
   FDCE \state_out_reg[62] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[6]),
-        .Q(Q[59]));
+        .Q(\state_out_reg[123]_0 [59]));
   FDCE \state_out_reg[63] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[7]),
-        .Q(Q[60]));
+        .Q(\state_out_reg[123]_0 [60]));
   FDCE \state_out_reg[65] 
        (.C(clk),
         .CE(enable),
@@ -22761,163 +22752,163 @@ module design_ascon_ascon_core_0_2_ascon_round_9
         .CE(enable),
         .CLR(rst),
         .D(D[11]),
-        .Q(Q[61]));
+        .Q(\state_out_reg[123]_0 [61]));
   FDCE \state_out_reg[69] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[12]),
-        .Q(Q[62]));
+        .Q(\state_out_reg[123]_0 [62]));
   FDCE \state_out_reg[6] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[6]),
-        .Q(Q[3]));
+        .Q(\state_out_reg[123]_0 [3]));
   FDCE \state_out_reg[70] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[13]),
-        .Q(Q[63]));
+        .Q(\state_out_reg[123]_0 [63]));
   FDCE \state_out_reg[71] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[14]),
-        .Q(Q[64]));
+        .Q(\state_out_reg[123]_0 [64]));
   FDCE \state_out_reg[72] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[15]),
-        .Q(Q[65]));
+        .Q(\state_out_reg[123]_0 [65]));
   FDCE \state_out_reg[73] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[16]),
-        .Q(Q[66]));
+        .Q(\state_out_reg[123]_0 [66]));
   FDCE \state_out_reg[74] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[17]),
-        .Q(Q[67]));
+        .Q(\state_out_reg[123]_0 [67]));
   FDCE \state_out_reg[75] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[18]),
-        .Q(Q[68]));
+        .Q(\state_out_reg[123]_0 [68]));
   FDCE \state_out_reg[76] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[19]),
-        .Q(Q[69]));
+        .Q(\state_out_reg[123]_0 [69]));
   FDCE \state_out_reg[77] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[20]),
-        .Q(Q[70]));
+        .Q(\state_out_reg[123]_0 [70]));
   FDCE \state_out_reg[78] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[21]),
-        .Q(Q[71]));
+        .Q(\state_out_reg[123]_0 [71]));
   FDCE \state_out_reg[79] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[22]),
-        .Q(Q[72]));
+        .Q(\state_out_reg[123]_0 [72]));
   FDCE \state_out_reg[7] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[7]),
-        .Q(Q[4]));
+        .Q(\state_out_reg[123]_0 [4]));
   FDCE \state_out_reg[80] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[23]),
-        .Q(Q[73]));
+        .Q(\state_out_reg[123]_0 [73]));
   FDCE \state_out_reg[81] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[24]),
-        .Q(Q[74]));
+        .Q(\state_out_reg[123]_0 [74]));
   FDCE \state_out_reg[82] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[25]),
-        .Q(Q[75]));
+        .Q(\state_out_reg[123]_0 [75]));
   FDCE \state_out_reg[83] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[26]),
-        .Q(Q[76]));
+        .Q(\state_out_reg[123]_0 [76]));
   FDCE \state_out_reg[84] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[27]),
-        .Q(Q[77]));
+        .Q(\state_out_reg[123]_0 [77]));
   FDCE \state_out_reg[85] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[28]),
-        .Q(Q[78]));
+        .Q(\state_out_reg[123]_0 [78]));
   FDCE \state_out_reg[86] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[29]),
-        .Q(Q[79]));
+        .Q(\state_out_reg[123]_0 [79]));
   FDCE \state_out_reg[87] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[30]),
-        .Q(Q[80]));
+        .Q(\state_out_reg[123]_0 [80]));
   FDCE \state_out_reg[88] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[31]),
-        .Q(Q[81]));
+        .Q(\state_out_reg[123]_0 [81]));
   FDCE \state_out_reg[89] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[32]),
-        .Q(Q[82]));
+        .Q(\state_out_reg[123]_0 [82]));
   FDCE \state_out_reg[8] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[8]),
-        .Q(Q[5]));
+        .Q(\state_out_reg[123]_0 [5]));
   FDCE \state_out_reg[90] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[33]),
-        .Q(Q[83]));
+        .Q(\state_out_reg[123]_0 [83]));
   FDCE \state_out_reg[91] 
        (.C(clk),
         .CE(enable),
         .CLR(rst),
         .D(D[34]),
-        .Q(Q[84]));
+        .Q(\state_out_reg[123]_0 [84]));
   FDCE \state_out_reg[92] 
        (.C(clk),
         .CE(enable),
@@ -22978,7 +22969,7 @@ module design_ascon_ascon_core_0_2_ascon_round_9
         .CE(enable),
         .CLR(rst),
         .D(sbox_state[9]),
-        .Q(Q[6]));
+        .Q(\state_out_reg[123]_0 [6]));
 endmodule
 
 (* ORIG_REF_NAME = "ascon_sbox" *) 
@@ -22986,416 +22977,416 @@ module design_ascon_ascon_core_0_2_ascon_sbox
    (D,
     \state_out_reg[127] ,
     add_const_state,
-    \state_out_reg[28] ,
     Q,
+    \state_out_reg[31] ,
     add_const_state_0,
     CO);
   output [55:0]D;
   output [76:0]\state_out_reg[127] ;
   input [55:0]add_const_state;
-  input [55:0]\state_out_reg[28] ;
-  input [66:0]Q;
+  input [55:0]Q;
+  input [66:0]\state_out_reg[31] ;
   input [59:0]add_const_state_0;
   input [0:0]CO;
 
   wire [0:0]CO;
   wire [55:0]D;
-  wire [66:0]Q;
+  wire [55:0]Q;
   wire [55:0]add_const_state;
   wire [59:0]add_const_state_0;
   wire [76:0]\state_out_reg[127] ;
-  wire [55:0]\state_out_reg[28] ;
+  wire [66:0]\state_out_reg[31] ;
 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[100]_i_1__8 
-       (.I0(Q[39]),
-        .I1(Q[7]),
+       (.I0(\state_out_reg[31] [39]),
+        .I1(\state_out_reg[31] [7]),
         .I2(add_const_state_0[0]),
         .O(\state_out_reg[127] [49]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[101]_i_1__8 
-       (.I0(Q[40]),
-        .I1(Q[8]),
+       (.I0(\state_out_reg[31] [40]),
+        .I1(\state_out_reg[31] [8]),
         .I2(add_const_state_0[1]),
         .O(\state_out_reg[127] [50]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[102]_i_1__8 
-       (.I0(Q[41]),
-        .I1(Q[9]),
+       (.I0(\state_out_reg[31] [41]),
+        .I1(\state_out_reg[31] [9]),
         .I2(add_const_state_0[2]),
         .O(\state_out_reg[127] [51]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[103]_i_1__8 
-       (.I0(Q[42]),
-        .I1(Q[10]),
+       (.I0(\state_out_reg[31] [42]),
+        .I1(\state_out_reg[31] [10]),
         .I2(add_const_state_0[3]),
         .O(\state_out_reg[127] [52]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[104]_i_1__8 
-       (.I0(Q[43]),
-        .I1(Q[11]),
+       (.I0(\state_out_reg[31] [43]),
+        .I1(\state_out_reg[31] [11]),
         .I2(add_const_state_0[4]),
         .O(\state_out_reg[127] [53]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[105]_i_1__8 
-       (.I0(Q[44]),
-        .I1(Q[12]),
+       (.I0(\state_out_reg[31] [44]),
+        .I1(\state_out_reg[31] [12]),
         .I2(add_const_state_0[5]),
         .O(\state_out_reg[127] [54]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[106]_i_1__8 
-       (.I0(Q[45]),
-        .I1(Q[13]),
+       (.I0(\state_out_reg[31] [45]),
+        .I1(\state_out_reg[31] [13]),
         .I2(add_const_state_0[6]),
         .O(\state_out_reg[127] [55]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[107]_i_1__8 
-       (.I0(Q[46]),
-        .I1(Q[14]),
+       (.I0(\state_out_reg[31] [46]),
+        .I1(\state_out_reg[31] [14]),
         .I2(add_const_state_0[7]),
         .O(\state_out_reg[127] [56]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[108]_i_1__8 
-       (.I0(Q[47]),
-        .I1(Q[15]),
+       (.I0(\state_out_reg[31] [47]),
+        .I1(\state_out_reg[31] [15]),
         .I2(add_const_state_0[8]),
         .O(\state_out_reg[127] [57]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[109]_i_1__8 
-       (.I0(Q[48]),
-        .I1(Q[16]),
+       (.I0(\state_out_reg[31] [48]),
+        .I1(\state_out_reg[31] [16]),
         .I2(add_const_state_0[9]),
         .O(\state_out_reg[127] [58]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[10]_i_1__7 
        (.I0(add_const_state[9]),
-        .I1(\state_out_reg[28] [37]),
+        .I1(Q[37]),
         .I2(add_const_state[37]),
         .O(D[9]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[110]_i_1__8 
-       (.I0(Q[49]),
-        .I1(Q[17]),
+       (.I0(\state_out_reg[31] [49]),
+        .I1(\state_out_reg[31] [17]),
         .I2(add_const_state_0[10]),
         .O(\state_out_reg[127] [59]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[111]_i_1__8 
-       (.I0(Q[50]),
-        .I1(Q[18]),
+       (.I0(\state_out_reg[31] [50]),
+        .I1(\state_out_reg[31] [18]),
         .I2(add_const_state_0[11]),
         .O(\state_out_reg[127] [60]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[112]_i_1__8 
-       (.I0(Q[51]),
-        .I1(Q[19]),
+       (.I0(\state_out_reg[31] [51]),
+        .I1(\state_out_reg[31] [19]),
         .I2(add_const_state_0[12]),
         .O(\state_out_reg[127] [61]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[113]_i_1__8 
-       (.I0(Q[52]),
-        .I1(Q[20]),
+       (.I0(\state_out_reg[31] [52]),
+        .I1(\state_out_reg[31] [20]),
         .I2(add_const_state_0[13]),
         .O(\state_out_reg[127] [62]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[114]_i_1__8 
-       (.I0(Q[53]),
-        .I1(Q[21]),
+       (.I0(\state_out_reg[31] [53]),
+        .I1(\state_out_reg[31] [21]),
         .I2(add_const_state_0[14]),
         .O(\state_out_reg[127] [63]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[115]_i_1__8 
-       (.I0(Q[54]),
-        .I1(Q[22]),
+       (.I0(\state_out_reg[31] [54]),
+        .I1(\state_out_reg[31] [22]),
         .I2(add_const_state_0[15]),
         .O(\state_out_reg[127] [64]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[116]_i_1__8 
-       (.I0(Q[55]),
-        .I1(Q[23]),
+       (.I0(\state_out_reg[31] [55]),
+        .I1(\state_out_reg[31] [23]),
         .I2(add_const_state_0[16]),
         .O(\state_out_reg[127] [65]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[117]_i_1__8 
-       (.I0(Q[56]),
-        .I1(Q[24]),
+       (.I0(\state_out_reg[31] [56]),
+        .I1(\state_out_reg[31] [24]),
         .I2(add_const_state_0[17]),
         .O(\state_out_reg[127] [66]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[118]_i_1__8 
-       (.I0(Q[57]),
-        .I1(Q[25]),
+       (.I0(\state_out_reg[31] [57]),
+        .I1(\state_out_reg[31] [25]),
         .I2(add_const_state_0[18]),
         .O(\state_out_reg[127] [67]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[119]_i_1__8 
-       (.I0(Q[58]),
-        .I1(Q[26]),
+       (.I0(\state_out_reg[31] [58]),
+        .I1(\state_out_reg[31] [26]),
         .I2(add_const_state_0[19]),
         .O(\state_out_reg[127] [68]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[11]_i_1__7 
        (.I0(add_const_state[10]),
-        .I1(\state_out_reg[28] [38]),
+        .I1(Q[38]),
         .I2(add_const_state[38]),
         .O(D[10]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[120]_i_1__8 
-       (.I0(Q[59]),
-        .I1(Q[27]),
+       (.I0(\state_out_reg[31] [59]),
+        .I1(\state_out_reg[31] [27]),
         .I2(add_const_state_0[20]),
         .O(\state_out_reg[127] [69]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[121]_i_1__8 
-       (.I0(Q[60]),
-        .I1(Q[28]),
+       (.I0(\state_out_reg[31] [60]),
+        .I1(\state_out_reg[31] [28]),
         .I2(add_const_state_0[21]),
         .O(\state_out_reg[127] [70]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[122]_i_1__8 
-       (.I0(Q[61]),
-        .I1(Q[29]),
+       (.I0(\state_out_reg[31] [61]),
+        .I1(\state_out_reg[31] [29]),
         .I2(add_const_state_0[22]),
         .O(\state_out_reg[127] [71]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[123]_i_1__8 
-       (.I0(Q[62]),
-        .I1(Q[30]),
+       (.I0(\state_out_reg[31] [62]),
+        .I1(\state_out_reg[31] [30]),
         .I2(add_const_state_0[23]),
         .O(\state_out_reg[127] [72]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[124]_i_1__8 
-       (.I0(Q[63]),
-        .I1(Q[31]),
+       (.I0(\state_out_reg[31] [63]),
+        .I1(\state_out_reg[31] [31]),
         .I2(add_const_state_0[24]),
         .O(\state_out_reg[127] [73]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[125]_i_1__8 
-       (.I0(Q[64]),
-        .I1(Q[32]),
+       (.I0(\state_out_reg[31] [64]),
+        .I1(\state_out_reg[31] [32]),
         .I2(add_const_state_0[25]),
         .O(\state_out_reg[127] [74]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[126]_i_1__8 
-       (.I0(Q[65]),
-        .I1(Q[33]),
+       (.I0(\state_out_reg[31] [65]),
+        .I1(\state_out_reg[31] [33]),
         .I2(add_const_state_0[26]),
         .O(\state_out_reg[127] [75]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[127]_i_1__8 
-       (.I0(Q[66]),
-        .I1(Q[34]),
+       (.I0(\state_out_reg[31] [66]),
+        .I1(\state_out_reg[31] [34]),
         .I2(add_const_state_0[27]),
         .O(\state_out_reg[127] [76]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[12]_i_1__7 
        (.I0(add_const_state[11]),
-        .I1(\state_out_reg[28] [39]),
+        .I1(Q[39]),
         .I2(add_const_state[39]),
         .O(D[11]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[13]_i_1__7 
        (.I0(add_const_state[12]),
-        .I1(\state_out_reg[28] [40]),
+        .I1(Q[40]),
         .I2(add_const_state[40]),
         .O(D[12]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[14]_i_1__7 
        (.I0(add_const_state[13]),
-        .I1(\state_out_reg[28] [41]),
+        .I1(Q[41]),
         .I2(add_const_state[41]),
         .O(D[13]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[15]_i_1__7 
        (.I0(add_const_state[14]),
-        .I1(\state_out_reg[28] [42]),
+        .I1(Q[42]),
         .I2(add_const_state[42]),
         .O(D[14]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[16]_i_1__7 
        (.I0(add_const_state[15]),
-        .I1(\state_out_reg[28] [43]),
+        .I1(Q[43]),
         .I2(add_const_state[43]),
         .O(D[15]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[17]_i_1__7 
        (.I0(add_const_state[16]),
-        .I1(\state_out_reg[28] [44]),
+        .I1(Q[44]),
         .I2(add_const_state[44]),
         .O(D[16]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[18]_i_1__7 
        (.I0(add_const_state[17]),
-        .I1(\state_out_reg[28] [45]),
+        .I1(Q[45]),
         .I2(add_const_state[45]),
         .O(D[17]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[19]_i_1__7 
        (.I0(add_const_state[18]),
-        .I1(\state_out_reg[28] [46]),
+        .I1(Q[46]),
         .I2(add_const_state[46]),
         .O(D[18]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[1]_i_1__5 
        (.I0(add_const_state[0]),
-        .I1(\state_out_reg[28] [28]),
+        .I1(Q[28]),
         .I2(add_const_state[28]),
         .O(D[0]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[1]_i_1__6 
-       (.I0(Q[1]),
-        .I1(Q[36]),
+       (.I0(\state_out_reg[31] [1]),
+        .I1(\state_out_reg[31] [36]),
         .I2(add_const_state_0[29]),
         .O(\state_out_reg[127] [0]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[20]_i_1__7 
        (.I0(add_const_state[19]),
-        .I1(\state_out_reg[28] [47]),
+        .I1(Q[47]),
         .I2(add_const_state[47]),
         .O(D[19]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[21]_i_1__7 
        (.I0(add_const_state[20]),
-        .I1(\state_out_reg[28] [48]),
+        .I1(Q[48]),
         .I2(add_const_state[48]),
         .O(D[20]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[22]_i_1__7 
        (.I0(add_const_state[21]),
-        .I1(\state_out_reg[28] [49]),
+        .I1(Q[49]),
         .I2(add_const_state[49]),
         .O(D[21]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[23]_i_1__7 
        (.I0(add_const_state[22]),
-        .I1(\state_out_reg[28] [50]),
+        .I1(Q[50]),
         .I2(add_const_state[50]),
         .O(D[22]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[24]_i_1__7 
        (.I0(add_const_state[23]),
-        .I1(\state_out_reg[28] [51]),
+        .I1(Q[51]),
         .I2(add_const_state[51]),
         .O(D[23]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[25]_i_1__7 
        (.I0(add_const_state[24]),
-        .I1(\state_out_reg[28] [52]),
+        .I1(Q[52]),
         .I2(add_const_state[52]),
         .O(D[24]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[26]_i_1__7 
        (.I0(add_const_state[25]),
-        .I1(\state_out_reg[28] [53]),
+        .I1(Q[53]),
         .I2(add_const_state[53]),
         .O(D[25]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[27]_i_1__7 
        (.I0(add_const_state[26]),
-        .I1(\state_out_reg[28] [54]),
+        .I1(Q[54]),
         .I2(add_const_state[54]),
         .O(D[26]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[28]_i_1__7 
        (.I0(add_const_state[27]),
-        .I1(\state_out_reg[28] [55]),
+        .I1(Q[55]),
         .I2(add_const_state[55]),
         .O(D[27]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[28]_i_1__8 
        (.I0(add_const_state_0[24]),
-        .I1(Q[63]),
+        .I1(\state_out_reg[31] [63]),
         .I2(add_const_state_0[56]),
         .O(\state_out_reg[127] [2]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[29]_i_1__8 
        (.I0(add_const_state_0[25]),
-        .I1(Q[64]),
+        .I1(\state_out_reg[31] [64]),
         .I2(add_const_state_0[57]),
         .O(\state_out_reg[127] [3]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[2]_i_1__6 
        (.I0(add_const_state[1]),
-        .I1(\state_out_reg[28] [29]),
+        .I1(Q[29]),
         .I2(add_const_state[29]),
         .O(D[1]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[2]_i_1__7 
-       (.I0(Q[2]),
-        .I1(Q[37]),
+       (.I0(\state_out_reg[31] [2]),
+        .I1(\state_out_reg[31] [37]),
         .I2(add_const_state_0[30]),
         .O(\state_out_reg[127] [1]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[30]_i_1__8 
        (.I0(add_const_state_0[26]),
-        .I1(Q[65]),
+        .I1(\state_out_reg[31] [65]),
         .I2(add_const_state_0[58]),
         .O(\state_out_reg[127] [4]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[31]_i_1__8 
        (.I0(add_const_state_0[27]),
-        .I1(Q[66]),
+        .I1(\state_out_reg[31] [66]),
         .I2(add_const_state_0[59]),
         .O(\state_out_reg[127] [5]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[32]_i_1__8 
        (.I0(add_const_state_0[28]),
-        .I1(Q[0]),
+        .I1(\state_out_reg[31] [0]),
         .I2(CO),
         .O(\state_out_reg[127] [6]));
   LUT3 #(
@@ -23403,76 +23394,76 @@ module design_ascon_ascon_core_0_2_ascon_sbox
     \state_out[33]_i_1__7 
        (.I0(add_const_state[28]),
         .I1(add_const_state[0]),
-        .I2(\state_out_reg[28] [0]),
+        .I2(Q[0]),
         .O(D[28]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[33]_i_1__8 
        (.I0(add_const_state_0[29]),
-        .I1(Q[1]),
-        .I2(Q[4]),
+        .I1(\state_out_reg[31] [1]),
+        .I2(\state_out_reg[31] [4]),
         .O(\state_out_reg[127] [7]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[34]_i_1__7 
        (.I0(add_const_state[29]),
         .I1(add_const_state[1]),
-        .I2(\state_out_reg[28] [1]),
+        .I2(Q[1]),
         .O(D[29]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[34]_i_1__8 
        (.I0(add_const_state_0[30]),
-        .I1(Q[2]),
-        .I2(Q[5]),
+        .I1(\state_out_reg[31] [2]),
+        .I2(\state_out_reg[31] [5]),
         .O(\state_out_reg[127] [8]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[35]_i_1__7 
        (.I0(add_const_state[30]),
         .I1(add_const_state[2]),
-        .I2(\state_out_reg[28] [2]),
+        .I2(Q[2]),
         .O(D[30]));
   LUT3 #(
     .INIT(8'h6A)) 
     \state_out[35]_i_1__8 
        (.I0(add_const_state_0[31]),
-        .I1(Q[6]),
-        .I2(Q[3]),
+        .I1(\state_out_reg[31] [6]),
+        .I2(\state_out_reg[31] [3]),
         .O(\state_out_reg[127] [9]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[36]_i_1__7 
        (.I0(add_const_state[31]),
         .I1(add_const_state[3]),
-        .I2(\state_out_reg[28] [3]),
+        .I2(Q[3]),
         .O(D[31]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[37]_i_1__7 
        (.I0(add_const_state[32]),
         .I1(add_const_state[4]),
-        .I2(\state_out_reg[28] [4]),
+        .I2(Q[4]),
         .O(D[32]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[38]_i_1__7 
        (.I0(add_const_state[33]),
         .I1(add_const_state[5]),
-        .I2(\state_out_reg[28] [5]),
+        .I2(Q[5]),
         .O(D[33]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[39]_i_1__7 
        (.I0(add_const_state[34]),
         .I1(add_const_state[6]),
-        .I2(\state_out_reg[28] [6]),
+        .I2(Q[6]),
         .O(D[34]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[3]_i_1__7 
        (.I0(add_const_state[2]),
-        .I1(\state_out_reg[28] [30]),
+        .I1(Q[30]),
         .I2(add_const_state[30]),
         .O(D[2]));
   LUT3 #(
@@ -23480,76 +23471,76 @@ module design_ascon_ascon_core_0_2_ascon_sbox
     \state_out[40]_i_1__7 
        (.I0(add_const_state[35]),
         .I1(add_const_state[7]),
-        .I2(\state_out_reg[28] [7]),
+        .I2(Q[7]),
         .O(D[35]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[41]_i_1__7 
        (.I0(add_const_state[36]),
         .I1(add_const_state[8]),
-        .I2(\state_out_reg[28] [8]),
+        .I2(Q[8]),
         .O(D[36]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[42]_i_1__7 
        (.I0(add_const_state[37]),
         .I1(add_const_state[9]),
-        .I2(\state_out_reg[28] [9]),
+        .I2(Q[9]),
         .O(D[37]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[43]_i_1__7 
        (.I0(add_const_state[38]),
         .I1(add_const_state[10]),
-        .I2(\state_out_reg[28] [10]),
+        .I2(Q[10]),
         .O(D[38]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[44]_i_1__7 
        (.I0(add_const_state[39]),
         .I1(add_const_state[11]),
-        .I2(\state_out_reg[28] [11]),
+        .I2(Q[11]),
         .O(D[39]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[45]_i_1__7 
        (.I0(add_const_state[40]),
         .I1(add_const_state[12]),
-        .I2(\state_out_reg[28] [12]),
+        .I2(Q[12]),
         .O(D[40]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[46]_i_1__7 
        (.I0(add_const_state[41]),
         .I1(add_const_state[13]),
-        .I2(\state_out_reg[28] [13]),
+        .I2(Q[13]),
         .O(D[41]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[47]_i_1__7 
        (.I0(add_const_state[42]),
         .I1(add_const_state[14]),
-        .I2(\state_out_reg[28] [14]),
+        .I2(Q[14]),
         .O(D[42]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[48]_i_1__7 
        (.I0(add_const_state[43]),
         .I1(add_const_state[15]),
-        .I2(\state_out_reg[28] [15]),
+        .I2(Q[15]),
         .O(D[43]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[49]_i_1__7 
        (.I0(add_const_state[44]),
         .I1(add_const_state[16]),
-        .I2(\state_out_reg[28] [16]),
+        .I2(Q[16]),
         .O(D[44]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[4]_i_1__6 
        (.I0(add_const_state[3]),
-        .I1(\state_out_reg[28] [31]),
+        .I1(Q[31]),
         .I2(add_const_state[31]),
         .O(D[3]));
   LUT3 #(
@@ -23557,76 +23548,76 @@ module design_ascon_ascon_core_0_2_ascon_sbox
     \state_out[50]_i_1__7 
        (.I0(add_const_state[45]),
         .I1(add_const_state[17]),
-        .I2(\state_out_reg[28] [17]),
+        .I2(Q[17]),
         .O(D[45]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[51]_i_1__7 
        (.I0(add_const_state[46]),
         .I1(add_const_state[18]),
-        .I2(\state_out_reg[28] [18]),
+        .I2(Q[18]),
         .O(D[46]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[52]_i_1__7 
        (.I0(add_const_state[47]),
         .I1(add_const_state[19]),
-        .I2(\state_out_reg[28] [19]),
+        .I2(Q[19]),
         .O(D[47]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[53]_i_1__7 
        (.I0(add_const_state[48]),
         .I1(add_const_state[20]),
-        .I2(\state_out_reg[28] [20]),
+        .I2(Q[20]),
         .O(D[48]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[54]_i_1__7 
        (.I0(add_const_state[49]),
         .I1(add_const_state[21]),
-        .I2(\state_out_reg[28] [21]),
+        .I2(Q[21]),
         .O(D[49]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[55]_i_1__7 
        (.I0(add_const_state[50]),
         .I1(add_const_state[22]),
-        .I2(\state_out_reg[28] [22]),
+        .I2(Q[22]),
         .O(D[50]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[56]_i_1__7 
        (.I0(add_const_state[51]),
         .I1(add_const_state[23]),
-        .I2(\state_out_reg[28] [23]),
+        .I2(Q[23]),
         .O(D[51]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[57]_i_1__7 
        (.I0(add_const_state[52]),
         .I1(add_const_state[24]),
-        .I2(\state_out_reg[28] [24]),
+        .I2(Q[24]),
         .O(D[52]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[58]_i_1__7 
        (.I0(add_const_state[53]),
         .I1(add_const_state[25]),
-        .I2(\state_out_reg[28] [25]),
+        .I2(Q[25]),
         .O(D[53]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[59]_i_1__7 
        (.I0(add_const_state[54]),
         .I1(add_const_state[26]),
-        .I2(\state_out_reg[28] [26]),
+        .I2(Q[26]),
         .O(D[54]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[5]_i_1__7 
        (.I0(add_const_state[4]),
-        .I1(\state_out_reg[28] [32]),
+        .I1(Q[32]),
         .I2(add_const_state[32]),
         .O(D[4]));
   LUT3 #(
@@ -23634,307 +23625,307 @@ module design_ascon_ascon_core_0_2_ascon_sbox
     \state_out[60]_i_1__7 
        (.I0(add_const_state[55]),
         .I1(add_const_state[27]),
-        .I2(\state_out_reg[28] [27]),
+        .I2(Q[27]),
         .O(D[55]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[60]_i_1__8 
        (.I0(add_const_state_0[56]),
         .I1(add_const_state_0[24]),
-        .I2(Q[31]),
+        .I2(\state_out_reg[31] [31]),
         .O(\state_out_reg[127] [10]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[61]_i_1__8 
        (.I0(add_const_state_0[57]),
         .I1(add_const_state_0[25]),
-        .I2(Q[32]),
+        .I2(\state_out_reg[31] [32]),
         .O(\state_out_reg[127] [11]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[62]_i_1__8 
        (.I0(add_const_state_0[58]),
         .I1(add_const_state_0[26]),
-        .I2(Q[33]),
+        .I2(\state_out_reg[31] [33]),
         .O(\state_out_reg[127] [12]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[63]_i_1__8 
        (.I0(add_const_state_0[59]),
         .I1(add_const_state_0[27]),
-        .I2(Q[34]),
+        .I2(\state_out_reg[31] [34]),
         .O(\state_out_reg[127] [13]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[65]_i_1__8 
-       (.I0(Q[4]),
+       (.I0(\state_out_reg[31] [4]),
         .I1(add_const_state_0[29]),
-        .I2(Q[36]),
+        .I2(\state_out_reg[31] [36]),
         .O(\state_out_reg[127] [14]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[66]_i_1__8 
-       (.I0(Q[5]),
+       (.I0(\state_out_reg[31] [5]),
         .I1(add_const_state_0[30]),
-        .I2(Q[37]),
+        .I2(\state_out_reg[31] [37]),
         .O(\state_out_reg[127] [15]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[67]_i_1__8 
-       (.I0(Q[6]),
+       (.I0(\state_out_reg[31] [6]),
         .I1(add_const_state_0[31]),
-        .I2(Q[38]),
+        .I2(\state_out_reg[31] [38]),
         .O(\state_out_reg[127] [16]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[68]_i_1__8 
-       (.I0(Q[7]),
+       (.I0(\state_out_reg[31] [7]),
         .I1(add_const_state_0[32]),
-        .I2(Q[39]),
+        .I2(\state_out_reg[31] [39]),
         .O(\state_out_reg[127] [17]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[69]_i_1__8 
-       (.I0(Q[8]),
+       (.I0(\state_out_reg[31] [8]),
         .I1(add_const_state_0[33]),
-        .I2(Q[40]),
+        .I2(\state_out_reg[31] [40]),
         .O(\state_out_reg[127] [18]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[6]_i_1__7 
        (.I0(add_const_state[5]),
-        .I1(\state_out_reg[28] [33]),
+        .I1(Q[33]),
         .I2(add_const_state[33]),
         .O(D[5]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[70]_i_1__8 
-       (.I0(Q[9]),
+       (.I0(\state_out_reg[31] [9]),
         .I1(add_const_state_0[34]),
-        .I2(Q[41]),
+        .I2(\state_out_reg[31] [41]),
         .O(\state_out_reg[127] [19]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[71]_i_1__8 
-       (.I0(Q[10]),
+       (.I0(\state_out_reg[31] [10]),
         .I1(add_const_state_0[35]),
-        .I2(Q[42]),
+        .I2(\state_out_reg[31] [42]),
         .O(\state_out_reg[127] [20]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[72]_i_1__8 
-       (.I0(Q[11]),
+       (.I0(\state_out_reg[31] [11]),
         .I1(add_const_state_0[36]),
-        .I2(Q[43]),
+        .I2(\state_out_reg[31] [43]),
         .O(\state_out_reg[127] [21]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[73]_i_1__8 
-       (.I0(Q[12]),
+       (.I0(\state_out_reg[31] [12]),
         .I1(add_const_state_0[37]),
-        .I2(Q[44]),
+        .I2(\state_out_reg[31] [44]),
         .O(\state_out_reg[127] [22]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[74]_i_1__8 
-       (.I0(Q[13]),
+       (.I0(\state_out_reg[31] [13]),
         .I1(add_const_state_0[38]),
-        .I2(Q[45]),
+        .I2(\state_out_reg[31] [45]),
         .O(\state_out_reg[127] [23]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[75]_i_1__8 
-       (.I0(Q[14]),
+       (.I0(\state_out_reg[31] [14]),
         .I1(add_const_state_0[39]),
-        .I2(Q[46]),
+        .I2(\state_out_reg[31] [46]),
         .O(\state_out_reg[127] [24]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[76]_i_1__8 
-       (.I0(Q[15]),
+       (.I0(\state_out_reg[31] [15]),
         .I1(add_const_state_0[40]),
-        .I2(Q[47]),
+        .I2(\state_out_reg[31] [47]),
         .O(\state_out_reg[127] [25]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[77]_i_1__8 
-       (.I0(Q[16]),
+       (.I0(\state_out_reg[31] [16]),
         .I1(add_const_state_0[41]),
-        .I2(Q[48]),
+        .I2(\state_out_reg[31] [48]),
         .O(\state_out_reg[127] [26]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[78]_i_1__8 
-       (.I0(Q[17]),
+       (.I0(\state_out_reg[31] [17]),
         .I1(add_const_state_0[42]),
-        .I2(Q[49]),
+        .I2(\state_out_reg[31] [49]),
         .O(\state_out_reg[127] [27]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[79]_i_1__8 
-       (.I0(Q[18]),
+       (.I0(\state_out_reg[31] [18]),
         .I1(add_const_state_0[43]),
-        .I2(Q[50]),
+        .I2(\state_out_reg[31] [50]),
         .O(\state_out_reg[127] [28]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[7]_i_1__7 
        (.I0(add_const_state[6]),
-        .I1(\state_out_reg[28] [34]),
+        .I1(Q[34]),
         .I2(add_const_state[34]),
         .O(D[6]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[80]_i_1__8 
-       (.I0(Q[19]),
+       (.I0(\state_out_reg[31] [19]),
         .I1(add_const_state_0[44]),
-        .I2(Q[51]),
+        .I2(\state_out_reg[31] [51]),
         .O(\state_out_reg[127] [29]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[81]_i_1__8 
-       (.I0(Q[20]),
+       (.I0(\state_out_reg[31] [20]),
         .I1(add_const_state_0[45]),
-        .I2(Q[52]),
+        .I2(\state_out_reg[31] [52]),
         .O(\state_out_reg[127] [30]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[82]_i_1__8 
-       (.I0(Q[21]),
+       (.I0(\state_out_reg[31] [21]),
         .I1(add_const_state_0[46]),
-        .I2(Q[53]),
+        .I2(\state_out_reg[31] [53]),
         .O(\state_out_reg[127] [31]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[83]_i_1__8 
-       (.I0(Q[22]),
+       (.I0(\state_out_reg[31] [22]),
         .I1(add_const_state_0[47]),
-        .I2(Q[54]),
+        .I2(\state_out_reg[31] [54]),
         .O(\state_out_reg[127] [32]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[84]_i_1__8 
-       (.I0(Q[23]),
+       (.I0(\state_out_reg[31] [23]),
         .I1(add_const_state_0[48]),
-        .I2(Q[55]),
+        .I2(\state_out_reg[31] [55]),
         .O(\state_out_reg[127] [33]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[85]_i_1__8 
-       (.I0(Q[24]),
+       (.I0(\state_out_reg[31] [24]),
         .I1(add_const_state_0[49]),
-        .I2(Q[56]),
+        .I2(\state_out_reg[31] [56]),
         .O(\state_out_reg[127] [34]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[86]_i_1__8 
-       (.I0(Q[25]),
+       (.I0(\state_out_reg[31] [25]),
         .I1(add_const_state_0[50]),
-        .I2(Q[57]),
+        .I2(\state_out_reg[31] [57]),
         .O(\state_out_reg[127] [35]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[87]_i_1__8 
-       (.I0(Q[26]),
+       (.I0(\state_out_reg[31] [26]),
         .I1(add_const_state_0[51]),
-        .I2(Q[58]),
+        .I2(\state_out_reg[31] [58]),
         .O(\state_out_reg[127] [36]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[88]_i_1__8 
-       (.I0(Q[27]),
+       (.I0(\state_out_reg[31] [27]),
         .I1(add_const_state_0[52]),
-        .I2(Q[59]),
+        .I2(\state_out_reg[31] [59]),
         .O(\state_out_reg[127] [37]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[89]_i_1__8 
-       (.I0(Q[28]),
+       (.I0(\state_out_reg[31] [28]),
         .I1(add_const_state_0[53]),
-        .I2(Q[60]),
+        .I2(\state_out_reg[31] [60]),
         .O(\state_out_reg[127] [38]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[8]_i_1__7 
        (.I0(add_const_state[7]),
-        .I1(\state_out_reg[28] [35]),
+        .I1(Q[35]),
         .I2(add_const_state[35]),
         .O(D[7]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[90]_i_1__8 
-       (.I0(Q[29]),
+       (.I0(\state_out_reg[31] [29]),
         .I1(add_const_state_0[54]),
-        .I2(Q[61]),
+        .I2(\state_out_reg[31] [61]),
         .O(\state_out_reg[127] [39]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[91]_i_1__8 
-       (.I0(Q[30]),
+       (.I0(\state_out_reg[31] [30]),
         .I1(add_const_state_0[55]),
-        .I2(Q[62]),
+        .I2(\state_out_reg[31] [62]),
         .O(\state_out_reg[127] [40]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[92]_i_1__8 
-       (.I0(Q[31]),
+       (.I0(\state_out_reg[31] [31]),
         .I1(add_const_state_0[56]),
-        .I2(Q[63]),
+        .I2(\state_out_reg[31] [63]),
         .O(\state_out_reg[127] [41]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[93]_i_1__8 
-       (.I0(Q[32]),
+       (.I0(\state_out_reg[31] [32]),
         .I1(add_const_state_0[57]),
-        .I2(Q[64]),
+        .I2(\state_out_reg[31] [64]),
         .O(\state_out_reg[127] [42]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[94]_i_1__8 
-       (.I0(Q[33]),
+       (.I0(\state_out_reg[31] [33]),
         .I1(add_const_state_0[58]),
-        .I2(Q[65]),
+        .I2(\state_out_reg[31] [65]),
         .O(\state_out_reg[127] [43]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[95]_i_1__8 
-       (.I0(Q[34]),
+       (.I0(\state_out_reg[31] [34]),
         .I1(add_const_state_0[59]),
-        .I2(Q[66]),
+        .I2(\state_out_reg[31] [66]),
         .O(\state_out_reg[127] [44]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[96]_i_1__8 
-       (.I0(Q[35]),
+       (.I0(\state_out_reg[31] [35]),
         .I1(CO),
-        .I2(Q[0]),
+        .I2(\state_out_reg[31] [0]),
         .O(\state_out_reg[127] [45]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[97]_i_1__8 
-       (.I0(Q[36]),
-        .I1(Q[4]),
-        .I2(Q[1]),
+       (.I0(\state_out_reg[31] [36]),
+        .I1(\state_out_reg[31] [4]),
+        .I2(\state_out_reg[31] [1]),
         .O(\state_out_reg[127] [46]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[98]_i_1__8 
-       (.I0(Q[37]),
-        .I1(Q[5]),
-        .I2(Q[2]),
+       (.I0(\state_out_reg[31] [37]),
+        .I1(\state_out_reg[31] [5]),
+        .I2(\state_out_reg[31] [2]),
         .O(\state_out_reg[127] [47]));
   LUT3 #(
     .INIT(8'hA9)) 
     \state_out[99]_i_1__8 
-       (.I0(Q[38]),
-        .I1(Q[3]),
-        .I2(Q[6]),
+       (.I0(\state_out_reg[31] [38]),
+        .I1(\state_out_reg[31] [3]),
+        .I2(\state_out_reg[31] [6]),
         .O(\state_out_reg[127] [48]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[9]_i_1__7 
        (.I0(add_const_state[8]),
-        .I1(\state_out_reg[28] [36]),
+        .I1(Q[36]),
         .I2(add_const_state[36]),
         .O(D[8]));
 endmodule
@@ -23944,388 +23935,388 @@ module design_ascon_ascon_core_0_2_ascon_sbox_11
    (D,
     \state_out_reg[127] ,
     add_const_state,
-    Q,
+    \state_out_reg[28] ,
     add_const_state_0,
-    \state_out_reg[31] ,
+    Q,
     \state_out_reg[96] );
   output [55:0]D;
   output [69:0]\state_out_reg[127] ;
   input [55:0]add_const_state;
-  input [55:0]Q;
+  input [55:0]\state_out_reg[28] ;
   input [62:0]add_const_state_0;
-  input [63:0]\state_out_reg[31] ;
+  input [63:0]Q;
   input [0:0]\state_out_reg[96] ;
 
   wire [55:0]D;
-  wire [55:0]Q;
+  wire [63:0]Q;
   wire [55:0]add_const_state;
   wire [62:0]add_const_state_0;
   wire [69:0]\state_out_reg[127] ;
-  wire [63:0]\state_out_reg[31] ;
+  wire [55:0]\state_out_reg[28] ;
   wire [0:0]\state_out_reg[96] ;
 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[100]_i_1__7 
-       (.I0(\state_out_reg[31] [36]),
-        .I1(\state_out_reg[31] [4]),
+       (.I0(Q[36]),
+        .I1(Q[4]),
         .I2(add_const_state_0[3]),
         .O(\state_out_reg[127] [42]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[101]_i_1__7 
-       (.I0(\state_out_reg[31] [37]),
-        .I1(\state_out_reg[31] [5]),
+       (.I0(Q[37]),
+        .I1(Q[5]),
         .I2(add_const_state_0[4]),
         .O(\state_out_reg[127] [43]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[102]_i_1__7 
-       (.I0(\state_out_reg[31] [38]),
-        .I1(\state_out_reg[31] [6]),
+       (.I0(Q[38]),
+        .I1(Q[6]),
         .I2(add_const_state_0[5]),
         .O(\state_out_reg[127] [44]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[103]_i_1__7 
-       (.I0(\state_out_reg[31] [39]),
-        .I1(\state_out_reg[31] [7]),
+       (.I0(Q[39]),
+        .I1(Q[7]),
         .I2(add_const_state_0[6]),
         .O(\state_out_reg[127] [45]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[104]_i_1__7 
-       (.I0(\state_out_reg[31] [40]),
-        .I1(\state_out_reg[31] [8]),
+       (.I0(Q[40]),
+        .I1(Q[8]),
         .I2(add_const_state_0[7]),
         .O(\state_out_reg[127] [46]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[105]_i_1__7 
-       (.I0(\state_out_reg[31] [41]),
-        .I1(\state_out_reg[31] [9]),
+       (.I0(Q[41]),
+        .I1(Q[9]),
         .I2(add_const_state_0[8]),
         .O(\state_out_reg[127] [47]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[106]_i_1__7 
-       (.I0(\state_out_reg[31] [42]),
-        .I1(\state_out_reg[31] [10]),
+       (.I0(Q[42]),
+        .I1(Q[10]),
         .I2(add_const_state_0[9]),
         .O(\state_out_reg[127] [48]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[107]_i_1__7 
-       (.I0(\state_out_reg[31] [43]),
-        .I1(\state_out_reg[31] [11]),
+       (.I0(Q[43]),
+        .I1(Q[11]),
         .I2(add_const_state_0[10]),
         .O(\state_out_reg[127] [49]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[108]_i_1__7 
-       (.I0(\state_out_reg[31] [44]),
-        .I1(\state_out_reg[31] [12]),
+       (.I0(Q[44]),
+        .I1(Q[12]),
         .I2(add_const_state_0[11]),
         .O(\state_out_reg[127] [50]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[109]_i_1__7 
-       (.I0(\state_out_reg[31] [45]),
-        .I1(\state_out_reg[31] [13]),
+       (.I0(Q[45]),
+        .I1(Q[13]),
         .I2(add_const_state_0[12]),
         .O(\state_out_reg[127] [51]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[10]_i_1__6 
        (.I0(add_const_state[9]),
-        .I1(Q[37]),
+        .I1(\state_out_reg[28] [37]),
         .I2(add_const_state[37]),
         .O(D[9]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[110]_i_1__7 
-       (.I0(\state_out_reg[31] [46]),
-        .I1(\state_out_reg[31] [14]),
+       (.I0(Q[46]),
+        .I1(Q[14]),
         .I2(add_const_state_0[13]),
         .O(\state_out_reg[127] [52]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[111]_i_1__7 
-       (.I0(\state_out_reg[31] [47]),
-        .I1(\state_out_reg[31] [15]),
+       (.I0(Q[47]),
+        .I1(Q[15]),
         .I2(add_const_state_0[14]),
         .O(\state_out_reg[127] [53]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[112]_i_1__7 
-       (.I0(\state_out_reg[31] [48]),
-        .I1(\state_out_reg[31] [16]),
+       (.I0(Q[48]),
+        .I1(Q[16]),
         .I2(add_const_state_0[15]),
         .O(\state_out_reg[127] [54]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[113]_i_1__7 
-       (.I0(\state_out_reg[31] [49]),
-        .I1(\state_out_reg[31] [17]),
+       (.I0(Q[49]),
+        .I1(Q[17]),
         .I2(add_const_state_0[16]),
         .O(\state_out_reg[127] [55]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[114]_i_1__7 
-       (.I0(\state_out_reg[31] [50]),
-        .I1(\state_out_reg[31] [18]),
+       (.I0(Q[50]),
+        .I1(Q[18]),
         .I2(add_const_state_0[17]),
         .O(\state_out_reg[127] [56]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[115]_i_1__7 
-       (.I0(\state_out_reg[31] [51]),
-        .I1(\state_out_reg[31] [19]),
+       (.I0(Q[51]),
+        .I1(Q[19]),
         .I2(add_const_state_0[18]),
         .O(\state_out_reg[127] [57]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[116]_i_1__7 
-       (.I0(\state_out_reg[31] [52]),
-        .I1(\state_out_reg[31] [20]),
+       (.I0(Q[52]),
+        .I1(Q[20]),
         .I2(add_const_state_0[19]),
         .O(\state_out_reg[127] [58]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[117]_i_1__7 
-       (.I0(\state_out_reg[31] [53]),
-        .I1(\state_out_reg[31] [21]),
+       (.I0(Q[53]),
+        .I1(Q[21]),
         .I2(add_const_state_0[20]),
         .O(\state_out_reg[127] [59]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[118]_i_1__7 
-       (.I0(\state_out_reg[31] [54]),
-        .I1(\state_out_reg[31] [22]),
+       (.I0(Q[54]),
+        .I1(Q[22]),
         .I2(add_const_state_0[21]),
         .O(\state_out_reg[127] [60]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[119]_i_1__7 
-       (.I0(\state_out_reg[31] [55]),
-        .I1(\state_out_reg[31] [23]),
+       (.I0(Q[55]),
+        .I1(Q[23]),
         .I2(add_const_state_0[22]),
         .O(\state_out_reg[127] [61]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[11]_i_1__6 
        (.I0(add_const_state[10]),
-        .I1(Q[38]),
+        .I1(\state_out_reg[28] [38]),
         .I2(add_const_state[38]),
         .O(D[10]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[120]_i_1__7 
-       (.I0(\state_out_reg[31] [56]),
-        .I1(\state_out_reg[31] [24]),
+       (.I0(Q[56]),
+        .I1(Q[24]),
         .I2(add_const_state_0[23]),
         .O(\state_out_reg[127] [62]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[121]_i_1__7 
-       (.I0(\state_out_reg[31] [57]),
-        .I1(\state_out_reg[31] [25]),
+       (.I0(Q[57]),
+        .I1(Q[25]),
         .I2(add_const_state_0[24]),
         .O(\state_out_reg[127] [63]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[122]_i_1__7 
-       (.I0(\state_out_reg[31] [58]),
-        .I1(\state_out_reg[31] [26]),
+       (.I0(Q[58]),
+        .I1(Q[26]),
         .I2(add_const_state_0[25]),
         .O(\state_out_reg[127] [64]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[123]_i_1__7 
-       (.I0(\state_out_reg[31] [59]),
-        .I1(\state_out_reg[31] [27]),
+       (.I0(Q[59]),
+        .I1(Q[27]),
         .I2(add_const_state_0[26]),
         .O(\state_out_reg[127] [65]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[124]_i_1__7 
-       (.I0(\state_out_reg[31] [60]),
-        .I1(\state_out_reg[31] [28]),
+       (.I0(Q[60]),
+        .I1(Q[28]),
         .I2(add_const_state_0[27]),
         .O(\state_out_reg[127] [66]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[125]_i_1__7 
-       (.I0(\state_out_reg[31] [61]),
-        .I1(\state_out_reg[31] [29]),
+       (.I0(Q[61]),
+        .I1(Q[29]),
         .I2(add_const_state_0[28]),
         .O(\state_out_reg[127] [67]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[126]_i_1__7 
-       (.I0(\state_out_reg[31] [62]),
-        .I1(\state_out_reg[31] [30]),
+       (.I0(Q[62]),
+        .I1(Q[30]),
         .I2(add_const_state_0[29]),
         .O(\state_out_reg[127] [68]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[127]_i_1__7 
-       (.I0(\state_out_reg[31] [63]),
-        .I1(\state_out_reg[31] [31]),
+       (.I0(Q[63]),
+        .I1(Q[31]),
         .I2(add_const_state_0[30]),
         .O(\state_out_reg[127] [69]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[12]_i_1__6 
        (.I0(add_const_state[11]),
-        .I1(Q[39]),
+        .I1(\state_out_reg[28] [39]),
         .I2(add_const_state[39]),
         .O(D[11]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[13]_i_1__6 
        (.I0(add_const_state[12]),
-        .I1(Q[40]),
+        .I1(\state_out_reg[28] [40]),
         .I2(add_const_state[40]),
         .O(D[12]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[14]_i_1__6 
        (.I0(add_const_state[13]),
-        .I1(Q[41]),
+        .I1(\state_out_reg[28] [41]),
         .I2(add_const_state[41]),
         .O(D[13]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[15]_i_1__6 
        (.I0(add_const_state[14]),
-        .I1(Q[42]),
+        .I1(\state_out_reg[28] [42]),
         .I2(add_const_state[42]),
         .O(D[14]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[16]_i_1__6 
        (.I0(add_const_state[15]),
-        .I1(Q[43]),
+        .I1(\state_out_reg[28] [43]),
         .I2(add_const_state[43]),
         .O(D[15]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[17]_i_1__6 
        (.I0(add_const_state[16]),
-        .I1(Q[44]),
+        .I1(\state_out_reg[28] [44]),
         .I2(add_const_state[44]),
         .O(D[16]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[18]_i_1__6 
        (.I0(add_const_state[17]),
-        .I1(Q[45]),
+        .I1(\state_out_reg[28] [45]),
         .I2(add_const_state[45]),
         .O(D[17]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[19]_i_1__6 
        (.I0(add_const_state[18]),
-        .I1(Q[46]),
+        .I1(\state_out_reg[28] [46]),
         .I2(add_const_state[46]),
         .O(D[18]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[1]_i_1__4 
        (.I0(add_const_state[0]),
-        .I1(Q[28]),
+        .I1(\state_out_reg[28] [28]),
         .I2(add_const_state[28]),
         .O(D[0]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[20]_i_1__6 
        (.I0(add_const_state[19]),
-        .I1(Q[47]),
+        .I1(\state_out_reg[28] [47]),
         .I2(add_const_state[47]),
         .O(D[19]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[21]_i_1__6 
        (.I0(add_const_state[20]),
-        .I1(Q[48]),
+        .I1(\state_out_reg[28] [48]),
         .I2(add_const_state[48]),
         .O(D[20]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[22]_i_1__6 
        (.I0(add_const_state[21]),
-        .I1(Q[49]),
+        .I1(\state_out_reg[28] [49]),
         .I2(add_const_state[49]),
         .O(D[21]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[23]_i_1__6 
        (.I0(add_const_state[22]),
-        .I1(Q[50]),
+        .I1(\state_out_reg[28] [50]),
         .I2(add_const_state[50]),
         .O(D[22]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[24]_i_1__6 
        (.I0(add_const_state[23]),
-        .I1(Q[51]),
+        .I1(\state_out_reg[28] [51]),
         .I2(add_const_state[51]),
         .O(D[23]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[25]_i_1__6 
        (.I0(add_const_state[24]),
-        .I1(Q[52]),
+        .I1(\state_out_reg[28] [52]),
         .I2(add_const_state[52]),
         .O(D[24]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[26]_i_1__6 
        (.I0(add_const_state[25]),
-        .I1(Q[53]),
+        .I1(\state_out_reg[28] [53]),
         .I2(add_const_state[53]),
         .O(D[25]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[27]_i_1__6 
        (.I0(add_const_state[26]),
-        .I1(Q[54]),
+        .I1(\state_out_reg[28] [54]),
         .I2(add_const_state[54]),
         .O(D[26]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[28]_i_1__6 
        (.I0(add_const_state[27]),
-        .I1(Q[55]),
+        .I1(\state_out_reg[28] [55]),
         .I2(add_const_state[55]),
         .O(D[27]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[29]_i_1__7 
        (.I0(add_const_state_0[28]),
-        .I1(\state_out_reg[31] [61]),
+        .I1(Q[61]),
         .I2(add_const_state_0[60]),
         .O(\state_out_reg[127] [0]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[2]_i_1__5 
        (.I0(add_const_state[1]),
-        .I1(Q[29]),
+        .I1(\state_out_reg[28] [29]),
         .I2(add_const_state[29]),
         .O(D[1]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[30]_i_1__7 
        (.I0(add_const_state_0[29]),
-        .I1(\state_out_reg[31] [62]),
+        .I1(Q[62]),
         .I2(add_const_state_0[61]),
         .O(\state_out_reg[127] [1]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[31]_i_1__7 
        (.I0(add_const_state_0[30]),
-        .I1(\state_out_reg[31] [63]),
+        .I1(Q[63]),
         .I2(add_const_state_0[62]),
         .O(\state_out_reg[127] [2]));
   LUT3 #(
@@ -24333,62 +24324,62 @@ module design_ascon_ascon_core_0_2_ascon_sbox_11
     \state_out[32]_i_1__7 
        (.I0(add_const_state_0[31]),
         .I1(\state_out_reg[96] ),
-        .I2(\state_out_reg[31] [0]),
+        .I2(Q[0]),
         .O(\state_out_reg[127] [3]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[33]_i_1__6 
        (.I0(add_const_state[28]),
         .I1(add_const_state[0]),
-        .I2(Q[0]),
+        .I2(\state_out_reg[28] [0]),
         .O(D[28]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[34]_i_1__6 
        (.I0(add_const_state[29]),
         .I1(add_const_state[1]),
-        .I2(Q[1]),
+        .I2(\state_out_reg[28] [1]),
         .O(D[29]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[35]_i_1__6 
        (.I0(add_const_state[30]),
         .I1(add_const_state[2]),
-        .I2(Q[2]),
+        .I2(\state_out_reg[28] [2]),
         .O(D[30]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[36]_i_1__6 
        (.I0(add_const_state[31]),
         .I1(add_const_state[3]),
-        .I2(Q[3]),
+        .I2(\state_out_reg[28] [3]),
         .O(D[31]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[37]_i_1__6 
        (.I0(add_const_state[32]),
         .I1(add_const_state[4]),
-        .I2(Q[4]),
+        .I2(\state_out_reg[28] [4]),
         .O(D[32]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[38]_i_1__6 
        (.I0(add_const_state[33]),
         .I1(add_const_state[5]),
-        .I2(Q[5]),
+        .I2(\state_out_reg[28] [5]),
         .O(D[33]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[39]_i_1__6 
        (.I0(add_const_state[34]),
         .I1(add_const_state[6]),
-        .I2(Q[6]),
+        .I2(\state_out_reg[28] [6]),
         .O(D[34]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[3]_i_1__6 
        (.I0(add_const_state[2]),
-        .I1(Q[30]),
+        .I1(\state_out_reg[28] [30]),
         .I2(add_const_state[30]),
         .O(D[2]));
   LUT3 #(
@@ -24396,76 +24387,76 @@ module design_ascon_ascon_core_0_2_ascon_sbox_11
     \state_out[40]_i_1__6 
        (.I0(add_const_state[35]),
         .I1(add_const_state[7]),
-        .I2(Q[7]),
+        .I2(\state_out_reg[28] [7]),
         .O(D[35]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[41]_i_1__6 
        (.I0(add_const_state[36]),
         .I1(add_const_state[8]),
-        .I2(Q[8]),
+        .I2(\state_out_reg[28] [8]),
         .O(D[36]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[42]_i_1__6 
        (.I0(add_const_state[37]),
         .I1(add_const_state[9]),
-        .I2(Q[9]),
+        .I2(\state_out_reg[28] [9]),
         .O(D[37]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[43]_i_1__6 
        (.I0(add_const_state[38]),
         .I1(add_const_state[10]),
-        .I2(Q[10]),
+        .I2(\state_out_reg[28] [10]),
         .O(D[38]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[44]_i_1__6 
        (.I0(add_const_state[39]),
         .I1(add_const_state[11]),
-        .I2(Q[11]),
+        .I2(\state_out_reg[28] [11]),
         .O(D[39]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[45]_i_1__6 
        (.I0(add_const_state[40]),
         .I1(add_const_state[12]),
-        .I2(Q[12]),
+        .I2(\state_out_reg[28] [12]),
         .O(D[40]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[46]_i_1__6 
        (.I0(add_const_state[41]),
         .I1(add_const_state[13]),
-        .I2(Q[13]),
+        .I2(\state_out_reg[28] [13]),
         .O(D[41]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[47]_i_1__6 
        (.I0(add_const_state[42]),
         .I1(add_const_state[14]),
-        .I2(Q[14]),
+        .I2(\state_out_reg[28] [14]),
         .O(D[42]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[48]_i_1__6 
        (.I0(add_const_state[43]),
         .I1(add_const_state[15]),
-        .I2(Q[15]),
+        .I2(\state_out_reg[28] [15]),
         .O(D[43]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[49]_i_1__6 
        (.I0(add_const_state[44]),
         .I1(add_const_state[16]),
-        .I2(Q[16]),
+        .I2(\state_out_reg[28] [16]),
         .O(D[44]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[4]_i_1__5 
        (.I0(add_const_state[3]),
-        .I1(Q[31]),
+        .I1(\state_out_reg[28] [31]),
         .I2(add_const_state[31]),
         .O(D[3]));
   LUT3 #(
@@ -24473,76 +24464,76 @@ module design_ascon_ascon_core_0_2_ascon_sbox_11
     \state_out[50]_i_1__6 
        (.I0(add_const_state[45]),
         .I1(add_const_state[17]),
-        .I2(Q[17]),
+        .I2(\state_out_reg[28] [17]),
         .O(D[45]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[51]_i_1__6 
        (.I0(add_const_state[46]),
         .I1(add_const_state[18]),
-        .I2(Q[18]),
+        .I2(\state_out_reg[28] [18]),
         .O(D[46]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[52]_i_1__6 
        (.I0(add_const_state[47]),
         .I1(add_const_state[19]),
-        .I2(Q[19]),
+        .I2(\state_out_reg[28] [19]),
         .O(D[47]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[53]_i_1__6 
        (.I0(add_const_state[48]),
         .I1(add_const_state[20]),
-        .I2(Q[20]),
+        .I2(\state_out_reg[28] [20]),
         .O(D[48]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[54]_i_1__6 
        (.I0(add_const_state[49]),
         .I1(add_const_state[21]),
-        .I2(Q[21]),
+        .I2(\state_out_reg[28] [21]),
         .O(D[49]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[55]_i_1__6 
        (.I0(add_const_state[50]),
         .I1(add_const_state[22]),
-        .I2(Q[22]),
+        .I2(\state_out_reg[28] [22]),
         .O(D[50]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[56]_i_1__6 
        (.I0(add_const_state[51]),
         .I1(add_const_state[23]),
-        .I2(Q[23]),
+        .I2(\state_out_reg[28] [23]),
         .O(D[51]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[57]_i_1__6 
        (.I0(add_const_state[52]),
         .I1(add_const_state[24]),
-        .I2(Q[24]),
+        .I2(\state_out_reg[28] [24]),
         .O(D[52]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[58]_i_1__6 
        (.I0(add_const_state[53]),
         .I1(add_const_state[25]),
-        .I2(Q[25]),
+        .I2(\state_out_reg[28] [25]),
         .O(D[53]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[59]_i_1__6 
        (.I0(add_const_state[54]),
         .I1(add_const_state[26]),
-        .I2(Q[26]),
+        .I2(\state_out_reg[28] [26]),
         .O(D[54]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[5]_i_1__6 
        (.I0(add_const_state[4]),
-        .I1(Q[32]),
+        .I1(\state_out_reg[28] [32]),
         .I2(add_const_state[32]),
         .O(D[4]));
   LUT3 #(
@@ -24550,300 +24541,300 @@ module design_ascon_ascon_core_0_2_ascon_sbox_11
     \state_out[60]_i_1__6 
        (.I0(add_const_state[55]),
         .I1(add_const_state[27]),
-        .I2(Q[27]),
+        .I2(\state_out_reg[28] [27]),
         .O(D[55]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[61]_i_1__7 
        (.I0(add_const_state_0[60]),
         .I1(add_const_state_0[28]),
-        .I2(\state_out_reg[31] [29]),
+        .I2(Q[29]),
         .O(\state_out_reg[127] [4]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[62]_i_1__7 
        (.I0(add_const_state_0[61]),
         .I1(add_const_state_0[29]),
-        .I2(\state_out_reg[31] [30]),
+        .I2(Q[30]),
         .O(\state_out_reg[127] [5]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[63]_i_1__7 
        (.I0(add_const_state_0[62]),
         .I1(add_const_state_0[30]),
-        .I2(\state_out_reg[31] [31]),
+        .I2(Q[31]),
         .O(\state_out_reg[127] [6]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[65]_i_1__7 
-       (.I0(\state_out_reg[31] [1]),
+       (.I0(Q[1]),
         .I1(add_const_state_0[32]),
-        .I2(\state_out_reg[31] [33]),
+        .I2(Q[33]),
         .O(\state_out_reg[127] [7]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[66]_i_1__7 
-       (.I0(\state_out_reg[31] [2]),
+       (.I0(Q[2]),
         .I1(add_const_state_0[33]),
-        .I2(\state_out_reg[31] [34]),
+        .I2(Q[34]),
         .O(\state_out_reg[127] [8]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[67]_i_1__7 
-       (.I0(\state_out_reg[31] [3]),
+       (.I0(Q[3]),
         .I1(add_const_state_0[34]),
-        .I2(\state_out_reg[31] [35]),
+        .I2(Q[35]),
         .O(\state_out_reg[127] [9]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[68]_i_1__7 
-       (.I0(\state_out_reg[31] [4]),
+       (.I0(Q[4]),
         .I1(add_const_state_0[35]),
-        .I2(\state_out_reg[31] [36]),
+        .I2(Q[36]),
         .O(\state_out_reg[127] [10]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[69]_i_1__7 
-       (.I0(\state_out_reg[31] [5]),
+       (.I0(Q[5]),
         .I1(add_const_state_0[36]),
-        .I2(\state_out_reg[31] [37]),
+        .I2(Q[37]),
         .O(\state_out_reg[127] [11]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[6]_i_1__6 
        (.I0(add_const_state[5]),
-        .I1(Q[33]),
+        .I1(\state_out_reg[28] [33]),
         .I2(add_const_state[33]),
         .O(D[5]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[70]_i_1__7 
-       (.I0(\state_out_reg[31] [6]),
+       (.I0(Q[6]),
         .I1(add_const_state_0[37]),
-        .I2(\state_out_reg[31] [38]),
+        .I2(Q[38]),
         .O(\state_out_reg[127] [12]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[71]_i_1__7 
-       (.I0(\state_out_reg[31] [7]),
+       (.I0(Q[7]),
         .I1(add_const_state_0[38]),
-        .I2(\state_out_reg[31] [39]),
+        .I2(Q[39]),
         .O(\state_out_reg[127] [13]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[72]_i_1__7 
-       (.I0(\state_out_reg[31] [8]),
+       (.I0(Q[8]),
         .I1(add_const_state_0[39]),
-        .I2(\state_out_reg[31] [40]),
+        .I2(Q[40]),
         .O(\state_out_reg[127] [14]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[73]_i_1__7 
-       (.I0(\state_out_reg[31] [9]),
+       (.I0(Q[9]),
         .I1(add_const_state_0[40]),
-        .I2(\state_out_reg[31] [41]),
+        .I2(Q[41]),
         .O(\state_out_reg[127] [15]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[74]_i_1__7 
-       (.I0(\state_out_reg[31] [10]),
+       (.I0(Q[10]),
         .I1(add_const_state_0[41]),
-        .I2(\state_out_reg[31] [42]),
+        .I2(Q[42]),
         .O(\state_out_reg[127] [16]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[75]_i_1__7 
-       (.I0(\state_out_reg[31] [11]),
+       (.I0(Q[11]),
         .I1(add_const_state_0[42]),
-        .I2(\state_out_reg[31] [43]),
+        .I2(Q[43]),
         .O(\state_out_reg[127] [17]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[76]_i_1__7 
-       (.I0(\state_out_reg[31] [12]),
+       (.I0(Q[12]),
         .I1(add_const_state_0[43]),
-        .I2(\state_out_reg[31] [44]),
+        .I2(Q[44]),
         .O(\state_out_reg[127] [18]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[77]_i_1__7 
-       (.I0(\state_out_reg[31] [13]),
+       (.I0(Q[13]),
         .I1(add_const_state_0[44]),
-        .I2(\state_out_reg[31] [45]),
+        .I2(Q[45]),
         .O(\state_out_reg[127] [19]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[78]_i_1__7 
-       (.I0(\state_out_reg[31] [14]),
+       (.I0(Q[14]),
         .I1(add_const_state_0[45]),
-        .I2(\state_out_reg[31] [46]),
+        .I2(Q[46]),
         .O(\state_out_reg[127] [20]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[79]_i_1__7 
-       (.I0(\state_out_reg[31] [15]),
+       (.I0(Q[15]),
         .I1(add_const_state_0[46]),
-        .I2(\state_out_reg[31] [47]),
+        .I2(Q[47]),
         .O(\state_out_reg[127] [21]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[7]_i_1__6 
        (.I0(add_const_state[6]),
-        .I1(Q[34]),
+        .I1(\state_out_reg[28] [34]),
         .I2(add_const_state[34]),
         .O(D[6]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[80]_i_1__7 
-       (.I0(\state_out_reg[31] [16]),
+       (.I0(Q[16]),
         .I1(add_const_state_0[47]),
-        .I2(\state_out_reg[31] [48]),
+        .I2(Q[48]),
         .O(\state_out_reg[127] [22]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[81]_i_1__7 
-       (.I0(\state_out_reg[31] [17]),
+       (.I0(Q[17]),
         .I1(add_const_state_0[48]),
-        .I2(\state_out_reg[31] [49]),
+        .I2(Q[49]),
         .O(\state_out_reg[127] [23]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[82]_i_1__7 
-       (.I0(\state_out_reg[31] [18]),
+       (.I0(Q[18]),
         .I1(add_const_state_0[49]),
-        .I2(\state_out_reg[31] [50]),
+        .I2(Q[50]),
         .O(\state_out_reg[127] [24]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[83]_i_1__7 
-       (.I0(\state_out_reg[31] [19]),
+       (.I0(Q[19]),
         .I1(add_const_state_0[50]),
-        .I2(\state_out_reg[31] [51]),
+        .I2(Q[51]),
         .O(\state_out_reg[127] [25]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[84]_i_1__7 
-       (.I0(\state_out_reg[31] [20]),
+       (.I0(Q[20]),
         .I1(add_const_state_0[51]),
-        .I2(\state_out_reg[31] [52]),
+        .I2(Q[52]),
         .O(\state_out_reg[127] [26]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[85]_i_1__7 
-       (.I0(\state_out_reg[31] [21]),
+       (.I0(Q[21]),
         .I1(add_const_state_0[52]),
-        .I2(\state_out_reg[31] [53]),
+        .I2(Q[53]),
         .O(\state_out_reg[127] [27]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[86]_i_1__7 
-       (.I0(\state_out_reg[31] [22]),
+       (.I0(Q[22]),
         .I1(add_const_state_0[53]),
-        .I2(\state_out_reg[31] [54]),
+        .I2(Q[54]),
         .O(\state_out_reg[127] [28]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[87]_i_1__7 
-       (.I0(\state_out_reg[31] [23]),
+       (.I0(Q[23]),
         .I1(add_const_state_0[54]),
-        .I2(\state_out_reg[31] [55]),
+        .I2(Q[55]),
         .O(\state_out_reg[127] [29]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[88]_i_1__7 
-       (.I0(\state_out_reg[31] [24]),
+       (.I0(Q[24]),
         .I1(add_const_state_0[55]),
-        .I2(\state_out_reg[31] [56]),
+        .I2(Q[56]),
         .O(\state_out_reg[127] [30]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[89]_i_1__7 
-       (.I0(\state_out_reg[31] [25]),
+       (.I0(Q[25]),
         .I1(add_const_state_0[56]),
-        .I2(\state_out_reg[31] [57]),
+        .I2(Q[57]),
         .O(\state_out_reg[127] [31]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[8]_i_1__6 
        (.I0(add_const_state[7]),
-        .I1(Q[35]),
+        .I1(\state_out_reg[28] [35]),
         .I2(add_const_state[35]),
         .O(D[7]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[90]_i_1__7 
-       (.I0(\state_out_reg[31] [26]),
+       (.I0(Q[26]),
         .I1(add_const_state_0[57]),
-        .I2(\state_out_reg[31] [58]),
+        .I2(Q[58]),
         .O(\state_out_reg[127] [32]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[91]_i_1__7 
-       (.I0(\state_out_reg[31] [27]),
+       (.I0(Q[27]),
         .I1(add_const_state_0[58]),
-        .I2(\state_out_reg[31] [59]),
+        .I2(Q[59]),
         .O(\state_out_reg[127] [33]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[92]_i_1__7 
-       (.I0(\state_out_reg[31] [28]),
+       (.I0(Q[28]),
         .I1(add_const_state_0[59]),
-        .I2(\state_out_reg[31] [60]),
+        .I2(Q[60]),
         .O(\state_out_reg[127] [34]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[93]_i_1__7 
-       (.I0(\state_out_reg[31] [29]),
+       (.I0(Q[29]),
         .I1(add_const_state_0[60]),
-        .I2(\state_out_reg[31] [61]),
+        .I2(Q[61]),
         .O(\state_out_reg[127] [35]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[94]_i_1__7 
-       (.I0(\state_out_reg[31] [30]),
+       (.I0(Q[30]),
         .I1(add_const_state_0[61]),
-        .I2(\state_out_reg[31] [62]),
+        .I2(Q[62]),
         .O(\state_out_reg[127] [36]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[95]_i_1__7 
-       (.I0(\state_out_reg[31] [31]),
+       (.I0(Q[31]),
         .I1(add_const_state_0[62]),
-        .I2(\state_out_reg[31] [63]),
+        .I2(Q[63]),
         .O(\state_out_reg[127] [37]));
   LUT3 #(
     .INIT(8'hA9)) 
     \state_out[96]_i_1__7 
-       (.I0(\state_out_reg[31] [32]),
-        .I1(\state_out_reg[31] [0]),
+       (.I0(Q[32]),
+        .I1(Q[0]),
         .I2(\state_out_reg[96] ),
         .O(\state_out_reg[127] [38]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[97]_i_1__7 
-       (.I0(\state_out_reg[31] [33]),
-        .I1(\state_out_reg[31] [1]),
+       (.I0(Q[33]),
+        .I1(Q[1]),
         .I2(add_const_state_0[0]),
         .O(\state_out_reg[127] [39]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[98]_i_1__7 
-       (.I0(\state_out_reg[31] [34]),
-        .I1(\state_out_reg[31] [2]),
+       (.I0(Q[34]),
+        .I1(Q[2]),
         .I2(add_const_state_0[1]),
         .O(\state_out_reg[127] [40]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[99]_i_1__7 
-       (.I0(\state_out_reg[31] [35]),
-        .I1(\state_out_reg[31] [3]),
+       (.I0(Q[35]),
+        .I1(Q[3]),
         .I2(add_const_state_0[2]),
         .O(\state_out_reg[127] [41]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[9]_i_1__6 
        (.I0(add_const_state[8]),
-        .I1(Q[36]),
+        .I1(\state_out_reg[28] [36]),
         .I2(add_const_state[36]),
         .O(D[8]));
 endmodule
@@ -24853,388 +24844,388 @@ module design_ascon_ascon_core_0_2_ascon_sbox_13
    (D,
     \state_out_reg[127] ,
     add_const_state,
-    \round_state[6] ,
-    add_const_state_0,
     Q,
+    add_const_state_0,
+    \state_out_reg[31] ,
     CO);
   output [55:0]D;
   output [69:0]\state_out_reg[127] ;
   input [55:0]add_const_state;
-  input [55:0]\round_state[6] ;
+  input [55:0]Q;
   input [62:0]add_const_state_0;
-  input [63:0]Q;
+  input [63:0]\state_out_reg[31] ;
   input [0:0]CO;
 
   wire [0:0]CO;
   wire [55:0]D;
-  wire [63:0]Q;
+  wire [55:0]Q;
   wire [55:0]add_const_state;
   wire [62:0]add_const_state_0;
-  wire [55:0]\round_state[6] ;
   wire [69:0]\state_out_reg[127] ;
+  wire [63:0]\state_out_reg[31] ;
 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[100]_i_1__6 
-       (.I0(Q[36]),
-        .I1(Q[4]),
+       (.I0(\state_out_reg[31] [36]),
+        .I1(\state_out_reg[31] [4]),
         .I2(add_const_state_0[3]),
         .O(\state_out_reg[127] [42]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[101]_i_1__6 
-       (.I0(Q[37]),
-        .I1(Q[5]),
+       (.I0(\state_out_reg[31] [37]),
+        .I1(\state_out_reg[31] [5]),
         .I2(add_const_state_0[4]),
         .O(\state_out_reg[127] [43]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[102]_i_1__6 
-       (.I0(Q[38]),
-        .I1(Q[6]),
+       (.I0(\state_out_reg[31] [38]),
+        .I1(\state_out_reg[31] [6]),
         .I2(add_const_state_0[5]),
         .O(\state_out_reg[127] [44]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[103]_i_1__6 
-       (.I0(Q[39]),
-        .I1(Q[7]),
+       (.I0(\state_out_reg[31] [39]),
+        .I1(\state_out_reg[31] [7]),
         .I2(add_const_state_0[6]),
         .O(\state_out_reg[127] [45]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[104]_i_1__6 
-       (.I0(Q[40]),
-        .I1(Q[8]),
+       (.I0(\state_out_reg[31] [40]),
+        .I1(\state_out_reg[31] [8]),
         .I2(add_const_state_0[7]),
         .O(\state_out_reg[127] [46]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[105]_i_1__6 
-       (.I0(Q[41]),
-        .I1(Q[9]),
+       (.I0(\state_out_reg[31] [41]),
+        .I1(\state_out_reg[31] [9]),
         .I2(add_const_state_0[8]),
         .O(\state_out_reg[127] [47]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[106]_i_1__6 
-       (.I0(Q[42]),
-        .I1(Q[10]),
+       (.I0(\state_out_reg[31] [42]),
+        .I1(\state_out_reg[31] [10]),
         .I2(add_const_state_0[9]),
         .O(\state_out_reg[127] [48]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[107]_i_1__6 
-       (.I0(Q[43]),
-        .I1(Q[11]),
+       (.I0(\state_out_reg[31] [43]),
+        .I1(\state_out_reg[31] [11]),
         .I2(add_const_state_0[10]),
         .O(\state_out_reg[127] [49]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[108]_i_1__6 
-       (.I0(Q[44]),
-        .I1(Q[12]),
+       (.I0(\state_out_reg[31] [44]),
+        .I1(\state_out_reg[31] [12]),
         .I2(add_const_state_0[11]),
         .O(\state_out_reg[127] [50]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[109]_i_1__6 
-       (.I0(Q[45]),
-        .I1(Q[13]),
+       (.I0(\state_out_reg[31] [45]),
+        .I1(\state_out_reg[31] [13]),
         .I2(add_const_state_0[12]),
         .O(\state_out_reg[127] [51]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[10]_i_1__5 
        (.I0(add_const_state[8]),
-        .I1(\round_state[6] [36]),
+        .I1(Q[36]),
         .I2(add_const_state[36]),
         .O(D[8]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[110]_i_1__6 
-       (.I0(Q[46]),
-        .I1(Q[14]),
+       (.I0(\state_out_reg[31] [46]),
+        .I1(\state_out_reg[31] [14]),
         .I2(add_const_state_0[13]),
         .O(\state_out_reg[127] [52]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[111]_i_1__6 
-       (.I0(Q[47]),
-        .I1(Q[15]),
+       (.I0(\state_out_reg[31] [47]),
+        .I1(\state_out_reg[31] [15]),
         .I2(add_const_state_0[14]),
         .O(\state_out_reg[127] [53]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[112]_i_1__6 
-       (.I0(Q[48]),
-        .I1(Q[16]),
+       (.I0(\state_out_reg[31] [48]),
+        .I1(\state_out_reg[31] [16]),
         .I2(add_const_state_0[15]),
         .O(\state_out_reg[127] [54]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[113]_i_1__6 
-       (.I0(Q[49]),
-        .I1(Q[17]),
+       (.I0(\state_out_reg[31] [49]),
+        .I1(\state_out_reg[31] [17]),
         .I2(add_const_state_0[16]),
         .O(\state_out_reg[127] [55]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[114]_i_1__6 
-       (.I0(Q[50]),
-        .I1(Q[18]),
+       (.I0(\state_out_reg[31] [50]),
+        .I1(\state_out_reg[31] [18]),
         .I2(add_const_state_0[17]),
         .O(\state_out_reg[127] [56]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[115]_i_1__6 
-       (.I0(Q[51]),
-        .I1(Q[19]),
+       (.I0(\state_out_reg[31] [51]),
+        .I1(\state_out_reg[31] [19]),
         .I2(add_const_state_0[18]),
         .O(\state_out_reg[127] [57]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[116]_i_1__6 
-       (.I0(Q[52]),
-        .I1(Q[20]),
+       (.I0(\state_out_reg[31] [52]),
+        .I1(\state_out_reg[31] [20]),
         .I2(add_const_state_0[19]),
         .O(\state_out_reg[127] [58]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[117]_i_1__6 
-       (.I0(Q[53]),
-        .I1(Q[21]),
+       (.I0(\state_out_reg[31] [53]),
+        .I1(\state_out_reg[31] [21]),
         .I2(add_const_state_0[20]),
         .O(\state_out_reg[127] [59]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[118]_i_1__6 
-       (.I0(Q[54]),
-        .I1(Q[22]),
+       (.I0(\state_out_reg[31] [54]),
+        .I1(\state_out_reg[31] [22]),
         .I2(add_const_state_0[21]),
         .O(\state_out_reg[127] [60]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[119]_i_1__6 
-       (.I0(Q[55]),
-        .I1(Q[23]),
+       (.I0(\state_out_reg[31] [55]),
+        .I1(\state_out_reg[31] [23]),
         .I2(add_const_state_0[22]),
         .O(\state_out_reg[127] [61]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[11]_i_1__5 
        (.I0(add_const_state[9]),
-        .I1(\round_state[6] [37]),
+        .I1(Q[37]),
         .I2(add_const_state[37]),
         .O(D[9]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[120]_i_1__6 
-       (.I0(Q[56]),
-        .I1(Q[24]),
+       (.I0(\state_out_reg[31] [56]),
+        .I1(\state_out_reg[31] [24]),
         .I2(add_const_state_0[23]),
         .O(\state_out_reg[127] [62]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[121]_i_1__6 
-       (.I0(Q[57]),
-        .I1(Q[25]),
+       (.I0(\state_out_reg[31] [57]),
+        .I1(\state_out_reg[31] [25]),
         .I2(add_const_state_0[24]),
         .O(\state_out_reg[127] [63]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[122]_i_1__6 
-       (.I0(Q[58]),
-        .I1(Q[26]),
+       (.I0(\state_out_reg[31] [58]),
+        .I1(\state_out_reg[31] [26]),
         .I2(add_const_state_0[25]),
         .O(\state_out_reg[127] [64]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[123]_i_1__6 
-       (.I0(Q[59]),
-        .I1(Q[27]),
+       (.I0(\state_out_reg[31] [59]),
+        .I1(\state_out_reg[31] [27]),
         .I2(add_const_state_0[26]),
         .O(\state_out_reg[127] [65]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[124]_i_1__6 
-       (.I0(Q[60]),
-        .I1(Q[28]),
+       (.I0(\state_out_reg[31] [60]),
+        .I1(\state_out_reg[31] [28]),
         .I2(add_const_state_0[27]),
         .O(\state_out_reg[127] [66]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[125]_i_1__6 
-       (.I0(Q[61]),
-        .I1(Q[29]),
+       (.I0(\state_out_reg[31] [61]),
+        .I1(\state_out_reg[31] [29]),
         .I2(add_const_state_0[28]),
         .O(\state_out_reg[127] [67]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[126]_i_1__6 
-       (.I0(Q[62]),
-        .I1(Q[30]),
+       (.I0(\state_out_reg[31] [62]),
+        .I1(\state_out_reg[31] [30]),
         .I2(add_const_state_0[29]),
         .O(\state_out_reg[127] [68]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[127]_i_1__6 
-       (.I0(Q[63]),
-        .I1(Q[31]),
+       (.I0(\state_out_reg[31] [63]),
+        .I1(\state_out_reg[31] [31]),
         .I2(add_const_state_0[30]),
         .O(\state_out_reg[127] [69]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[12]_i_1__5 
        (.I0(add_const_state[10]),
-        .I1(\round_state[6] [38]),
+        .I1(Q[38]),
         .I2(add_const_state[38]),
         .O(D[10]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[13]_i_1__5 
        (.I0(add_const_state[11]),
-        .I1(\round_state[6] [39]),
+        .I1(Q[39]),
         .I2(add_const_state[39]),
         .O(D[11]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[14]_i_1__5 
        (.I0(add_const_state[12]),
-        .I1(\round_state[6] [40]),
+        .I1(Q[40]),
         .I2(add_const_state[40]),
         .O(D[12]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[15]_i_1__5 
        (.I0(add_const_state[13]),
-        .I1(\round_state[6] [41]),
+        .I1(Q[41]),
         .I2(add_const_state[41]),
         .O(D[13]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[16]_i_1__5 
        (.I0(add_const_state[14]),
-        .I1(\round_state[6] [42]),
+        .I1(Q[42]),
         .I2(add_const_state[42]),
         .O(D[14]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[17]_i_1__5 
        (.I0(add_const_state[15]),
-        .I1(\round_state[6] [43]),
+        .I1(Q[43]),
         .I2(add_const_state[43]),
         .O(D[15]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[18]_i_1__5 
        (.I0(add_const_state[16]),
-        .I1(\round_state[6] [44]),
+        .I1(Q[44]),
         .I2(add_const_state[44]),
         .O(D[16]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[19]_i_1__5 
        (.I0(add_const_state[17]),
-        .I1(\round_state[6] [45]),
+        .I1(Q[45]),
         .I2(add_const_state[45]),
         .O(D[17]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[20]_i_1__5 
        (.I0(add_const_state[18]),
-        .I1(\round_state[6] [46]),
+        .I1(Q[46]),
         .I2(add_const_state[46]),
         .O(D[18]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[21]_i_1__5 
        (.I0(add_const_state[19]),
-        .I1(\round_state[6] [47]),
+        .I1(Q[47]),
         .I2(add_const_state[47]),
         .O(D[19]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[22]_i_1__5 
        (.I0(add_const_state[20]),
-        .I1(\round_state[6] [48]),
+        .I1(Q[48]),
         .I2(add_const_state[48]),
         .O(D[20]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[23]_i_1__5 
        (.I0(add_const_state[21]),
-        .I1(\round_state[6] [49]),
+        .I1(Q[49]),
         .I2(add_const_state[49]),
         .O(D[21]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[24]_i_1__5 
        (.I0(add_const_state[22]),
-        .I1(\round_state[6] [50]),
+        .I1(Q[50]),
         .I2(add_const_state[50]),
         .O(D[22]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[25]_i_1__5 
        (.I0(add_const_state[23]),
-        .I1(\round_state[6] [51]),
+        .I1(Q[51]),
         .I2(add_const_state[51]),
         .O(D[23]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[26]_i_1__5 
        (.I0(add_const_state[24]),
-        .I1(\round_state[6] [52]),
+        .I1(Q[52]),
         .I2(add_const_state[52]),
         .O(D[24]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[27]_i_1__5 
        (.I0(add_const_state[25]),
-        .I1(\round_state[6] [53]),
+        .I1(Q[53]),
         .I2(add_const_state[53]),
         .O(D[25]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[28]_i_1__5 
        (.I0(add_const_state[26]),
-        .I1(\round_state[6] [54]),
+        .I1(Q[54]),
         .I2(add_const_state[54]),
         .O(D[26]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[29]_i_1__5 
        (.I0(add_const_state[27]),
-        .I1(\round_state[6] [55]),
+        .I1(Q[55]),
         .I2(add_const_state[55]),
         .O(D[27]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[29]_i_1__6 
        (.I0(add_const_state_0[28]),
-        .I1(Q[61]),
+        .I1(\state_out_reg[31] [61]),
         .I2(add_const_state_0[60]),
         .O(\state_out_reg[127] [0]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[2]_i_1__4 
        (.I0(add_const_state[0]),
-        .I1(\round_state[6] [28]),
+        .I1(Q[28]),
         .I2(add_const_state[28]),
         .O(D[0]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[30]_i_1__6 
        (.I0(add_const_state_0[29]),
-        .I1(Q[62]),
+        .I1(\state_out_reg[31] [62]),
         .I2(add_const_state_0[61]),
         .O(\state_out_reg[127] [1]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[31]_i_1__6 
        (.I0(add_const_state_0[30]),
-        .I1(Q[63]),
+        .I1(\state_out_reg[31] [63]),
         .I2(add_const_state_0[62]),
         .O(\state_out_reg[127] [2]));
   LUT3 #(
@@ -25242,55 +25233,55 @@ module design_ascon_ascon_core_0_2_ascon_sbox_13
     \state_out[32]_i_1__6 
        (.I0(add_const_state_0[31]),
         .I1(CO),
-        .I2(Q[0]),
+        .I2(\state_out_reg[31] [0]),
         .O(\state_out_reg[127] [3]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[34]_i_1__5 
        (.I0(add_const_state[28]),
         .I1(add_const_state[0]),
-        .I2(\round_state[6] [0]),
+        .I2(Q[0]),
         .O(D[28]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[35]_i_1__5 
        (.I0(add_const_state[29]),
         .I1(add_const_state[1]),
-        .I2(\round_state[6] [1]),
+        .I2(Q[1]),
         .O(D[29]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[36]_i_1__5 
        (.I0(add_const_state[30]),
         .I1(add_const_state[2]),
-        .I2(\round_state[6] [2]),
+        .I2(Q[2]),
         .O(D[30]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[37]_i_1__5 
        (.I0(add_const_state[31]),
         .I1(add_const_state[3]),
-        .I2(\round_state[6] [3]),
+        .I2(Q[3]),
         .O(D[31]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[38]_i_1__5 
        (.I0(add_const_state[32]),
         .I1(add_const_state[4]),
-        .I2(\round_state[6] [4]),
+        .I2(Q[4]),
         .O(D[32]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[39]_i_1__5 
        (.I0(add_const_state[33]),
         .I1(add_const_state[5]),
-        .I2(\round_state[6] [5]),
+        .I2(Q[5]),
         .O(D[33]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[3]_i_1__5 
        (.I0(add_const_state[1]),
-        .I1(\round_state[6] [29]),
+        .I1(Q[29]),
         .I2(add_const_state[29]),
         .O(D[1]));
   LUT3 #(
@@ -25298,76 +25289,76 @@ module design_ascon_ascon_core_0_2_ascon_sbox_13
     \state_out[40]_i_1__5 
        (.I0(add_const_state[34]),
         .I1(add_const_state[6]),
-        .I2(\round_state[6] [6]),
+        .I2(Q[6]),
         .O(D[34]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[41]_i_1__5 
        (.I0(add_const_state[35]),
         .I1(add_const_state[7]),
-        .I2(\round_state[6] [7]),
+        .I2(Q[7]),
         .O(D[35]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[42]_i_1__5 
        (.I0(add_const_state[36]),
         .I1(add_const_state[8]),
-        .I2(\round_state[6] [8]),
+        .I2(Q[8]),
         .O(D[36]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[43]_i_1__5 
        (.I0(add_const_state[37]),
         .I1(add_const_state[9]),
-        .I2(\round_state[6] [9]),
+        .I2(Q[9]),
         .O(D[37]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[44]_i_1__5 
        (.I0(add_const_state[38]),
         .I1(add_const_state[10]),
-        .I2(\round_state[6] [10]),
+        .I2(Q[10]),
         .O(D[38]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[45]_i_1__5 
        (.I0(add_const_state[39]),
         .I1(add_const_state[11]),
-        .I2(\round_state[6] [11]),
+        .I2(Q[11]),
         .O(D[39]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[46]_i_1__5 
        (.I0(add_const_state[40]),
         .I1(add_const_state[12]),
-        .I2(\round_state[6] [12]),
+        .I2(Q[12]),
         .O(D[40]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[47]_i_1__5 
        (.I0(add_const_state[41]),
         .I1(add_const_state[13]),
-        .I2(\round_state[6] [13]),
+        .I2(Q[13]),
         .O(D[41]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[48]_i_1__5 
        (.I0(add_const_state[42]),
         .I1(add_const_state[14]),
-        .I2(\round_state[6] [14]),
+        .I2(Q[14]),
         .O(D[42]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[49]_i_1__5 
        (.I0(add_const_state[43]),
         .I1(add_const_state[15]),
-        .I2(\round_state[6] [15]),
+        .I2(Q[15]),
         .O(D[43]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[4]_i_1__4 
        (.I0(add_const_state[2]),
-        .I1(\round_state[6] [30]),
+        .I1(Q[30]),
         .I2(add_const_state[30]),
         .O(D[2]));
   LUT3 #(
@@ -25375,76 +25366,76 @@ module design_ascon_ascon_core_0_2_ascon_sbox_13
     \state_out[50]_i_1__5 
        (.I0(add_const_state[44]),
         .I1(add_const_state[16]),
-        .I2(\round_state[6] [16]),
+        .I2(Q[16]),
         .O(D[44]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[51]_i_1__5 
        (.I0(add_const_state[45]),
         .I1(add_const_state[17]),
-        .I2(\round_state[6] [17]),
+        .I2(Q[17]),
         .O(D[45]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[52]_i_1__5 
        (.I0(add_const_state[46]),
         .I1(add_const_state[18]),
-        .I2(\round_state[6] [18]),
+        .I2(Q[18]),
         .O(D[46]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[53]_i_1__5 
        (.I0(add_const_state[47]),
         .I1(add_const_state[19]),
-        .I2(\round_state[6] [19]),
+        .I2(Q[19]),
         .O(D[47]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[54]_i_1__5 
        (.I0(add_const_state[48]),
         .I1(add_const_state[20]),
-        .I2(\round_state[6] [20]),
+        .I2(Q[20]),
         .O(D[48]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[55]_i_1__5 
        (.I0(add_const_state[49]),
         .I1(add_const_state[21]),
-        .I2(\round_state[6] [21]),
+        .I2(Q[21]),
         .O(D[49]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[56]_i_1__5 
        (.I0(add_const_state[50]),
         .I1(add_const_state[22]),
-        .I2(\round_state[6] [22]),
+        .I2(Q[22]),
         .O(D[50]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[57]_i_1__5 
        (.I0(add_const_state[51]),
         .I1(add_const_state[23]),
-        .I2(\round_state[6] [23]),
+        .I2(Q[23]),
         .O(D[51]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[58]_i_1__5 
        (.I0(add_const_state[52]),
         .I1(add_const_state[24]),
-        .I2(\round_state[6] [24]),
+        .I2(Q[24]),
         .O(D[52]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[59]_i_1__5 
        (.I0(add_const_state[53]),
         .I1(add_const_state[25]),
-        .I2(\round_state[6] [25]),
+        .I2(Q[25]),
         .O(D[53]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[5]_i_1__5 
        (.I0(add_const_state[3]),
-        .I1(\round_state[6] [31]),
+        .I1(Q[31]),
         .I2(add_const_state[31]),
         .O(D[3]));
   LUT3 #(
@@ -25452,307 +25443,307 @@ module design_ascon_ascon_core_0_2_ascon_sbox_13
     \state_out[60]_i_1__5 
        (.I0(add_const_state[54]),
         .I1(add_const_state[26]),
-        .I2(\round_state[6] [26]),
+        .I2(Q[26]),
         .O(D[54]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[61]_i_1__5 
        (.I0(add_const_state[55]),
         .I1(add_const_state[27]),
-        .I2(\round_state[6] [27]),
+        .I2(Q[27]),
         .O(D[55]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[61]_i_1__6 
        (.I0(add_const_state_0[60]),
         .I1(add_const_state_0[28]),
-        .I2(Q[29]),
+        .I2(\state_out_reg[31] [29]),
         .O(\state_out_reg[127] [4]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[62]_i_1__6 
        (.I0(add_const_state_0[61]),
         .I1(add_const_state_0[29]),
-        .I2(Q[30]),
+        .I2(\state_out_reg[31] [30]),
         .O(\state_out_reg[127] [5]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[63]_i_1__6 
        (.I0(add_const_state_0[62]),
         .I1(add_const_state_0[30]),
-        .I2(Q[31]),
+        .I2(\state_out_reg[31] [31]),
         .O(\state_out_reg[127] [6]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[65]_i_1__6 
-       (.I0(Q[1]),
+       (.I0(\state_out_reg[31] [1]),
         .I1(add_const_state_0[32]),
-        .I2(Q[33]),
+        .I2(\state_out_reg[31] [33]),
         .O(\state_out_reg[127] [7]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[66]_i_1__6 
-       (.I0(Q[2]),
+       (.I0(\state_out_reg[31] [2]),
         .I1(add_const_state_0[33]),
-        .I2(Q[34]),
+        .I2(\state_out_reg[31] [34]),
         .O(\state_out_reg[127] [8]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[67]_i_1__6 
-       (.I0(Q[3]),
+       (.I0(\state_out_reg[31] [3]),
         .I1(add_const_state_0[34]),
-        .I2(Q[35]),
+        .I2(\state_out_reg[31] [35]),
         .O(\state_out_reg[127] [9]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[68]_i_1__6 
-       (.I0(Q[4]),
+       (.I0(\state_out_reg[31] [4]),
         .I1(add_const_state_0[35]),
-        .I2(Q[36]),
+        .I2(\state_out_reg[31] [36]),
         .O(\state_out_reg[127] [10]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[69]_i_1__6 
-       (.I0(Q[5]),
+       (.I0(\state_out_reg[31] [5]),
         .I1(add_const_state_0[36]),
-        .I2(Q[37]),
+        .I2(\state_out_reg[31] [37]),
         .O(\state_out_reg[127] [11]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[6]_i_1__5 
        (.I0(add_const_state[4]),
-        .I1(\round_state[6] [32]),
+        .I1(Q[32]),
         .I2(add_const_state[32]),
         .O(D[4]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[70]_i_1__6 
-       (.I0(Q[6]),
+       (.I0(\state_out_reg[31] [6]),
         .I1(add_const_state_0[37]),
-        .I2(Q[38]),
+        .I2(\state_out_reg[31] [38]),
         .O(\state_out_reg[127] [12]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[71]_i_1__6 
-       (.I0(Q[7]),
+       (.I0(\state_out_reg[31] [7]),
         .I1(add_const_state_0[38]),
-        .I2(Q[39]),
+        .I2(\state_out_reg[31] [39]),
         .O(\state_out_reg[127] [13]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[72]_i_1__6 
-       (.I0(Q[8]),
+       (.I0(\state_out_reg[31] [8]),
         .I1(add_const_state_0[39]),
-        .I2(Q[40]),
+        .I2(\state_out_reg[31] [40]),
         .O(\state_out_reg[127] [14]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[73]_i_1__6 
-       (.I0(Q[9]),
+       (.I0(\state_out_reg[31] [9]),
         .I1(add_const_state_0[40]),
-        .I2(Q[41]),
+        .I2(\state_out_reg[31] [41]),
         .O(\state_out_reg[127] [15]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[74]_i_1__6 
-       (.I0(Q[10]),
+       (.I0(\state_out_reg[31] [10]),
         .I1(add_const_state_0[41]),
-        .I2(Q[42]),
+        .I2(\state_out_reg[31] [42]),
         .O(\state_out_reg[127] [16]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[75]_i_1__6 
-       (.I0(Q[11]),
+       (.I0(\state_out_reg[31] [11]),
         .I1(add_const_state_0[42]),
-        .I2(Q[43]),
+        .I2(\state_out_reg[31] [43]),
         .O(\state_out_reg[127] [17]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[76]_i_1__6 
-       (.I0(Q[12]),
+       (.I0(\state_out_reg[31] [12]),
         .I1(add_const_state_0[43]),
-        .I2(Q[44]),
+        .I2(\state_out_reg[31] [44]),
         .O(\state_out_reg[127] [18]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[77]_i_1__6 
-       (.I0(Q[13]),
+       (.I0(\state_out_reg[31] [13]),
         .I1(add_const_state_0[44]),
-        .I2(Q[45]),
+        .I2(\state_out_reg[31] [45]),
         .O(\state_out_reg[127] [19]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[78]_i_1__6 
-       (.I0(Q[14]),
+       (.I0(\state_out_reg[31] [14]),
         .I1(add_const_state_0[45]),
-        .I2(Q[46]),
+        .I2(\state_out_reg[31] [46]),
         .O(\state_out_reg[127] [20]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[79]_i_1__6 
-       (.I0(Q[15]),
+       (.I0(\state_out_reg[31] [15]),
         .I1(add_const_state_0[46]),
-        .I2(Q[47]),
+        .I2(\state_out_reg[31] [47]),
         .O(\state_out_reg[127] [21]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[7]_i_1__5 
        (.I0(add_const_state[5]),
-        .I1(\round_state[6] [33]),
+        .I1(Q[33]),
         .I2(add_const_state[33]),
         .O(D[5]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[80]_i_1__6 
-       (.I0(Q[16]),
+       (.I0(\state_out_reg[31] [16]),
         .I1(add_const_state_0[47]),
-        .I2(Q[48]),
+        .I2(\state_out_reg[31] [48]),
         .O(\state_out_reg[127] [22]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[81]_i_1__6 
-       (.I0(Q[17]),
+       (.I0(\state_out_reg[31] [17]),
         .I1(add_const_state_0[48]),
-        .I2(Q[49]),
+        .I2(\state_out_reg[31] [49]),
         .O(\state_out_reg[127] [23]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[82]_i_1__6 
-       (.I0(Q[18]),
+       (.I0(\state_out_reg[31] [18]),
         .I1(add_const_state_0[49]),
-        .I2(Q[50]),
+        .I2(\state_out_reg[31] [50]),
         .O(\state_out_reg[127] [24]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[83]_i_1__6 
-       (.I0(Q[19]),
+       (.I0(\state_out_reg[31] [19]),
         .I1(add_const_state_0[50]),
-        .I2(Q[51]),
+        .I2(\state_out_reg[31] [51]),
         .O(\state_out_reg[127] [25]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[84]_i_1__6 
-       (.I0(Q[20]),
+       (.I0(\state_out_reg[31] [20]),
         .I1(add_const_state_0[51]),
-        .I2(Q[52]),
+        .I2(\state_out_reg[31] [52]),
         .O(\state_out_reg[127] [26]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[85]_i_1__6 
-       (.I0(Q[21]),
+       (.I0(\state_out_reg[31] [21]),
         .I1(add_const_state_0[52]),
-        .I2(Q[53]),
+        .I2(\state_out_reg[31] [53]),
         .O(\state_out_reg[127] [27]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[86]_i_1__6 
-       (.I0(Q[22]),
+       (.I0(\state_out_reg[31] [22]),
         .I1(add_const_state_0[53]),
-        .I2(Q[54]),
+        .I2(\state_out_reg[31] [54]),
         .O(\state_out_reg[127] [28]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[87]_i_1__6 
-       (.I0(Q[23]),
+       (.I0(\state_out_reg[31] [23]),
         .I1(add_const_state_0[54]),
-        .I2(Q[55]),
+        .I2(\state_out_reg[31] [55]),
         .O(\state_out_reg[127] [29]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[88]_i_1__6 
-       (.I0(Q[24]),
+       (.I0(\state_out_reg[31] [24]),
         .I1(add_const_state_0[55]),
-        .I2(Q[56]),
+        .I2(\state_out_reg[31] [56]),
         .O(\state_out_reg[127] [30]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[89]_i_1__6 
-       (.I0(Q[25]),
+       (.I0(\state_out_reg[31] [25]),
         .I1(add_const_state_0[56]),
-        .I2(Q[57]),
+        .I2(\state_out_reg[31] [57]),
         .O(\state_out_reg[127] [31]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[8]_i_1__5 
        (.I0(add_const_state[6]),
-        .I1(\round_state[6] [34]),
+        .I1(Q[34]),
         .I2(add_const_state[34]),
         .O(D[6]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[90]_i_1__6 
-       (.I0(Q[26]),
+       (.I0(\state_out_reg[31] [26]),
         .I1(add_const_state_0[57]),
-        .I2(Q[58]),
+        .I2(\state_out_reg[31] [58]),
         .O(\state_out_reg[127] [32]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[91]_i_1__6 
-       (.I0(Q[27]),
+       (.I0(\state_out_reg[31] [27]),
         .I1(add_const_state_0[58]),
-        .I2(Q[59]),
+        .I2(\state_out_reg[31] [59]),
         .O(\state_out_reg[127] [33]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[92]_i_1__6 
-       (.I0(Q[28]),
+       (.I0(\state_out_reg[31] [28]),
         .I1(add_const_state_0[59]),
-        .I2(Q[60]),
+        .I2(\state_out_reg[31] [60]),
         .O(\state_out_reg[127] [34]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[93]_i_1__6 
-       (.I0(Q[29]),
+       (.I0(\state_out_reg[31] [29]),
         .I1(add_const_state_0[60]),
-        .I2(Q[61]),
+        .I2(\state_out_reg[31] [61]),
         .O(\state_out_reg[127] [35]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[94]_i_1__6 
-       (.I0(Q[30]),
+       (.I0(\state_out_reg[31] [30]),
         .I1(add_const_state_0[61]),
-        .I2(Q[62]),
+        .I2(\state_out_reg[31] [62]),
         .O(\state_out_reg[127] [36]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[95]_i_1__6 
-       (.I0(Q[31]),
+       (.I0(\state_out_reg[31] [31]),
         .I1(add_const_state_0[62]),
-        .I2(Q[63]),
+        .I2(\state_out_reg[31] [63]),
         .O(\state_out_reg[127] [37]));
   LUT3 #(
     .INIT(8'hA9)) 
     \state_out[96]_i_1__6 
-       (.I0(Q[32]),
-        .I1(Q[0]),
+       (.I0(\state_out_reg[31] [32]),
+        .I1(\state_out_reg[31] [0]),
         .I2(CO),
         .O(\state_out_reg[127] [38]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[97]_i_1__6 
-       (.I0(Q[33]),
-        .I1(Q[1]),
+       (.I0(\state_out_reg[31] [33]),
+        .I1(\state_out_reg[31] [1]),
         .I2(add_const_state_0[0]),
         .O(\state_out_reg[127] [39]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[98]_i_1__6 
-       (.I0(Q[34]),
-        .I1(Q[2]),
+       (.I0(\state_out_reg[31] [34]),
+        .I1(\state_out_reg[31] [2]),
         .I2(add_const_state_0[1]),
         .O(\state_out_reg[127] [40]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[99]_i_1__6 
-       (.I0(Q[35]),
-        .I1(Q[3]),
+       (.I0(\state_out_reg[31] [35]),
+        .I1(\state_out_reg[31] [3]),
         .I2(add_const_state_0[2]),
         .O(\state_out_reg[127] [41]));
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[9]_i_1__5 
        (.I0(add_const_state[7]),
-        .I1(\round_state[6] [35]),
+        .I1(Q[35]),
         .I2(add_const_state[35]),
         .O(D[7]));
 endmodule
@@ -33043,11 +33034,11 @@ module design_ascon_ascon_core_0_2_ascon_top
   wire [63:4]add_const_state;
   wire [63:1]add_const_state_0;
   wire [63:1]add_const_state_11;
-  wire [63:1]add_const_state_13;
-  wire [63:2]add_const_state_15;
-  wire [63:2]add_const_state_18;
-  wire [63:1]add_const_state_21;
-  wire [63:1]add_const_state_24;
+  wire [63:1]add_const_state_14;
+  wire [63:2]add_const_state_17;
+  wire [63:2]add_const_state_20;
+  wire [63:1]add_const_state_23;
+  wire [63:1]add_const_state_26;
   wire [63:5]add_const_state_5;
   wire [63:1]add_const_state_8;
   wire [127:0]\^ciphertext ;
@@ -33213,87 +33204,87 @@ module design_ascon_ascon_core_0_2_ascon_top
   wire \genblk1[4].round_inst_n_290 ;
   wire \genblk1[4].round_inst_n_291 ;
   wire \genblk1[4].round_inst_n_63 ;
-  wire \genblk1[5].round_inst_n_189 ;
-  wire \genblk1[5].round_inst_n_190 ;
-  wire \genblk1[5].round_inst_n_191 ;
-  wire \genblk1[5].round_inst_n_192 ;
-  wire \genblk1[5].round_inst_n_193 ;
-  wire \genblk1[5].round_inst_n_194 ;
-  wire \genblk1[5].round_inst_n_195 ;
-  wire \genblk1[5].round_inst_n_196 ;
-  wire \genblk1[5].round_inst_n_197 ;
-  wire \genblk1[5].round_inst_n_198 ;
-  wire \genblk1[5].round_inst_n_199 ;
-  wire \genblk1[5].round_inst_n_200 ;
-  wire \genblk1[5].round_inst_n_201 ;
-  wire \genblk1[5].round_inst_n_202 ;
-  wire \genblk1[5].round_inst_n_203 ;
-  wire \genblk1[5].round_inst_n_204 ;
-  wire \genblk1[5].round_inst_n_205 ;
-  wire \genblk1[5].round_inst_n_206 ;
-  wire \genblk1[5].round_inst_n_207 ;
-  wire \genblk1[5].round_inst_n_208 ;
-  wire \genblk1[5].round_inst_n_209 ;
-  wire \genblk1[5].round_inst_n_210 ;
-  wire \genblk1[5].round_inst_n_211 ;
-  wire \genblk1[5].round_inst_n_212 ;
-  wire \genblk1[5].round_inst_n_213 ;
-  wire \genblk1[5].round_inst_n_214 ;
-  wire \genblk1[5].round_inst_n_215 ;
-  wire \genblk1[5].round_inst_n_216 ;
-  wire \genblk1[5].round_inst_n_217 ;
-  wire \genblk1[5].round_inst_n_218 ;
-  wire \genblk1[5].round_inst_n_288 ;
+  wire \genblk1[5].round_inst_n_133 ;
+  wire \genblk1[5].round_inst_n_254 ;
+  wire \genblk1[5].round_inst_n_255 ;
+  wire \genblk1[5].round_inst_n_256 ;
+  wire \genblk1[5].round_inst_n_257 ;
+  wire \genblk1[5].round_inst_n_258 ;
+  wire \genblk1[5].round_inst_n_259 ;
+  wire \genblk1[5].round_inst_n_260 ;
+  wire \genblk1[5].round_inst_n_261 ;
+  wire \genblk1[5].round_inst_n_262 ;
+  wire \genblk1[5].round_inst_n_263 ;
+  wire \genblk1[5].round_inst_n_264 ;
+  wire \genblk1[5].round_inst_n_265 ;
+  wire \genblk1[5].round_inst_n_266 ;
+  wire \genblk1[5].round_inst_n_267 ;
+  wire \genblk1[5].round_inst_n_268 ;
+  wire \genblk1[5].round_inst_n_269 ;
+  wire \genblk1[5].round_inst_n_270 ;
+  wire \genblk1[5].round_inst_n_271 ;
+  wire \genblk1[5].round_inst_n_272 ;
+  wire \genblk1[5].round_inst_n_273 ;
+  wire \genblk1[5].round_inst_n_274 ;
+  wire \genblk1[5].round_inst_n_275 ;
+  wire \genblk1[5].round_inst_n_276 ;
+  wire \genblk1[5].round_inst_n_277 ;
+  wire \genblk1[5].round_inst_n_278 ;
+  wire \genblk1[5].round_inst_n_279 ;
+  wire \genblk1[5].round_inst_n_280 ;
+  wire \genblk1[5].round_inst_n_281 ;
+  wire \genblk1[5].round_inst_n_282 ;
+  wire \genblk1[5].round_inst_n_283 ;
+  wire \genblk1[5].round_inst_n_284 ;
+  wire \genblk1[5].round_inst_n_285 ;
+  wire \genblk1[5].round_inst_n_286 ;
+  wire \genblk1[5].round_inst_n_287 ;
   wire \genblk1[5].round_inst_n_63 ;
-  wire \genblk1[5].round_inst_n_64 ;
-  wire \genblk1[5].round_inst_n_65 ;
-  wire \genblk1[5].round_inst_n_66 ;
-  wire \genblk1[5].round_inst_n_67 ;
-  wire \genblk1[6].round_inst_n_185 ;
-  wire \genblk1[6].round_inst_n_186 ;
-  wire \genblk1[6].round_inst_n_187 ;
-  wire \genblk1[6].round_inst_n_188 ;
-  wire \genblk1[6].round_inst_n_189 ;
-  wire \genblk1[6].round_inst_n_190 ;
-  wire \genblk1[6].round_inst_n_191 ;
-  wire \genblk1[6].round_inst_n_192 ;
-  wire \genblk1[6].round_inst_n_193 ;
-  wire \genblk1[6].round_inst_n_194 ;
-  wire \genblk1[6].round_inst_n_195 ;
-  wire \genblk1[6].round_inst_n_196 ;
-  wire \genblk1[6].round_inst_n_197 ;
-  wire \genblk1[6].round_inst_n_198 ;
-  wire \genblk1[6].round_inst_n_199 ;
-  wire \genblk1[6].round_inst_n_200 ;
-  wire \genblk1[6].round_inst_n_201 ;
-  wire \genblk1[6].round_inst_n_202 ;
-  wire \genblk1[6].round_inst_n_203 ;
-  wire \genblk1[6].round_inst_n_204 ;
-  wire \genblk1[6].round_inst_n_205 ;
-  wire \genblk1[6].round_inst_n_206 ;
-  wire \genblk1[6].round_inst_n_207 ;
-  wire \genblk1[6].round_inst_n_208 ;
-  wire \genblk1[6].round_inst_n_209 ;
-  wire \genblk1[6].round_inst_n_210 ;
-  wire \genblk1[6].round_inst_n_211 ;
-  wire \genblk1[6].round_inst_n_212 ;
-  wire \genblk1[6].round_inst_n_213 ;
-  wire \genblk1[6].round_inst_n_214 ;
-  wire \genblk1[6].round_inst_n_215 ;
-  wire \genblk1[6].round_inst_n_216 ;
-  wire \genblk1[6].round_inst_n_217 ;
-  wire \genblk1[6].round_inst_n_218 ;
-  wire \genblk1[6].round_inst_n_219 ;
-  wire \genblk1[6].round_inst_n_220 ;
-  wire \genblk1[6].round_inst_n_221 ;
-  wire \genblk1[6].round_inst_n_222 ;
-  wire \genblk1[6].round_inst_n_223 ;
-  wire \genblk1[6].round_inst_n_224 ;
-  wire \genblk1[6].round_inst_n_225 ;
-  wire \genblk1[6].round_inst_n_226 ;
-  wire \genblk1[6].round_inst_n_296 ;
+  wire \genblk1[6].round_inst_n_132 ;
+  wire \genblk1[6].round_inst_n_253 ;
+  wire \genblk1[6].round_inst_n_254 ;
+  wire \genblk1[6].round_inst_n_255 ;
+  wire \genblk1[6].round_inst_n_256 ;
+  wire \genblk1[6].round_inst_n_257 ;
+  wire \genblk1[6].round_inst_n_258 ;
+  wire \genblk1[6].round_inst_n_259 ;
+  wire \genblk1[6].round_inst_n_260 ;
+  wire \genblk1[6].round_inst_n_261 ;
+  wire \genblk1[6].round_inst_n_262 ;
+  wire \genblk1[6].round_inst_n_263 ;
+  wire \genblk1[6].round_inst_n_264 ;
+  wire \genblk1[6].round_inst_n_265 ;
+  wire \genblk1[6].round_inst_n_266 ;
+  wire \genblk1[6].round_inst_n_267 ;
+  wire \genblk1[6].round_inst_n_268 ;
+  wire \genblk1[6].round_inst_n_269 ;
+  wire \genblk1[6].round_inst_n_270 ;
+  wire \genblk1[6].round_inst_n_271 ;
+  wire \genblk1[6].round_inst_n_272 ;
+  wire \genblk1[6].round_inst_n_273 ;
+  wire \genblk1[6].round_inst_n_274 ;
+  wire \genblk1[6].round_inst_n_275 ;
+  wire \genblk1[6].round_inst_n_276 ;
+  wire \genblk1[6].round_inst_n_277 ;
+  wire \genblk1[6].round_inst_n_278 ;
+  wire \genblk1[6].round_inst_n_279 ;
+  wire \genblk1[6].round_inst_n_280 ;
+  wire \genblk1[6].round_inst_n_281 ;
+  wire \genblk1[6].round_inst_n_282 ;
+  wire \genblk1[6].round_inst_n_283 ;
+  wire \genblk1[6].round_inst_n_284 ;
+  wire \genblk1[6].round_inst_n_285 ;
+  wire \genblk1[6].round_inst_n_286 ;
+  wire \genblk1[6].round_inst_n_287 ;
+  wire \genblk1[6].round_inst_n_288 ;
+  wire \genblk1[6].round_inst_n_289 ;
+  wire \genblk1[6].round_inst_n_290 ;
+  wire \genblk1[6].round_inst_n_291 ;
+  wire \genblk1[6].round_inst_n_292 ;
+  wire \genblk1[6].round_inst_n_293 ;
+  wire \genblk1[6].round_inst_n_294 ;
+  wire \genblk1[6].round_inst_n_295 ;
   wire \genblk1[6].round_inst_n_62 ;
-  wire \genblk1[6].round_inst_n_63 ;
   wire \genblk1[7].round_inst_n_254 ;
   wire \genblk1[7].round_inst_n_255 ;
   wire \genblk1[7].round_inst_n_256 ;
@@ -33462,9 +33453,11 @@ module design_ascon_ascon_core_0_2_ascon_top
   wire ks_inst_n_9;
   wire [0:0]linear_state;
   wire [0:0]linear_state_1;
-  wire [0:0]linear_state_16;
-  wire [0:0]linear_state_19;
-  wire [0:0]linear_state_22;
+  wire [0:0]linear_state_12;
+  wire [0:0]linear_state_15;
+  wire [0:0]linear_state_18;
+  wire [0:0]linear_state_21;
+  wire [0:0]linear_state_24;
   wire [0:0]linear_state_3;
   wire [0:0]linear_state_6;
   wire [0:0]linear_state_9;
@@ -33477,20 +33470,20 @@ module design_ascon_ascon_core_0_2_ascon_top
   wire [124:0]\round_state[2] ;
   wire [124:0]\round_state[3] ;
   wire [124:0]\round_state[4] ;
-  wire [125:0]\round_state[5] ;
-  wire [125:0]\round_state[6] ;
+  wire [125:1]\round_state[5] ;
+  wire [125:1]\round_state[6] ;
   wire [124:0]\round_state[7] ;
   wire [124:0]\round_state[8] ;
   wire [123:3]\round_state[9] ;
   wire rst;
   wire [127:29]sbox_state;
   wire [127:29]sbox_state_10;
-  wire [127:30]sbox_state_12;
-  wire [127:30]sbox_state_14;
-  wire [127:29]sbox_state_17;
+  wire [127:30]sbox_state_13;
+  wire [127:30]sbox_state_16;
+  wire [127:29]sbox_state_19;
   wire [127:1]sbox_state_2;
-  wire [127:29]sbox_state_20;
-  wire [127:1]sbox_state_23;
+  wire [127:29]sbox_state_22;
+  wire [127:1]sbox_state_25;
   wire [127:29]sbox_state_4;
   wire [127:29]sbox_state_7;
 
@@ -33518,7 +33511,7 @@ module design_ascon_ascon_core_0_2_ascon_top
         .sbox_state({sbox_state[63],sbox_state[31]}),
         .\state_out_reg[124]_0 ({\round_state[10] [124:97],\round_state[10] [92:65],\round_state[10] [63:0]}),
         .\state_out_reg[127]_0 ({\genblk1[9].round_inst_n_252 ,\genblk1[9].round_inst_n_253 ,\genblk1[9].round_inst_n_254 }),
-        .\state_out_reg[127]_1 ({sbox_state_23[127:65],sbox_state_23[63:60],sbox_state_23[35:28],\genblk1[9].round_inst_n_139 ,sbox_state_23[2:1],linear_state_22}),
+        .\state_out_reg[127]_1 ({sbox_state_25[127:65],sbox_state_25[63:60],sbox_state_25[35:28],\genblk1[9].round_inst_n_139 ,sbox_state_25[2:1],linear_state_24}),
         .\state_out_reg[12]_0 ({\genblk1[10].round_inst_n_279 ,\genblk1[10].round_inst_n_280 ,\genblk1[10].round_inst_n_281 }),
         .\state_out_reg[14]_0 ({\genblk1[10].round_inst_n_277 ,\genblk1[10].round_inst_n_278 }),
         .\state_out_reg[20]_0 ({\genblk1[10].round_inst_n_275 ,\genblk1[10].round_inst_n_276 }),
@@ -33701,7 +33694,7 @@ module design_ascon_ascon_core_0_2_ascon_top
         .Q({\round_state[4] [124:97],\round_state[4] [92:65],\round_state[4] [63:0]}),
         .S({\genblk1[4].round_inst_n_255 ,\genblk1[4].round_inst_n_256 }),
         .add_const_state(add_const_state_11),
-        .add_const_state_0(add_const_state_13),
+        .add_const_state_0(add_const_state_14),
         .clk(clk),
         .enable(enable),
         .rst(rst),
@@ -33740,150 +33733,150 @@ module design_ascon_ascon_core_0_2_ascon_top
         .\state_out_reg[96]_1 (\genblk1[5].round_inst_n_63 ));
   design_ascon_ascon_core_0_2_ascon_round_5 \genblk1[5].round_inst 
        (.CO(\genblk1[6].round_inst_n_62 ),
-        .D({sbox_state_12[127:65],sbox_state_12[63:62],sbox_state_12[33:30],\genblk1[5].round_inst_n_288 }),
+        .D({sbox_state_13[127:65],sbox_state_13[63:62],sbox_state_13[33:30],\genblk1[5].round_inst_n_133 ,linear_state_12}),
         .Q({\round_state[4] [124:97],\round_state[4] [92:65],\round_state[4] [63:0]}),
         .S({\genblk1[4].round_inst_n_255 ,\genblk1[4].round_inst_n_256 }),
-        .add_const_state(add_const_state_13),
-        .add_const_state_0(add_const_state_15),
+        .add_const_state(add_const_state_14),
+        .add_const_state_0(add_const_state_17),
         .clk(clk),
         .enable(enable),
         .rst(rst),
-        .\state_out_reg[125]_0 ({\round_state[5] [125:98],\round_state[5] [96],\round_state[5] [93:66],\round_state[5] [63:0]}),
+        .\state_out_reg[125]_0 ({\round_state[5] [125:98],\round_state[5] [93:66],\round_state[5] [63:1]}),
         .\state_out_reg[127]_0 ({sbox_state_10[127:65],sbox_state_10[63:61],sbox_state_10[32:29],linear_state_9}),
-        .\state_out_reg[13]_0 (\genblk1[5].round_inst_n_196 ),
-        .\state_out_reg[15]_0 ({\genblk1[5].round_inst_n_194 ,\genblk1[5].round_inst_n_195 }),
-        .\state_out_reg[21]_0 ({\genblk1[5].round_inst_n_192 ,\genblk1[5].round_inst_n_193 }),
-        .\state_out_reg[24]_0 ({\genblk1[5].round_inst_n_190 ,\genblk1[5].round_inst_n_191 }),
-        .\state_out_reg[26]_0 (\genblk1[5].round_inst_n_189 ),
-        .\state_out_reg[2]_0 (\genblk1[5].round_inst_n_201 ),
+        .\state_out_reg[13]_0 (\genblk1[5].round_inst_n_265 ),
+        .\state_out_reg[15]_0 ({\genblk1[5].round_inst_n_263 ,\genblk1[5].round_inst_n_264 }),
+        .\state_out_reg[21]_0 ({\genblk1[5].round_inst_n_261 ,\genblk1[5].round_inst_n_262 }),
+        .\state_out_reg[24]_0 ({\genblk1[5].round_inst_n_259 ,\genblk1[5].round_inst_n_260 }),
+        .\state_out_reg[26]_0 (\genblk1[5].round_inst_n_258 ),
+        .\state_out_reg[2]_0 (\genblk1[5].round_inst_n_270 ),
         .\state_out_reg[32]_0 ({\genblk1[4].round_inst_n_273 ,\genblk1[4].round_inst_n_274 ,\genblk1[4].round_inst_n_275 }),
-        .\state_out_reg[33]_0 ({\genblk1[5].round_inst_n_64 ,\genblk1[5].round_inst_n_65 ,\genblk1[5].round_inst_n_66 ,\genblk1[5].round_inst_n_67 }),
+        .\state_out_reg[33]_0 ({\genblk1[5].round_inst_n_254 ,\genblk1[5].round_inst_n_255 ,\genblk1[5].round_inst_n_256 ,\genblk1[5].round_inst_n_257 }),
         .\state_out_reg[36]_0 (\genblk1[4].round_inst_n_291 ),
         .\state_out_reg[36]_1 ({\genblk1[4].round_inst_n_270 ,\genblk1[4].round_inst_n_271 ,\genblk1[4].round_inst_n_272 }),
         .\state_out_reg[40]_0 ({\genblk1[4].round_inst_n_288 ,\genblk1[4].round_inst_n_289 ,\genblk1[4].round_inst_n_290 }),
         .\state_out_reg[40]_1 (\genblk1[4].round_inst_n_269 ),
-        .\state_out_reg[41]_0 ({\genblk1[5].round_inst_n_215 ,\genblk1[5].round_inst_n_216 ,\genblk1[5].round_inst_n_217 ,\genblk1[5].round_inst_n_218 }),
+        .\state_out_reg[41]_0 ({\genblk1[5].round_inst_n_284 ,\genblk1[5].round_inst_n_285 ,\genblk1[5].round_inst_n_286 ,\genblk1[5].round_inst_n_287 }),
         .\state_out_reg[44]_0 ({\genblk1[4].round_inst_n_286 ,\genblk1[4].round_inst_n_287 }),
         .\state_out_reg[44]_1 ({\genblk1[4].round_inst_n_267 ,\genblk1[4].round_inst_n_268 }),
-        .\state_out_reg[45]_0 ({\genblk1[5].round_inst_n_213 ,\genblk1[5].round_inst_n_214 }),
-        .\state_out_reg[47]_0 ({\genblk1[5].round_inst_n_211 ,\genblk1[5].round_inst_n_212 }),
+        .\state_out_reg[45]_0 ({\genblk1[5].round_inst_n_282 ,\genblk1[5].round_inst_n_283 }),
+        .\state_out_reg[47]_0 ({\genblk1[5].round_inst_n_280 ,\genblk1[5].round_inst_n_281 }),
         .\state_out_reg[48]_0 ({\genblk1[4].round_inst_n_282 ,\genblk1[4].round_inst_n_283 ,\genblk1[4].round_inst_n_284 ,\genblk1[4].round_inst_n_285 }),
         .\state_out_reg[48]_1 ({\genblk1[4].round_inst_n_265 ,\genblk1[4].round_inst_n_266 }),
-        .\state_out_reg[52]_0 ({\genblk1[5].round_inst_n_209 ,\genblk1[5].round_inst_n_210 }),
+        .\state_out_reg[52]_0 ({\genblk1[5].round_inst_n_278 ,\genblk1[5].round_inst_n_279 }),
         .\state_out_reg[52]_1 ({\genblk1[4].round_inst_n_280 ,\genblk1[4].round_inst_n_281 }),
         .\state_out_reg[52]_2 ({\genblk1[4].round_inst_n_262 ,\genblk1[4].round_inst_n_263 ,\genblk1[4].round_inst_n_264 }),
         .\state_out_reg[56]_0 (\genblk1[4].round_inst_n_279 ),
         .\state_out_reg[56]_1 ({\genblk1[4].round_inst_n_260 ,\genblk1[4].round_inst_n_261 }),
-        .\state_out_reg[57]_0 ({\genblk1[5].round_inst_n_205 ,\genblk1[5].round_inst_n_206 ,\genblk1[5].round_inst_n_207 ,\genblk1[5].round_inst_n_208 }),
-        .\state_out_reg[60]_0 ({\genblk1[5].round_inst_n_203 ,\genblk1[5].round_inst_n_204 }),
+        .\state_out_reg[57]_0 ({\genblk1[5].round_inst_n_274 ,\genblk1[5].round_inst_n_275 ,\genblk1[5].round_inst_n_276 ,\genblk1[5].round_inst_n_277 }),
+        .\state_out_reg[60]_0 ({\genblk1[5].round_inst_n_272 ,\genblk1[5].round_inst_n_273 }),
         .\state_out_reg[60]_1 ({\genblk1[4].round_inst_n_276 ,\genblk1[4].round_inst_n_277 ,\genblk1[4].round_inst_n_278 }),
         .\state_out_reg[60]_2 ({\genblk1[4].round_inst_n_257 ,\genblk1[4].round_inst_n_258 ,\genblk1[4].round_inst_n_259 }),
         .\state_out_reg[63]_0 (\genblk1[5].round_inst_n_63 ),
-        .\state_out_reg[63]_1 (\genblk1[5].round_inst_n_202 ),
-        .\state_out_reg[9]_0 ({\genblk1[5].round_inst_n_197 ,\genblk1[5].round_inst_n_198 ,\genblk1[5].round_inst_n_199 ,\genblk1[5].round_inst_n_200 }));
+        .\state_out_reg[63]_1 (\genblk1[5].round_inst_n_271 ),
+        .\state_out_reg[9]_0 ({\genblk1[5].round_inst_n_266 ,\genblk1[5].round_inst_n_267 ,\genblk1[5].round_inst_n_268 ,\genblk1[5].round_inst_n_269 }));
   design_ascon_ascon_core_0_2_ascon_round_6 \genblk1[6].round_inst 
        (.CO(\genblk1[6].round_inst_n_62 ),
-        .D({sbox_state_14[127:65],sbox_state_14[63:62],sbox_state_14[33:30],\genblk1[6].round_inst_n_296 }),
-        .Q({\round_state[6] [125:98],\round_state[6] [96],\round_state[6] [93:66],\round_state[6] [63],\round_state[6] [61:0]}),
-        .S({\genblk1[6].round_inst_n_63 ,\round_state[6] [62]}),
-        .add_const_state(add_const_state_15),
-        .add_const_state_0(add_const_state_18),
+        .D({sbox_state_16[127:65],sbox_state_16[63:62],sbox_state_16[33:30],\genblk1[6].round_inst_n_132 ,linear_state_15}),
+        .Q({\round_state[6] [125:98],\round_state[6] [93:66],\round_state[6] [63:1]}),
+        .S(\genblk1[6].round_inst_n_253 ),
+        .add_const_state(add_const_state_17),
+        .add_const_state_0(add_const_state_20),
         .clk(clk),
         .enable(enable),
         .rst(rst),
-        .\state_out_reg[0]_0 (\genblk1[5].round_inst_n_202 ),
-        .\state_out_reg[127]_0 ({sbox_state_12[127:65],sbox_state_12[63:62],sbox_state_12[33:30],\genblk1[5].round_inst_n_288 }),
-        .\state_out_reg[13]_0 ({\genblk1[6].round_inst_n_218 ,\genblk1[6].round_inst_n_219 }),
-        .\state_out_reg[17]_0 ({\genblk1[6].round_inst_n_216 ,\genblk1[6].round_inst_n_217 }),
-        .\state_out_reg[20]_0 ({\genblk1[6].round_inst_n_213 ,\genblk1[6].round_inst_n_214 ,\genblk1[6].round_inst_n_215 }),
-        .\state_out_reg[25]_0 ({\genblk1[6].round_inst_n_210 ,\genblk1[6].round_inst_n_211 ,\genblk1[6].round_inst_n_212 }),
-        .\state_out_reg[29]_0 ({\genblk1[6].round_inst_n_208 ,\genblk1[6].round_inst_n_209 }),
-        .\state_out_reg[29]_1 ({\round_state[5] [125:98],\round_state[5] [96],\round_state[5] [93:66],\round_state[5] [63:0]}),
-        .\state_out_reg[33]_0 ({\genblk1[6].round_inst_n_206 ,\genblk1[6].round_inst_n_207 }),
-        .\state_out_reg[33]_1 ({\genblk1[5].round_inst_n_64 ,\genblk1[5].round_inst_n_65 ,\genblk1[5].round_inst_n_66 ,\genblk1[5].round_inst_n_67 }),
-        .\state_out_reg[37]_0 ({\genblk1[6].round_inst_n_202 ,\genblk1[6].round_inst_n_203 ,\genblk1[6].round_inst_n_204 ,\genblk1[6].round_inst_n_205 }),
-        .\state_out_reg[37]_1 (\genblk1[5].round_inst_n_201 ),
-        .\state_out_reg[41]_0 ({\genblk1[6].round_inst_n_199 ,\genblk1[6].round_inst_n_200 ,\genblk1[6].round_inst_n_201 }),
-        .\state_out_reg[41]_1 ({\genblk1[5].round_inst_n_197 ,\genblk1[5].round_inst_n_198 ,\genblk1[5].round_inst_n_199 ,\genblk1[5].round_inst_n_200 }),
-        .\state_out_reg[41]_2 ({\genblk1[5].round_inst_n_215 ,\genblk1[5].round_inst_n_216 ,\genblk1[5].round_inst_n_217 ,\genblk1[5].round_inst_n_218 }),
-        .\state_out_reg[43]_0 ({\genblk1[6].round_inst_n_197 ,\genblk1[6].round_inst_n_198 }),
-        .\state_out_reg[45]_0 (\genblk1[5].round_inst_n_196 ),
-        .\state_out_reg[45]_1 ({\genblk1[5].round_inst_n_213 ,\genblk1[5].round_inst_n_214 }),
-        .\state_out_reg[49]_0 ({\genblk1[6].round_inst_n_195 ,\genblk1[6].round_inst_n_196 }),
-        .\state_out_reg[49]_1 ({\genblk1[5].round_inst_n_194 ,\genblk1[5].round_inst_n_195 }),
-        .\state_out_reg[49]_2 ({\genblk1[5].round_inst_n_211 ,\genblk1[5].round_inst_n_212 }),
-        .\state_out_reg[53]_0 ({\genblk1[6].round_inst_n_192 ,\genblk1[6].round_inst_n_193 ,\genblk1[6].round_inst_n_194 }),
-        .\state_out_reg[53]_1 ({\genblk1[5].round_inst_n_192 ,\genblk1[5].round_inst_n_193 }),
-        .\state_out_reg[53]_2 ({\genblk1[5].round_inst_n_209 ,\genblk1[5].round_inst_n_210 }),
-        .\state_out_reg[57]_0 ({\genblk1[6].round_inst_n_189 ,\genblk1[6].round_inst_n_190 ,\genblk1[6].round_inst_n_191 }),
-        .\state_out_reg[57]_1 ({\genblk1[5].round_inst_n_190 ,\genblk1[5].round_inst_n_191 }),
-        .\state_out_reg[57]_2 ({\genblk1[5].round_inst_n_205 ,\genblk1[5].round_inst_n_206 ,\genblk1[5].round_inst_n_207 ,\genblk1[5].round_inst_n_208 }),
-        .\state_out_reg[5]_0 ({\genblk1[6].round_inst_n_223 ,\genblk1[6].round_inst_n_224 ,\genblk1[6].round_inst_n_225 ,\genblk1[6].round_inst_n_226 }),
-        .\state_out_reg[61]_0 ({\genblk1[6].round_inst_n_185 ,\genblk1[6].round_inst_n_186 ,\genblk1[6].round_inst_n_187 ,\genblk1[6].round_inst_n_188 }),
-        .\state_out_reg[61]_1 (\genblk1[5].round_inst_n_189 ),
-        .\state_out_reg[61]_2 ({\genblk1[5].round_inst_n_203 ,\genblk1[5].round_inst_n_204 }),
-        .\state_out_reg[8]_0 ({\genblk1[6].round_inst_n_220 ,\genblk1[6].round_inst_n_221 ,\genblk1[6].round_inst_n_222 }),
-        .\state_out_reg[96]_0 (\genblk1[7].round_inst_n_62 ));
+        .\state_out_reg[127]_0 ({sbox_state_13[127:65],sbox_state_13[63:62],sbox_state_13[33:30],\genblk1[5].round_inst_n_133 ,linear_state_12}),
+        .\state_out_reg[13]_0 ({\genblk1[6].round_inst_n_287 ,\genblk1[6].round_inst_n_288 }),
+        .\state_out_reg[17]_0 ({\genblk1[6].round_inst_n_285 ,\genblk1[6].round_inst_n_286 }),
+        .\state_out_reg[20]_0 ({\genblk1[6].round_inst_n_282 ,\genblk1[6].round_inst_n_283 ,\genblk1[6].round_inst_n_284 }),
+        .\state_out_reg[25]_0 ({\genblk1[6].round_inst_n_279 ,\genblk1[6].round_inst_n_280 ,\genblk1[6].round_inst_n_281 }),
+        .\state_out_reg[29]_0 ({\genblk1[6].round_inst_n_277 ,\genblk1[6].round_inst_n_278 }),
+        .\state_out_reg[29]_1 ({\round_state[5] [125:98],\round_state[5] [93:66],\round_state[5] [63:1]}),
+        .\state_out_reg[33]_0 ({\genblk1[6].round_inst_n_275 ,\genblk1[6].round_inst_n_276 }),
+        .\state_out_reg[33]_1 ({\genblk1[5].round_inst_n_254 ,\genblk1[5].round_inst_n_255 ,\genblk1[5].round_inst_n_256 ,\genblk1[5].round_inst_n_257 }),
+        .\state_out_reg[37]_0 ({\genblk1[6].round_inst_n_271 ,\genblk1[6].round_inst_n_272 ,\genblk1[6].round_inst_n_273 ,\genblk1[6].round_inst_n_274 }),
+        .\state_out_reg[37]_1 (\genblk1[5].round_inst_n_270 ),
+        .\state_out_reg[41]_0 ({\genblk1[6].round_inst_n_268 ,\genblk1[6].round_inst_n_269 ,\genblk1[6].round_inst_n_270 }),
+        .\state_out_reg[41]_1 ({\genblk1[5].round_inst_n_266 ,\genblk1[5].round_inst_n_267 ,\genblk1[5].round_inst_n_268 ,\genblk1[5].round_inst_n_269 }),
+        .\state_out_reg[41]_2 ({\genblk1[5].round_inst_n_284 ,\genblk1[5].round_inst_n_285 ,\genblk1[5].round_inst_n_286 ,\genblk1[5].round_inst_n_287 }),
+        .\state_out_reg[43]_0 ({\genblk1[6].round_inst_n_266 ,\genblk1[6].round_inst_n_267 }),
+        .\state_out_reg[45]_0 (\genblk1[5].round_inst_n_265 ),
+        .\state_out_reg[45]_1 ({\genblk1[5].round_inst_n_282 ,\genblk1[5].round_inst_n_283 }),
+        .\state_out_reg[49]_0 ({\genblk1[6].round_inst_n_264 ,\genblk1[6].round_inst_n_265 }),
+        .\state_out_reg[49]_1 ({\genblk1[5].round_inst_n_263 ,\genblk1[5].round_inst_n_264 }),
+        .\state_out_reg[49]_2 ({\genblk1[5].round_inst_n_280 ,\genblk1[5].round_inst_n_281 }),
+        .\state_out_reg[53]_0 ({\genblk1[6].round_inst_n_261 ,\genblk1[6].round_inst_n_262 ,\genblk1[6].round_inst_n_263 }),
+        .\state_out_reg[53]_1 ({\genblk1[5].round_inst_n_261 ,\genblk1[5].round_inst_n_262 }),
+        .\state_out_reg[53]_2 ({\genblk1[5].round_inst_n_278 ,\genblk1[5].round_inst_n_279 }),
+        .\state_out_reg[57]_0 ({\genblk1[6].round_inst_n_258 ,\genblk1[6].round_inst_n_259 ,\genblk1[6].round_inst_n_260 }),
+        .\state_out_reg[57]_1 ({\genblk1[5].round_inst_n_259 ,\genblk1[5].round_inst_n_260 }),
+        .\state_out_reg[57]_2 ({\genblk1[5].round_inst_n_274 ,\genblk1[5].round_inst_n_275 ,\genblk1[5].round_inst_n_276 ,\genblk1[5].round_inst_n_277 }),
+        .\state_out_reg[5]_0 ({\genblk1[6].round_inst_n_292 ,\genblk1[6].round_inst_n_293 ,\genblk1[6].round_inst_n_294 ,\genblk1[6].round_inst_n_295 }),
+        .\state_out_reg[61]_0 ({\genblk1[6].round_inst_n_254 ,\genblk1[6].round_inst_n_255 ,\genblk1[6].round_inst_n_256 ,\genblk1[6].round_inst_n_257 }),
+        .\state_out_reg[61]_1 (\genblk1[5].round_inst_n_258 ),
+        .\state_out_reg[61]_2 ({\genblk1[5].round_inst_n_272 ,\genblk1[5].round_inst_n_273 }),
+        .\state_out_reg[8]_0 ({\genblk1[6].round_inst_n_289 ,\genblk1[6].round_inst_n_290 ,\genblk1[6].round_inst_n_291 }),
+        .\state_out_reg[96]_0 (\genblk1[5].round_inst_n_271 ),
+        .\state_out_reg[96]_1 (\genblk1[7].round_inst_n_62 ));
   design_ascon_ascon_core_0_2_ascon_round_7 \genblk1[7].round_inst 
        (.CO(\genblk1[8].round_inst_n_63 ),
-        .D({sbox_state_17[127:65],sbox_state_17[63:61],sbox_state_17[32:29],linear_state_16}),
-        .Q({\round_state[7] [124:97],\round_state[7] [92:65],\round_state[7] [63:0]}),
-        .S(\genblk1[6].round_inst_n_63 ),
-        .add_const_state(add_const_state_18),
-        .add_const_state_0(add_const_state_21),
+        .D({sbox_state_19[127:65],sbox_state_19[63:61],sbox_state_19[32:29],linear_state_18}),
+        .Q({\round_state[6] [125:98],\round_state[6] [93:66],\round_state[6] [63:1]}),
+        .S(\genblk1[6].round_inst_n_253 ),
+        .add_const_state(add_const_state_20),
+        .add_const_state_0(add_const_state_23),
         .clk(clk),
         .enable(enable),
-        .\round_state[6] ({\round_state[6] [125:98],\round_state[6] [96],\round_state[6] [93:66],\round_state[6] [63:0]}),
         .rst(rst),
-        .\state_out_reg[127]_0 ({sbox_state_14[127:65],sbox_state_14[63:62],sbox_state_14[33:30],\genblk1[6].round_inst_n_296 }),
+        .\state_out_reg[124]_0 ({\round_state[7] [124:97],\round_state[7] [92:65],\round_state[7] [63:0]}),
+        .\state_out_reg[127]_0 ({sbox_state_16[127:65],sbox_state_16[63:62],sbox_state_16[33:30],\genblk1[6].round_inst_n_132 ,linear_state_15}),
         .\state_out_reg[16]_0 ({\genblk1[7].round_inst_n_262 ,\genblk1[7].round_inst_n_263 ,\genblk1[7].round_inst_n_264 }),
         .\state_out_reg[20]_0 (\genblk1[7].round_inst_n_261 ),
         .\state_out_reg[23]_0 ({\genblk1[7].round_inst_n_258 ,\genblk1[7].round_inst_n_259 ,\genblk1[7].round_inst_n_260 }),
         .\state_out_reg[28]_0 ({\genblk1[7].round_inst_n_256 ,\genblk1[7].round_inst_n_257 }),
         .\state_out_reg[31]_0 ({\genblk1[7].round_inst_n_254 ,\genblk1[7].round_inst_n_255 }),
         .\state_out_reg[33]_0 (\genblk1[7].round_inst_n_288 ),
-        .\state_out_reg[33]_1 ({\genblk1[6].round_inst_n_206 ,\genblk1[6].round_inst_n_207 }),
-        .\state_out_reg[37]_0 ({\genblk1[6].round_inst_n_223 ,\genblk1[6].round_inst_n_224 ,\genblk1[6].round_inst_n_225 ,\genblk1[6].round_inst_n_226 }),
-        .\state_out_reg[37]_1 ({\genblk1[6].round_inst_n_202 ,\genblk1[6].round_inst_n_203 ,\genblk1[6].round_inst_n_204 ,\genblk1[6].round_inst_n_205 }),
+        .\state_out_reg[33]_1 ({\genblk1[6].round_inst_n_275 ,\genblk1[6].round_inst_n_276 }),
+        .\state_out_reg[37]_0 ({\genblk1[6].round_inst_n_292 ,\genblk1[6].round_inst_n_293 ,\genblk1[6].round_inst_n_294 ,\genblk1[6].round_inst_n_295 }),
+        .\state_out_reg[37]_1 ({\genblk1[6].round_inst_n_271 ,\genblk1[6].round_inst_n_272 ,\genblk1[6].round_inst_n_273 ,\genblk1[6].round_inst_n_274 }),
         .\state_out_reg[38]_0 ({\genblk1[7].round_inst_n_286 ,\genblk1[7].round_inst_n_287 }),
-        .\state_out_reg[41]_0 ({\genblk1[6].round_inst_n_220 ,\genblk1[6].round_inst_n_221 ,\genblk1[6].round_inst_n_222 }),
-        .\state_out_reg[41]_1 ({\genblk1[6].round_inst_n_199 ,\genblk1[6].round_inst_n_200 ,\genblk1[6].round_inst_n_201 }),
+        .\state_out_reg[41]_0 ({\genblk1[6].round_inst_n_289 ,\genblk1[6].round_inst_n_290 ,\genblk1[6].round_inst_n_291 }),
+        .\state_out_reg[41]_1 ({\genblk1[6].round_inst_n_268 ,\genblk1[6].round_inst_n_269 ,\genblk1[6].round_inst_n_270 }),
         .\state_out_reg[44]_0 ({\genblk1[7].round_inst_n_282 ,\genblk1[7].round_inst_n_283 ,\genblk1[7].round_inst_n_284 ,\genblk1[7].round_inst_n_285 }),
-        .\state_out_reg[45]_0 ({\genblk1[6].round_inst_n_218 ,\genblk1[6].round_inst_n_219 }),
-        .\state_out_reg[45]_1 ({\genblk1[6].round_inst_n_197 ,\genblk1[6].round_inst_n_198 }),
-        .\state_out_reg[49]_0 ({\genblk1[6].round_inst_n_216 ,\genblk1[6].round_inst_n_217 }),
-        .\state_out_reg[49]_1 ({\genblk1[6].round_inst_n_195 ,\genblk1[6].round_inst_n_196 }),
+        .\state_out_reg[45]_0 ({\genblk1[6].round_inst_n_287 ,\genblk1[6].round_inst_n_288 }),
+        .\state_out_reg[45]_1 ({\genblk1[6].round_inst_n_266 ,\genblk1[6].round_inst_n_267 }),
+        .\state_out_reg[49]_0 ({\genblk1[6].round_inst_n_285 ,\genblk1[6].round_inst_n_286 }),
+        .\state_out_reg[49]_1 ({\genblk1[6].round_inst_n_264 ,\genblk1[6].round_inst_n_265 }),
         .\state_out_reg[4]_0 ({\genblk1[7].round_inst_n_268 ,\genblk1[7].round_inst_n_269 }),
         .\state_out_reg[52]_0 ({\genblk1[7].round_inst_n_278 ,\genblk1[7].round_inst_n_279 ,\genblk1[7].round_inst_n_280 ,\genblk1[7].round_inst_n_281 }),
-        .\state_out_reg[53]_0 ({\genblk1[6].round_inst_n_213 ,\genblk1[6].round_inst_n_214 ,\genblk1[6].round_inst_n_215 }),
-        .\state_out_reg[53]_1 ({\genblk1[6].round_inst_n_192 ,\genblk1[6].round_inst_n_193 ,\genblk1[6].round_inst_n_194 }),
+        .\state_out_reg[53]_0 ({\genblk1[6].round_inst_n_282 ,\genblk1[6].round_inst_n_283 ,\genblk1[6].round_inst_n_284 }),
+        .\state_out_reg[53]_1 ({\genblk1[6].round_inst_n_261 ,\genblk1[6].round_inst_n_262 ,\genblk1[6].round_inst_n_263 }),
         .\state_out_reg[56]_0 ({\genblk1[7].round_inst_n_274 ,\genblk1[7].round_inst_n_275 ,\genblk1[7].round_inst_n_276 ,\genblk1[7].round_inst_n_277 }),
-        .\state_out_reg[57]_0 ({\genblk1[6].round_inst_n_210 ,\genblk1[6].round_inst_n_211 ,\genblk1[6].round_inst_n_212 }),
-        .\state_out_reg[57]_1 ({\genblk1[6].round_inst_n_189 ,\genblk1[6].round_inst_n_190 ,\genblk1[6].round_inst_n_191 }),
+        .\state_out_reg[57]_0 ({\genblk1[6].round_inst_n_279 ,\genblk1[6].round_inst_n_280 ,\genblk1[6].round_inst_n_281 }),
+        .\state_out_reg[57]_1 ({\genblk1[6].round_inst_n_258 ,\genblk1[6].round_inst_n_259 ,\genblk1[6].round_inst_n_260 }),
         .\state_out_reg[59]_0 ({\genblk1[7].round_inst_n_272 ,\genblk1[7].round_inst_n_273 }),
-        .\state_out_reg[61]_0 ({\genblk1[6].round_inst_n_208 ,\genblk1[6].round_inst_n_209 }),
-        .\state_out_reg[61]_1 ({\genblk1[6].round_inst_n_185 ,\genblk1[6].round_inst_n_186 ,\genblk1[6].round_inst_n_187 ,\genblk1[6].round_inst_n_188 }),
+        .\state_out_reg[61]_0 ({\genblk1[6].round_inst_n_277 ,\genblk1[6].round_inst_n_278 }),
+        .\state_out_reg[61]_1 ({\genblk1[6].round_inst_n_254 ,\genblk1[6].round_inst_n_255 ,\genblk1[6].round_inst_n_256 ,\genblk1[6].round_inst_n_257 }),
         .\state_out_reg[62]_0 ({\genblk1[7].round_inst_n_270 ,\genblk1[7].round_inst_n_271 }),
         .\state_out_reg[63]_0 (\genblk1[7].round_inst_n_62 ),
         .\state_out_reg[8]_0 ({\genblk1[7].round_inst_n_266 ,\genblk1[7].round_inst_n_267 }),
         .\state_out_reg[9]_0 (\genblk1[7].round_inst_n_265 ));
   design_ascon_ascon_core_0_2_ascon_round_8 \genblk1[8].round_inst 
        (.CO(\genblk1[8].round_inst_n_63 ),
-        .D({sbox_state_20[127:65],sbox_state_20[63:61],sbox_state_20[32:29],linear_state_19}),
-        .Q({\round_state[7] [124:97],\round_state[7] [92:65],\round_state[7] [63:0]}),
+        .D({sbox_state_22[127:65],sbox_state_22[63:61],sbox_state_22[32:29],linear_state_21}),
+        .Q({\round_state[8] [124:97],\round_state[8] [92:65],\round_state[8] [63:0]}),
         .S({\genblk1[8].round_inst_n_255 ,\genblk1[8].round_inst_n_256 }),
-        .add_const_state(add_const_state_21),
-        .add_const_state_0(add_const_state_24),
+        .add_const_state(add_const_state_23),
+        .add_const_state_0(add_const_state_26),
         .clk(clk),
         .enable(enable),
         .rst(rst),
-        .\state_out_reg[124]_0 ({\round_state[8] [124:97],\round_state[8] [92:65],\round_state[8] [63:0]}),
-        .\state_out_reg[127]_0 ({sbox_state_17[127:65],sbox_state_17[63:61],sbox_state_17[32:29],linear_state_16}),
+        .\state_out_reg[127]_0 ({sbox_state_19[127:65],sbox_state_19[63:61],sbox_state_19[32:29],linear_state_18}),
         .\state_out_reg[12]_0 ({\genblk1[8].round_inst_n_284 ,\genblk1[8].round_inst_n_285 }),
         .\state_out_reg[15]_0 ({\genblk1[8].round_inst_n_281 ,\genblk1[8].round_inst_n_282 ,\genblk1[8].round_inst_n_283 }),
         .\state_out_reg[20]_0 ({\genblk1[8].round_inst_n_278 ,\genblk1[8].round_inst_n_279 ,\genblk1[8].round_inst_n_280 }),
         .\state_out_reg[24]_0 ({\genblk1[8].round_inst_n_275 ,\genblk1[8].round_inst_n_276 ,\genblk1[8].round_inst_n_277 }),
         .\state_out_reg[27]_0 ({\genblk1[8].round_inst_n_273 ,\genblk1[8].round_inst_n_274 }),
+        .\state_out_reg[28]_0 ({\round_state[7] [124:97],\round_state[7] [92:65],\round_state[7] [63:0]}),
         .\state_out_reg[32]_0 ({\genblk1[8].round_inst_n_271 ,\genblk1[8].round_inst_n_272 }),
         .\state_out_reg[32]_1 ({\genblk1[7].round_inst_n_254 ,\genblk1[7].round_inst_n_255 }),
         .\state_out_reg[36]_0 ({\genblk1[8].round_inst_n_268 ,\genblk1[8].round_inst_n_269 ,\genblk1[8].round_inst_n_270 }),
@@ -33910,20 +33903,20 @@ module design_ascon_ascon_core_0_2_ascon_top
         .\state_out_reg[96]_1 (\genblk1[9].round_inst_n_63 ));
   design_ascon_ascon_core_0_2_ascon_round_9 \genblk1[9].round_inst 
        (.CO(\genblk1[10].round_inst_n_60 ),
-        .D({sbox_state_20[127:65],sbox_state_20[63:61],sbox_state_20[32:29],linear_state_19}),
-        .Q({\round_state[9] [123:100],\round_state[9] [91:68],\round_state[9] [63:3]}),
+        .D({sbox_state_22[127:65],sbox_state_22[63:61],sbox_state_22[32:29],linear_state_21}),
+        .Q({\round_state[8] [124:97],\round_state[8] [92:65],\round_state[8] [63:0]}),
         .S({\genblk1[8].round_inst_n_255 ,\genblk1[8].round_inst_n_256 }),
-        .add_const_state(add_const_state_24),
+        .add_const_state(add_const_state_26),
         .add_const_state_0(add_const_state),
         .clk(clk),
         .enable(enable),
         .rst(rst),
         .\state_out_reg[11]_0 (\genblk1[9].round_inst_n_263 ),
-        .\state_out_reg[127]_0 ({sbox_state_23[127:65],sbox_state_23[63:60],sbox_state_23[35:28],\genblk1[9].round_inst_n_139 ,sbox_state_23[2:1],linear_state_22}),
+        .\state_out_reg[123]_0 ({\round_state[9] [123:100],\round_state[9] [91:68],\round_state[9] [63:3]}),
+        .\state_out_reg[127]_0 ({sbox_state_25[127:65],sbox_state_25[63:60],sbox_state_25[35:28],\genblk1[9].round_inst_n_139 ,sbox_state_25[2:1],linear_state_24}),
         .\state_out_reg[18]_0 ({\genblk1[9].round_inst_n_260 ,\genblk1[9].round_inst_n_261 ,\genblk1[9].round_inst_n_262 }),
         .\state_out_reg[23]_0 ({\genblk1[9].round_inst_n_257 ,\genblk1[9].round_inst_n_258 ,\genblk1[9].round_inst_n_259 }),
         .\state_out_reg[26]_0 ({\genblk1[9].round_inst_n_255 ,\genblk1[9].round_inst_n_256 }),
-        .\state_out_reg[28]_0 ({\round_state[8] [124:97],\round_state[8] [92:65],\round_state[8] [63:0]}),
         .\state_out_reg[31]_0 ({\genblk1[9].round_inst_n_252 ,\genblk1[9].round_inst_n_253 ,\genblk1[9].round_inst_n_254 }),
         .\state_out_reg[32]_0 ({\genblk1[8].round_inst_n_271 ,\genblk1[8].round_inst_n_272 }),
         .\state_out_reg[34]_0 (\genblk1[9].round_inst_n_279 ),

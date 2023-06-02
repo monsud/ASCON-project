@@ -1,7 +1,8 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
--- Date        : Thu Jun  1 17:05:28 2023
+-- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+-- Date        : Fri Jun  2 20:53:49 2023
 -- Host        : INSPIRON-7370 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_ascon_core_0_2/design_ascon_ascon_core_0_2_sim_netlist.vhdl
@@ -31,7 +32,7 @@ entity design_ascon_ascon_core_0_2_ascon_add_constant is
     \state_out_reg[41]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     \state_out_reg[39]\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
     \state_out_reg[34]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \state_out_reg[96]\ : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    Q : in STD_LOGIC_VECTOR ( 63 downto 0 );
     \state_out_reg[36]\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     \state_out_reg[40]\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     \state_out_reg[44]\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -46,7 +47,7 @@ entity design_ascon_ascon_core_0_2_ascon_add_constant is
     \state_out_reg[52]_1\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \state_out_reg[56]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     S : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    Q : in STD_LOGIC_VECTOR ( 27 downto 0 )
+    \state_out0_carry__12_0\ : in STD_LOGIC_VECTOR ( 27 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of design_ascon_ascon_core_0_2_ascon_add_constant : entity is "ascon_add_constant";
@@ -125,11 +126,11 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(2) => state_out0_carry_n_1,
       CO(1) => state_out0_carry_n_2,
       CO(0) => state_out0_carry_n_3,
-      CYINIT => \state_out_reg[96]\(0),
-      DI(3 downto 0) => \state_out_reg[96]\(4 downto 1),
+      CYINIT => Q(0),
+      DI(3 downto 0) => Q(4 downto 1),
       O(3 downto 0) => add_const_state(3 downto 0),
       S(3 downto 2) => \state_out_reg[36]\(2 downto 1),
-      S(1) => \state_out_reg[96]\(2),
+      S(1) => Q(2),
       S(0) => \state_out_reg[36]\(0)
     );
 \state_out0_carry__0\: unisim.vcomponents.CARRY4
@@ -140,17 +141,17 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__0_n_2\,
       CO(0) => \state_out0_carry__0_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \state_out_reg[96]\(8 downto 5),
+      DI(3 downto 0) => Q(8 downto 5),
       O(3 downto 0) => add_const_state(7 downto 4),
       S(3 downto 2) => \state_out_reg[40]\(1 downto 0),
-      S(1 downto 0) => \state_out_reg[96]\(6 downto 5)
+      S(1 downto 0) => Q(6 downto 5)
     );
 \state_out0_carry__0_i_1__6\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
         port map (
-      I0 => Q(2),
+      I0 => \state_out0_carry__12_0\(2),
       O => \state_out_reg[11]\(0)
     );
 \state_out0_carry__1\: unisim.vcomponents.CARRY4
@@ -161,10 +162,10 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__1_n_2\,
       CO(0) => \state_out0_carry__1_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \state_out_reg[96]\(12 downto 9),
+      DI(3 downto 0) => Q(12 downto 9),
       O(3 downto 0) => add_const_state(11 downto 8),
       S(3) => \state_out_reg[44]\(1),
-      S(2 downto 1) => \state_out_reg[96]\(11 downto 10),
+      S(2 downto 1) => Q(11 downto 10),
       S(0) => \state_out_reg[44]\(0)
     );
 \state_out0_carry__10\: unisim.vcomponents.CARRY4
@@ -175,16 +176,16 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__10_n_2\,
       CO(0) => \state_out0_carry__10_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \state_out_reg[96]\(48 downto 45),
+      DI(3 downto 0) => Q(48 downto 45),
       O(3 downto 0) => add_const_state(47 downto 44),
-      S(3 downto 0) => \state_out_reg[96]\(48 downto 45)
+      S(3 downto 0) => Q(48 downto 45)
     );
 \state_out0_carry__10_i_1__5\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
         port map (
-      I0 => Q(22),
+      I0 => \state_out0_carry__12_0\(22),
       O => \state_out_reg[51]\(2)
     );
 \state_out0_carry__10_i_2__4\: unisim.vcomponents.LUT1
@@ -192,7 +193,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(21),
+      I0 => \state_out0_carry__12_0\(21),
       O => \state_out_reg[51]\(1)
     );
 \state_out0_carry__10_i_3__1\: unisim.vcomponents.LUT1
@@ -200,7 +201,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(20),
+      I0 => \state_out0_carry__12_0\(20),
       O => \state_out_reg[51]\(0)
     );
 \state_out0_carry__11\: unisim.vcomponents.CARRY4
@@ -211,7 +212,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__11_n_2\,
       CO(0) => \state_out0_carry__11_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \state_out_reg[96]\(52 downto 49),
+      DI(3 downto 0) => Q(52 downto 49),
       O(3 downto 0) => add_const_state(51 downto 48),
       S(3 downto 0) => \state_out_reg[52]_1\(3 downto 0)
     );
@@ -220,7 +221,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(23),
+      I0 => \state_out0_carry__12_0\(23),
       O => \state_out_reg[52]\(0)
     );
 \state_out0_carry__12\: unisim.vcomponents.CARRY4
@@ -231,17 +232,17 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__12_n_2\,
       CO(0) => \state_out0_carry__12_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \state_out_reg[96]\(56 downto 53),
+      DI(3 downto 0) => Q(56 downto 53),
       O(3 downto 0) => add_const_state(55 downto 52),
       S(3) => \state_out_reg[56]_0\(0),
-      S(2 downto 0) => \state_out_reg[96]\(55 downto 53)
+      S(2 downto 0) => Q(55 downto 53)
     );
 \state_out0_carry__12_i_1__7\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
         port map (
-      I0 => Q(27),
+      I0 => \state_out0_carry__12_0\(27),
       O => \state_out_reg[59]\(3)
     );
 \state_out0_carry__12_i_2__3\: unisim.vcomponents.LUT1
@@ -249,7 +250,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(26),
+      I0 => \state_out0_carry__12_0\(26),
       O => \state_out_reg[59]\(2)
     );
 \state_out0_carry__12_i_3__2\: unisim.vcomponents.LUT1
@@ -257,7 +258,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(25),
+      I0 => \state_out0_carry__12_0\(25),
       O => \state_out_reg[59]\(1)
     );
 \state_out0_carry__12_i_4__1\: unisim.vcomponents.LUT1
@@ -265,7 +266,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(24),
+      I0 => \state_out0_carry__12_0\(24),
       O => \state_out_reg[59]\(0)
     );
 \state_out0_carry__13\: unisim.vcomponents.CARRY4
@@ -276,9 +277,9 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__13_n_2\,
       CO(0) => \state_out0_carry__13_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \state_out_reg[96]\(60 downto 57),
+      DI(3 downto 0) => Q(60 downto 57),
       O(3 downto 0) => add_const_state(59 downto 56),
-      S(3 downto 0) => \state_out_reg[96]\(60 downto 57)
+      S(3 downto 0) => Q(60 downto 57)
     );
 \state_out0_carry__14\: unisim.vcomponents.CARRY4
      port map (
@@ -289,12 +290,12 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(0) => \state_out0_carry__14_n_3\,
       CYINIT => '0',
       DI(3) => '0',
-      DI(2 downto 0) => \state_out_reg[96]\(63 downto 61),
+      DI(2 downto 0) => Q(63 downto 61),
       O(3) => \NLW_state_out0_carry__14_O_UNCONNECTED\(3),
       O(2 downto 0) => add_const_state(62 downto 60),
       S(3) => '1',
       S(2 downto 1) => S(1 downto 0),
-      S(0) => \state_out_reg[96]\(61)
+      S(0) => Q(61)
     );
 \state_out0_carry__2\: unisim.vcomponents.CARRY4
      port map (
@@ -304,9 +305,9 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__2_n_2\,
       CO(0) => \state_out0_carry__2_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \state_out_reg[96]\(16 downto 13),
+      DI(3 downto 0) => Q(16 downto 13),
       O(3 downto 0) => add_const_state(15 downto 12),
-      S(3) => \state_out_reg[96]\(16),
+      S(3) => Q(16),
       S(2 downto 0) => \state_out_reg[48]\(2 downto 0)
     );
 \state_out0_carry__2_i_1__7\: unisim.vcomponents.LUT1
@@ -314,7 +315,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(5),
+      I0 => \state_out0_carry__12_0\(5),
       O => \state_out_reg[18]\(2)
     );
 \state_out0_carry__2_i_2__7\: unisim.vcomponents.LUT1
@@ -322,7 +323,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(4),
+      I0 => \state_out0_carry__12_0\(4),
       O => \state_out_reg[18]\(1)
     );
 \state_out0_carry__2_i_3__3\: unisim.vcomponents.LUT1
@@ -330,7 +331,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(3),
+      I0 => \state_out0_carry__12_0\(3),
       O => \state_out_reg[18]\(0)
     );
 \state_out0_carry__3\: unisim.vcomponents.CARRY4
@@ -341,10 +342,10 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__3_n_2\,
       CO(0) => \state_out0_carry__3_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \state_out_reg[96]\(20 downto 17),
+      DI(3 downto 0) => Q(20 downto 17),
       O(3 downto 0) => add_const_state(19 downto 16),
       S(3) => \state_out_reg[52]_0\(2),
-      S(2) => \state_out_reg[96]\(19),
+      S(2) => Q(19),
       S(1 downto 0) => \state_out_reg[52]_0\(1 downto 0)
     );
 \state_out0_carry__3_i_1__7\: unisim.vcomponents.LUT1
@@ -352,7 +353,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(8),
+      I0 => \state_out0_carry__12_0\(8),
       O => \state_out_reg[23]\(2)
     );
 \state_out0_carry__3_i_2__6\: unisim.vcomponents.LUT1
@@ -360,7 +361,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(7),
+      I0 => \state_out0_carry__12_0\(7),
       O => \state_out_reg[23]\(1)
     );
 \state_out0_carry__3_i_3__3\: unisim.vcomponents.LUT1
@@ -368,7 +369,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(6),
+      I0 => \state_out0_carry__12_0\(6),
       O => \state_out_reg[23]\(0)
     );
 \state_out0_carry__4\: unisim.vcomponents.CARRY4
@@ -379,10 +380,10 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__4_n_2\,
       CO(0) => \state_out0_carry__4_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \state_out_reg[96]\(24 downto 21),
+      DI(3 downto 0) => Q(24 downto 21),
       O(3 downto 0) => add_const_state(23 downto 20),
       S(3) => \state_out_reg[56]\(2),
-      S(2) => \state_out_reg[96]\(23),
+      S(2) => Q(23),
       S(1 downto 0) => \state_out_reg[56]\(1 downto 0)
     );
 \state_out0_carry__4_i_1__7\: unisim.vcomponents.LUT1
@@ -390,7 +391,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(10),
+      I0 => \state_out0_carry__12_0\(10),
       O => \state_out_reg[26]\(1)
     );
 \state_out0_carry__4_i_2__4\: unisim.vcomponents.LUT1
@@ -398,7 +399,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(9),
+      I0 => \state_out0_carry__12_0\(9),
       O => \state_out_reg[26]\(0)
     );
 \state_out0_carry__5\: unisim.vcomponents.CARRY4
@@ -409,11 +410,11 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__5_n_2\,
       CO(0) => \state_out0_carry__5_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \state_out_reg[96]\(28 downto 25),
+      DI(3 downto 0) => Q(28 downto 25),
       O(3 downto 0) => add_const_state(27 downto 24),
-      S(3) => \state_out_reg[96]\(28),
+      S(3) => Q(28),
       S(2) => \state_out_reg[60]\(1),
-      S(1) => \state_out_reg[96]\(26),
+      S(1) => Q(26),
       S(0) => \state_out_reg[60]\(0)
     );
 \state_out0_carry__5_i_1__7\: unisim.vcomponents.LUT1
@@ -421,7 +422,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(13),
+      I0 => \state_out0_carry__12_0\(13),
       O => \state_out_reg[31]\(2)
     );
 \state_out0_carry__5_i_2__5\: unisim.vcomponents.LUT1
@@ -429,7 +430,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(12),
+      I0 => \state_out0_carry__12_0\(12),
       O => \state_out_reg[31]\(1)
     );
 \state_out0_carry__5_i_3__0\: unisim.vcomponents.LUT1
@@ -437,7 +438,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(11),
+      I0 => \state_out0_carry__12_0\(11),
       O => \state_out_reg[31]\(0)
     );
 \state_out0_carry__6\: unisim.vcomponents.CARRY4
@@ -448,19 +449,19 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__6_n_2\,
       CO(0) => \state_out0_carry__6_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \state_out_reg[96]\(32 downto 29),
+      DI(3 downto 0) => Q(32 downto 29),
       O(3 downto 0) => add_const_state(31 downto 28),
       S(3) => \state_out_reg[32]\(1),
-      S(2) => \state_out_reg[96]\(31),
+      S(2) => Q(31),
       S(1) => \state_out_reg[32]\(0),
-      S(0) => \state_out_reg[96]\(29)
+      S(0) => Q(29)
     );
 \state_out0_carry__6_i_1__7\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
         port map (
-      I0 => Q(14),
+      I0 => \state_out0_carry__12_0\(14),
       O => \state_out_reg[34]\(0)
     );
 \state_out0_carry__7\: unisim.vcomponents.CARRY4
@@ -471,10 +472,10 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__7_n_2\,
       CO(0) => \state_out0_carry__7_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \state_out_reg[96]\(36 downto 33),
+      DI(3 downto 0) => Q(36 downto 33),
       O(3 downto 0) => add_const_state(35 downto 32),
       S(3 downto 2) => \state_out_reg[36]_0\(2 downto 1),
-      S(1) => \state_out_reg[96]\(34),
+      S(1) => Q(34),
       S(0) => \state_out_reg[36]_0\(0)
     );
 \state_out0_carry__7_i_1__6\: unisim.vcomponents.LUT1
@@ -482,7 +483,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(16),
+      I0 => \state_out0_carry__12_0\(16),
       O => \state_out_reg[39]\(1)
     );
 \state_out0_carry__7_i_2__4\: unisim.vcomponents.LUT1
@@ -490,7 +491,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(15),
+      I0 => \state_out0_carry__12_0\(15),
       O => \state_out_reg[39]\(0)
     );
 \state_out0_carry__8\: unisim.vcomponents.CARRY4
@@ -501,18 +502,18 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__8_n_2\,
       CO(0) => \state_out0_carry__8_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \state_out_reg[96]\(40 downto 37),
+      DI(3 downto 0) => Q(40 downto 37),
       O(3 downto 0) => add_const_state(39 downto 36),
-      S(3) => \state_out_reg[96]\(40),
+      S(3) => Q(40),
       S(2 downto 1) => \state_out_reg[40]_0\(1 downto 0),
-      S(0) => \state_out_reg[96]\(37)
+      S(0) => Q(37)
     );
 \state_out0_carry__8_i_1__7\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
         port map (
-      I0 => Q(17),
+      I0 => \state_out0_carry__12_0\(17),
       O => \state_out_reg[41]\(0)
     );
 \state_out0_carry__9\: unisim.vcomponents.CARRY4
@@ -523,7 +524,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__9_n_2\,
       CO(0) => \state_out0_carry__9_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \state_out_reg[96]\(44 downto 41),
+      DI(3 downto 0) => Q(44 downto 41),
       O(3 downto 0) => add_const_state(43 downto 40),
       S(3 downto 0) => \state_out_reg[44]_0\(3 downto 0)
     );
@@ -532,7 +533,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(19),
+      I0 => \state_out0_carry__12_0\(19),
       O => \state_out_reg[45]\(1)
     );
 \state_out0_carry__9_i_2__6\: unisim.vcomponents.LUT1
@@ -540,7 +541,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(18),
+      I0 => \state_out0_carry__12_0\(18),
       O => \state_out_reg[45]\(0)
     );
 \state_out0_carry_i_1__7\: unisim.vcomponents.LUT1
@@ -548,7 +549,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(1),
+      I0 => \state_out0_carry__12_0\(1),
       O => \state_out_reg[6]\(1)
     );
 \state_out0_carry_i_2__4\: unisim.vcomponents.LUT1
@@ -556,7 +557,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(0),
+      I0 => \state_out0_carry__12_0\(0),
       O => \state_out_reg[6]\(0)
     );
 end STRUCTURE;
@@ -581,7 +582,7 @@ entity design_ascon_ascon_core_0_2_ascon_add_constant_10 is
     \state_out_reg[12]\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
     \state_out_reg[8]\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
     \state_out_reg[4]\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    Q : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    \state_out_reg[96]\ : in STD_LOGIC_VECTOR ( 63 downto 0 );
     \state_out_reg[36]_0\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     \state_out_reg[40]\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     \state_out_reg[44]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -596,8 +597,8 @@ entity design_ascon_ascon_core_0_2_ascon_add_constant_10 is
     \state_out_reg[52]_1\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \state_out_reg[56]_1\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \state_out_reg[60]_0\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \state_out_reg[96]\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \state_out0_carry__12_0\ : in STD_LOGIC_VECTOR ( 33 downto 0 )
+    \state_out_reg[96]_0\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    Q : in STD_LOGIC_VECTOR ( 33 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of design_ascon_ascon_core_0_2_ascon_add_constant_10 : entity is "ascon_add_constant";
@@ -676,13 +677,13 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(2) => state_out0_carry_n_1,
       CO(1) => state_out0_carry_n_2,
       CO(0) => state_out0_carry_n_3,
-      CYINIT => Q(0),
-      DI(3 downto 0) => Q(4 downto 1),
+      CYINIT => \state_out_reg[96]\(0),
+      DI(3 downto 0) => \state_out_reg[96]\(4 downto 1),
       O(3 downto 0) => add_const_state(3 downto 0),
       S(3) => \state_out_reg[36]_0\(1),
-      S(2) => Q(3),
+      S(2) => \state_out_reg[96]\(3),
       S(1) => \state_out_reg[36]_0\(0),
-      S(0) => Q(1)
+      S(0) => \state_out_reg[96]\(1)
     );
 \state_out0_carry__0\: unisim.vcomponents.CARRY4
      port map (
@@ -692,17 +693,17 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__0_n_2\,
       CO(0) => \state_out0_carry__0_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => Q(8 downto 5),
+      DI(3 downto 0) => \state_out_reg[96]\(8 downto 5),
       O(3 downto 0) => add_const_state(7 downto 4),
       S(3 downto 2) => \state_out_reg[40]\(1 downto 0),
-      S(1 downto 0) => Q(6 downto 5)
+      S(1 downto 0) => \state_out_reg[96]\(6 downto 5)
     );
 \state_out0_carry__0_i_1__5\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
         port map (
-      I0 => \state_out0_carry__12_0\(4),
+      I0 => Q(4),
       O => \state_out_reg[8]\(1)
     );
 \state_out0_carry__0_i_2__3\: unisim.vcomponents.LUT1
@@ -710,7 +711,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => \state_out0_carry__12_0\(3),
+      I0 => Q(3),
       O => \state_out_reg[8]\(0)
     );
 \state_out0_carry__1\: unisim.vcomponents.CARRY4
@@ -721,9 +722,9 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__1_n_2\,
       CO(0) => \state_out0_carry__1_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => Q(12 downto 9),
+      DI(3 downto 0) => \state_out_reg[96]\(12 downto 9),
       O(3 downto 0) => add_const_state(11 downto 8),
-      S(3 downto 1) => Q(12 downto 10),
+      S(3 downto 1) => \state_out_reg[96]\(12 downto 10),
       S(0) => \state_out_reg[44]_0\(0)
     );
 \state_out0_carry__10\: unisim.vcomponents.CARRY4
@@ -734,9 +735,9 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__10_n_2\,
       CO(0) => \state_out0_carry__10_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => Q(48 downto 45),
+      DI(3 downto 0) => \state_out_reg[96]\(48 downto 45),
       O(3 downto 0) => add_const_state(47 downto 44),
-      S(3 downto 0) => Q(48 downto 45)
+      S(3 downto 0) => \state_out_reg[96]\(48 downto 45)
     );
 \state_out0_carry__11\: unisim.vcomponents.CARRY4
      port map (
@@ -746,7 +747,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__11_n_2\,
       CO(0) => \state_out0_carry__11_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => Q(52 downto 49),
+      DI(3 downto 0) => \state_out_reg[96]\(52 downto 49),
       O(3 downto 0) => add_const_state(51 downto 48),
       S(3 downto 0) => \state_out_reg[52]_1\(3 downto 0)
     );
@@ -755,7 +756,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => \state_out0_carry__12_0\(32),
+      I0 => Q(32),
       O => \state_out_reg[52]\(3)
     );
 \state_out0_carry__11_i_2__4\: unisim.vcomponents.LUT1
@@ -763,7 +764,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => \state_out0_carry__12_0\(31),
+      I0 => Q(31),
       O => \state_out_reg[52]\(2)
     );
 \state_out0_carry__11_i_3__3\: unisim.vcomponents.LUT1
@@ -771,7 +772,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => \state_out0_carry__12_0\(30),
+      I0 => Q(30),
       O => \state_out_reg[52]\(1)
     );
 \state_out0_carry__11_i_4__0\: unisim.vcomponents.LUT1
@@ -779,7 +780,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => \state_out0_carry__12_0\(29),
+      I0 => Q(29),
       O => \state_out_reg[52]\(0)
     );
 \state_out0_carry__12\: unisim.vcomponents.CARRY4
@@ -790,7 +791,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__12_n_2\,
       CO(0) => \state_out0_carry__12_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => Q(56 downto 53),
+      DI(3 downto 0) => \state_out_reg[96]\(56 downto 53),
       O(3 downto 0) => add_const_state(55 downto 52),
       S(3 downto 0) => \state_out_reg[56]_1\(3 downto 0)
     );
@@ -799,7 +800,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => \state_out0_carry__12_0\(33),
+      I0 => Q(33),
       O => \state_out_reg[56]\(0)
     );
 \state_out0_carry__13\: unisim.vcomponents.CARRY4
@@ -810,11 +811,11 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__13_n_2\,
       CO(0) => \state_out0_carry__13_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => Q(60 downto 57),
+      DI(3 downto 0) => \state_out_reg[96]\(60 downto 57),
       O(3 downto 0) => add_const_state(59 downto 56),
-      S(3) => Q(60),
+      S(3) => \state_out_reg[96]\(60),
       S(2 downto 1) => \state_out_reg[60]_0\(1 downto 0),
-      S(0) => Q(57)
+      S(0) => \state_out_reg[96]\(57)
     );
 \state_out0_carry__14\: unisim.vcomponents.CARRY4
      port map (
@@ -825,19 +826,19 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(0) => \state_out0_carry__14_n_3\,
       CYINIT => '0',
       DI(3) => '0',
-      DI(2 downto 0) => Q(63 downto 61),
+      DI(2 downto 0) => \state_out_reg[96]\(63 downto 61),
       O(3) => \NLW_state_out0_carry__14_O_UNCONNECTED\(3),
       O(2 downto 0) => add_const_state(62 downto 60),
       S(3) => '1',
-      S(2) => Q(63),
-      S(1 downto 0) => \state_out_reg[96]\(1 downto 0)
+      S(2) => \state_out_reg[96]\(63),
+      S(1 downto 0) => \state_out_reg[96]_0\(1 downto 0)
     );
 \state_out0_carry__1_i_1__6\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
         port map (
-      I0 => \state_out0_carry__12_0\(6),
+      I0 => Q(6),
       O => \state_out_reg[12]\(1)
     );
 \state_out0_carry__1_i_2__4\: unisim.vcomponents.LUT1
@@ -845,7 +846,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => \state_out0_carry__12_0\(5),
+      I0 => Q(5),
       O => \state_out_reg[12]\(0)
     );
 \state_out0_carry__2\: unisim.vcomponents.CARRY4
@@ -856,17 +857,17 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__2_n_2\,
       CO(0) => \state_out0_carry__2_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => Q(16 downto 13),
+      DI(3 downto 0) => \state_out_reg[96]\(16 downto 13),
       O(3 downto 0) => add_const_state(15 downto 12),
       S(3 downto 1) => \state_out_reg[48]\(2 downto 0),
-      S(0) => Q(13)
+      S(0) => \state_out_reg[96]\(13)
     );
 \state_out0_carry__2_i_1__6\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
         port map (
-      I0 => \state_out0_carry__12_0\(9),
+      I0 => Q(9),
       O => \state_out_reg[15]\(2)
     );
 \state_out0_carry__2_i_2__6\: unisim.vcomponents.LUT1
@@ -874,7 +875,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => \state_out0_carry__12_0\(8),
+      I0 => Q(8),
       O => \state_out_reg[15]\(1)
     );
 \state_out0_carry__2_i_3__2\: unisim.vcomponents.LUT1
@@ -882,7 +883,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => \state_out0_carry__12_0\(7),
+      I0 => Q(7),
       O => \state_out_reg[15]\(0)
     );
 \state_out0_carry__3\: unisim.vcomponents.CARRY4
@@ -893,17 +894,17 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__3_n_2\,
       CO(0) => \state_out0_carry__3_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => Q(20 downto 17),
+      DI(3 downto 0) => \state_out_reg[96]\(20 downto 17),
       O(3 downto 0) => add_const_state(19 downto 16),
       S(3) => \state_out_reg[52]_0\(0),
-      S(2 downto 0) => Q(19 downto 17)
+      S(2 downto 0) => \state_out_reg[96]\(19 downto 17)
     );
 \state_out0_carry__3_i_1__6\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
         port map (
-      I0 => \state_out0_carry__12_0\(12),
+      I0 => Q(12),
       O => \state_out_reg[20]\(2)
     );
 \state_out0_carry__3_i_2__5\: unisim.vcomponents.LUT1
@@ -911,7 +912,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => \state_out0_carry__12_0\(11),
+      I0 => Q(11),
       O => \state_out_reg[20]\(1)
     );
 \state_out0_carry__3_i_3__2\: unisim.vcomponents.LUT1
@@ -919,7 +920,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => \state_out0_carry__12_0\(10),
+      I0 => Q(10),
       O => \state_out_reg[20]\(0)
     );
 \state_out0_carry__4\: unisim.vcomponents.CARRY4
@@ -930,9 +931,9 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__4_n_2\,
       CO(0) => \state_out0_carry__4_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => Q(24 downto 21),
+      DI(3 downto 0) => \state_out_reg[96]\(24 downto 21),
       O(3 downto 0) => add_const_state(23 downto 20),
-      S(3) => Q(24),
+      S(3) => \state_out_reg[96]\(24),
       S(2 downto 0) => \state_out_reg[56]_0\(2 downto 0)
     );
 \state_out0_carry__4_i_1__6\: unisim.vcomponents.LUT1
@@ -940,7 +941,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => \state_out0_carry__12_0\(15),
+      I0 => Q(15),
       O => \state_out_reg[24]\(2)
     );
 \state_out0_carry__4_i_2__3\: unisim.vcomponents.LUT1
@@ -948,7 +949,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => \state_out0_carry__12_0\(14),
+      I0 => Q(14),
       O => \state_out_reg[24]\(1)
     );
 \state_out0_carry__4_i_3__1\: unisim.vcomponents.LUT1
@@ -956,7 +957,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => \state_out0_carry__12_0\(13),
+      I0 => Q(13),
       O => \state_out_reg[24]\(0)
     );
 \state_out0_carry__5\: unisim.vcomponents.CARRY4
@@ -967,19 +968,19 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__5_n_2\,
       CO(0) => \state_out0_carry__5_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => Q(28 downto 25),
+      DI(3 downto 0) => \state_out_reg[96]\(28 downto 25),
       O(3 downto 0) => add_const_state(27 downto 24),
       S(3) => \state_out_reg[60]\(1),
-      S(2) => Q(27),
+      S(2) => \state_out_reg[96]\(27),
       S(1) => \state_out_reg[60]\(0),
-      S(0) => Q(25)
+      S(0) => \state_out_reg[96]\(25)
     );
 \state_out0_carry__5_i_1__6\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
         port map (
-      I0 => \state_out0_carry__12_0\(17),
+      I0 => Q(17),
       O => \state_out_reg[27]\(1)
     );
 \state_out0_carry__5_i_2__4\: unisim.vcomponents.LUT1
@@ -987,7 +988,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => \state_out0_carry__12_0\(16),
+      I0 => Q(16),
       O => \state_out_reg[27]\(0)
     );
 \state_out0_carry__6\: unisim.vcomponents.CARRY4
@@ -998,11 +999,11 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__6_n_2\,
       CO(0) => \state_out0_carry__6_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => Q(32 downto 29),
+      DI(3 downto 0) => \state_out_reg[96]\(32 downto 29),
       O(3 downto 0) => add_const_state(31 downto 28),
-      S(3) => Q(32),
+      S(3) => \state_out_reg[96]\(32),
       S(2) => \state_out_reg[32]_0\(1),
-      S(1) => Q(30),
+      S(1) => \state_out_reg[96]\(30),
       S(0) => \state_out_reg[32]_0\(0)
     );
 \state_out0_carry__6_i_1__6\: unisim.vcomponents.LUT1
@@ -1010,7 +1011,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => \state_out0_carry__12_0\(19),
+      I0 => Q(19),
       O => \state_out_reg[32]\(1)
     );
 \state_out0_carry__6_i_2__4\: unisim.vcomponents.LUT1
@@ -1018,7 +1019,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => \state_out0_carry__12_0\(18),
+      I0 => Q(18),
       O => \state_out_reg[32]\(0)
     );
 \state_out0_carry__7\: unisim.vcomponents.CARRY4
@@ -1029,9 +1030,9 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__7_n_2\,
       CO(0) => \state_out0_carry__7_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => Q(36 downto 33),
+      DI(3 downto 0) => \state_out_reg[96]\(36 downto 33),
       O(3 downto 0) => add_const_state(35 downto 32),
-      S(3 downto 1) => Q(36 downto 34),
+      S(3 downto 1) => \state_out_reg[96]\(36 downto 34),
       S(0) => \state_out_reg[36]_1\(0)
     );
 \state_out0_carry__7_i_1__5\: unisim.vcomponents.LUT1
@@ -1039,7 +1040,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => \state_out0_carry__12_0\(22),
+      I0 => Q(22),
       O => \state_out_reg[36]\(2)
     );
 \state_out0_carry__7_i_2__3\: unisim.vcomponents.LUT1
@@ -1047,7 +1048,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => \state_out0_carry__12_0\(21),
+      I0 => Q(21),
       O => \state_out_reg[36]\(1)
     );
 \state_out0_carry__7_i_3__1\: unisim.vcomponents.LUT1
@@ -1055,7 +1056,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => \state_out0_carry__12_0\(20),
+      I0 => Q(20),
       O => \state_out_reg[36]\(0)
     );
 \state_out0_carry__8\: unisim.vcomponents.CARRY4
@@ -1066,9 +1067,9 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__8_n_2\,
       CO(0) => \state_out0_carry__8_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => Q(40 downto 37),
+      DI(3 downto 0) => \state_out_reg[96]\(40 downto 37),
       O(3 downto 0) => add_const_state(39 downto 36),
-      S(3 downto 2) => Q(40 downto 39),
+      S(3 downto 2) => \state_out_reg[96]\(40 downto 39),
       S(1 downto 0) => \state_out_reg[40]_0\(1 downto 0)
     );
 \state_out0_carry__8_i_1__6\: unisim.vcomponents.LUT1
@@ -1076,7 +1077,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => \state_out0_carry__12_0\(24),
+      I0 => Q(24),
       O => \state_out_reg[39]\(1)
     );
 \state_out0_carry__8_i_2__3\: unisim.vcomponents.LUT1
@@ -1084,7 +1085,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => \state_out0_carry__12_0\(23),
+      I0 => Q(23),
       O => \state_out_reg[39]\(0)
     );
 \state_out0_carry__9\: unisim.vcomponents.CARRY4
@@ -1095,7 +1096,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__9_n_2\,
       CO(0) => \state_out0_carry__9_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => Q(44 downto 41),
+      DI(3 downto 0) => \state_out_reg[96]\(44 downto 41),
       O(3 downto 0) => add_const_state(43 downto 40),
       S(3 downto 0) => \state_out_reg[44]_1\(3 downto 0)
     );
@@ -1104,7 +1105,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => \state_out0_carry__12_0\(28),
+      I0 => Q(28),
       O => \state_out_reg[44]\(3)
     );
 \state_out0_carry__9_i_2__5\: unisim.vcomponents.LUT1
@@ -1112,7 +1113,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => \state_out0_carry__12_0\(27),
+      I0 => Q(27),
       O => \state_out_reg[44]\(2)
     );
 \state_out0_carry__9_i_3__1\: unisim.vcomponents.LUT1
@@ -1120,7 +1121,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => \state_out0_carry__12_0\(26),
+      I0 => Q(26),
       O => \state_out_reg[44]\(1)
     );
 \state_out0_carry__9_i_4__0\: unisim.vcomponents.LUT1
@@ -1128,7 +1129,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => \state_out0_carry__12_0\(25),
+      I0 => Q(25),
       O => \state_out_reg[44]\(0)
     );
 \state_out0_carry_i_1__6\: unisim.vcomponents.LUT1
@@ -1136,7 +1137,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => \state_out0_carry__12_0\(2),
+      I0 => Q(2),
       O => \state_out_reg[4]\(2)
     );
 \state_out0_carry_i_2__3\: unisim.vcomponents.LUT1
@@ -1144,7 +1145,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => \state_out0_carry__12_0\(1),
+      I0 => Q(1),
       O => \state_out_reg[4]\(1)
     );
 \state_out0_carry_i_3__2\: unisim.vcomponents.LUT1
@@ -1152,7 +1153,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => \state_out0_carry__12_0\(0),
+      I0 => Q(0),
       O => \state_out_reg[4]\(0)
     );
 end STRUCTURE;
@@ -1164,7 +1165,6 @@ entity design_ascon_ascon_core_0_2_ascon_add_constant_12 is
   port (
     add_const_state : out STD_LOGIC_VECTOR ( 61 downto 0 );
     \state_out_reg[63]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
-    D : out STD_LOGIC_VECTOR ( 0 to 0 );
     \state_out_reg[31]\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
     \state_out_reg[28]\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
     \state_out_reg[23]\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -1179,7 +1179,7 @@ entity design_ascon_ascon_core_0_2_ascon_add_constant_12 is
     \state_out_reg[44]\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
     \state_out_reg[38]\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
     \state_out_reg[33]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \round_state[6]\ : in STD_LOGIC_VECTOR ( 64 downto 0 );
+    Q : in STD_LOGIC_VECTOR ( 62 downto 0 );
     \state_out_reg[37]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \state_out_reg[41]\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     \state_out_reg[45]\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -1196,14 +1196,13 @@ entity design_ascon_ascon_core_0_2_ascon_add_constant_12 is
     \state_out_reg[57]_0\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     \state_out_reg[61]_0\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     S : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Q : in STD_LOGIC_VECTOR ( 32 downto 0 )
+    \state_out0_carry__13_0\ : in STD_LOGIC_VECTOR ( 32 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of design_ascon_ascon_core_0_2_ascon_add_constant_12 : entity is "ascon_add_constant";
 end design_ascon_ascon_core_0_2_ascon_add_constant_12;
 
 architecture STRUCTURE of design_ascon_ascon_core_0_2_ascon_add_constant_12 is
-  signal \^add_const_state\ : STD_LOGIC_VECTOR ( 61 downto 0 );
   signal \state_out0_carry__0_n_0\ : STD_LOGIC;
   signal \state_out0_carry__0_n_1\ : STD_LOGIC;
   signal \state_out0_carry__0_n_2\ : STD_LOGIC;
@@ -1265,12 +1264,9 @@ architecture STRUCTURE of design_ascon_ascon_core_0_2_ascon_add_constant_12 is
   signal state_out0_carry_n_1 : STD_LOGIC;
   signal state_out0_carry_n_2 : STD_LOGIC;
   signal state_out0_carry_n_3 : STD_LOGIC;
-  signal \^state_out_reg[63]\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \NLW_state_out0_carry__14_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
   signal \NLW_state_out0_carry__14_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 2 );
 begin
-  add_const_state(61 downto 0) <= \^add_const_state\(61 downto 0);
-  \state_out_reg[63]\(0) <= \^state_out_reg[63]\(0);
 state_out0_carry: unisim.vcomponents.CARRY4
      port map (
       CI => '0',
@@ -1278,9 +1274,9 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(2) => state_out0_carry_n_1,
       CO(1) => state_out0_carry_n_2,
       CO(0) => state_out0_carry_n_3,
-      CYINIT => \round_state[6]\(1),
-      DI(3 downto 0) => \round_state[6]\(5 downto 2),
-      O(3 downto 0) => \^add_const_state\(3 downto 0),
+      CYINIT => Q(0),
+      DI(3 downto 0) => Q(4 downto 1),
+      O(3 downto 0) => add_const_state(3 downto 0),
       S(3 downto 0) => \state_out_reg[37]\(3 downto 0)
     );
 \state_out0_carry__0\: unisim.vcomponents.CARRY4
@@ -1291,9 +1287,9 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__0_n_2\,
       CO(0) => \state_out0_carry__0_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \round_state[6]\(9 downto 6),
-      O(3 downto 0) => \^add_const_state\(7 downto 4),
-      S(3) => \round_state[6]\(9),
+      DI(3 downto 0) => Q(8 downto 5),
+      O(3 downto 0) => add_const_state(7 downto 4),
+      S(3) => Q(8),
       S(2 downto 0) => \state_out_reg[41]\(2 downto 0)
     );
 \state_out0_carry__0_i_1__4\: unisim.vcomponents.LUT1
@@ -1301,7 +1297,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(3),
+      I0 => \state_out0_carry__13_0\(3),
       O => \state_out_reg[8]\(1)
     );
 \state_out0_carry__0_i_2__2\: unisim.vcomponents.LUT1
@@ -1309,7 +1305,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(2),
+      I0 => \state_out0_carry__13_0\(2),
       O => \state_out_reg[8]\(0)
     );
 \state_out0_carry__1\: unisim.vcomponents.CARRY4
@@ -1320,10 +1316,10 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__1_n_2\,
       CO(0) => \state_out0_carry__1_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \round_state[6]\(13 downto 10),
-      O(3 downto 0) => \^add_const_state\(11 downto 8),
+      DI(3 downto 0) => Q(12 downto 9),
+      O(3 downto 0) => add_const_state(11 downto 8),
       S(3) => \state_out_reg[45]\(1),
-      S(2 downto 1) => \round_state[6]\(12 downto 11),
+      S(2 downto 1) => Q(11 downto 10),
       S(0) => \state_out_reg[45]\(0)
     );
 \state_out0_carry__10\: unisim.vcomponents.CARRY4
@@ -1334,10 +1330,10 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__10_n_2\,
       CO(0) => \state_out0_carry__10_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \round_state[6]\(49 downto 46),
-      O(3 downto 0) => \^add_const_state\(47 downto 44),
+      DI(3 downto 0) => Q(48 downto 45),
+      O(3 downto 0) => add_const_state(47 downto 44),
       S(3) => \state_out_reg[49]_0\(1),
-      S(2 downto 1) => \round_state[6]\(48 downto 47),
+      S(2 downto 1) => Q(47 downto 46),
       S(0) => \state_out_reg[49]_0\(0)
     );
 \state_out0_carry__11\: unisim.vcomponents.CARRY4
@@ -1348,17 +1344,17 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__11_n_2\,
       CO(0) => \state_out0_carry__11_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \round_state[6]\(53 downto 50),
-      O(3 downto 0) => \^add_const_state\(51 downto 48),
+      DI(3 downto 0) => Q(52 downto 49),
+      O(3 downto 0) => add_const_state(51 downto 48),
       S(3 downto 1) => \state_out_reg[53]_0\(2 downto 0),
-      S(0) => \round_state[6]\(50)
+      S(0) => Q(49)
     );
 \state_out0_carry__11_i_1__4\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
         port map (
-      I0 => Q(26),
+      I0 => \state_out0_carry__13_0\(26),
       O => \state_out_reg[52]\(3)
     );
 \state_out0_carry__11_i_2__3\: unisim.vcomponents.LUT1
@@ -1366,7 +1362,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(25),
+      I0 => \state_out0_carry__13_0\(25),
       O => \state_out_reg[52]\(2)
     );
 \state_out0_carry__11_i_3__2\: unisim.vcomponents.LUT1
@@ -1374,7 +1370,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(24),
+      I0 => \state_out0_carry__13_0\(24),
       O => \state_out_reg[52]\(1)
     );
 \state_out0_carry__11_i_4\: unisim.vcomponents.LUT1
@@ -1382,7 +1378,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(23),
+      I0 => \state_out0_carry__13_0\(23),
       O => \state_out_reg[52]\(0)
     );
 \state_out0_carry__12\: unisim.vcomponents.CARRY4
@@ -1393,10 +1389,10 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__12_n_2\,
       CO(0) => \state_out0_carry__12_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \round_state[6]\(57 downto 54),
-      O(3 downto 0) => \^add_const_state\(55 downto 52),
+      DI(3 downto 0) => Q(56 downto 53),
+      O(3 downto 0) => add_const_state(55 downto 52),
       S(3) => \state_out_reg[57]_0\(2),
-      S(2) => \round_state[6]\(56),
+      S(2) => Q(55),
       S(1 downto 0) => \state_out_reg[57]_0\(1 downto 0)
     );
 \state_out0_carry__12_i_1__5\: unisim.vcomponents.LUT1
@@ -1404,7 +1400,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(30),
+      I0 => \state_out0_carry__13_0\(30),
       O => \state_out_reg[56]\(3)
     );
 \state_out0_carry__12_i_2__2\: unisim.vcomponents.LUT1
@@ -1412,7 +1408,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(29),
+      I0 => \state_out0_carry__13_0\(29),
       O => \state_out_reg[56]\(2)
     );
 \state_out0_carry__12_i_3__1\: unisim.vcomponents.LUT1
@@ -1420,7 +1416,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(28),
+      I0 => \state_out0_carry__13_0\(28),
       O => \state_out_reg[56]\(1)
     );
 \state_out0_carry__12_i_4__0\: unisim.vcomponents.LUT1
@@ -1428,7 +1424,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(27),
+      I0 => \state_out0_carry__13_0\(27),
       O => \state_out_reg[56]\(0)
     );
 \state_out0_carry__13\: unisim.vcomponents.CARRY4
@@ -1439,8 +1435,8 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__13_n_2\,
       CO(0) => \state_out0_carry__13_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \round_state[6]\(61 downto 58),
-      O(3 downto 0) => \^add_const_state\(59 downto 56),
+      DI(3 downto 0) => Q(60 downto 57),
+      O(3 downto 0) => add_const_state(59 downto 56),
       S(3 downto 0) => \state_out_reg[61]_0\(3 downto 0)
     );
 \state_out0_carry__13_i_1__5\: unisim.vcomponents.LUT1
@@ -1448,7 +1444,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(32),
+      I0 => \state_out0_carry__13_0\(32),
       O => \state_out_reg[59]\(1)
     );
 \state_out0_carry__13_i_2__4\: unisim.vcomponents.LUT1
@@ -1456,31 +1452,31 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(31),
+      I0 => \state_out0_carry__13_0\(31),
       O => \state_out_reg[59]\(0)
     );
 \state_out0_carry__14\: unisim.vcomponents.CARRY4
      port map (
       CI => \state_out0_carry__13_n_0\,
       CO(3) => \NLW_state_out0_carry__14_CO_UNCONNECTED\(3),
-      CO(2) => \^state_out_reg[63]\(0),
+      CO(2) => \state_out_reg[63]\(0),
       CO(1) => \NLW_state_out0_carry__14_CO_UNCONNECTED\(1),
       CO(0) => \state_out0_carry__14_n_3\,
       CYINIT => '0',
       DI(3 downto 2) => B"00",
-      DI(1 downto 0) => \round_state[6]\(63 downto 62),
+      DI(1 downto 0) => Q(62 downto 61),
       O(3 downto 2) => \NLW_state_out0_carry__14_O_UNCONNECTED\(3 downto 2),
-      O(1 downto 0) => \^add_const_state\(61 downto 60),
+      O(1 downto 0) => add_const_state(61 downto 60),
       S(3 downto 2) => B"01",
       S(1) => S(0),
-      S(0) => \round_state[6]\(62)
+      S(0) => Q(61)
     );
 \state_out0_carry__1_i_1__5\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
         port map (
-      I0 => Q(4),
+      I0 => \state_out0_carry__13_0\(4),
       O => \state_out_reg[9]\(0)
     );
 \state_out0_carry__2\: unisim.vcomponents.CARRY4
@@ -1491,17 +1487,17 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__2_n_2\,
       CO(0) => \state_out0_carry__2_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \round_state[6]\(17 downto 14),
-      O(3 downto 0) => \^add_const_state\(15 downto 12),
+      DI(3 downto 0) => Q(16 downto 13),
+      O(3 downto 0) => add_const_state(15 downto 12),
       S(3 downto 2) => \state_out_reg[49]\(1 downto 0),
-      S(1 downto 0) => \round_state[6]\(15 downto 14)
+      S(1 downto 0) => Q(14 downto 13)
     );
 \state_out0_carry__2_i_1__5\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
         port map (
-      I0 => Q(7),
+      I0 => \state_out0_carry__13_0\(7),
       O => \state_out_reg[16]\(2)
     );
 \state_out0_carry__2_i_2__5\: unisim.vcomponents.LUT1
@@ -1509,7 +1505,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(6),
+      I0 => \state_out0_carry__13_0\(6),
       O => \state_out_reg[16]\(1)
     );
 \state_out0_carry__2_i_3__1\: unisim.vcomponents.LUT1
@@ -1517,7 +1513,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(5),
+      I0 => \state_out0_carry__13_0\(5),
       O => \state_out_reg[16]\(0)
     );
 \state_out0_carry__3\: unisim.vcomponents.CARRY4
@@ -1528,9 +1524,9 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__3_n_2\,
       CO(0) => \state_out0_carry__3_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \round_state[6]\(21 downto 18),
-      O(3 downto 0) => \^add_const_state\(19 downto 16),
-      S(3) => \round_state[6]\(21),
+      DI(3 downto 0) => Q(20 downto 17),
+      O(3 downto 0) => add_const_state(19 downto 16),
+      S(3) => Q(20),
       S(2 downto 0) => \state_out_reg[53]\(2 downto 0)
     );
 \state_out0_carry__3_i_1__5\: unisim.vcomponents.LUT1
@@ -1538,7 +1534,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(8),
+      I0 => \state_out0_carry__13_0\(8),
       O => \state_out_reg[20]\(0)
     );
 \state_out0_carry__4\: unisim.vcomponents.CARRY4
@@ -1549,17 +1545,17 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__4_n_2\,
       CO(0) => \state_out0_carry__4_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \round_state[6]\(25 downto 22),
-      O(3 downto 0) => \^add_const_state\(23 downto 20),
+      DI(3 downto 0) => Q(24 downto 21),
+      O(3 downto 0) => add_const_state(23 downto 20),
       S(3 downto 1) => \state_out_reg[57]\(2 downto 0),
-      S(0) => \round_state[6]\(22)
+      S(0) => Q(21)
     );
 \state_out0_carry__4_i_1__5\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
         port map (
-      I0 => Q(11),
+      I0 => \state_out0_carry__13_0\(11),
       O => \state_out_reg[23]\(2)
     );
 \state_out0_carry__4_i_2__2\: unisim.vcomponents.LUT1
@@ -1567,7 +1563,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(10),
+      I0 => \state_out0_carry__13_0\(10),
       O => \state_out_reg[23]\(1)
     );
 \state_out0_carry__4_i_3__0\: unisim.vcomponents.LUT1
@@ -1575,7 +1571,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(9),
+      I0 => \state_out0_carry__13_0\(9),
       O => \state_out_reg[23]\(0)
     );
 \state_out0_carry__5\: unisim.vcomponents.CARRY4
@@ -1586,10 +1582,10 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__5_n_2\,
       CO(0) => \state_out0_carry__5_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \round_state[6]\(29 downto 26),
-      O(3 downto 0) => \^add_const_state\(27 downto 24),
+      DI(3 downto 0) => Q(28 downto 25),
+      O(3 downto 0) => add_const_state(27 downto 24),
       S(3) => \state_out_reg[61]\(1),
-      S(2 downto 1) => \round_state[6]\(28 downto 27),
+      S(2 downto 1) => Q(27 downto 26),
       S(0) => \state_out_reg[61]\(0)
     );
 \state_out0_carry__5_i_1__5\: unisim.vcomponents.LUT1
@@ -1597,7 +1593,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(13),
+      I0 => \state_out0_carry__13_0\(13),
       O => \state_out_reg[28]\(1)
     );
 \state_out0_carry__5_i_2__3\: unisim.vcomponents.LUT1
@@ -1605,7 +1601,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(12),
+      I0 => \state_out0_carry__13_0\(12),
       O => \state_out_reg[28]\(0)
     );
 \state_out0_carry__6\: unisim.vcomponents.CARRY4
@@ -1616,10 +1612,10 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__6_n_2\,
       CO(0) => \state_out0_carry__6_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \round_state[6]\(33 downto 30),
-      O(3 downto 0) => \^add_const_state\(31 downto 28),
+      DI(3 downto 0) => Q(32 downto 29),
+      O(3 downto 0) => add_const_state(31 downto 28),
       S(3) => \state_out_reg[33]_0\(1),
-      S(2 downto 1) => \round_state[6]\(32 downto 31),
+      S(2 downto 1) => Q(31 downto 30),
       S(0) => \state_out_reg[33]_0\(0)
     );
 \state_out0_carry__6_i_1__5\: unisim.vcomponents.LUT1
@@ -1627,7 +1623,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(15),
+      I0 => \state_out0_carry__13_0\(15),
       O => \state_out_reg[31]\(1)
     );
 \state_out0_carry__6_i_2__3\: unisim.vcomponents.LUT1
@@ -1635,7 +1631,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(14),
+      I0 => \state_out0_carry__13_0\(14),
       O => \state_out_reg[31]\(0)
     );
 \state_out0_carry__7\: unisim.vcomponents.CARRY4
@@ -1646,8 +1642,8 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__7_n_2\,
       CO(0) => \state_out0_carry__7_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \round_state[6]\(37 downto 34),
-      O(3 downto 0) => \^add_const_state\(35 downto 32),
+      DI(3 downto 0) => Q(36 downto 33),
+      O(3 downto 0) => add_const_state(35 downto 32),
       S(3 downto 0) => \state_out_reg[37]_0\(3 downto 0)
     );
 \state_out0_carry__7_i_1__4\: unisim.vcomponents.LUT1
@@ -1655,7 +1651,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(16),
+      I0 => \state_out0_carry__13_0\(16),
       O => \state_out_reg[33]\(0)
     );
 \state_out0_carry__8\: unisim.vcomponents.CARRY4
@@ -1666,10 +1662,10 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__8_n_2\,
       CO(0) => \state_out0_carry__8_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \round_state[6]\(41 downto 38),
-      O(3 downto 0) => \^add_const_state\(39 downto 36),
+      DI(3 downto 0) => Q(40 downto 37),
+      O(3 downto 0) => add_const_state(39 downto 36),
       S(3 downto 2) => \state_out_reg[41]_0\(2 downto 1),
-      S(1) => \round_state[6]\(39),
+      S(1) => Q(38),
       S(0) => \state_out_reg[41]_0\(0)
     );
 \state_out0_carry__8_i_1__5\: unisim.vcomponents.LUT1
@@ -1677,7 +1673,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(18),
+      I0 => \state_out0_carry__13_0\(18),
       O => \state_out_reg[38]\(1)
     );
 \state_out0_carry__8_i_2__2\: unisim.vcomponents.LUT1
@@ -1685,7 +1681,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(17),
+      I0 => \state_out0_carry__13_0\(17),
       O => \state_out_reg[38]\(0)
     );
 \state_out0_carry__9\: unisim.vcomponents.CARRY4
@@ -1696,9 +1692,9 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__9_n_2\,
       CO(0) => \state_out0_carry__9_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \round_state[6]\(45 downto 42),
-      O(3 downto 0) => \^add_const_state\(43 downto 40),
-      S(3 downto 2) => \round_state[6]\(45 downto 44),
+      DI(3 downto 0) => Q(44 downto 41),
+      O(3 downto 0) => add_const_state(43 downto 40),
+      S(3 downto 2) => Q(44 downto 43),
       S(1 downto 0) => \state_out_reg[45]_0\(1 downto 0)
     );
 \state_out0_carry__9_i_1__5\: unisim.vcomponents.LUT1
@@ -1706,7 +1702,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(22),
+      I0 => \state_out0_carry__13_0\(22),
       O => \state_out_reg[44]\(3)
     );
 \state_out0_carry__9_i_2__4\: unisim.vcomponents.LUT1
@@ -1714,7 +1710,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(21),
+      I0 => \state_out0_carry__13_0\(21),
       O => \state_out_reg[44]\(2)
     );
 \state_out0_carry__9_i_3__0\: unisim.vcomponents.LUT1
@@ -1722,7 +1718,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(20),
+      I0 => \state_out0_carry__13_0\(20),
       O => \state_out_reg[44]\(1)
     );
 \state_out0_carry__9_i_4\: unisim.vcomponents.LUT1
@@ -1730,7 +1726,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(19),
+      I0 => \state_out0_carry__13_0\(19),
       O => \state_out_reg[44]\(0)
     );
 \state_out0_carry_i_1__5\: unisim.vcomponents.LUT1
@@ -1738,7 +1734,7 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(1),
+      I0 => \state_out0_carry__13_0\(1),
       O => \state_out_reg[4]\(1)
     );
 \state_out0_carry_i_2__2\: unisim.vcomponents.LUT1
@@ -1746,19 +1742,8 @@ state_out0_carry: unisim.vcomponents.CARRY4
       INIT => X"1"
     )
         port map (
-      I0 => Q(0),
+      I0 => \state_out0_carry__13_0\(0),
       O => \state_out_reg[4]\(0)
-    );
-\state_out[0]_i_1__5\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"6996"
-    )
-        port map (
-      I0 => \^state_out_reg[63]\(0),
-      I1 => \^add_const_state\(30),
-      I2 => \round_state[6]\(64),
-      I3 => \round_state[6]\(0),
-      O => D(0)
     );
 end STRUCTURE;
 library IEEE;
@@ -1769,7 +1754,6 @@ entity design_ascon_ascon_core_0_2_ascon_add_constant_14 is
   port (
     add_const_state : out STD_LOGIC_VECTOR ( 61 downto 0 );
     CO : out STD_LOGIC_VECTOR ( 0 to 0 );
-    D : out STD_LOGIC_VECTOR ( 0 to 0 );
     \state_out_reg[61]\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
     \state_out_reg[57]\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
     \state_out_reg[53]\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -1785,7 +1769,7 @@ entity design_ascon_ascon_core_0_2_ascon_add_constant_14 is
     \state_out_reg[13]\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
     \state_out_reg[8]\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
     \state_out_reg[5]\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    \state_out_reg[0]\ : in STD_LOGIC_VECTOR ( 64 downto 0 );
+    \state_out_reg[96]\ : in STD_LOGIC_VECTOR ( 62 downto 0 );
     \state_out_reg[37]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \state_out_reg[41]_0\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \state_out_reg[45]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -1800,7 +1784,7 @@ entity design_ascon_ascon_core_0_2_ascon_add_constant_14 is
     \state_out_reg[53]_1\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     \state_out_reg[57]_1\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \state_out_reg[61]_1\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \state_out_reg[0]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \state_out_reg[96]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     Q : in STD_LOGIC_VECTOR ( 41 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -1808,8 +1792,6 @@ entity design_ascon_ascon_core_0_2_ascon_add_constant_14 is
 end design_ascon_ascon_core_0_2_ascon_add_constant_14;
 
 architecture STRUCTURE of design_ascon_ascon_core_0_2_ascon_add_constant_14 is
-  signal \^co\ : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal \^add_const_state\ : STD_LOGIC_VECTOR ( 61 downto 0 );
   signal \state_out0_carry__0_n_0\ : STD_LOGIC;
   signal \state_out0_carry__0_n_1\ : STD_LOGIC;
   signal \state_out0_carry__0_n_2\ : STD_LOGIC;
@@ -1874,8 +1856,6 @@ architecture STRUCTURE of design_ascon_ascon_core_0_2_ascon_add_constant_14 is
   signal \NLW_state_out0_carry__14_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
   signal \NLW_state_out0_carry__14_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 2 );
 begin
-  CO(0) <= \^co\(0);
-  add_const_state(61 downto 0) <= \^add_const_state\(61 downto 0);
 state_out0_carry: unisim.vcomponents.CARRY4
      port map (
       CI => '0',
@@ -1883,10 +1863,10 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(2) => state_out0_carry_n_1,
       CO(1) => state_out0_carry_n_2,
       CO(0) => state_out0_carry_n_3,
-      CYINIT => \state_out_reg[0]\(1),
-      DI(3 downto 0) => \state_out_reg[0]\(5 downto 2),
-      O(3 downto 0) => \^add_const_state\(3 downto 0),
-      S(3 downto 1) => \state_out_reg[0]\(5 downto 3),
+      CYINIT => \state_out_reg[96]\(0),
+      DI(3 downto 0) => \state_out_reg[96]\(4 downto 1),
+      O(3 downto 0) => add_const_state(3 downto 0),
+      S(3 downto 1) => \state_out_reg[96]\(4 downto 2),
       S(0) => \state_out_reg[37]_0\(0)
     );
 \state_out0_carry__0\: unisim.vcomponents.CARRY4
@@ -1897,8 +1877,8 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__0_n_2\,
       CO(0) => \state_out0_carry__0_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \state_out_reg[0]\(9 downto 6),
-      O(3 downto 0) => \^add_const_state\(7 downto 4),
+      DI(3 downto 0) => \state_out_reg[96]\(8 downto 5),
+      O(3 downto 0) => add_const_state(7 downto 4),
       S(3 downto 0) => \state_out_reg[41]_0\(3 downto 0)
     );
 \state_out0_carry__0_i_1__3\: unisim.vcomponents.LUT1
@@ -1933,10 +1913,10 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__1_n_2\,
       CO(0) => \state_out0_carry__1_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \state_out_reg[0]\(13 downto 10),
-      O(3 downto 0) => \^add_const_state\(11 downto 8),
+      DI(3 downto 0) => \state_out_reg[96]\(12 downto 9),
+      O(3 downto 0) => add_const_state(11 downto 8),
       S(3) => \state_out_reg[45]\(0),
-      S(2 downto 0) => \state_out_reg[0]\(12 downto 10)
+      S(2 downto 0) => \state_out_reg[96]\(11 downto 9)
     );
 \state_out0_carry__10\: unisim.vcomponents.CARRY4
      port map (
@@ -1946,9 +1926,9 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__10_n_2\,
       CO(0) => \state_out0_carry__10_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \state_out_reg[0]\(49 downto 46),
-      O(3 downto 0) => \^add_const_state\(47 downto 44),
-      S(3 downto 2) => \state_out_reg[0]\(49 downto 48),
+      DI(3 downto 0) => \state_out_reg[96]\(48 downto 45),
+      O(3 downto 0) => add_const_state(47 downto 44),
+      S(3 downto 2) => \state_out_reg[96]\(48 downto 47),
       S(1 downto 0) => \state_out_reg[49]_1\(1 downto 0)
     );
 \state_out0_carry__10_i_1__4\: unisim.vcomponents.LUT1
@@ -1975,11 +1955,11 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__11_n_2\,
       CO(0) => \state_out0_carry__11_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \state_out_reg[0]\(53 downto 50),
-      O(3 downto 0) => \^add_const_state\(51 downto 48),
-      S(3) => \state_out_reg[0]\(53),
+      DI(3 downto 0) => \state_out_reg[96]\(52 downto 49),
+      O(3 downto 0) => add_const_state(51 downto 48),
+      S(3) => \state_out_reg[96]\(52),
       S(2) => \state_out_reg[53]_1\(1),
-      S(1) => \state_out_reg[0]\(51),
+      S(1) => \state_out_reg[96]\(50),
       S(0) => \state_out_reg[53]_1\(0)
     );
 \state_out0_carry__11_i_1__3\: unisim.vcomponents.LUT1
@@ -2014,8 +1994,8 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__12_n_2\,
       CO(0) => \state_out0_carry__12_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \state_out_reg[0]\(57 downto 54),
-      O(3 downto 0) => \^add_const_state\(55 downto 52),
+      DI(3 downto 0) => \state_out_reg[96]\(56 downto 53),
+      O(3 downto 0) => add_const_state(55 downto 52),
       S(3 downto 0) => \state_out_reg[57]_1\(3 downto 0)
     );
 \state_out0_carry__12_i_1__4\: unisim.vcomponents.LUT1
@@ -2050,11 +2030,11 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__13_n_2\,
       CO(0) => \state_out0_carry__13_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \state_out_reg[0]\(61 downto 58),
-      O(3 downto 0) => \^add_const_state\(59 downto 56),
-      S(3) => \state_out_reg[0]\(61),
+      DI(3 downto 0) => \state_out_reg[96]\(60 downto 57),
+      O(3 downto 0) => add_const_state(59 downto 56),
+      S(3) => \state_out_reg[96]\(60),
       S(2) => \state_out_reg[61]_1\(1),
-      S(1) => \state_out_reg[0]\(59),
+      S(1) => \state_out_reg[96]\(58),
       S(0) => \state_out_reg[61]_1\(0)
     );
 \state_out0_carry__13_i_1__4\: unisim.vcomponents.LUT1
@@ -2093,17 +2073,17 @@ state_out0_carry: unisim.vcomponents.CARRY4
      port map (
       CI => \state_out0_carry__13_n_0\,
       CO(3) => \NLW_state_out0_carry__14_CO_UNCONNECTED\(3),
-      CO(2) => \^co\(0),
+      CO(2) => CO(0),
       CO(1) => \NLW_state_out0_carry__14_CO_UNCONNECTED\(1),
       CO(0) => \state_out0_carry__14_n_3\,
       CYINIT => '0',
       DI(3 downto 2) => B"00",
-      DI(1 downto 0) => \state_out_reg[0]\(63 downto 62),
+      DI(1 downto 0) => \state_out_reg[96]\(62 downto 61),
       O(3 downto 2) => \NLW_state_out0_carry__14_O_UNCONNECTED\(3 downto 2),
-      O(1 downto 0) => \^add_const_state\(61 downto 60),
+      O(1 downto 0) => add_const_state(61 downto 60),
       S(3 downto 2) => B"01",
-      S(1) => \state_out_reg[0]_0\(0),
-      S(0) => \state_out_reg[0]\(62)
+      S(1) => \state_out_reg[96]_0\(0),
+      S(0) => \state_out_reg[96]\(61)
     );
 \state_out0_carry__1_i_1__4\: unisim.vcomponents.LUT1
     generic map(
@@ -2129,9 +2109,9 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__2_n_2\,
       CO(0) => \state_out0_carry__2_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \state_out_reg[0]\(17 downto 14),
-      O(3 downto 0) => \^add_const_state\(15 downto 12),
-      S(3 downto 2) => \state_out_reg[0]\(17 downto 16),
+      DI(3 downto 0) => \state_out_reg[96]\(16 downto 13),
+      O(3 downto 0) => add_const_state(15 downto 12),
+      S(3 downto 2) => \state_out_reg[96]\(16 downto 15),
       S(1 downto 0) => \state_out_reg[49]_0\(1 downto 0)
     );
 \state_out0_carry__2_i_1__4\: unisim.vcomponents.LUT1
@@ -2158,10 +2138,10 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__3_n_2\,
       CO(0) => \state_out0_carry__3_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \state_out_reg[0]\(21 downto 18),
-      O(3 downto 0) => \^add_const_state\(19 downto 16),
+      DI(3 downto 0) => \state_out_reg[96]\(20 downto 17),
+      O(3 downto 0) => add_const_state(19 downto 16),
       S(3 downto 2) => \state_out_reg[53]_0\(1 downto 0),
-      S(1 downto 0) => \state_out_reg[0]\(19 downto 18)
+      S(1 downto 0) => \state_out_reg[96]\(18 downto 17)
     );
 \state_out0_carry__3_i_1__4\: unisim.vcomponents.LUT1
     generic map(
@@ -2195,11 +2175,11 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__4_n_2\,
       CO(0) => \state_out0_carry__4_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \state_out_reg[0]\(25 downto 22),
-      O(3 downto 0) => \^add_const_state\(23 downto 20),
-      S(3) => \state_out_reg[0]\(25),
+      DI(3 downto 0) => \state_out_reg[96]\(24 downto 21),
+      O(3 downto 0) => add_const_state(23 downto 20),
+      S(3) => \state_out_reg[96]\(24),
       S(2 downto 1) => \state_out_reg[57]_0\(1 downto 0),
-      S(0) => \state_out_reg[0]\(22)
+      S(0) => \state_out_reg[96]\(21)
     );
 \state_out0_carry__4_i_1__4\: unisim.vcomponents.LUT1
     generic map(
@@ -2233,9 +2213,9 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__5_n_2\,
       CO(0) => \state_out0_carry__5_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \state_out_reg[0]\(29 downto 26),
-      O(3 downto 0) => \^add_const_state\(27 downto 24),
-      S(3 downto 1) => \state_out_reg[0]\(29 downto 27),
+      DI(3 downto 0) => \state_out_reg[96]\(28 downto 25),
+      O(3 downto 0) => add_const_state(27 downto 24),
+      S(3 downto 1) => \state_out_reg[96]\(28 downto 26),
       S(0) => \state_out_reg[61]_0\(0)
     );
 \state_out0_carry__5_i_1__4\: unisim.vcomponents.LUT1
@@ -2262,8 +2242,8 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__6_n_2\,
       CO(0) => \state_out0_carry__6_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \state_out_reg[0]\(33 downto 30),
-      O(3 downto 0) => \^add_const_state\(31 downto 28),
+      DI(3 downto 0) => \state_out_reg[96]\(32 downto 29),
+      O(3 downto 0) => add_const_state(31 downto 28),
       S(3 downto 0) => \state_out_reg[33]_0\(3 downto 0)
     );
 \state_out0_carry__6_i_1__4\: unisim.vcomponents.LUT1
@@ -2290,9 +2270,9 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__7_n_2\,
       CO(0) => \state_out0_carry__7_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \state_out_reg[0]\(37 downto 34),
-      O(3 downto 0) => \^add_const_state\(35 downto 32),
-      S(3 downto 0) => \state_out_reg[0]\(37 downto 34)
+      DI(3 downto 0) => \state_out_reg[96]\(36 downto 33),
+      O(3 downto 0) => add_const_state(35 downto 32),
+      S(3 downto 0) => \state_out_reg[96]\(36 downto 33)
     );
 \state_out0_carry__7_i_1__3\: unisim.vcomponents.LUT1
     generic map(
@@ -2334,8 +2314,8 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__8_n_2\,
       CO(0) => \state_out0_carry__8_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \state_out_reg[0]\(41 downto 38),
-      O(3 downto 0) => \^add_const_state\(39 downto 36),
+      DI(3 downto 0) => \state_out_reg[96]\(40 downto 37),
+      O(3 downto 0) => add_const_state(39 downto 36),
       S(3 downto 0) => \state_out_reg[41]_1\(3 downto 0)
     );
 \state_out0_carry__8_i_1__4\: unisim.vcomponents.LUT1
@@ -2370,10 +2350,10 @@ state_out0_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_out0_carry__9_n_2\,
       CO(0) => \state_out0_carry__9_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => \state_out_reg[0]\(45 downto 42),
-      O(3 downto 0) => \^add_const_state\(43 downto 40),
+      DI(3 downto 0) => \state_out_reg[96]\(44 downto 41),
+      O(3 downto 0) => add_const_state(43 downto 40),
       S(3 downto 2) => \state_out_reg[45]_0\(1 downto 0),
-      S(1 downto 0) => \state_out_reg[0]\(43 downto 42)
+      S(1 downto 0) => \state_out_reg[96]\(42 downto 41)
     );
 \state_out0_carry__9_i_1__4\: unisim.vcomponents.LUT1
     generic map(
@@ -2422,17 +2402,6 @@ state_out0_carry: unisim.vcomponents.CARRY4
         port map (
       I0 => Q(0),
       O => \state_out_reg[5]\(0)
-    );
-\state_out[0]_i_1__4\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"6996"
-    )
-        port map (
-      I0 => \^co\(0),
-      I1 => \^add_const_state\(30),
-      I2 => \state_out_reg[0]\(64),
-      I3 => \state_out_reg[0]\(0),
-      O => D(0)
     );
 end STRUCTURE;
 library IEEE;
@@ -16647,8 +16616,8 @@ entity design_ascon_ascon_core_0_2_ascon_sbox is
     D : out STD_LOGIC_VECTOR ( 55 downto 0 );
     \state_out_reg[127]\ : out STD_LOGIC_VECTOR ( 76 downto 0 );
     add_const_state : in STD_LOGIC_VECTOR ( 55 downto 0 );
-    \state_out_reg[28]\ : in STD_LOGIC_VECTOR ( 55 downto 0 );
-    Q : in STD_LOGIC_VECTOR ( 66 downto 0 );
+    Q : in STD_LOGIC_VECTOR ( 55 downto 0 );
+    \state_out_reg[31]\ : in STD_LOGIC_VECTOR ( 66 downto 0 );
     add_const_state_0 : in STD_LOGIC_VECTOR ( 59 downto 0 );
     CO : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
@@ -16663,8 +16632,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(39),
-      I1 => Q(7),
+      I0 => \state_out_reg[31]\(39),
+      I1 => \state_out_reg[31]\(7),
       I2 => add_const_state_0(0),
       O => \state_out_reg[127]\(49)
     );
@@ -16673,8 +16642,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(40),
-      I1 => Q(8),
+      I0 => \state_out_reg[31]\(40),
+      I1 => \state_out_reg[31]\(8),
       I2 => add_const_state_0(1),
       O => \state_out_reg[127]\(50)
     );
@@ -16683,8 +16652,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(41),
-      I1 => Q(9),
+      I0 => \state_out_reg[31]\(41),
+      I1 => \state_out_reg[31]\(9),
       I2 => add_const_state_0(2),
       O => \state_out_reg[127]\(51)
     );
@@ -16693,8 +16662,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(42),
-      I1 => Q(10),
+      I0 => \state_out_reg[31]\(42),
+      I1 => \state_out_reg[31]\(10),
       I2 => add_const_state_0(3),
       O => \state_out_reg[127]\(52)
     );
@@ -16703,8 +16672,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(43),
-      I1 => Q(11),
+      I0 => \state_out_reg[31]\(43),
+      I1 => \state_out_reg[31]\(11),
       I2 => add_const_state_0(4),
       O => \state_out_reg[127]\(53)
     );
@@ -16713,8 +16682,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(44),
-      I1 => Q(12),
+      I0 => \state_out_reg[31]\(44),
+      I1 => \state_out_reg[31]\(12),
       I2 => add_const_state_0(5),
       O => \state_out_reg[127]\(54)
     );
@@ -16723,8 +16692,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(45),
-      I1 => Q(13),
+      I0 => \state_out_reg[31]\(45),
+      I1 => \state_out_reg[31]\(13),
       I2 => add_const_state_0(6),
       O => \state_out_reg[127]\(55)
     );
@@ -16733,8 +16702,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(46),
-      I1 => Q(14),
+      I0 => \state_out_reg[31]\(46),
+      I1 => \state_out_reg[31]\(14),
       I2 => add_const_state_0(7),
       O => \state_out_reg[127]\(56)
     );
@@ -16743,8 +16712,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(47),
-      I1 => Q(15),
+      I0 => \state_out_reg[31]\(47),
+      I1 => \state_out_reg[31]\(15),
       I2 => add_const_state_0(8),
       O => \state_out_reg[127]\(57)
     );
@@ -16753,8 +16722,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(48),
-      I1 => Q(16),
+      I0 => \state_out_reg[31]\(48),
+      I1 => \state_out_reg[31]\(16),
       I2 => add_const_state_0(9),
       O => \state_out_reg[127]\(58)
     );
@@ -16764,7 +16733,7 @@ begin
     )
         port map (
       I0 => add_const_state(9),
-      I1 => \state_out_reg[28]\(37),
+      I1 => Q(37),
       I2 => add_const_state(37),
       O => D(9)
     );
@@ -16773,8 +16742,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(49),
-      I1 => Q(17),
+      I0 => \state_out_reg[31]\(49),
+      I1 => \state_out_reg[31]\(17),
       I2 => add_const_state_0(10),
       O => \state_out_reg[127]\(59)
     );
@@ -16783,8 +16752,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(50),
-      I1 => Q(18),
+      I0 => \state_out_reg[31]\(50),
+      I1 => \state_out_reg[31]\(18),
       I2 => add_const_state_0(11),
       O => \state_out_reg[127]\(60)
     );
@@ -16793,8 +16762,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(51),
-      I1 => Q(19),
+      I0 => \state_out_reg[31]\(51),
+      I1 => \state_out_reg[31]\(19),
       I2 => add_const_state_0(12),
       O => \state_out_reg[127]\(61)
     );
@@ -16803,8 +16772,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(52),
-      I1 => Q(20),
+      I0 => \state_out_reg[31]\(52),
+      I1 => \state_out_reg[31]\(20),
       I2 => add_const_state_0(13),
       O => \state_out_reg[127]\(62)
     );
@@ -16813,8 +16782,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(53),
-      I1 => Q(21),
+      I0 => \state_out_reg[31]\(53),
+      I1 => \state_out_reg[31]\(21),
       I2 => add_const_state_0(14),
       O => \state_out_reg[127]\(63)
     );
@@ -16823,8 +16792,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(54),
-      I1 => Q(22),
+      I0 => \state_out_reg[31]\(54),
+      I1 => \state_out_reg[31]\(22),
       I2 => add_const_state_0(15),
       O => \state_out_reg[127]\(64)
     );
@@ -16833,8 +16802,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(55),
-      I1 => Q(23),
+      I0 => \state_out_reg[31]\(55),
+      I1 => \state_out_reg[31]\(23),
       I2 => add_const_state_0(16),
       O => \state_out_reg[127]\(65)
     );
@@ -16843,8 +16812,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(56),
-      I1 => Q(24),
+      I0 => \state_out_reg[31]\(56),
+      I1 => \state_out_reg[31]\(24),
       I2 => add_const_state_0(17),
       O => \state_out_reg[127]\(66)
     );
@@ -16853,8 +16822,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(57),
-      I1 => Q(25),
+      I0 => \state_out_reg[31]\(57),
+      I1 => \state_out_reg[31]\(25),
       I2 => add_const_state_0(18),
       O => \state_out_reg[127]\(67)
     );
@@ -16863,8 +16832,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(58),
-      I1 => Q(26),
+      I0 => \state_out_reg[31]\(58),
+      I1 => \state_out_reg[31]\(26),
       I2 => add_const_state_0(19),
       O => \state_out_reg[127]\(68)
     );
@@ -16874,7 +16843,7 @@ begin
     )
         port map (
       I0 => add_const_state(10),
-      I1 => \state_out_reg[28]\(38),
+      I1 => Q(38),
       I2 => add_const_state(38),
       O => D(10)
     );
@@ -16883,8 +16852,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(59),
-      I1 => Q(27),
+      I0 => \state_out_reg[31]\(59),
+      I1 => \state_out_reg[31]\(27),
       I2 => add_const_state_0(20),
       O => \state_out_reg[127]\(69)
     );
@@ -16893,8 +16862,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(60),
-      I1 => Q(28),
+      I0 => \state_out_reg[31]\(60),
+      I1 => \state_out_reg[31]\(28),
       I2 => add_const_state_0(21),
       O => \state_out_reg[127]\(70)
     );
@@ -16903,8 +16872,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(61),
-      I1 => Q(29),
+      I0 => \state_out_reg[31]\(61),
+      I1 => \state_out_reg[31]\(29),
       I2 => add_const_state_0(22),
       O => \state_out_reg[127]\(71)
     );
@@ -16913,8 +16882,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(62),
-      I1 => Q(30),
+      I0 => \state_out_reg[31]\(62),
+      I1 => \state_out_reg[31]\(30),
       I2 => add_const_state_0(23),
       O => \state_out_reg[127]\(72)
     );
@@ -16923,8 +16892,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(63),
-      I1 => Q(31),
+      I0 => \state_out_reg[31]\(63),
+      I1 => \state_out_reg[31]\(31),
       I2 => add_const_state_0(24),
       O => \state_out_reg[127]\(73)
     );
@@ -16933,8 +16902,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(64),
-      I1 => Q(32),
+      I0 => \state_out_reg[31]\(64),
+      I1 => \state_out_reg[31]\(32),
       I2 => add_const_state_0(25),
       O => \state_out_reg[127]\(74)
     );
@@ -16943,8 +16912,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(65),
-      I1 => Q(33),
+      I0 => \state_out_reg[31]\(65),
+      I1 => \state_out_reg[31]\(33),
       I2 => add_const_state_0(26),
       O => \state_out_reg[127]\(75)
     );
@@ -16953,8 +16922,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(66),
-      I1 => Q(34),
+      I0 => \state_out_reg[31]\(66),
+      I1 => \state_out_reg[31]\(34),
       I2 => add_const_state_0(27),
       O => \state_out_reg[127]\(76)
     );
@@ -16964,7 +16933,7 @@ begin
     )
         port map (
       I0 => add_const_state(11),
-      I1 => \state_out_reg[28]\(39),
+      I1 => Q(39),
       I2 => add_const_state(39),
       O => D(11)
     );
@@ -16974,7 +16943,7 @@ begin
     )
         port map (
       I0 => add_const_state(12),
-      I1 => \state_out_reg[28]\(40),
+      I1 => Q(40),
       I2 => add_const_state(40),
       O => D(12)
     );
@@ -16984,7 +16953,7 @@ begin
     )
         port map (
       I0 => add_const_state(13),
-      I1 => \state_out_reg[28]\(41),
+      I1 => Q(41),
       I2 => add_const_state(41),
       O => D(13)
     );
@@ -16994,7 +16963,7 @@ begin
     )
         port map (
       I0 => add_const_state(14),
-      I1 => \state_out_reg[28]\(42),
+      I1 => Q(42),
       I2 => add_const_state(42),
       O => D(14)
     );
@@ -17004,7 +16973,7 @@ begin
     )
         port map (
       I0 => add_const_state(15),
-      I1 => \state_out_reg[28]\(43),
+      I1 => Q(43),
       I2 => add_const_state(43),
       O => D(15)
     );
@@ -17014,7 +16983,7 @@ begin
     )
         port map (
       I0 => add_const_state(16),
-      I1 => \state_out_reg[28]\(44),
+      I1 => Q(44),
       I2 => add_const_state(44),
       O => D(16)
     );
@@ -17024,7 +16993,7 @@ begin
     )
         port map (
       I0 => add_const_state(17),
-      I1 => \state_out_reg[28]\(45),
+      I1 => Q(45),
       I2 => add_const_state(45),
       O => D(17)
     );
@@ -17034,7 +17003,7 @@ begin
     )
         port map (
       I0 => add_const_state(18),
-      I1 => \state_out_reg[28]\(46),
+      I1 => Q(46),
       I2 => add_const_state(46),
       O => D(18)
     );
@@ -17044,7 +17013,7 @@ begin
     )
         port map (
       I0 => add_const_state(0),
-      I1 => \state_out_reg[28]\(28),
+      I1 => Q(28),
       I2 => add_const_state(28),
       O => D(0)
     );
@@ -17053,8 +17022,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(1),
-      I1 => Q(36),
+      I0 => \state_out_reg[31]\(1),
+      I1 => \state_out_reg[31]\(36),
       I2 => add_const_state_0(29),
       O => \state_out_reg[127]\(0)
     );
@@ -17064,7 +17033,7 @@ begin
     )
         port map (
       I0 => add_const_state(19),
-      I1 => \state_out_reg[28]\(47),
+      I1 => Q(47),
       I2 => add_const_state(47),
       O => D(19)
     );
@@ -17074,7 +17043,7 @@ begin
     )
         port map (
       I0 => add_const_state(20),
-      I1 => \state_out_reg[28]\(48),
+      I1 => Q(48),
       I2 => add_const_state(48),
       O => D(20)
     );
@@ -17084,7 +17053,7 @@ begin
     )
         port map (
       I0 => add_const_state(21),
-      I1 => \state_out_reg[28]\(49),
+      I1 => Q(49),
       I2 => add_const_state(49),
       O => D(21)
     );
@@ -17094,7 +17063,7 @@ begin
     )
         port map (
       I0 => add_const_state(22),
-      I1 => \state_out_reg[28]\(50),
+      I1 => Q(50),
       I2 => add_const_state(50),
       O => D(22)
     );
@@ -17104,7 +17073,7 @@ begin
     )
         port map (
       I0 => add_const_state(23),
-      I1 => \state_out_reg[28]\(51),
+      I1 => Q(51),
       I2 => add_const_state(51),
       O => D(23)
     );
@@ -17114,7 +17083,7 @@ begin
     )
         port map (
       I0 => add_const_state(24),
-      I1 => \state_out_reg[28]\(52),
+      I1 => Q(52),
       I2 => add_const_state(52),
       O => D(24)
     );
@@ -17124,7 +17093,7 @@ begin
     )
         port map (
       I0 => add_const_state(25),
-      I1 => \state_out_reg[28]\(53),
+      I1 => Q(53),
       I2 => add_const_state(53),
       O => D(25)
     );
@@ -17134,7 +17103,7 @@ begin
     )
         port map (
       I0 => add_const_state(26),
-      I1 => \state_out_reg[28]\(54),
+      I1 => Q(54),
       I2 => add_const_state(54),
       O => D(26)
     );
@@ -17144,7 +17113,7 @@ begin
     )
         port map (
       I0 => add_const_state(27),
-      I1 => \state_out_reg[28]\(55),
+      I1 => Q(55),
       I2 => add_const_state(55),
       O => D(27)
     );
@@ -17154,7 +17123,7 @@ begin
     )
         port map (
       I0 => add_const_state_0(24),
-      I1 => Q(63),
+      I1 => \state_out_reg[31]\(63),
       I2 => add_const_state_0(56),
       O => \state_out_reg[127]\(2)
     );
@@ -17164,7 +17133,7 @@ begin
     )
         port map (
       I0 => add_const_state_0(25),
-      I1 => Q(64),
+      I1 => \state_out_reg[31]\(64),
       I2 => add_const_state_0(57),
       O => \state_out_reg[127]\(3)
     );
@@ -17174,7 +17143,7 @@ begin
     )
         port map (
       I0 => add_const_state(1),
-      I1 => \state_out_reg[28]\(29),
+      I1 => Q(29),
       I2 => add_const_state(29),
       O => D(1)
     );
@@ -17183,8 +17152,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(2),
-      I1 => Q(37),
+      I0 => \state_out_reg[31]\(2),
+      I1 => \state_out_reg[31]\(37),
       I2 => add_const_state_0(30),
       O => \state_out_reg[127]\(1)
     );
@@ -17194,7 +17163,7 @@ begin
     )
         port map (
       I0 => add_const_state_0(26),
-      I1 => Q(65),
+      I1 => \state_out_reg[31]\(65),
       I2 => add_const_state_0(58),
       O => \state_out_reg[127]\(4)
     );
@@ -17204,7 +17173,7 @@ begin
     )
         port map (
       I0 => add_const_state_0(27),
-      I1 => Q(66),
+      I1 => \state_out_reg[31]\(66),
       I2 => add_const_state_0(59),
       O => \state_out_reg[127]\(5)
     );
@@ -17214,7 +17183,7 @@ begin
     )
         port map (
       I0 => add_const_state_0(28),
-      I1 => Q(0),
+      I1 => \state_out_reg[31]\(0),
       I2 => CO(0),
       O => \state_out_reg[127]\(6)
     );
@@ -17225,7 +17194,7 @@ begin
         port map (
       I0 => add_const_state(28),
       I1 => add_const_state(0),
-      I2 => \state_out_reg[28]\(0),
+      I2 => Q(0),
       O => D(28)
     );
 \state_out[33]_i_1__8\: unisim.vcomponents.LUT3
@@ -17234,8 +17203,8 @@ begin
     )
         port map (
       I0 => add_const_state_0(29),
-      I1 => Q(1),
-      I2 => Q(4),
+      I1 => \state_out_reg[31]\(1),
+      I2 => \state_out_reg[31]\(4),
       O => \state_out_reg[127]\(7)
     );
 \state_out[34]_i_1__7\: unisim.vcomponents.LUT3
@@ -17245,7 +17214,7 @@ begin
         port map (
       I0 => add_const_state(29),
       I1 => add_const_state(1),
-      I2 => \state_out_reg[28]\(1),
+      I2 => Q(1),
       O => D(29)
     );
 \state_out[34]_i_1__8\: unisim.vcomponents.LUT3
@@ -17254,8 +17223,8 @@ begin
     )
         port map (
       I0 => add_const_state_0(30),
-      I1 => Q(2),
-      I2 => Q(5),
+      I1 => \state_out_reg[31]\(2),
+      I2 => \state_out_reg[31]\(5),
       O => \state_out_reg[127]\(8)
     );
 \state_out[35]_i_1__7\: unisim.vcomponents.LUT3
@@ -17265,7 +17234,7 @@ begin
         port map (
       I0 => add_const_state(30),
       I1 => add_const_state(2),
-      I2 => \state_out_reg[28]\(2),
+      I2 => Q(2),
       O => D(30)
     );
 \state_out[35]_i_1__8\: unisim.vcomponents.LUT3
@@ -17274,8 +17243,8 @@ begin
     )
         port map (
       I0 => add_const_state_0(31),
-      I1 => Q(6),
-      I2 => Q(3),
+      I1 => \state_out_reg[31]\(6),
+      I2 => \state_out_reg[31]\(3),
       O => \state_out_reg[127]\(9)
     );
 \state_out[36]_i_1__7\: unisim.vcomponents.LUT3
@@ -17285,7 +17254,7 @@ begin
         port map (
       I0 => add_const_state(31),
       I1 => add_const_state(3),
-      I2 => \state_out_reg[28]\(3),
+      I2 => Q(3),
       O => D(31)
     );
 \state_out[37]_i_1__7\: unisim.vcomponents.LUT3
@@ -17295,7 +17264,7 @@ begin
         port map (
       I0 => add_const_state(32),
       I1 => add_const_state(4),
-      I2 => \state_out_reg[28]\(4),
+      I2 => Q(4),
       O => D(32)
     );
 \state_out[38]_i_1__7\: unisim.vcomponents.LUT3
@@ -17305,7 +17274,7 @@ begin
         port map (
       I0 => add_const_state(33),
       I1 => add_const_state(5),
-      I2 => \state_out_reg[28]\(5),
+      I2 => Q(5),
       O => D(33)
     );
 \state_out[39]_i_1__7\: unisim.vcomponents.LUT3
@@ -17315,7 +17284,7 @@ begin
         port map (
       I0 => add_const_state(34),
       I1 => add_const_state(6),
-      I2 => \state_out_reg[28]\(6),
+      I2 => Q(6),
       O => D(34)
     );
 \state_out[3]_i_1__7\: unisim.vcomponents.LUT3
@@ -17324,7 +17293,7 @@ begin
     )
         port map (
       I0 => add_const_state(2),
-      I1 => \state_out_reg[28]\(30),
+      I1 => Q(30),
       I2 => add_const_state(30),
       O => D(2)
     );
@@ -17335,7 +17304,7 @@ begin
         port map (
       I0 => add_const_state(35),
       I1 => add_const_state(7),
-      I2 => \state_out_reg[28]\(7),
+      I2 => Q(7),
       O => D(35)
     );
 \state_out[41]_i_1__7\: unisim.vcomponents.LUT3
@@ -17345,7 +17314,7 @@ begin
         port map (
       I0 => add_const_state(36),
       I1 => add_const_state(8),
-      I2 => \state_out_reg[28]\(8),
+      I2 => Q(8),
       O => D(36)
     );
 \state_out[42]_i_1__7\: unisim.vcomponents.LUT3
@@ -17355,7 +17324,7 @@ begin
         port map (
       I0 => add_const_state(37),
       I1 => add_const_state(9),
-      I2 => \state_out_reg[28]\(9),
+      I2 => Q(9),
       O => D(37)
     );
 \state_out[43]_i_1__7\: unisim.vcomponents.LUT3
@@ -17365,7 +17334,7 @@ begin
         port map (
       I0 => add_const_state(38),
       I1 => add_const_state(10),
-      I2 => \state_out_reg[28]\(10),
+      I2 => Q(10),
       O => D(38)
     );
 \state_out[44]_i_1__7\: unisim.vcomponents.LUT3
@@ -17375,7 +17344,7 @@ begin
         port map (
       I0 => add_const_state(39),
       I1 => add_const_state(11),
-      I2 => \state_out_reg[28]\(11),
+      I2 => Q(11),
       O => D(39)
     );
 \state_out[45]_i_1__7\: unisim.vcomponents.LUT3
@@ -17385,7 +17354,7 @@ begin
         port map (
       I0 => add_const_state(40),
       I1 => add_const_state(12),
-      I2 => \state_out_reg[28]\(12),
+      I2 => Q(12),
       O => D(40)
     );
 \state_out[46]_i_1__7\: unisim.vcomponents.LUT3
@@ -17395,7 +17364,7 @@ begin
         port map (
       I0 => add_const_state(41),
       I1 => add_const_state(13),
-      I2 => \state_out_reg[28]\(13),
+      I2 => Q(13),
       O => D(41)
     );
 \state_out[47]_i_1__7\: unisim.vcomponents.LUT3
@@ -17405,7 +17374,7 @@ begin
         port map (
       I0 => add_const_state(42),
       I1 => add_const_state(14),
-      I2 => \state_out_reg[28]\(14),
+      I2 => Q(14),
       O => D(42)
     );
 \state_out[48]_i_1__7\: unisim.vcomponents.LUT3
@@ -17415,7 +17384,7 @@ begin
         port map (
       I0 => add_const_state(43),
       I1 => add_const_state(15),
-      I2 => \state_out_reg[28]\(15),
+      I2 => Q(15),
       O => D(43)
     );
 \state_out[49]_i_1__7\: unisim.vcomponents.LUT3
@@ -17425,7 +17394,7 @@ begin
         port map (
       I0 => add_const_state(44),
       I1 => add_const_state(16),
-      I2 => \state_out_reg[28]\(16),
+      I2 => Q(16),
       O => D(44)
     );
 \state_out[4]_i_1__6\: unisim.vcomponents.LUT3
@@ -17434,7 +17403,7 @@ begin
     )
         port map (
       I0 => add_const_state(3),
-      I1 => \state_out_reg[28]\(31),
+      I1 => Q(31),
       I2 => add_const_state(31),
       O => D(3)
     );
@@ -17445,7 +17414,7 @@ begin
         port map (
       I0 => add_const_state(45),
       I1 => add_const_state(17),
-      I2 => \state_out_reg[28]\(17),
+      I2 => Q(17),
       O => D(45)
     );
 \state_out[51]_i_1__7\: unisim.vcomponents.LUT3
@@ -17455,7 +17424,7 @@ begin
         port map (
       I0 => add_const_state(46),
       I1 => add_const_state(18),
-      I2 => \state_out_reg[28]\(18),
+      I2 => Q(18),
       O => D(46)
     );
 \state_out[52]_i_1__7\: unisim.vcomponents.LUT3
@@ -17465,7 +17434,7 @@ begin
         port map (
       I0 => add_const_state(47),
       I1 => add_const_state(19),
-      I2 => \state_out_reg[28]\(19),
+      I2 => Q(19),
       O => D(47)
     );
 \state_out[53]_i_1__7\: unisim.vcomponents.LUT3
@@ -17475,7 +17444,7 @@ begin
         port map (
       I0 => add_const_state(48),
       I1 => add_const_state(20),
-      I2 => \state_out_reg[28]\(20),
+      I2 => Q(20),
       O => D(48)
     );
 \state_out[54]_i_1__7\: unisim.vcomponents.LUT3
@@ -17485,7 +17454,7 @@ begin
         port map (
       I0 => add_const_state(49),
       I1 => add_const_state(21),
-      I2 => \state_out_reg[28]\(21),
+      I2 => Q(21),
       O => D(49)
     );
 \state_out[55]_i_1__7\: unisim.vcomponents.LUT3
@@ -17495,7 +17464,7 @@ begin
         port map (
       I0 => add_const_state(50),
       I1 => add_const_state(22),
-      I2 => \state_out_reg[28]\(22),
+      I2 => Q(22),
       O => D(50)
     );
 \state_out[56]_i_1__7\: unisim.vcomponents.LUT3
@@ -17505,7 +17474,7 @@ begin
         port map (
       I0 => add_const_state(51),
       I1 => add_const_state(23),
-      I2 => \state_out_reg[28]\(23),
+      I2 => Q(23),
       O => D(51)
     );
 \state_out[57]_i_1__7\: unisim.vcomponents.LUT3
@@ -17515,7 +17484,7 @@ begin
         port map (
       I0 => add_const_state(52),
       I1 => add_const_state(24),
-      I2 => \state_out_reg[28]\(24),
+      I2 => Q(24),
       O => D(52)
     );
 \state_out[58]_i_1__7\: unisim.vcomponents.LUT3
@@ -17525,7 +17494,7 @@ begin
         port map (
       I0 => add_const_state(53),
       I1 => add_const_state(25),
-      I2 => \state_out_reg[28]\(25),
+      I2 => Q(25),
       O => D(53)
     );
 \state_out[59]_i_1__7\: unisim.vcomponents.LUT3
@@ -17535,7 +17504,7 @@ begin
         port map (
       I0 => add_const_state(54),
       I1 => add_const_state(26),
-      I2 => \state_out_reg[28]\(26),
+      I2 => Q(26),
       O => D(54)
     );
 \state_out[5]_i_1__7\: unisim.vcomponents.LUT3
@@ -17544,7 +17513,7 @@ begin
     )
         port map (
       I0 => add_const_state(4),
-      I1 => \state_out_reg[28]\(32),
+      I1 => Q(32),
       I2 => add_const_state(32),
       O => D(4)
     );
@@ -17555,7 +17524,7 @@ begin
         port map (
       I0 => add_const_state(55),
       I1 => add_const_state(27),
-      I2 => \state_out_reg[28]\(27),
+      I2 => Q(27),
       O => D(55)
     );
 \state_out[60]_i_1__8\: unisim.vcomponents.LUT3
@@ -17565,7 +17534,7 @@ begin
         port map (
       I0 => add_const_state_0(56),
       I1 => add_const_state_0(24),
-      I2 => Q(31),
+      I2 => \state_out_reg[31]\(31),
       O => \state_out_reg[127]\(10)
     );
 \state_out[61]_i_1__8\: unisim.vcomponents.LUT3
@@ -17575,7 +17544,7 @@ begin
         port map (
       I0 => add_const_state_0(57),
       I1 => add_const_state_0(25),
-      I2 => Q(32),
+      I2 => \state_out_reg[31]\(32),
       O => \state_out_reg[127]\(11)
     );
 \state_out[62]_i_1__8\: unisim.vcomponents.LUT3
@@ -17585,7 +17554,7 @@ begin
         port map (
       I0 => add_const_state_0(58),
       I1 => add_const_state_0(26),
-      I2 => Q(33),
+      I2 => \state_out_reg[31]\(33),
       O => \state_out_reg[127]\(12)
     );
 \state_out[63]_i_1__8\: unisim.vcomponents.LUT3
@@ -17595,7 +17564,7 @@ begin
         port map (
       I0 => add_const_state_0(59),
       I1 => add_const_state_0(27),
-      I2 => Q(34),
+      I2 => \state_out_reg[31]\(34),
       O => \state_out_reg[127]\(13)
     );
 \state_out[65]_i_1__8\: unisim.vcomponents.LUT3
@@ -17603,9 +17572,9 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(4),
+      I0 => \state_out_reg[31]\(4),
       I1 => add_const_state_0(29),
-      I2 => Q(36),
+      I2 => \state_out_reg[31]\(36),
       O => \state_out_reg[127]\(14)
     );
 \state_out[66]_i_1__8\: unisim.vcomponents.LUT3
@@ -17613,9 +17582,9 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(5),
+      I0 => \state_out_reg[31]\(5),
       I1 => add_const_state_0(30),
-      I2 => Q(37),
+      I2 => \state_out_reg[31]\(37),
       O => \state_out_reg[127]\(15)
     );
 \state_out[67]_i_1__8\: unisim.vcomponents.LUT3
@@ -17623,9 +17592,9 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(6),
+      I0 => \state_out_reg[31]\(6),
       I1 => add_const_state_0(31),
-      I2 => Q(38),
+      I2 => \state_out_reg[31]\(38),
       O => \state_out_reg[127]\(16)
     );
 \state_out[68]_i_1__8\: unisim.vcomponents.LUT3
@@ -17633,9 +17602,9 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(7),
+      I0 => \state_out_reg[31]\(7),
       I1 => add_const_state_0(32),
-      I2 => Q(39),
+      I2 => \state_out_reg[31]\(39),
       O => \state_out_reg[127]\(17)
     );
 \state_out[69]_i_1__8\: unisim.vcomponents.LUT3
@@ -17643,12 +17612,1293 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(8),
+      I0 => \state_out_reg[31]\(8),
       I1 => add_const_state_0(33),
-      I2 => Q(40),
+      I2 => \state_out_reg[31]\(40),
       O => \state_out_reg[127]\(18)
     );
 \state_out[6]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(5),
+      I1 => Q(33),
+      I2 => add_const_state(33),
+      O => D(5)
+    );
+\state_out[70]_i_1__8\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => \state_out_reg[31]\(9),
+      I1 => add_const_state_0(34),
+      I2 => \state_out_reg[31]\(41),
+      O => \state_out_reg[127]\(19)
+    );
+\state_out[71]_i_1__8\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => \state_out_reg[31]\(10),
+      I1 => add_const_state_0(35),
+      I2 => \state_out_reg[31]\(42),
+      O => \state_out_reg[127]\(20)
+    );
+\state_out[72]_i_1__8\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => \state_out_reg[31]\(11),
+      I1 => add_const_state_0(36),
+      I2 => \state_out_reg[31]\(43),
+      O => \state_out_reg[127]\(21)
+    );
+\state_out[73]_i_1__8\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => \state_out_reg[31]\(12),
+      I1 => add_const_state_0(37),
+      I2 => \state_out_reg[31]\(44),
+      O => \state_out_reg[127]\(22)
+    );
+\state_out[74]_i_1__8\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => \state_out_reg[31]\(13),
+      I1 => add_const_state_0(38),
+      I2 => \state_out_reg[31]\(45),
+      O => \state_out_reg[127]\(23)
+    );
+\state_out[75]_i_1__8\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => \state_out_reg[31]\(14),
+      I1 => add_const_state_0(39),
+      I2 => \state_out_reg[31]\(46),
+      O => \state_out_reg[127]\(24)
+    );
+\state_out[76]_i_1__8\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => \state_out_reg[31]\(15),
+      I1 => add_const_state_0(40),
+      I2 => \state_out_reg[31]\(47),
+      O => \state_out_reg[127]\(25)
+    );
+\state_out[77]_i_1__8\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => \state_out_reg[31]\(16),
+      I1 => add_const_state_0(41),
+      I2 => \state_out_reg[31]\(48),
+      O => \state_out_reg[127]\(26)
+    );
+\state_out[78]_i_1__8\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => \state_out_reg[31]\(17),
+      I1 => add_const_state_0(42),
+      I2 => \state_out_reg[31]\(49),
+      O => \state_out_reg[127]\(27)
+    );
+\state_out[79]_i_1__8\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => \state_out_reg[31]\(18),
+      I1 => add_const_state_0(43),
+      I2 => \state_out_reg[31]\(50),
+      O => \state_out_reg[127]\(28)
+    );
+\state_out[7]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(6),
+      I1 => Q(34),
+      I2 => add_const_state(34),
+      O => D(6)
+    );
+\state_out[80]_i_1__8\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => \state_out_reg[31]\(19),
+      I1 => add_const_state_0(44),
+      I2 => \state_out_reg[31]\(51),
+      O => \state_out_reg[127]\(29)
+    );
+\state_out[81]_i_1__8\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => \state_out_reg[31]\(20),
+      I1 => add_const_state_0(45),
+      I2 => \state_out_reg[31]\(52),
+      O => \state_out_reg[127]\(30)
+    );
+\state_out[82]_i_1__8\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => \state_out_reg[31]\(21),
+      I1 => add_const_state_0(46),
+      I2 => \state_out_reg[31]\(53),
+      O => \state_out_reg[127]\(31)
+    );
+\state_out[83]_i_1__8\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => \state_out_reg[31]\(22),
+      I1 => add_const_state_0(47),
+      I2 => \state_out_reg[31]\(54),
+      O => \state_out_reg[127]\(32)
+    );
+\state_out[84]_i_1__8\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => \state_out_reg[31]\(23),
+      I1 => add_const_state_0(48),
+      I2 => \state_out_reg[31]\(55),
+      O => \state_out_reg[127]\(33)
+    );
+\state_out[85]_i_1__8\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => \state_out_reg[31]\(24),
+      I1 => add_const_state_0(49),
+      I2 => \state_out_reg[31]\(56),
+      O => \state_out_reg[127]\(34)
+    );
+\state_out[86]_i_1__8\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => \state_out_reg[31]\(25),
+      I1 => add_const_state_0(50),
+      I2 => \state_out_reg[31]\(57),
+      O => \state_out_reg[127]\(35)
+    );
+\state_out[87]_i_1__8\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => \state_out_reg[31]\(26),
+      I1 => add_const_state_0(51),
+      I2 => \state_out_reg[31]\(58),
+      O => \state_out_reg[127]\(36)
+    );
+\state_out[88]_i_1__8\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => \state_out_reg[31]\(27),
+      I1 => add_const_state_0(52),
+      I2 => \state_out_reg[31]\(59),
+      O => \state_out_reg[127]\(37)
+    );
+\state_out[89]_i_1__8\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => \state_out_reg[31]\(28),
+      I1 => add_const_state_0(53),
+      I2 => \state_out_reg[31]\(60),
+      O => \state_out_reg[127]\(38)
+    );
+\state_out[8]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(7),
+      I1 => Q(35),
+      I2 => add_const_state(35),
+      O => D(7)
+    );
+\state_out[90]_i_1__8\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => \state_out_reg[31]\(29),
+      I1 => add_const_state_0(54),
+      I2 => \state_out_reg[31]\(61),
+      O => \state_out_reg[127]\(39)
+    );
+\state_out[91]_i_1__8\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => \state_out_reg[31]\(30),
+      I1 => add_const_state_0(55),
+      I2 => \state_out_reg[31]\(62),
+      O => \state_out_reg[127]\(40)
+    );
+\state_out[92]_i_1__8\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => \state_out_reg[31]\(31),
+      I1 => add_const_state_0(56),
+      I2 => \state_out_reg[31]\(63),
+      O => \state_out_reg[127]\(41)
+    );
+\state_out[93]_i_1__8\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => \state_out_reg[31]\(32),
+      I1 => add_const_state_0(57),
+      I2 => \state_out_reg[31]\(64),
+      O => \state_out_reg[127]\(42)
+    );
+\state_out[94]_i_1__8\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => \state_out_reg[31]\(33),
+      I1 => add_const_state_0(58),
+      I2 => \state_out_reg[31]\(65),
+      O => \state_out_reg[127]\(43)
+    );
+\state_out[95]_i_1__8\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => \state_out_reg[31]\(34),
+      I1 => add_const_state_0(59),
+      I2 => \state_out_reg[31]\(66),
+      O => \state_out_reg[127]\(44)
+    );
+\state_out[96]_i_1__8\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => \state_out_reg[31]\(35),
+      I1 => CO(0),
+      I2 => \state_out_reg[31]\(0),
+      O => \state_out_reg[127]\(45)
+    );
+\state_out[97]_i_1__8\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => \state_out_reg[31]\(36),
+      I1 => \state_out_reg[31]\(4),
+      I2 => \state_out_reg[31]\(1),
+      O => \state_out_reg[127]\(46)
+    );
+\state_out[98]_i_1__8\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => \state_out_reg[31]\(37),
+      I1 => \state_out_reg[31]\(5),
+      I2 => \state_out_reg[31]\(2),
+      O => \state_out_reg[127]\(47)
+    );
+\state_out[99]_i_1__8\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"A9"
+    )
+        port map (
+      I0 => \state_out_reg[31]\(38),
+      I1 => \state_out_reg[31]\(3),
+      I2 => \state_out_reg[31]\(6),
+      O => \state_out_reg[127]\(48)
+    );
+\state_out[9]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(8),
+      I1 => Q(36),
+      I2 => add_const_state(36),
+      O => D(8)
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity design_ascon_ascon_core_0_2_ascon_sbox_11 is
+  port (
+    D : out STD_LOGIC_VECTOR ( 55 downto 0 );
+    \state_out_reg[127]\ : out STD_LOGIC_VECTOR ( 69 downto 0 );
+    add_const_state : in STD_LOGIC_VECTOR ( 55 downto 0 );
+    \state_out_reg[28]\ : in STD_LOGIC_VECTOR ( 55 downto 0 );
+    add_const_state_0 : in STD_LOGIC_VECTOR ( 62 downto 0 );
+    Q : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    \state_out_reg[96]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_ascon_ascon_core_0_2_ascon_sbox_11 : entity is "ascon_sbox";
+end design_ascon_ascon_core_0_2_ascon_sbox_11;
+
+architecture STRUCTURE of design_ascon_ascon_core_0_2_ascon_sbox_11 is
+begin
+\state_out[100]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(36),
+      I1 => Q(4),
+      I2 => add_const_state_0(3),
+      O => \state_out_reg[127]\(42)
+    );
+\state_out[101]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(37),
+      I1 => Q(5),
+      I2 => add_const_state_0(4),
+      O => \state_out_reg[127]\(43)
+    );
+\state_out[102]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(38),
+      I1 => Q(6),
+      I2 => add_const_state_0(5),
+      O => \state_out_reg[127]\(44)
+    );
+\state_out[103]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(39),
+      I1 => Q(7),
+      I2 => add_const_state_0(6),
+      O => \state_out_reg[127]\(45)
+    );
+\state_out[104]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(40),
+      I1 => Q(8),
+      I2 => add_const_state_0(7),
+      O => \state_out_reg[127]\(46)
+    );
+\state_out[105]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(41),
+      I1 => Q(9),
+      I2 => add_const_state_0(8),
+      O => \state_out_reg[127]\(47)
+    );
+\state_out[106]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(42),
+      I1 => Q(10),
+      I2 => add_const_state_0(9),
+      O => \state_out_reg[127]\(48)
+    );
+\state_out[107]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(43),
+      I1 => Q(11),
+      I2 => add_const_state_0(10),
+      O => \state_out_reg[127]\(49)
+    );
+\state_out[108]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(44),
+      I1 => Q(12),
+      I2 => add_const_state_0(11),
+      O => \state_out_reg[127]\(50)
+    );
+\state_out[109]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(45),
+      I1 => Q(13),
+      I2 => add_const_state_0(12),
+      O => \state_out_reg[127]\(51)
+    );
+\state_out[10]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(9),
+      I1 => \state_out_reg[28]\(37),
+      I2 => add_const_state(37),
+      O => D(9)
+    );
+\state_out[110]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(46),
+      I1 => Q(14),
+      I2 => add_const_state_0(13),
+      O => \state_out_reg[127]\(52)
+    );
+\state_out[111]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(47),
+      I1 => Q(15),
+      I2 => add_const_state_0(14),
+      O => \state_out_reg[127]\(53)
+    );
+\state_out[112]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(48),
+      I1 => Q(16),
+      I2 => add_const_state_0(15),
+      O => \state_out_reg[127]\(54)
+    );
+\state_out[113]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(49),
+      I1 => Q(17),
+      I2 => add_const_state_0(16),
+      O => \state_out_reg[127]\(55)
+    );
+\state_out[114]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(50),
+      I1 => Q(18),
+      I2 => add_const_state_0(17),
+      O => \state_out_reg[127]\(56)
+    );
+\state_out[115]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(51),
+      I1 => Q(19),
+      I2 => add_const_state_0(18),
+      O => \state_out_reg[127]\(57)
+    );
+\state_out[116]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(52),
+      I1 => Q(20),
+      I2 => add_const_state_0(19),
+      O => \state_out_reg[127]\(58)
+    );
+\state_out[117]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(53),
+      I1 => Q(21),
+      I2 => add_const_state_0(20),
+      O => \state_out_reg[127]\(59)
+    );
+\state_out[118]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(54),
+      I1 => Q(22),
+      I2 => add_const_state_0(21),
+      O => \state_out_reg[127]\(60)
+    );
+\state_out[119]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(55),
+      I1 => Q(23),
+      I2 => add_const_state_0(22),
+      O => \state_out_reg[127]\(61)
+    );
+\state_out[11]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(10),
+      I1 => \state_out_reg[28]\(38),
+      I2 => add_const_state(38),
+      O => D(10)
+    );
+\state_out[120]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(56),
+      I1 => Q(24),
+      I2 => add_const_state_0(23),
+      O => \state_out_reg[127]\(62)
+    );
+\state_out[121]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(57),
+      I1 => Q(25),
+      I2 => add_const_state_0(24),
+      O => \state_out_reg[127]\(63)
+    );
+\state_out[122]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(58),
+      I1 => Q(26),
+      I2 => add_const_state_0(25),
+      O => \state_out_reg[127]\(64)
+    );
+\state_out[123]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(59),
+      I1 => Q(27),
+      I2 => add_const_state_0(26),
+      O => \state_out_reg[127]\(65)
+    );
+\state_out[124]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(60),
+      I1 => Q(28),
+      I2 => add_const_state_0(27),
+      O => \state_out_reg[127]\(66)
+    );
+\state_out[125]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(61),
+      I1 => Q(29),
+      I2 => add_const_state_0(28),
+      O => \state_out_reg[127]\(67)
+    );
+\state_out[126]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(62),
+      I1 => Q(30),
+      I2 => add_const_state_0(29),
+      O => \state_out_reg[127]\(68)
+    );
+\state_out[127]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(63),
+      I1 => Q(31),
+      I2 => add_const_state_0(30),
+      O => \state_out_reg[127]\(69)
+    );
+\state_out[12]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(11),
+      I1 => \state_out_reg[28]\(39),
+      I2 => add_const_state(39),
+      O => D(11)
+    );
+\state_out[13]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(12),
+      I1 => \state_out_reg[28]\(40),
+      I2 => add_const_state(40),
+      O => D(12)
+    );
+\state_out[14]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(13),
+      I1 => \state_out_reg[28]\(41),
+      I2 => add_const_state(41),
+      O => D(13)
+    );
+\state_out[15]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(14),
+      I1 => \state_out_reg[28]\(42),
+      I2 => add_const_state(42),
+      O => D(14)
+    );
+\state_out[16]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(15),
+      I1 => \state_out_reg[28]\(43),
+      I2 => add_const_state(43),
+      O => D(15)
+    );
+\state_out[17]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(16),
+      I1 => \state_out_reg[28]\(44),
+      I2 => add_const_state(44),
+      O => D(16)
+    );
+\state_out[18]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(17),
+      I1 => \state_out_reg[28]\(45),
+      I2 => add_const_state(45),
+      O => D(17)
+    );
+\state_out[19]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(18),
+      I1 => \state_out_reg[28]\(46),
+      I2 => add_const_state(46),
+      O => D(18)
+    );
+\state_out[1]_i_1__4\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(0),
+      I1 => \state_out_reg[28]\(28),
+      I2 => add_const_state(28),
+      O => D(0)
+    );
+\state_out[20]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(19),
+      I1 => \state_out_reg[28]\(47),
+      I2 => add_const_state(47),
+      O => D(19)
+    );
+\state_out[21]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(20),
+      I1 => \state_out_reg[28]\(48),
+      I2 => add_const_state(48),
+      O => D(20)
+    );
+\state_out[22]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(21),
+      I1 => \state_out_reg[28]\(49),
+      I2 => add_const_state(49),
+      O => D(21)
+    );
+\state_out[23]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(22),
+      I1 => \state_out_reg[28]\(50),
+      I2 => add_const_state(50),
+      O => D(22)
+    );
+\state_out[24]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(23),
+      I1 => \state_out_reg[28]\(51),
+      I2 => add_const_state(51),
+      O => D(23)
+    );
+\state_out[25]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(24),
+      I1 => \state_out_reg[28]\(52),
+      I2 => add_const_state(52),
+      O => D(24)
+    );
+\state_out[26]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(25),
+      I1 => \state_out_reg[28]\(53),
+      I2 => add_const_state(53),
+      O => D(25)
+    );
+\state_out[27]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(26),
+      I1 => \state_out_reg[28]\(54),
+      I2 => add_const_state(54),
+      O => D(26)
+    );
+\state_out[28]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(27),
+      I1 => \state_out_reg[28]\(55),
+      I2 => add_const_state(55),
+      O => D(27)
+    );
+\state_out[29]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state_0(28),
+      I1 => Q(61),
+      I2 => add_const_state_0(60),
+      O => \state_out_reg[127]\(0)
+    );
+\state_out[2]_i_1__5\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(1),
+      I1 => \state_out_reg[28]\(29),
+      I2 => add_const_state(29),
+      O => D(1)
+    );
+\state_out[30]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state_0(29),
+      I1 => Q(62),
+      I2 => add_const_state_0(61),
+      O => \state_out_reg[127]\(1)
+    );
+\state_out[31]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state_0(30),
+      I1 => Q(63),
+      I2 => add_const_state_0(62),
+      O => \state_out_reg[127]\(2)
+    );
+\state_out[32]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"6A"
+    )
+        port map (
+      I0 => add_const_state_0(31),
+      I1 => \state_out_reg[96]\(0),
+      I2 => Q(0),
+      O => \state_out_reg[127]\(3)
+    );
+\state_out[33]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(28),
+      I1 => add_const_state(0),
+      I2 => \state_out_reg[28]\(0),
+      O => D(28)
+    );
+\state_out[34]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(29),
+      I1 => add_const_state(1),
+      I2 => \state_out_reg[28]\(1),
+      O => D(29)
+    );
+\state_out[35]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(30),
+      I1 => add_const_state(2),
+      I2 => \state_out_reg[28]\(2),
+      O => D(30)
+    );
+\state_out[36]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(31),
+      I1 => add_const_state(3),
+      I2 => \state_out_reg[28]\(3),
+      O => D(31)
+    );
+\state_out[37]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(32),
+      I1 => add_const_state(4),
+      I2 => \state_out_reg[28]\(4),
+      O => D(32)
+    );
+\state_out[38]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(33),
+      I1 => add_const_state(5),
+      I2 => \state_out_reg[28]\(5),
+      O => D(33)
+    );
+\state_out[39]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(34),
+      I1 => add_const_state(6),
+      I2 => \state_out_reg[28]\(6),
+      O => D(34)
+    );
+\state_out[3]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(2),
+      I1 => \state_out_reg[28]\(30),
+      I2 => add_const_state(30),
+      O => D(2)
+    );
+\state_out[40]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(35),
+      I1 => add_const_state(7),
+      I2 => \state_out_reg[28]\(7),
+      O => D(35)
+    );
+\state_out[41]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(36),
+      I1 => add_const_state(8),
+      I2 => \state_out_reg[28]\(8),
+      O => D(36)
+    );
+\state_out[42]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(37),
+      I1 => add_const_state(9),
+      I2 => \state_out_reg[28]\(9),
+      O => D(37)
+    );
+\state_out[43]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(38),
+      I1 => add_const_state(10),
+      I2 => \state_out_reg[28]\(10),
+      O => D(38)
+    );
+\state_out[44]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(39),
+      I1 => add_const_state(11),
+      I2 => \state_out_reg[28]\(11),
+      O => D(39)
+    );
+\state_out[45]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(40),
+      I1 => add_const_state(12),
+      I2 => \state_out_reg[28]\(12),
+      O => D(40)
+    );
+\state_out[46]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(41),
+      I1 => add_const_state(13),
+      I2 => \state_out_reg[28]\(13),
+      O => D(41)
+    );
+\state_out[47]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(42),
+      I1 => add_const_state(14),
+      I2 => \state_out_reg[28]\(14),
+      O => D(42)
+    );
+\state_out[48]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(43),
+      I1 => add_const_state(15),
+      I2 => \state_out_reg[28]\(15),
+      O => D(43)
+    );
+\state_out[49]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(44),
+      I1 => add_const_state(16),
+      I2 => \state_out_reg[28]\(16),
+      O => D(44)
+    );
+\state_out[4]_i_1__5\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(3),
+      I1 => \state_out_reg[28]\(31),
+      I2 => add_const_state(31),
+      O => D(3)
+    );
+\state_out[50]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(45),
+      I1 => add_const_state(17),
+      I2 => \state_out_reg[28]\(17),
+      O => D(45)
+    );
+\state_out[51]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(46),
+      I1 => add_const_state(18),
+      I2 => \state_out_reg[28]\(18),
+      O => D(46)
+    );
+\state_out[52]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(47),
+      I1 => add_const_state(19),
+      I2 => \state_out_reg[28]\(19),
+      O => D(47)
+    );
+\state_out[53]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(48),
+      I1 => add_const_state(20),
+      I2 => \state_out_reg[28]\(20),
+      O => D(48)
+    );
+\state_out[54]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(49),
+      I1 => add_const_state(21),
+      I2 => \state_out_reg[28]\(21),
+      O => D(49)
+    );
+\state_out[55]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(50),
+      I1 => add_const_state(22),
+      I2 => \state_out_reg[28]\(22),
+      O => D(50)
+    );
+\state_out[56]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(51),
+      I1 => add_const_state(23),
+      I2 => \state_out_reg[28]\(23),
+      O => D(51)
+    );
+\state_out[57]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(52),
+      I1 => add_const_state(24),
+      I2 => \state_out_reg[28]\(24),
+      O => D(52)
+    );
+\state_out[58]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(53),
+      I1 => add_const_state(25),
+      I2 => \state_out_reg[28]\(25),
+      O => D(53)
+    );
+\state_out[59]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(54),
+      I1 => add_const_state(26),
+      I2 => \state_out_reg[28]\(26),
+      O => D(54)
+    );
+\state_out[5]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(4),
+      I1 => \state_out_reg[28]\(32),
+      I2 => add_const_state(32),
+      O => D(4)
+    );
+\state_out[60]_i_1__6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state(55),
+      I1 => add_const_state(27),
+      I2 => \state_out_reg[28]\(27),
+      O => D(55)
+    );
+\state_out[61]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state_0(60),
+      I1 => add_const_state_0(28),
+      I2 => Q(29),
+      O => \state_out_reg[127]\(4)
+    );
+\state_out[62]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state_0(61),
+      I1 => add_const_state_0(29),
+      I2 => Q(30),
+      O => \state_out_reg[127]\(5)
+    );
+\state_out[63]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => add_const_state_0(62),
+      I1 => add_const_state_0(30),
+      I2 => Q(31),
+      O => \state_out_reg[127]\(6)
+    );
+\state_out[65]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(1),
+      I1 => add_const_state_0(32),
+      I2 => Q(33),
+      O => \state_out_reg[127]\(7)
+    );
+\state_out[66]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => add_const_state_0(33),
+      I2 => Q(34),
+      O => \state_out_reg[127]\(8)
+    );
+\state_out[67]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(3),
+      I1 => add_const_state_0(34),
+      I2 => Q(35),
+      O => \state_out_reg[127]\(9)
+    );
+\state_out[68]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(4),
+      I1 => add_const_state_0(35),
+      I2 => Q(36),
+      O => \state_out_reg[127]\(10)
+    );
+\state_out[69]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(5),
+      I1 => add_const_state_0(36),
+      I2 => Q(37),
+      O => \state_out_reg[127]\(11)
+    );
+\state_out[6]_i_1__6\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"9A"
     )
@@ -17658,107 +18908,107 @@ begin
       I2 => add_const_state(33),
       O => D(5)
     );
-\state_out[70]_i_1__8\: unisim.vcomponents.LUT3
+\state_out[70]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(6),
+      I1 => add_const_state_0(37),
+      I2 => Q(38),
+      O => \state_out_reg[127]\(12)
+    );
+\state_out[71]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(7),
+      I1 => add_const_state_0(38),
+      I2 => Q(39),
+      O => \state_out_reg[127]\(13)
+    );
+\state_out[72]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(8),
+      I1 => add_const_state_0(39),
+      I2 => Q(40),
+      O => \state_out_reg[127]\(14)
+    );
+\state_out[73]_i_1__7\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"9A"
     )
         port map (
       I0 => Q(9),
-      I1 => add_const_state_0(34),
+      I1 => add_const_state_0(40),
       I2 => Q(41),
-      O => \state_out_reg[127]\(19)
+      O => \state_out_reg[127]\(15)
     );
-\state_out[71]_i_1__8\: unisim.vcomponents.LUT3
+\state_out[74]_i_1__7\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"9A"
     )
         port map (
       I0 => Q(10),
-      I1 => add_const_state_0(35),
+      I1 => add_const_state_0(41),
       I2 => Q(42),
-      O => \state_out_reg[127]\(20)
+      O => \state_out_reg[127]\(16)
     );
-\state_out[72]_i_1__8\: unisim.vcomponents.LUT3
+\state_out[75]_i_1__7\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"9A"
     )
         port map (
       I0 => Q(11),
-      I1 => add_const_state_0(36),
+      I1 => add_const_state_0(42),
       I2 => Q(43),
-      O => \state_out_reg[127]\(21)
+      O => \state_out_reg[127]\(17)
     );
-\state_out[73]_i_1__8\: unisim.vcomponents.LUT3
+\state_out[76]_i_1__7\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"9A"
     )
         port map (
       I0 => Q(12),
-      I1 => add_const_state_0(37),
+      I1 => add_const_state_0(43),
       I2 => Q(44),
-      O => \state_out_reg[127]\(22)
+      O => \state_out_reg[127]\(18)
     );
-\state_out[74]_i_1__8\: unisim.vcomponents.LUT3
+\state_out[77]_i_1__7\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"9A"
     )
         port map (
       I0 => Q(13),
-      I1 => add_const_state_0(38),
+      I1 => add_const_state_0(44),
       I2 => Q(45),
-      O => \state_out_reg[127]\(23)
+      O => \state_out_reg[127]\(19)
     );
-\state_out[75]_i_1__8\: unisim.vcomponents.LUT3
+\state_out[78]_i_1__7\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"9A"
     )
         port map (
       I0 => Q(14),
-      I1 => add_const_state_0(39),
+      I1 => add_const_state_0(45),
       I2 => Q(46),
-      O => \state_out_reg[127]\(24)
+      O => \state_out_reg[127]\(20)
     );
-\state_out[76]_i_1__8\: unisim.vcomponents.LUT3
+\state_out[79]_i_1__7\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"9A"
     )
         port map (
       I0 => Q(15),
-      I1 => add_const_state_0(40),
+      I1 => add_const_state_0(46),
       I2 => Q(47),
-      O => \state_out_reg[127]\(25)
+      O => \state_out_reg[127]\(21)
     );
-\state_out[77]_i_1__8\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => Q(16),
-      I1 => add_const_state_0(41),
-      I2 => Q(48),
-      O => \state_out_reg[127]\(26)
-    );
-\state_out[78]_i_1__8\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => Q(17),
-      I1 => add_const_state_0(42),
-      I2 => Q(49),
-      O => \state_out_reg[127]\(27)
-    );
-\state_out[79]_i_1__8\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => Q(18),
-      I1 => add_const_state_0(43),
-      I2 => Q(50),
-      O => \state_out_reg[127]\(28)
-    );
-\state_out[7]_i_1__7\: unisim.vcomponents.LUT3
+\state_out[7]_i_1__6\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"9A"
     )
@@ -17768,107 +19018,107 @@ begin
       I2 => add_const_state(34),
       O => D(6)
     );
-\state_out[80]_i_1__8\: unisim.vcomponents.LUT3
+\state_out[80]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(16),
+      I1 => add_const_state_0(47),
+      I2 => Q(48),
+      O => \state_out_reg[127]\(22)
+    );
+\state_out[81]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(17),
+      I1 => add_const_state_0(48),
+      I2 => Q(49),
+      O => \state_out_reg[127]\(23)
+    );
+\state_out[82]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(18),
+      I1 => add_const_state_0(49),
+      I2 => Q(50),
+      O => \state_out_reg[127]\(24)
+    );
+\state_out[83]_i_1__7\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"9A"
     )
         port map (
       I0 => Q(19),
-      I1 => add_const_state_0(44),
+      I1 => add_const_state_0(50),
       I2 => Q(51),
-      O => \state_out_reg[127]\(29)
+      O => \state_out_reg[127]\(25)
     );
-\state_out[81]_i_1__8\: unisim.vcomponents.LUT3
+\state_out[84]_i_1__7\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"9A"
     )
         port map (
       I0 => Q(20),
-      I1 => add_const_state_0(45),
+      I1 => add_const_state_0(51),
       I2 => Q(52),
-      O => \state_out_reg[127]\(30)
+      O => \state_out_reg[127]\(26)
     );
-\state_out[82]_i_1__8\: unisim.vcomponents.LUT3
+\state_out[85]_i_1__7\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"9A"
     )
         port map (
       I0 => Q(21),
-      I1 => add_const_state_0(46),
+      I1 => add_const_state_0(52),
       I2 => Q(53),
-      O => \state_out_reg[127]\(31)
+      O => \state_out_reg[127]\(27)
     );
-\state_out[83]_i_1__8\: unisim.vcomponents.LUT3
+\state_out[86]_i_1__7\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"9A"
     )
         port map (
       I0 => Q(22),
-      I1 => add_const_state_0(47),
+      I1 => add_const_state_0(53),
       I2 => Q(54),
-      O => \state_out_reg[127]\(32)
+      O => \state_out_reg[127]\(28)
     );
-\state_out[84]_i_1__8\: unisim.vcomponents.LUT3
+\state_out[87]_i_1__7\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"9A"
     )
         port map (
       I0 => Q(23),
-      I1 => add_const_state_0(48),
+      I1 => add_const_state_0(54),
       I2 => Q(55),
-      O => \state_out_reg[127]\(33)
+      O => \state_out_reg[127]\(29)
     );
-\state_out[85]_i_1__8\: unisim.vcomponents.LUT3
+\state_out[88]_i_1__7\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"9A"
     )
         port map (
       I0 => Q(24),
-      I1 => add_const_state_0(49),
+      I1 => add_const_state_0(55),
       I2 => Q(56),
-      O => \state_out_reg[127]\(34)
+      O => \state_out_reg[127]\(30)
     );
-\state_out[86]_i_1__8\: unisim.vcomponents.LUT3
+\state_out[89]_i_1__7\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"9A"
     )
         port map (
       I0 => Q(25),
-      I1 => add_const_state_0(50),
+      I1 => add_const_state_0(56),
       I2 => Q(57),
-      O => \state_out_reg[127]\(35)
+      O => \state_out_reg[127]\(31)
     );
-\state_out[87]_i_1__8\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => Q(26),
-      I1 => add_const_state_0(51),
-      I2 => Q(58),
-      O => \state_out_reg[127]\(36)
-    );
-\state_out[88]_i_1__8\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => Q(27),
-      I1 => add_const_state_0(52),
-      I2 => Q(59),
-      O => \state_out_reg[127]\(37)
-    );
-\state_out[89]_i_1__8\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => Q(28),
-      I1 => add_const_state_0(53),
-      I2 => Q(60),
-      O => \state_out_reg[127]\(38)
-    );
-\state_out[8]_i_1__7\: unisim.vcomponents.LUT3
+\state_out[8]_i_1__6\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"9A"
     )
@@ -17878,107 +19128,107 @@ begin
       I2 => add_const_state(35),
       O => D(7)
     );
-\state_out[90]_i_1__8\: unisim.vcomponents.LUT3
+\state_out[90]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(26),
+      I1 => add_const_state_0(57),
+      I2 => Q(58),
+      O => \state_out_reg[127]\(32)
+    );
+\state_out[91]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(27),
+      I1 => add_const_state_0(58),
+      I2 => Q(59),
+      O => \state_out_reg[127]\(33)
+    );
+\state_out[92]_i_1__7\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"9A"
+    )
+        port map (
+      I0 => Q(28),
+      I1 => add_const_state_0(59),
+      I2 => Q(60),
+      O => \state_out_reg[127]\(34)
+    );
+\state_out[93]_i_1__7\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"9A"
     )
         port map (
       I0 => Q(29),
-      I1 => add_const_state_0(54),
+      I1 => add_const_state_0(60),
       I2 => Q(61),
-      O => \state_out_reg[127]\(39)
+      O => \state_out_reg[127]\(35)
     );
-\state_out[91]_i_1__8\: unisim.vcomponents.LUT3
+\state_out[94]_i_1__7\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"9A"
     )
         port map (
       I0 => Q(30),
-      I1 => add_const_state_0(55),
+      I1 => add_const_state_0(61),
       I2 => Q(62),
-      O => \state_out_reg[127]\(40)
+      O => \state_out_reg[127]\(36)
     );
-\state_out[92]_i_1__8\: unisim.vcomponents.LUT3
+\state_out[95]_i_1__7\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"9A"
     )
         port map (
       I0 => Q(31),
-      I1 => add_const_state_0(56),
+      I1 => add_const_state_0(62),
       I2 => Q(63),
-      O => \state_out_reg[127]\(41)
+      O => \state_out_reg[127]\(37)
     );
-\state_out[93]_i_1__8\: unisim.vcomponents.LUT3
+\state_out[96]_i_1__7\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"9A"
+      INIT => X"A9"
     )
         port map (
       I0 => Q(32),
-      I1 => add_const_state_0(57),
-      I2 => Q(64),
-      O => \state_out_reg[127]\(42)
+      I1 => Q(0),
+      I2 => \state_out_reg[96]\(0),
+      O => \state_out_reg[127]\(38)
     );
-\state_out[94]_i_1__8\: unisim.vcomponents.LUT3
+\state_out[97]_i_1__7\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"9A"
     )
         port map (
       I0 => Q(33),
-      I1 => add_const_state_0(58),
-      I2 => Q(65),
-      O => \state_out_reg[127]\(43)
+      I1 => Q(1),
+      I2 => add_const_state_0(0),
+      O => \state_out_reg[127]\(39)
     );
-\state_out[95]_i_1__8\: unisim.vcomponents.LUT3
+\state_out[98]_i_1__7\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"9A"
     )
         port map (
       I0 => Q(34),
-      I1 => add_const_state_0(59),
-      I2 => Q(66),
-      O => \state_out_reg[127]\(44)
+      I1 => Q(2),
+      I2 => add_const_state_0(1),
+      O => \state_out_reg[127]\(40)
     );
-\state_out[96]_i_1__8\: unisim.vcomponents.LUT3
+\state_out[99]_i_1__7\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"9A"
     )
         port map (
       I0 => Q(35),
-      I1 => CO(0),
-      I2 => Q(0),
-      O => \state_out_reg[127]\(45)
-    );
-\state_out[97]_i_1__8\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => Q(36),
-      I1 => Q(4),
-      I2 => Q(1),
-      O => \state_out_reg[127]\(46)
-    );
-\state_out[98]_i_1__8\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => Q(37),
-      I1 => Q(5),
-      I2 => Q(2),
-      O => \state_out_reg[127]\(47)
-    );
-\state_out[99]_i_1__8\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"A9"
-    )
-        port map (
-      I0 => Q(38),
       I1 => Q(3),
-      I2 => Q(6),
-      O => \state_out_reg[127]\(48)
+      I2 => add_const_state_0(2),
+      O => \state_out_reg[127]\(41)
     );
-\state_out[9]_i_1__7\: unisim.vcomponents.LUT3
+\state_out[9]_i_1__6\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"9A"
     )
@@ -17993,7 +19243,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity design_ascon_ascon_core_0_2_ascon_sbox_11 is
+entity design_ascon_ascon_core_0_2_ascon_sbox_13 is
   port (
     D : out STD_LOGIC_VECTOR ( 55 downto 0 );
     \state_out_reg[127]\ : out STD_LOGIC_VECTOR ( 69 downto 0 );
@@ -18001,1287 +19251,6 @@ entity design_ascon_ascon_core_0_2_ascon_sbox_11 is
     Q : in STD_LOGIC_VECTOR ( 55 downto 0 );
     add_const_state_0 : in STD_LOGIC_VECTOR ( 62 downto 0 );
     \state_out_reg[31]\ : in STD_LOGIC_VECTOR ( 63 downto 0 );
-    \state_out_reg[96]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_ascon_ascon_core_0_2_ascon_sbox_11 : entity is "ascon_sbox";
-end design_ascon_ascon_core_0_2_ascon_sbox_11;
-
-architecture STRUCTURE of design_ascon_ascon_core_0_2_ascon_sbox_11 is
-begin
-\state_out[100]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(36),
-      I1 => \state_out_reg[31]\(4),
-      I2 => add_const_state_0(3),
-      O => \state_out_reg[127]\(42)
-    );
-\state_out[101]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(37),
-      I1 => \state_out_reg[31]\(5),
-      I2 => add_const_state_0(4),
-      O => \state_out_reg[127]\(43)
-    );
-\state_out[102]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(38),
-      I1 => \state_out_reg[31]\(6),
-      I2 => add_const_state_0(5),
-      O => \state_out_reg[127]\(44)
-    );
-\state_out[103]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(39),
-      I1 => \state_out_reg[31]\(7),
-      I2 => add_const_state_0(6),
-      O => \state_out_reg[127]\(45)
-    );
-\state_out[104]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(40),
-      I1 => \state_out_reg[31]\(8),
-      I2 => add_const_state_0(7),
-      O => \state_out_reg[127]\(46)
-    );
-\state_out[105]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(41),
-      I1 => \state_out_reg[31]\(9),
-      I2 => add_const_state_0(8),
-      O => \state_out_reg[127]\(47)
-    );
-\state_out[106]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(42),
-      I1 => \state_out_reg[31]\(10),
-      I2 => add_const_state_0(9),
-      O => \state_out_reg[127]\(48)
-    );
-\state_out[107]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(43),
-      I1 => \state_out_reg[31]\(11),
-      I2 => add_const_state_0(10),
-      O => \state_out_reg[127]\(49)
-    );
-\state_out[108]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(44),
-      I1 => \state_out_reg[31]\(12),
-      I2 => add_const_state_0(11),
-      O => \state_out_reg[127]\(50)
-    );
-\state_out[109]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(45),
-      I1 => \state_out_reg[31]\(13),
-      I2 => add_const_state_0(12),
-      O => \state_out_reg[127]\(51)
-    );
-\state_out[10]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(9),
-      I1 => Q(37),
-      I2 => add_const_state(37),
-      O => D(9)
-    );
-\state_out[110]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(46),
-      I1 => \state_out_reg[31]\(14),
-      I2 => add_const_state_0(13),
-      O => \state_out_reg[127]\(52)
-    );
-\state_out[111]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(47),
-      I1 => \state_out_reg[31]\(15),
-      I2 => add_const_state_0(14),
-      O => \state_out_reg[127]\(53)
-    );
-\state_out[112]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(48),
-      I1 => \state_out_reg[31]\(16),
-      I2 => add_const_state_0(15),
-      O => \state_out_reg[127]\(54)
-    );
-\state_out[113]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(49),
-      I1 => \state_out_reg[31]\(17),
-      I2 => add_const_state_0(16),
-      O => \state_out_reg[127]\(55)
-    );
-\state_out[114]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(50),
-      I1 => \state_out_reg[31]\(18),
-      I2 => add_const_state_0(17),
-      O => \state_out_reg[127]\(56)
-    );
-\state_out[115]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(51),
-      I1 => \state_out_reg[31]\(19),
-      I2 => add_const_state_0(18),
-      O => \state_out_reg[127]\(57)
-    );
-\state_out[116]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(52),
-      I1 => \state_out_reg[31]\(20),
-      I2 => add_const_state_0(19),
-      O => \state_out_reg[127]\(58)
-    );
-\state_out[117]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(53),
-      I1 => \state_out_reg[31]\(21),
-      I2 => add_const_state_0(20),
-      O => \state_out_reg[127]\(59)
-    );
-\state_out[118]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(54),
-      I1 => \state_out_reg[31]\(22),
-      I2 => add_const_state_0(21),
-      O => \state_out_reg[127]\(60)
-    );
-\state_out[119]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(55),
-      I1 => \state_out_reg[31]\(23),
-      I2 => add_const_state_0(22),
-      O => \state_out_reg[127]\(61)
-    );
-\state_out[11]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(10),
-      I1 => Q(38),
-      I2 => add_const_state(38),
-      O => D(10)
-    );
-\state_out[120]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(56),
-      I1 => \state_out_reg[31]\(24),
-      I2 => add_const_state_0(23),
-      O => \state_out_reg[127]\(62)
-    );
-\state_out[121]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(57),
-      I1 => \state_out_reg[31]\(25),
-      I2 => add_const_state_0(24),
-      O => \state_out_reg[127]\(63)
-    );
-\state_out[122]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(58),
-      I1 => \state_out_reg[31]\(26),
-      I2 => add_const_state_0(25),
-      O => \state_out_reg[127]\(64)
-    );
-\state_out[123]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(59),
-      I1 => \state_out_reg[31]\(27),
-      I2 => add_const_state_0(26),
-      O => \state_out_reg[127]\(65)
-    );
-\state_out[124]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(60),
-      I1 => \state_out_reg[31]\(28),
-      I2 => add_const_state_0(27),
-      O => \state_out_reg[127]\(66)
-    );
-\state_out[125]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(61),
-      I1 => \state_out_reg[31]\(29),
-      I2 => add_const_state_0(28),
-      O => \state_out_reg[127]\(67)
-    );
-\state_out[126]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(62),
-      I1 => \state_out_reg[31]\(30),
-      I2 => add_const_state_0(29),
-      O => \state_out_reg[127]\(68)
-    );
-\state_out[127]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(63),
-      I1 => \state_out_reg[31]\(31),
-      I2 => add_const_state_0(30),
-      O => \state_out_reg[127]\(69)
-    );
-\state_out[12]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(11),
-      I1 => Q(39),
-      I2 => add_const_state(39),
-      O => D(11)
-    );
-\state_out[13]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(12),
-      I1 => Q(40),
-      I2 => add_const_state(40),
-      O => D(12)
-    );
-\state_out[14]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(13),
-      I1 => Q(41),
-      I2 => add_const_state(41),
-      O => D(13)
-    );
-\state_out[15]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(14),
-      I1 => Q(42),
-      I2 => add_const_state(42),
-      O => D(14)
-    );
-\state_out[16]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(15),
-      I1 => Q(43),
-      I2 => add_const_state(43),
-      O => D(15)
-    );
-\state_out[17]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(16),
-      I1 => Q(44),
-      I2 => add_const_state(44),
-      O => D(16)
-    );
-\state_out[18]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(17),
-      I1 => Q(45),
-      I2 => add_const_state(45),
-      O => D(17)
-    );
-\state_out[19]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(18),
-      I1 => Q(46),
-      I2 => add_const_state(46),
-      O => D(18)
-    );
-\state_out[1]_i_1__4\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(0),
-      I1 => Q(28),
-      I2 => add_const_state(28),
-      O => D(0)
-    );
-\state_out[20]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(19),
-      I1 => Q(47),
-      I2 => add_const_state(47),
-      O => D(19)
-    );
-\state_out[21]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(20),
-      I1 => Q(48),
-      I2 => add_const_state(48),
-      O => D(20)
-    );
-\state_out[22]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(21),
-      I1 => Q(49),
-      I2 => add_const_state(49),
-      O => D(21)
-    );
-\state_out[23]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(22),
-      I1 => Q(50),
-      I2 => add_const_state(50),
-      O => D(22)
-    );
-\state_out[24]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(23),
-      I1 => Q(51),
-      I2 => add_const_state(51),
-      O => D(23)
-    );
-\state_out[25]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(24),
-      I1 => Q(52),
-      I2 => add_const_state(52),
-      O => D(24)
-    );
-\state_out[26]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(25),
-      I1 => Q(53),
-      I2 => add_const_state(53),
-      O => D(25)
-    );
-\state_out[27]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(26),
-      I1 => Q(54),
-      I2 => add_const_state(54),
-      O => D(26)
-    );
-\state_out[28]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(27),
-      I1 => Q(55),
-      I2 => add_const_state(55),
-      O => D(27)
-    );
-\state_out[29]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state_0(28),
-      I1 => \state_out_reg[31]\(61),
-      I2 => add_const_state_0(60),
-      O => \state_out_reg[127]\(0)
-    );
-\state_out[2]_i_1__5\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(1),
-      I1 => Q(29),
-      I2 => add_const_state(29),
-      O => D(1)
-    );
-\state_out[30]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state_0(29),
-      I1 => \state_out_reg[31]\(62),
-      I2 => add_const_state_0(61),
-      O => \state_out_reg[127]\(1)
-    );
-\state_out[31]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state_0(30),
-      I1 => \state_out_reg[31]\(63),
-      I2 => add_const_state_0(62),
-      O => \state_out_reg[127]\(2)
-    );
-\state_out[32]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"6A"
-    )
-        port map (
-      I0 => add_const_state_0(31),
-      I1 => \state_out_reg[96]\(0),
-      I2 => \state_out_reg[31]\(0),
-      O => \state_out_reg[127]\(3)
-    );
-\state_out[33]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(28),
-      I1 => add_const_state(0),
-      I2 => Q(0),
-      O => D(28)
-    );
-\state_out[34]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(29),
-      I1 => add_const_state(1),
-      I2 => Q(1),
-      O => D(29)
-    );
-\state_out[35]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(30),
-      I1 => add_const_state(2),
-      I2 => Q(2),
-      O => D(30)
-    );
-\state_out[36]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(31),
-      I1 => add_const_state(3),
-      I2 => Q(3),
-      O => D(31)
-    );
-\state_out[37]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(32),
-      I1 => add_const_state(4),
-      I2 => Q(4),
-      O => D(32)
-    );
-\state_out[38]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(33),
-      I1 => add_const_state(5),
-      I2 => Q(5),
-      O => D(33)
-    );
-\state_out[39]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(34),
-      I1 => add_const_state(6),
-      I2 => Q(6),
-      O => D(34)
-    );
-\state_out[3]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(2),
-      I1 => Q(30),
-      I2 => add_const_state(30),
-      O => D(2)
-    );
-\state_out[40]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(35),
-      I1 => add_const_state(7),
-      I2 => Q(7),
-      O => D(35)
-    );
-\state_out[41]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(36),
-      I1 => add_const_state(8),
-      I2 => Q(8),
-      O => D(36)
-    );
-\state_out[42]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(37),
-      I1 => add_const_state(9),
-      I2 => Q(9),
-      O => D(37)
-    );
-\state_out[43]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(38),
-      I1 => add_const_state(10),
-      I2 => Q(10),
-      O => D(38)
-    );
-\state_out[44]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(39),
-      I1 => add_const_state(11),
-      I2 => Q(11),
-      O => D(39)
-    );
-\state_out[45]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(40),
-      I1 => add_const_state(12),
-      I2 => Q(12),
-      O => D(40)
-    );
-\state_out[46]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(41),
-      I1 => add_const_state(13),
-      I2 => Q(13),
-      O => D(41)
-    );
-\state_out[47]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(42),
-      I1 => add_const_state(14),
-      I2 => Q(14),
-      O => D(42)
-    );
-\state_out[48]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(43),
-      I1 => add_const_state(15),
-      I2 => Q(15),
-      O => D(43)
-    );
-\state_out[49]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(44),
-      I1 => add_const_state(16),
-      I2 => Q(16),
-      O => D(44)
-    );
-\state_out[4]_i_1__5\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(3),
-      I1 => Q(31),
-      I2 => add_const_state(31),
-      O => D(3)
-    );
-\state_out[50]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(45),
-      I1 => add_const_state(17),
-      I2 => Q(17),
-      O => D(45)
-    );
-\state_out[51]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(46),
-      I1 => add_const_state(18),
-      I2 => Q(18),
-      O => D(46)
-    );
-\state_out[52]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(47),
-      I1 => add_const_state(19),
-      I2 => Q(19),
-      O => D(47)
-    );
-\state_out[53]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(48),
-      I1 => add_const_state(20),
-      I2 => Q(20),
-      O => D(48)
-    );
-\state_out[54]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(49),
-      I1 => add_const_state(21),
-      I2 => Q(21),
-      O => D(49)
-    );
-\state_out[55]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(50),
-      I1 => add_const_state(22),
-      I2 => Q(22),
-      O => D(50)
-    );
-\state_out[56]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(51),
-      I1 => add_const_state(23),
-      I2 => Q(23),
-      O => D(51)
-    );
-\state_out[57]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(52),
-      I1 => add_const_state(24),
-      I2 => Q(24),
-      O => D(52)
-    );
-\state_out[58]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(53),
-      I1 => add_const_state(25),
-      I2 => Q(25),
-      O => D(53)
-    );
-\state_out[59]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(54),
-      I1 => add_const_state(26),
-      I2 => Q(26),
-      O => D(54)
-    );
-\state_out[5]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(4),
-      I1 => Q(32),
-      I2 => add_const_state(32),
-      O => D(4)
-    );
-\state_out[60]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(55),
-      I1 => add_const_state(27),
-      I2 => Q(27),
-      O => D(55)
-    );
-\state_out[61]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state_0(60),
-      I1 => add_const_state_0(28),
-      I2 => \state_out_reg[31]\(29),
-      O => \state_out_reg[127]\(4)
-    );
-\state_out[62]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state_0(61),
-      I1 => add_const_state_0(29),
-      I2 => \state_out_reg[31]\(30),
-      O => \state_out_reg[127]\(5)
-    );
-\state_out[63]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state_0(62),
-      I1 => add_const_state_0(30),
-      I2 => \state_out_reg[31]\(31),
-      O => \state_out_reg[127]\(6)
-    );
-\state_out[65]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(1),
-      I1 => add_const_state_0(32),
-      I2 => \state_out_reg[31]\(33),
-      O => \state_out_reg[127]\(7)
-    );
-\state_out[66]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(2),
-      I1 => add_const_state_0(33),
-      I2 => \state_out_reg[31]\(34),
-      O => \state_out_reg[127]\(8)
-    );
-\state_out[67]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(3),
-      I1 => add_const_state_0(34),
-      I2 => \state_out_reg[31]\(35),
-      O => \state_out_reg[127]\(9)
-    );
-\state_out[68]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(4),
-      I1 => add_const_state_0(35),
-      I2 => \state_out_reg[31]\(36),
-      O => \state_out_reg[127]\(10)
-    );
-\state_out[69]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(5),
-      I1 => add_const_state_0(36),
-      I2 => \state_out_reg[31]\(37),
-      O => \state_out_reg[127]\(11)
-    );
-\state_out[6]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(5),
-      I1 => Q(33),
-      I2 => add_const_state(33),
-      O => D(5)
-    );
-\state_out[70]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(6),
-      I1 => add_const_state_0(37),
-      I2 => \state_out_reg[31]\(38),
-      O => \state_out_reg[127]\(12)
-    );
-\state_out[71]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(7),
-      I1 => add_const_state_0(38),
-      I2 => \state_out_reg[31]\(39),
-      O => \state_out_reg[127]\(13)
-    );
-\state_out[72]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(8),
-      I1 => add_const_state_0(39),
-      I2 => \state_out_reg[31]\(40),
-      O => \state_out_reg[127]\(14)
-    );
-\state_out[73]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(9),
-      I1 => add_const_state_0(40),
-      I2 => \state_out_reg[31]\(41),
-      O => \state_out_reg[127]\(15)
-    );
-\state_out[74]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(10),
-      I1 => add_const_state_0(41),
-      I2 => \state_out_reg[31]\(42),
-      O => \state_out_reg[127]\(16)
-    );
-\state_out[75]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(11),
-      I1 => add_const_state_0(42),
-      I2 => \state_out_reg[31]\(43),
-      O => \state_out_reg[127]\(17)
-    );
-\state_out[76]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(12),
-      I1 => add_const_state_0(43),
-      I2 => \state_out_reg[31]\(44),
-      O => \state_out_reg[127]\(18)
-    );
-\state_out[77]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(13),
-      I1 => add_const_state_0(44),
-      I2 => \state_out_reg[31]\(45),
-      O => \state_out_reg[127]\(19)
-    );
-\state_out[78]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(14),
-      I1 => add_const_state_0(45),
-      I2 => \state_out_reg[31]\(46),
-      O => \state_out_reg[127]\(20)
-    );
-\state_out[79]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(15),
-      I1 => add_const_state_0(46),
-      I2 => \state_out_reg[31]\(47),
-      O => \state_out_reg[127]\(21)
-    );
-\state_out[7]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(6),
-      I1 => Q(34),
-      I2 => add_const_state(34),
-      O => D(6)
-    );
-\state_out[80]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(16),
-      I1 => add_const_state_0(47),
-      I2 => \state_out_reg[31]\(48),
-      O => \state_out_reg[127]\(22)
-    );
-\state_out[81]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(17),
-      I1 => add_const_state_0(48),
-      I2 => \state_out_reg[31]\(49),
-      O => \state_out_reg[127]\(23)
-    );
-\state_out[82]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(18),
-      I1 => add_const_state_0(49),
-      I2 => \state_out_reg[31]\(50),
-      O => \state_out_reg[127]\(24)
-    );
-\state_out[83]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(19),
-      I1 => add_const_state_0(50),
-      I2 => \state_out_reg[31]\(51),
-      O => \state_out_reg[127]\(25)
-    );
-\state_out[84]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(20),
-      I1 => add_const_state_0(51),
-      I2 => \state_out_reg[31]\(52),
-      O => \state_out_reg[127]\(26)
-    );
-\state_out[85]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(21),
-      I1 => add_const_state_0(52),
-      I2 => \state_out_reg[31]\(53),
-      O => \state_out_reg[127]\(27)
-    );
-\state_out[86]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(22),
-      I1 => add_const_state_0(53),
-      I2 => \state_out_reg[31]\(54),
-      O => \state_out_reg[127]\(28)
-    );
-\state_out[87]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(23),
-      I1 => add_const_state_0(54),
-      I2 => \state_out_reg[31]\(55),
-      O => \state_out_reg[127]\(29)
-    );
-\state_out[88]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(24),
-      I1 => add_const_state_0(55),
-      I2 => \state_out_reg[31]\(56),
-      O => \state_out_reg[127]\(30)
-    );
-\state_out[89]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(25),
-      I1 => add_const_state_0(56),
-      I2 => \state_out_reg[31]\(57),
-      O => \state_out_reg[127]\(31)
-    );
-\state_out[8]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(7),
-      I1 => Q(35),
-      I2 => add_const_state(35),
-      O => D(7)
-    );
-\state_out[90]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(26),
-      I1 => add_const_state_0(57),
-      I2 => \state_out_reg[31]\(58),
-      O => \state_out_reg[127]\(32)
-    );
-\state_out[91]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(27),
-      I1 => add_const_state_0(58),
-      I2 => \state_out_reg[31]\(59),
-      O => \state_out_reg[127]\(33)
-    );
-\state_out[92]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(28),
-      I1 => add_const_state_0(59),
-      I2 => \state_out_reg[31]\(60),
-      O => \state_out_reg[127]\(34)
-    );
-\state_out[93]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(29),
-      I1 => add_const_state_0(60),
-      I2 => \state_out_reg[31]\(61),
-      O => \state_out_reg[127]\(35)
-    );
-\state_out[94]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(30),
-      I1 => add_const_state_0(61),
-      I2 => \state_out_reg[31]\(62),
-      O => \state_out_reg[127]\(36)
-    );
-\state_out[95]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(31),
-      I1 => add_const_state_0(62),
-      I2 => \state_out_reg[31]\(63),
-      O => \state_out_reg[127]\(37)
-    );
-\state_out[96]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"A9"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(32),
-      I1 => \state_out_reg[31]\(0),
-      I2 => \state_out_reg[96]\(0),
-      O => \state_out_reg[127]\(38)
-    );
-\state_out[97]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(33),
-      I1 => \state_out_reg[31]\(1),
-      I2 => add_const_state_0(0),
-      O => \state_out_reg[127]\(39)
-    );
-\state_out[98]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(34),
-      I1 => \state_out_reg[31]\(2),
-      I2 => add_const_state_0(1),
-      O => \state_out_reg[127]\(40)
-    );
-\state_out[99]_i_1__7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => \state_out_reg[31]\(35),
-      I1 => \state_out_reg[31]\(3),
-      I2 => add_const_state_0(2),
-      O => \state_out_reg[127]\(41)
-    );
-\state_out[9]_i_1__6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"9A"
-    )
-        port map (
-      I0 => add_const_state(8),
-      I1 => Q(36),
-      I2 => add_const_state(36),
-      O => D(8)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity design_ascon_ascon_core_0_2_ascon_sbox_13 is
-  port (
-    D : out STD_LOGIC_VECTOR ( 55 downto 0 );
-    \state_out_reg[127]\ : out STD_LOGIC_VECTOR ( 69 downto 0 );
-    add_const_state : in STD_LOGIC_VECTOR ( 55 downto 0 );
-    \round_state[6]\ : in STD_LOGIC_VECTOR ( 55 downto 0 );
-    add_const_state_0 : in STD_LOGIC_VECTOR ( 62 downto 0 );
-    Q : in STD_LOGIC_VECTOR ( 63 downto 0 );
     CO : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -19295,8 +19264,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(36),
-      I1 => Q(4),
+      I0 => \state_out_reg[31]\(36),
+      I1 => \state_out_reg[31]\(4),
       I2 => add_const_state_0(3),
       O => \state_out_reg[127]\(42)
     );
@@ -19305,8 +19274,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(37),
-      I1 => Q(5),
+      I0 => \state_out_reg[31]\(37),
+      I1 => \state_out_reg[31]\(5),
       I2 => add_const_state_0(4),
       O => \state_out_reg[127]\(43)
     );
@@ -19315,8 +19284,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(38),
-      I1 => Q(6),
+      I0 => \state_out_reg[31]\(38),
+      I1 => \state_out_reg[31]\(6),
       I2 => add_const_state_0(5),
       O => \state_out_reg[127]\(44)
     );
@@ -19325,8 +19294,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(39),
-      I1 => Q(7),
+      I0 => \state_out_reg[31]\(39),
+      I1 => \state_out_reg[31]\(7),
       I2 => add_const_state_0(6),
       O => \state_out_reg[127]\(45)
     );
@@ -19335,8 +19304,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(40),
-      I1 => Q(8),
+      I0 => \state_out_reg[31]\(40),
+      I1 => \state_out_reg[31]\(8),
       I2 => add_const_state_0(7),
       O => \state_out_reg[127]\(46)
     );
@@ -19345,8 +19314,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(41),
-      I1 => Q(9),
+      I0 => \state_out_reg[31]\(41),
+      I1 => \state_out_reg[31]\(9),
       I2 => add_const_state_0(8),
       O => \state_out_reg[127]\(47)
     );
@@ -19355,8 +19324,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(42),
-      I1 => Q(10),
+      I0 => \state_out_reg[31]\(42),
+      I1 => \state_out_reg[31]\(10),
       I2 => add_const_state_0(9),
       O => \state_out_reg[127]\(48)
     );
@@ -19365,8 +19334,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(43),
-      I1 => Q(11),
+      I0 => \state_out_reg[31]\(43),
+      I1 => \state_out_reg[31]\(11),
       I2 => add_const_state_0(10),
       O => \state_out_reg[127]\(49)
     );
@@ -19375,8 +19344,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(44),
-      I1 => Q(12),
+      I0 => \state_out_reg[31]\(44),
+      I1 => \state_out_reg[31]\(12),
       I2 => add_const_state_0(11),
       O => \state_out_reg[127]\(50)
     );
@@ -19385,8 +19354,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(45),
-      I1 => Q(13),
+      I0 => \state_out_reg[31]\(45),
+      I1 => \state_out_reg[31]\(13),
       I2 => add_const_state_0(12),
       O => \state_out_reg[127]\(51)
     );
@@ -19396,7 +19365,7 @@ begin
     )
         port map (
       I0 => add_const_state(8),
-      I1 => \round_state[6]\(36),
+      I1 => Q(36),
       I2 => add_const_state(36),
       O => D(8)
     );
@@ -19405,8 +19374,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(46),
-      I1 => Q(14),
+      I0 => \state_out_reg[31]\(46),
+      I1 => \state_out_reg[31]\(14),
       I2 => add_const_state_0(13),
       O => \state_out_reg[127]\(52)
     );
@@ -19415,8 +19384,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(47),
-      I1 => Q(15),
+      I0 => \state_out_reg[31]\(47),
+      I1 => \state_out_reg[31]\(15),
       I2 => add_const_state_0(14),
       O => \state_out_reg[127]\(53)
     );
@@ -19425,8 +19394,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(48),
-      I1 => Q(16),
+      I0 => \state_out_reg[31]\(48),
+      I1 => \state_out_reg[31]\(16),
       I2 => add_const_state_0(15),
       O => \state_out_reg[127]\(54)
     );
@@ -19435,8 +19404,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(49),
-      I1 => Q(17),
+      I0 => \state_out_reg[31]\(49),
+      I1 => \state_out_reg[31]\(17),
       I2 => add_const_state_0(16),
       O => \state_out_reg[127]\(55)
     );
@@ -19445,8 +19414,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(50),
-      I1 => Q(18),
+      I0 => \state_out_reg[31]\(50),
+      I1 => \state_out_reg[31]\(18),
       I2 => add_const_state_0(17),
       O => \state_out_reg[127]\(56)
     );
@@ -19455,8 +19424,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(51),
-      I1 => Q(19),
+      I0 => \state_out_reg[31]\(51),
+      I1 => \state_out_reg[31]\(19),
       I2 => add_const_state_0(18),
       O => \state_out_reg[127]\(57)
     );
@@ -19465,8 +19434,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(52),
-      I1 => Q(20),
+      I0 => \state_out_reg[31]\(52),
+      I1 => \state_out_reg[31]\(20),
       I2 => add_const_state_0(19),
       O => \state_out_reg[127]\(58)
     );
@@ -19475,8 +19444,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(53),
-      I1 => Q(21),
+      I0 => \state_out_reg[31]\(53),
+      I1 => \state_out_reg[31]\(21),
       I2 => add_const_state_0(20),
       O => \state_out_reg[127]\(59)
     );
@@ -19485,8 +19454,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(54),
-      I1 => Q(22),
+      I0 => \state_out_reg[31]\(54),
+      I1 => \state_out_reg[31]\(22),
       I2 => add_const_state_0(21),
       O => \state_out_reg[127]\(60)
     );
@@ -19495,8 +19464,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(55),
-      I1 => Q(23),
+      I0 => \state_out_reg[31]\(55),
+      I1 => \state_out_reg[31]\(23),
       I2 => add_const_state_0(22),
       O => \state_out_reg[127]\(61)
     );
@@ -19506,7 +19475,7 @@ begin
     )
         port map (
       I0 => add_const_state(9),
-      I1 => \round_state[6]\(37),
+      I1 => Q(37),
       I2 => add_const_state(37),
       O => D(9)
     );
@@ -19515,8 +19484,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(56),
-      I1 => Q(24),
+      I0 => \state_out_reg[31]\(56),
+      I1 => \state_out_reg[31]\(24),
       I2 => add_const_state_0(23),
       O => \state_out_reg[127]\(62)
     );
@@ -19525,8 +19494,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(57),
-      I1 => Q(25),
+      I0 => \state_out_reg[31]\(57),
+      I1 => \state_out_reg[31]\(25),
       I2 => add_const_state_0(24),
       O => \state_out_reg[127]\(63)
     );
@@ -19535,8 +19504,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(58),
-      I1 => Q(26),
+      I0 => \state_out_reg[31]\(58),
+      I1 => \state_out_reg[31]\(26),
       I2 => add_const_state_0(25),
       O => \state_out_reg[127]\(64)
     );
@@ -19545,8 +19514,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(59),
-      I1 => Q(27),
+      I0 => \state_out_reg[31]\(59),
+      I1 => \state_out_reg[31]\(27),
       I2 => add_const_state_0(26),
       O => \state_out_reg[127]\(65)
     );
@@ -19555,8 +19524,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(60),
-      I1 => Q(28),
+      I0 => \state_out_reg[31]\(60),
+      I1 => \state_out_reg[31]\(28),
       I2 => add_const_state_0(27),
       O => \state_out_reg[127]\(66)
     );
@@ -19565,8 +19534,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(61),
-      I1 => Q(29),
+      I0 => \state_out_reg[31]\(61),
+      I1 => \state_out_reg[31]\(29),
       I2 => add_const_state_0(28),
       O => \state_out_reg[127]\(67)
     );
@@ -19575,8 +19544,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(62),
-      I1 => Q(30),
+      I0 => \state_out_reg[31]\(62),
+      I1 => \state_out_reg[31]\(30),
       I2 => add_const_state_0(29),
       O => \state_out_reg[127]\(68)
     );
@@ -19585,8 +19554,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(63),
-      I1 => Q(31),
+      I0 => \state_out_reg[31]\(63),
+      I1 => \state_out_reg[31]\(31),
       I2 => add_const_state_0(30),
       O => \state_out_reg[127]\(69)
     );
@@ -19596,7 +19565,7 @@ begin
     )
         port map (
       I0 => add_const_state(10),
-      I1 => \round_state[6]\(38),
+      I1 => Q(38),
       I2 => add_const_state(38),
       O => D(10)
     );
@@ -19606,7 +19575,7 @@ begin
     )
         port map (
       I0 => add_const_state(11),
-      I1 => \round_state[6]\(39),
+      I1 => Q(39),
       I2 => add_const_state(39),
       O => D(11)
     );
@@ -19616,7 +19585,7 @@ begin
     )
         port map (
       I0 => add_const_state(12),
-      I1 => \round_state[6]\(40),
+      I1 => Q(40),
       I2 => add_const_state(40),
       O => D(12)
     );
@@ -19626,7 +19595,7 @@ begin
     )
         port map (
       I0 => add_const_state(13),
-      I1 => \round_state[6]\(41),
+      I1 => Q(41),
       I2 => add_const_state(41),
       O => D(13)
     );
@@ -19636,7 +19605,7 @@ begin
     )
         port map (
       I0 => add_const_state(14),
-      I1 => \round_state[6]\(42),
+      I1 => Q(42),
       I2 => add_const_state(42),
       O => D(14)
     );
@@ -19646,7 +19615,7 @@ begin
     )
         port map (
       I0 => add_const_state(15),
-      I1 => \round_state[6]\(43),
+      I1 => Q(43),
       I2 => add_const_state(43),
       O => D(15)
     );
@@ -19656,7 +19625,7 @@ begin
     )
         port map (
       I0 => add_const_state(16),
-      I1 => \round_state[6]\(44),
+      I1 => Q(44),
       I2 => add_const_state(44),
       O => D(16)
     );
@@ -19666,7 +19635,7 @@ begin
     )
         port map (
       I0 => add_const_state(17),
-      I1 => \round_state[6]\(45),
+      I1 => Q(45),
       I2 => add_const_state(45),
       O => D(17)
     );
@@ -19676,7 +19645,7 @@ begin
     )
         port map (
       I0 => add_const_state(18),
-      I1 => \round_state[6]\(46),
+      I1 => Q(46),
       I2 => add_const_state(46),
       O => D(18)
     );
@@ -19686,7 +19655,7 @@ begin
     )
         port map (
       I0 => add_const_state(19),
-      I1 => \round_state[6]\(47),
+      I1 => Q(47),
       I2 => add_const_state(47),
       O => D(19)
     );
@@ -19696,7 +19665,7 @@ begin
     )
         port map (
       I0 => add_const_state(20),
-      I1 => \round_state[6]\(48),
+      I1 => Q(48),
       I2 => add_const_state(48),
       O => D(20)
     );
@@ -19706,7 +19675,7 @@ begin
     )
         port map (
       I0 => add_const_state(21),
-      I1 => \round_state[6]\(49),
+      I1 => Q(49),
       I2 => add_const_state(49),
       O => D(21)
     );
@@ -19716,7 +19685,7 @@ begin
     )
         port map (
       I0 => add_const_state(22),
-      I1 => \round_state[6]\(50),
+      I1 => Q(50),
       I2 => add_const_state(50),
       O => D(22)
     );
@@ -19726,7 +19695,7 @@ begin
     )
         port map (
       I0 => add_const_state(23),
-      I1 => \round_state[6]\(51),
+      I1 => Q(51),
       I2 => add_const_state(51),
       O => D(23)
     );
@@ -19736,7 +19705,7 @@ begin
     )
         port map (
       I0 => add_const_state(24),
-      I1 => \round_state[6]\(52),
+      I1 => Q(52),
       I2 => add_const_state(52),
       O => D(24)
     );
@@ -19746,7 +19715,7 @@ begin
     )
         port map (
       I0 => add_const_state(25),
-      I1 => \round_state[6]\(53),
+      I1 => Q(53),
       I2 => add_const_state(53),
       O => D(25)
     );
@@ -19756,7 +19725,7 @@ begin
     )
         port map (
       I0 => add_const_state(26),
-      I1 => \round_state[6]\(54),
+      I1 => Q(54),
       I2 => add_const_state(54),
       O => D(26)
     );
@@ -19766,7 +19735,7 @@ begin
     )
         port map (
       I0 => add_const_state(27),
-      I1 => \round_state[6]\(55),
+      I1 => Q(55),
       I2 => add_const_state(55),
       O => D(27)
     );
@@ -19776,7 +19745,7 @@ begin
     )
         port map (
       I0 => add_const_state_0(28),
-      I1 => Q(61),
+      I1 => \state_out_reg[31]\(61),
       I2 => add_const_state_0(60),
       O => \state_out_reg[127]\(0)
     );
@@ -19786,7 +19755,7 @@ begin
     )
         port map (
       I0 => add_const_state(0),
-      I1 => \round_state[6]\(28),
+      I1 => Q(28),
       I2 => add_const_state(28),
       O => D(0)
     );
@@ -19796,7 +19765,7 @@ begin
     )
         port map (
       I0 => add_const_state_0(29),
-      I1 => Q(62),
+      I1 => \state_out_reg[31]\(62),
       I2 => add_const_state_0(61),
       O => \state_out_reg[127]\(1)
     );
@@ -19806,7 +19775,7 @@ begin
     )
         port map (
       I0 => add_const_state_0(30),
-      I1 => Q(63),
+      I1 => \state_out_reg[31]\(63),
       I2 => add_const_state_0(62),
       O => \state_out_reg[127]\(2)
     );
@@ -19817,7 +19786,7 @@ begin
         port map (
       I0 => add_const_state_0(31),
       I1 => CO(0),
-      I2 => Q(0),
+      I2 => \state_out_reg[31]\(0),
       O => \state_out_reg[127]\(3)
     );
 \state_out[34]_i_1__5\: unisim.vcomponents.LUT3
@@ -19827,7 +19796,7 @@ begin
         port map (
       I0 => add_const_state(28),
       I1 => add_const_state(0),
-      I2 => \round_state[6]\(0),
+      I2 => Q(0),
       O => D(28)
     );
 \state_out[35]_i_1__5\: unisim.vcomponents.LUT3
@@ -19837,7 +19806,7 @@ begin
         port map (
       I0 => add_const_state(29),
       I1 => add_const_state(1),
-      I2 => \round_state[6]\(1),
+      I2 => Q(1),
       O => D(29)
     );
 \state_out[36]_i_1__5\: unisim.vcomponents.LUT3
@@ -19847,7 +19816,7 @@ begin
         port map (
       I0 => add_const_state(30),
       I1 => add_const_state(2),
-      I2 => \round_state[6]\(2),
+      I2 => Q(2),
       O => D(30)
     );
 \state_out[37]_i_1__5\: unisim.vcomponents.LUT3
@@ -19857,7 +19826,7 @@ begin
         port map (
       I0 => add_const_state(31),
       I1 => add_const_state(3),
-      I2 => \round_state[6]\(3),
+      I2 => Q(3),
       O => D(31)
     );
 \state_out[38]_i_1__5\: unisim.vcomponents.LUT3
@@ -19867,7 +19836,7 @@ begin
         port map (
       I0 => add_const_state(32),
       I1 => add_const_state(4),
-      I2 => \round_state[6]\(4),
+      I2 => Q(4),
       O => D(32)
     );
 \state_out[39]_i_1__5\: unisim.vcomponents.LUT3
@@ -19877,7 +19846,7 @@ begin
         port map (
       I0 => add_const_state(33),
       I1 => add_const_state(5),
-      I2 => \round_state[6]\(5),
+      I2 => Q(5),
       O => D(33)
     );
 \state_out[3]_i_1__5\: unisim.vcomponents.LUT3
@@ -19886,7 +19855,7 @@ begin
     )
         port map (
       I0 => add_const_state(1),
-      I1 => \round_state[6]\(29),
+      I1 => Q(29),
       I2 => add_const_state(29),
       O => D(1)
     );
@@ -19897,7 +19866,7 @@ begin
         port map (
       I0 => add_const_state(34),
       I1 => add_const_state(6),
-      I2 => \round_state[6]\(6),
+      I2 => Q(6),
       O => D(34)
     );
 \state_out[41]_i_1__5\: unisim.vcomponents.LUT3
@@ -19907,7 +19876,7 @@ begin
         port map (
       I0 => add_const_state(35),
       I1 => add_const_state(7),
-      I2 => \round_state[6]\(7),
+      I2 => Q(7),
       O => D(35)
     );
 \state_out[42]_i_1__5\: unisim.vcomponents.LUT3
@@ -19917,7 +19886,7 @@ begin
         port map (
       I0 => add_const_state(36),
       I1 => add_const_state(8),
-      I2 => \round_state[6]\(8),
+      I2 => Q(8),
       O => D(36)
     );
 \state_out[43]_i_1__5\: unisim.vcomponents.LUT3
@@ -19927,7 +19896,7 @@ begin
         port map (
       I0 => add_const_state(37),
       I1 => add_const_state(9),
-      I2 => \round_state[6]\(9),
+      I2 => Q(9),
       O => D(37)
     );
 \state_out[44]_i_1__5\: unisim.vcomponents.LUT3
@@ -19937,7 +19906,7 @@ begin
         port map (
       I0 => add_const_state(38),
       I1 => add_const_state(10),
-      I2 => \round_state[6]\(10),
+      I2 => Q(10),
       O => D(38)
     );
 \state_out[45]_i_1__5\: unisim.vcomponents.LUT3
@@ -19947,7 +19916,7 @@ begin
         port map (
       I0 => add_const_state(39),
       I1 => add_const_state(11),
-      I2 => \round_state[6]\(11),
+      I2 => Q(11),
       O => D(39)
     );
 \state_out[46]_i_1__5\: unisim.vcomponents.LUT3
@@ -19957,7 +19926,7 @@ begin
         port map (
       I0 => add_const_state(40),
       I1 => add_const_state(12),
-      I2 => \round_state[6]\(12),
+      I2 => Q(12),
       O => D(40)
     );
 \state_out[47]_i_1__5\: unisim.vcomponents.LUT3
@@ -19967,7 +19936,7 @@ begin
         port map (
       I0 => add_const_state(41),
       I1 => add_const_state(13),
-      I2 => \round_state[6]\(13),
+      I2 => Q(13),
       O => D(41)
     );
 \state_out[48]_i_1__5\: unisim.vcomponents.LUT3
@@ -19977,7 +19946,7 @@ begin
         port map (
       I0 => add_const_state(42),
       I1 => add_const_state(14),
-      I2 => \round_state[6]\(14),
+      I2 => Q(14),
       O => D(42)
     );
 \state_out[49]_i_1__5\: unisim.vcomponents.LUT3
@@ -19987,7 +19956,7 @@ begin
         port map (
       I0 => add_const_state(43),
       I1 => add_const_state(15),
-      I2 => \round_state[6]\(15),
+      I2 => Q(15),
       O => D(43)
     );
 \state_out[4]_i_1__4\: unisim.vcomponents.LUT3
@@ -19996,7 +19965,7 @@ begin
     )
         port map (
       I0 => add_const_state(2),
-      I1 => \round_state[6]\(30),
+      I1 => Q(30),
       I2 => add_const_state(30),
       O => D(2)
     );
@@ -20007,7 +19976,7 @@ begin
         port map (
       I0 => add_const_state(44),
       I1 => add_const_state(16),
-      I2 => \round_state[6]\(16),
+      I2 => Q(16),
       O => D(44)
     );
 \state_out[51]_i_1__5\: unisim.vcomponents.LUT3
@@ -20017,7 +19986,7 @@ begin
         port map (
       I0 => add_const_state(45),
       I1 => add_const_state(17),
-      I2 => \round_state[6]\(17),
+      I2 => Q(17),
       O => D(45)
     );
 \state_out[52]_i_1__5\: unisim.vcomponents.LUT3
@@ -20027,7 +19996,7 @@ begin
         port map (
       I0 => add_const_state(46),
       I1 => add_const_state(18),
-      I2 => \round_state[6]\(18),
+      I2 => Q(18),
       O => D(46)
     );
 \state_out[53]_i_1__5\: unisim.vcomponents.LUT3
@@ -20037,7 +20006,7 @@ begin
         port map (
       I0 => add_const_state(47),
       I1 => add_const_state(19),
-      I2 => \round_state[6]\(19),
+      I2 => Q(19),
       O => D(47)
     );
 \state_out[54]_i_1__5\: unisim.vcomponents.LUT3
@@ -20047,7 +20016,7 @@ begin
         port map (
       I0 => add_const_state(48),
       I1 => add_const_state(20),
-      I2 => \round_state[6]\(20),
+      I2 => Q(20),
       O => D(48)
     );
 \state_out[55]_i_1__5\: unisim.vcomponents.LUT3
@@ -20057,7 +20026,7 @@ begin
         port map (
       I0 => add_const_state(49),
       I1 => add_const_state(21),
-      I2 => \round_state[6]\(21),
+      I2 => Q(21),
       O => D(49)
     );
 \state_out[56]_i_1__5\: unisim.vcomponents.LUT3
@@ -20067,7 +20036,7 @@ begin
         port map (
       I0 => add_const_state(50),
       I1 => add_const_state(22),
-      I2 => \round_state[6]\(22),
+      I2 => Q(22),
       O => D(50)
     );
 \state_out[57]_i_1__5\: unisim.vcomponents.LUT3
@@ -20077,7 +20046,7 @@ begin
         port map (
       I0 => add_const_state(51),
       I1 => add_const_state(23),
-      I2 => \round_state[6]\(23),
+      I2 => Q(23),
       O => D(51)
     );
 \state_out[58]_i_1__5\: unisim.vcomponents.LUT3
@@ -20087,7 +20056,7 @@ begin
         port map (
       I0 => add_const_state(52),
       I1 => add_const_state(24),
-      I2 => \round_state[6]\(24),
+      I2 => Q(24),
       O => D(52)
     );
 \state_out[59]_i_1__5\: unisim.vcomponents.LUT3
@@ -20097,7 +20066,7 @@ begin
         port map (
       I0 => add_const_state(53),
       I1 => add_const_state(25),
-      I2 => \round_state[6]\(25),
+      I2 => Q(25),
       O => D(53)
     );
 \state_out[5]_i_1__5\: unisim.vcomponents.LUT3
@@ -20106,7 +20075,7 @@ begin
     )
         port map (
       I0 => add_const_state(3),
-      I1 => \round_state[6]\(31),
+      I1 => Q(31),
       I2 => add_const_state(31),
       O => D(3)
     );
@@ -20117,7 +20086,7 @@ begin
         port map (
       I0 => add_const_state(54),
       I1 => add_const_state(26),
-      I2 => \round_state[6]\(26),
+      I2 => Q(26),
       O => D(54)
     );
 \state_out[61]_i_1__5\: unisim.vcomponents.LUT3
@@ -20127,7 +20096,7 @@ begin
         port map (
       I0 => add_const_state(55),
       I1 => add_const_state(27),
-      I2 => \round_state[6]\(27),
+      I2 => Q(27),
       O => D(55)
     );
 \state_out[61]_i_1__6\: unisim.vcomponents.LUT3
@@ -20137,7 +20106,7 @@ begin
         port map (
       I0 => add_const_state_0(60),
       I1 => add_const_state_0(28),
-      I2 => Q(29),
+      I2 => \state_out_reg[31]\(29),
       O => \state_out_reg[127]\(4)
     );
 \state_out[62]_i_1__6\: unisim.vcomponents.LUT3
@@ -20147,7 +20116,7 @@ begin
         port map (
       I0 => add_const_state_0(61),
       I1 => add_const_state_0(29),
-      I2 => Q(30),
+      I2 => \state_out_reg[31]\(30),
       O => \state_out_reg[127]\(5)
     );
 \state_out[63]_i_1__6\: unisim.vcomponents.LUT3
@@ -20157,7 +20126,7 @@ begin
         port map (
       I0 => add_const_state_0(62),
       I1 => add_const_state_0(30),
-      I2 => Q(31),
+      I2 => \state_out_reg[31]\(31),
       O => \state_out_reg[127]\(6)
     );
 \state_out[65]_i_1__6\: unisim.vcomponents.LUT3
@@ -20165,9 +20134,9 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(1),
+      I0 => \state_out_reg[31]\(1),
       I1 => add_const_state_0(32),
-      I2 => Q(33),
+      I2 => \state_out_reg[31]\(33),
       O => \state_out_reg[127]\(7)
     );
 \state_out[66]_i_1__6\: unisim.vcomponents.LUT3
@@ -20175,9 +20144,9 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(2),
+      I0 => \state_out_reg[31]\(2),
       I1 => add_const_state_0(33),
-      I2 => Q(34),
+      I2 => \state_out_reg[31]\(34),
       O => \state_out_reg[127]\(8)
     );
 \state_out[67]_i_1__6\: unisim.vcomponents.LUT3
@@ -20185,9 +20154,9 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(3),
+      I0 => \state_out_reg[31]\(3),
       I1 => add_const_state_0(34),
-      I2 => Q(35),
+      I2 => \state_out_reg[31]\(35),
       O => \state_out_reg[127]\(9)
     );
 \state_out[68]_i_1__6\: unisim.vcomponents.LUT3
@@ -20195,9 +20164,9 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(4),
+      I0 => \state_out_reg[31]\(4),
       I1 => add_const_state_0(35),
-      I2 => Q(36),
+      I2 => \state_out_reg[31]\(36),
       O => \state_out_reg[127]\(10)
     );
 \state_out[69]_i_1__6\: unisim.vcomponents.LUT3
@@ -20205,9 +20174,9 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(5),
+      I0 => \state_out_reg[31]\(5),
       I1 => add_const_state_0(36),
-      I2 => Q(37),
+      I2 => \state_out_reg[31]\(37),
       O => \state_out_reg[127]\(11)
     );
 \state_out[6]_i_1__5\: unisim.vcomponents.LUT3
@@ -20216,7 +20185,7 @@ begin
     )
         port map (
       I0 => add_const_state(4),
-      I1 => \round_state[6]\(32),
+      I1 => Q(32),
       I2 => add_const_state(32),
       O => D(4)
     );
@@ -20225,9 +20194,9 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(6),
+      I0 => \state_out_reg[31]\(6),
       I1 => add_const_state_0(37),
-      I2 => Q(38),
+      I2 => \state_out_reg[31]\(38),
       O => \state_out_reg[127]\(12)
     );
 \state_out[71]_i_1__6\: unisim.vcomponents.LUT3
@@ -20235,9 +20204,9 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(7),
+      I0 => \state_out_reg[31]\(7),
       I1 => add_const_state_0(38),
-      I2 => Q(39),
+      I2 => \state_out_reg[31]\(39),
       O => \state_out_reg[127]\(13)
     );
 \state_out[72]_i_1__6\: unisim.vcomponents.LUT3
@@ -20245,9 +20214,9 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(8),
+      I0 => \state_out_reg[31]\(8),
       I1 => add_const_state_0(39),
-      I2 => Q(40),
+      I2 => \state_out_reg[31]\(40),
       O => \state_out_reg[127]\(14)
     );
 \state_out[73]_i_1__6\: unisim.vcomponents.LUT3
@@ -20255,9 +20224,9 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(9),
+      I0 => \state_out_reg[31]\(9),
       I1 => add_const_state_0(40),
-      I2 => Q(41),
+      I2 => \state_out_reg[31]\(41),
       O => \state_out_reg[127]\(15)
     );
 \state_out[74]_i_1__6\: unisim.vcomponents.LUT3
@@ -20265,9 +20234,9 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(10),
+      I0 => \state_out_reg[31]\(10),
       I1 => add_const_state_0(41),
-      I2 => Q(42),
+      I2 => \state_out_reg[31]\(42),
       O => \state_out_reg[127]\(16)
     );
 \state_out[75]_i_1__6\: unisim.vcomponents.LUT3
@@ -20275,9 +20244,9 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(11),
+      I0 => \state_out_reg[31]\(11),
       I1 => add_const_state_0(42),
-      I2 => Q(43),
+      I2 => \state_out_reg[31]\(43),
       O => \state_out_reg[127]\(17)
     );
 \state_out[76]_i_1__6\: unisim.vcomponents.LUT3
@@ -20285,9 +20254,9 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(12),
+      I0 => \state_out_reg[31]\(12),
       I1 => add_const_state_0(43),
-      I2 => Q(44),
+      I2 => \state_out_reg[31]\(44),
       O => \state_out_reg[127]\(18)
     );
 \state_out[77]_i_1__6\: unisim.vcomponents.LUT3
@@ -20295,9 +20264,9 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(13),
+      I0 => \state_out_reg[31]\(13),
       I1 => add_const_state_0(44),
-      I2 => Q(45),
+      I2 => \state_out_reg[31]\(45),
       O => \state_out_reg[127]\(19)
     );
 \state_out[78]_i_1__6\: unisim.vcomponents.LUT3
@@ -20305,9 +20274,9 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(14),
+      I0 => \state_out_reg[31]\(14),
       I1 => add_const_state_0(45),
-      I2 => Q(46),
+      I2 => \state_out_reg[31]\(46),
       O => \state_out_reg[127]\(20)
     );
 \state_out[79]_i_1__6\: unisim.vcomponents.LUT3
@@ -20315,9 +20284,9 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(15),
+      I0 => \state_out_reg[31]\(15),
       I1 => add_const_state_0(46),
-      I2 => Q(47),
+      I2 => \state_out_reg[31]\(47),
       O => \state_out_reg[127]\(21)
     );
 \state_out[7]_i_1__5\: unisim.vcomponents.LUT3
@@ -20326,7 +20295,7 @@ begin
     )
         port map (
       I0 => add_const_state(5),
-      I1 => \round_state[6]\(33),
+      I1 => Q(33),
       I2 => add_const_state(33),
       O => D(5)
     );
@@ -20335,9 +20304,9 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(16),
+      I0 => \state_out_reg[31]\(16),
       I1 => add_const_state_0(47),
-      I2 => Q(48),
+      I2 => \state_out_reg[31]\(48),
       O => \state_out_reg[127]\(22)
     );
 \state_out[81]_i_1__6\: unisim.vcomponents.LUT3
@@ -20345,9 +20314,9 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(17),
+      I0 => \state_out_reg[31]\(17),
       I1 => add_const_state_0(48),
-      I2 => Q(49),
+      I2 => \state_out_reg[31]\(49),
       O => \state_out_reg[127]\(23)
     );
 \state_out[82]_i_1__6\: unisim.vcomponents.LUT3
@@ -20355,9 +20324,9 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(18),
+      I0 => \state_out_reg[31]\(18),
       I1 => add_const_state_0(49),
-      I2 => Q(50),
+      I2 => \state_out_reg[31]\(50),
       O => \state_out_reg[127]\(24)
     );
 \state_out[83]_i_1__6\: unisim.vcomponents.LUT3
@@ -20365,9 +20334,9 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(19),
+      I0 => \state_out_reg[31]\(19),
       I1 => add_const_state_0(50),
-      I2 => Q(51),
+      I2 => \state_out_reg[31]\(51),
       O => \state_out_reg[127]\(25)
     );
 \state_out[84]_i_1__6\: unisim.vcomponents.LUT3
@@ -20375,9 +20344,9 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(20),
+      I0 => \state_out_reg[31]\(20),
       I1 => add_const_state_0(51),
-      I2 => Q(52),
+      I2 => \state_out_reg[31]\(52),
       O => \state_out_reg[127]\(26)
     );
 \state_out[85]_i_1__6\: unisim.vcomponents.LUT3
@@ -20385,9 +20354,9 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(21),
+      I0 => \state_out_reg[31]\(21),
       I1 => add_const_state_0(52),
-      I2 => Q(53),
+      I2 => \state_out_reg[31]\(53),
       O => \state_out_reg[127]\(27)
     );
 \state_out[86]_i_1__6\: unisim.vcomponents.LUT3
@@ -20395,9 +20364,9 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(22),
+      I0 => \state_out_reg[31]\(22),
       I1 => add_const_state_0(53),
-      I2 => Q(54),
+      I2 => \state_out_reg[31]\(54),
       O => \state_out_reg[127]\(28)
     );
 \state_out[87]_i_1__6\: unisim.vcomponents.LUT3
@@ -20405,9 +20374,9 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(23),
+      I0 => \state_out_reg[31]\(23),
       I1 => add_const_state_0(54),
-      I2 => Q(55),
+      I2 => \state_out_reg[31]\(55),
       O => \state_out_reg[127]\(29)
     );
 \state_out[88]_i_1__6\: unisim.vcomponents.LUT3
@@ -20415,9 +20384,9 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(24),
+      I0 => \state_out_reg[31]\(24),
       I1 => add_const_state_0(55),
-      I2 => Q(56),
+      I2 => \state_out_reg[31]\(56),
       O => \state_out_reg[127]\(30)
     );
 \state_out[89]_i_1__6\: unisim.vcomponents.LUT3
@@ -20425,9 +20394,9 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(25),
+      I0 => \state_out_reg[31]\(25),
       I1 => add_const_state_0(56),
-      I2 => Q(57),
+      I2 => \state_out_reg[31]\(57),
       O => \state_out_reg[127]\(31)
     );
 \state_out[8]_i_1__5\: unisim.vcomponents.LUT3
@@ -20436,7 +20405,7 @@ begin
     )
         port map (
       I0 => add_const_state(6),
-      I1 => \round_state[6]\(34),
+      I1 => Q(34),
       I2 => add_const_state(34),
       O => D(6)
     );
@@ -20445,9 +20414,9 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(26),
+      I0 => \state_out_reg[31]\(26),
       I1 => add_const_state_0(57),
-      I2 => Q(58),
+      I2 => \state_out_reg[31]\(58),
       O => \state_out_reg[127]\(32)
     );
 \state_out[91]_i_1__6\: unisim.vcomponents.LUT3
@@ -20455,9 +20424,9 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(27),
+      I0 => \state_out_reg[31]\(27),
       I1 => add_const_state_0(58),
-      I2 => Q(59),
+      I2 => \state_out_reg[31]\(59),
       O => \state_out_reg[127]\(33)
     );
 \state_out[92]_i_1__6\: unisim.vcomponents.LUT3
@@ -20465,9 +20434,9 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(28),
+      I0 => \state_out_reg[31]\(28),
       I1 => add_const_state_0(59),
-      I2 => Q(60),
+      I2 => \state_out_reg[31]\(60),
       O => \state_out_reg[127]\(34)
     );
 \state_out[93]_i_1__6\: unisim.vcomponents.LUT3
@@ -20475,9 +20444,9 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(29),
+      I0 => \state_out_reg[31]\(29),
       I1 => add_const_state_0(60),
-      I2 => Q(61),
+      I2 => \state_out_reg[31]\(61),
       O => \state_out_reg[127]\(35)
     );
 \state_out[94]_i_1__6\: unisim.vcomponents.LUT3
@@ -20485,9 +20454,9 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(30),
+      I0 => \state_out_reg[31]\(30),
       I1 => add_const_state_0(61),
-      I2 => Q(62),
+      I2 => \state_out_reg[31]\(62),
       O => \state_out_reg[127]\(36)
     );
 \state_out[95]_i_1__6\: unisim.vcomponents.LUT3
@@ -20495,9 +20464,9 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(31),
+      I0 => \state_out_reg[31]\(31),
       I1 => add_const_state_0(62),
-      I2 => Q(63),
+      I2 => \state_out_reg[31]\(63),
       O => \state_out_reg[127]\(37)
     );
 \state_out[96]_i_1__6\: unisim.vcomponents.LUT3
@@ -20505,8 +20474,8 @@ begin
       INIT => X"A9"
     )
         port map (
-      I0 => Q(32),
-      I1 => Q(0),
+      I0 => \state_out_reg[31]\(32),
+      I1 => \state_out_reg[31]\(0),
       I2 => CO(0),
       O => \state_out_reg[127]\(38)
     );
@@ -20515,8 +20484,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(33),
-      I1 => Q(1),
+      I0 => \state_out_reg[31]\(33),
+      I1 => \state_out_reg[31]\(1),
       I2 => add_const_state_0(0),
       O => \state_out_reg[127]\(39)
     );
@@ -20525,8 +20494,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(34),
-      I1 => Q(2),
+      I0 => \state_out_reg[31]\(34),
+      I1 => \state_out_reg[31]\(2),
       I2 => add_const_state_0(1),
       O => \state_out_reg[127]\(40)
     );
@@ -20535,8 +20504,8 @@ begin
       INIT => X"9A"
     )
         port map (
-      I0 => Q(35),
-      I1 => Q(3),
+      I0 => \state_out_reg[31]\(35),
+      I1 => \state_out_reg[31]\(3),
       I2 => add_const_state_0(2),
       O => \state_out_reg[127]\(41)
     );
@@ -20546,7 +20515,7 @@ begin
     )
         port map (
       I0 => add_const_state(7),
-      I1 => \round_state[6]\(35),
+      I1 => Q(35),
       I2 => add_const_state(35),
       O => D(7)
     );
@@ -37697,8 +37666,9 @@ entity design_ascon_ascon_core_0_2_ascon_round_5 is
   port (
     add_const_state : out STD_LOGIC_VECTOR ( 62 downto 0 );
     \state_out_reg[63]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
+    D : out STD_LOGIC_VECTOR ( 70 downto 0 );
+    \state_out_reg[125]_0\ : out STD_LOGIC_VECTOR ( 118 downto 0 );
     \state_out_reg[33]_0\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    \state_out_reg[125]_0\ : out STD_LOGIC_VECTOR ( 120 downto 0 );
     \state_out_reg[26]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     \state_out_reg[24]_0\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
     \state_out_reg[21]_0\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -37713,7 +37683,6 @@ entity design_ascon_ascon_core_0_2_ascon_round_5 is
     \state_out_reg[47]_0\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
     \state_out_reg[45]_0\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
     \state_out_reg[41]_0\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    D : out STD_LOGIC_VECTOR ( 69 downto 0 );
     Q : in STD_LOGIC_VECTOR ( 119 downto 0 );
     \state_out_reg[36]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \state_out_reg[40]_0\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -37731,9 +37700,9 @@ entity design_ascon_ascon_core_0_2_ascon_round_5 is
     \state_out_reg[56]_1\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     \state_out_reg[60]_2\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     S : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    CO : in STD_LOGIC_VECTOR ( 0 to 0 );
     add_const_state_0 : in STD_LOGIC_VECTOR ( 61 downto 0 );
     \state_out_reg[127]_0\ : in STD_LOGIC_VECTOR ( 70 downto 0 );
-    CO : in STD_LOGIC_VECTOR ( 0 to 0 );
     enable : in STD_LOGIC;
     clk : in STD_LOGIC;
     rst : in STD_LOGIC
@@ -37744,30 +37713,30 @@ end design_ascon_ascon_core_0_2_ascon_round_5;
 
 architecture STRUCTURE of design_ascon_ascon_core_0_2_ascon_round_5 is
   signal \^add_const_state\ : STD_LOGIC_VECTOR ( 62 downto 0 );
-  signal \round_state[5]\ : STD_LOGIC_VECTOR ( 127 downto 65 );
+  signal \round_state[5]\ : STD_LOGIC_VECTOR ( 127 downto 0 );
   signal sbox_state : STD_LOGIC_VECTOR ( 60 downto 1 );
-  signal \^state_out_reg[125]_0\ : STD_LOGIC_VECTOR ( 120 downto 0 );
+  signal \^state_out_reg[125]_0\ : STD_LOGIC_VECTOR ( 118 downto 0 );
 begin
   add_const_state(62 downto 0) <= \^add_const_state\(62 downto 0);
-  \state_out_reg[125]_0\(120 downto 0) <= \^state_out_reg[125]_0\(120 downto 0);
+  \state_out_reg[125]_0\(118 downto 0) <= \^state_out_reg[125]_0\(118 downto 0);
 constant_inst: entity work.design_ascon_ascon_core_0_2_ascon_add_constant_16
      port map (
       Q(63 downto 0) => Q(63 downto 0),
       S(1 downto 0) => S(1 downto 0),
       add_const_state(62 downto 0) => \^add_const_state\(62 downto 0),
-      \state_out0_carry__13_0\(32) => \^state_out_reg[125]_0\(60),
-      \state_out0_carry__13_0\(31 downto 27) => \^state_out_reg[125]_0\(58 downto 54),
-      \state_out0_carry__13_0\(26) => \^state_out_reg[125]_0\(52),
-      \state_out0_carry__13_0\(25) => \^state_out_reg[125]_0\(50),
-      \state_out0_carry__13_0\(24 downto 21) => \^state_out_reg[125]_0\(47 downto 44),
-      \state_out0_carry__13_0\(20 downto 17) => \^state_out_reg[125]_0\(41 downto 38),
-      \state_out0_carry__13_0\(16 downto 13) => \^state_out_reg[125]_0\(33 downto 30),
-      \state_out0_carry__13_0\(12) => \^state_out_reg[125]_0\(26),
-      \state_out0_carry__13_0\(11 downto 10) => \^state_out_reg[125]_0\(24 downto 23),
-      \state_out0_carry__13_0\(9 downto 8) => \^state_out_reg[125]_0\(21 downto 20),
-      \state_out0_carry__13_0\(7 downto 5) => \^state_out_reg[125]_0\(15 downto 13),
-      \state_out0_carry__13_0\(4 downto 1) => \^state_out_reg[125]_0\(9 downto 6),
-      \state_out0_carry__13_0\(0) => \^state_out_reg[125]_0\(2),
+      \state_out0_carry__13_0\(32) => \^state_out_reg[125]_0\(59),
+      \state_out0_carry__13_0\(31 downto 27) => \^state_out_reg[125]_0\(57 downto 53),
+      \state_out0_carry__13_0\(26) => \^state_out_reg[125]_0\(51),
+      \state_out0_carry__13_0\(25) => \^state_out_reg[125]_0\(49),
+      \state_out0_carry__13_0\(24 downto 21) => \^state_out_reg[125]_0\(46 downto 43),
+      \state_out0_carry__13_0\(20 downto 17) => \^state_out_reg[125]_0\(40 downto 37),
+      \state_out0_carry__13_0\(16 downto 13) => \^state_out_reg[125]_0\(32 downto 29),
+      \state_out0_carry__13_0\(12) => \^state_out_reg[125]_0\(25),
+      \state_out0_carry__13_0\(11 downto 10) => \^state_out_reg[125]_0\(23 downto 22),
+      \state_out0_carry__13_0\(9 downto 8) => \^state_out_reg[125]_0\(20 downto 19),
+      \state_out0_carry__13_0\(7 downto 5) => \^state_out_reg[125]_0\(14 downto 12),
+      \state_out0_carry__13_0\(4 downto 1) => \^state_out_reg[125]_0\(8 downto 5),
+      \state_out0_carry__13_0\(0) => \^state_out_reg[125]_0\(1),
       \state_out_reg[13]\(0) => \state_out_reg[13]_0\(0),
       \state_out_reg[15]\(1 downto 0) => \state_out_reg[15]_0\(1 downto 0),
       \state_out_reg[21]\(1 downto 0) => \state_out_reg[21]_0\(1 downto 0),
@@ -37808,33 +37777,43 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       add_const_state(55 downto 28) => \^add_const_state\(59 downto 32),
       add_const_state(27 downto 0) => \^add_const_state\(27 downto 0),
       add_const_state_0(61 downto 0) => add_const_state_0(61 downto 0),
-      \state_out_reg[127]\(68 downto 0) => D(69 downto 1),
+      \state_out_reg[127]\(68 downto 0) => D(70 downto 2),
       \state_out_reg[31]\(64 downto 63) => \round_state[5]\(127 downto 126),
-      \state_out_reg[31]\(62 downto 35) => \^state_out_reg[125]_0\(120 downto 93),
-      \state_out_reg[31]\(34) => \round_state[5]\(97),
-      \state_out_reg[31]\(33) => \^state_out_reg[125]_0\(92),
-      \state_out_reg[31]\(32 downto 31) => \round_state[5]\(95 downto 94),
-      \state_out_reg[31]\(30 downto 3) => \^state_out_reg[125]_0\(91 downto 64),
+      \state_out_reg[31]\(62 downto 35) => \^state_out_reg[125]_0\(118 downto 91),
+      \state_out_reg[31]\(34 downto 31) => \round_state[5]\(97 downto 94),
+      \state_out_reg[31]\(30 downto 3) => \^state_out_reg[125]_0\(90 downto 63),
       \state_out_reg[31]\(2) => \round_state[5]\(65),
-      \state_out_reg[31]\(1 downto 0) => \^state_out_reg[125]_0\(1 downto 0)
+      \state_out_reg[31]\(1) => \^state_out_reg[125]_0\(0),
+      \state_out_reg[31]\(0) => \round_state[5]\(0)
     );
 \state_out0_carry__14_i_1__1\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
         port map (
-      I0 => \^state_out_reg[125]_0\(63),
+      I0 => \^state_out_reg[125]_0\(62),
       O => \state_out_reg[63]_1\(0)
+    );
+\state_out[0]_i_1__4\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"6996"
+    )
+        port map (
+      I0 => CO(0),
+      I1 => add_const_state_0(30),
+      I2 => \round_state[5]\(96),
+      I3 => \round_state[5]\(0),
+      O => D(0)
     );
 \state_out[1]_i_1\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"65"
     )
         port map (
-      I0 => \^state_out_reg[125]_0\(1),
+      I0 => \^state_out_reg[125]_0\(0),
       I1 => \round_state[5]\(97),
       I2 => add_const_state_0(31),
-      O => D(0)
+      O => D(1)
     );
 \state_out_reg[0]\: unisim.vcomponents.FDCE
      port map (
@@ -37842,7 +37821,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(0),
-      Q => \^state_out_reg[125]_0\(0)
+      Q => \round_state[5]\(0)
     );
 \state_out_reg[100]\: unisim.vcomponents.FDCE
      port map (
@@ -37850,7 +37829,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(43),
-      Q => \^state_out_reg[125]_0\(95)
+      Q => \^state_out_reg[125]_0\(93)
     );
 \state_out_reg[101]\: unisim.vcomponents.FDCE
      port map (
@@ -37858,7 +37837,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(44),
-      Q => \^state_out_reg[125]_0\(96)
+      Q => \^state_out_reg[125]_0\(94)
     );
 \state_out_reg[102]\: unisim.vcomponents.FDCE
      port map (
@@ -37866,7 +37845,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(45),
-      Q => \^state_out_reg[125]_0\(97)
+      Q => \^state_out_reg[125]_0\(95)
     );
 \state_out_reg[103]\: unisim.vcomponents.FDCE
      port map (
@@ -37874,7 +37853,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(46),
-      Q => \^state_out_reg[125]_0\(98)
+      Q => \^state_out_reg[125]_0\(96)
     );
 \state_out_reg[104]\: unisim.vcomponents.FDCE
      port map (
@@ -37882,7 +37861,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(47),
-      Q => \^state_out_reg[125]_0\(99)
+      Q => \^state_out_reg[125]_0\(97)
     );
 \state_out_reg[105]\: unisim.vcomponents.FDCE
      port map (
@@ -37890,7 +37869,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(48),
-      Q => \^state_out_reg[125]_0\(100)
+      Q => \^state_out_reg[125]_0\(98)
     );
 \state_out_reg[106]\: unisim.vcomponents.FDCE
      port map (
@@ -37898,7 +37877,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(49),
-      Q => \^state_out_reg[125]_0\(101)
+      Q => \^state_out_reg[125]_0\(99)
     );
 \state_out_reg[107]\: unisim.vcomponents.FDCE
      port map (
@@ -37906,7 +37885,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(50),
-      Q => \^state_out_reg[125]_0\(102)
+      Q => \^state_out_reg[125]_0\(100)
     );
 \state_out_reg[108]\: unisim.vcomponents.FDCE
      port map (
@@ -37914,7 +37893,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(51),
-      Q => \^state_out_reg[125]_0\(103)
+      Q => \^state_out_reg[125]_0\(101)
     );
 \state_out_reg[109]\: unisim.vcomponents.FDCE
      port map (
@@ -37922,7 +37901,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(52),
-      Q => \^state_out_reg[125]_0\(104)
+      Q => \^state_out_reg[125]_0\(102)
     );
 \state_out_reg[10]\: unisim.vcomponents.FDCE
      port map (
@@ -37930,7 +37909,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(10),
-      Q => \^state_out_reg[125]_0\(10)
+      Q => \^state_out_reg[125]_0\(9)
     );
 \state_out_reg[110]\: unisim.vcomponents.FDCE
      port map (
@@ -37938,7 +37917,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(53),
-      Q => \^state_out_reg[125]_0\(105)
+      Q => \^state_out_reg[125]_0\(103)
     );
 \state_out_reg[111]\: unisim.vcomponents.FDCE
      port map (
@@ -37946,7 +37925,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(54),
-      Q => \^state_out_reg[125]_0\(106)
+      Q => \^state_out_reg[125]_0\(104)
     );
 \state_out_reg[112]\: unisim.vcomponents.FDCE
      port map (
@@ -37954,7 +37933,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(55),
-      Q => \^state_out_reg[125]_0\(107)
+      Q => \^state_out_reg[125]_0\(105)
     );
 \state_out_reg[113]\: unisim.vcomponents.FDCE
      port map (
@@ -37962,7 +37941,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(56),
-      Q => \^state_out_reg[125]_0\(108)
+      Q => \^state_out_reg[125]_0\(106)
     );
 \state_out_reg[114]\: unisim.vcomponents.FDCE
      port map (
@@ -37970,7 +37949,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(57),
-      Q => \^state_out_reg[125]_0\(109)
+      Q => \^state_out_reg[125]_0\(107)
     );
 \state_out_reg[115]\: unisim.vcomponents.FDCE
      port map (
@@ -37978,7 +37957,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(58),
-      Q => \^state_out_reg[125]_0\(110)
+      Q => \^state_out_reg[125]_0\(108)
     );
 \state_out_reg[116]\: unisim.vcomponents.FDCE
      port map (
@@ -37986,7 +37965,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(59),
-      Q => \^state_out_reg[125]_0\(111)
+      Q => \^state_out_reg[125]_0\(109)
     );
 \state_out_reg[117]\: unisim.vcomponents.FDCE
      port map (
@@ -37994,7 +37973,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(60),
-      Q => \^state_out_reg[125]_0\(112)
+      Q => \^state_out_reg[125]_0\(110)
     );
 \state_out_reg[118]\: unisim.vcomponents.FDCE
      port map (
@@ -38002,7 +37981,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(61),
-      Q => \^state_out_reg[125]_0\(113)
+      Q => \^state_out_reg[125]_0\(111)
     );
 \state_out_reg[119]\: unisim.vcomponents.FDCE
      port map (
@@ -38010,7 +37989,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(62),
-      Q => \^state_out_reg[125]_0\(114)
+      Q => \^state_out_reg[125]_0\(112)
     );
 \state_out_reg[11]\: unisim.vcomponents.FDCE
      port map (
@@ -38018,7 +37997,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(11),
-      Q => \^state_out_reg[125]_0\(11)
+      Q => \^state_out_reg[125]_0\(10)
     );
 \state_out_reg[120]\: unisim.vcomponents.FDCE
      port map (
@@ -38026,7 +38005,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(63),
-      Q => \^state_out_reg[125]_0\(115)
+      Q => \^state_out_reg[125]_0\(113)
     );
 \state_out_reg[121]\: unisim.vcomponents.FDCE
      port map (
@@ -38034,7 +38013,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(64),
-      Q => \^state_out_reg[125]_0\(116)
+      Q => \^state_out_reg[125]_0\(114)
     );
 \state_out_reg[122]\: unisim.vcomponents.FDCE
      port map (
@@ -38042,7 +38021,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(65),
-      Q => \^state_out_reg[125]_0\(117)
+      Q => \^state_out_reg[125]_0\(115)
     );
 \state_out_reg[123]\: unisim.vcomponents.FDCE
      port map (
@@ -38050,7 +38029,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(66),
-      Q => \^state_out_reg[125]_0\(118)
+      Q => \^state_out_reg[125]_0\(116)
     );
 \state_out_reg[124]\: unisim.vcomponents.FDCE
      port map (
@@ -38058,7 +38037,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(67),
-      Q => \^state_out_reg[125]_0\(119)
+      Q => \^state_out_reg[125]_0\(117)
     );
 \state_out_reg[125]\: unisim.vcomponents.FDCE
      port map (
@@ -38066,7 +38045,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(68),
-      Q => \^state_out_reg[125]_0\(120)
+      Q => \^state_out_reg[125]_0\(118)
     );
 \state_out_reg[126]\: unisim.vcomponents.FDCE
      port map (
@@ -38090,7 +38069,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(12),
-      Q => \^state_out_reg[125]_0\(12)
+      Q => \^state_out_reg[125]_0\(11)
     );
 \state_out_reg[13]\: unisim.vcomponents.FDCE
      port map (
@@ -38098,7 +38077,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(13),
-      Q => \^state_out_reg[125]_0\(13)
+      Q => \^state_out_reg[125]_0\(12)
     );
 \state_out_reg[14]\: unisim.vcomponents.FDCE
      port map (
@@ -38106,7 +38085,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(14),
-      Q => \^state_out_reg[125]_0\(14)
+      Q => \^state_out_reg[125]_0\(13)
     );
 \state_out_reg[15]\: unisim.vcomponents.FDCE
      port map (
@@ -38114,7 +38093,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(15),
-      Q => \^state_out_reg[125]_0\(15)
+      Q => \^state_out_reg[125]_0\(14)
     );
 \state_out_reg[16]\: unisim.vcomponents.FDCE
      port map (
@@ -38122,7 +38101,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(16),
-      Q => \^state_out_reg[125]_0\(16)
+      Q => \^state_out_reg[125]_0\(15)
     );
 \state_out_reg[17]\: unisim.vcomponents.FDCE
      port map (
@@ -38130,7 +38109,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(17),
-      Q => \^state_out_reg[125]_0\(17)
+      Q => \^state_out_reg[125]_0\(16)
     );
 \state_out_reg[18]\: unisim.vcomponents.FDCE
      port map (
@@ -38138,7 +38117,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(18),
-      Q => \^state_out_reg[125]_0\(18)
+      Q => \^state_out_reg[125]_0\(17)
     );
 \state_out_reg[19]\: unisim.vcomponents.FDCE
      port map (
@@ -38146,7 +38125,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(19),
-      Q => \^state_out_reg[125]_0\(19)
+      Q => \^state_out_reg[125]_0\(18)
     );
 \state_out_reg[1]\: unisim.vcomponents.FDCE
      port map (
@@ -38154,7 +38133,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(1),
-      Q => \^state_out_reg[125]_0\(1)
+      Q => \^state_out_reg[125]_0\(0)
     );
 \state_out_reg[20]\: unisim.vcomponents.FDCE
      port map (
@@ -38162,7 +38141,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(20),
-      Q => \^state_out_reg[125]_0\(20)
+      Q => \^state_out_reg[125]_0\(19)
     );
 \state_out_reg[21]\: unisim.vcomponents.FDCE
      port map (
@@ -38170,7 +38149,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(21),
-      Q => \^state_out_reg[125]_0\(21)
+      Q => \^state_out_reg[125]_0\(20)
     );
 \state_out_reg[22]\: unisim.vcomponents.FDCE
      port map (
@@ -38178,7 +38157,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(22),
-      Q => \^state_out_reg[125]_0\(22)
+      Q => \^state_out_reg[125]_0\(21)
     );
 \state_out_reg[23]\: unisim.vcomponents.FDCE
      port map (
@@ -38186,7 +38165,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(23),
-      Q => \^state_out_reg[125]_0\(23)
+      Q => \^state_out_reg[125]_0\(22)
     );
 \state_out_reg[24]\: unisim.vcomponents.FDCE
      port map (
@@ -38194,7 +38173,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(24),
-      Q => \^state_out_reg[125]_0\(24)
+      Q => \^state_out_reg[125]_0\(23)
     );
 \state_out_reg[25]\: unisim.vcomponents.FDCE
      port map (
@@ -38202,7 +38181,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(25),
-      Q => \^state_out_reg[125]_0\(25)
+      Q => \^state_out_reg[125]_0\(24)
     );
 \state_out_reg[26]\: unisim.vcomponents.FDCE
      port map (
@@ -38210,7 +38189,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(26),
-      Q => \^state_out_reg[125]_0\(26)
+      Q => \^state_out_reg[125]_0\(25)
     );
 \state_out_reg[27]\: unisim.vcomponents.FDCE
      port map (
@@ -38218,7 +38197,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(27),
-      Q => \^state_out_reg[125]_0\(27)
+      Q => \^state_out_reg[125]_0\(26)
     );
 \state_out_reg[28]\: unisim.vcomponents.FDCE
      port map (
@@ -38226,7 +38205,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(28),
-      Q => \^state_out_reg[125]_0\(28)
+      Q => \^state_out_reg[125]_0\(27)
     );
 \state_out_reg[29]\: unisim.vcomponents.FDCE
      port map (
@@ -38234,7 +38213,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(1),
-      Q => \^state_out_reg[125]_0\(29)
+      Q => \^state_out_reg[125]_0\(28)
     );
 \state_out_reg[2]\: unisim.vcomponents.FDCE
      port map (
@@ -38242,7 +38221,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(2),
-      Q => \^state_out_reg[125]_0\(2)
+      Q => \^state_out_reg[125]_0\(1)
     );
 \state_out_reg[30]\: unisim.vcomponents.FDCE
      port map (
@@ -38250,7 +38229,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(2),
-      Q => \^state_out_reg[125]_0\(30)
+      Q => \^state_out_reg[125]_0\(29)
     );
 \state_out_reg[31]\: unisim.vcomponents.FDCE
      port map (
@@ -38258,7 +38237,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(3),
-      Q => \^state_out_reg[125]_0\(31)
+      Q => \^state_out_reg[125]_0\(30)
     );
 \state_out_reg[32]\: unisim.vcomponents.FDCE
      port map (
@@ -38266,7 +38245,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(4),
-      Q => \^state_out_reg[125]_0\(32)
+      Q => \^state_out_reg[125]_0\(31)
     );
 \state_out_reg[33]\: unisim.vcomponents.FDCE
      port map (
@@ -38274,7 +38253,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(33),
-      Q => \^state_out_reg[125]_0\(33)
+      Q => \^state_out_reg[125]_0\(32)
     );
 \state_out_reg[34]\: unisim.vcomponents.FDCE
      port map (
@@ -38282,7 +38261,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(34),
-      Q => \^state_out_reg[125]_0\(34)
+      Q => \^state_out_reg[125]_0\(33)
     );
 \state_out_reg[35]\: unisim.vcomponents.FDCE
      port map (
@@ -38290,7 +38269,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(35),
-      Q => \^state_out_reg[125]_0\(35)
+      Q => \^state_out_reg[125]_0\(34)
     );
 \state_out_reg[36]\: unisim.vcomponents.FDCE
      port map (
@@ -38298,7 +38277,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(36),
-      Q => \^state_out_reg[125]_0\(36)
+      Q => \^state_out_reg[125]_0\(35)
     );
 \state_out_reg[37]\: unisim.vcomponents.FDCE
      port map (
@@ -38306,7 +38285,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(37),
-      Q => \^state_out_reg[125]_0\(37)
+      Q => \^state_out_reg[125]_0\(36)
     );
 \state_out_reg[38]\: unisim.vcomponents.FDCE
      port map (
@@ -38314,7 +38293,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(38),
-      Q => \^state_out_reg[125]_0\(38)
+      Q => \^state_out_reg[125]_0\(37)
     );
 \state_out_reg[39]\: unisim.vcomponents.FDCE
      port map (
@@ -38322,7 +38301,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(39),
-      Q => \^state_out_reg[125]_0\(39)
+      Q => \^state_out_reg[125]_0\(38)
     );
 \state_out_reg[3]\: unisim.vcomponents.FDCE
      port map (
@@ -38330,7 +38309,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(3),
-      Q => \^state_out_reg[125]_0\(3)
+      Q => \^state_out_reg[125]_0\(2)
     );
 \state_out_reg[40]\: unisim.vcomponents.FDCE
      port map (
@@ -38338,7 +38317,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(40),
-      Q => \^state_out_reg[125]_0\(40)
+      Q => \^state_out_reg[125]_0\(39)
     );
 \state_out_reg[41]\: unisim.vcomponents.FDCE
      port map (
@@ -38346,7 +38325,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(41),
-      Q => \^state_out_reg[125]_0\(41)
+      Q => \^state_out_reg[125]_0\(40)
     );
 \state_out_reg[42]\: unisim.vcomponents.FDCE
      port map (
@@ -38354,7 +38333,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(42),
-      Q => \^state_out_reg[125]_0\(42)
+      Q => \^state_out_reg[125]_0\(41)
     );
 \state_out_reg[43]\: unisim.vcomponents.FDCE
      port map (
@@ -38362,7 +38341,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(43),
-      Q => \^state_out_reg[125]_0\(43)
+      Q => \^state_out_reg[125]_0\(42)
     );
 \state_out_reg[44]\: unisim.vcomponents.FDCE
      port map (
@@ -38370,7 +38349,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(44),
-      Q => \^state_out_reg[125]_0\(44)
+      Q => \^state_out_reg[125]_0\(43)
     );
 \state_out_reg[45]\: unisim.vcomponents.FDCE
      port map (
@@ -38378,7 +38357,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(45),
-      Q => \^state_out_reg[125]_0\(45)
+      Q => \^state_out_reg[125]_0\(44)
     );
 \state_out_reg[46]\: unisim.vcomponents.FDCE
      port map (
@@ -38386,7 +38365,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(46),
-      Q => \^state_out_reg[125]_0\(46)
+      Q => \^state_out_reg[125]_0\(45)
     );
 \state_out_reg[47]\: unisim.vcomponents.FDCE
      port map (
@@ -38394,7 +38373,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(47),
-      Q => \^state_out_reg[125]_0\(47)
+      Q => \^state_out_reg[125]_0\(46)
     );
 \state_out_reg[48]\: unisim.vcomponents.FDCE
      port map (
@@ -38402,7 +38381,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(48),
-      Q => \^state_out_reg[125]_0\(48)
+      Q => \^state_out_reg[125]_0\(47)
     );
 \state_out_reg[49]\: unisim.vcomponents.FDCE
      port map (
@@ -38410,7 +38389,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(49),
-      Q => \^state_out_reg[125]_0\(49)
+      Q => \^state_out_reg[125]_0\(48)
     );
 \state_out_reg[4]\: unisim.vcomponents.FDCE
      port map (
@@ -38418,7 +38397,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(4),
-      Q => \^state_out_reg[125]_0\(4)
+      Q => \^state_out_reg[125]_0\(3)
     );
 \state_out_reg[50]\: unisim.vcomponents.FDCE
      port map (
@@ -38426,7 +38405,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(50),
-      Q => \^state_out_reg[125]_0\(50)
+      Q => \^state_out_reg[125]_0\(49)
     );
 \state_out_reg[51]\: unisim.vcomponents.FDCE
      port map (
@@ -38434,7 +38413,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(51),
-      Q => \^state_out_reg[125]_0\(51)
+      Q => \^state_out_reg[125]_0\(50)
     );
 \state_out_reg[52]\: unisim.vcomponents.FDCE
      port map (
@@ -38442,7 +38421,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(52),
-      Q => \^state_out_reg[125]_0\(52)
+      Q => \^state_out_reg[125]_0\(51)
     );
 \state_out_reg[53]\: unisim.vcomponents.FDCE
      port map (
@@ -38450,7 +38429,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(53),
-      Q => \^state_out_reg[125]_0\(53)
+      Q => \^state_out_reg[125]_0\(52)
     );
 \state_out_reg[54]\: unisim.vcomponents.FDCE
      port map (
@@ -38458,7 +38437,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(54),
-      Q => \^state_out_reg[125]_0\(54)
+      Q => \^state_out_reg[125]_0\(53)
     );
 \state_out_reg[55]\: unisim.vcomponents.FDCE
      port map (
@@ -38466,7 +38445,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(55),
-      Q => \^state_out_reg[125]_0\(55)
+      Q => \^state_out_reg[125]_0\(54)
     );
 \state_out_reg[56]\: unisim.vcomponents.FDCE
      port map (
@@ -38474,7 +38453,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(56),
-      Q => \^state_out_reg[125]_0\(56)
+      Q => \^state_out_reg[125]_0\(55)
     );
 \state_out_reg[57]\: unisim.vcomponents.FDCE
      port map (
@@ -38482,7 +38461,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(57),
-      Q => \^state_out_reg[125]_0\(57)
+      Q => \^state_out_reg[125]_0\(56)
     );
 \state_out_reg[58]\: unisim.vcomponents.FDCE
      port map (
@@ -38490,7 +38469,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(58),
-      Q => \^state_out_reg[125]_0\(58)
+      Q => \^state_out_reg[125]_0\(57)
     );
 \state_out_reg[59]\: unisim.vcomponents.FDCE
      port map (
@@ -38498,7 +38477,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(59),
-      Q => \^state_out_reg[125]_0\(59)
+      Q => \^state_out_reg[125]_0\(58)
     );
 \state_out_reg[5]\: unisim.vcomponents.FDCE
      port map (
@@ -38506,7 +38485,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(5),
-      Q => \^state_out_reg[125]_0\(5)
+      Q => \^state_out_reg[125]_0\(4)
     );
 \state_out_reg[60]\: unisim.vcomponents.FDCE
      port map (
@@ -38514,7 +38493,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(60),
-      Q => \^state_out_reg[125]_0\(60)
+      Q => \^state_out_reg[125]_0\(59)
     );
 \state_out_reg[61]\: unisim.vcomponents.FDCE
      port map (
@@ -38522,7 +38501,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(5),
-      Q => \^state_out_reg[125]_0\(61)
+      Q => \^state_out_reg[125]_0\(60)
     );
 \state_out_reg[62]\: unisim.vcomponents.FDCE
      port map (
@@ -38530,7 +38509,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(6),
-      Q => \^state_out_reg[125]_0\(62)
+      Q => \^state_out_reg[125]_0\(61)
     );
 \state_out_reg[63]\: unisim.vcomponents.FDCE
      port map (
@@ -38538,7 +38517,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(7),
-      Q => \^state_out_reg[125]_0\(63)
+      Q => \^state_out_reg[125]_0\(62)
     );
 \state_out_reg[65]\: unisim.vcomponents.FDCE
      port map (
@@ -38554,7 +38533,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(9),
-      Q => \^state_out_reg[125]_0\(64)
+      Q => \^state_out_reg[125]_0\(63)
     );
 \state_out_reg[67]\: unisim.vcomponents.FDCE
      port map (
@@ -38562,7 +38541,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(10),
-      Q => \^state_out_reg[125]_0\(65)
+      Q => \^state_out_reg[125]_0\(64)
     );
 \state_out_reg[68]\: unisim.vcomponents.FDCE
      port map (
@@ -38570,7 +38549,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(11),
-      Q => \^state_out_reg[125]_0\(66)
+      Q => \^state_out_reg[125]_0\(65)
     );
 \state_out_reg[69]\: unisim.vcomponents.FDCE
      port map (
@@ -38578,7 +38557,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(12),
-      Q => \^state_out_reg[125]_0\(67)
+      Q => \^state_out_reg[125]_0\(66)
     );
 \state_out_reg[6]\: unisim.vcomponents.FDCE
      port map (
@@ -38586,7 +38565,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(6),
-      Q => \^state_out_reg[125]_0\(6)
+      Q => \^state_out_reg[125]_0\(5)
     );
 \state_out_reg[70]\: unisim.vcomponents.FDCE
      port map (
@@ -38594,7 +38573,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(13),
-      Q => \^state_out_reg[125]_0\(68)
+      Q => \^state_out_reg[125]_0\(67)
     );
 \state_out_reg[71]\: unisim.vcomponents.FDCE
      port map (
@@ -38602,7 +38581,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(14),
-      Q => \^state_out_reg[125]_0\(69)
+      Q => \^state_out_reg[125]_0\(68)
     );
 \state_out_reg[72]\: unisim.vcomponents.FDCE
      port map (
@@ -38610,7 +38589,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(15),
-      Q => \^state_out_reg[125]_0\(70)
+      Q => \^state_out_reg[125]_0\(69)
     );
 \state_out_reg[73]\: unisim.vcomponents.FDCE
      port map (
@@ -38618,7 +38597,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(16),
-      Q => \^state_out_reg[125]_0\(71)
+      Q => \^state_out_reg[125]_0\(70)
     );
 \state_out_reg[74]\: unisim.vcomponents.FDCE
      port map (
@@ -38626,7 +38605,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(17),
-      Q => \^state_out_reg[125]_0\(72)
+      Q => \^state_out_reg[125]_0\(71)
     );
 \state_out_reg[75]\: unisim.vcomponents.FDCE
      port map (
@@ -38634,7 +38613,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(18),
-      Q => \^state_out_reg[125]_0\(73)
+      Q => \^state_out_reg[125]_0\(72)
     );
 \state_out_reg[76]\: unisim.vcomponents.FDCE
      port map (
@@ -38642,7 +38621,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(19),
-      Q => \^state_out_reg[125]_0\(74)
+      Q => \^state_out_reg[125]_0\(73)
     );
 \state_out_reg[77]\: unisim.vcomponents.FDCE
      port map (
@@ -38650,7 +38629,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(20),
-      Q => \^state_out_reg[125]_0\(75)
+      Q => \^state_out_reg[125]_0\(74)
     );
 \state_out_reg[78]\: unisim.vcomponents.FDCE
      port map (
@@ -38658,7 +38637,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(21),
-      Q => \^state_out_reg[125]_0\(76)
+      Q => \^state_out_reg[125]_0\(75)
     );
 \state_out_reg[79]\: unisim.vcomponents.FDCE
      port map (
@@ -38666,7 +38645,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(22),
-      Q => \^state_out_reg[125]_0\(77)
+      Q => \^state_out_reg[125]_0\(76)
     );
 \state_out_reg[7]\: unisim.vcomponents.FDCE
      port map (
@@ -38674,7 +38653,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(7),
-      Q => \^state_out_reg[125]_0\(7)
+      Q => \^state_out_reg[125]_0\(6)
     );
 \state_out_reg[80]\: unisim.vcomponents.FDCE
      port map (
@@ -38682,7 +38661,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(23),
-      Q => \^state_out_reg[125]_0\(78)
+      Q => \^state_out_reg[125]_0\(77)
     );
 \state_out_reg[81]\: unisim.vcomponents.FDCE
      port map (
@@ -38690,7 +38669,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(24),
-      Q => \^state_out_reg[125]_0\(79)
+      Q => \^state_out_reg[125]_0\(78)
     );
 \state_out_reg[82]\: unisim.vcomponents.FDCE
      port map (
@@ -38698,7 +38677,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(25),
-      Q => \^state_out_reg[125]_0\(80)
+      Q => \^state_out_reg[125]_0\(79)
     );
 \state_out_reg[83]\: unisim.vcomponents.FDCE
      port map (
@@ -38706,7 +38685,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(26),
-      Q => \^state_out_reg[125]_0\(81)
+      Q => \^state_out_reg[125]_0\(80)
     );
 \state_out_reg[84]\: unisim.vcomponents.FDCE
      port map (
@@ -38714,7 +38693,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(27),
-      Q => \^state_out_reg[125]_0\(82)
+      Q => \^state_out_reg[125]_0\(81)
     );
 \state_out_reg[85]\: unisim.vcomponents.FDCE
      port map (
@@ -38722,7 +38701,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(28),
-      Q => \^state_out_reg[125]_0\(83)
+      Q => \^state_out_reg[125]_0\(82)
     );
 \state_out_reg[86]\: unisim.vcomponents.FDCE
      port map (
@@ -38730,7 +38709,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(29),
-      Q => \^state_out_reg[125]_0\(84)
+      Q => \^state_out_reg[125]_0\(83)
     );
 \state_out_reg[87]\: unisim.vcomponents.FDCE
      port map (
@@ -38738,7 +38717,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(30),
-      Q => \^state_out_reg[125]_0\(85)
+      Q => \^state_out_reg[125]_0\(84)
     );
 \state_out_reg[88]\: unisim.vcomponents.FDCE
      port map (
@@ -38746,7 +38725,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(31),
-      Q => \^state_out_reg[125]_0\(86)
+      Q => \^state_out_reg[125]_0\(85)
     );
 \state_out_reg[89]\: unisim.vcomponents.FDCE
      port map (
@@ -38754,7 +38733,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(32),
-      Q => \^state_out_reg[125]_0\(87)
+      Q => \^state_out_reg[125]_0\(86)
     );
 \state_out_reg[8]\: unisim.vcomponents.FDCE
      port map (
@@ -38762,7 +38741,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(8),
-      Q => \^state_out_reg[125]_0\(8)
+      Q => \^state_out_reg[125]_0\(7)
     );
 \state_out_reg[90]\: unisim.vcomponents.FDCE
      port map (
@@ -38770,7 +38749,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(33),
-      Q => \^state_out_reg[125]_0\(88)
+      Q => \^state_out_reg[125]_0\(87)
     );
 \state_out_reg[91]\: unisim.vcomponents.FDCE
      port map (
@@ -38778,7 +38757,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(34),
-      Q => \^state_out_reg[125]_0\(89)
+      Q => \^state_out_reg[125]_0\(88)
     );
 \state_out_reg[92]\: unisim.vcomponents.FDCE
      port map (
@@ -38786,7 +38765,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(35),
-      Q => \^state_out_reg[125]_0\(90)
+      Q => \^state_out_reg[125]_0\(89)
     );
 \state_out_reg[93]\: unisim.vcomponents.FDCE
      port map (
@@ -38794,7 +38773,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(36),
-      Q => \^state_out_reg[125]_0\(91)
+      Q => \^state_out_reg[125]_0\(90)
     );
 \state_out_reg[94]\: unisim.vcomponents.FDCE
      port map (
@@ -38818,7 +38797,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(39),
-      Q => \^state_out_reg[125]_0\(92)
+      Q => \round_state[5]\(96)
     );
 \state_out_reg[97]\: unisim.vcomponents.FDCE
      port map (
@@ -38834,7 +38813,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(41),
-      Q => \^state_out_reg[125]_0\(93)
+      Q => \^state_out_reg[125]_0\(91)
     );
 \state_out_reg[99]\: unisim.vcomponents.FDCE
      port map (
@@ -38842,7 +38821,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(42),
-      Q => \^state_out_reg[125]_0\(94)
+      Q => \^state_out_reg[125]_0\(92)
     );
 \state_out_reg[9]\: unisim.vcomponents.FDCE
      port map (
@@ -38850,7 +38829,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_17
       CE => enable,
       CLR => rst,
       D => sbox_state(9),
-      Q => \^state_out_reg[125]_0\(9)
+      Q => \^state_out_reg[125]_0\(8)
     );
 end STRUCTURE;
 library IEEE;
@@ -38861,8 +38840,9 @@ entity design_ascon_ascon_core_0_2_ascon_round_6 is
   port (
     add_const_state : out STD_LOGIC_VECTOR ( 61 downto 0 );
     CO : out STD_LOGIC_VECTOR ( 0 to 0 );
-    S : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    Q : out STD_LOGIC_VECTOR ( 119 downto 0 );
+    D : out STD_LOGIC_VECTOR ( 70 downto 0 );
+    Q : out STD_LOGIC_VECTOR ( 118 downto 0 );
+    S : out STD_LOGIC_VECTOR ( 0 to 0 );
     \state_out_reg[61]_0\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
     \state_out_reg[57]_0\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
     \state_out_reg[53]_0\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -38878,8 +38858,7 @@ entity design_ascon_ascon_core_0_2_ascon_round_6 is
     \state_out_reg[13]_0\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
     \state_out_reg[8]_0\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
     \state_out_reg[5]_0\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    D : out STD_LOGIC_VECTOR ( 69 downto 0 );
-    \state_out_reg[29]_1\ : in STD_LOGIC_VECTOR ( 120 downto 0 );
+    \state_out_reg[29]_1\ : in STD_LOGIC_VECTOR ( 118 downto 0 );
     \state_out_reg[37]_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \state_out_reg[41]_1\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \state_out_reg[45]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -38894,10 +38873,10 @@ entity design_ascon_ascon_core_0_2_ascon_round_6 is
     \state_out_reg[53]_2\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     \state_out_reg[57]_2\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \state_out_reg[61]_2\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \state_out_reg[0]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    add_const_state_0 : in STD_LOGIC_VECTOR ( 61 downto 0 );
-    \state_out_reg[127]_0\ : in STD_LOGIC_VECTOR ( 69 downto 0 );
     \state_out_reg[96]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \state_out_reg[96]_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    add_const_state_0 : in STD_LOGIC_VECTOR ( 61 downto 0 );
+    \state_out_reg[127]_0\ : in STD_LOGIC_VECTOR ( 70 downto 0 );
     enable : in STD_LOGIC;
     clk : in STD_LOGIC;
     rst : in STD_LOGIC
@@ -38907,34 +38886,29 @@ entity design_ascon_ascon_core_0_2_ascon_round_6 is
 end design_ascon_ascon_core_0_2_ascon_round_6;
 
 architecture STRUCTURE of design_ascon_ascon_core_0_2_ascon_round_6 is
-  signal \^q\ : STD_LOGIC_VECTOR ( 119 downto 0 );
+  signal \^q\ : STD_LOGIC_VECTOR ( 118 downto 0 );
   signal \^add_const_state\ : STD_LOGIC_VECTOR ( 61 downto 0 );
-  signal linear_state : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal \round_state[6]\ : STD_LOGIC_VECTOR ( 127 downto 65 );
+  signal \round_state[6]\ : STD_LOGIC_VECTOR ( 127 downto 0 );
   signal sbox_state : STD_LOGIC_VECTOR ( 61 downto 2 );
 begin
-  Q(119 downto 0) <= \^q\(119 downto 0);
+  Q(118 downto 0) <= \^q\(118 downto 0);
   add_const_state(61 downto 0) <= \^add_const_state\(61 downto 0);
 constant_inst: entity work.design_ascon_ascon_core_0_2_ascon_add_constant_14
      port map (
       CO(0) => CO(0),
-      D(0) => linear_state(0),
-      Q(41 downto 37) => \^q\(61 downto 57),
-      Q(36 downto 32) => \^q\(55 downto 51),
-      Q(31) => \^q\(49),
-      Q(30) => \^q\(46),
-      Q(29 downto 26) => \^q\(43 downto 40),
-      Q(25 downto 20) => \^q\(38 downto 33),
-      Q(19 downto 18) => \^q\(30 downto 29),
-      Q(17 downto 14) => \^q\(26 downto 23),
-      Q(13 downto 9) => \^q\(20 downto 16),
-      Q(8) => \^q\(13),
-      Q(7) => \^q\(10),
-      Q(6 downto 0) => \^q\(8 downto 2),
+      Q(41 downto 37) => \^q\(60 downto 56),
+      Q(36 downto 32) => \^q\(54 downto 50),
+      Q(31) => \^q\(48),
+      Q(30) => \^q\(45),
+      Q(29 downto 26) => \^q\(42 downto 39),
+      Q(25 downto 20) => \^q\(37 downto 32),
+      Q(19 downto 18) => \^q\(29 downto 28),
+      Q(17 downto 14) => \^q\(25 downto 22),
+      Q(13 downto 9) => \^q\(19 downto 15),
+      Q(8) => \^q\(12),
+      Q(7) => \^q\(9),
+      Q(6 downto 0) => \^q\(7 downto 1),
       add_const_state(61 downto 0) => \^add_const_state\(61 downto 0),
-      \state_out_reg[0]\(64) => \state_out_reg[29]_1\(92),
-      \state_out_reg[0]\(63 downto 0) => \state_out_reg[29]_1\(63 downto 0),
-      \state_out_reg[0]_0\(0) => \state_out_reg[0]_0\(0),
       \state_out_reg[13]\(1 downto 0) => \state_out_reg[13]_0\(1 downto 0),
       \state_out_reg[17]\(1 downto 0) => \state_out_reg[17]_0\(1 downto 0),
       \state_out_reg[20]\(2 downto 0) => \state_out_reg[20]_0\(2 downto 0),
@@ -38963,27 +38937,27 @@ constant_inst: entity work.design_ascon_ascon_core_0_2_ascon_add_constant_14
       \state_out_reg[61]\(3 downto 0) => \state_out_reg[61]_0\(3 downto 0),
       \state_out_reg[61]_0\(0) => \state_out_reg[61]_1\(0),
       \state_out_reg[61]_1\(1 downto 0) => \state_out_reg[61]_2\(1 downto 0),
-      \state_out_reg[8]\(2 downto 0) => \state_out_reg[8]_0\(2 downto 0)
+      \state_out_reg[8]\(2 downto 0) => \state_out_reg[8]_0\(2 downto 0),
+      \state_out_reg[96]\(62 downto 0) => \state_out_reg[29]_1\(62 downto 0),
+      \state_out_reg[96]_0\(0) => \state_out_reg[96]_0\(0)
     );
 sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
      port map (
       D(55 downto 28) => sbox_state(61 downto 34),
       D(27 downto 0) => sbox_state(29 downto 2),
       Q(64 downto 63) => \round_state[6]\(127 downto 126),
-      Q(62 downto 35) => \^q\(119 downto 92),
-      Q(34) => \round_state[6]\(97),
-      Q(33) => \^q\(91),
-      Q(32 downto 31) => \round_state[6]\(95 downto 94),
+      Q(62 downto 35) => \^q\(118 downto 91),
+      Q(34 downto 31) => \round_state[6]\(97 downto 94),
       Q(30 downto 3) => \^q\(90 downto 63),
       Q(2) => \round_state[6]\(65),
-      Q(1 downto 0) => \^q\(1 downto 0),
+      Q(1) => \^q\(0),
+      Q(0) => \round_state[6]\(0),
       add_const_state(55 downto 28) => \^add_const_state\(59 downto 32),
       add_const_state(27 downto 0) => \^add_const_state\(27 downto 0),
       add_const_state_0(61 downto 0) => add_const_state_0(61 downto 0),
-      \state_out_reg[127]\(68 downto 0) => D(69 downto 1),
-      \state_out_reg[29]\(55 downto 28) => \state_out_reg[29]_1\(120 downto 93),
-      \state_out_reg[29]\(27 downto 0) => \state_out_reg[29]_1\(91 downto 64),
-      \state_out_reg[96]\(0) => \state_out_reg[96]_0\(0)
+      \state_out_reg[127]\(68 downto 0) => D(70 downto 2),
+      \state_out_reg[29]\(55 downto 0) => \state_out_reg[29]_1\(118 downto 63),
+      \state_out_reg[96]\(0) => \state_out_reg[96]_1\(0)
     );
 \state_out0_carry__14_i_1__2\: unisim.vcomponents.LUT1
     generic map(
@@ -38991,105 +38965,116 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
     )
         port map (
       I0 => \^q\(62),
-      O => S(1)
+      O => S(0)
+    );
+\state_out[0]_i_1__5\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"6996"
+    )
+        port map (
+      I0 => \state_out_reg[96]_1\(0),
+      I1 => add_const_state_0(30),
+      I2 => \round_state[6]\(96),
+      I3 => \round_state[6]\(0),
+      O => D(0)
     );
 \state_out[1]_i_1__0\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"65"
     )
         port map (
-      I0 => \^q\(1),
+      I0 => \^q\(0),
       I1 => \round_state[6]\(97),
       I2 => add_const_state_0(31),
-      O => D(0)
+      O => D(1)
     );
 \state_out_reg[0]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => linear_state(0),
-      Q => \^q\(0)
+      D => \state_out_reg[127]_0\(0),
+      Q => \round_state[6]\(0)
     );
 \state_out_reg[100]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(42),
-      Q => \^q\(94)
+      D => \state_out_reg[127]_0\(43),
+      Q => \^q\(93)
     );
 \state_out_reg[101]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(43),
-      Q => \^q\(95)
+      D => \state_out_reg[127]_0\(44),
+      Q => \^q\(94)
     );
 \state_out_reg[102]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(44),
-      Q => \^q\(96)
+      D => \state_out_reg[127]_0\(45),
+      Q => \^q\(95)
     );
 \state_out_reg[103]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(45),
-      Q => \^q\(97)
+      D => \state_out_reg[127]_0\(46),
+      Q => \^q\(96)
     );
 \state_out_reg[104]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(46),
-      Q => \^q\(98)
+      D => \state_out_reg[127]_0\(47),
+      Q => \^q\(97)
     );
 \state_out_reg[105]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(47),
-      Q => \^q\(99)
+      D => \state_out_reg[127]_0\(48),
+      Q => \^q\(98)
     );
 \state_out_reg[106]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(48),
-      Q => \^q\(100)
+      D => \state_out_reg[127]_0\(49),
+      Q => \^q\(99)
     );
 \state_out_reg[107]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(49),
-      Q => \^q\(101)
+      D => \state_out_reg[127]_0\(50),
+      Q => \^q\(100)
     );
 \state_out_reg[108]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(50),
-      Q => \^q\(102)
+      D => \state_out_reg[127]_0\(51),
+      Q => \^q\(101)
     );
 \state_out_reg[109]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(51),
-      Q => \^q\(103)
+      D => \state_out_reg[127]_0\(52),
+      Q => \^q\(102)
     );
 \state_out_reg[10]\: unisim.vcomponents.FDCE
      port map (
@@ -39097,87 +39082,87 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(10),
-      Q => \^q\(10)
+      Q => \^q\(9)
     );
 \state_out_reg[110]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(52),
-      Q => \^q\(104)
+      D => \state_out_reg[127]_0\(53),
+      Q => \^q\(103)
     );
 \state_out_reg[111]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(53),
-      Q => \^q\(105)
+      D => \state_out_reg[127]_0\(54),
+      Q => \^q\(104)
     );
 \state_out_reg[112]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(54),
-      Q => \^q\(106)
+      D => \state_out_reg[127]_0\(55),
+      Q => \^q\(105)
     );
 \state_out_reg[113]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(55),
-      Q => \^q\(107)
+      D => \state_out_reg[127]_0\(56),
+      Q => \^q\(106)
     );
 \state_out_reg[114]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(56),
-      Q => \^q\(108)
+      D => \state_out_reg[127]_0\(57),
+      Q => \^q\(107)
     );
 \state_out_reg[115]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(57),
-      Q => \^q\(109)
+      D => \state_out_reg[127]_0\(58),
+      Q => \^q\(108)
     );
 \state_out_reg[116]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(58),
-      Q => \^q\(110)
+      D => \state_out_reg[127]_0\(59),
+      Q => \^q\(109)
     );
 \state_out_reg[117]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(59),
-      Q => \^q\(111)
+      D => \state_out_reg[127]_0\(60),
+      Q => \^q\(110)
     );
 \state_out_reg[118]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(60),
-      Q => \^q\(112)
+      D => \state_out_reg[127]_0\(61),
+      Q => \^q\(111)
     );
 \state_out_reg[119]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(61),
-      Q => \^q\(113)
+      D => \state_out_reg[127]_0\(62),
+      Q => \^q\(112)
     );
 \state_out_reg[11]\: unisim.vcomponents.FDCE
      port map (
@@ -39185,62 +39170,62 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(11),
-      Q => \^q\(11)
+      Q => \^q\(10)
     );
 \state_out_reg[120]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(62),
-      Q => \^q\(114)
+      D => \state_out_reg[127]_0\(63),
+      Q => \^q\(113)
     );
 \state_out_reg[121]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(63),
-      Q => \^q\(115)
+      D => \state_out_reg[127]_0\(64),
+      Q => \^q\(114)
     );
 \state_out_reg[122]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(64),
-      Q => \^q\(116)
+      D => \state_out_reg[127]_0\(65),
+      Q => \^q\(115)
     );
 \state_out_reg[123]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(65),
-      Q => \^q\(117)
+      D => \state_out_reg[127]_0\(66),
+      Q => \^q\(116)
     );
 \state_out_reg[124]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(66),
-      Q => \^q\(118)
+      D => \state_out_reg[127]_0\(67),
+      Q => \^q\(117)
     );
 \state_out_reg[125]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(67),
-      Q => \^q\(119)
+      D => \state_out_reg[127]_0\(68),
+      Q => \^q\(118)
     );
 \state_out_reg[126]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(68),
+      D => \state_out_reg[127]_0\(69),
       Q => \round_state[6]\(126)
     );
 \state_out_reg[127]\: unisim.vcomponents.FDCE
@@ -39248,7 +39233,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(69),
+      D => \state_out_reg[127]_0\(70),
       Q => \round_state[6]\(127)
     );
 \state_out_reg[12]\: unisim.vcomponents.FDCE
@@ -39257,7 +39242,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(12),
-      Q => \^q\(12)
+      Q => \^q\(11)
     );
 \state_out_reg[13]\: unisim.vcomponents.FDCE
      port map (
@@ -39265,7 +39250,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(13),
-      Q => \^q\(13)
+      Q => \^q\(12)
     );
 \state_out_reg[14]\: unisim.vcomponents.FDCE
      port map (
@@ -39273,7 +39258,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(14),
-      Q => \^q\(14)
+      Q => \^q\(13)
     );
 \state_out_reg[15]\: unisim.vcomponents.FDCE
      port map (
@@ -39281,7 +39266,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(15),
-      Q => \^q\(15)
+      Q => \^q\(14)
     );
 \state_out_reg[16]\: unisim.vcomponents.FDCE
      port map (
@@ -39289,7 +39274,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(16),
-      Q => \^q\(16)
+      Q => \^q\(15)
     );
 \state_out_reg[17]\: unisim.vcomponents.FDCE
      port map (
@@ -39297,7 +39282,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(17),
-      Q => \^q\(17)
+      Q => \^q\(16)
     );
 \state_out_reg[18]\: unisim.vcomponents.FDCE
      port map (
@@ -39305,7 +39290,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(18),
-      Q => \^q\(18)
+      Q => \^q\(17)
     );
 \state_out_reg[19]\: unisim.vcomponents.FDCE
      port map (
@@ -39313,15 +39298,15 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(19),
-      Q => \^q\(19)
+      Q => \^q\(18)
     );
 \state_out_reg[1]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(0),
-      Q => \^q\(1)
+      D => \state_out_reg[127]_0\(1),
+      Q => \^q\(0)
     );
 \state_out_reg[20]\: unisim.vcomponents.FDCE
      port map (
@@ -39329,7 +39314,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(20),
-      Q => \^q\(20)
+      Q => \^q\(19)
     );
 \state_out_reg[21]\: unisim.vcomponents.FDCE
      port map (
@@ -39337,7 +39322,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(21),
-      Q => \^q\(21)
+      Q => \^q\(20)
     );
 \state_out_reg[22]\: unisim.vcomponents.FDCE
      port map (
@@ -39345,7 +39330,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(22),
-      Q => \^q\(22)
+      Q => \^q\(21)
     );
 \state_out_reg[23]\: unisim.vcomponents.FDCE
      port map (
@@ -39353,7 +39338,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(23),
-      Q => \^q\(23)
+      Q => \^q\(22)
     );
 \state_out_reg[24]\: unisim.vcomponents.FDCE
      port map (
@@ -39361,7 +39346,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(24),
-      Q => \^q\(24)
+      Q => \^q\(23)
     );
 \state_out_reg[25]\: unisim.vcomponents.FDCE
      port map (
@@ -39369,7 +39354,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(25),
-      Q => \^q\(25)
+      Q => \^q\(24)
     );
 \state_out_reg[26]\: unisim.vcomponents.FDCE
      port map (
@@ -39377,7 +39362,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(26),
-      Q => \^q\(26)
+      Q => \^q\(25)
     );
 \state_out_reg[27]\: unisim.vcomponents.FDCE
      port map (
@@ -39385,7 +39370,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(27),
-      Q => \^q\(27)
+      Q => \^q\(26)
     );
 \state_out_reg[28]\: unisim.vcomponents.FDCE
      port map (
@@ -39393,7 +39378,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(28),
-      Q => \^q\(28)
+      Q => \^q\(27)
     );
 \state_out_reg[29]\: unisim.vcomponents.FDCE
      port map (
@@ -39401,7 +39386,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(29),
-      Q => \^q\(29)
+      Q => \^q\(28)
     );
 \state_out_reg[2]\: unisim.vcomponents.FDCE
      port map (
@@ -39409,39 +39394,39 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(2),
-      Q => \^q\(2)
+      Q => \^q\(1)
     );
 \state_out_reg[30]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(1),
-      Q => \^q\(30)
+      D => \state_out_reg[127]_0\(2),
+      Q => \^q\(29)
     );
 \state_out_reg[31]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(2),
-      Q => \^q\(31)
+      D => \state_out_reg[127]_0\(3),
+      Q => \^q\(30)
     );
 \state_out_reg[32]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(3),
-      Q => \^q\(32)
+      D => \state_out_reg[127]_0\(4),
+      Q => \^q\(31)
     );
 \state_out_reg[33]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(4),
-      Q => \^q\(33)
+      D => \state_out_reg[127]_0\(5),
+      Q => \^q\(32)
     );
 \state_out_reg[34]\: unisim.vcomponents.FDCE
      port map (
@@ -39449,7 +39434,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(34),
-      Q => \^q\(34)
+      Q => \^q\(33)
     );
 \state_out_reg[35]\: unisim.vcomponents.FDCE
      port map (
@@ -39457,7 +39442,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(35),
-      Q => \^q\(35)
+      Q => \^q\(34)
     );
 \state_out_reg[36]\: unisim.vcomponents.FDCE
      port map (
@@ -39465,7 +39450,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(36),
-      Q => \^q\(36)
+      Q => \^q\(35)
     );
 \state_out_reg[37]\: unisim.vcomponents.FDCE
      port map (
@@ -39473,7 +39458,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(37),
-      Q => \^q\(37)
+      Q => \^q\(36)
     );
 \state_out_reg[38]\: unisim.vcomponents.FDCE
      port map (
@@ -39481,7 +39466,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(38),
-      Q => \^q\(38)
+      Q => \^q\(37)
     );
 \state_out_reg[39]\: unisim.vcomponents.FDCE
      port map (
@@ -39489,7 +39474,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(39),
-      Q => \^q\(39)
+      Q => \^q\(38)
     );
 \state_out_reg[3]\: unisim.vcomponents.FDCE
      port map (
@@ -39497,7 +39482,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(3),
-      Q => \^q\(3)
+      Q => \^q\(2)
     );
 \state_out_reg[40]\: unisim.vcomponents.FDCE
      port map (
@@ -39505,7 +39490,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(40),
-      Q => \^q\(40)
+      Q => \^q\(39)
     );
 \state_out_reg[41]\: unisim.vcomponents.FDCE
      port map (
@@ -39513,7 +39498,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(41),
-      Q => \^q\(41)
+      Q => \^q\(40)
     );
 \state_out_reg[42]\: unisim.vcomponents.FDCE
      port map (
@@ -39521,7 +39506,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(42),
-      Q => \^q\(42)
+      Q => \^q\(41)
     );
 \state_out_reg[43]\: unisim.vcomponents.FDCE
      port map (
@@ -39529,7 +39514,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(43),
-      Q => \^q\(43)
+      Q => \^q\(42)
     );
 \state_out_reg[44]\: unisim.vcomponents.FDCE
      port map (
@@ -39537,7 +39522,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(44),
-      Q => \^q\(44)
+      Q => \^q\(43)
     );
 \state_out_reg[45]\: unisim.vcomponents.FDCE
      port map (
@@ -39545,7 +39530,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(45),
-      Q => \^q\(45)
+      Q => \^q\(44)
     );
 \state_out_reg[46]\: unisim.vcomponents.FDCE
      port map (
@@ -39553,7 +39538,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(46),
-      Q => \^q\(46)
+      Q => \^q\(45)
     );
 \state_out_reg[47]\: unisim.vcomponents.FDCE
      port map (
@@ -39561,7 +39546,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(47),
-      Q => \^q\(47)
+      Q => \^q\(46)
     );
 \state_out_reg[48]\: unisim.vcomponents.FDCE
      port map (
@@ -39569,7 +39554,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(48),
-      Q => \^q\(48)
+      Q => \^q\(47)
     );
 \state_out_reg[49]\: unisim.vcomponents.FDCE
      port map (
@@ -39577,7 +39562,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(49),
-      Q => \^q\(49)
+      Q => \^q\(48)
     );
 \state_out_reg[4]\: unisim.vcomponents.FDCE
      port map (
@@ -39585,7 +39570,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(4),
-      Q => \^q\(4)
+      Q => \^q\(3)
     );
 \state_out_reg[50]\: unisim.vcomponents.FDCE
      port map (
@@ -39593,7 +39578,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(50),
-      Q => \^q\(50)
+      Q => \^q\(49)
     );
 \state_out_reg[51]\: unisim.vcomponents.FDCE
      port map (
@@ -39601,7 +39586,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(51),
-      Q => \^q\(51)
+      Q => \^q\(50)
     );
 \state_out_reg[52]\: unisim.vcomponents.FDCE
      port map (
@@ -39609,7 +39594,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(52),
-      Q => \^q\(52)
+      Q => \^q\(51)
     );
 \state_out_reg[53]\: unisim.vcomponents.FDCE
      port map (
@@ -39617,7 +39602,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(53),
-      Q => \^q\(53)
+      Q => \^q\(52)
     );
 \state_out_reg[54]\: unisim.vcomponents.FDCE
      port map (
@@ -39625,7 +39610,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(54),
-      Q => \^q\(54)
+      Q => \^q\(53)
     );
 \state_out_reg[55]\: unisim.vcomponents.FDCE
      port map (
@@ -39633,7 +39618,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(55),
-      Q => \^q\(55)
+      Q => \^q\(54)
     );
 \state_out_reg[56]\: unisim.vcomponents.FDCE
      port map (
@@ -39641,7 +39626,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(56),
-      Q => \^q\(56)
+      Q => \^q\(55)
     );
 \state_out_reg[57]\: unisim.vcomponents.FDCE
      port map (
@@ -39649,7 +39634,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(57),
-      Q => \^q\(57)
+      Q => \^q\(56)
     );
 \state_out_reg[58]\: unisim.vcomponents.FDCE
      port map (
@@ -39657,7 +39642,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(58),
-      Q => \^q\(58)
+      Q => \^q\(57)
     );
 \state_out_reg[59]\: unisim.vcomponents.FDCE
      port map (
@@ -39665,7 +39650,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(59),
-      Q => \^q\(59)
+      Q => \^q\(58)
     );
 \state_out_reg[5]\: unisim.vcomponents.FDCE
      port map (
@@ -39673,7 +39658,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(5),
-      Q => \^q\(5)
+      Q => \^q\(4)
     );
 \state_out_reg[60]\: unisim.vcomponents.FDCE
      port map (
@@ -39681,7 +39666,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(60),
-      Q => \^q\(60)
+      Q => \^q\(59)
     );
 \state_out_reg[61]\: unisim.vcomponents.FDCE
      port map (
@@ -39689,22 +39674,22 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(61),
-      Q => \^q\(61)
+      Q => \^q\(60)
     );
 \state_out_reg[62]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(5),
-      Q => S(0)
+      D => \state_out_reg[127]_0\(6),
+      Q => \^q\(61)
     );
 \state_out_reg[63]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(6),
+      D => \state_out_reg[127]_0\(7),
       Q => \^q\(62)
     );
 \state_out_reg[65]\: unisim.vcomponents.FDCE
@@ -39712,7 +39697,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(7),
+      D => \state_out_reg[127]_0\(8),
       Q => \round_state[6]\(65)
     );
 \state_out_reg[66]\: unisim.vcomponents.FDCE
@@ -39720,7 +39705,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(8),
+      D => \state_out_reg[127]_0\(9),
       Q => \^q\(63)
     );
 \state_out_reg[67]\: unisim.vcomponents.FDCE
@@ -39728,7 +39713,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(9),
+      D => \state_out_reg[127]_0\(10),
       Q => \^q\(64)
     );
 \state_out_reg[68]\: unisim.vcomponents.FDCE
@@ -39736,7 +39721,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(10),
+      D => \state_out_reg[127]_0\(11),
       Q => \^q\(65)
     );
 \state_out_reg[69]\: unisim.vcomponents.FDCE
@@ -39744,7 +39729,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(11),
+      D => \state_out_reg[127]_0\(12),
       Q => \^q\(66)
     );
 \state_out_reg[6]\: unisim.vcomponents.FDCE
@@ -39753,14 +39738,14 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(6),
-      Q => \^q\(6)
+      Q => \^q\(5)
     );
 \state_out_reg[70]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(12),
+      D => \state_out_reg[127]_0\(13),
       Q => \^q\(67)
     );
 \state_out_reg[71]\: unisim.vcomponents.FDCE
@@ -39768,7 +39753,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(13),
+      D => \state_out_reg[127]_0\(14),
       Q => \^q\(68)
     );
 \state_out_reg[72]\: unisim.vcomponents.FDCE
@@ -39776,7 +39761,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(14),
+      D => \state_out_reg[127]_0\(15),
       Q => \^q\(69)
     );
 \state_out_reg[73]\: unisim.vcomponents.FDCE
@@ -39784,7 +39769,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(15),
+      D => \state_out_reg[127]_0\(16),
       Q => \^q\(70)
     );
 \state_out_reg[74]\: unisim.vcomponents.FDCE
@@ -39792,7 +39777,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(16),
+      D => \state_out_reg[127]_0\(17),
       Q => \^q\(71)
     );
 \state_out_reg[75]\: unisim.vcomponents.FDCE
@@ -39800,7 +39785,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(17),
+      D => \state_out_reg[127]_0\(18),
       Q => \^q\(72)
     );
 \state_out_reg[76]\: unisim.vcomponents.FDCE
@@ -39808,7 +39793,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(18),
+      D => \state_out_reg[127]_0\(19),
       Q => \^q\(73)
     );
 \state_out_reg[77]\: unisim.vcomponents.FDCE
@@ -39816,7 +39801,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(19),
+      D => \state_out_reg[127]_0\(20),
       Q => \^q\(74)
     );
 \state_out_reg[78]\: unisim.vcomponents.FDCE
@@ -39824,7 +39809,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(20),
+      D => \state_out_reg[127]_0\(21),
       Q => \^q\(75)
     );
 \state_out_reg[79]\: unisim.vcomponents.FDCE
@@ -39832,7 +39817,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(21),
+      D => \state_out_reg[127]_0\(22),
       Q => \^q\(76)
     );
 \state_out_reg[7]\: unisim.vcomponents.FDCE
@@ -39841,14 +39826,14 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(7),
-      Q => \^q\(7)
+      Q => \^q\(6)
     );
 \state_out_reg[80]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(22),
+      D => \state_out_reg[127]_0\(23),
       Q => \^q\(77)
     );
 \state_out_reg[81]\: unisim.vcomponents.FDCE
@@ -39856,7 +39841,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(23),
+      D => \state_out_reg[127]_0\(24),
       Q => \^q\(78)
     );
 \state_out_reg[82]\: unisim.vcomponents.FDCE
@@ -39864,7 +39849,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(24),
+      D => \state_out_reg[127]_0\(25),
       Q => \^q\(79)
     );
 \state_out_reg[83]\: unisim.vcomponents.FDCE
@@ -39872,7 +39857,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(25),
+      D => \state_out_reg[127]_0\(26),
       Q => \^q\(80)
     );
 \state_out_reg[84]\: unisim.vcomponents.FDCE
@@ -39880,7 +39865,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(26),
+      D => \state_out_reg[127]_0\(27),
       Q => \^q\(81)
     );
 \state_out_reg[85]\: unisim.vcomponents.FDCE
@@ -39888,7 +39873,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(27),
+      D => \state_out_reg[127]_0\(28),
       Q => \^q\(82)
     );
 \state_out_reg[86]\: unisim.vcomponents.FDCE
@@ -39896,7 +39881,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(28),
+      D => \state_out_reg[127]_0\(29),
       Q => \^q\(83)
     );
 \state_out_reg[87]\: unisim.vcomponents.FDCE
@@ -39904,7 +39889,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(29),
+      D => \state_out_reg[127]_0\(30),
       Q => \^q\(84)
     );
 \state_out_reg[88]\: unisim.vcomponents.FDCE
@@ -39912,7 +39897,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(30),
+      D => \state_out_reg[127]_0\(31),
       Q => \^q\(85)
     );
 \state_out_reg[89]\: unisim.vcomponents.FDCE
@@ -39920,7 +39905,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(31),
+      D => \state_out_reg[127]_0\(32),
       Q => \^q\(86)
     );
 \state_out_reg[8]\: unisim.vcomponents.FDCE
@@ -39929,14 +39914,14 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(8),
-      Q => \^q\(8)
+      Q => \^q\(7)
     );
 \state_out_reg[90]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(32),
+      D => \state_out_reg[127]_0\(33),
       Q => \^q\(87)
     );
 \state_out_reg[91]\: unisim.vcomponents.FDCE
@@ -39944,7 +39929,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(33),
+      D => \state_out_reg[127]_0\(34),
       Q => \^q\(88)
     );
 \state_out_reg[92]\: unisim.vcomponents.FDCE
@@ -39952,7 +39937,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(34),
+      D => \state_out_reg[127]_0\(35),
       Q => \^q\(89)
     );
 \state_out_reg[93]\: unisim.vcomponents.FDCE
@@ -39960,7 +39945,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(35),
+      D => \state_out_reg[127]_0\(36),
       Q => \^q\(90)
     );
 \state_out_reg[94]\: unisim.vcomponents.FDCE
@@ -39968,7 +39953,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(36),
+      D => \state_out_reg[127]_0\(37),
       Q => \round_state[6]\(94)
     );
 \state_out_reg[95]\: unisim.vcomponents.FDCE
@@ -39976,7 +39961,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(37),
+      D => \state_out_reg[127]_0\(38),
       Q => \round_state[6]\(95)
     );
 \state_out_reg[96]\: unisim.vcomponents.FDCE
@@ -39984,15 +39969,15 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(38),
-      Q => \^q\(91)
+      D => \state_out_reg[127]_0\(39),
+      Q => \round_state[6]\(96)
     );
 \state_out_reg[97]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(39),
+      D => \state_out_reg[127]_0\(40),
       Q => \round_state[6]\(97)
     );
 \state_out_reg[98]\: unisim.vcomponents.FDCE
@@ -40000,16 +39985,16 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(40),
-      Q => \^q\(92)
+      D => \state_out_reg[127]_0\(41),
+      Q => \^q\(91)
     );
 \state_out_reg[99]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(41),
-      Q => \^q\(93)
+      D => \state_out_reg[127]_0\(42),
+      Q => \^q\(92)
     );
 \state_out_reg[9]\: unisim.vcomponents.FDCE
      port map (
@@ -40017,7 +40002,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_15
       CE => enable,
       CLR => rst,
       D => sbox_state(9),
-      Q => \^q\(9)
+      Q => \^q\(8)
     );
 end STRUCTURE;
 library IEEE;
@@ -40029,7 +40014,7 @@ entity design_ascon_ascon_core_0_2_ascon_round_7 is
     add_const_state : out STD_LOGIC_VECTOR ( 61 downto 0 );
     \state_out_reg[63]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     D : out STD_LOGIC_VECTOR ( 70 downto 0 );
-    Q : out STD_LOGIC_VECTOR ( 119 downto 0 );
+    \state_out_reg[124]_0\ : out STD_LOGIC_VECTOR ( 119 downto 0 );
     \state_out_reg[31]_0\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
     \state_out_reg[28]_0\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
     \state_out_reg[23]_0\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -40045,7 +40030,7 @@ entity design_ascon_ascon_core_0_2_ascon_round_7 is
     \state_out_reg[44]_0\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
     \state_out_reg[38]_0\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
     \state_out_reg[33]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \round_state[6]\ : in STD_LOGIC_VECTOR ( 120 downto 0 );
+    Q : in STD_LOGIC_VECTOR ( 118 downto 0 );
     \state_out_reg[37]_0\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \state_out_reg[41]_0\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     \state_out_reg[45]_0\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -40064,7 +40049,7 @@ entity design_ascon_ascon_core_0_2_ascon_round_7 is
     S : in STD_LOGIC_VECTOR ( 0 to 0 );
     CO : in STD_LOGIC_VECTOR ( 0 to 0 );
     add_const_state_0 : in STD_LOGIC_VECTOR ( 62 downto 0 );
-    \state_out_reg[127]_0\ : in STD_LOGIC_VECTOR ( 69 downto 0 );
+    \state_out_reg[127]_0\ : in STD_LOGIC_VECTOR ( 70 downto 0 );
     enable : in STD_LOGIC;
     clk : in STD_LOGIC;
     rst : in STD_LOGIC
@@ -40074,34 +40059,31 @@ entity design_ascon_ascon_core_0_2_ascon_round_7 is
 end design_ascon_ascon_core_0_2_ascon_round_7;
 
 architecture STRUCTURE of design_ascon_ascon_core_0_2_ascon_round_7 is
-  signal \^q\ : STD_LOGIC_VECTOR ( 119 downto 0 );
   signal \^add_const_state\ : STD_LOGIC_VECTOR ( 61 downto 0 );
-  signal linear_state : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \round_state[7]\ : STD_LOGIC_VECTOR ( 127 downto 93 );
   signal sbox_state : STD_LOGIC_VECTOR ( 61 downto 2 );
+  signal \^state_out_reg[124]_0\ : STD_LOGIC_VECTOR ( 119 downto 0 );
 begin
-  Q(119 downto 0) <= \^q\(119 downto 0);
   add_const_state(61 downto 0) <= \^add_const_state\(61 downto 0);
+  \state_out_reg[124]_0\(119 downto 0) <= \^state_out_reg[124]_0\(119 downto 0);
 constant_inst: entity work.design_ascon_ascon_core_0_2_ascon_add_constant_12
      port map (
-      D(0) => linear_state(0),
-      Q(32 downto 31) => \^q\(59 downto 58),
-      Q(30 downto 23) => \^q\(56 downto 49),
-      Q(22 downto 19) => \^q\(44 downto 41),
-      Q(18 downto 17) => \^q\(38 downto 37),
-      Q(16) => \^q\(33),
-      Q(15) => \^q\(31),
-      Q(14 downto 13) => \^q\(29 downto 28),
-      Q(12) => \^q\(26),
-      Q(11 downto 8) => \^q\(23 downto 20),
-      Q(7 downto 5) => \^q\(16 downto 14),
-      Q(4 downto 2) => \^q\(9 downto 7),
-      Q(1) => \^q\(4),
-      Q(0) => \^q\(2),
+      Q(62 downto 0) => Q(62 downto 0),
       S(0) => S(0),
       add_const_state(61 downto 0) => \^add_const_state\(61 downto 0),
-      \round_state[6]\(64) => \round_state[6]\(92),
-      \round_state[6]\(63 downto 0) => \round_state[6]\(63 downto 0),
+      \state_out0_carry__13_0\(32 downto 31) => \^state_out_reg[124]_0\(59 downto 58),
+      \state_out0_carry__13_0\(30 downto 23) => \^state_out_reg[124]_0\(56 downto 49),
+      \state_out0_carry__13_0\(22 downto 19) => \^state_out_reg[124]_0\(44 downto 41),
+      \state_out0_carry__13_0\(18 downto 17) => \^state_out_reg[124]_0\(38 downto 37),
+      \state_out0_carry__13_0\(16) => \^state_out_reg[124]_0\(33),
+      \state_out0_carry__13_0\(15) => \^state_out_reg[124]_0\(31),
+      \state_out0_carry__13_0\(14 downto 13) => \^state_out_reg[124]_0\(29 downto 28),
+      \state_out0_carry__13_0\(12) => \^state_out_reg[124]_0\(26),
+      \state_out0_carry__13_0\(11 downto 8) => \^state_out_reg[124]_0\(23 downto 20),
+      \state_out0_carry__13_0\(7 downto 5) => \^state_out_reg[124]_0\(16 downto 14),
+      \state_out0_carry__13_0\(4 downto 2) => \^state_out_reg[124]_0\(9 downto 7),
+      \state_out0_carry__13_0\(1) => \^state_out_reg[124]_0\(4),
+      \state_out0_carry__13_0\(0) => \^state_out_reg[124]_0\(2),
       \state_out_reg[16]\(2 downto 0) => \state_out_reg[16]_0\(2 downto 0),
       \state_out_reg[20]\(0) => \state_out_reg[20]_0\(0),
       \state_out_reg[23]\(2 downto 0) => \state_out_reg[23]_0\(2 downto 0),
@@ -40138,24 +40120,23 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_13
       CO(0) => CO(0),
       D(55 downto 28) => sbox_state(61 downto 34),
       D(27 downto 0) => sbox_state(29 downto 2),
-      Q(63 downto 61) => \round_state[7]\(127 downto 125),
-      Q(60 downto 33) => \^q\(119 downto 92),
-      Q(32 downto 29) => \round_state[7]\(96 downto 93),
-      Q(28 downto 1) => \^q\(91 downto 64),
-      Q(0) => \^q\(0),
+      Q(55 downto 0) => Q(118 downto 63),
       add_const_state(55 downto 28) => \^add_const_state\(59 downto 32),
       add_const_state(27 downto 0) => \^add_const_state\(27 downto 0),
       add_const_state_0(62 downto 0) => add_const_state_0(62 downto 0),
-      \round_state[6]\(55 downto 28) => \round_state[6]\(120 downto 93),
-      \round_state[6]\(27 downto 0) => \round_state[6]\(91 downto 64),
-      \state_out_reg[127]\(69 downto 0) => D(70 downto 1)
+      \state_out_reg[127]\(69 downto 0) => D(70 downto 1),
+      \state_out_reg[31]\(63 downto 61) => \round_state[7]\(127 downto 125),
+      \state_out_reg[31]\(60 downto 33) => \^state_out_reg[124]_0\(119 downto 92),
+      \state_out_reg[31]\(32 downto 29) => \round_state[7]\(96 downto 93),
+      \state_out_reg[31]\(28 downto 1) => \^state_out_reg[124]_0\(91 downto 64),
+      \state_out_reg[31]\(0) => \^state_out_reg[124]_0\(0)
     );
 \state_out0_carry__14_i_1__3\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
         port map (
-      I0 => \^q\(62),
+      I0 => \^state_out_reg[124]_0\(62),
       O => \state_out_reg[62]_0\(1)
     );
 \state_out0_carry__14_i_2__0\: unisim.vcomponents.LUT1
@@ -40163,7 +40144,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_13
       INIT => X"1"
     )
         port map (
-      I0 => \^q\(61),
+      I0 => \^state_out_reg[124]_0\(61),
       O => \state_out_reg[62]_0\(0)
     );
 \state_out[0]_i_1__6\: unisim.vcomponents.LUT4
@@ -40174,1174 +40155,6 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_13
       I0 => CO(0),
       I1 => add_const_state_0(31),
       I2 => \round_state[7]\(96),
-      I3 => \^q\(0),
-      O => D(0)
-    );
-\state_out_reg[0]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => linear_state(0),
-      Q => \^q\(0)
-    );
-\state_out_reg[100]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(42),
-      Q => \^q\(95)
-    );
-\state_out_reg[101]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(43),
-      Q => \^q\(96)
-    );
-\state_out_reg[102]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(44),
-      Q => \^q\(97)
-    );
-\state_out_reg[103]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(45),
-      Q => \^q\(98)
-    );
-\state_out_reg[104]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(46),
-      Q => \^q\(99)
-    );
-\state_out_reg[105]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(47),
-      Q => \^q\(100)
-    );
-\state_out_reg[106]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(48),
-      Q => \^q\(101)
-    );
-\state_out_reg[107]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(49),
-      Q => \^q\(102)
-    );
-\state_out_reg[108]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(50),
-      Q => \^q\(103)
-    );
-\state_out_reg[109]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(51),
-      Q => \^q\(104)
-    );
-\state_out_reg[10]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(10),
-      Q => \^q\(10)
-    );
-\state_out_reg[110]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(52),
-      Q => \^q\(105)
-    );
-\state_out_reg[111]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(53),
-      Q => \^q\(106)
-    );
-\state_out_reg[112]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(54),
-      Q => \^q\(107)
-    );
-\state_out_reg[113]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(55),
-      Q => \^q\(108)
-    );
-\state_out_reg[114]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(56),
-      Q => \^q\(109)
-    );
-\state_out_reg[115]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(57),
-      Q => \^q\(110)
-    );
-\state_out_reg[116]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(58),
-      Q => \^q\(111)
-    );
-\state_out_reg[117]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(59),
-      Q => \^q\(112)
-    );
-\state_out_reg[118]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(60),
-      Q => \^q\(113)
-    );
-\state_out_reg[119]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(61),
-      Q => \^q\(114)
-    );
-\state_out_reg[11]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(11),
-      Q => \^q\(11)
-    );
-\state_out_reg[120]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(62),
-      Q => \^q\(115)
-    );
-\state_out_reg[121]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(63),
-      Q => \^q\(116)
-    );
-\state_out_reg[122]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(64),
-      Q => \^q\(117)
-    );
-\state_out_reg[123]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(65),
-      Q => \^q\(118)
-    );
-\state_out_reg[124]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(66),
-      Q => \^q\(119)
-    );
-\state_out_reg[125]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(67),
-      Q => \round_state[7]\(125)
-    );
-\state_out_reg[126]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(68),
-      Q => \round_state[7]\(126)
-    );
-\state_out_reg[127]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(69),
-      Q => \round_state[7]\(127)
-    );
-\state_out_reg[12]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(12),
-      Q => \^q\(12)
-    );
-\state_out_reg[13]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(13),
-      Q => \^q\(13)
-    );
-\state_out_reg[14]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(14),
-      Q => \^q\(14)
-    );
-\state_out_reg[15]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(15),
-      Q => \^q\(15)
-    );
-\state_out_reg[16]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(16),
-      Q => \^q\(16)
-    );
-\state_out_reg[17]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(17),
-      Q => \^q\(17)
-    );
-\state_out_reg[18]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(18),
-      Q => \^q\(18)
-    );
-\state_out_reg[19]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(19),
-      Q => \^q\(19)
-    );
-\state_out_reg[1]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(0),
-      Q => \^q\(1)
-    );
-\state_out_reg[20]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(20),
-      Q => \^q\(20)
-    );
-\state_out_reg[21]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(21),
-      Q => \^q\(21)
-    );
-\state_out_reg[22]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(22),
-      Q => \^q\(22)
-    );
-\state_out_reg[23]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(23),
-      Q => \^q\(23)
-    );
-\state_out_reg[24]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(24),
-      Q => \^q\(24)
-    );
-\state_out_reg[25]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(25),
-      Q => \^q\(25)
-    );
-\state_out_reg[26]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(26),
-      Q => \^q\(26)
-    );
-\state_out_reg[27]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(27),
-      Q => \^q\(27)
-    );
-\state_out_reg[28]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(28),
-      Q => \^q\(28)
-    );
-\state_out_reg[29]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(29),
-      Q => \^q\(29)
-    );
-\state_out_reg[2]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(2),
-      Q => \^q\(2)
-    );
-\state_out_reg[30]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(1),
-      Q => \^q\(30)
-    );
-\state_out_reg[31]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(2),
-      Q => \^q\(31)
-    );
-\state_out_reg[32]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(3),
-      Q => \^q\(32)
-    );
-\state_out_reg[33]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(4),
-      Q => \^q\(33)
-    );
-\state_out_reg[34]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(34),
-      Q => \^q\(34)
-    );
-\state_out_reg[35]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(35),
-      Q => \^q\(35)
-    );
-\state_out_reg[36]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(36),
-      Q => \^q\(36)
-    );
-\state_out_reg[37]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(37),
-      Q => \^q\(37)
-    );
-\state_out_reg[38]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(38),
-      Q => \^q\(38)
-    );
-\state_out_reg[39]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(39),
-      Q => \^q\(39)
-    );
-\state_out_reg[3]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(3),
-      Q => \^q\(3)
-    );
-\state_out_reg[40]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(40),
-      Q => \^q\(40)
-    );
-\state_out_reg[41]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(41),
-      Q => \^q\(41)
-    );
-\state_out_reg[42]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(42),
-      Q => \^q\(42)
-    );
-\state_out_reg[43]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(43),
-      Q => \^q\(43)
-    );
-\state_out_reg[44]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(44),
-      Q => \^q\(44)
-    );
-\state_out_reg[45]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(45),
-      Q => \^q\(45)
-    );
-\state_out_reg[46]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(46),
-      Q => \^q\(46)
-    );
-\state_out_reg[47]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(47),
-      Q => \^q\(47)
-    );
-\state_out_reg[48]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(48),
-      Q => \^q\(48)
-    );
-\state_out_reg[49]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(49),
-      Q => \^q\(49)
-    );
-\state_out_reg[4]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(4),
-      Q => \^q\(4)
-    );
-\state_out_reg[50]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(50),
-      Q => \^q\(50)
-    );
-\state_out_reg[51]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(51),
-      Q => \^q\(51)
-    );
-\state_out_reg[52]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(52),
-      Q => \^q\(52)
-    );
-\state_out_reg[53]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(53),
-      Q => \^q\(53)
-    );
-\state_out_reg[54]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(54),
-      Q => \^q\(54)
-    );
-\state_out_reg[55]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(55),
-      Q => \^q\(55)
-    );
-\state_out_reg[56]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(56),
-      Q => \^q\(56)
-    );
-\state_out_reg[57]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(57),
-      Q => \^q\(57)
-    );
-\state_out_reg[58]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(58),
-      Q => \^q\(58)
-    );
-\state_out_reg[59]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(59),
-      Q => \^q\(59)
-    );
-\state_out_reg[5]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(5),
-      Q => \^q\(5)
-    );
-\state_out_reg[60]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(60),
-      Q => \^q\(60)
-    );
-\state_out_reg[61]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(61),
-      Q => \^q\(61)
-    );
-\state_out_reg[62]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(5),
-      Q => \^q\(62)
-    );
-\state_out_reg[63]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(6),
-      Q => \^q\(63)
-    );
-\state_out_reg[65]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(7),
-      Q => \^q\(64)
-    );
-\state_out_reg[66]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(8),
-      Q => \^q\(65)
-    );
-\state_out_reg[67]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(9),
-      Q => \^q\(66)
-    );
-\state_out_reg[68]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(10),
-      Q => \^q\(67)
-    );
-\state_out_reg[69]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(11),
-      Q => \^q\(68)
-    );
-\state_out_reg[6]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(6),
-      Q => \^q\(6)
-    );
-\state_out_reg[70]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(12),
-      Q => \^q\(69)
-    );
-\state_out_reg[71]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(13),
-      Q => \^q\(70)
-    );
-\state_out_reg[72]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(14),
-      Q => \^q\(71)
-    );
-\state_out_reg[73]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(15),
-      Q => \^q\(72)
-    );
-\state_out_reg[74]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(16),
-      Q => \^q\(73)
-    );
-\state_out_reg[75]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(17),
-      Q => \^q\(74)
-    );
-\state_out_reg[76]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(18),
-      Q => \^q\(75)
-    );
-\state_out_reg[77]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(19),
-      Q => \^q\(76)
-    );
-\state_out_reg[78]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(20),
-      Q => \^q\(77)
-    );
-\state_out_reg[79]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(21),
-      Q => \^q\(78)
-    );
-\state_out_reg[7]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(7),
-      Q => \^q\(7)
-    );
-\state_out_reg[80]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(22),
-      Q => \^q\(79)
-    );
-\state_out_reg[81]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(23),
-      Q => \^q\(80)
-    );
-\state_out_reg[82]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(24),
-      Q => \^q\(81)
-    );
-\state_out_reg[83]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(25),
-      Q => \^q\(82)
-    );
-\state_out_reg[84]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(26),
-      Q => \^q\(83)
-    );
-\state_out_reg[85]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(27),
-      Q => \^q\(84)
-    );
-\state_out_reg[86]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(28),
-      Q => \^q\(85)
-    );
-\state_out_reg[87]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(29),
-      Q => \^q\(86)
-    );
-\state_out_reg[88]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(30),
-      Q => \^q\(87)
-    );
-\state_out_reg[89]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(31),
-      Q => \^q\(88)
-    );
-\state_out_reg[8]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(8),
-      Q => \^q\(8)
-    );
-\state_out_reg[90]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(32),
-      Q => \^q\(89)
-    );
-\state_out_reg[91]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(33),
-      Q => \^q\(90)
-    );
-\state_out_reg[92]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(34),
-      Q => \^q\(91)
-    );
-\state_out_reg[93]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(35),
-      Q => \round_state[7]\(93)
-    );
-\state_out_reg[94]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(36),
-      Q => \round_state[7]\(94)
-    );
-\state_out_reg[95]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(37),
-      Q => \round_state[7]\(95)
-    );
-\state_out_reg[96]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(38),
-      Q => \round_state[7]\(96)
-    );
-\state_out_reg[97]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(39),
-      Q => \^q\(92)
-    );
-\state_out_reg[98]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(40),
-      Q => \^q\(93)
-    );
-\state_out_reg[99]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => \state_out_reg[127]_0\(41),
-      Q => \^q\(94)
-    );
-\state_out_reg[9]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => enable,
-      CLR => rst,
-      D => sbox_state(9),
-      Q => \^q\(9)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity design_ascon_ascon_core_0_2_ascon_round_8 is
-  port (
-    add_const_state : out STD_LOGIC_VECTOR ( 62 downto 0 );
-    CO : out STD_LOGIC_VECTOR ( 0 to 0 );
-    D : out STD_LOGIC_VECTOR ( 70 downto 0 );
-    \state_out_reg[124]_0\ : out STD_LOGIC_VECTOR ( 119 downto 0 );
-    S : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    \state_out_reg[56]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \state_out_reg[52]_0\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    \state_out_reg[44]_0\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    \state_out_reg[39]_0\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    \state_out_reg[36]_0\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    \state_out_reg[32]_0\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    \state_out_reg[27]_0\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    \state_out_reg[24]_0\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    \state_out_reg[20]_0\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    \state_out_reg[15]_0\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    \state_out_reg[12]_0\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    \state_out_reg[8]_0\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    \state_out_reg[4]_0\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    Q : in STD_LOGIC_VECTOR ( 119 downto 0 );
-    \state_out_reg[36]_1\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \state_out_reg[40]_0\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \state_out_reg[44]_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \state_out_reg[48]_0\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    \state_out_reg[52]_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \state_out_reg[56]_1\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    \state_out_reg[60]_0\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \state_out_reg[32]_1\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \state_out_reg[36]_2\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \state_out_reg[40]_1\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \state_out_reg[44]_2\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    \state_out_reg[52]_2\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    \state_out_reg[56]_2\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    \state_out_reg[60]_1\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \state_out_reg[96]_0\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \state_out_reg[96]_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    add_const_state_0 : in STD_LOGIC_VECTOR ( 62 downto 0 );
-    \state_out_reg[127]_0\ : in STD_LOGIC_VECTOR ( 70 downto 0 );
-    enable : in STD_LOGIC;
-    clk : in STD_LOGIC;
-    rst : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_ascon_ascon_core_0_2_ascon_round_8 : entity is "ascon_round";
-end design_ascon_ascon_core_0_2_ascon_round_8;
-
-architecture STRUCTURE of design_ascon_ascon_core_0_2_ascon_round_8 is
-  signal \^add_const_state\ : STD_LOGIC_VECTOR ( 62 downto 0 );
-  signal \round_state[8]\ : STD_LOGIC_VECTOR ( 127 downto 93 );
-  signal sbox_state : STD_LOGIC_VECTOR ( 60 downto 1 );
-  signal \^state_out_reg[124]_0\ : STD_LOGIC_VECTOR ( 119 downto 0 );
-begin
-  add_const_state(62 downto 0) <= \^add_const_state\(62 downto 0);
-  \state_out_reg[124]_0\(119 downto 0) <= \^state_out_reg[124]_0\(119 downto 0);
-constant_inst: entity work.design_ascon_ascon_core_0_2_ascon_add_constant_10
-     port map (
-      CO(0) => CO(0),
-      Q(63 downto 0) => Q(63 downto 0),
-      add_const_state(62 downto 0) => \^add_const_state\(62 downto 0),
-      \state_out0_carry__12_0\(33) => \^state_out_reg[124]_0\(56),
-      \state_out0_carry__12_0\(32 downto 29) => \^state_out_reg[124]_0\(52 downto 49),
-      \state_out0_carry__12_0\(28 downto 25) => \^state_out_reg[124]_0\(44 downto 41),
-      \state_out0_carry__12_0\(24 downto 23) => \^state_out_reg[124]_0\(39 downto 38),
-      \state_out0_carry__12_0\(22 downto 21) => \^state_out_reg[124]_0\(36 downto 35),
-      \state_out0_carry__12_0\(20 downto 19) => \^state_out_reg[124]_0\(33 downto 32),
-      \state_out0_carry__12_0\(18) => \^state_out_reg[124]_0\(30),
-      \state_out0_carry__12_0\(17) => \^state_out_reg[124]_0\(27),
-      \state_out0_carry__12_0\(16 downto 15) => \^state_out_reg[124]_0\(25 downto 24),
-      \state_out0_carry__12_0\(14 downto 12) => \^state_out_reg[124]_0\(22 downto 20),
-      \state_out0_carry__12_0\(11 downto 10) => \^state_out_reg[124]_0\(18 downto 17),
-      \state_out0_carry__12_0\(9 downto 6) => \^state_out_reg[124]_0\(15 downto 12),
-      \state_out0_carry__12_0\(5 downto 3) => \^state_out_reg[124]_0\(9 downto 7),
-      \state_out0_carry__12_0\(2 downto 1) => \^state_out_reg[124]_0\(4 downto 3),
-      \state_out0_carry__12_0\(0) => \^state_out_reg[124]_0\(1),
-      \state_out_reg[12]\(1 downto 0) => \state_out_reg[12]_0\(1 downto 0),
-      \state_out_reg[15]\(2 downto 0) => \state_out_reg[15]_0\(2 downto 0),
-      \state_out_reg[20]\(2 downto 0) => \state_out_reg[20]_0\(2 downto 0),
-      \state_out_reg[24]\(2 downto 0) => \state_out_reg[24]_0\(2 downto 0),
-      \state_out_reg[27]\(1 downto 0) => \state_out_reg[27]_0\(1 downto 0),
-      \state_out_reg[32]\(1 downto 0) => \state_out_reg[32]_0\(1 downto 0),
-      \state_out_reg[32]_0\(1 downto 0) => \state_out_reg[32]_1\(1 downto 0),
-      \state_out_reg[36]\(2 downto 0) => \state_out_reg[36]_0\(2 downto 0),
-      \state_out_reg[36]_0\(1 downto 0) => \state_out_reg[36]_1\(1 downto 0),
-      \state_out_reg[36]_1\(0) => \state_out_reg[36]_2\(0),
-      \state_out_reg[39]\(1 downto 0) => \state_out_reg[39]_0\(1 downto 0),
-      \state_out_reg[40]\(1 downto 0) => \state_out_reg[40]_0\(1 downto 0),
-      \state_out_reg[40]_0\(1 downto 0) => \state_out_reg[40]_1\(1 downto 0),
-      \state_out_reg[44]\(3 downto 0) => \state_out_reg[44]_0\(3 downto 0),
-      \state_out_reg[44]_0\(0) => \state_out_reg[44]_1\(0),
-      \state_out_reg[44]_1\(3 downto 0) => \state_out_reg[44]_2\(3 downto 0),
-      \state_out_reg[48]\(2 downto 0) => \state_out_reg[48]_0\(2 downto 0),
-      \state_out_reg[4]\(2 downto 0) => \state_out_reg[4]_0\(2 downto 0),
-      \state_out_reg[52]\(3 downto 0) => \state_out_reg[52]_0\(3 downto 0),
-      \state_out_reg[52]_0\(0) => \state_out_reg[52]_1\(0),
-      \state_out_reg[52]_1\(3 downto 0) => \state_out_reg[52]_2\(3 downto 0),
-      \state_out_reg[56]\(0) => \state_out_reg[56]_0\(0),
-      \state_out_reg[56]_0\(2 downto 0) => \state_out_reg[56]_1\(2 downto 0),
-      \state_out_reg[56]_1\(3 downto 0) => \state_out_reg[56]_2\(3 downto 0),
-      \state_out_reg[60]\(1 downto 0) => \state_out_reg[60]_0\(1 downto 0),
-      \state_out_reg[60]_0\(1 downto 0) => \state_out_reg[60]_1\(1 downto 0),
-      \state_out_reg[8]\(1 downto 0) => \state_out_reg[8]_0\(1 downto 0),
-      \state_out_reg[96]\(1 downto 0) => \state_out_reg[96]_0\(1 downto 0)
-    );
-sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_11
-     port map (
-      D(55 downto 28) => sbox_state(60 downto 33),
-      D(27 downto 0) => sbox_state(28 downto 1),
-      Q(55 downto 0) => Q(119 downto 64),
-      add_const_state(55 downto 28) => \^add_const_state\(59 downto 32),
-      add_const_state(27 downto 0) => \^add_const_state\(27 downto 0),
-      add_const_state_0(62 downto 0) => add_const_state_0(62 downto 0),
-      \state_out_reg[127]\(69 downto 0) => D(70 downto 1),
-      \state_out_reg[31]\(63 downto 61) => \round_state[8]\(127 downto 125),
-      \state_out_reg[31]\(60 downto 33) => \^state_out_reg[124]_0\(119 downto 92),
-      \state_out_reg[31]\(32 downto 29) => \round_state[8]\(96 downto 93),
-      \state_out_reg[31]\(28 downto 1) => \^state_out_reg[124]_0\(91 downto 64),
-      \state_out_reg[31]\(0) => \^state_out_reg[124]_0\(0),
-      \state_out_reg[96]\(0) => \state_out_reg[96]_1\(0)
-    );
-\state_out0_carry__14_i_1__4\: unisim.vcomponents.LUT1
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => \^state_out_reg[124]_0\(63),
-      O => S(1)
-    );
-\state_out0_carry__14_i_2__1\: unisim.vcomponents.LUT1
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => \^state_out_reg[124]_0\(62),
-      O => S(0)
-    );
-\state_out[0]_i_1__7\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"9669"
-    )
-        port map (
-      I0 => \state_out_reg[96]_1\(0),
-      I1 => add_const_state_0(31),
-      I2 => \round_state[8]\(96),
       I3 => \^state_out_reg[124]_0\(0),
       O => D(0)
     );
@@ -41575,7 +40388,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_11
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(68),
-      Q => \round_state[8]\(125)
+      Q => \round_state[7]\(125)
     );
 \state_out_reg[126]\: unisim.vcomponents.FDCE
      port map (
@@ -41583,7 +40396,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_11
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(69),
-      Q => \round_state[8]\(126)
+      Q => \round_state[7]\(126)
     );
 \state_out_reg[127]\: unisim.vcomponents.FDCE
      port map (
@@ -41591,7 +40404,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_11
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(70),
-      Q => \round_state[8]\(127)
+      Q => \round_state[7]\(127)
     );
 \state_out_reg[12]\: unisim.vcomponents.FDCE
      port map (
@@ -41662,7 +40475,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_11
       C => clk,
       CE => enable,
       CLR => rst,
-      D => sbox_state(1),
+      D => \state_out_reg[127]_0\(1),
       Q => \^state_out_reg[124]_0\(1)
     );
 \state_out_reg[20]\: unisim.vcomponents.FDCE
@@ -41742,7 +40555,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_11
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(1),
+      D => sbox_state(29),
       Q => \^state_out_reg[124]_0\(29)
     );
 \state_out_reg[2]\: unisim.vcomponents.FDCE
@@ -41782,7 +40595,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_11
       C => clk,
       CE => enable,
       CLR => rst,
-      D => sbox_state(33),
+      D => \state_out_reg[127]_0\(5),
       Q => \^state_out_reg[124]_0\(33)
     );
 \state_out_reg[34]\: unisim.vcomponents.FDCE
@@ -42030,7 +40843,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_11
       C => clk,
       CE => enable,
       CLR => rst,
-      D => \state_out_reg[127]_0\(5),
+      D => sbox_state(61),
       Q => \^state_out_reg[124]_0\(61)
     );
 \state_out_reg[62]\: unisim.vcomponents.FDCE
@@ -42303,7 +41116,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_11
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(36),
-      Q => \round_state[8]\(93)
+      Q => \round_state[7]\(93)
     );
 \state_out_reg[94]\: unisim.vcomponents.FDCE
      port map (
@@ -42311,7 +41124,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_11
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(37),
-      Q => \round_state[8]\(94)
+      Q => \round_state[7]\(94)
     );
 \state_out_reg[95]\: unisim.vcomponents.FDCE
      port map (
@@ -42319,7 +41132,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_11
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(38),
-      Q => \round_state[8]\(95)
+      Q => \round_state[7]\(95)
     );
 \state_out_reg[96]\: unisim.vcomponents.FDCE
      port map (
@@ -42327,7 +41140,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_11
       CE => enable,
       CLR => rst,
       D => \state_out_reg[127]_0\(39),
-      Q => \round_state[8]\(96)
+      Q => \round_state[7]\(96)
     );
 \state_out_reg[97]\: unisim.vcomponents.FDCE
      port map (
@@ -42366,12 +41179,1180 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
+entity design_ascon_ascon_core_0_2_ascon_round_8 is
+  port (
+    add_const_state : out STD_LOGIC_VECTOR ( 62 downto 0 );
+    CO : out STD_LOGIC_VECTOR ( 0 to 0 );
+    D : out STD_LOGIC_VECTOR ( 70 downto 0 );
+    Q : out STD_LOGIC_VECTOR ( 119 downto 0 );
+    S : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    \state_out_reg[56]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
+    \state_out_reg[52]_0\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    \state_out_reg[44]_0\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    \state_out_reg[39]_0\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    \state_out_reg[36]_0\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    \state_out_reg[32]_0\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    \state_out_reg[27]_0\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    \state_out_reg[24]_0\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    \state_out_reg[20]_0\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    \state_out_reg[15]_0\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    \state_out_reg[12]_0\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    \state_out_reg[8]_0\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    \state_out_reg[4]_0\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    \state_out_reg[28]_0\ : in STD_LOGIC_VECTOR ( 119 downto 0 );
+    \state_out_reg[36]_1\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    \state_out_reg[40]_0\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    \state_out_reg[44]_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \state_out_reg[48]_0\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    \state_out_reg[52]_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \state_out_reg[56]_1\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    \state_out_reg[60]_0\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    \state_out_reg[32]_1\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    \state_out_reg[36]_2\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \state_out_reg[40]_1\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    \state_out_reg[44]_2\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    \state_out_reg[52]_2\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    \state_out_reg[56]_2\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    \state_out_reg[60]_1\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    \state_out_reg[96]_0\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    \state_out_reg[96]_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    add_const_state_0 : in STD_LOGIC_VECTOR ( 62 downto 0 );
+    \state_out_reg[127]_0\ : in STD_LOGIC_VECTOR ( 70 downto 0 );
+    enable : in STD_LOGIC;
+    clk : in STD_LOGIC;
+    rst : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_ascon_ascon_core_0_2_ascon_round_8 : entity is "ascon_round";
+end design_ascon_ascon_core_0_2_ascon_round_8;
+
+architecture STRUCTURE of design_ascon_ascon_core_0_2_ascon_round_8 is
+  signal \^q\ : STD_LOGIC_VECTOR ( 119 downto 0 );
+  signal \^add_const_state\ : STD_LOGIC_VECTOR ( 62 downto 0 );
+  signal \round_state[8]\ : STD_LOGIC_VECTOR ( 127 downto 93 );
+  signal sbox_state : STD_LOGIC_VECTOR ( 60 downto 1 );
+begin
+  Q(119 downto 0) <= \^q\(119 downto 0);
+  add_const_state(62 downto 0) <= \^add_const_state\(62 downto 0);
+constant_inst: entity work.design_ascon_ascon_core_0_2_ascon_add_constant_10
+     port map (
+      CO(0) => CO(0),
+      Q(33) => \^q\(56),
+      Q(32 downto 29) => \^q\(52 downto 49),
+      Q(28 downto 25) => \^q\(44 downto 41),
+      Q(24 downto 23) => \^q\(39 downto 38),
+      Q(22 downto 21) => \^q\(36 downto 35),
+      Q(20 downto 19) => \^q\(33 downto 32),
+      Q(18) => \^q\(30),
+      Q(17) => \^q\(27),
+      Q(16 downto 15) => \^q\(25 downto 24),
+      Q(14 downto 12) => \^q\(22 downto 20),
+      Q(11 downto 10) => \^q\(18 downto 17),
+      Q(9 downto 6) => \^q\(15 downto 12),
+      Q(5 downto 3) => \^q\(9 downto 7),
+      Q(2 downto 1) => \^q\(4 downto 3),
+      Q(0) => \^q\(1),
+      add_const_state(62 downto 0) => \^add_const_state\(62 downto 0),
+      \state_out_reg[12]\(1 downto 0) => \state_out_reg[12]_0\(1 downto 0),
+      \state_out_reg[15]\(2 downto 0) => \state_out_reg[15]_0\(2 downto 0),
+      \state_out_reg[20]\(2 downto 0) => \state_out_reg[20]_0\(2 downto 0),
+      \state_out_reg[24]\(2 downto 0) => \state_out_reg[24]_0\(2 downto 0),
+      \state_out_reg[27]\(1 downto 0) => \state_out_reg[27]_0\(1 downto 0),
+      \state_out_reg[32]\(1 downto 0) => \state_out_reg[32]_0\(1 downto 0),
+      \state_out_reg[32]_0\(1 downto 0) => \state_out_reg[32]_1\(1 downto 0),
+      \state_out_reg[36]\(2 downto 0) => \state_out_reg[36]_0\(2 downto 0),
+      \state_out_reg[36]_0\(1 downto 0) => \state_out_reg[36]_1\(1 downto 0),
+      \state_out_reg[36]_1\(0) => \state_out_reg[36]_2\(0),
+      \state_out_reg[39]\(1 downto 0) => \state_out_reg[39]_0\(1 downto 0),
+      \state_out_reg[40]\(1 downto 0) => \state_out_reg[40]_0\(1 downto 0),
+      \state_out_reg[40]_0\(1 downto 0) => \state_out_reg[40]_1\(1 downto 0),
+      \state_out_reg[44]\(3 downto 0) => \state_out_reg[44]_0\(3 downto 0),
+      \state_out_reg[44]_0\(0) => \state_out_reg[44]_1\(0),
+      \state_out_reg[44]_1\(3 downto 0) => \state_out_reg[44]_2\(3 downto 0),
+      \state_out_reg[48]\(2 downto 0) => \state_out_reg[48]_0\(2 downto 0),
+      \state_out_reg[4]\(2 downto 0) => \state_out_reg[4]_0\(2 downto 0),
+      \state_out_reg[52]\(3 downto 0) => \state_out_reg[52]_0\(3 downto 0),
+      \state_out_reg[52]_0\(0) => \state_out_reg[52]_1\(0),
+      \state_out_reg[52]_1\(3 downto 0) => \state_out_reg[52]_2\(3 downto 0),
+      \state_out_reg[56]\(0) => \state_out_reg[56]_0\(0),
+      \state_out_reg[56]_0\(2 downto 0) => \state_out_reg[56]_1\(2 downto 0),
+      \state_out_reg[56]_1\(3 downto 0) => \state_out_reg[56]_2\(3 downto 0),
+      \state_out_reg[60]\(1 downto 0) => \state_out_reg[60]_0\(1 downto 0),
+      \state_out_reg[60]_0\(1 downto 0) => \state_out_reg[60]_1\(1 downto 0),
+      \state_out_reg[8]\(1 downto 0) => \state_out_reg[8]_0\(1 downto 0),
+      \state_out_reg[96]\(63 downto 0) => \state_out_reg[28]_0\(63 downto 0),
+      \state_out_reg[96]_0\(1 downto 0) => \state_out_reg[96]_0\(1 downto 0)
+    );
+sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox_11
+     port map (
+      D(55 downto 28) => sbox_state(60 downto 33),
+      D(27 downto 0) => sbox_state(28 downto 1),
+      Q(63 downto 61) => \round_state[8]\(127 downto 125),
+      Q(60 downto 33) => \^q\(119 downto 92),
+      Q(32 downto 29) => \round_state[8]\(96 downto 93),
+      Q(28 downto 1) => \^q\(91 downto 64),
+      Q(0) => \^q\(0),
+      add_const_state(55 downto 28) => \^add_const_state\(59 downto 32),
+      add_const_state(27 downto 0) => \^add_const_state\(27 downto 0),
+      add_const_state_0(62 downto 0) => add_const_state_0(62 downto 0),
+      \state_out_reg[127]\(69 downto 0) => D(70 downto 1),
+      \state_out_reg[28]\(55 downto 0) => \state_out_reg[28]_0\(119 downto 64),
+      \state_out_reg[96]\(0) => \state_out_reg[96]_1\(0)
+    );
+\state_out0_carry__14_i_1__4\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => \^q\(63),
+      O => S(1)
+    );
+\state_out0_carry__14_i_2__1\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => \^q\(62),
+      O => S(0)
+    );
+\state_out[0]_i_1__7\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"9669"
+    )
+        port map (
+      I0 => \state_out_reg[96]_1\(0),
+      I1 => add_const_state_0(31),
+      I2 => \round_state[8]\(96),
+      I3 => \^q\(0),
+      O => D(0)
+    );
+\state_out_reg[0]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(0),
+      Q => \^q\(0)
+    );
+\state_out_reg[100]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(43),
+      Q => \^q\(95)
+    );
+\state_out_reg[101]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(44),
+      Q => \^q\(96)
+    );
+\state_out_reg[102]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(45),
+      Q => \^q\(97)
+    );
+\state_out_reg[103]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(46),
+      Q => \^q\(98)
+    );
+\state_out_reg[104]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(47),
+      Q => \^q\(99)
+    );
+\state_out_reg[105]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(48),
+      Q => \^q\(100)
+    );
+\state_out_reg[106]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(49),
+      Q => \^q\(101)
+    );
+\state_out_reg[107]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(50),
+      Q => \^q\(102)
+    );
+\state_out_reg[108]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(51),
+      Q => \^q\(103)
+    );
+\state_out_reg[109]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(52),
+      Q => \^q\(104)
+    );
+\state_out_reg[10]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(10),
+      Q => \^q\(10)
+    );
+\state_out_reg[110]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(53),
+      Q => \^q\(105)
+    );
+\state_out_reg[111]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(54),
+      Q => \^q\(106)
+    );
+\state_out_reg[112]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(55),
+      Q => \^q\(107)
+    );
+\state_out_reg[113]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(56),
+      Q => \^q\(108)
+    );
+\state_out_reg[114]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(57),
+      Q => \^q\(109)
+    );
+\state_out_reg[115]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(58),
+      Q => \^q\(110)
+    );
+\state_out_reg[116]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(59),
+      Q => \^q\(111)
+    );
+\state_out_reg[117]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(60),
+      Q => \^q\(112)
+    );
+\state_out_reg[118]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(61),
+      Q => \^q\(113)
+    );
+\state_out_reg[119]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(62),
+      Q => \^q\(114)
+    );
+\state_out_reg[11]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(11),
+      Q => \^q\(11)
+    );
+\state_out_reg[120]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(63),
+      Q => \^q\(115)
+    );
+\state_out_reg[121]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(64),
+      Q => \^q\(116)
+    );
+\state_out_reg[122]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(65),
+      Q => \^q\(117)
+    );
+\state_out_reg[123]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(66),
+      Q => \^q\(118)
+    );
+\state_out_reg[124]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(67),
+      Q => \^q\(119)
+    );
+\state_out_reg[125]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(68),
+      Q => \round_state[8]\(125)
+    );
+\state_out_reg[126]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(69),
+      Q => \round_state[8]\(126)
+    );
+\state_out_reg[127]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(70),
+      Q => \round_state[8]\(127)
+    );
+\state_out_reg[12]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(12),
+      Q => \^q\(12)
+    );
+\state_out_reg[13]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(13),
+      Q => \^q\(13)
+    );
+\state_out_reg[14]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(14),
+      Q => \^q\(14)
+    );
+\state_out_reg[15]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(15),
+      Q => \^q\(15)
+    );
+\state_out_reg[16]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(16),
+      Q => \^q\(16)
+    );
+\state_out_reg[17]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(17),
+      Q => \^q\(17)
+    );
+\state_out_reg[18]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(18),
+      Q => \^q\(18)
+    );
+\state_out_reg[19]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(19),
+      Q => \^q\(19)
+    );
+\state_out_reg[1]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(1),
+      Q => \^q\(1)
+    );
+\state_out_reg[20]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(20),
+      Q => \^q\(20)
+    );
+\state_out_reg[21]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(21),
+      Q => \^q\(21)
+    );
+\state_out_reg[22]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(22),
+      Q => \^q\(22)
+    );
+\state_out_reg[23]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(23),
+      Q => \^q\(23)
+    );
+\state_out_reg[24]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(24),
+      Q => \^q\(24)
+    );
+\state_out_reg[25]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(25),
+      Q => \^q\(25)
+    );
+\state_out_reg[26]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(26),
+      Q => \^q\(26)
+    );
+\state_out_reg[27]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(27),
+      Q => \^q\(27)
+    );
+\state_out_reg[28]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(28),
+      Q => \^q\(28)
+    );
+\state_out_reg[29]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(1),
+      Q => \^q\(29)
+    );
+\state_out_reg[2]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(2),
+      Q => \^q\(2)
+    );
+\state_out_reg[30]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(2),
+      Q => \^q\(30)
+    );
+\state_out_reg[31]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(3),
+      Q => \^q\(31)
+    );
+\state_out_reg[32]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(4),
+      Q => \^q\(32)
+    );
+\state_out_reg[33]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(33),
+      Q => \^q\(33)
+    );
+\state_out_reg[34]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(34),
+      Q => \^q\(34)
+    );
+\state_out_reg[35]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(35),
+      Q => \^q\(35)
+    );
+\state_out_reg[36]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(36),
+      Q => \^q\(36)
+    );
+\state_out_reg[37]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(37),
+      Q => \^q\(37)
+    );
+\state_out_reg[38]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(38),
+      Q => \^q\(38)
+    );
+\state_out_reg[39]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(39),
+      Q => \^q\(39)
+    );
+\state_out_reg[3]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(3),
+      Q => \^q\(3)
+    );
+\state_out_reg[40]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(40),
+      Q => \^q\(40)
+    );
+\state_out_reg[41]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(41),
+      Q => \^q\(41)
+    );
+\state_out_reg[42]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(42),
+      Q => \^q\(42)
+    );
+\state_out_reg[43]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(43),
+      Q => \^q\(43)
+    );
+\state_out_reg[44]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(44),
+      Q => \^q\(44)
+    );
+\state_out_reg[45]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(45),
+      Q => \^q\(45)
+    );
+\state_out_reg[46]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(46),
+      Q => \^q\(46)
+    );
+\state_out_reg[47]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(47),
+      Q => \^q\(47)
+    );
+\state_out_reg[48]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(48),
+      Q => \^q\(48)
+    );
+\state_out_reg[49]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(49),
+      Q => \^q\(49)
+    );
+\state_out_reg[4]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(4),
+      Q => \^q\(4)
+    );
+\state_out_reg[50]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(50),
+      Q => \^q\(50)
+    );
+\state_out_reg[51]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(51),
+      Q => \^q\(51)
+    );
+\state_out_reg[52]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(52),
+      Q => \^q\(52)
+    );
+\state_out_reg[53]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(53),
+      Q => \^q\(53)
+    );
+\state_out_reg[54]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(54),
+      Q => \^q\(54)
+    );
+\state_out_reg[55]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(55),
+      Q => \^q\(55)
+    );
+\state_out_reg[56]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(56),
+      Q => \^q\(56)
+    );
+\state_out_reg[57]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(57),
+      Q => \^q\(57)
+    );
+\state_out_reg[58]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(58),
+      Q => \^q\(58)
+    );
+\state_out_reg[59]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(59),
+      Q => \^q\(59)
+    );
+\state_out_reg[5]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(5),
+      Q => \^q\(5)
+    );
+\state_out_reg[60]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(60),
+      Q => \^q\(60)
+    );
+\state_out_reg[61]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(5),
+      Q => \^q\(61)
+    );
+\state_out_reg[62]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(6),
+      Q => \^q\(62)
+    );
+\state_out_reg[63]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(7),
+      Q => \^q\(63)
+    );
+\state_out_reg[65]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(8),
+      Q => \^q\(64)
+    );
+\state_out_reg[66]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(9),
+      Q => \^q\(65)
+    );
+\state_out_reg[67]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(10),
+      Q => \^q\(66)
+    );
+\state_out_reg[68]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(11),
+      Q => \^q\(67)
+    );
+\state_out_reg[69]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(12),
+      Q => \^q\(68)
+    );
+\state_out_reg[6]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(6),
+      Q => \^q\(6)
+    );
+\state_out_reg[70]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(13),
+      Q => \^q\(69)
+    );
+\state_out_reg[71]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(14),
+      Q => \^q\(70)
+    );
+\state_out_reg[72]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(15),
+      Q => \^q\(71)
+    );
+\state_out_reg[73]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(16),
+      Q => \^q\(72)
+    );
+\state_out_reg[74]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(17),
+      Q => \^q\(73)
+    );
+\state_out_reg[75]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(18),
+      Q => \^q\(74)
+    );
+\state_out_reg[76]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(19),
+      Q => \^q\(75)
+    );
+\state_out_reg[77]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(20),
+      Q => \^q\(76)
+    );
+\state_out_reg[78]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(21),
+      Q => \^q\(77)
+    );
+\state_out_reg[79]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(22),
+      Q => \^q\(78)
+    );
+\state_out_reg[7]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(7),
+      Q => \^q\(7)
+    );
+\state_out_reg[80]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(23),
+      Q => \^q\(79)
+    );
+\state_out_reg[81]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(24),
+      Q => \^q\(80)
+    );
+\state_out_reg[82]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(25),
+      Q => \^q\(81)
+    );
+\state_out_reg[83]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(26),
+      Q => \^q\(82)
+    );
+\state_out_reg[84]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(27),
+      Q => \^q\(83)
+    );
+\state_out_reg[85]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(28),
+      Q => \^q\(84)
+    );
+\state_out_reg[86]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(29),
+      Q => \^q\(85)
+    );
+\state_out_reg[87]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(30),
+      Q => \^q\(86)
+    );
+\state_out_reg[88]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(31),
+      Q => \^q\(87)
+    );
+\state_out_reg[89]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(32),
+      Q => \^q\(88)
+    );
+\state_out_reg[8]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(8),
+      Q => \^q\(8)
+    );
+\state_out_reg[90]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(33),
+      Q => \^q\(89)
+    );
+\state_out_reg[91]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(34),
+      Q => \^q\(90)
+    );
+\state_out_reg[92]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(35),
+      Q => \^q\(91)
+    );
+\state_out_reg[93]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(36),
+      Q => \round_state[8]\(93)
+    );
+\state_out_reg[94]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(37),
+      Q => \round_state[8]\(94)
+    );
+\state_out_reg[95]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(38),
+      Q => \round_state[8]\(95)
+    );
+\state_out_reg[96]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(39),
+      Q => \round_state[8]\(96)
+    );
+\state_out_reg[97]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(40),
+      Q => \^q\(92)
+    );
+\state_out_reg[98]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(41),
+      Q => \^q\(93)
+    );
+\state_out_reg[99]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => \state_out_reg[127]_0\(42),
+      Q => \^q\(94)
+    );
+\state_out_reg[9]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => enable,
+      CLR => rst,
+      D => sbox_state(9),
+      Q => \^q\(9)
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
 entity design_ascon_ascon_core_0_2_ascon_round_9 is
   port (
     add_const_state : out STD_LOGIC_VECTOR ( 62 downto 0 );
     \state_out_reg[63]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     \state_out_reg[127]_0\ : out STD_LOGIC_VECTOR ( 78 downto 0 );
-    Q : out STD_LOGIC_VECTOR ( 108 downto 0 );
+    \state_out_reg[123]_0\ : out STD_LOGIC_VECTOR ( 108 downto 0 );
     \state_out_reg[31]_0\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
     \state_out_reg[26]_0\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
     \state_out_reg[23]_0\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -42385,7 +42366,7 @@ entity design_ascon_ascon_core_0_2_ascon_round_9 is
     \state_out_reg[41]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     \state_out_reg[39]_0\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
     \state_out_reg[34]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \state_out_reg[28]_0\ : in STD_LOGIC_VECTOR ( 119 downto 0 );
+    Q : in STD_LOGIC_VECTOR ( 119 downto 0 );
     \state_out_reg[36]_0\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     \state_out_reg[40]_0\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     \state_out_reg[44]_0\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -42412,36 +42393,37 @@ entity design_ascon_ascon_core_0_2_ascon_round_9 is
 end design_ascon_ascon_core_0_2_ascon_round_9;
 
 architecture STRUCTURE of design_ascon_ascon_core_0_2_ascon_round_9 is
-  signal \^q\ : STD_LOGIC_VECTOR ( 108 downto 0 );
   signal \^add_const_state\ : STD_LOGIC_VECTOR ( 62 downto 0 );
   signal \round_state[9]\ : STD_LOGIC_VECTOR ( 127 downto 0 );
   signal sbox_state : STD_LOGIC_VECTOR ( 60 downto 1 );
+  signal \^state_out_reg[123]_0\ : STD_LOGIC_VECTOR ( 108 downto 0 );
   signal \state_out_reg[96]_i_2_n_3\ : STD_LOGIC;
   signal \NLW_state_out_reg[96]_i_2_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
   signal \NLW_state_out_reg[96]_i_2_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
 begin
-  Q(108 downto 0) <= \^q\(108 downto 0);
   add_const_state(62 downto 0) <= \^add_const_state\(62 downto 0);
+  \state_out_reg[123]_0\(108 downto 0) <= \^state_out_reg[123]_0\(108 downto 0);
 constant_inst: entity work.design_ascon_ascon_core_0_2_ascon_add_constant
      port map (
-      Q(27 downto 24) => \^q\(56 downto 53),
-      Q(23 downto 21) => \^q\(49 downto 47),
-      Q(20) => \^q\(45),
-      Q(19 downto 18) => \^q\(42 downto 41),
-      Q(17) => \^q\(38),
-      Q(16 downto 15) => \^q\(36 downto 35),
-      Q(14) => \^q\(31),
-      Q(13 downto 12) => \^q\(28 downto 27),
-      Q(11) => \^q\(25),
-      Q(10 downto 9) => \^q\(23 downto 22),
-      Q(8) => \^q\(20),
-      Q(7 downto 6) => \^q\(18 downto 17),
-      Q(5 downto 3) => \^q\(15 downto 13),
-      Q(2) => \^q\(8),
-      Q(1) => \^q\(3),
-      Q(0) => \^q\(1),
+      Q(63 downto 0) => Q(63 downto 0),
       S(1 downto 0) => S(1 downto 0),
       add_const_state(62 downto 0) => \^add_const_state\(62 downto 0),
+      \state_out0_carry__12_0\(27 downto 24) => \^state_out_reg[123]_0\(56 downto 53),
+      \state_out0_carry__12_0\(23 downto 21) => \^state_out_reg[123]_0\(49 downto 47),
+      \state_out0_carry__12_0\(20) => \^state_out_reg[123]_0\(45),
+      \state_out0_carry__12_0\(19 downto 18) => \^state_out_reg[123]_0\(42 downto 41),
+      \state_out0_carry__12_0\(17) => \^state_out_reg[123]_0\(38),
+      \state_out0_carry__12_0\(16 downto 15) => \^state_out_reg[123]_0\(36 downto 35),
+      \state_out0_carry__12_0\(14) => \^state_out_reg[123]_0\(31),
+      \state_out0_carry__12_0\(13 downto 12) => \^state_out_reg[123]_0\(28 downto 27),
+      \state_out0_carry__12_0\(11) => \^state_out_reg[123]_0\(25),
+      \state_out0_carry__12_0\(10 downto 9) => \^state_out_reg[123]_0\(23 downto 22),
+      \state_out0_carry__12_0\(8) => \^state_out_reg[123]_0\(20),
+      \state_out0_carry__12_0\(7 downto 6) => \^state_out_reg[123]_0\(18 downto 17),
+      \state_out0_carry__12_0\(5 downto 3) => \^state_out_reg[123]_0\(15 downto 13),
+      \state_out0_carry__12_0\(2) => \^state_out_reg[123]_0\(8),
+      \state_out0_carry__12_0\(1) => \^state_out_reg[123]_0\(3),
+      \state_out0_carry__12_0\(0) => \^state_out_reg[123]_0\(1),
       \state_out_reg[11]\(0) => \state_out_reg[11]_0\(0),
       \state_out_reg[18]\(2 downto 0) => \state_out_reg[18]_0\(2 downto 0),
       \state_out_reg[23]\(2 downto 0) => \state_out_reg[23]_0\(2 downto 0),
@@ -42468,27 +42450,26 @@ constant_inst: entity work.design_ascon_ascon_core_0_2_ascon_add_constant
       \state_out_reg[59]\(3 downto 0) => \state_out_reg[59]_0\(3 downto 0),
       \state_out_reg[60]\(1 downto 0) => \state_out_reg[60]_0\(1 downto 0),
       \state_out_reg[63]\(0) => \state_out_reg[63]_0\(0),
-      \state_out_reg[6]\(1 downto 0) => \state_out_reg[6]_0\(1 downto 0),
-      \state_out_reg[96]\(63 downto 0) => \state_out_reg[28]_0\(63 downto 0)
+      \state_out_reg[6]\(1 downto 0) => \state_out_reg[6]_0\(1 downto 0)
     );
 sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
      port map (
       CO(0) => \state_out_reg[96]_i_2_n_3\,
       D(55 downto 28) => sbox_state(60 downto 33),
       D(27 downto 0) => sbox_state(28 downto 1),
-      Q(66 downto 63) => \round_state[9]\(127 downto 124),
-      Q(62 downto 39) => \^q\(108 downto 85),
-      Q(38 downto 31) => \round_state[9]\(99 downto 92),
-      Q(30 downto 7) => \^q\(84 downto 61),
-      Q(6 downto 4) => \round_state[9]\(67 downto 65),
-      Q(3) => \^q\(0),
-      Q(2 downto 0) => \round_state[9]\(2 downto 0),
+      Q(55 downto 0) => Q(119 downto 64),
       add_const_state(55 downto 28) => \^add_const_state\(59 downto 32),
       add_const_state(27 downto 0) => \^add_const_state\(27 downto 0),
       add_const_state_0(59 downto 0) => add_const_state_0(59 downto 0),
       \state_out_reg[127]\(76 downto 2) => \state_out_reg[127]_0\(78 downto 4),
       \state_out_reg[127]\(1 downto 0) => \state_out_reg[127]_0\(2 downto 1),
-      \state_out_reg[28]\(55 downto 0) => \state_out_reg[28]_0\(119 downto 64)
+      \state_out_reg[31]\(66 downto 63) => \round_state[9]\(127 downto 124),
+      \state_out_reg[31]\(62 downto 39) => \^state_out_reg[123]_0\(108 downto 85),
+      \state_out_reg[31]\(38 downto 31) => \round_state[9]\(99 downto 92),
+      \state_out_reg[31]\(30 downto 7) => \^state_out_reg[123]_0\(84 downto 61),
+      \state_out_reg[31]\(6 downto 4) => \round_state[9]\(67 downto 65),
+      \state_out_reg[31]\(3) => \^state_out_reg[123]_0\(0),
+      \state_out_reg[31]\(2 downto 0) => \round_state[9]\(2 downto 0)
     );
 \state_out[0]_i_1__8\: unisim.vcomponents.LUT4
     generic map(
@@ -42506,7 +42487,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       INIT => X"65"
     )
         port map (
-      I0 => \^q\(0),
+      I0 => \^state_out_reg[123]_0\(0),
       I1 => \round_state[9]\(99),
       I2 => add_const_state_0(31),
       O => \state_out_reg[127]_0\(3)
@@ -42525,7 +42506,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(43),
-      Q => \^q\(85)
+      Q => \^state_out_reg[123]_0\(85)
     );
 \state_out_reg[101]\: unisim.vcomponents.FDCE
      port map (
@@ -42533,7 +42514,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(44),
-      Q => \^q\(86)
+      Q => \^state_out_reg[123]_0\(86)
     );
 \state_out_reg[102]\: unisim.vcomponents.FDCE
      port map (
@@ -42541,7 +42522,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(45),
-      Q => \^q\(87)
+      Q => \^state_out_reg[123]_0\(87)
     );
 \state_out_reg[103]\: unisim.vcomponents.FDCE
      port map (
@@ -42549,7 +42530,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(46),
-      Q => \^q\(88)
+      Q => \^state_out_reg[123]_0\(88)
     );
 \state_out_reg[104]\: unisim.vcomponents.FDCE
      port map (
@@ -42557,7 +42538,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(47),
-      Q => \^q\(89)
+      Q => \^state_out_reg[123]_0\(89)
     );
 \state_out_reg[105]\: unisim.vcomponents.FDCE
      port map (
@@ -42565,7 +42546,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(48),
-      Q => \^q\(90)
+      Q => \^state_out_reg[123]_0\(90)
     );
 \state_out_reg[106]\: unisim.vcomponents.FDCE
      port map (
@@ -42573,7 +42554,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(49),
-      Q => \^q\(91)
+      Q => \^state_out_reg[123]_0\(91)
     );
 \state_out_reg[107]\: unisim.vcomponents.FDCE
      port map (
@@ -42581,7 +42562,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(50),
-      Q => \^q\(92)
+      Q => \^state_out_reg[123]_0\(92)
     );
 \state_out_reg[108]\: unisim.vcomponents.FDCE
      port map (
@@ -42589,7 +42570,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(51),
-      Q => \^q\(93)
+      Q => \^state_out_reg[123]_0\(93)
     );
 \state_out_reg[109]\: unisim.vcomponents.FDCE
      port map (
@@ -42597,7 +42578,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(52),
-      Q => \^q\(94)
+      Q => \^state_out_reg[123]_0\(94)
     );
 \state_out_reg[10]\: unisim.vcomponents.FDCE
      port map (
@@ -42605,7 +42586,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(10),
-      Q => \^q\(7)
+      Q => \^state_out_reg[123]_0\(7)
     );
 \state_out_reg[110]\: unisim.vcomponents.FDCE
      port map (
@@ -42613,7 +42594,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(53),
-      Q => \^q\(95)
+      Q => \^state_out_reg[123]_0\(95)
     );
 \state_out_reg[111]\: unisim.vcomponents.FDCE
      port map (
@@ -42621,7 +42602,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(54),
-      Q => \^q\(96)
+      Q => \^state_out_reg[123]_0\(96)
     );
 \state_out_reg[112]\: unisim.vcomponents.FDCE
      port map (
@@ -42629,7 +42610,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(55),
-      Q => \^q\(97)
+      Q => \^state_out_reg[123]_0\(97)
     );
 \state_out_reg[113]\: unisim.vcomponents.FDCE
      port map (
@@ -42637,7 +42618,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(56),
-      Q => \^q\(98)
+      Q => \^state_out_reg[123]_0\(98)
     );
 \state_out_reg[114]\: unisim.vcomponents.FDCE
      port map (
@@ -42645,7 +42626,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(57),
-      Q => \^q\(99)
+      Q => \^state_out_reg[123]_0\(99)
     );
 \state_out_reg[115]\: unisim.vcomponents.FDCE
      port map (
@@ -42653,7 +42634,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(58),
-      Q => \^q\(100)
+      Q => \^state_out_reg[123]_0\(100)
     );
 \state_out_reg[116]\: unisim.vcomponents.FDCE
      port map (
@@ -42661,7 +42642,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(59),
-      Q => \^q\(101)
+      Q => \^state_out_reg[123]_0\(101)
     );
 \state_out_reg[117]\: unisim.vcomponents.FDCE
      port map (
@@ -42669,7 +42650,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(60),
-      Q => \^q\(102)
+      Q => \^state_out_reg[123]_0\(102)
     );
 \state_out_reg[118]\: unisim.vcomponents.FDCE
      port map (
@@ -42677,7 +42658,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(61),
-      Q => \^q\(103)
+      Q => \^state_out_reg[123]_0\(103)
     );
 \state_out_reg[119]\: unisim.vcomponents.FDCE
      port map (
@@ -42685,7 +42666,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(62),
-      Q => \^q\(104)
+      Q => \^state_out_reg[123]_0\(104)
     );
 \state_out_reg[11]\: unisim.vcomponents.FDCE
      port map (
@@ -42693,7 +42674,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(11),
-      Q => \^q\(8)
+      Q => \^state_out_reg[123]_0\(8)
     );
 \state_out_reg[120]\: unisim.vcomponents.FDCE
      port map (
@@ -42701,7 +42682,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(63),
-      Q => \^q\(105)
+      Q => \^state_out_reg[123]_0\(105)
     );
 \state_out_reg[121]\: unisim.vcomponents.FDCE
      port map (
@@ -42709,7 +42690,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(64),
-      Q => \^q\(106)
+      Q => \^state_out_reg[123]_0\(106)
     );
 \state_out_reg[122]\: unisim.vcomponents.FDCE
      port map (
@@ -42717,7 +42698,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(65),
-      Q => \^q\(107)
+      Q => \^state_out_reg[123]_0\(107)
     );
 \state_out_reg[123]\: unisim.vcomponents.FDCE
      port map (
@@ -42725,7 +42706,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(66),
-      Q => \^q\(108)
+      Q => \^state_out_reg[123]_0\(108)
     );
 \state_out_reg[124]\: unisim.vcomponents.FDCE
      port map (
@@ -42765,7 +42746,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(12),
-      Q => \^q\(9)
+      Q => \^state_out_reg[123]_0\(9)
     );
 \state_out_reg[13]\: unisim.vcomponents.FDCE
      port map (
@@ -42773,7 +42754,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(13),
-      Q => \^q\(10)
+      Q => \^state_out_reg[123]_0\(10)
     );
 \state_out_reg[14]\: unisim.vcomponents.FDCE
      port map (
@@ -42781,7 +42762,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(14),
-      Q => \^q\(11)
+      Q => \^state_out_reg[123]_0\(11)
     );
 \state_out_reg[15]\: unisim.vcomponents.FDCE
      port map (
@@ -42789,7 +42770,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(15),
-      Q => \^q\(12)
+      Q => \^state_out_reg[123]_0\(12)
     );
 \state_out_reg[16]\: unisim.vcomponents.FDCE
      port map (
@@ -42797,7 +42778,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(16),
-      Q => \^q\(13)
+      Q => \^state_out_reg[123]_0\(13)
     );
 \state_out_reg[17]\: unisim.vcomponents.FDCE
      port map (
@@ -42805,7 +42786,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(17),
-      Q => \^q\(14)
+      Q => \^state_out_reg[123]_0\(14)
     );
 \state_out_reg[18]\: unisim.vcomponents.FDCE
      port map (
@@ -42813,7 +42794,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(18),
-      Q => \^q\(15)
+      Q => \^state_out_reg[123]_0\(15)
     );
 \state_out_reg[19]\: unisim.vcomponents.FDCE
      port map (
@@ -42821,7 +42802,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(19),
-      Q => \^q\(16)
+      Q => \^state_out_reg[123]_0\(16)
     );
 \state_out_reg[1]\: unisim.vcomponents.FDCE
      port map (
@@ -42837,7 +42818,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(20),
-      Q => \^q\(17)
+      Q => \^state_out_reg[123]_0\(17)
     );
 \state_out_reg[21]\: unisim.vcomponents.FDCE
      port map (
@@ -42845,7 +42826,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(21),
-      Q => \^q\(18)
+      Q => \^state_out_reg[123]_0\(18)
     );
 \state_out_reg[22]\: unisim.vcomponents.FDCE
      port map (
@@ -42853,7 +42834,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(22),
-      Q => \^q\(19)
+      Q => \^state_out_reg[123]_0\(19)
     );
 \state_out_reg[23]\: unisim.vcomponents.FDCE
      port map (
@@ -42861,7 +42842,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(23),
-      Q => \^q\(20)
+      Q => \^state_out_reg[123]_0\(20)
     );
 \state_out_reg[24]\: unisim.vcomponents.FDCE
      port map (
@@ -42869,7 +42850,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(24),
-      Q => \^q\(21)
+      Q => \^state_out_reg[123]_0\(21)
     );
 \state_out_reg[25]\: unisim.vcomponents.FDCE
      port map (
@@ -42877,7 +42858,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(25),
-      Q => \^q\(22)
+      Q => \^state_out_reg[123]_0\(22)
     );
 \state_out_reg[26]\: unisim.vcomponents.FDCE
      port map (
@@ -42885,7 +42866,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(26),
-      Q => \^q\(23)
+      Q => \^state_out_reg[123]_0\(23)
     );
 \state_out_reg[27]\: unisim.vcomponents.FDCE
      port map (
@@ -42893,7 +42874,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(27),
-      Q => \^q\(24)
+      Q => \^state_out_reg[123]_0\(24)
     );
 \state_out_reg[28]\: unisim.vcomponents.FDCE
      port map (
@@ -42901,7 +42882,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(28),
-      Q => \^q\(25)
+      Q => \^state_out_reg[123]_0\(25)
     );
 \state_out_reg[29]\: unisim.vcomponents.FDCE
      port map (
@@ -42909,7 +42890,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(1),
-      Q => \^q\(26)
+      Q => \^state_out_reg[123]_0\(26)
     );
 \state_out_reg[2]\: unisim.vcomponents.FDCE
      port map (
@@ -42925,7 +42906,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(2),
-      Q => \^q\(27)
+      Q => \^state_out_reg[123]_0\(27)
     );
 \state_out_reg[31]\: unisim.vcomponents.FDCE
      port map (
@@ -42933,7 +42914,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(3),
-      Q => \^q\(28)
+      Q => \^state_out_reg[123]_0\(28)
     );
 \state_out_reg[32]\: unisim.vcomponents.FDCE
      port map (
@@ -42941,7 +42922,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(4),
-      Q => \^q\(29)
+      Q => \^state_out_reg[123]_0\(29)
     );
 \state_out_reg[33]\: unisim.vcomponents.FDCE
      port map (
@@ -42949,7 +42930,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(33),
-      Q => \^q\(30)
+      Q => \^state_out_reg[123]_0\(30)
     );
 \state_out_reg[34]\: unisim.vcomponents.FDCE
      port map (
@@ -42957,7 +42938,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(34),
-      Q => \^q\(31)
+      Q => \^state_out_reg[123]_0\(31)
     );
 \state_out_reg[35]\: unisim.vcomponents.FDCE
      port map (
@@ -42965,7 +42946,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(35),
-      Q => \^q\(32)
+      Q => \^state_out_reg[123]_0\(32)
     );
 \state_out_reg[36]\: unisim.vcomponents.FDCE
      port map (
@@ -42973,7 +42954,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(36),
-      Q => \^q\(33)
+      Q => \^state_out_reg[123]_0\(33)
     );
 \state_out_reg[37]\: unisim.vcomponents.FDCE
      port map (
@@ -42981,7 +42962,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(37),
-      Q => \^q\(34)
+      Q => \^state_out_reg[123]_0\(34)
     );
 \state_out_reg[38]\: unisim.vcomponents.FDCE
      port map (
@@ -42989,7 +42970,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(38),
-      Q => \^q\(35)
+      Q => \^state_out_reg[123]_0\(35)
     );
 \state_out_reg[39]\: unisim.vcomponents.FDCE
      port map (
@@ -42997,7 +42978,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(39),
-      Q => \^q\(36)
+      Q => \^state_out_reg[123]_0\(36)
     );
 \state_out_reg[3]\: unisim.vcomponents.FDCE
      port map (
@@ -43005,7 +42986,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(3),
-      Q => \^q\(0)
+      Q => \^state_out_reg[123]_0\(0)
     );
 \state_out_reg[40]\: unisim.vcomponents.FDCE
      port map (
@@ -43013,7 +42994,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(40),
-      Q => \^q\(37)
+      Q => \^state_out_reg[123]_0\(37)
     );
 \state_out_reg[41]\: unisim.vcomponents.FDCE
      port map (
@@ -43021,7 +43002,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(41),
-      Q => \^q\(38)
+      Q => \^state_out_reg[123]_0\(38)
     );
 \state_out_reg[42]\: unisim.vcomponents.FDCE
      port map (
@@ -43029,7 +43010,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(42),
-      Q => \^q\(39)
+      Q => \^state_out_reg[123]_0\(39)
     );
 \state_out_reg[43]\: unisim.vcomponents.FDCE
      port map (
@@ -43037,7 +43018,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(43),
-      Q => \^q\(40)
+      Q => \^state_out_reg[123]_0\(40)
     );
 \state_out_reg[44]\: unisim.vcomponents.FDCE
      port map (
@@ -43045,7 +43026,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(44),
-      Q => \^q\(41)
+      Q => \^state_out_reg[123]_0\(41)
     );
 \state_out_reg[45]\: unisim.vcomponents.FDCE
      port map (
@@ -43053,7 +43034,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(45),
-      Q => \^q\(42)
+      Q => \^state_out_reg[123]_0\(42)
     );
 \state_out_reg[46]\: unisim.vcomponents.FDCE
      port map (
@@ -43061,7 +43042,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(46),
-      Q => \^q\(43)
+      Q => \^state_out_reg[123]_0\(43)
     );
 \state_out_reg[47]\: unisim.vcomponents.FDCE
      port map (
@@ -43069,7 +43050,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(47),
-      Q => \^q\(44)
+      Q => \^state_out_reg[123]_0\(44)
     );
 \state_out_reg[48]\: unisim.vcomponents.FDCE
      port map (
@@ -43077,7 +43058,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(48),
-      Q => \^q\(45)
+      Q => \^state_out_reg[123]_0\(45)
     );
 \state_out_reg[49]\: unisim.vcomponents.FDCE
      port map (
@@ -43085,7 +43066,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(49),
-      Q => \^q\(46)
+      Q => \^state_out_reg[123]_0\(46)
     );
 \state_out_reg[4]\: unisim.vcomponents.FDCE
      port map (
@@ -43093,7 +43074,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(4),
-      Q => \^q\(1)
+      Q => \^state_out_reg[123]_0\(1)
     );
 \state_out_reg[50]\: unisim.vcomponents.FDCE
      port map (
@@ -43101,7 +43082,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(50),
-      Q => \^q\(47)
+      Q => \^state_out_reg[123]_0\(47)
     );
 \state_out_reg[51]\: unisim.vcomponents.FDCE
      port map (
@@ -43109,7 +43090,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(51),
-      Q => \^q\(48)
+      Q => \^state_out_reg[123]_0\(48)
     );
 \state_out_reg[52]\: unisim.vcomponents.FDCE
      port map (
@@ -43117,7 +43098,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(52),
-      Q => \^q\(49)
+      Q => \^state_out_reg[123]_0\(49)
     );
 \state_out_reg[53]\: unisim.vcomponents.FDCE
      port map (
@@ -43125,7 +43106,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(53),
-      Q => \^q\(50)
+      Q => \^state_out_reg[123]_0\(50)
     );
 \state_out_reg[54]\: unisim.vcomponents.FDCE
      port map (
@@ -43133,7 +43114,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(54),
-      Q => \^q\(51)
+      Q => \^state_out_reg[123]_0\(51)
     );
 \state_out_reg[55]\: unisim.vcomponents.FDCE
      port map (
@@ -43141,7 +43122,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(55),
-      Q => \^q\(52)
+      Q => \^state_out_reg[123]_0\(52)
     );
 \state_out_reg[56]\: unisim.vcomponents.FDCE
      port map (
@@ -43149,7 +43130,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(56),
-      Q => \^q\(53)
+      Q => \^state_out_reg[123]_0\(53)
     );
 \state_out_reg[57]\: unisim.vcomponents.FDCE
      port map (
@@ -43157,7 +43138,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(57),
-      Q => \^q\(54)
+      Q => \^state_out_reg[123]_0\(54)
     );
 \state_out_reg[58]\: unisim.vcomponents.FDCE
      port map (
@@ -43165,7 +43146,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(58),
-      Q => \^q\(55)
+      Q => \^state_out_reg[123]_0\(55)
     );
 \state_out_reg[59]\: unisim.vcomponents.FDCE
      port map (
@@ -43173,7 +43154,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(59),
-      Q => \^q\(56)
+      Q => \^state_out_reg[123]_0\(56)
     );
 \state_out_reg[5]\: unisim.vcomponents.FDCE
      port map (
@@ -43181,7 +43162,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(5),
-      Q => \^q\(2)
+      Q => \^state_out_reg[123]_0\(2)
     );
 \state_out_reg[60]\: unisim.vcomponents.FDCE
      port map (
@@ -43189,7 +43170,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(60),
-      Q => \^q\(57)
+      Q => \^state_out_reg[123]_0\(57)
     );
 \state_out_reg[61]\: unisim.vcomponents.FDCE
      port map (
@@ -43197,7 +43178,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(5),
-      Q => \^q\(58)
+      Q => \^state_out_reg[123]_0\(58)
     );
 \state_out_reg[62]\: unisim.vcomponents.FDCE
      port map (
@@ -43205,7 +43186,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(6),
-      Q => \^q\(59)
+      Q => \^state_out_reg[123]_0\(59)
     );
 \state_out_reg[63]\: unisim.vcomponents.FDCE
      port map (
@@ -43213,7 +43194,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(7),
-      Q => \^q\(60)
+      Q => \^state_out_reg[123]_0\(60)
     );
 \state_out_reg[65]\: unisim.vcomponents.FDCE
      port map (
@@ -43245,7 +43226,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(11),
-      Q => \^q\(61)
+      Q => \^state_out_reg[123]_0\(61)
     );
 \state_out_reg[69]\: unisim.vcomponents.FDCE
      port map (
@@ -43253,7 +43234,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(12),
-      Q => \^q\(62)
+      Q => \^state_out_reg[123]_0\(62)
     );
 \state_out_reg[6]\: unisim.vcomponents.FDCE
      port map (
@@ -43261,7 +43242,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(6),
-      Q => \^q\(3)
+      Q => \^state_out_reg[123]_0\(3)
     );
 \state_out_reg[70]\: unisim.vcomponents.FDCE
      port map (
@@ -43269,7 +43250,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(13),
-      Q => \^q\(63)
+      Q => \^state_out_reg[123]_0\(63)
     );
 \state_out_reg[71]\: unisim.vcomponents.FDCE
      port map (
@@ -43277,7 +43258,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(14),
-      Q => \^q\(64)
+      Q => \^state_out_reg[123]_0\(64)
     );
 \state_out_reg[72]\: unisim.vcomponents.FDCE
      port map (
@@ -43285,7 +43266,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(15),
-      Q => \^q\(65)
+      Q => \^state_out_reg[123]_0\(65)
     );
 \state_out_reg[73]\: unisim.vcomponents.FDCE
      port map (
@@ -43293,7 +43274,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(16),
-      Q => \^q\(66)
+      Q => \^state_out_reg[123]_0\(66)
     );
 \state_out_reg[74]\: unisim.vcomponents.FDCE
      port map (
@@ -43301,7 +43282,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(17),
-      Q => \^q\(67)
+      Q => \^state_out_reg[123]_0\(67)
     );
 \state_out_reg[75]\: unisim.vcomponents.FDCE
      port map (
@@ -43309,7 +43290,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(18),
-      Q => \^q\(68)
+      Q => \^state_out_reg[123]_0\(68)
     );
 \state_out_reg[76]\: unisim.vcomponents.FDCE
      port map (
@@ -43317,7 +43298,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(19),
-      Q => \^q\(69)
+      Q => \^state_out_reg[123]_0\(69)
     );
 \state_out_reg[77]\: unisim.vcomponents.FDCE
      port map (
@@ -43325,7 +43306,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(20),
-      Q => \^q\(70)
+      Q => \^state_out_reg[123]_0\(70)
     );
 \state_out_reg[78]\: unisim.vcomponents.FDCE
      port map (
@@ -43333,7 +43314,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(21),
-      Q => \^q\(71)
+      Q => \^state_out_reg[123]_0\(71)
     );
 \state_out_reg[79]\: unisim.vcomponents.FDCE
      port map (
@@ -43341,7 +43322,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(22),
-      Q => \^q\(72)
+      Q => \^state_out_reg[123]_0\(72)
     );
 \state_out_reg[7]\: unisim.vcomponents.FDCE
      port map (
@@ -43349,7 +43330,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(7),
-      Q => \^q\(4)
+      Q => \^state_out_reg[123]_0\(4)
     );
 \state_out_reg[80]\: unisim.vcomponents.FDCE
      port map (
@@ -43357,7 +43338,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(23),
-      Q => \^q\(73)
+      Q => \^state_out_reg[123]_0\(73)
     );
 \state_out_reg[81]\: unisim.vcomponents.FDCE
      port map (
@@ -43365,7 +43346,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(24),
-      Q => \^q\(74)
+      Q => \^state_out_reg[123]_0\(74)
     );
 \state_out_reg[82]\: unisim.vcomponents.FDCE
      port map (
@@ -43373,7 +43354,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(25),
-      Q => \^q\(75)
+      Q => \^state_out_reg[123]_0\(75)
     );
 \state_out_reg[83]\: unisim.vcomponents.FDCE
      port map (
@@ -43381,7 +43362,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(26),
-      Q => \^q\(76)
+      Q => \^state_out_reg[123]_0\(76)
     );
 \state_out_reg[84]\: unisim.vcomponents.FDCE
      port map (
@@ -43389,7 +43370,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(27),
-      Q => \^q\(77)
+      Q => \^state_out_reg[123]_0\(77)
     );
 \state_out_reg[85]\: unisim.vcomponents.FDCE
      port map (
@@ -43397,7 +43378,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(28),
-      Q => \^q\(78)
+      Q => \^state_out_reg[123]_0\(78)
     );
 \state_out_reg[86]\: unisim.vcomponents.FDCE
      port map (
@@ -43405,7 +43386,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(29),
-      Q => \^q\(79)
+      Q => \^state_out_reg[123]_0\(79)
     );
 \state_out_reg[87]\: unisim.vcomponents.FDCE
      port map (
@@ -43413,7 +43394,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(30),
-      Q => \^q\(80)
+      Q => \^state_out_reg[123]_0\(80)
     );
 \state_out_reg[88]\: unisim.vcomponents.FDCE
      port map (
@@ -43421,7 +43402,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(31),
-      Q => \^q\(81)
+      Q => \^state_out_reg[123]_0\(81)
     );
 \state_out_reg[89]\: unisim.vcomponents.FDCE
      port map (
@@ -43429,7 +43410,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(32),
-      Q => \^q\(82)
+      Q => \^state_out_reg[123]_0\(82)
     );
 \state_out_reg[8]\: unisim.vcomponents.FDCE
      port map (
@@ -43437,7 +43418,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(8),
-      Q => \^q\(5)
+      Q => \^state_out_reg[123]_0\(5)
     );
 \state_out_reg[90]\: unisim.vcomponents.FDCE
      port map (
@@ -43445,7 +43426,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(33),
-      Q => \^q\(83)
+      Q => \^state_out_reg[123]_0\(83)
     );
 \state_out_reg[91]\: unisim.vcomponents.FDCE
      port map (
@@ -43453,7 +43434,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => D(34),
-      Q => \^q\(84)
+      Q => \^state_out_reg[123]_0\(84)
     );
 \state_out_reg[92]\: unisim.vcomponents.FDCE
      port map (
@@ -43535,7 +43516,7 @@ sbox_inst: entity work.design_ascon_ascon_core_0_2_ascon_sbox
       CE => enable,
       CLR => rst,
       D => sbox_state(9),
-      Q => \^q\(6)
+      Q => \^state_out_reg[123]_0\(6)
     );
 end STRUCTURE;
 library IEEE;
@@ -43561,11 +43542,11 @@ architecture STRUCTURE of design_ascon_ascon_core_0_2_ascon_top is
   signal add_const_state : STD_LOGIC_VECTOR ( 63 downto 4 );
   signal add_const_state_0 : STD_LOGIC_VECTOR ( 63 downto 1 );
   signal add_const_state_11 : STD_LOGIC_VECTOR ( 63 downto 1 );
-  signal add_const_state_13 : STD_LOGIC_VECTOR ( 63 downto 1 );
-  signal add_const_state_15 : STD_LOGIC_VECTOR ( 63 downto 2 );
-  signal add_const_state_18 : STD_LOGIC_VECTOR ( 63 downto 2 );
-  signal add_const_state_21 : STD_LOGIC_VECTOR ( 63 downto 1 );
-  signal add_const_state_24 : STD_LOGIC_VECTOR ( 63 downto 1 );
+  signal add_const_state_14 : STD_LOGIC_VECTOR ( 63 downto 1 );
+  signal add_const_state_17 : STD_LOGIC_VECTOR ( 63 downto 2 );
+  signal add_const_state_20 : STD_LOGIC_VECTOR ( 63 downto 2 );
+  signal add_const_state_23 : STD_LOGIC_VECTOR ( 63 downto 1 );
+  signal add_const_state_26 : STD_LOGIC_VECTOR ( 63 downto 1 );
   signal add_const_state_5 : STD_LOGIC_VECTOR ( 63 downto 5 );
   signal add_const_state_8 : STD_LOGIC_VECTOR ( 63 downto 1 );
   signal \^ciphertext\ : STD_LOGIC_VECTOR ( 127 downto 0 );
@@ -43729,87 +43710,87 @@ architecture STRUCTURE of design_ascon_ascon_core_0_2_ascon_top is
   signal \genblk1[4].round_inst_n_290\ : STD_LOGIC;
   signal \genblk1[4].round_inst_n_291\ : STD_LOGIC;
   signal \genblk1[4].round_inst_n_63\ : STD_LOGIC;
-  signal \genblk1[5].round_inst_n_189\ : STD_LOGIC;
-  signal \genblk1[5].round_inst_n_190\ : STD_LOGIC;
-  signal \genblk1[5].round_inst_n_191\ : STD_LOGIC;
-  signal \genblk1[5].round_inst_n_192\ : STD_LOGIC;
-  signal \genblk1[5].round_inst_n_193\ : STD_LOGIC;
-  signal \genblk1[5].round_inst_n_194\ : STD_LOGIC;
-  signal \genblk1[5].round_inst_n_195\ : STD_LOGIC;
-  signal \genblk1[5].round_inst_n_196\ : STD_LOGIC;
-  signal \genblk1[5].round_inst_n_197\ : STD_LOGIC;
-  signal \genblk1[5].round_inst_n_198\ : STD_LOGIC;
-  signal \genblk1[5].round_inst_n_199\ : STD_LOGIC;
-  signal \genblk1[5].round_inst_n_200\ : STD_LOGIC;
-  signal \genblk1[5].round_inst_n_201\ : STD_LOGIC;
-  signal \genblk1[5].round_inst_n_202\ : STD_LOGIC;
-  signal \genblk1[5].round_inst_n_203\ : STD_LOGIC;
-  signal \genblk1[5].round_inst_n_204\ : STD_LOGIC;
-  signal \genblk1[5].round_inst_n_205\ : STD_LOGIC;
-  signal \genblk1[5].round_inst_n_206\ : STD_LOGIC;
-  signal \genblk1[5].round_inst_n_207\ : STD_LOGIC;
-  signal \genblk1[5].round_inst_n_208\ : STD_LOGIC;
-  signal \genblk1[5].round_inst_n_209\ : STD_LOGIC;
-  signal \genblk1[5].round_inst_n_210\ : STD_LOGIC;
-  signal \genblk1[5].round_inst_n_211\ : STD_LOGIC;
-  signal \genblk1[5].round_inst_n_212\ : STD_LOGIC;
-  signal \genblk1[5].round_inst_n_213\ : STD_LOGIC;
-  signal \genblk1[5].round_inst_n_214\ : STD_LOGIC;
-  signal \genblk1[5].round_inst_n_215\ : STD_LOGIC;
-  signal \genblk1[5].round_inst_n_216\ : STD_LOGIC;
-  signal \genblk1[5].round_inst_n_217\ : STD_LOGIC;
-  signal \genblk1[5].round_inst_n_218\ : STD_LOGIC;
-  signal \genblk1[5].round_inst_n_288\ : STD_LOGIC;
+  signal \genblk1[5].round_inst_n_133\ : STD_LOGIC;
+  signal \genblk1[5].round_inst_n_254\ : STD_LOGIC;
+  signal \genblk1[5].round_inst_n_255\ : STD_LOGIC;
+  signal \genblk1[5].round_inst_n_256\ : STD_LOGIC;
+  signal \genblk1[5].round_inst_n_257\ : STD_LOGIC;
+  signal \genblk1[5].round_inst_n_258\ : STD_LOGIC;
+  signal \genblk1[5].round_inst_n_259\ : STD_LOGIC;
+  signal \genblk1[5].round_inst_n_260\ : STD_LOGIC;
+  signal \genblk1[5].round_inst_n_261\ : STD_LOGIC;
+  signal \genblk1[5].round_inst_n_262\ : STD_LOGIC;
+  signal \genblk1[5].round_inst_n_263\ : STD_LOGIC;
+  signal \genblk1[5].round_inst_n_264\ : STD_LOGIC;
+  signal \genblk1[5].round_inst_n_265\ : STD_LOGIC;
+  signal \genblk1[5].round_inst_n_266\ : STD_LOGIC;
+  signal \genblk1[5].round_inst_n_267\ : STD_LOGIC;
+  signal \genblk1[5].round_inst_n_268\ : STD_LOGIC;
+  signal \genblk1[5].round_inst_n_269\ : STD_LOGIC;
+  signal \genblk1[5].round_inst_n_270\ : STD_LOGIC;
+  signal \genblk1[5].round_inst_n_271\ : STD_LOGIC;
+  signal \genblk1[5].round_inst_n_272\ : STD_LOGIC;
+  signal \genblk1[5].round_inst_n_273\ : STD_LOGIC;
+  signal \genblk1[5].round_inst_n_274\ : STD_LOGIC;
+  signal \genblk1[5].round_inst_n_275\ : STD_LOGIC;
+  signal \genblk1[5].round_inst_n_276\ : STD_LOGIC;
+  signal \genblk1[5].round_inst_n_277\ : STD_LOGIC;
+  signal \genblk1[5].round_inst_n_278\ : STD_LOGIC;
+  signal \genblk1[5].round_inst_n_279\ : STD_LOGIC;
+  signal \genblk1[5].round_inst_n_280\ : STD_LOGIC;
+  signal \genblk1[5].round_inst_n_281\ : STD_LOGIC;
+  signal \genblk1[5].round_inst_n_282\ : STD_LOGIC;
+  signal \genblk1[5].round_inst_n_283\ : STD_LOGIC;
+  signal \genblk1[5].round_inst_n_284\ : STD_LOGIC;
+  signal \genblk1[5].round_inst_n_285\ : STD_LOGIC;
+  signal \genblk1[5].round_inst_n_286\ : STD_LOGIC;
+  signal \genblk1[5].round_inst_n_287\ : STD_LOGIC;
   signal \genblk1[5].round_inst_n_63\ : STD_LOGIC;
-  signal \genblk1[5].round_inst_n_64\ : STD_LOGIC;
-  signal \genblk1[5].round_inst_n_65\ : STD_LOGIC;
-  signal \genblk1[5].round_inst_n_66\ : STD_LOGIC;
-  signal \genblk1[5].round_inst_n_67\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_185\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_186\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_187\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_188\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_189\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_190\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_191\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_192\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_193\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_194\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_195\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_196\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_197\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_198\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_199\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_200\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_201\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_202\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_203\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_204\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_205\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_206\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_207\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_208\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_209\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_210\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_211\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_212\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_213\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_214\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_215\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_216\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_217\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_218\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_219\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_220\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_221\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_222\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_223\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_224\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_225\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_226\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_296\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_132\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_253\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_254\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_255\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_256\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_257\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_258\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_259\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_260\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_261\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_262\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_263\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_264\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_265\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_266\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_267\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_268\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_269\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_270\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_271\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_272\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_273\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_274\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_275\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_276\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_277\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_278\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_279\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_280\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_281\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_282\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_283\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_284\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_285\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_286\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_287\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_288\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_289\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_290\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_291\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_292\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_293\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_294\ : STD_LOGIC;
+  signal \genblk1[6].round_inst_n_295\ : STD_LOGIC;
   signal \genblk1[6].round_inst_n_62\ : STD_LOGIC;
-  signal \genblk1[6].round_inst_n_63\ : STD_LOGIC;
   signal \genblk1[7].round_inst_n_254\ : STD_LOGIC;
   signal \genblk1[7].round_inst_n_255\ : STD_LOGIC;
   signal \genblk1[7].round_inst_n_256\ : STD_LOGIC;
@@ -43977,9 +43958,11 @@ architecture STRUCTURE of design_ascon_ascon_core_0_2_ascon_top is
   signal ks_inst_n_9 : STD_LOGIC;
   signal linear_state : STD_LOGIC_VECTOR ( 0 to 0 );
   signal linear_state_1 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal linear_state_16 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal linear_state_19 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal linear_state_22 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal linear_state_12 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal linear_state_15 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal linear_state_18 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal linear_state_21 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal linear_state_24 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal linear_state_3 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal linear_state_6 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal linear_state_9 : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -43991,19 +43974,19 @@ architecture STRUCTURE of design_ascon_ascon_core_0_2_ascon_top is
   signal \round_state[2]\ : STD_LOGIC_VECTOR ( 124 downto 0 );
   signal \round_state[3]\ : STD_LOGIC_VECTOR ( 124 downto 0 );
   signal \round_state[4]\ : STD_LOGIC_VECTOR ( 124 downto 0 );
-  signal \round_state[5]\ : STD_LOGIC_VECTOR ( 125 downto 0 );
-  signal \round_state[6]\ : STD_LOGIC_VECTOR ( 125 downto 0 );
+  signal \round_state[5]\ : STD_LOGIC_VECTOR ( 125 downto 1 );
+  signal \round_state[6]\ : STD_LOGIC_VECTOR ( 125 downto 1 );
   signal \round_state[7]\ : STD_LOGIC_VECTOR ( 124 downto 0 );
   signal \round_state[8]\ : STD_LOGIC_VECTOR ( 124 downto 0 );
   signal \round_state[9]\ : STD_LOGIC_VECTOR ( 123 downto 3 );
   signal sbox_state : STD_LOGIC_VECTOR ( 127 downto 29 );
   signal sbox_state_10 : STD_LOGIC_VECTOR ( 127 downto 29 );
-  signal sbox_state_12 : STD_LOGIC_VECTOR ( 127 downto 30 );
-  signal sbox_state_14 : STD_LOGIC_VECTOR ( 127 downto 30 );
-  signal sbox_state_17 : STD_LOGIC_VECTOR ( 127 downto 29 );
+  signal sbox_state_13 : STD_LOGIC_VECTOR ( 127 downto 30 );
+  signal sbox_state_16 : STD_LOGIC_VECTOR ( 127 downto 30 );
+  signal sbox_state_19 : STD_LOGIC_VECTOR ( 127 downto 29 );
   signal sbox_state_2 : STD_LOGIC_VECTOR ( 127 downto 1 );
-  signal sbox_state_20 : STD_LOGIC_VECTOR ( 127 downto 29 );
-  signal sbox_state_23 : STD_LOGIC_VECTOR ( 127 downto 1 );
+  signal sbox_state_22 : STD_LOGIC_VECTOR ( 127 downto 29 );
+  signal sbox_state_25 : STD_LOGIC_VECTOR ( 127 downto 1 );
   signal sbox_state_4 : STD_LOGIC_VECTOR ( 127 downto 29 );
   signal sbox_state_7 : STD_LOGIC_VECTOR ( 127 downto 29 );
 begin
@@ -44065,12 +44048,12 @@ final_inst: entity work.design_ascon_ascon_core_0_2_ascon_finalization
       \state_out_reg[127]_0\(2) => \genblk1[9].round_inst_n_252\,
       \state_out_reg[127]_0\(1) => \genblk1[9].round_inst_n_253\,
       \state_out_reg[127]_0\(0) => \genblk1[9].round_inst_n_254\,
-      \state_out_reg[127]_1\(78 downto 16) => sbox_state_23(127 downto 65),
-      \state_out_reg[127]_1\(15 downto 12) => sbox_state_23(63 downto 60),
-      \state_out_reg[127]_1\(11 downto 4) => sbox_state_23(35 downto 28),
+      \state_out_reg[127]_1\(78 downto 16) => sbox_state_25(127 downto 65),
+      \state_out_reg[127]_1\(15 downto 12) => sbox_state_25(63 downto 60),
+      \state_out_reg[127]_1\(11 downto 4) => sbox_state_25(35 downto 28),
       \state_out_reg[127]_1\(3) => \genblk1[9].round_inst_n_139\,
-      \state_out_reg[127]_1\(2 downto 1) => sbox_state_23(2 downto 1),
-      \state_out_reg[127]_1\(0) => linear_state_22(0),
+      \state_out_reg[127]_1\(2 downto 1) => sbox_state_25(2 downto 1),
+      \state_out_reg[127]_1\(0) => linear_state_24(0),
       \state_out_reg[12]_0\(2) => \genblk1[10].round_inst_n_279\,
       \state_out_reg[12]_0\(1) => \genblk1[10].round_inst_n_280\,
       \state_out_reg[12]_0\(0) => \genblk1[10].round_inst_n_281\,
@@ -44476,7 +44459,7 @@ final_inst: entity work.design_ascon_ascon_core_0_2_ascon_finalization
       S(1) => \genblk1[4].round_inst_n_255\,
       S(0) => \genblk1[4].round_inst_n_256\,
       add_const_state(62 downto 0) => add_const_state_11(63 downto 1),
-      add_const_state_0(62 downto 0) => add_const_state_13(63 downto 1),
+      add_const_state_0(62 downto 0) => add_const_state_14(63 downto 1),
       clk => clk,
       enable => enable,
       rst => rst,
@@ -44557,44 +44540,44 @@ final_inst: entity work.design_ascon_ascon_core_0_2_ascon_finalization
 \genblk1[5].round_inst\: entity work.design_ascon_ascon_core_0_2_ascon_round_5
      port map (
       CO(0) => \genblk1[6].round_inst_n_62\,
-      D(69 downto 7) => sbox_state_12(127 downto 65),
-      D(6 downto 5) => sbox_state_12(63 downto 62),
-      D(4 downto 1) => sbox_state_12(33 downto 30),
-      D(0) => \genblk1[5].round_inst_n_288\,
+      D(70 downto 8) => sbox_state_13(127 downto 65),
+      D(7 downto 6) => sbox_state_13(63 downto 62),
+      D(5 downto 2) => sbox_state_13(33 downto 30),
+      D(1) => \genblk1[5].round_inst_n_133\,
+      D(0) => linear_state_12(0),
       Q(119 downto 92) => \round_state[4]\(124 downto 97),
       Q(91 downto 64) => \round_state[4]\(92 downto 65),
       Q(63 downto 0) => \round_state[4]\(63 downto 0),
       S(1) => \genblk1[4].round_inst_n_255\,
       S(0) => \genblk1[4].round_inst_n_256\,
-      add_const_state(62 downto 0) => add_const_state_13(63 downto 1),
-      add_const_state_0(61 downto 0) => add_const_state_15(63 downto 2),
+      add_const_state(62 downto 0) => add_const_state_14(63 downto 1),
+      add_const_state_0(61 downto 0) => add_const_state_17(63 downto 2),
       clk => clk,
       enable => enable,
       rst => rst,
-      \state_out_reg[125]_0\(120 downto 93) => \round_state[5]\(125 downto 98),
-      \state_out_reg[125]_0\(92) => \round_state[5]\(96),
-      \state_out_reg[125]_0\(91 downto 64) => \round_state[5]\(93 downto 66),
-      \state_out_reg[125]_0\(63 downto 0) => \round_state[5]\(63 downto 0),
+      \state_out_reg[125]_0\(118 downto 91) => \round_state[5]\(125 downto 98),
+      \state_out_reg[125]_0\(90 downto 63) => \round_state[5]\(93 downto 66),
+      \state_out_reg[125]_0\(62 downto 0) => \round_state[5]\(63 downto 1),
       \state_out_reg[127]_0\(70 downto 8) => sbox_state_10(127 downto 65),
       \state_out_reg[127]_0\(7 downto 5) => sbox_state_10(63 downto 61),
       \state_out_reg[127]_0\(4 downto 1) => sbox_state_10(32 downto 29),
       \state_out_reg[127]_0\(0) => linear_state_9(0),
-      \state_out_reg[13]_0\(0) => \genblk1[5].round_inst_n_196\,
-      \state_out_reg[15]_0\(1) => \genblk1[5].round_inst_n_194\,
-      \state_out_reg[15]_0\(0) => \genblk1[5].round_inst_n_195\,
-      \state_out_reg[21]_0\(1) => \genblk1[5].round_inst_n_192\,
-      \state_out_reg[21]_0\(0) => \genblk1[5].round_inst_n_193\,
-      \state_out_reg[24]_0\(1) => \genblk1[5].round_inst_n_190\,
-      \state_out_reg[24]_0\(0) => \genblk1[5].round_inst_n_191\,
-      \state_out_reg[26]_0\(0) => \genblk1[5].round_inst_n_189\,
-      \state_out_reg[2]_0\(0) => \genblk1[5].round_inst_n_201\,
+      \state_out_reg[13]_0\(0) => \genblk1[5].round_inst_n_265\,
+      \state_out_reg[15]_0\(1) => \genblk1[5].round_inst_n_263\,
+      \state_out_reg[15]_0\(0) => \genblk1[5].round_inst_n_264\,
+      \state_out_reg[21]_0\(1) => \genblk1[5].round_inst_n_261\,
+      \state_out_reg[21]_0\(0) => \genblk1[5].round_inst_n_262\,
+      \state_out_reg[24]_0\(1) => \genblk1[5].round_inst_n_259\,
+      \state_out_reg[24]_0\(0) => \genblk1[5].round_inst_n_260\,
+      \state_out_reg[26]_0\(0) => \genblk1[5].round_inst_n_258\,
+      \state_out_reg[2]_0\(0) => \genblk1[5].round_inst_n_270\,
       \state_out_reg[32]_0\(2) => \genblk1[4].round_inst_n_273\,
       \state_out_reg[32]_0\(1) => \genblk1[4].round_inst_n_274\,
       \state_out_reg[32]_0\(0) => \genblk1[4].round_inst_n_275\,
-      \state_out_reg[33]_0\(3) => \genblk1[5].round_inst_n_64\,
-      \state_out_reg[33]_0\(2) => \genblk1[5].round_inst_n_65\,
-      \state_out_reg[33]_0\(1) => \genblk1[5].round_inst_n_66\,
-      \state_out_reg[33]_0\(0) => \genblk1[5].round_inst_n_67\,
+      \state_out_reg[33]_0\(3) => \genblk1[5].round_inst_n_254\,
+      \state_out_reg[33]_0\(2) => \genblk1[5].round_inst_n_255\,
+      \state_out_reg[33]_0\(1) => \genblk1[5].round_inst_n_256\,
+      \state_out_reg[33]_0\(0) => \genblk1[5].round_inst_n_257\,
       \state_out_reg[36]_0\(0) => \genblk1[4].round_inst_n_291\,
       \state_out_reg[36]_1\(2) => \genblk1[4].round_inst_n_270\,
       \state_out_reg[36]_1\(1) => \genblk1[4].round_inst_n_271\,
@@ -44603,26 +44586,26 @@ final_inst: entity work.design_ascon_ascon_core_0_2_ascon_finalization
       \state_out_reg[40]_0\(1) => \genblk1[4].round_inst_n_289\,
       \state_out_reg[40]_0\(0) => \genblk1[4].round_inst_n_290\,
       \state_out_reg[40]_1\(0) => \genblk1[4].round_inst_n_269\,
-      \state_out_reg[41]_0\(3) => \genblk1[5].round_inst_n_215\,
-      \state_out_reg[41]_0\(2) => \genblk1[5].round_inst_n_216\,
-      \state_out_reg[41]_0\(1) => \genblk1[5].round_inst_n_217\,
-      \state_out_reg[41]_0\(0) => \genblk1[5].round_inst_n_218\,
+      \state_out_reg[41]_0\(3) => \genblk1[5].round_inst_n_284\,
+      \state_out_reg[41]_0\(2) => \genblk1[5].round_inst_n_285\,
+      \state_out_reg[41]_0\(1) => \genblk1[5].round_inst_n_286\,
+      \state_out_reg[41]_0\(0) => \genblk1[5].round_inst_n_287\,
       \state_out_reg[44]_0\(1) => \genblk1[4].round_inst_n_286\,
       \state_out_reg[44]_0\(0) => \genblk1[4].round_inst_n_287\,
       \state_out_reg[44]_1\(1) => \genblk1[4].round_inst_n_267\,
       \state_out_reg[44]_1\(0) => \genblk1[4].round_inst_n_268\,
-      \state_out_reg[45]_0\(1) => \genblk1[5].round_inst_n_213\,
-      \state_out_reg[45]_0\(0) => \genblk1[5].round_inst_n_214\,
-      \state_out_reg[47]_0\(1) => \genblk1[5].round_inst_n_211\,
-      \state_out_reg[47]_0\(0) => \genblk1[5].round_inst_n_212\,
+      \state_out_reg[45]_0\(1) => \genblk1[5].round_inst_n_282\,
+      \state_out_reg[45]_0\(0) => \genblk1[5].round_inst_n_283\,
+      \state_out_reg[47]_0\(1) => \genblk1[5].round_inst_n_280\,
+      \state_out_reg[47]_0\(0) => \genblk1[5].round_inst_n_281\,
       \state_out_reg[48]_0\(3) => \genblk1[4].round_inst_n_282\,
       \state_out_reg[48]_0\(2) => \genblk1[4].round_inst_n_283\,
       \state_out_reg[48]_0\(1) => \genblk1[4].round_inst_n_284\,
       \state_out_reg[48]_0\(0) => \genblk1[4].round_inst_n_285\,
       \state_out_reg[48]_1\(1) => \genblk1[4].round_inst_n_265\,
       \state_out_reg[48]_1\(0) => \genblk1[4].round_inst_n_266\,
-      \state_out_reg[52]_0\(1) => \genblk1[5].round_inst_n_209\,
-      \state_out_reg[52]_0\(0) => \genblk1[5].round_inst_n_210\,
+      \state_out_reg[52]_0\(1) => \genblk1[5].round_inst_n_278\,
+      \state_out_reg[52]_0\(0) => \genblk1[5].round_inst_n_279\,
       \state_out_reg[52]_1\(1) => \genblk1[4].round_inst_n_280\,
       \state_out_reg[52]_1\(0) => \genblk1[4].round_inst_n_281\,
       \state_out_reg[52]_2\(2) => \genblk1[4].round_inst_n_262\,
@@ -44631,12 +44614,12 @@ final_inst: entity work.design_ascon_ascon_core_0_2_ascon_finalization
       \state_out_reg[56]_0\(0) => \genblk1[4].round_inst_n_279\,
       \state_out_reg[56]_1\(1) => \genblk1[4].round_inst_n_260\,
       \state_out_reg[56]_1\(0) => \genblk1[4].round_inst_n_261\,
-      \state_out_reg[57]_0\(3) => \genblk1[5].round_inst_n_205\,
-      \state_out_reg[57]_0\(2) => \genblk1[5].round_inst_n_206\,
-      \state_out_reg[57]_0\(1) => \genblk1[5].round_inst_n_207\,
-      \state_out_reg[57]_0\(0) => \genblk1[5].round_inst_n_208\,
-      \state_out_reg[60]_0\(1) => \genblk1[5].round_inst_n_203\,
-      \state_out_reg[60]_0\(0) => \genblk1[5].round_inst_n_204\,
+      \state_out_reg[57]_0\(3) => \genblk1[5].round_inst_n_274\,
+      \state_out_reg[57]_0\(2) => \genblk1[5].round_inst_n_275\,
+      \state_out_reg[57]_0\(1) => \genblk1[5].round_inst_n_276\,
+      \state_out_reg[57]_0\(0) => \genblk1[5].round_inst_n_277\,
+      \state_out_reg[60]_0\(1) => \genblk1[5].round_inst_n_272\,
+      \state_out_reg[60]_0\(0) => \genblk1[5].round_inst_n_273\,
       \state_out_reg[60]_1\(2) => \genblk1[4].round_inst_n_276\,
       \state_out_reg[60]_1\(1) => \genblk1[4].round_inst_n_277\,
       \state_out_reg[60]_1\(0) => \genblk1[4].round_inst_n_278\,
@@ -44644,141 +44627,139 @@ final_inst: entity work.design_ascon_ascon_core_0_2_ascon_finalization
       \state_out_reg[60]_2\(1) => \genblk1[4].round_inst_n_258\,
       \state_out_reg[60]_2\(0) => \genblk1[4].round_inst_n_259\,
       \state_out_reg[63]_0\(0) => \genblk1[5].round_inst_n_63\,
-      \state_out_reg[63]_1\(0) => \genblk1[5].round_inst_n_202\,
-      \state_out_reg[9]_0\(3) => \genblk1[5].round_inst_n_197\,
-      \state_out_reg[9]_0\(2) => \genblk1[5].round_inst_n_198\,
-      \state_out_reg[9]_0\(1) => \genblk1[5].round_inst_n_199\,
-      \state_out_reg[9]_0\(0) => \genblk1[5].round_inst_n_200\
+      \state_out_reg[63]_1\(0) => \genblk1[5].round_inst_n_271\,
+      \state_out_reg[9]_0\(3) => \genblk1[5].round_inst_n_266\,
+      \state_out_reg[9]_0\(2) => \genblk1[5].round_inst_n_267\,
+      \state_out_reg[9]_0\(1) => \genblk1[5].round_inst_n_268\,
+      \state_out_reg[9]_0\(0) => \genblk1[5].round_inst_n_269\
     );
 \genblk1[6].round_inst\: entity work.design_ascon_ascon_core_0_2_ascon_round_6
      port map (
       CO(0) => \genblk1[6].round_inst_n_62\,
-      D(69 downto 7) => sbox_state_14(127 downto 65),
-      D(6 downto 5) => sbox_state_14(63 downto 62),
-      D(4 downto 1) => sbox_state_14(33 downto 30),
-      D(0) => \genblk1[6].round_inst_n_296\,
-      Q(119 downto 92) => \round_state[6]\(125 downto 98),
-      Q(91) => \round_state[6]\(96),
+      D(70 downto 8) => sbox_state_16(127 downto 65),
+      D(7 downto 6) => sbox_state_16(63 downto 62),
+      D(5 downto 2) => sbox_state_16(33 downto 30),
+      D(1) => \genblk1[6].round_inst_n_132\,
+      D(0) => linear_state_15(0),
+      Q(118 downto 91) => \round_state[6]\(125 downto 98),
       Q(90 downto 63) => \round_state[6]\(93 downto 66),
-      Q(62) => \round_state[6]\(63),
-      Q(61 downto 0) => \round_state[6]\(61 downto 0),
-      S(1) => \genblk1[6].round_inst_n_63\,
-      S(0) => \round_state[6]\(62),
-      add_const_state(61 downto 0) => add_const_state_15(63 downto 2),
-      add_const_state_0(61 downto 0) => add_const_state_18(63 downto 2),
+      Q(62 downto 0) => \round_state[6]\(63 downto 1),
+      S(0) => \genblk1[6].round_inst_n_253\,
+      add_const_state(61 downto 0) => add_const_state_17(63 downto 2),
+      add_const_state_0(61 downto 0) => add_const_state_20(63 downto 2),
       clk => clk,
       enable => enable,
       rst => rst,
-      \state_out_reg[0]_0\(0) => \genblk1[5].round_inst_n_202\,
-      \state_out_reg[127]_0\(69 downto 7) => sbox_state_12(127 downto 65),
-      \state_out_reg[127]_0\(6 downto 5) => sbox_state_12(63 downto 62),
-      \state_out_reg[127]_0\(4 downto 1) => sbox_state_12(33 downto 30),
-      \state_out_reg[127]_0\(0) => \genblk1[5].round_inst_n_288\,
-      \state_out_reg[13]_0\(1) => \genblk1[6].round_inst_n_218\,
-      \state_out_reg[13]_0\(0) => \genblk1[6].round_inst_n_219\,
-      \state_out_reg[17]_0\(1) => \genblk1[6].round_inst_n_216\,
-      \state_out_reg[17]_0\(0) => \genblk1[6].round_inst_n_217\,
-      \state_out_reg[20]_0\(2) => \genblk1[6].round_inst_n_213\,
-      \state_out_reg[20]_0\(1) => \genblk1[6].round_inst_n_214\,
-      \state_out_reg[20]_0\(0) => \genblk1[6].round_inst_n_215\,
-      \state_out_reg[25]_0\(2) => \genblk1[6].round_inst_n_210\,
-      \state_out_reg[25]_0\(1) => \genblk1[6].round_inst_n_211\,
-      \state_out_reg[25]_0\(0) => \genblk1[6].round_inst_n_212\,
-      \state_out_reg[29]_0\(1) => \genblk1[6].round_inst_n_208\,
-      \state_out_reg[29]_0\(0) => \genblk1[6].round_inst_n_209\,
-      \state_out_reg[29]_1\(120 downto 93) => \round_state[5]\(125 downto 98),
-      \state_out_reg[29]_1\(92) => \round_state[5]\(96),
-      \state_out_reg[29]_1\(91 downto 64) => \round_state[5]\(93 downto 66),
-      \state_out_reg[29]_1\(63 downto 0) => \round_state[5]\(63 downto 0),
-      \state_out_reg[33]_0\(1) => \genblk1[6].round_inst_n_206\,
-      \state_out_reg[33]_0\(0) => \genblk1[6].round_inst_n_207\,
-      \state_out_reg[33]_1\(3) => \genblk1[5].round_inst_n_64\,
-      \state_out_reg[33]_1\(2) => \genblk1[5].round_inst_n_65\,
-      \state_out_reg[33]_1\(1) => \genblk1[5].round_inst_n_66\,
-      \state_out_reg[33]_1\(0) => \genblk1[5].round_inst_n_67\,
-      \state_out_reg[37]_0\(3) => \genblk1[6].round_inst_n_202\,
-      \state_out_reg[37]_0\(2) => \genblk1[6].round_inst_n_203\,
-      \state_out_reg[37]_0\(1) => \genblk1[6].round_inst_n_204\,
-      \state_out_reg[37]_0\(0) => \genblk1[6].round_inst_n_205\,
-      \state_out_reg[37]_1\(0) => \genblk1[5].round_inst_n_201\,
-      \state_out_reg[41]_0\(2) => \genblk1[6].round_inst_n_199\,
-      \state_out_reg[41]_0\(1) => \genblk1[6].round_inst_n_200\,
-      \state_out_reg[41]_0\(0) => \genblk1[6].round_inst_n_201\,
-      \state_out_reg[41]_1\(3) => \genblk1[5].round_inst_n_197\,
-      \state_out_reg[41]_1\(2) => \genblk1[5].round_inst_n_198\,
-      \state_out_reg[41]_1\(1) => \genblk1[5].round_inst_n_199\,
-      \state_out_reg[41]_1\(0) => \genblk1[5].round_inst_n_200\,
-      \state_out_reg[41]_2\(3) => \genblk1[5].round_inst_n_215\,
-      \state_out_reg[41]_2\(2) => \genblk1[5].round_inst_n_216\,
-      \state_out_reg[41]_2\(1) => \genblk1[5].round_inst_n_217\,
-      \state_out_reg[41]_2\(0) => \genblk1[5].round_inst_n_218\,
-      \state_out_reg[43]_0\(1) => \genblk1[6].round_inst_n_197\,
-      \state_out_reg[43]_0\(0) => \genblk1[6].round_inst_n_198\,
-      \state_out_reg[45]_0\(0) => \genblk1[5].round_inst_n_196\,
-      \state_out_reg[45]_1\(1) => \genblk1[5].round_inst_n_213\,
-      \state_out_reg[45]_1\(0) => \genblk1[5].round_inst_n_214\,
-      \state_out_reg[49]_0\(1) => \genblk1[6].round_inst_n_195\,
-      \state_out_reg[49]_0\(0) => \genblk1[6].round_inst_n_196\,
-      \state_out_reg[49]_1\(1) => \genblk1[5].round_inst_n_194\,
-      \state_out_reg[49]_1\(0) => \genblk1[5].round_inst_n_195\,
-      \state_out_reg[49]_2\(1) => \genblk1[5].round_inst_n_211\,
-      \state_out_reg[49]_2\(0) => \genblk1[5].round_inst_n_212\,
-      \state_out_reg[53]_0\(2) => \genblk1[6].round_inst_n_192\,
-      \state_out_reg[53]_0\(1) => \genblk1[6].round_inst_n_193\,
-      \state_out_reg[53]_0\(0) => \genblk1[6].round_inst_n_194\,
-      \state_out_reg[53]_1\(1) => \genblk1[5].round_inst_n_192\,
-      \state_out_reg[53]_1\(0) => \genblk1[5].round_inst_n_193\,
-      \state_out_reg[53]_2\(1) => \genblk1[5].round_inst_n_209\,
-      \state_out_reg[53]_2\(0) => \genblk1[5].round_inst_n_210\,
-      \state_out_reg[57]_0\(2) => \genblk1[6].round_inst_n_189\,
-      \state_out_reg[57]_0\(1) => \genblk1[6].round_inst_n_190\,
-      \state_out_reg[57]_0\(0) => \genblk1[6].round_inst_n_191\,
-      \state_out_reg[57]_1\(1) => \genblk1[5].round_inst_n_190\,
-      \state_out_reg[57]_1\(0) => \genblk1[5].round_inst_n_191\,
-      \state_out_reg[57]_2\(3) => \genblk1[5].round_inst_n_205\,
-      \state_out_reg[57]_2\(2) => \genblk1[5].round_inst_n_206\,
-      \state_out_reg[57]_2\(1) => \genblk1[5].round_inst_n_207\,
-      \state_out_reg[57]_2\(0) => \genblk1[5].round_inst_n_208\,
-      \state_out_reg[5]_0\(3) => \genblk1[6].round_inst_n_223\,
-      \state_out_reg[5]_0\(2) => \genblk1[6].round_inst_n_224\,
-      \state_out_reg[5]_0\(1) => \genblk1[6].round_inst_n_225\,
-      \state_out_reg[5]_0\(0) => \genblk1[6].round_inst_n_226\,
-      \state_out_reg[61]_0\(3) => \genblk1[6].round_inst_n_185\,
-      \state_out_reg[61]_0\(2) => \genblk1[6].round_inst_n_186\,
-      \state_out_reg[61]_0\(1) => \genblk1[6].round_inst_n_187\,
-      \state_out_reg[61]_0\(0) => \genblk1[6].round_inst_n_188\,
-      \state_out_reg[61]_1\(0) => \genblk1[5].round_inst_n_189\,
-      \state_out_reg[61]_2\(1) => \genblk1[5].round_inst_n_203\,
-      \state_out_reg[61]_2\(0) => \genblk1[5].round_inst_n_204\,
-      \state_out_reg[8]_0\(2) => \genblk1[6].round_inst_n_220\,
-      \state_out_reg[8]_0\(1) => \genblk1[6].round_inst_n_221\,
-      \state_out_reg[8]_0\(0) => \genblk1[6].round_inst_n_222\,
-      \state_out_reg[96]_0\(0) => \genblk1[7].round_inst_n_62\
+      \state_out_reg[127]_0\(70 downto 8) => sbox_state_13(127 downto 65),
+      \state_out_reg[127]_0\(7 downto 6) => sbox_state_13(63 downto 62),
+      \state_out_reg[127]_0\(5 downto 2) => sbox_state_13(33 downto 30),
+      \state_out_reg[127]_0\(1) => \genblk1[5].round_inst_n_133\,
+      \state_out_reg[127]_0\(0) => linear_state_12(0),
+      \state_out_reg[13]_0\(1) => \genblk1[6].round_inst_n_287\,
+      \state_out_reg[13]_0\(0) => \genblk1[6].round_inst_n_288\,
+      \state_out_reg[17]_0\(1) => \genblk1[6].round_inst_n_285\,
+      \state_out_reg[17]_0\(0) => \genblk1[6].round_inst_n_286\,
+      \state_out_reg[20]_0\(2) => \genblk1[6].round_inst_n_282\,
+      \state_out_reg[20]_0\(1) => \genblk1[6].round_inst_n_283\,
+      \state_out_reg[20]_0\(0) => \genblk1[6].round_inst_n_284\,
+      \state_out_reg[25]_0\(2) => \genblk1[6].round_inst_n_279\,
+      \state_out_reg[25]_0\(1) => \genblk1[6].round_inst_n_280\,
+      \state_out_reg[25]_0\(0) => \genblk1[6].round_inst_n_281\,
+      \state_out_reg[29]_0\(1) => \genblk1[6].round_inst_n_277\,
+      \state_out_reg[29]_0\(0) => \genblk1[6].round_inst_n_278\,
+      \state_out_reg[29]_1\(118 downto 91) => \round_state[5]\(125 downto 98),
+      \state_out_reg[29]_1\(90 downto 63) => \round_state[5]\(93 downto 66),
+      \state_out_reg[29]_1\(62 downto 0) => \round_state[5]\(63 downto 1),
+      \state_out_reg[33]_0\(1) => \genblk1[6].round_inst_n_275\,
+      \state_out_reg[33]_0\(0) => \genblk1[6].round_inst_n_276\,
+      \state_out_reg[33]_1\(3) => \genblk1[5].round_inst_n_254\,
+      \state_out_reg[33]_1\(2) => \genblk1[5].round_inst_n_255\,
+      \state_out_reg[33]_1\(1) => \genblk1[5].round_inst_n_256\,
+      \state_out_reg[33]_1\(0) => \genblk1[5].round_inst_n_257\,
+      \state_out_reg[37]_0\(3) => \genblk1[6].round_inst_n_271\,
+      \state_out_reg[37]_0\(2) => \genblk1[6].round_inst_n_272\,
+      \state_out_reg[37]_0\(1) => \genblk1[6].round_inst_n_273\,
+      \state_out_reg[37]_0\(0) => \genblk1[6].round_inst_n_274\,
+      \state_out_reg[37]_1\(0) => \genblk1[5].round_inst_n_270\,
+      \state_out_reg[41]_0\(2) => \genblk1[6].round_inst_n_268\,
+      \state_out_reg[41]_0\(1) => \genblk1[6].round_inst_n_269\,
+      \state_out_reg[41]_0\(0) => \genblk1[6].round_inst_n_270\,
+      \state_out_reg[41]_1\(3) => \genblk1[5].round_inst_n_266\,
+      \state_out_reg[41]_1\(2) => \genblk1[5].round_inst_n_267\,
+      \state_out_reg[41]_1\(1) => \genblk1[5].round_inst_n_268\,
+      \state_out_reg[41]_1\(0) => \genblk1[5].round_inst_n_269\,
+      \state_out_reg[41]_2\(3) => \genblk1[5].round_inst_n_284\,
+      \state_out_reg[41]_2\(2) => \genblk1[5].round_inst_n_285\,
+      \state_out_reg[41]_2\(1) => \genblk1[5].round_inst_n_286\,
+      \state_out_reg[41]_2\(0) => \genblk1[5].round_inst_n_287\,
+      \state_out_reg[43]_0\(1) => \genblk1[6].round_inst_n_266\,
+      \state_out_reg[43]_0\(0) => \genblk1[6].round_inst_n_267\,
+      \state_out_reg[45]_0\(0) => \genblk1[5].round_inst_n_265\,
+      \state_out_reg[45]_1\(1) => \genblk1[5].round_inst_n_282\,
+      \state_out_reg[45]_1\(0) => \genblk1[5].round_inst_n_283\,
+      \state_out_reg[49]_0\(1) => \genblk1[6].round_inst_n_264\,
+      \state_out_reg[49]_0\(0) => \genblk1[6].round_inst_n_265\,
+      \state_out_reg[49]_1\(1) => \genblk1[5].round_inst_n_263\,
+      \state_out_reg[49]_1\(0) => \genblk1[5].round_inst_n_264\,
+      \state_out_reg[49]_2\(1) => \genblk1[5].round_inst_n_280\,
+      \state_out_reg[49]_2\(0) => \genblk1[5].round_inst_n_281\,
+      \state_out_reg[53]_0\(2) => \genblk1[6].round_inst_n_261\,
+      \state_out_reg[53]_0\(1) => \genblk1[6].round_inst_n_262\,
+      \state_out_reg[53]_0\(0) => \genblk1[6].round_inst_n_263\,
+      \state_out_reg[53]_1\(1) => \genblk1[5].round_inst_n_261\,
+      \state_out_reg[53]_1\(0) => \genblk1[5].round_inst_n_262\,
+      \state_out_reg[53]_2\(1) => \genblk1[5].round_inst_n_278\,
+      \state_out_reg[53]_2\(0) => \genblk1[5].round_inst_n_279\,
+      \state_out_reg[57]_0\(2) => \genblk1[6].round_inst_n_258\,
+      \state_out_reg[57]_0\(1) => \genblk1[6].round_inst_n_259\,
+      \state_out_reg[57]_0\(0) => \genblk1[6].round_inst_n_260\,
+      \state_out_reg[57]_1\(1) => \genblk1[5].round_inst_n_259\,
+      \state_out_reg[57]_1\(0) => \genblk1[5].round_inst_n_260\,
+      \state_out_reg[57]_2\(3) => \genblk1[5].round_inst_n_274\,
+      \state_out_reg[57]_2\(2) => \genblk1[5].round_inst_n_275\,
+      \state_out_reg[57]_2\(1) => \genblk1[5].round_inst_n_276\,
+      \state_out_reg[57]_2\(0) => \genblk1[5].round_inst_n_277\,
+      \state_out_reg[5]_0\(3) => \genblk1[6].round_inst_n_292\,
+      \state_out_reg[5]_0\(2) => \genblk1[6].round_inst_n_293\,
+      \state_out_reg[5]_0\(1) => \genblk1[6].round_inst_n_294\,
+      \state_out_reg[5]_0\(0) => \genblk1[6].round_inst_n_295\,
+      \state_out_reg[61]_0\(3) => \genblk1[6].round_inst_n_254\,
+      \state_out_reg[61]_0\(2) => \genblk1[6].round_inst_n_255\,
+      \state_out_reg[61]_0\(1) => \genblk1[6].round_inst_n_256\,
+      \state_out_reg[61]_0\(0) => \genblk1[6].round_inst_n_257\,
+      \state_out_reg[61]_1\(0) => \genblk1[5].round_inst_n_258\,
+      \state_out_reg[61]_2\(1) => \genblk1[5].round_inst_n_272\,
+      \state_out_reg[61]_2\(0) => \genblk1[5].round_inst_n_273\,
+      \state_out_reg[8]_0\(2) => \genblk1[6].round_inst_n_289\,
+      \state_out_reg[8]_0\(1) => \genblk1[6].round_inst_n_290\,
+      \state_out_reg[8]_0\(0) => \genblk1[6].round_inst_n_291\,
+      \state_out_reg[96]_0\(0) => \genblk1[5].round_inst_n_271\,
+      \state_out_reg[96]_1\(0) => \genblk1[7].round_inst_n_62\
     );
 \genblk1[7].round_inst\: entity work.design_ascon_ascon_core_0_2_ascon_round_7
      port map (
       CO(0) => \genblk1[8].round_inst_n_63\,
-      D(70 downto 8) => sbox_state_17(127 downto 65),
-      D(7 downto 5) => sbox_state_17(63 downto 61),
-      D(4 downto 1) => sbox_state_17(32 downto 29),
-      D(0) => linear_state_16(0),
-      Q(119 downto 92) => \round_state[7]\(124 downto 97),
-      Q(91 downto 64) => \round_state[7]\(92 downto 65),
-      Q(63 downto 0) => \round_state[7]\(63 downto 0),
-      S(0) => \genblk1[6].round_inst_n_63\,
-      add_const_state(61 downto 0) => add_const_state_18(63 downto 2),
-      add_const_state_0(62 downto 0) => add_const_state_21(63 downto 1),
+      D(70 downto 8) => sbox_state_19(127 downto 65),
+      D(7 downto 5) => sbox_state_19(63 downto 61),
+      D(4 downto 1) => sbox_state_19(32 downto 29),
+      D(0) => linear_state_18(0),
+      Q(118 downto 91) => \round_state[6]\(125 downto 98),
+      Q(90 downto 63) => \round_state[6]\(93 downto 66),
+      Q(62 downto 0) => \round_state[6]\(63 downto 1),
+      S(0) => \genblk1[6].round_inst_n_253\,
+      add_const_state(61 downto 0) => add_const_state_20(63 downto 2),
+      add_const_state_0(62 downto 0) => add_const_state_23(63 downto 1),
       clk => clk,
       enable => enable,
-      \round_state[6]\(120 downto 93) => \round_state[6]\(125 downto 98),
-      \round_state[6]\(92) => \round_state[6]\(96),
-      \round_state[6]\(91 downto 64) => \round_state[6]\(93 downto 66),
-      \round_state[6]\(63 downto 0) => \round_state[6]\(63 downto 0),
       rst => rst,
-      \state_out_reg[127]_0\(69 downto 7) => sbox_state_14(127 downto 65),
-      \state_out_reg[127]_0\(6 downto 5) => sbox_state_14(63 downto 62),
-      \state_out_reg[127]_0\(4 downto 1) => sbox_state_14(33 downto 30),
-      \state_out_reg[127]_0\(0) => \genblk1[6].round_inst_n_296\,
+      \state_out_reg[124]_0\(119 downto 92) => \round_state[7]\(124 downto 97),
+      \state_out_reg[124]_0\(91 downto 64) => \round_state[7]\(92 downto 65),
+      \state_out_reg[124]_0\(63 downto 0) => \round_state[7]\(63 downto 0),
+      \state_out_reg[127]_0\(70 downto 8) => sbox_state_16(127 downto 65),
+      \state_out_reg[127]_0\(7 downto 6) => sbox_state_16(63 downto 62),
+      \state_out_reg[127]_0\(5 downto 2) => sbox_state_16(33 downto 30),
+      \state_out_reg[127]_0\(1) => \genblk1[6].round_inst_n_132\,
+      \state_out_reg[127]_0\(0) => linear_state_15(0),
       \state_out_reg[16]_0\(2) => \genblk1[7].round_inst_n_262\,
       \state_out_reg[16]_0\(1) => \genblk1[7].round_inst_n_263\,
       \state_out_reg[16]_0\(0) => \genblk1[7].round_inst_n_264\,
@@ -44791,66 +44772,66 @@ final_inst: entity work.design_ascon_ascon_core_0_2_ascon_finalization
       \state_out_reg[31]_0\(1) => \genblk1[7].round_inst_n_254\,
       \state_out_reg[31]_0\(0) => \genblk1[7].round_inst_n_255\,
       \state_out_reg[33]_0\(0) => \genblk1[7].round_inst_n_288\,
-      \state_out_reg[33]_1\(1) => \genblk1[6].round_inst_n_206\,
-      \state_out_reg[33]_1\(0) => \genblk1[6].round_inst_n_207\,
-      \state_out_reg[37]_0\(3) => \genblk1[6].round_inst_n_223\,
-      \state_out_reg[37]_0\(2) => \genblk1[6].round_inst_n_224\,
-      \state_out_reg[37]_0\(1) => \genblk1[6].round_inst_n_225\,
-      \state_out_reg[37]_0\(0) => \genblk1[6].round_inst_n_226\,
-      \state_out_reg[37]_1\(3) => \genblk1[6].round_inst_n_202\,
-      \state_out_reg[37]_1\(2) => \genblk1[6].round_inst_n_203\,
-      \state_out_reg[37]_1\(1) => \genblk1[6].round_inst_n_204\,
-      \state_out_reg[37]_1\(0) => \genblk1[6].round_inst_n_205\,
+      \state_out_reg[33]_1\(1) => \genblk1[6].round_inst_n_275\,
+      \state_out_reg[33]_1\(0) => \genblk1[6].round_inst_n_276\,
+      \state_out_reg[37]_0\(3) => \genblk1[6].round_inst_n_292\,
+      \state_out_reg[37]_0\(2) => \genblk1[6].round_inst_n_293\,
+      \state_out_reg[37]_0\(1) => \genblk1[6].round_inst_n_294\,
+      \state_out_reg[37]_0\(0) => \genblk1[6].round_inst_n_295\,
+      \state_out_reg[37]_1\(3) => \genblk1[6].round_inst_n_271\,
+      \state_out_reg[37]_1\(2) => \genblk1[6].round_inst_n_272\,
+      \state_out_reg[37]_1\(1) => \genblk1[6].round_inst_n_273\,
+      \state_out_reg[37]_1\(0) => \genblk1[6].round_inst_n_274\,
       \state_out_reg[38]_0\(1) => \genblk1[7].round_inst_n_286\,
       \state_out_reg[38]_0\(0) => \genblk1[7].round_inst_n_287\,
-      \state_out_reg[41]_0\(2) => \genblk1[6].round_inst_n_220\,
-      \state_out_reg[41]_0\(1) => \genblk1[6].round_inst_n_221\,
-      \state_out_reg[41]_0\(0) => \genblk1[6].round_inst_n_222\,
-      \state_out_reg[41]_1\(2) => \genblk1[6].round_inst_n_199\,
-      \state_out_reg[41]_1\(1) => \genblk1[6].round_inst_n_200\,
-      \state_out_reg[41]_1\(0) => \genblk1[6].round_inst_n_201\,
+      \state_out_reg[41]_0\(2) => \genblk1[6].round_inst_n_289\,
+      \state_out_reg[41]_0\(1) => \genblk1[6].round_inst_n_290\,
+      \state_out_reg[41]_0\(0) => \genblk1[6].round_inst_n_291\,
+      \state_out_reg[41]_1\(2) => \genblk1[6].round_inst_n_268\,
+      \state_out_reg[41]_1\(1) => \genblk1[6].round_inst_n_269\,
+      \state_out_reg[41]_1\(0) => \genblk1[6].round_inst_n_270\,
       \state_out_reg[44]_0\(3) => \genblk1[7].round_inst_n_282\,
       \state_out_reg[44]_0\(2) => \genblk1[7].round_inst_n_283\,
       \state_out_reg[44]_0\(1) => \genblk1[7].round_inst_n_284\,
       \state_out_reg[44]_0\(0) => \genblk1[7].round_inst_n_285\,
-      \state_out_reg[45]_0\(1) => \genblk1[6].round_inst_n_218\,
-      \state_out_reg[45]_0\(0) => \genblk1[6].round_inst_n_219\,
-      \state_out_reg[45]_1\(1) => \genblk1[6].round_inst_n_197\,
-      \state_out_reg[45]_1\(0) => \genblk1[6].round_inst_n_198\,
-      \state_out_reg[49]_0\(1) => \genblk1[6].round_inst_n_216\,
-      \state_out_reg[49]_0\(0) => \genblk1[6].round_inst_n_217\,
-      \state_out_reg[49]_1\(1) => \genblk1[6].round_inst_n_195\,
-      \state_out_reg[49]_1\(0) => \genblk1[6].round_inst_n_196\,
+      \state_out_reg[45]_0\(1) => \genblk1[6].round_inst_n_287\,
+      \state_out_reg[45]_0\(0) => \genblk1[6].round_inst_n_288\,
+      \state_out_reg[45]_1\(1) => \genblk1[6].round_inst_n_266\,
+      \state_out_reg[45]_1\(0) => \genblk1[6].round_inst_n_267\,
+      \state_out_reg[49]_0\(1) => \genblk1[6].round_inst_n_285\,
+      \state_out_reg[49]_0\(0) => \genblk1[6].round_inst_n_286\,
+      \state_out_reg[49]_1\(1) => \genblk1[6].round_inst_n_264\,
+      \state_out_reg[49]_1\(0) => \genblk1[6].round_inst_n_265\,
       \state_out_reg[4]_0\(1) => \genblk1[7].round_inst_n_268\,
       \state_out_reg[4]_0\(0) => \genblk1[7].round_inst_n_269\,
       \state_out_reg[52]_0\(3) => \genblk1[7].round_inst_n_278\,
       \state_out_reg[52]_0\(2) => \genblk1[7].round_inst_n_279\,
       \state_out_reg[52]_0\(1) => \genblk1[7].round_inst_n_280\,
       \state_out_reg[52]_0\(0) => \genblk1[7].round_inst_n_281\,
-      \state_out_reg[53]_0\(2) => \genblk1[6].round_inst_n_213\,
-      \state_out_reg[53]_0\(1) => \genblk1[6].round_inst_n_214\,
-      \state_out_reg[53]_0\(0) => \genblk1[6].round_inst_n_215\,
-      \state_out_reg[53]_1\(2) => \genblk1[6].round_inst_n_192\,
-      \state_out_reg[53]_1\(1) => \genblk1[6].round_inst_n_193\,
-      \state_out_reg[53]_1\(0) => \genblk1[6].round_inst_n_194\,
+      \state_out_reg[53]_0\(2) => \genblk1[6].round_inst_n_282\,
+      \state_out_reg[53]_0\(1) => \genblk1[6].round_inst_n_283\,
+      \state_out_reg[53]_0\(0) => \genblk1[6].round_inst_n_284\,
+      \state_out_reg[53]_1\(2) => \genblk1[6].round_inst_n_261\,
+      \state_out_reg[53]_1\(1) => \genblk1[6].round_inst_n_262\,
+      \state_out_reg[53]_1\(0) => \genblk1[6].round_inst_n_263\,
       \state_out_reg[56]_0\(3) => \genblk1[7].round_inst_n_274\,
       \state_out_reg[56]_0\(2) => \genblk1[7].round_inst_n_275\,
       \state_out_reg[56]_0\(1) => \genblk1[7].round_inst_n_276\,
       \state_out_reg[56]_0\(0) => \genblk1[7].round_inst_n_277\,
-      \state_out_reg[57]_0\(2) => \genblk1[6].round_inst_n_210\,
-      \state_out_reg[57]_0\(1) => \genblk1[6].round_inst_n_211\,
-      \state_out_reg[57]_0\(0) => \genblk1[6].round_inst_n_212\,
-      \state_out_reg[57]_1\(2) => \genblk1[6].round_inst_n_189\,
-      \state_out_reg[57]_1\(1) => \genblk1[6].round_inst_n_190\,
-      \state_out_reg[57]_1\(0) => \genblk1[6].round_inst_n_191\,
+      \state_out_reg[57]_0\(2) => \genblk1[6].round_inst_n_279\,
+      \state_out_reg[57]_0\(1) => \genblk1[6].round_inst_n_280\,
+      \state_out_reg[57]_0\(0) => \genblk1[6].round_inst_n_281\,
+      \state_out_reg[57]_1\(2) => \genblk1[6].round_inst_n_258\,
+      \state_out_reg[57]_1\(1) => \genblk1[6].round_inst_n_259\,
+      \state_out_reg[57]_1\(0) => \genblk1[6].round_inst_n_260\,
       \state_out_reg[59]_0\(1) => \genblk1[7].round_inst_n_272\,
       \state_out_reg[59]_0\(0) => \genblk1[7].round_inst_n_273\,
-      \state_out_reg[61]_0\(1) => \genblk1[6].round_inst_n_208\,
-      \state_out_reg[61]_0\(0) => \genblk1[6].round_inst_n_209\,
-      \state_out_reg[61]_1\(3) => \genblk1[6].round_inst_n_185\,
-      \state_out_reg[61]_1\(2) => \genblk1[6].round_inst_n_186\,
-      \state_out_reg[61]_1\(1) => \genblk1[6].round_inst_n_187\,
-      \state_out_reg[61]_1\(0) => \genblk1[6].round_inst_n_188\,
+      \state_out_reg[61]_0\(1) => \genblk1[6].round_inst_n_277\,
+      \state_out_reg[61]_0\(0) => \genblk1[6].round_inst_n_278\,
+      \state_out_reg[61]_1\(3) => \genblk1[6].round_inst_n_254\,
+      \state_out_reg[61]_1\(2) => \genblk1[6].round_inst_n_255\,
+      \state_out_reg[61]_1\(1) => \genblk1[6].round_inst_n_256\,
+      \state_out_reg[61]_1\(0) => \genblk1[6].round_inst_n_257\,
       \state_out_reg[62]_0\(1) => \genblk1[7].round_inst_n_270\,
       \state_out_reg[62]_0\(0) => \genblk1[7].round_inst_n_271\,
       \state_out_reg[63]_0\(0) => \genblk1[7].round_inst_n_62\,
@@ -44861,27 +44842,24 @@ final_inst: entity work.design_ascon_ascon_core_0_2_ascon_finalization
 \genblk1[8].round_inst\: entity work.design_ascon_ascon_core_0_2_ascon_round_8
      port map (
       CO(0) => \genblk1[8].round_inst_n_63\,
-      D(70 downto 8) => sbox_state_20(127 downto 65),
-      D(7 downto 5) => sbox_state_20(63 downto 61),
-      D(4 downto 1) => sbox_state_20(32 downto 29),
-      D(0) => linear_state_19(0),
-      Q(119 downto 92) => \round_state[7]\(124 downto 97),
-      Q(91 downto 64) => \round_state[7]\(92 downto 65),
-      Q(63 downto 0) => \round_state[7]\(63 downto 0),
+      D(70 downto 8) => sbox_state_22(127 downto 65),
+      D(7 downto 5) => sbox_state_22(63 downto 61),
+      D(4 downto 1) => sbox_state_22(32 downto 29),
+      D(0) => linear_state_21(0),
+      Q(119 downto 92) => \round_state[8]\(124 downto 97),
+      Q(91 downto 64) => \round_state[8]\(92 downto 65),
+      Q(63 downto 0) => \round_state[8]\(63 downto 0),
       S(1) => \genblk1[8].round_inst_n_255\,
       S(0) => \genblk1[8].round_inst_n_256\,
-      add_const_state(62 downto 0) => add_const_state_21(63 downto 1),
-      add_const_state_0(62 downto 0) => add_const_state_24(63 downto 1),
+      add_const_state(62 downto 0) => add_const_state_23(63 downto 1),
+      add_const_state_0(62 downto 0) => add_const_state_26(63 downto 1),
       clk => clk,
       enable => enable,
       rst => rst,
-      \state_out_reg[124]_0\(119 downto 92) => \round_state[8]\(124 downto 97),
-      \state_out_reg[124]_0\(91 downto 64) => \round_state[8]\(92 downto 65),
-      \state_out_reg[124]_0\(63 downto 0) => \round_state[8]\(63 downto 0),
-      \state_out_reg[127]_0\(70 downto 8) => sbox_state_17(127 downto 65),
-      \state_out_reg[127]_0\(7 downto 5) => sbox_state_17(63 downto 61),
-      \state_out_reg[127]_0\(4 downto 1) => sbox_state_17(32 downto 29),
-      \state_out_reg[127]_0\(0) => linear_state_16(0),
+      \state_out_reg[127]_0\(70 downto 8) => sbox_state_19(127 downto 65),
+      \state_out_reg[127]_0\(7 downto 5) => sbox_state_19(63 downto 61),
+      \state_out_reg[127]_0\(4 downto 1) => sbox_state_19(32 downto 29),
+      \state_out_reg[127]_0\(0) => linear_state_18(0),
       \state_out_reg[12]_0\(1) => \genblk1[8].round_inst_n_284\,
       \state_out_reg[12]_0\(0) => \genblk1[8].round_inst_n_285\,
       \state_out_reg[15]_0\(2) => \genblk1[8].round_inst_n_281\,
@@ -44895,6 +44873,9 @@ final_inst: entity work.design_ascon_ascon_core_0_2_ascon_finalization
       \state_out_reg[24]_0\(0) => \genblk1[8].round_inst_n_277\,
       \state_out_reg[27]_0\(1) => \genblk1[8].round_inst_n_273\,
       \state_out_reg[27]_0\(0) => \genblk1[8].round_inst_n_274\,
+      \state_out_reg[28]_0\(119 downto 92) => \round_state[7]\(124 downto 97),
+      \state_out_reg[28]_0\(91 downto 64) => \round_state[7]\(92 downto 65),
+      \state_out_reg[28]_0\(63 downto 0) => \round_state[7]\(63 downto 0),
       \state_out_reg[32]_0\(1) => \genblk1[8].round_inst_n_271\,
       \state_out_reg[32]_0\(0) => \genblk1[8].round_inst_n_272\,
       \state_out_reg[32]_1\(1) => \genblk1[7].round_inst_n_254\,
@@ -44956,27 +44937,30 @@ final_inst: entity work.design_ascon_ascon_core_0_2_ascon_finalization
 \genblk1[9].round_inst\: entity work.design_ascon_ascon_core_0_2_ascon_round_9
      port map (
       CO(0) => \genblk1[10].round_inst_n_60\,
-      D(70 downto 8) => sbox_state_20(127 downto 65),
-      D(7 downto 5) => sbox_state_20(63 downto 61),
-      D(4 downto 1) => sbox_state_20(32 downto 29),
-      D(0) => linear_state_19(0),
-      Q(108 downto 85) => \round_state[9]\(123 downto 100),
-      Q(84 downto 61) => \round_state[9]\(91 downto 68),
-      Q(60 downto 0) => \round_state[9]\(63 downto 3),
+      D(70 downto 8) => sbox_state_22(127 downto 65),
+      D(7 downto 5) => sbox_state_22(63 downto 61),
+      D(4 downto 1) => sbox_state_22(32 downto 29),
+      D(0) => linear_state_21(0),
+      Q(119 downto 92) => \round_state[8]\(124 downto 97),
+      Q(91 downto 64) => \round_state[8]\(92 downto 65),
+      Q(63 downto 0) => \round_state[8]\(63 downto 0),
       S(1) => \genblk1[8].round_inst_n_255\,
       S(0) => \genblk1[8].round_inst_n_256\,
-      add_const_state(62 downto 0) => add_const_state_24(63 downto 1),
+      add_const_state(62 downto 0) => add_const_state_26(63 downto 1),
       add_const_state_0(59 downto 0) => add_const_state(63 downto 4),
       clk => clk,
       enable => enable,
       rst => rst,
       \state_out_reg[11]_0\(0) => \genblk1[9].round_inst_n_263\,
-      \state_out_reg[127]_0\(78 downto 16) => sbox_state_23(127 downto 65),
-      \state_out_reg[127]_0\(15 downto 12) => sbox_state_23(63 downto 60),
-      \state_out_reg[127]_0\(11 downto 4) => sbox_state_23(35 downto 28),
+      \state_out_reg[123]_0\(108 downto 85) => \round_state[9]\(123 downto 100),
+      \state_out_reg[123]_0\(84 downto 61) => \round_state[9]\(91 downto 68),
+      \state_out_reg[123]_0\(60 downto 0) => \round_state[9]\(63 downto 3),
+      \state_out_reg[127]_0\(78 downto 16) => sbox_state_25(127 downto 65),
+      \state_out_reg[127]_0\(15 downto 12) => sbox_state_25(63 downto 60),
+      \state_out_reg[127]_0\(11 downto 4) => sbox_state_25(35 downto 28),
       \state_out_reg[127]_0\(3) => \genblk1[9].round_inst_n_139\,
-      \state_out_reg[127]_0\(2 downto 1) => sbox_state_23(2 downto 1),
-      \state_out_reg[127]_0\(0) => linear_state_22(0),
+      \state_out_reg[127]_0\(2 downto 1) => sbox_state_25(2 downto 1),
+      \state_out_reg[127]_0\(0) => linear_state_24(0),
       \state_out_reg[18]_0\(2) => \genblk1[9].round_inst_n_260\,
       \state_out_reg[18]_0\(1) => \genblk1[9].round_inst_n_261\,
       \state_out_reg[18]_0\(0) => \genblk1[9].round_inst_n_262\,
@@ -44985,9 +44969,6 @@ final_inst: entity work.design_ascon_ascon_core_0_2_ascon_finalization
       \state_out_reg[23]_0\(0) => \genblk1[9].round_inst_n_259\,
       \state_out_reg[26]_0\(1) => \genblk1[9].round_inst_n_255\,
       \state_out_reg[26]_0\(0) => \genblk1[9].round_inst_n_256\,
-      \state_out_reg[28]_0\(119 downto 92) => \round_state[8]\(124 downto 97),
-      \state_out_reg[28]_0\(91 downto 64) => \round_state[8]\(92 downto 65),
-      \state_out_reg[28]_0\(63 downto 0) => \round_state[8]\(63 downto 0),
       \state_out_reg[31]_0\(2) => \genblk1[9].round_inst_n_252\,
       \state_out_reg[31]_0\(1) => \genblk1[9].round_inst_n_253\,
       \state_out_reg[31]_0\(0) => \genblk1[9].round_inst_n_254\,
@@ -45138,7 +45119,7 @@ entity design_ascon_ascon_core_0_2 is
   attribute IP_DEFINITION_SOURCE : string;
   attribute IP_DEFINITION_SOURCE of design_ascon_ascon_core_0_2 : entity is "package_project";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of design_ascon_ascon_core_0_2 : entity is "ascon_top,Vivado 2022.2";
+  attribute X_CORE_INFO of design_ascon_ascon_core_0_2 : entity is "ascon_top,Vivado 2023.1";
 end design_ascon_ascon_core_0_2;
 
 architecture STRUCTURE of design_ascon_ascon_core_0_2 is

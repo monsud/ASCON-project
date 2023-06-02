@@ -18,4 +18,5 @@ vhdl xil_defaultlib  \
 "../../../bd/design_ascon/ip/design_ascon_axi_gpio_13_2/sim/design_ascon_axi_gpio_13_2.vhd" \
 "../../../bd/design_ascon/ip/design_ascon_axi_gpio_13_3/sim/design_ascon_axi_gpio_13_3.vhd" \
 
+# Do not sort compile order
 nosort

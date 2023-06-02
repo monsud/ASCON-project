@@ -3,17 +3,21 @@
     with args -log design_ascon_axi_gpio_13_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_ascon_axi_gpio_13_0.tcl
 
 
+ECHO disattivato.
+ECHO disattivato.
 
-****** Vivado v2022.2 (64-bit)
-  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
-  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+****** Vivado v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source design_ascon_axi_gpio_13_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 377.129 ; gain = 45.184
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 421.551 ; gain = 163.133
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/david/Documents/ASCON-project/project_ascon.srcs'.
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
 INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_ascon_axi_gpio_13_0
 Command: synth_design -top design_ascon_axi_gpio_13_0 -part xc7z020clg484-1 -incremental_mode off -mode out_of_context
 Starting synth_design
@@ -22,10 +26,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 9364
-INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+INFO: [Synth 8-7075] Helper process launched with PID 9500
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1224.871 ; gain = 406.742
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 1273.578 ; gain = 409.984
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'design_ascon_axi_gpio_13_0' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_axi_gpio_13_0/synth/design_ascon_axi_gpio_13_0.vhd:84]
 	Parameter C_FAMILY bound to: zynq - type: string 
@@ -43,8 +46,8 @@ INFO: [Synth 8-638] synthesizing module 'design_ascon_axi_gpio_13_0' [c:/Users/d
 	Parameter C_IS_DUAL bound to: 0 - type: integer 
 	Parameter C_DOUT_DEFAULT_2 bound to: 32'b00000000000000000000000000000000 
 	Parameter C_TRI_DEFAULT_2 bound to: 32'b11111111111111111111111111111111 
-INFO: [Synth 8-3491] module 'axi_gpio' declared at 'c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:1265' bound to instance 'U0' of component 'axi_gpio' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_axi_gpio_13_0/synth/design_ascon_axi_gpio_13_0.vhd:168]
-INFO: [Synth 8-638] synthesizing module 'axi_gpio' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:1351]
+INFO: [Synth 8-3491] module 'axi_gpio' declared at 'c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:1265' bound to instance 'U0' of component 'axi_gpio' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_axi_gpio_13_0/synth/design_ascon_axi_gpio_13_0.vhd:168]
+INFO: [Synth 8-638] synthesizing module 'axi_gpio' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:1351]
 INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
 INFO: [Synth 8-638] synthesizing module 'slave_attachment' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
 INFO: [Synth 8-638] synthesizing module 'address_decoder' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
@@ -60,8 +63,8 @@ INFO: [Synth 8-256] done synthesizing module 'address_decoder' (0#1) [c:/Users/d
 INFO: [Synth 8-226] default block is never used [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2550]
 INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
 INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
-INFO: [Synth 8-638] synthesizing module 'GPIO_Core' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:178]
-INFO: [Synth 8-226] default block is never used [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:443]
+INFO: [Synth 8-638] synthesizing module 'GPIO_Core' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:178]
+INFO: [Synth 8-226] default block is never used [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:443]
 INFO: [Synth 8-638] synthesizing module 'cdc_sync' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
@@ -357,41 +360,41 @@ INFO: [Common 17-14] Message 'Synth 8-113' appears 100 times and further instanc
 	Parameter INIT bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
-INFO: [Synth 8-256] done synthesizing module 'GPIO_Core' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:178]
-INFO: [Synth 8-256] done synthesizing module 'axi_gpio' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:1351]
+INFO: [Synth 8-256] done synthesizing module 'GPIO_Core' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:178]
+INFO: [Synth 8-256] done synthesizing module 'axi_gpio' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:1351]
 INFO: [Synth 8-256] done synthesizing module 'design_ascon_axi_gpio_13_0' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_axi_gpio_13_0/synth/design_ascon_axi_gpio_13_0.vhd:84]
-WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[0].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
-WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[1].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
-WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[2].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
-WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[3].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
-WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[4].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
-WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[5].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
-WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[6].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
-WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[7].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
-WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[8].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
-WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[9].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
-WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[10].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
-WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[11].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
-WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[12].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
-WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[13].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
-WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[14].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
-WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[15].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
-WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[16].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
-WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[17].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
-WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[18].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
-WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[19].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
-WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[20].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
-WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[21].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
-WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[22].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
-WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[23].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
-WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[24].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
-WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[25].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
-WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[26].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
-WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[27].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
-WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[28].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
-WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[29].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
-WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[30].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
-WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[31].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[0].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[1].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[2].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[3].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[4].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[5].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[6].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[7].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[8].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[9].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[10].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[11].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[12].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[13].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[14].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[15].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[16].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[17].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[18].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[19].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[20].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[21].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[22].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[23].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[24].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[25].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[26].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[27].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[28].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[29].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[30].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[31].GPIO_DBus_i_reg was removed.  [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/18b7/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
 WARNING: [Synth 8-7129] Port prmry_aclk in module cdc_sync is either unconnected or has no load
 WARNING: [Synth 8-7129] Port prmry_resetn in module cdc_sync is either unconnected or has no load
 WARNING: [Synth 8-7129] Port prmry_in in module cdc_sync is either unconnected or has no load
@@ -451,18 +454,18 @@ WARNING: [Synth 8-7129] Port S_AXI_WSTRB[2] in module slave_attachment is either
 WARNING: [Synth 8-7129] Port S_AXI_WSTRB[1] in module slave_attachment is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_WSTRB[0] in module slave_attachment is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1323.090 ; gain = 504.961
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 1375.473 ; gain = 511.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1323.090 ; gain = 504.961
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 1375.473 ; gain = 511.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1323.090 ; gain = 504.961
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 1375.473 ; gain = 511.879
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1323.090 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1375.473 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 192 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -479,30 +482,29 @@ Parsing XDC File [C:/Users/david/Documents/ASCON-project/project_ascon.runs/desi
 Finished Parsing XDC File [C:/Users/david/Documents/ASCON-project/project_ascon.runs/design_ascon_axi_gpio_13_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1391.969 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1476.332 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 192 instances were transformed.
   FDR => FDRE: 192 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 1395.438 ; gain = 3.469
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.073 . Memory (MB): peak = 1476.410 ; gain = 0.078
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
-INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 1395.438 ; gain = 577.309
+Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:35 . Memory (MB): peak = 1476.410 ; gain = 612.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 1395.438 ; gain = 577.309
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:00:35 . Memory (MB): peak = 1476.410 ; gain = 612.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  C:/Users/david/Documents/ASCON-project/project_ascon.runs/design_ascon_axi_gpio_13_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 1395.438 ; gain = 577.309
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:35 . Memory (MB): peak = 1476.410 ; gain = 612.816
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
 ---------------------------------------------------------------------------------------------------
@@ -515,7 +517,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'slave_attachment'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 1395.438 ; gain = 577.309
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:36 . Memory (MB): peak = 1476.410 ; gain = 612.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -657,25 +659,25 @@ INFO: [Synth 8-3332] Sequential element (gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3
 INFO: [Synth 8-3332] Sequential element (gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[30].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_gpio.
 INFO: [Synth 8-3332] Sequential element (gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[31].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_gpio.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 1395.438 ; gain = 577.309
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 1476.410 ; gain = 612.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 1395.438 ; gain = 577.309
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:50 . Memory (MB): peak = 1476.410 ; gain = 612.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 1395.438 ; gain = 577.309
+Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:50 . Memory (MB): peak = 1476.410 ; gain = 612.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 1395.438 ; gain = 577.309
+Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:50 . Memory (MB): peak = 1476.410 ; gain = 612.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -693,37 +695,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:48 ; elapsed = 00:00:54 . Memory (MB): peak = 1395.438 ; gain = 577.309
+Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:00:57 . Memory (MB): peak = 1476.410 ; gain = 612.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:48 ; elapsed = 00:00:54 . Memory (MB): peak = 1395.438 ; gain = 577.309
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:00:57 . Memory (MB): peak = 1476.410 ; gain = 612.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:48 ; elapsed = 00:00:54 . Memory (MB): peak = 1395.438 ; gain = 577.309
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:00:57 . Memory (MB): peak = 1476.410 ; gain = 612.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:48 ; elapsed = 00:00:54 . Memory (MB): peak = 1395.438 ; gain = 577.309
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:00:57 . Memory (MB): peak = 1476.410 ; gain = 612.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:48 ; elapsed = 00:00:54 . Memory (MB): peak = 1395.438 ; gain = 577.309
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:57 . Memory (MB): peak = 1476.410 ; gain = 612.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:48 ; elapsed = 00:00:54 . Memory (MB): peak = 1395.438 ; gain = 577.309
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:00:57 . Memory (MB): peak = 1476.410 ; gain = 612.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -750,30 +752,30 @@ Report Cell Usage:
 |9     |FDSE |    33|
 +------+-----+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:48 ; elapsed = 00:00:54 . Memory (MB): peak = 1395.438 ; gain = 577.309
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:00:57 . Memory (MB): peak = 1476.410 ; gain = 612.816
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 37 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:00:50 . Memory (MB): peak = 1395.438 ; gain = 504.961
-Synthesis Optimization Complete : Time (s): cpu = 00:00:48 ; elapsed = 00:00:54 . Memory (MB): peak = 1395.438 ; gain = 577.309
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:53 . Memory (MB): peak = 1476.410 ; gain = 511.879
+Synthesis Optimization Complete : Time (s): cpu = 00:00:48 ; elapsed = 00:00:58 . Memory (MB): peak = 1476.410 ; gain = 612.816
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1395.438 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1476.410 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 128 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1395.438 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1476.410 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 128 instances were transformed.
   FDR => FDRE: 128 instances
 
-Synth Design complete, checksum: 389b25ba
+Synth Design complete | Checksum: 389b25ba
 INFO: [Common 17-83] Releasing license: Synthesis
-215 Infos, 127 Warnings, 0 Critical Warnings and 0 Errors encountered.
+213 Infos, 127 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:55 ; elapsed = 00:01:03 . Memory (MB): peak = 1395.438 ; gain = 982.598
+synth_design: Time (s): cpu = 00:00:55 ; elapsed = 00:01:08 . Memory (MB): peak = 1476.410 ; gain = 1019.293
 INFO: [Common 17-1381] The checkpoint 'C:/Users/david/Documents/ASCON-project/project_ascon.runs/design_ascon_axi_gpio_13_0_synth_1/design_ascon_axi_gpio_13_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_ascon_axi_gpio_13_0, cache-ID = 833be526859be011
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_ascon_axi_gpio_13_0, cache-ID = 0762270b9616a675
 INFO: [Coretcl 2-1174] Renamed 8 cell refs.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/david/Documents/ASCON-project/project_ascon.runs/design_ascon_axi_gpio_13_0_synth_1/design_ascon_axi_gpio_13_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_ascon_axi_gpio_13_0_utilization_synth.rpt -pb design_ascon_axi_gpio_13_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Jun  1 17:03:06 2023...
+INFO: [Common 17-206] Exiting Vivado at Fri Jun  2 20:59:44 2023...

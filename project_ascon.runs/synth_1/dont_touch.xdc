@@ -84,14 +84,14 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_asco
 # IP: bd/design_ascon/ip/design_ascon_axi_gpio_13_3/design_ascon_axi_gpio_13_3.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_ascon_axi_gpio_13_3 || ORIG_REF_NAME==design_ascon_axi_gpio_13_3} -quiet] -quiet
 
-# IP: bd/design_ascon/ip/design_ascon_xbar_0/design_ascon_xbar_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_ascon_xbar_0 || ORIG_REF_NAME==design_ascon_xbar_0} -quiet] -quiet
-
 # IP: bd/design_ascon/ip/design_ascon_ps7_0_axi_periph_0/design_ascon_ps7_0_axi_periph_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_ascon_ps7_0_axi_periph_0 || ORIG_REF_NAME==design_ascon_ps7_0_axi_periph_0} -quiet] -quiet
 
 # IP: bd/design_ascon/ip/design_ascon_ascon_core_0_2/design_ascon_ascon_core_0_2.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_ascon_ascon_core_0_2 || ORIG_REF_NAME==design_ascon_ascon_core_0_2} -quiet] -quiet
+
+# IP: bd/design_ascon/ip/design_ascon_xbar_0/design_ascon_xbar_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_ascon_xbar_0 || ORIG_REF_NAME==design_ascon_xbar_0} -quiet] -quiet
 
 # IP: bd/design_ascon/ip/design_ascon_tier2_xbar_0_0/design_ascon_tier2_xbar_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_ascon_tier2_xbar_0_0 || ORIG_REF_NAME==design_ascon_tier2_xbar_0_0} -quiet] -quiet

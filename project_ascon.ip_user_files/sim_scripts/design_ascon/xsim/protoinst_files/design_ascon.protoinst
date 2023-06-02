@@ -3,7 +3,7 @@
 	"modules": {
 		"design_ascon": {
 			"proto_instances": {
-				"/axi_gpio_0/S_AXI": {
+				"/axi_gpio_ciphertext_0/S_AXI": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "s_axi_aclk"},
@@ -27,7 +27,7 @@
 						"WVALID": { "actual": "s_axi_wvalid"}
 					}
 				},
-				"/axi_gpio_1/S_AXI": {
+				"/axi_gpio_ciphertext_1/S_AXI": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "s_axi_aclk"},
@@ -51,7 +51,7 @@
 						"WVALID": { "actual": "s_axi_wvalid"}
 					}
 				},
-				"/axi_gpio_10/S_AXI": {
+				"/axi_gpio_ciphertext_2/S_AXI": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "s_axi_aclk"},
@@ -75,7 +75,7 @@
 						"WVALID": { "actual": "s_axi_wvalid"}
 					}
 				},
-				"/axi_gpio_11/S_AXI": {
+				"/axi_gpio_ciphertext_3/S_AXI": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "s_axi_aclk"},
@@ -99,7 +99,7 @@
 						"WVALID": { "actual": "s_axi_wvalid"}
 					}
 				},
-				"/axi_gpio_12/S_AXI": {
+				"/axi_gpio_enable/S_AXI": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "s_axi_aclk"},
@@ -123,7 +123,7 @@
 						"WVALID": { "actual": "s_axi_wvalid"}
 					}
 				},
-				"/axi_gpio_13/S_AXI": {
+				"/axi_gpio_key_0/S_AXI": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "s_axi_aclk"},
@@ -147,7 +147,7 @@
 						"WVALID": { "actual": "s_axi_wvalid"}
 					}
 				},
-				"/axi_gpio_14/S_AXI": {
+				"/axi_gpio_key_1/S_AXI": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "s_axi_aclk"},
@@ -171,7 +171,7 @@
 						"WVALID": { "actual": "s_axi_wvalid"}
 					}
 				},
-				"/axi_gpio_15/S_AXI": {
+				"/axi_gpio_key_2/S_AXI": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "s_axi_aclk"},
@@ -195,7 +195,7 @@
 						"WVALID": { "actual": "s_axi_wvalid"}
 					}
 				},
-				"/axi_gpio_16/S_AXI": {
+				"/axi_gpio_key_3/S_AXI": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "s_axi_aclk"},
@@ -219,7 +219,7 @@
 						"WVALID": { "actual": "s_axi_wvalid"}
 					}
 				},
-				"/axi_gpio_2/S_AXI": {
+				"/axi_gpio_nonce_0/S_AXI": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "s_axi_aclk"},
@@ -243,7 +243,7 @@
 						"WVALID": { "actual": "s_axi_wvalid"}
 					}
 				},
-				"/axi_gpio_3/S_AXI": {
+				"/axi_gpio_nonce_1/S_AXI": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "s_axi_aclk"},
@@ -267,7 +267,7 @@
 						"WVALID": { "actual": "s_axi_wvalid"}
 					}
 				},
-				"/axi_gpio_4/S_AXI": {
+				"/axi_gpio_nonce_2/S_AXI": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "s_axi_aclk"},
@@ -291,7 +291,7 @@
 						"WVALID": { "actual": "s_axi_wvalid"}
 					}
 				},
-				"/axi_gpio_5/S_AXI": {
+				"/axi_gpio_nonce_3/S_AXI": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "s_axi_aclk"},
@@ -315,7 +315,7 @@
 						"WVALID": { "actual": "s_axi_wvalid"}
 					}
 				},
-				"/axi_gpio_6/S_AXI": {
+				"/axi_gpio_plaintext_0/S_AXI": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "s_axi_aclk"},
@@ -339,7 +339,7 @@
 						"WVALID": { "actual": "s_axi_wvalid"}
 					}
 				},
-				"/axi_gpio_7/S_AXI": {
+				"/axi_gpio_plaintext_1/S_AXI": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "s_axi_aclk"},
@@ -363,7 +363,7 @@
 						"WVALID": { "actual": "s_axi_wvalid"}
 					}
 				},
-				"/axi_gpio_8/S_AXI": {
+				"/axi_gpio_plaintext_2/S_AXI": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "s_axi_aclk"},
@@ -387,7 +387,7 @@
 						"WVALID": { "actual": "s_axi_wvalid"}
 					}
 				},
-				"/axi_gpio_9/S_AXI": {
+				"/axi_gpio_plaintext_3/S_AXI": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "s_axi_aclk"},

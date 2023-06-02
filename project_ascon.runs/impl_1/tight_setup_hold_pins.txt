@@ -1,22 +1,18 @@
-+====================+===================+============================================================================+
-| Launch Setup Clock | Launch Hold Clock | Pin                                                                        |
-+====================+===================+============================================================================+
-| clk                | clk               | design_ascon_i/ascon_core_0/inst/genblk1[2].round_inst/state_out_reg[82]/D |
-| clk                | clk               | design_ascon_i/ascon_core_0/inst/genblk1[2].round_inst/state_out_reg[92]/D |
-| clk                | clk               | design_ascon_i/ascon_core_0/inst/genblk1[8].round_inst/state_out_reg[92]/D |
-| clk                | clk               | design_ascon_i/ascon_core_0/inst/genblk1[2].round_inst/state_out_reg[94]/D |
-| clk                | clk               | design_ascon_i/ascon_core_0/inst/genblk1[4].round_inst/state_out_reg[27]/D |
-| clk                | clk               | design_ascon_i/ascon_core_0/inst/genblk1[5].round_inst/state_out_reg[54]/D |
-| clk                | clk               | design_ascon_i/ascon_core_0/inst/genblk1[4].round_inst/state_out_reg[30]/D |
-| clk                | clk               | design_ascon_i/ascon_core_0/inst/genblk1[5].round_inst/state_out_reg[74]/D |
-| clk                | clk               | design_ascon_i/ascon_core_0/inst/genblk1[4].round_inst/state_out_reg[87]/D |
-| clk                | clk               | design_ascon_i/ascon_core_0/inst/genblk1[5].round_inst/state_out_reg[92]/D |
-| clk                | clk               | design_ascon_i/ascon_core_0/inst/genblk1[4].round_inst/state_out_reg[90]/D |
-| clk                | clk               | design_ascon_i/ascon_core_0/inst/genblk1[4].round_inst/state_out_reg[50]/D |
-| clk                | clk               | design_ascon_i/ascon_core_0/inst/genblk1[8].round_inst/state_out_reg[29]/D |
-| clk                | clk               | design_ascon_i/ascon_core_0/inst/genblk1[4].round_inst/state_out_reg[63]/D |
-| clk                | clk               | design_ascon_i/ascon_core_0/inst/genblk1[2].round_inst/state_out_reg[22]/D |
-| clk                | clk               | design_ascon_i/ascon_core_0/inst/genblk1[4].round_inst/state_out_reg[95]/D |
-| clk                | clk               | design_ascon_i/ascon_core_0/inst/genblk1[4].round_inst/state_out_reg[54]/D |
-| clk                | clk               | design_ascon_i/ascon_core_0/inst/genblk1[4].round_inst/state_out_reg[86]/D |
-+--------------------+-------------------+----------------------------------------------------------------------------+
++====================+===================+=============================================================================+
+| Launch Setup Clock | Launch Hold Clock | Pin                                                                         |
++====================+===================+=============================================================================+
+| clk                | clk               | design_ascon_i/ascon_core_0/inst/genblk1[11].round_inst/state_out_reg[30]/D |
+| clk                | clk               | design_ascon_i/ascon_core_0/inst/genblk1[11].round_inst/state_out_reg[62]/D |
+| clk                | clk               | design_ascon_i/ascon_core_0/inst/genblk1[7].round_inst/state_out_reg[0]/D   |
+| clk                | clk               | design_ascon_i/ascon_core_0/inst/genblk1[7].round_inst/state_out_reg[96]/D  |
+| clk                | clk               | design_ascon_i/ascon_core_0/inst/genblk1[9].round_inst/state_out_reg[63]/D  |
+| clk                | clk               | design_ascon_i/ascon_core_0/inst/genblk1[11].round_inst/state_out_reg[94]/D |
+| clk                | clk               | design_ascon_i/ascon_core_0/inst/genblk1[11].round_inst/state_out_reg[29]/D |
+| clk                | clk               | design_ascon_i/ascon_core_0/inst/genblk1[11].round_inst/state_out_reg[57]/D |
+| clk                | clk               | design_ascon_i/ascon_core_0/inst/genblk1[8].round_inst/state_out_reg[62]/D  |
+| clk                | clk               | design_ascon_i/ascon_core_0/inst/genblk1[8].round_inst/state_out_reg[94]/D  |
+| clk                | clk               | design_ascon_i/ascon_core_0/inst/genblk1[11].round_inst/state_out_reg[95]/D |
+| clk                | clk               | design_ascon_i/ascon_core_0/inst/genblk1[11].round_inst/state_out_reg[88]/D |
+| clk                | clk               | design_ascon_i/ascon_core_0/inst/genblk1[4].round_inst/state_out_reg[90]/D  |
+| clk                | clk               | design_ascon_i/ascon_core_0/inst/genblk1[4].round_inst/state_out_reg[28]/D  |
++--------------------+-------------------+-----------------------------------------------------------------------------+

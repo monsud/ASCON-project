@@ -1,11 +1,12 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+// Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-// Date        : Thu Jun  1 16:56:12 2023
+// Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+// Date        : Fri Jun  2 20:50:46 2023
 // Host        : INSPIRON-7370 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top design_ascon_axi_gpio_8_2 -prefix
-//               design_ascon_axi_gpio_8_2_ design_ascon_axi_gpio_0_0_sim_netlist.v
-// Design      : design_ascon_axi_gpio_0_0
+//               design_ascon_axi_gpio_8_2_ design_ascon_axi_gpio_0_1_sim_netlist.v
+// Design      : design_ascon_axi_gpio_0_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xc7z020clg484-1
@@ -1640,7 +1641,7 @@ module design_ascon_axi_gpio_8_2_axi_lite_ipif
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "design_ascon_axi_gpio_0_0,axi_gpio,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "axi_gpio,Vivado 2022.2" *) 
+(* CHECK_LICENSE_TYPE = "design_ascon_axi_gpio_0_1,axi_gpio,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "axi_gpio,Vivado 2023.1" *) 
 (* NotValidForBitStream *)
 module design_ascon_axi_gpio_8_2
    (s_axi_aclk,

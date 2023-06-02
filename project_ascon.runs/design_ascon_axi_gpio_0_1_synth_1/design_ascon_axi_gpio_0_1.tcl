@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "design_ascon_axi_gpio_0_1_synth_1" START { ROLLUP_AUTO }
-set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -82,6 +81,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir C:/Users/david/Documents/ASCON-project/project_ascon.cache/wt [current_project]
 set_property parent.project_path C:/Users/david/Documents/ASCON-project/project_ascon.xpr [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part xilinx.com:zc702:part0:1.4 [current_project]
@@ -91,7 +91,7 @@ set_property ip_output_repo c:/Users/david/Documents/ASCON-project/project_ascon
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet c:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/bd/design_ascon/ip/design_ascon_axi_gpio_0_1/design_ascon_axi_gpio_0_1.xci
+read_ip -quiet C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/bd/design_ascon/ip/design_ascon_axi_gpio_0_1/design_ascon_axi_gpio_0_1.xci
 set_property used_in_implementation false [get_files -all c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_axi_gpio_0_1/design_ascon_axi_gpio_0_1_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_axi_gpio_0_1/design_ascon_axi_gpio_0_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_axi_gpio_0_1/design_ascon_axi_gpio_0_1.xdc]
@@ -230,6 +230,7 @@ if { [catch {
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
+close [open .end.used_ip_cache.rst w]
 }; # end if cacheID 
 
 if {[file isdir C:/Users/david/Documents/ASCON-project/project_ascon.ip_user_files/ip/design_ascon_axi_gpio_0_1]} {

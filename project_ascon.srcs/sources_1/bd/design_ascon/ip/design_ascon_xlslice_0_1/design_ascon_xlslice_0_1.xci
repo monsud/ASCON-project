@@ -41,7 +41,7 @@
         "OUTPUTDIR": [ { "value": "../../../../../../project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_xlslice_0_1" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
-        "SWVERSION": [ { "value": "2022.2" } ],
+        "SWVERSION": [ { "value": "2023.1" } ],
         "SYNTHESISFLOW": [ { "value": "GLOBAL" } ]
       }
     },

@@ -7,36 +7,37 @@
       "name": "design_ascon",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2022.2",
+      "tool_version": "2023.1",
       "validated": "true"
     },
     "design_tree": {
       "processing_system7_0": "",
       "rst_ps7_0_50M": "",
-      "axi_gpio_key_0": "",
-      "axi_gpio_key_1": "",
-      "axi_gpio_key_2": "",
-      "axi_gpio_key_3": "",
       "xlconcat_key": "",
-      "axi_gpio_enable": "",
-      "axi_gpio_nonce_0": "",
-      "axi_gpio_nonce_1": "",
-      "axi_gpio_nonce_2": "",
-      "axi_gpio_nonce_3": "",
       "xlconcat_nonce": "",
-      "axi_gpio_plaintext_0": "",
-      "axi_gpio_plaintext_1": "",
-      "axi_gpio_plaintext_2": "",
-      "axi_gpio_plaintext_3": "",
       "xlconcat_plaintext": "",
       "xlslice_0": "",
       "xlslice_1": "",
       "xlslice_2": "",
       "xlslice_3": "",
+      "ascon_core_0": "",
+      "axi_gpio_key_0": "",
+      "axi_gpio_key_1": "",
+      "axi_gpio_key_2": "",
+      "axi_gpio_key_3": "",
       "axi_gpio_ciphertext_0": "",
       "axi_gpio_ciphertext_1": "",
       "axi_gpio_ciphertext_2": "",
       "axi_gpio_ciphertext_3": "",
+      "axi_gpio_nonce_0": "",
+      "axi_gpio_nonce_1": "",
+      "axi_gpio_nonce_2": "",
+      "axi_gpio_nonce_3": "",
+      "axi_gpio_enable": "",
+      "axi_gpio_plaintext_0": "",
+      "axi_gpio_plaintext_1": "",
+      "axi_gpio_plaintext_2": "",
+      "axi_gpio_plaintext_3": "",
       "ps7_0_axi_periph": {
         "xbar": "",
         "tier2_xbar_0": "",
@@ -65,8 +66,7 @@
         "m14_couplers": {},
         "m15_couplers": {},
         "m16_couplers": {}
-      },
-      "ascon_core_0": ""
+      }
     },
     "interface_ports": {
       "DDR": {
@@ -1212,62 +1212,6 @@
         "xci_path": "ip\\design_ascon_rst_ps7_0_50M_4\\design_ascon_rst_ps7_0_50M_4.xci",
         "inst_hier_path": "rst_ps7_0_50M"
       },
-      "axi_gpio_key_0": {
-        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
-        "xci_name": "design_ascon_axi_gpio_0_0",
-        "xci_path": "ip\\design_ascon_axi_gpio_0_0\\design_ascon_axi_gpio_0_0.xci",
-        "inst_hier_path": "axi_gpio_key_0",
-        "parameters": {
-          "C_ALL_INPUTS": {
-            "value": "0"
-          },
-          "C_ALL_OUTPUTS": {
-            "value": "1"
-          }
-        }
-      },
-      "axi_gpio_key_1": {
-        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
-        "xci_name": "design_ascon_axi_gpio_0_1",
-        "xci_path": "ip\\design_ascon_axi_gpio_0_1\\design_ascon_axi_gpio_0_1.xci",
-        "inst_hier_path": "axi_gpio_key_1",
-        "parameters": {
-          "C_ALL_INPUTS": {
-            "value": "0"
-          },
-          "C_ALL_OUTPUTS": {
-            "value": "1"
-          }
-        }
-      },
-      "axi_gpio_key_2": {
-        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
-        "xci_name": "design_ascon_axi_gpio_0_2",
-        "xci_path": "ip\\design_ascon_axi_gpio_0_2\\design_ascon_axi_gpio_0_2.xci",
-        "inst_hier_path": "axi_gpio_key_2",
-        "parameters": {
-          "C_ALL_INPUTS": {
-            "value": "0"
-          },
-          "C_ALL_OUTPUTS": {
-            "value": "1"
-          }
-        }
-      },
-      "axi_gpio_key_3": {
-        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
-        "xci_name": "design_ascon_axi_gpio_0_3",
-        "xci_path": "ip\\design_ascon_axi_gpio_0_3\\design_ascon_axi_gpio_0_3.xci",
-        "inst_hier_path": "axi_gpio_key_3",
-        "parameters": {
-          "C_ALL_INPUTS": {
-            "value": "0"
-          },
-          "C_ALL_OUTPUTS": {
-            "value": "1"
-          }
-        }
-      },
       "xlconcat_key": {
         "vlnv": "xilinx.com:ip:xlconcat:2.1",
         "xci_name": "design_ascon_xlconcat_0_0",
@@ -1291,79 +1235,6 @@
           }
         }
       },
-      "axi_gpio_enable": {
-        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
-        "xci_name": "design_ascon_axi_gpio_4_0",
-        "xci_path": "ip\\design_ascon_axi_gpio_4_0\\design_ascon_axi_gpio_4_0.xci",
-        "inst_hier_path": "axi_gpio_enable",
-        "parameters": {
-          "C_ALL_INPUTS": {
-            "value": "0"
-          },
-          "C_ALL_OUTPUTS": {
-            "value": "1"
-          },
-          "C_GPIO_WIDTH": {
-            "value": "1"
-          }
-        }
-      },
-      "axi_gpio_nonce_0": {
-        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
-        "xci_name": "design_ascon_axi_gpio_3_0",
-        "xci_path": "ip\\design_ascon_axi_gpio_3_0\\design_ascon_axi_gpio_3_0.xci",
-        "inst_hier_path": "axi_gpio_nonce_0",
-        "parameters": {
-          "C_ALL_INPUTS": {
-            "value": "0"
-          },
-          "C_ALL_OUTPUTS": {
-            "value": "1"
-          }
-        }
-      },
-      "axi_gpio_nonce_1": {
-        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
-        "xci_name": "design_ascon_axi_gpio_3_1",
-        "xci_path": "ip\\design_ascon_axi_gpio_3_1\\design_ascon_axi_gpio_3_1.xci",
-        "inst_hier_path": "axi_gpio_nonce_1",
-        "parameters": {
-          "C_ALL_INPUTS": {
-            "value": "0"
-          },
-          "C_ALL_OUTPUTS": {
-            "value": "1"
-          }
-        }
-      },
-      "axi_gpio_nonce_2": {
-        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
-        "xci_name": "design_ascon_axi_gpio_3_2",
-        "xci_path": "ip\\design_ascon_axi_gpio_3_2\\design_ascon_axi_gpio_3_2.xci",
-        "inst_hier_path": "axi_gpio_nonce_2",
-        "parameters": {
-          "C_ALL_INPUTS": {
-            "value": "0"
-          },
-          "C_ALL_OUTPUTS": {
-            "value": "1"
-          }
-        }
-      },
-      "axi_gpio_nonce_3": {
-        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
-        "xci_name": "design_ascon_axi_gpio_3_3",
-        "xci_path": "ip\\design_ascon_axi_gpio_3_3\\design_ascon_axi_gpio_3_3.xci",
-        "inst_hier_path": "axi_gpio_nonce_3",
-        "parameters": {
-          "C_ALL_INPUTS": {
-            "value": "0"
-          },
-          "C_ALL_OUTPUTS": {
-            "value": "1"
-          }
-        }
-      },
       "xlconcat_nonce": {
         "vlnv": "xilinx.com:ip:xlconcat:2.1",
         "xci_name": "design_ascon_xlconcat_0_1",
@@ -1384,62 +1255,6 @@
           },
           "NUM_PORTS": {
             "value": "4"
-          }
-        }
-      },
-      "axi_gpio_plaintext_0": {
-        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
-        "xci_name": "design_ascon_axi_gpio_8_0",
-        "xci_path": "ip\\design_ascon_axi_gpio_8_0\\design_ascon_axi_gpio_8_0.xci",
-        "inst_hier_path": "axi_gpio_plaintext_0",
-        "parameters": {
-          "C_ALL_INPUTS": {
-            "value": "0"
-          },
-          "C_ALL_OUTPUTS": {
-            "value": "1"
-          }
-        }
-      },
-      "axi_gpio_plaintext_1": {
-        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
-        "xci_name": "design_ascon_axi_gpio_8_1",
-        "xci_path": "ip\\design_ascon_axi_gpio_8_1\\design_ascon_axi_gpio_8_1.xci",
-        "inst_hier_path": "axi_gpio_plaintext_1",
-        "parameters": {
-          "C_ALL_INPUTS": {
-            "value": "0"
-          },
-          "C_ALL_OUTPUTS": {
-            "value": "1"
-          }
-        }
-      },
-      "axi_gpio_plaintext_2": {
-        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
-        "xci_name": "design_ascon_axi_gpio_8_2",
-        "xci_path": "ip\\design_ascon_axi_gpio_8_2\\design_ascon_axi_gpio_8_2.xci",
-        "inst_hier_path": "axi_gpio_plaintext_2",
-        "parameters": {
-          "C_ALL_INPUTS": {
-            "value": "0"
-          },
-          "C_ALL_OUTPUTS": {
-            "value": "1"
-          }
-        }
-      },
-      "axi_gpio_plaintext_3": {
-        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
-        "xci_name": "design_ascon_axi_gpio_8_3",
-        "xci_path": "ip\\design_ascon_axi_gpio_8_3\\design_ascon_axi_gpio_8_3.xci",
-        "inst_hier_path": "axi_gpio_plaintext_3",
-        "parameters": {
-          "C_ALL_INPUTS": {
-            "value": "0"
-          },
-          "C_ALL_OUTPUTS": {
-            "value": "1"
           }
         }
       },
@@ -1534,6 +1349,68 @@
           }
         }
       },
+      "ascon_core_0": {
+        "vlnv": "xilinx.com:user:ascon_core:1.0",
+        "xci_name": "design_ascon_ascon_core_0_2",
+        "xci_path": "ip\\design_ascon_ascon_core_0_2\\design_ascon_ascon_core_0_2.xci",
+        "inst_hier_path": "ascon_core_0"
+      },
+      "axi_gpio_key_0": {
+        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
+        "xci_name": "design_ascon_axi_gpio_0_0",
+        "xci_path": "ip\\design_ascon_axi_gpio_0_0\\design_ascon_axi_gpio_0_0.xci",
+        "inst_hier_path": "axi_gpio_key_0",
+        "parameters": {
+          "C_ALL_INPUTS": {
+            "value": "0"
+          },
+          "C_ALL_OUTPUTS": {
+            "value": "1"
+          }
+        }
+      },
+      "axi_gpio_key_1": {
+        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
+        "xci_name": "design_ascon_axi_gpio_0_1",
+        "xci_path": "ip\\design_ascon_axi_gpio_0_1\\design_ascon_axi_gpio_0_1.xci",
+        "inst_hier_path": "axi_gpio_key_1",
+        "parameters": {
+          "C_ALL_INPUTS": {
+            "value": "0"
+          },
+          "C_ALL_OUTPUTS": {
+            "value": "1"
+          }
+        }
+      },
+      "axi_gpio_key_2": {
+        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
+        "xci_name": "design_ascon_axi_gpio_0_2",
+        "xci_path": "ip\\design_ascon_axi_gpio_0_2\\design_ascon_axi_gpio_0_2.xci",
+        "inst_hier_path": "axi_gpio_key_2",
+        "parameters": {
+          "C_ALL_INPUTS": {
+            "value": "0"
+          },
+          "C_ALL_OUTPUTS": {
+            "value": "1"
+          }
+        }
+      },
+      "axi_gpio_key_3": {
+        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
+        "xci_name": "design_ascon_axi_gpio_0_3",
+        "xci_path": "ip\\design_ascon_axi_gpio_0_3\\design_ascon_axi_gpio_0_3.xci",
+        "inst_hier_path": "axi_gpio_key_3",
+        "parameters": {
+          "C_ALL_INPUTS": {
+            "value": "0"
+          },
+          "C_ALL_OUTPUTS": {
+            "value": "1"
+          }
+        }
+      },
       "axi_gpio_ciphertext_0": {
         "vlnv": "xilinx.com:ip:axi_gpio:2.0",
         "xci_name": "design_ascon_axi_gpio_13_0",
@@ -1574,6 +1451,135 @@
         "inst_hier_path": "axi_gpio_ciphertext_3",
         "parameters": {
           "C_ALL_INPUTS": {
+            "value": "1"
+          }
+        }
+      },
+      "axi_gpio_nonce_0": {
+        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
+        "xci_name": "design_ascon_axi_gpio_3_0",
+        "xci_path": "ip\\design_ascon_axi_gpio_3_0\\design_ascon_axi_gpio_3_0.xci",
+        "inst_hier_path": "axi_gpio_nonce_0",
+        "parameters": {
+          "C_ALL_INPUTS": {
+            "value": "0"
+          },
+          "C_ALL_OUTPUTS": {
+            "value": "1"
+          }
+        }
+      },
+      "axi_gpio_nonce_1": {
+        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
+        "xci_name": "design_ascon_axi_gpio_3_1",
+        "xci_path": "ip\\design_ascon_axi_gpio_3_1\\design_ascon_axi_gpio_3_1.xci",
+        "inst_hier_path": "axi_gpio_nonce_1",
+        "parameters": {
+          "C_ALL_INPUTS": {
+            "value": "0"
+          },
+          "C_ALL_OUTPUTS": {
+            "value": "1"
+          }
+        }
+      },
+      "axi_gpio_nonce_2": {
+        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
+        "xci_name": "design_ascon_axi_gpio_3_2",
+        "xci_path": "ip\\design_ascon_axi_gpio_3_2\\design_ascon_axi_gpio_3_2.xci",
+        "inst_hier_path": "axi_gpio_nonce_2",
+        "parameters": {
+          "C_ALL_INPUTS": {
+            "value": "0"
+          },
+          "C_ALL_OUTPUTS": {
+            "value": "1"
+          }
+        }
+      },
+      "axi_gpio_nonce_3": {
+        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
+        "xci_name": "design_ascon_axi_gpio_3_3",
+        "xci_path": "ip\\design_ascon_axi_gpio_3_3\\design_ascon_axi_gpio_3_3.xci",
+        "inst_hier_path": "axi_gpio_nonce_3",
+        "parameters": {
+          "C_ALL_INPUTS": {
+            "value": "0"
+          },
+          "C_ALL_OUTPUTS": {
+            "value": "1"
+          }
+        }
+      },
+      "axi_gpio_enable": {
+        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
+        "xci_name": "design_ascon_axi_gpio_4_0",
+        "xci_path": "ip\\design_ascon_axi_gpio_4_0\\design_ascon_axi_gpio_4_0.xci",
+        "inst_hier_path": "axi_gpio_enable",
+        "parameters": {
+          "C_ALL_INPUTS": {
+            "value": "0"
+          },
+          "C_ALL_OUTPUTS": {
+            "value": "1"
+          },
+          "C_GPIO_WIDTH": {
+            "value": "1"
+          }
+        }
+      },
+      "axi_gpio_plaintext_0": {
+        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
+        "xci_name": "design_ascon_axi_gpio_8_0",
+        "xci_path": "ip\\design_ascon_axi_gpio_8_0\\design_ascon_axi_gpio_8_0.xci",
+        "inst_hier_path": "axi_gpio_plaintext_0",
+        "parameters": {
+          "C_ALL_INPUTS": {
+            "value": "0"
+          },
+          "C_ALL_OUTPUTS": {
+            "value": "1"
+          }
+        }
+      },
+      "axi_gpio_plaintext_1": {
+        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
+        "xci_name": "design_ascon_axi_gpio_8_1",
+        "xci_path": "ip\\design_ascon_axi_gpio_8_1\\design_ascon_axi_gpio_8_1.xci",
+        "inst_hier_path": "axi_gpio_plaintext_1",
+        "parameters": {
+          "C_ALL_INPUTS": {
+            "value": "0"
+          },
+          "C_ALL_OUTPUTS": {
+            "value": "1"
+          }
+        }
+      },
+      "axi_gpio_plaintext_2": {
+        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
+        "xci_name": "design_ascon_axi_gpio_8_2",
+        "xci_path": "ip\\design_ascon_axi_gpio_8_2\\design_ascon_axi_gpio_8_2.xci",
+        "inst_hier_path": "axi_gpio_plaintext_2",
+        "parameters": {
+          "C_ALL_INPUTS": {
+            "value": "0"
+          },
+          "C_ALL_OUTPUTS": {
+            "value": "1"
+          }
+        }
+      },
+      "axi_gpio_plaintext_3": {
+        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
+        "xci_name": "design_ascon_axi_gpio_8_3",
+        "xci_path": "ip\\design_ascon_axi_gpio_8_3\\design_ascon_axi_gpio_8_3.xci",
+        "inst_hier_path": "axi_gpio_plaintext_3",
+        "parameters": {
+          "C_ALL_INPUTS": {
+            "value": "0"
+          },
+          "C_ALL_OUTPUTS": {
             "value": "1"
           }
         }
@@ -3338,104 +3344,104 @@
           },
           "m00_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
-              "M00_AXI",
-              "m00_couplers/M_AXI"
+              "m00_couplers/M_AXI",
+              "M00_AXI"
             ]
           },
           "m01_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
-              "M01_AXI",
-              "m01_couplers/M_AXI"
+              "m01_couplers/M_AXI",
+              "M01_AXI"
             ]
           },
           "m02_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
-              "M02_AXI",
-              "m02_couplers/M_AXI"
+              "m02_couplers/M_AXI",
+              "M02_AXI"
             ]
           },
           "m03_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
-              "M03_AXI",
-              "m03_couplers/M_AXI"
+              "m03_couplers/M_AXI",
+              "M03_AXI"
             ]
           },
           "m04_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
-              "M04_AXI",
-              "m04_couplers/M_AXI"
+              "m04_couplers/M_AXI",
+              "M04_AXI"
             ]
           },
           "m05_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
-              "M05_AXI",
-              "m05_couplers/M_AXI"
+              "m05_couplers/M_AXI",
+              "M05_AXI"
             ]
           },
           "m06_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
-              "M06_AXI",
-              "m06_couplers/M_AXI"
+              "m06_couplers/M_AXI",
+              "M06_AXI"
             ]
           },
           "m07_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
-              "M07_AXI",
-              "m07_couplers/M_AXI"
+              "m07_couplers/M_AXI",
+              "M07_AXI"
             ]
           },
           "m08_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
-              "M08_AXI",
-              "m08_couplers/M_AXI"
+              "m08_couplers/M_AXI",
+              "M08_AXI"
             ]
           },
           "m09_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
-              "M09_AXI",
-              "m09_couplers/M_AXI"
+              "m09_couplers/M_AXI",
+              "M09_AXI"
             ]
           },
           "m10_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
-              "M10_AXI",
-              "m10_couplers/M_AXI"
+              "m10_couplers/M_AXI",
+              "M10_AXI"
             ]
           },
           "m11_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
-              "M11_AXI",
-              "m11_couplers/M_AXI"
+              "m11_couplers/M_AXI",
+              "M11_AXI"
             ]
           },
           "m12_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
-              "M12_AXI",
-              "m12_couplers/M_AXI"
+              "m12_couplers/M_AXI",
+              "M12_AXI"
             ]
           },
           "m13_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
-              "M13_AXI",
-              "m13_couplers/M_AXI"
+              "m13_couplers/M_AXI",
+              "M13_AXI"
             ]
           },
           "m14_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
-              "M14_AXI",
-              "m14_couplers/M_AXI"
+              "m14_couplers/M_AXI",
+              "M14_AXI"
             ]
           },
           "m15_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
-              "M15_AXI",
-              "m15_couplers/M_AXI"
+              "m15_couplers/M_AXI",
+              "M15_AXI"
             ]
           },
           "m16_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
-              "M16_AXI",
-              "m16_couplers/M_AXI"
+              "m16_couplers/M_AXI",
+              "M16_AXI"
             ]
           },
           "ps7_0_axi_periph_to_s00_couplers": {
@@ -3675,12 +3681,6 @@
             ]
           }
         }
-      },
-      "ascon_core_0": {
-        "vlnv": "xilinx.com:user:ascon_core:1.0",
-        "xci_name": "design_ascon_ascon_core_0_2",
-        "xci_path": "ip\\design_ascon_ascon_core_0_2\\design_ascon_ascon_core_0_2.xci",
-        "inst_hier_path": "ascon_core_0"
       }
     },
     "interface_nets": {
@@ -3898,43 +3898,43 @@
           "processing_system7_0/FCLK_CLK0",
           "rst_ps7_0_50M/slowest_sync_clk",
           "processing_system7_0/M_AXI_GP0_ACLK",
-          "ps7_0_axi_periph/S00_ACLK",
+          "ascon_core_0/clk",
           "axi_gpio_key_0/s_axi_aclk",
-          "ps7_0_axi_periph/M00_ACLK",
-          "ps7_0_axi_periph/ACLK",
           "axi_gpio_key_1/s_axi_aclk",
-          "ps7_0_axi_periph/M01_ACLK",
           "axi_gpio_key_2/s_axi_aclk",
-          "ps7_0_axi_periph/M02_ACLK",
           "axi_gpio_key_3/s_axi_aclk",
-          "ps7_0_axi_periph/M03_ACLK",
-          "axi_gpio_enable/s_axi_aclk",
-          "ps7_0_axi_periph/M04_ACLK",
-          "axi_gpio_nonce_0/s_axi_aclk",
-          "ps7_0_axi_periph/M05_ACLK",
-          "axi_gpio_nonce_1/s_axi_aclk",
-          "ps7_0_axi_periph/M06_ACLK",
-          "axi_gpio_nonce_2/s_axi_aclk",
-          "ps7_0_axi_periph/M07_ACLK",
-          "axi_gpio_nonce_3/s_axi_aclk",
-          "ps7_0_axi_periph/M08_ACLK",
-          "axi_gpio_plaintext_0/s_axi_aclk",
-          "ps7_0_axi_periph/M09_ACLK",
-          "axi_gpio_plaintext_1/s_axi_aclk",
-          "ps7_0_axi_periph/M10_ACLK",
-          "axi_gpio_plaintext_2/s_axi_aclk",
-          "ps7_0_axi_periph/M11_ACLK",
-          "axi_gpio_plaintext_3/s_axi_aclk",
-          "ps7_0_axi_periph/M12_ACLK",
           "axi_gpio_ciphertext_0/s_axi_aclk",
-          "ps7_0_axi_periph/M13_ACLK",
           "axi_gpio_ciphertext_1/s_axi_aclk",
-          "ps7_0_axi_periph/M14_ACLK",
           "axi_gpio_ciphertext_2/s_axi_aclk",
-          "ps7_0_axi_periph/M15_ACLK",
           "axi_gpio_ciphertext_3/s_axi_aclk",
-          "ps7_0_axi_periph/M16_ACLK",
-          "ascon_core_0/clk"
+          "axi_gpio_nonce_0/s_axi_aclk",
+          "axi_gpio_nonce_1/s_axi_aclk",
+          "axi_gpio_nonce_2/s_axi_aclk",
+          "axi_gpio_nonce_3/s_axi_aclk",
+          "axi_gpio_enable/s_axi_aclk",
+          "axi_gpio_plaintext_0/s_axi_aclk",
+          "axi_gpio_plaintext_1/s_axi_aclk",
+          "axi_gpio_plaintext_2/s_axi_aclk",
+          "axi_gpio_plaintext_3/s_axi_aclk",
+          "ps7_0_axi_periph/ACLK",
+          "ps7_0_axi_periph/S00_ACLK",
+          "ps7_0_axi_periph/M00_ACLK",
+          "ps7_0_axi_periph/M01_ACLK",
+          "ps7_0_axi_periph/M02_ACLK",
+          "ps7_0_axi_periph/M03_ACLK",
+          "ps7_0_axi_periph/M04_ACLK",
+          "ps7_0_axi_periph/M05_ACLK",
+          "ps7_0_axi_periph/M06_ACLK",
+          "ps7_0_axi_periph/M07_ACLK",
+          "ps7_0_axi_periph/M08_ACLK",
+          "ps7_0_axi_periph/M09_ACLK",
+          "ps7_0_axi_periph/M10_ACLK",
+          "ps7_0_axi_periph/M11_ACLK",
+          "ps7_0_axi_periph/M12_ACLK",
+          "ps7_0_axi_periph/M13_ACLK",
+          "ps7_0_axi_periph/M14_ACLK",
+          "ps7_0_axi_periph/M15_ACLK",
+          "ps7_0_axi_periph/M16_ACLK"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -3946,43 +3946,43 @@
       "rst_ps7_0_50M_peripheral_aresetn": {
         "ports": [
           "rst_ps7_0_50M/peripheral_aresetn",
-          "ps7_0_axi_periph/S00_ARESETN",
+          "ascon_core_0/rst",
           "axi_gpio_key_0/s_axi_aresetn",
-          "ps7_0_axi_periph/M00_ARESETN",
-          "ps7_0_axi_periph/ARESETN",
           "axi_gpio_key_1/s_axi_aresetn",
-          "ps7_0_axi_periph/M01_ARESETN",
           "axi_gpio_key_2/s_axi_aresetn",
-          "ps7_0_axi_periph/M02_ARESETN",
           "axi_gpio_key_3/s_axi_aresetn",
-          "ps7_0_axi_periph/M03_ARESETN",
-          "axi_gpio_enable/s_axi_aresetn",
-          "ps7_0_axi_periph/M04_ARESETN",
-          "axi_gpio_nonce_0/s_axi_aresetn",
-          "ps7_0_axi_periph/M05_ARESETN",
-          "axi_gpio_nonce_1/s_axi_aresetn",
-          "ps7_0_axi_periph/M06_ARESETN",
-          "axi_gpio_nonce_2/s_axi_aresetn",
-          "ps7_0_axi_periph/M07_ARESETN",
-          "axi_gpio_nonce_3/s_axi_aresetn",
-          "ps7_0_axi_periph/M08_ARESETN",
-          "axi_gpio_plaintext_0/s_axi_aresetn",
-          "ps7_0_axi_periph/M09_ARESETN",
-          "axi_gpio_plaintext_1/s_axi_aresetn",
-          "ps7_0_axi_periph/M10_ARESETN",
-          "axi_gpio_plaintext_2/s_axi_aresetn",
-          "ps7_0_axi_periph/M11_ARESETN",
-          "axi_gpio_plaintext_3/s_axi_aresetn",
-          "ps7_0_axi_periph/M12_ARESETN",
           "axi_gpio_ciphertext_0/s_axi_aresetn",
-          "ps7_0_axi_periph/M13_ARESETN",
           "axi_gpio_ciphertext_1/s_axi_aresetn",
-          "ps7_0_axi_periph/M14_ARESETN",
           "axi_gpio_ciphertext_2/s_axi_aresetn",
-          "ps7_0_axi_periph/M15_ARESETN",
           "axi_gpio_ciphertext_3/s_axi_aresetn",
-          "ps7_0_axi_periph/M16_ARESETN",
-          "ascon_core_0/rst"
+          "axi_gpio_nonce_0/s_axi_aresetn",
+          "axi_gpio_nonce_1/s_axi_aresetn",
+          "axi_gpio_nonce_2/s_axi_aresetn",
+          "axi_gpio_nonce_3/s_axi_aresetn",
+          "axi_gpio_enable/s_axi_aresetn",
+          "axi_gpio_plaintext_0/s_axi_aresetn",
+          "axi_gpio_plaintext_1/s_axi_aresetn",
+          "axi_gpio_plaintext_2/s_axi_aresetn",
+          "axi_gpio_plaintext_3/s_axi_aresetn",
+          "ps7_0_axi_periph/ARESETN",
+          "ps7_0_axi_periph/S00_ARESETN",
+          "ps7_0_axi_periph/M00_ARESETN",
+          "ps7_0_axi_periph/M01_ARESETN",
+          "ps7_0_axi_periph/M02_ARESETN",
+          "ps7_0_axi_periph/M03_ARESETN",
+          "ps7_0_axi_periph/M04_ARESETN",
+          "ps7_0_axi_periph/M05_ARESETN",
+          "ps7_0_axi_periph/M06_ARESETN",
+          "ps7_0_axi_periph/M07_ARESETN",
+          "ps7_0_axi_periph/M08_ARESETN",
+          "ps7_0_axi_periph/M09_ARESETN",
+          "ps7_0_axi_periph/M10_ARESETN",
+          "ps7_0_axi_periph/M11_ARESETN",
+          "ps7_0_axi_periph/M12_ARESETN",
+          "ps7_0_axi_periph/M13_ARESETN",
+          "ps7_0_axi_periph/M14_ARESETN",
+          "ps7_0_axi_periph/M15_ARESETN",
+          "ps7_0_axi_periph/M16_ARESETN"
         ]
       },
       "xlconcat_0_dout": {
