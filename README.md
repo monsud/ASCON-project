@@ -1,5 +1,5 @@
 # ASCON-project
-Implementation in hardware of ASCON: a lightweight cryptographic algorithm designed for use in constrained environments, such as low-power microcontrollers and sensors.
+Implementation in hardware of ASCON using System Verilog: a lightweight cryptographic algorithm designed for use in constrained environments, such as low-power microcontrollers and sensors.
 
 The ASCON encryption algorithm involves the following steps:
 
