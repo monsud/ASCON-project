@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xCC6CFA535221FB6E",
+      "boundary_crc": "0x72E2CFCD0422B2FA",
       "device": "xc7z020clg484-1",
       "gen_directory": "../../../../project_ascon.gen/sources_1/bd/design_ascon",
       "name": "design_ascon",
@@ -20,7 +20,6 @@
       "xlslice_1": "",
       "xlslice_2": "",
       "xlslice_3": "",
-      "ascon_core_0": "",
       "axi_gpio_key_0": "",
       "axi_gpio_key_1": "",
       "axi_gpio_key_2": "",
@@ -66,7 +65,8 @@
         "m14_couplers": {},
         "m15_couplers": {},
         "m16_couplers": {}
-      }
+      },
+      "ascon_core_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -234,6 +234,19 @@
           "PS_PORB": {
             "physical_name": "FIXED_IO_ps_porb",
             "direction": "IO"
+          }
+        }
+      },
+      "push_buttons": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
+        "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
+        "port_maps": {
+          "TRI_I": {
+            "physical_name": "push_buttons_tri_i",
+            "direction": "I",
+            "left": "1",
+            "right": "0"
           }
         }
       }
@@ -1349,12 +1362,6 @@
           }
         }
       },
-      "ascon_core_0": {
-        "vlnv": "xilinx.com:user:ascon_core:1.0",
-        "xci_name": "design_ascon_ascon_core_0_2",
-        "xci_path": "ip\\design_ascon_ascon_core_0_2\\design_ascon_ascon_core_0_2.xci",
-        "inst_hier_path": "ascon_core_0"
-      },
       "axi_gpio_key_0": {
         "vlnv": "xilinx.com:ip:axi_gpio:2.0",
         "xci_name": "design_ascon_axi_gpio_0_0",
@@ -1525,6 +1532,12 @@
           },
           "C_GPIO_WIDTH": {
             "value": "1"
+          },
+          "GPIO2_BOARD_INTERFACE": {
+            "value": "push_buttons"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
           }
         }
       },
@@ -3681,9 +3694,21 @@
             ]
           }
         }
+      },
+      "ascon_core_0": {
+        "vlnv": "xilinx.com:user:ascon_core:1.0",
+        "xci_name": "design_ascon_ascon_core_0_2",
+        "xci_path": "ip\\design_ascon_ascon_core_0_2\\design_ascon_ascon_core_0_2.xci",
+        "inst_hier_path": "ascon_core_0"
       }
     },
     "interface_nets": {
+      "axi_gpio_enable_GPIO2": {
+        "interface_ports": [
+          "push_buttons",
+          "axi_gpio_enable/GPIO2"
+        ]
+      },
       "processing_system7_0_DDR": {
         "interface_ports": [
           "DDR",
@@ -3898,7 +3923,6 @@
           "processing_system7_0/FCLK_CLK0",
           "rst_ps7_0_50M/slowest_sync_clk",
           "processing_system7_0/M_AXI_GP0_ACLK",
-          "ascon_core_0/clk",
           "axi_gpio_key_0/s_axi_aclk",
           "axi_gpio_key_1/s_axi_aclk",
           "axi_gpio_key_2/s_axi_aclk",
@@ -3934,7 +3958,8 @@
           "ps7_0_axi_periph/M13_ACLK",
           "ps7_0_axi_periph/M14_ACLK",
           "ps7_0_axi_periph/M15_ACLK",
-          "ps7_0_axi_periph/M16_ACLK"
+          "ps7_0_axi_periph/M16_ACLK",
+          "ascon_core_0/clk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -3946,7 +3971,6 @@
       "rst_ps7_0_50M_peripheral_aresetn": {
         "ports": [
           "rst_ps7_0_50M/peripheral_aresetn",
-          "ascon_core_0/rst",
           "axi_gpio_key_0/s_axi_aresetn",
           "axi_gpio_key_1/s_axi_aresetn",
           "axi_gpio_key_2/s_axi_aresetn",
@@ -3982,7 +4006,8 @@
           "ps7_0_axi_periph/M13_ARESETN",
           "ps7_0_axi_periph/M14_ARESETN",
           "ps7_0_axi_periph/M15_ARESETN",
-          "ps7_0_axi_periph/M16_ARESETN"
+          "ps7_0_axi_periph/M16_ARESETN",
+          "ascon_core_0/rst"
         ]
       },
       "xlconcat_0_dout": {

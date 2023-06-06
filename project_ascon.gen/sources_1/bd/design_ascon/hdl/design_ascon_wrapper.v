@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Fri Jun  2 21:20:35 2023
+//Date        : Tue Jun  6 14:59:00 2023
 //Host        : INSPIRON-7370 running 64-bit major release  (build 9200)
 //Command     : generate_target design_ascon_wrapper.bd
 //Design      : design_ascon_wrapper
@@ -31,7 +31,8 @@ module design_ascon_wrapper
     FIXED_IO_mio,
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
-    FIXED_IO_ps_srstb);
+    FIXED_IO_ps_srstb,
+    push_buttons_tri_i);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -53,6 +54,7 @@ module design_ascon_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
+  input [1:0]push_buttons_tri_i;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -75,6 +77,7 @@ module design_ascon_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
+  wire [1:0]push_buttons_tri_i;
 
   design_ascon design_ascon_i
        (.DDR_addr(DDR_addr),
@@ -97,5 +100,6 @@ module design_ascon_wrapper
         .FIXED_IO_mio(FIXED_IO_mio),
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
-        .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb));
+        .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
+        .push_buttons_tri_i(push_buttons_tri_i));
 endmodule

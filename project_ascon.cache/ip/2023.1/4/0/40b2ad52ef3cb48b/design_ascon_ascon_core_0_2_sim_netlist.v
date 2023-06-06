@@ -2,7 +2,7 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-// Date        : Fri Jun  2 20:53:47 2023
+// Date        : Sat Jun  3 18:13:01 2023
 // Host        : INSPIRON-7370 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_ascon_ascon_core_0_2_sim_netlist.v
@@ -9021,896 +9021,896 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_key_schedule
         .CLR(rst),
         .D(round_key_reg_c_2_n_0),
         .Q(round_key_reg_c_3_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  (* SOFT_HLUTNM = "soft_lutpair688" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate
        (.I0(\round_key_reg[3][119]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  (* SOFT_HLUTNM = "soft_lutpair688" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__0
        (.I0(\round_key_reg[3][118]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__0_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  (* SOFT_HLUTNM = "soft_lutpair689" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__1
        (.I0(\round_key_reg[3][117]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+  (* SOFT_HLUTNM = "soft_lutpair693" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__10
        (.I0(\round_key_reg[3][108]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__10_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair88" *) 
+  (* SOFT_HLUTNM = "soft_lutpair738" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__100
        (.I0(\round_key_reg[3][18]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__100_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair89" *) 
+  (* SOFT_HLUTNM = "soft_lutpair739" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__101
        (.I0(\round_key_reg[3][17]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__101_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair89" *) 
+  (* SOFT_HLUTNM = "soft_lutpair739" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__102
        (.I0(\round_key_reg[3][16]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__102_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair90" *) 
+  (* SOFT_HLUTNM = "soft_lutpair740" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__103
        (.I0(\round_key_reg[3][15]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__103_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair90" *) 
+  (* SOFT_HLUTNM = "soft_lutpair740" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__104
        (.I0(\round_key_reg[3][14]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__104_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair91" *) 
+  (* SOFT_HLUTNM = "soft_lutpair741" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__105
        (.I0(\round_key_reg[3][13]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__105_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair91" *) 
+  (* SOFT_HLUTNM = "soft_lutpair741" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__106
        (.I0(\round_key_reg[3][12]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__106_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair92" *) 
+  (* SOFT_HLUTNM = "soft_lutpair742" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__107
        (.I0(\round_key_reg[3][11]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__107_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair92" *) 
+  (* SOFT_HLUTNM = "soft_lutpair742" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__108
        (.I0(\round_key_reg[3][10]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__108_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair93" *) 
+  (* SOFT_HLUTNM = "soft_lutpair743" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__109
        (.I0(\round_key_reg[3][9]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__109_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
+  (* SOFT_HLUTNM = "soft_lutpair694" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__11
        (.I0(\round_key_reg[3][107]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__11_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair93" *) 
+  (* SOFT_HLUTNM = "soft_lutpair743" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__110
        (.I0(\round_key_reg[3][8]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__110_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair94" *) 
+  (* SOFT_HLUTNM = "soft_lutpair744" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__111
        (.I0(\round_key_reg[3][7]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__111_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair94" *) 
+  (* SOFT_HLUTNM = "soft_lutpair744" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__112
        (.I0(\round_key_reg[3][6]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__112_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair95" *) 
+  (* SOFT_HLUTNM = "soft_lutpair745" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__113
        (.I0(\round_key_reg[3][5]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__113_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair95" *) 
+  (* SOFT_HLUTNM = "soft_lutpair745" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__114
        (.I0(\round_key_reg[3][4]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__114_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair96" *) 
+  (* SOFT_HLUTNM = "soft_lutpair746" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__115
        (.I0(\round_key_reg[3][3]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__115_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair96" *) 
+  (* SOFT_HLUTNM = "soft_lutpair746" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__116
        (.I0(\round_key_reg[3][2]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__116_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair97" *) 
+  (* SOFT_HLUTNM = "soft_lutpair747" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__117
        (.I0(\round_key_reg[3][1]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__117_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair97" *) 
+  (* SOFT_HLUTNM = "soft_lutpair747" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__118
        (.I0(\round_key_reg[3][0]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__118_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair98" *) 
+  (* SOFT_HLUTNM = "soft_lutpair748" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__119
        (.I0(\round_key_reg[4][127]_ks_inst_round_key_reg_c_3_n_0 ),
         .I1(round_key_reg_c_3_n_0),
         .O(round_key_reg_gate__119_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
+  (* SOFT_HLUTNM = "soft_lutpair694" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__12
        (.I0(\round_key_reg[3][106]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__12_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair98" *) 
+  (* SOFT_HLUTNM = "soft_lutpair748" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__120
        (.I0(\round_key_reg[4][126]_ks_inst_round_key_reg_c_3_n_0 ),
         .I1(round_key_reg_c_3_n_0),
         .O(round_key_reg_gate__120_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair99" *) 
+  (* SOFT_HLUTNM = "soft_lutpair749" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__121
        (.I0(\round_key_reg[4][125]_ks_inst_round_key_reg_c_3_n_0 ),
         .I1(round_key_reg_c_3_n_0),
         .O(round_key_reg_gate__121_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair99" *) 
+  (* SOFT_HLUTNM = "soft_lutpair749" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__122
        (.I0(\round_key_reg[4][124]_ks_inst_round_key_reg_c_3_n_0 ),
         .I1(round_key_reg_c_3_n_0),
         .O(round_key_reg_gate__122_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair100" *) 
+  (* SOFT_HLUTNM = "soft_lutpair750" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__123
        (.I0(\round_key_reg[4][123]_ks_inst_round_key_reg_c_3_n_0 ),
         .I1(round_key_reg_c_3_n_0),
         .O(round_key_reg_gate__123_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair100" *) 
+  (* SOFT_HLUTNM = "soft_lutpair750" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__124
        (.I0(\round_key_reg[4][122]_ks_inst_round_key_reg_c_3_n_0 ),
         .I1(round_key_reg_c_3_n_0),
         .O(round_key_reg_gate__124_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair101" *) 
+  (* SOFT_HLUTNM = "soft_lutpair751" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__125
        (.I0(\round_key_reg[4][121]_ks_inst_round_key_reg_c_3_n_0 ),
         .I1(round_key_reg_c_3_n_0),
         .O(round_key_reg_gate__125_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair101" *) 
+  (* SOFT_HLUTNM = "soft_lutpair751" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__126
        (.I0(\round_key_reg[4][120]_ks_inst_round_key_reg_c_3_n_0 ),
         .I1(round_key_reg_c_3_n_0),
         .O(round_key_reg_gate__126_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
+  (* SOFT_HLUTNM = "soft_lutpair695" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__13
        (.I0(\round_key_reg[3][105]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__13_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
+  (* SOFT_HLUTNM = "soft_lutpair695" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__14
        (.I0(\round_key_reg[3][104]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__14_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
+  (* SOFT_HLUTNM = "soft_lutpair696" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__15
        (.I0(\round_key_reg[3][103]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__15_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
+  (* SOFT_HLUTNM = "soft_lutpair696" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__16
        (.I0(\round_key_reg[3][102]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__16_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  (* SOFT_HLUTNM = "soft_lutpair697" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__17
        (.I0(\round_key_reg[3][101]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__17_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  (* SOFT_HLUTNM = "soft_lutpair697" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__18
        (.I0(\round_key_reg[3][100]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__18_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+  (* SOFT_HLUTNM = "soft_lutpair698" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__19
        (.I0(\round_key_reg[3][99]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__19_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  (* SOFT_HLUTNM = "soft_lutpair689" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__2
        (.I0(\round_key_reg[3][116]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+  (* SOFT_HLUTNM = "soft_lutpair698" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__20
        (.I0(\round_key_reg[3][98]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__20_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
+  (* SOFT_HLUTNM = "soft_lutpair699" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__21
        (.I0(\round_key_reg[3][97]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__21_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
+  (* SOFT_HLUTNM = "soft_lutpair699" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__22
        (.I0(\round_key_reg[3][96]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__22_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
+  (* SOFT_HLUTNM = "soft_lutpair700" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__23
        (.I0(\round_key_reg[3][95]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__23_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
+  (* SOFT_HLUTNM = "soft_lutpair700" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__24
        (.I0(\round_key_reg[3][94]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__24_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair51" *) 
+  (* SOFT_HLUTNM = "soft_lutpair701" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__25
        (.I0(\round_key_reg[3][93]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__25_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair51" *) 
+  (* SOFT_HLUTNM = "soft_lutpair701" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__26
        (.I0(\round_key_reg[3][92]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__26_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  (* SOFT_HLUTNM = "soft_lutpair702" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__27
        (.I0(\round_key_reg[3][91]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__27_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  (* SOFT_HLUTNM = "soft_lutpair702" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__28
        (.I0(\round_key_reg[3][90]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__28_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair53" *) 
+  (* SOFT_HLUTNM = "soft_lutpair703" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__29
        (.I0(\round_key_reg[3][89]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__29_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  (* SOFT_HLUTNM = "soft_lutpair690" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__3
        (.I0(\round_key_reg[3][115]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__3_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair53" *) 
+  (* SOFT_HLUTNM = "soft_lutpair703" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__30
        (.I0(\round_key_reg[3][88]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__30_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair54" *) 
+  (* SOFT_HLUTNM = "soft_lutpair704" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__31
        (.I0(\round_key_reg[3][87]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__31_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair54" *) 
+  (* SOFT_HLUTNM = "soft_lutpair704" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__32
        (.I0(\round_key_reg[3][86]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__32_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair55" *) 
+  (* SOFT_HLUTNM = "soft_lutpair705" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__33
        (.I0(\round_key_reg[3][85]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__33_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair55" *) 
+  (* SOFT_HLUTNM = "soft_lutpair705" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__34
        (.I0(\round_key_reg[3][84]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__34_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair56" *) 
+  (* SOFT_HLUTNM = "soft_lutpair706" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__35
        (.I0(\round_key_reg[3][83]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__35_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair56" *) 
+  (* SOFT_HLUTNM = "soft_lutpair706" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__36
        (.I0(\round_key_reg[3][82]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__36_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair57" *) 
+  (* SOFT_HLUTNM = "soft_lutpair707" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__37
        (.I0(\round_key_reg[3][81]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__37_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair57" *) 
+  (* SOFT_HLUTNM = "soft_lutpair707" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__38
        (.I0(\round_key_reg[3][80]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__38_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair58" *) 
+  (* SOFT_HLUTNM = "soft_lutpair708" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__39
        (.I0(\round_key_reg[3][79]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__39_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  (* SOFT_HLUTNM = "soft_lutpair690" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__4
        (.I0(\round_key_reg[3][114]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__4_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair58" *) 
+  (* SOFT_HLUTNM = "soft_lutpair708" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__40
        (.I0(\round_key_reg[3][78]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__40_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair59" *) 
+  (* SOFT_HLUTNM = "soft_lutpair709" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__41
        (.I0(\round_key_reg[3][77]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__41_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair59" *) 
+  (* SOFT_HLUTNM = "soft_lutpair709" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__42
        (.I0(\round_key_reg[3][76]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__42_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair60" *) 
+  (* SOFT_HLUTNM = "soft_lutpair710" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__43
        (.I0(\round_key_reg[3][75]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__43_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair60" *) 
+  (* SOFT_HLUTNM = "soft_lutpair710" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__44
        (.I0(\round_key_reg[3][74]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__44_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair61" *) 
+  (* SOFT_HLUTNM = "soft_lutpair711" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__45
        (.I0(\round_key_reg[3][73]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__45_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair61" *) 
+  (* SOFT_HLUTNM = "soft_lutpair711" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__46
        (.I0(\round_key_reg[3][72]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__46_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair62" *) 
+  (* SOFT_HLUTNM = "soft_lutpair712" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__47
        (.I0(\round_key_reg[3][71]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__47_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair62" *) 
+  (* SOFT_HLUTNM = "soft_lutpair712" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__48
        (.I0(\round_key_reg[3][70]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__48_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair63" *) 
+  (* SOFT_HLUTNM = "soft_lutpair713" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__49
        (.I0(\round_key_reg[3][69]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__49_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  (* SOFT_HLUTNM = "soft_lutpair691" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__5
        (.I0(\round_key_reg[3][113]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__5_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair63" *) 
+  (* SOFT_HLUTNM = "soft_lutpair713" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__50
        (.I0(\round_key_reg[3][68]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__50_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair64" *) 
+  (* SOFT_HLUTNM = "soft_lutpair714" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__51
        (.I0(\round_key_reg[3][67]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__51_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair64" *) 
+  (* SOFT_HLUTNM = "soft_lutpair714" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__52
        (.I0(\round_key_reg[3][66]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__52_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair65" *) 
+  (* SOFT_HLUTNM = "soft_lutpair715" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__53
        (.I0(\round_key_reg[3][65]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__53_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair65" *) 
+  (* SOFT_HLUTNM = "soft_lutpair715" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__54
        (.I0(\round_key_reg[3][64]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__54_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair66" *) 
+  (* SOFT_HLUTNM = "soft_lutpair716" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__55
        (.I0(\round_key_reg[3][63]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__55_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair66" *) 
+  (* SOFT_HLUTNM = "soft_lutpair716" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__56
        (.I0(\round_key_reg[3][62]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__56_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair67" *) 
+  (* SOFT_HLUTNM = "soft_lutpair717" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__57
        (.I0(\round_key_reg[3][61]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__57_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair67" *) 
+  (* SOFT_HLUTNM = "soft_lutpair717" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__58
        (.I0(\round_key_reg[3][60]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__58_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair68" *) 
+  (* SOFT_HLUTNM = "soft_lutpair718" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__59
        (.I0(\round_key_reg[3][59]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__59_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  (* SOFT_HLUTNM = "soft_lutpair691" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__6
        (.I0(\round_key_reg[3][112]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__6_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair68" *) 
+  (* SOFT_HLUTNM = "soft_lutpair718" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__60
        (.I0(\round_key_reg[3][58]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__60_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair69" *) 
+  (* SOFT_HLUTNM = "soft_lutpair719" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__61
        (.I0(\round_key_reg[3][57]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__61_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair69" *) 
+  (* SOFT_HLUTNM = "soft_lutpair719" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__62
        (.I0(\round_key_reg[3][56]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__62_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair70" *) 
+  (* SOFT_HLUTNM = "soft_lutpair720" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__63
        (.I0(\round_key_reg[3][55]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__63_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair70" *) 
+  (* SOFT_HLUTNM = "soft_lutpair720" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__64
        (.I0(\round_key_reg[3][54]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__64_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair71" *) 
+  (* SOFT_HLUTNM = "soft_lutpair721" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__65
        (.I0(\round_key_reg[3][53]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__65_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair71" *) 
+  (* SOFT_HLUTNM = "soft_lutpair721" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__66
        (.I0(\round_key_reg[3][52]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__66_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair72" *) 
+  (* SOFT_HLUTNM = "soft_lutpair722" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__67
        (.I0(\round_key_reg[3][51]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__67_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair72" *) 
+  (* SOFT_HLUTNM = "soft_lutpair722" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__68
        (.I0(\round_key_reg[3][50]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__68_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair73" *) 
+  (* SOFT_HLUTNM = "soft_lutpair723" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__69
        (.I0(\round_key_reg[3][49]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__69_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+  (* SOFT_HLUTNM = "soft_lutpair692" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__7
        (.I0(\round_key_reg[3][111]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__7_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair73" *) 
+  (* SOFT_HLUTNM = "soft_lutpair723" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__70
        (.I0(\round_key_reg[3][48]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__70_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair74" *) 
+  (* SOFT_HLUTNM = "soft_lutpair724" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__71
        (.I0(\round_key_reg[3][47]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__71_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair74" *) 
+  (* SOFT_HLUTNM = "soft_lutpair724" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__72
        (.I0(\round_key_reg[3][46]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__72_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair75" *) 
+  (* SOFT_HLUTNM = "soft_lutpair725" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__73
        (.I0(\round_key_reg[3][45]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__73_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair75" *) 
+  (* SOFT_HLUTNM = "soft_lutpair725" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__74
        (.I0(\round_key_reg[3][44]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__74_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair76" *) 
+  (* SOFT_HLUTNM = "soft_lutpair726" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__75
        (.I0(\round_key_reg[3][43]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__75_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair76" *) 
+  (* SOFT_HLUTNM = "soft_lutpair726" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__76
        (.I0(\round_key_reg[3][42]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__76_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair77" *) 
+  (* SOFT_HLUTNM = "soft_lutpair727" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__77
        (.I0(\round_key_reg[3][41]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__77_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair77" *) 
+  (* SOFT_HLUTNM = "soft_lutpair727" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__78
        (.I0(\round_key_reg[3][40]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__78_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair78" *) 
+  (* SOFT_HLUTNM = "soft_lutpair728" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__79
        (.I0(\round_key_reg[3][39]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__79_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+  (* SOFT_HLUTNM = "soft_lutpair692" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__8
        (.I0(\round_key_reg[3][110]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__8_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair78" *) 
+  (* SOFT_HLUTNM = "soft_lutpair728" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__80
        (.I0(\round_key_reg[3][38]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__80_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair79" *) 
+  (* SOFT_HLUTNM = "soft_lutpair729" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__81
        (.I0(\round_key_reg[3][37]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__81_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair79" *) 
+  (* SOFT_HLUTNM = "soft_lutpair729" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__82
        (.I0(\round_key_reg[3][36]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__82_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair80" *) 
+  (* SOFT_HLUTNM = "soft_lutpair730" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__83
        (.I0(\round_key_reg[3][35]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__83_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair80" *) 
+  (* SOFT_HLUTNM = "soft_lutpair730" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__84
        (.I0(\round_key_reg[3][34]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__84_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair81" *) 
+  (* SOFT_HLUTNM = "soft_lutpair731" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__85
        (.I0(\round_key_reg[3][33]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__85_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair81" *) 
+  (* SOFT_HLUTNM = "soft_lutpair731" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__86
        (.I0(\round_key_reg[3][32]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__86_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair82" *) 
+  (* SOFT_HLUTNM = "soft_lutpair732" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__87
        (.I0(\round_key_reg[3][31]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__87_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair82" *) 
+  (* SOFT_HLUTNM = "soft_lutpair732" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__88
        (.I0(\round_key_reg[3][30]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__88_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair83" *) 
+  (* SOFT_HLUTNM = "soft_lutpair733" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__89
        (.I0(\round_key_reg[3][29]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__89_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+  (* SOFT_HLUTNM = "soft_lutpair693" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__9
        (.I0(\round_key_reg[3][109]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__9_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair83" *) 
+  (* SOFT_HLUTNM = "soft_lutpair733" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__90
        (.I0(\round_key_reg[3][28]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__90_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair84" *) 
+  (* SOFT_HLUTNM = "soft_lutpair734" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__91
        (.I0(\round_key_reg[3][27]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__91_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair84" *) 
+  (* SOFT_HLUTNM = "soft_lutpair734" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__92
        (.I0(\round_key_reg[3][26]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__92_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair85" *) 
+  (* SOFT_HLUTNM = "soft_lutpair735" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__93
        (.I0(\round_key_reg[3][25]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__93_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair85" *) 
+  (* SOFT_HLUTNM = "soft_lutpair735" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__94
        (.I0(\round_key_reg[3][24]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__94_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair86" *) 
+  (* SOFT_HLUTNM = "soft_lutpair736" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__95
        (.I0(\round_key_reg[3][23]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__95_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair86" *) 
+  (* SOFT_HLUTNM = "soft_lutpair736" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__96
        (.I0(\round_key_reg[3][22]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__96_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair87" *) 
+  (* SOFT_HLUTNM = "soft_lutpair737" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__97
        (.I0(\round_key_reg[3][21]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__97_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair87" *) 
+  (* SOFT_HLUTNM = "soft_lutpair737" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__98
        (.I0(\round_key_reg[3][20]_ks_inst_round_key_reg_c_2_n_0 ),
         .I1(round_key_reg_c_2_n_0),
         .O(round_key_reg_gate__98_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair88" *) 
+  (* SOFT_HLUTNM = "soft_lutpair738" *) 
   LUT2 #(
     .INIT(4'h8)) 
     round_key_reg_gate__99
@@ -22949,6 +22949,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
   wire [76:0]\state_out_reg[127] ;
   wire [66:0]\state_out_reg[31] ;
 
+  (* SOFT_HLUTNM = "soft_lutpair664" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[100]_i_1__8 
@@ -22956,6 +22957,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [7]),
         .I2(add_const_state_0[0]),
         .O(\state_out_reg[127] [49]));
+  (* SOFT_HLUTNM = "soft_lutpair665" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[101]_i_1__8 
@@ -22963,6 +22965,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [8]),
         .I2(add_const_state_0[1]),
         .O(\state_out_reg[127] [50]));
+  (* SOFT_HLUTNM = "soft_lutpair666" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[102]_i_1__8 
@@ -22970,6 +22973,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [9]),
         .I2(add_const_state_0[2]),
         .O(\state_out_reg[127] [51]));
+  (* SOFT_HLUTNM = "soft_lutpair667" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[103]_i_1__8 
@@ -22977,6 +22981,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [10]),
         .I2(add_const_state_0[3]),
         .O(\state_out_reg[127] [52]));
+  (* SOFT_HLUTNM = "soft_lutpair668" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[104]_i_1__8 
@@ -22984,6 +22989,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [11]),
         .I2(add_const_state_0[4]),
         .O(\state_out_reg[127] [53]));
+  (* SOFT_HLUTNM = "soft_lutpair669" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[105]_i_1__8 
@@ -22991,6 +22997,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [12]),
         .I2(add_const_state_0[5]),
         .O(\state_out_reg[127] [54]));
+  (* SOFT_HLUTNM = "soft_lutpair670" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[106]_i_1__8 
@@ -22998,6 +23005,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [13]),
         .I2(add_const_state_0[6]),
         .O(\state_out_reg[127] [55]));
+  (* SOFT_HLUTNM = "soft_lutpair671" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[107]_i_1__8 
@@ -23005,6 +23013,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [14]),
         .I2(add_const_state_0[7]),
         .O(\state_out_reg[127] [56]));
+  (* SOFT_HLUTNM = "soft_lutpair672" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[108]_i_1__8 
@@ -23012,6 +23021,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [15]),
         .I2(add_const_state_0[8]),
         .O(\state_out_reg[127] [57]));
+  (* SOFT_HLUTNM = "soft_lutpair673" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[109]_i_1__8 
@@ -23019,6 +23029,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [16]),
         .I2(add_const_state_0[9]),
         .O(\state_out_reg[127] [58]));
+  (* SOFT_HLUTNM = "soft_lutpair631" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[10]_i_1__7 
@@ -23026,6 +23037,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(Q[37]),
         .I2(add_const_state[37]),
         .O(D[9]));
+  (* SOFT_HLUTNM = "soft_lutpair674" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[110]_i_1__8 
@@ -23033,6 +23045,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [17]),
         .I2(add_const_state_0[10]),
         .O(\state_out_reg[127] [59]));
+  (* SOFT_HLUTNM = "soft_lutpair675" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[111]_i_1__8 
@@ -23040,6 +23053,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [18]),
         .I2(add_const_state_0[11]),
         .O(\state_out_reg[127] [60]));
+  (* SOFT_HLUTNM = "soft_lutpair676" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[112]_i_1__8 
@@ -23047,6 +23061,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [19]),
         .I2(add_const_state_0[12]),
         .O(\state_out_reg[127] [61]));
+  (* SOFT_HLUTNM = "soft_lutpair677" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[113]_i_1__8 
@@ -23054,6 +23069,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [20]),
         .I2(add_const_state_0[13]),
         .O(\state_out_reg[127] [62]));
+  (* SOFT_HLUTNM = "soft_lutpair678" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[114]_i_1__8 
@@ -23061,6 +23077,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [21]),
         .I2(add_const_state_0[14]),
         .O(\state_out_reg[127] [63]));
+  (* SOFT_HLUTNM = "soft_lutpair679" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[115]_i_1__8 
@@ -23068,6 +23085,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [22]),
         .I2(add_const_state_0[15]),
         .O(\state_out_reg[127] [64]));
+  (* SOFT_HLUTNM = "soft_lutpair680" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[116]_i_1__8 
@@ -23075,6 +23093,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [23]),
         .I2(add_const_state_0[16]),
         .O(\state_out_reg[127] [65]));
+  (* SOFT_HLUTNM = "soft_lutpair681" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[117]_i_1__8 
@@ -23082,6 +23101,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [24]),
         .I2(add_const_state_0[17]),
         .O(\state_out_reg[127] [66]));
+  (* SOFT_HLUTNM = "soft_lutpair682" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[118]_i_1__8 
@@ -23089,6 +23109,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [25]),
         .I2(add_const_state_0[18]),
         .O(\state_out_reg[127] [67]));
+  (* SOFT_HLUTNM = "soft_lutpair683" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[119]_i_1__8 
@@ -23096,6 +23117,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [26]),
         .I2(add_const_state_0[19]),
         .O(\state_out_reg[127] [68]));
+  (* SOFT_HLUTNM = "soft_lutpair632" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[11]_i_1__7 
@@ -23103,6 +23125,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(Q[38]),
         .I2(add_const_state[38]),
         .O(D[10]));
+  (* SOFT_HLUTNM = "soft_lutpair684" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[120]_i_1__8 
@@ -23110,6 +23133,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [27]),
         .I2(add_const_state_0[20]),
         .O(\state_out_reg[127] [69]));
+  (* SOFT_HLUTNM = "soft_lutpair685" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[121]_i_1__8 
@@ -23117,6 +23141,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [28]),
         .I2(add_const_state_0[21]),
         .O(\state_out_reg[127] [70]));
+  (* SOFT_HLUTNM = "soft_lutpair686" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[122]_i_1__8 
@@ -23124,6 +23149,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [29]),
         .I2(add_const_state_0[22]),
         .O(\state_out_reg[127] [71]));
+  (* SOFT_HLUTNM = "soft_lutpair687" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[123]_i_1__8 
@@ -23131,6 +23157,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [30]),
         .I2(add_const_state_0[23]),
         .O(\state_out_reg[127] [72]));
+  (* SOFT_HLUTNM = "soft_lutpair652" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[124]_i_1__8 
@@ -23138,6 +23165,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [31]),
         .I2(add_const_state_0[24]),
         .O(\state_out_reg[127] [73]));
+  (* SOFT_HLUTNM = "soft_lutpair653" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[125]_i_1__8 
@@ -23145,6 +23173,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [32]),
         .I2(add_const_state_0[25]),
         .O(\state_out_reg[127] [74]));
+  (* SOFT_HLUTNM = "soft_lutpair654" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[126]_i_1__8 
@@ -23152,6 +23181,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [33]),
         .I2(add_const_state_0[26]),
         .O(\state_out_reg[127] [75]));
+  (* SOFT_HLUTNM = "soft_lutpair655" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[127]_i_1__8 
@@ -23159,6 +23189,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [34]),
         .I2(add_const_state_0[27]),
         .O(\state_out_reg[127] [76]));
+  (* SOFT_HLUTNM = "soft_lutpair633" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[12]_i_1__7 
@@ -23166,6 +23197,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(Q[39]),
         .I2(add_const_state[39]),
         .O(D[11]));
+  (* SOFT_HLUTNM = "soft_lutpair634" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[13]_i_1__7 
@@ -23173,6 +23205,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(Q[40]),
         .I2(add_const_state[40]),
         .O(D[12]));
+  (* SOFT_HLUTNM = "soft_lutpair635" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[14]_i_1__7 
@@ -23180,6 +23213,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(Q[41]),
         .I2(add_const_state[41]),
         .O(D[13]));
+  (* SOFT_HLUTNM = "soft_lutpair636" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[15]_i_1__7 
@@ -23187,6 +23221,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(Q[42]),
         .I2(add_const_state[42]),
         .O(D[14]));
+  (* SOFT_HLUTNM = "soft_lutpair637" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[16]_i_1__7 
@@ -23194,6 +23229,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(Q[43]),
         .I2(add_const_state[43]),
         .O(D[15]));
+  (* SOFT_HLUTNM = "soft_lutpair638" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[17]_i_1__7 
@@ -23201,6 +23237,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(Q[44]),
         .I2(add_const_state[44]),
         .O(D[16]));
+  (* SOFT_HLUTNM = "soft_lutpair639" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[18]_i_1__7 
@@ -23208,6 +23245,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(Q[45]),
         .I2(add_const_state[45]),
         .O(D[17]));
+  (* SOFT_HLUTNM = "soft_lutpair640" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[19]_i_1__7 
@@ -23215,6 +23253,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(Q[46]),
         .I2(add_const_state[46]),
         .O(D[18]));
+  (* SOFT_HLUTNM = "soft_lutpair622" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[1]_i_1__5 
@@ -23222,6 +23261,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(Q[28]),
         .I2(add_const_state[28]),
         .O(D[0]));
+  (* SOFT_HLUTNM = "soft_lutpair650" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[1]_i_1__6 
@@ -23229,6 +23269,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [36]),
         .I2(add_const_state_0[29]),
         .O(\state_out_reg[127] [0]));
+  (* SOFT_HLUTNM = "soft_lutpair641" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[20]_i_1__7 
@@ -23236,6 +23277,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(Q[47]),
         .I2(add_const_state[47]),
         .O(D[19]));
+  (* SOFT_HLUTNM = "soft_lutpair642" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[21]_i_1__7 
@@ -23243,6 +23285,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(Q[48]),
         .I2(add_const_state[48]),
         .O(D[20]));
+  (* SOFT_HLUTNM = "soft_lutpair643" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[22]_i_1__7 
@@ -23250,6 +23293,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(Q[49]),
         .I2(add_const_state[49]),
         .O(D[21]));
+  (* SOFT_HLUTNM = "soft_lutpair644" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[23]_i_1__7 
@@ -23257,6 +23301,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(Q[50]),
         .I2(add_const_state[50]),
         .O(D[22]));
+  (* SOFT_HLUTNM = "soft_lutpair645" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[24]_i_1__7 
@@ -23264,6 +23309,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(Q[51]),
         .I2(add_const_state[51]),
         .O(D[23]));
+  (* SOFT_HLUTNM = "soft_lutpair646" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[25]_i_1__7 
@@ -23271,6 +23317,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(Q[52]),
         .I2(add_const_state[52]),
         .O(D[24]));
+  (* SOFT_HLUTNM = "soft_lutpair647" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[26]_i_1__7 
@@ -23278,6 +23325,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(Q[53]),
         .I2(add_const_state[53]),
         .O(D[25]));
+  (* SOFT_HLUTNM = "soft_lutpair648" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[27]_i_1__7 
@@ -23285,6 +23333,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(Q[54]),
         .I2(add_const_state[54]),
         .O(D[26]));
+  (* SOFT_HLUTNM = "soft_lutpair649" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[28]_i_1__7 
@@ -23292,6 +23341,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(Q[55]),
         .I2(add_const_state[55]),
         .O(D[27]));
+  (* SOFT_HLUTNM = "soft_lutpair652" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[28]_i_1__8 
@@ -23299,6 +23349,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [63]),
         .I2(add_const_state_0[56]),
         .O(\state_out_reg[127] [2]));
+  (* SOFT_HLUTNM = "soft_lutpair653" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[29]_i_1__8 
@@ -23306,6 +23357,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [64]),
         .I2(add_const_state_0[57]),
         .O(\state_out_reg[127] [3]));
+  (* SOFT_HLUTNM = "soft_lutpair623" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[2]_i_1__6 
@@ -23313,6 +23365,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(Q[29]),
         .I2(add_const_state[29]),
         .O(D[1]));
+  (* SOFT_HLUTNM = "soft_lutpair651" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[2]_i_1__7 
@@ -23320,6 +23373,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [37]),
         .I2(add_const_state_0[30]),
         .O(\state_out_reg[127] [1]));
+  (* SOFT_HLUTNM = "soft_lutpair654" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[30]_i_1__8 
@@ -23327,6 +23381,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [65]),
         .I2(add_const_state_0[58]),
         .O(\state_out_reg[127] [4]));
+  (* SOFT_HLUTNM = "soft_lutpair655" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[31]_i_1__8 
@@ -23334,6 +23389,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [66]),
         .I2(add_const_state_0[59]),
         .O(\state_out_reg[127] [5]));
+  (* SOFT_HLUTNM = "soft_lutpair656" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[32]_i_1__8 
@@ -23341,6 +23397,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [0]),
         .I2(CO),
         .O(\state_out_reg[127] [6]));
+  (* SOFT_HLUTNM = "soft_lutpair622" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[33]_i_1__7 
@@ -23348,6 +23405,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state[0]),
         .I2(Q[0]),
         .O(D[28]));
+  (* SOFT_HLUTNM = "soft_lutpair657" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[33]_i_1__8 
@@ -23355,6 +23413,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [1]),
         .I2(\state_out_reg[31] [4]),
         .O(\state_out_reg[127] [7]));
+  (* SOFT_HLUTNM = "soft_lutpair623" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[34]_i_1__7 
@@ -23362,6 +23421,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state[1]),
         .I2(Q[1]),
         .O(D[29]));
+  (* SOFT_HLUTNM = "soft_lutpair658" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[34]_i_1__8 
@@ -23369,6 +23429,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [2]),
         .I2(\state_out_reg[31] [5]),
         .O(\state_out_reg[127] [8]));
+  (* SOFT_HLUTNM = "soft_lutpair624" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[35]_i_1__7 
@@ -23376,6 +23437,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state[2]),
         .I2(Q[2]),
         .O(D[30]));
+  (* SOFT_HLUTNM = "soft_lutpair663" *) 
   LUT3 #(
     .INIT(8'h6A)) 
     \state_out[35]_i_1__8 
@@ -23383,6 +23445,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [6]),
         .I2(\state_out_reg[31] [3]),
         .O(\state_out_reg[127] [9]));
+  (* SOFT_HLUTNM = "soft_lutpair625" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[36]_i_1__7 
@@ -23390,6 +23453,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state[3]),
         .I2(Q[3]),
         .O(D[31]));
+  (* SOFT_HLUTNM = "soft_lutpair626" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[37]_i_1__7 
@@ -23397,6 +23461,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state[4]),
         .I2(Q[4]),
         .O(D[32]));
+  (* SOFT_HLUTNM = "soft_lutpair627" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[38]_i_1__7 
@@ -23404,6 +23469,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state[5]),
         .I2(Q[5]),
         .O(D[33]));
+  (* SOFT_HLUTNM = "soft_lutpair628" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[39]_i_1__7 
@@ -23411,6 +23477,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state[6]),
         .I2(Q[6]),
         .O(D[34]));
+  (* SOFT_HLUTNM = "soft_lutpair624" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[3]_i_1__7 
@@ -23418,6 +23485,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(Q[30]),
         .I2(add_const_state[30]),
         .O(D[2]));
+  (* SOFT_HLUTNM = "soft_lutpair629" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[40]_i_1__7 
@@ -23425,6 +23493,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state[7]),
         .I2(Q[7]),
         .O(D[35]));
+  (* SOFT_HLUTNM = "soft_lutpair630" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[41]_i_1__7 
@@ -23432,6 +23501,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state[8]),
         .I2(Q[8]),
         .O(D[36]));
+  (* SOFT_HLUTNM = "soft_lutpair631" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[42]_i_1__7 
@@ -23439,6 +23509,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state[9]),
         .I2(Q[9]),
         .O(D[37]));
+  (* SOFT_HLUTNM = "soft_lutpair632" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[43]_i_1__7 
@@ -23446,6 +23517,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state[10]),
         .I2(Q[10]),
         .O(D[38]));
+  (* SOFT_HLUTNM = "soft_lutpair633" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[44]_i_1__7 
@@ -23453,6 +23525,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state[11]),
         .I2(Q[11]),
         .O(D[39]));
+  (* SOFT_HLUTNM = "soft_lutpair634" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[45]_i_1__7 
@@ -23460,6 +23533,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state[12]),
         .I2(Q[12]),
         .O(D[40]));
+  (* SOFT_HLUTNM = "soft_lutpair635" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[46]_i_1__7 
@@ -23467,6 +23541,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state[13]),
         .I2(Q[13]),
         .O(D[41]));
+  (* SOFT_HLUTNM = "soft_lutpair636" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[47]_i_1__7 
@@ -23474,6 +23549,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state[14]),
         .I2(Q[14]),
         .O(D[42]));
+  (* SOFT_HLUTNM = "soft_lutpair637" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[48]_i_1__7 
@@ -23481,6 +23557,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state[15]),
         .I2(Q[15]),
         .O(D[43]));
+  (* SOFT_HLUTNM = "soft_lutpair638" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[49]_i_1__7 
@@ -23488,6 +23565,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state[16]),
         .I2(Q[16]),
         .O(D[44]));
+  (* SOFT_HLUTNM = "soft_lutpair625" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[4]_i_1__6 
@@ -23495,6 +23573,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(Q[31]),
         .I2(add_const_state[31]),
         .O(D[3]));
+  (* SOFT_HLUTNM = "soft_lutpair639" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[50]_i_1__7 
@@ -23502,6 +23581,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state[17]),
         .I2(Q[17]),
         .O(D[45]));
+  (* SOFT_HLUTNM = "soft_lutpair640" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[51]_i_1__7 
@@ -23509,6 +23589,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state[18]),
         .I2(Q[18]),
         .O(D[46]));
+  (* SOFT_HLUTNM = "soft_lutpair641" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[52]_i_1__7 
@@ -23516,6 +23597,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state[19]),
         .I2(Q[19]),
         .O(D[47]));
+  (* SOFT_HLUTNM = "soft_lutpair642" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[53]_i_1__7 
@@ -23523,6 +23605,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state[20]),
         .I2(Q[20]),
         .O(D[48]));
+  (* SOFT_HLUTNM = "soft_lutpair643" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[54]_i_1__7 
@@ -23530,6 +23613,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state[21]),
         .I2(Q[21]),
         .O(D[49]));
+  (* SOFT_HLUTNM = "soft_lutpair644" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[55]_i_1__7 
@@ -23537,6 +23621,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state[22]),
         .I2(Q[22]),
         .O(D[50]));
+  (* SOFT_HLUTNM = "soft_lutpair645" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[56]_i_1__7 
@@ -23544,6 +23629,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state[23]),
         .I2(Q[23]),
         .O(D[51]));
+  (* SOFT_HLUTNM = "soft_lutpair646" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[57]_i_1__7 
@@ -23551,6 +23637,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state[24]),
         .I2(Q[24]),
         .O(D[52]));
+  (* SOFT_HLUTNM = "soft_lutpair647" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[58]_i_1__7 
@@ -23558,6 +23645,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state[25]),
         .I2(Q[25]),
         .O(D[53]));
+  (* SOFT_HLUTNM = "soft_lutpair648" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[59]_i_1__7 
@@ -23565,6 +23653,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state[26]),
         .I2(Q[26]),
         .O(D[54]));
+  (* SOFT_HLUTNM = "soft_lutpair626" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[5]_i_1__7 
@@ -23572,6 +23661,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(Q[32]),
         .I2(add_const_state[32]),
         .O(D[4]));
+  (* SOFT_HLUTNM = "soft_lutpair649" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[60]_i_1__7 
@@ -23579,6 +23669,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state[27]),
         .I2(Q[27]),
         .O(D[55]));
+  (* SOFT_HLUTNM = "soft_lutpair659" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[60]_i_1__8 
@@ -23586,6 +23677,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state_0[24]),
         .I2(\state_out_reg[31] [31]),
         .O(\state_out_reg[127] [10]));
+  (* SOFT_HLUTNM = "soft_lutpair660" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[61]_i_1__8 
@@ -23593,6 +23685,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state_0[25]),
         .I2(\state_out_reg[31] [32]),
         .O(\state_out_reg[127] [11]));
+  (* SOFT_HLUTNM = "soft_lutpair661" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[62]_i_1__8 
@@ -23600,6 +23693,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state_0[26]),
         .I2(\state_out_reg[31] [33]),
         .O(\state_out_reg[127] [12]));
+  (* SOFT_HLUTNM = "soft_lutpair662" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[63]_i_1__8 
@@ -23607,6 +23701,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state_0[27]),
         .I2(\state_out_reg[31] [34]),
         .O(\state_out_reg[127] [13]));
+  (* SOFT_HLUTNM = "soft_lutpair657" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[65]_i_1__8 
@@ -23614,6 +23709,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state_0[29]),
         .I2(\state_out_reg[31] [36]),
         .O(\state_out_reg[127] [14]));
+  (* SOFT_HLUTNM = "soft_lutpair658" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[66]_i_1__8 
@@ -23621,6 +23717,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state_0[30]),
         .I2(\state_out_reg[31] [37]),
         .O(\state_out_reg[127] [15]));
+  (* SOFT_HLUTNM = "soft_lutpair663" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[67]_i_1__8 
@@ -23628,6 +23725,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state_0[31]),
         .I2(\state_out_reg[31] [38]),
         .O(\state_out_reg[127] [16]));
+  (* SOFT_HLUTNM = "soft_lutpair664" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[68]_i_1__8 
@@ -23635,6 +23733,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state_0[32]),
         .I2(\state_out_reg[31] [39]),
         .O(\state_out_reg[127] [17]));
+  (* SOFT_HLUTNM = "soft_lutpair665" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[69]_i_1__8 
@@ -23642,6 +23741,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state_0[33]),
         .I2(\state_out_reg[31] [40]),
         .O(\state_out_reg[127] [18]));
+  (* SOFT_HLUTNM = "soft_lutpair627" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[6]_i_1__7 
@@ -23649,6 +23749,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(Q[33]),
         .I2(add_const_state[33]),
         .O(D[5]));
+  (* SOFT_HLUTNM = "soft_lutpair666" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[70]_i_1__8 
@@ -23656,6 +23757,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state_0[34]),
         .I2(\state_out_reg[31] [41]),
         .O(\state_out_reg[127] [19]));
+  (* SOFT_HLUTNM = "soft_lutpair667" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[71]_i_1__8 
@@ -23663,6 +23765,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state_0[35]),
         .I2(\state_out_reg[31] [42]),
         .O(\state_out_reg[127] [20]));
+  (* SOFT_HLUTNM = "soft_lutpair668" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[72]_i_1__8 
@@ -23670,6 +23773,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state_0[36]),
         .I2(\state_out_reg[31] [43]),
         .O(\state_out_reg[127] [21]));
+  (* SOFT_HLUTNM = "soft_lutpair669" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[73]_i_1__8 
@@ -23677,6 +23781,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state_0[37]),
         .I2(\state_out_reg[31] [44]),
         .O(\state_out_reg[127] [22]));
+  (* SOFT_HLUTNM = "soft_lutpair670" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[74]_i_1__8 
@@ -23684,6 +23789,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state_0[38]),
         .I2(\state_out_reg[31] [45]),
         .O(\state_out_reg[127] [23]));
+  (* SOFT_HLUTNM = "soft_lutpair671" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[75]_i_1__8 
@@ -23691,6 +23797,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state_0[39]),
         .I2(\state_out_reg[31] [46]),
         .O(\state_out_reg[127] [24]));
+  (* SOFT_HLUTNM = "soft_lutpair672" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[76]_i_1__8 
@@ -23698,6 +23805,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state_0[40]),
         .I2(\state_out_reg[31] [47]),
         .O(\state_out_reg[127] [25]));
+  (* SOFT_HLUTNM = "soft_lutpair673" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[77]_i_1__8 
@@ -23705,6 +23813,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state_0[41]),
         .I2(\state_out_reg[31] [48]),
         .O(\state_out_reg[127] [26]));
+  (* SOFT_HLUTNM = "soft_lutpair674" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[78]_i_1__8 
@@ -23712,6 +23821,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state_0[42]),
         .I2(\state_out_reg[31] [49]),
         .O(\state_out_reg[127] [27]));
+  (* SOFT_HLUTNM = "soft_lutpair675" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[79]_i_1__8 
@@ -23719,6 +23829,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state_0[43]),
         .I2(\state_out_reg[31] [50]),
         .O(\state_out_reg[127] [28]));
+  (* SOFT_HLUTNM = "soft_lutpair628" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[7]_i_1__7 
@@ -23726,6 +23837,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(Q[34]),
         .I2(add_const_state[34]),
         .O(D[6]));
+  (* SOFT_HLUTNM = "soft_lutpair676" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[80]_i_1__8 
@@ -23733,6 +23845,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state_0[44]),
         .I2(\state_out_reg[31] [51]),
         .O(\state_out_reg[127] [29]));
+  (* SOFT_HLUTNM = "soft_lutpair677" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[81]_i_1__8 
@@ -23740,6 +23853,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state_0[45]),
         .I2(\state_out_reg[31] [52]),
         .O(\state_out_reg[127] [30]));
+  (* SOFT_HLUTNM = "soft_lutpair678" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[82]_i_1__8 
@@ -23747,6 +23861,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state_0[46]),
         .I2(\state_out_reg[31] [53]),
         .O(\state_out_reg[127] [31]));
+  (* SOFT_HLUTNM = "soft_lutpair679" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[83]_i_1__8 
@@ -23754,6 +23869,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state_0[47]),
         .I2(\state_out_reg[31] [54]),
         .O(\state_out_reg[127] [32]));
+  (* SOFT_HLUTNM = "soft_lutpair680" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[84]_i_1__8 
@@ -23761,6 +23877,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state_0[48]),
         .I2(\state_out_reg[31] [55]),
         .O(\state_out_reg[127] [33]));
+  (* SOFT_HLUTNM = "soft_lutpair681" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[85]_i_1__8 
@@ -23768,6 +23885,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state_0[49]),
         .I2(\state_out_reg[31] [56]),
         .O(\state_out_reg[127] [34]));
+  (* SOFT_HLUTNM = "soft_lutpair682" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[86]_i_1__8 
@@ -23775,6 +23893,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state_0[50]),
         .I2(\state_out_reg[31] [57]),
         .O(\state_out_reg[127] [35]));
+  (* SOFT_HLUTNM = "soft_lutpair683" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[87]_i_1__8 
@@ -23782,6 +23901,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state_0[51]),
         .I2(\state_out_reg[31] [58]),
         .O(\state_out_reg[127] [36]));
+  (* SOFT_HLUTNM = "soft_lutpair684" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[88]_i_1__8 
@@ -23789,6 +23909,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state_0[52]),
         .I2(\state_out_reg[31] [59]),
         .O(\state_out_reg[127] [37]));
+  (* SOFT_HLUTNM = "soft_lutpair685" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[89]_i_1__8 
@@ -23796,6 +23917,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state_0[53]),
         .I2(\state_out_reg[31] [60]),
         .O(\state_out_reg[127] [38]));
+  (* SOFT_HLUTNM = "soft_lutpair629" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[8]_i_1__7 
@@ -23803,6 +23925,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(Q[35]),
         .I2(add_const_state[35]),
         .O(D[7]));
+  (* SOFT_HLUTNM = "soft_lutpair686" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[90]_i_1__8 
@@ -23810,6 +23933,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state_0[54]),
         .I2(\state_out_reg[31] [61]),
         .O(\state_out_reg[127] [39]));
+  (* SOFT_HLUTNM = "soft_lutpair687" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[91]_i_1__8 
@@ -23817,6 +23941,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state_0[55]),
         .I2(\state_out_reg[31] [62]),
         .O(\state_out_reg[127] [40]));
+  (* SOFT_HLUTNM = "soft_lutpair659" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[92]_i_1__8 
@@ -23824,6 +23949,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state_0[56]),
         .I2(\state_out_reg[31] [63]),
         .O(\state_out_reg[127] [41]));
+  (* SOFT_HLUTNM = "soft_lutpair660" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[93]_i_1__8 
@@ -23831,6 +23957,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state_0[57]),
         .I2(\state_out_reg[31] [64]),
         .O(\state_out_reg[127] [42]));
+  (* SOFT_HLUTNM = "soft_lutpair661" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[94]_i_1__8 
@@ -23838,6 +23965,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state_0[58]),
         .I2(\state_out_reg[31] [65]),
         .O(\state_out_reg[127] [43]));
+  (* SOFT_HLUTNM = "soft_lutpair662" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[95]_i_1__8 
@@ -23845,6 +23973,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(add_const_state_0[59]),
         .I2(\state_out_reg[31] [66]),
         .O(\state_out_reg[127] [44]));
+  (* SOFT_HLUTNM = "soft_lutpair656" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[96]_i_1__8 
@@ -23852,6 +23981,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(CO),
         .I2(\state_out_reg[31] [0]),
         .O(\state_out_reg[127] [45]));
+  (* SOFT_HLUTNM = "soft_lutpair650" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[97]_i_1__8 
@@ -23859,6 +23989,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [4]),
         .I2(\state_out_reg[31] [1]),
         .O(\state_out_reg[127] [46]));
+  (* SOFT_HLUTNM = "soft_lutpair651" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[98]_i_1__8 
@@ -23873,6 +24004,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox
         .I1(\state_out_reg[31] [3]),
         .I2(\state_out_reg[31] [6]),
         .O(\state_out_reg[127] [48]));
+  (* SOFT_HLUTNM = "soft_lutpair630" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[9]_i_1__7 
@@ -23907,6 +24039,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
   wire [55:0]\state_out_reg[28] ;
   wire [0:0]\state_out_reg[96] ;
 
+  (* SOFT_HLUTNM = "soft_lutpair596" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[100]_i_1__7 
@@ -23914,6 +24047,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(Q[4]),
         .I2(add_const_state_0[3]),
         .O(\state_out_reg[127] [42]));
+  (* SOFT_HLUTNM = "soft_lutpair597" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[101]_i_1__7 
@@ -23921,6 +24055,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(Q[5]),
         .I2(add_const_state_0[4]),
         .O(\state_out_reg[127] [43]));
+  (* SOFT_HLUTNM = "soft_lutpair598" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[102]_i_1__7 
@@ -23928,6 +24063,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(Q[6]),
         .I2(add_const_state_0[5]),
         .O(\state_out_reg[127] [44]));
+  (* SOFT_HLUTNM = "soft_lutpair599" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[103]_i_1__7 
@@ -23935,6 +24071,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(Q[7]),
         .I2(add_const_state_0[6]),
         .O(\state_out_reg[127] [45]));
+  (* SOFT_HLUTNM = "soft_lutpair600" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[104]_i_1__7 
@@ -23942,6 +24079,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(Q[8]),
         .I2(add_const_state_0[7]),
         .O(\state_out_reg[127] [46]));
+  (* SOFT_HLUTNM = "soft_lutpair601" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[105]_i_1__7 
@@ -23949,6 +24087,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(Q[9]),
         .I2(add_const_state_0[8]),
         .O(\state_out_reg[127] [47]));
+  (* SOFT_HLUTNM = "soft_lutpair602" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[106]_i_1__7 
@@ -23956,6 +24095,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(Q[10]),
         .I2(add_const_state_0[9]),
         .O(\state_out_reg[127] [48]));
+  (* SOFT_HLUTNM = "soft_lutpair603" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[107]_i_1__7 
@@ -23963,6 +24103,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(Q[11]),
         .I2(add_const_state_0[10]),
         .O(\state_out_reg[127] [49]));
+  (* SOFT_HLUTNM = "soft_lutpair604" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[108]_i_1__7 
@@ -23970,6 +24111,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(Q[12]),
         .I2(add_const_state_0[11]),
         .O(\state_out_reg[127] [50]));
+  (* SOFT_HLUTNM = "soft_lutpair605" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[109]_i_1__7 
@@ -23977,6 +24119,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(Q[13]),
         .I2(add_const_state_0[12]),
         .O(\state_out_reg[127] [51]));
+  (* SOFT_HLUTNM = "soft_lutpair568" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[10]_i_1__6 
@@ -23984,6 +24127,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(\state_out_reg[28] [37]),
         .I2(add_const_state[37]),
         .O(D[9]));
+  (* SOFT_HLUTNM = "soft_lutpair606" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[110]_i_1__7 
@@ -23991,6 +24135,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(Q[14]),
         .I2(add_const_state_0[13]),
         .O(\state_out_reg[127] [52]));
+  (* SOFT_HLUTNM = "soft_lutpair607" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[111]_i_1__7 
@@ -23998,6 +24143,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(Q[15]),
         .I2(add_const_state_0[14]),
         .O(\state_out_reg[127] [53]));
+  (* SOFT_HLUTNM = "soft_lutpair608" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[112]_i_1__7 
@@ -24005,6 +24151,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(Q[16]),
         .I2(add_const_state_0[15]),
         .O(\state_out_reg[127] [54]));
+  (* SOFT_HLUTNM = "soft_lutpair609" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[113]_i_1__7 
@@ -24012,6 +24159,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(Q[17]),
         .I2(add_const_state_0[16]),
         .O(\state_out_reg[127] [55]));
+  (* SOFT_HLUTNM = "soft_lutpair610" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[114]_i_1__7 
@@ -24019,6 +24167,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(Q[18]),
         .I2(add_const_state_0[17]),
         .O(\state_out_reg[127] [56]));
+  (* SOFT_HLUTNM = "soft_lutpair611" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[115]_i_1__7 
@@ -24026,6 +24175,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(Q[19]),
         .I2(add_const_state_0[18]),
         .O(\state_out_reg[127] [57]));
+  (* SOFT_HLUTNM = "soft_lutpair612" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[116]_i_1__7 
@@ -24033,6 +24183,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(Q[20]),
         .I2(add_const_state_0[19]),
         .O(\state_out_reg[127] [58]));
+  (* SOFT_HLUTNM = "soft_lutpair613" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[117]_i_1__7 
@@ -24040,6 +24191,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(Q[21]),
         .I2(add_const_state_0[20]),
         .O(\state_out_reg[127] [59]));
+  (* SOFT_HLUTNM = "soft_lutpair614" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[118]_i_1__7 
@@ -24047,6 +24199,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(Q[22]),
         .I2(add_const_state_0[21]),
         .O(\state_out_reg[127] [60]));
+  (* SOFT_HLUTNM = "soft_lutpair615" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[119]_i_1__7 
@@ -24054,6 +24207,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(Q[23]),
         .I2(add_const_state_0[22]),
         .O(\state_out_reg[127] [61]));
+  (* SOFT_HLUTNM = "soft_lutpair569" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[11]_i_1__6 
@@ -24061,6 +24215,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(\state_out_reg[28] [38]),
         .I2(add_const_state[38]),
         .O(D[10]));
+  (* SOFT_HLUTNM = "soft_lutpair616" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[120]_i_1__7 
@@ -24068,6 +24223,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(Q[24]),
         .I2(add_const_state_0[23]),
         .O(\state_out_reg[127] [62]));
+  (* SOFT_HLUTNM = "soft_lutpair617" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[121]_i_1__7 
@@ -24075,6 +24231,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(Q[25]),
         .I2(add_const_state_0[24]),
         .O(\state_out_reg[127] [63]));
+  (* SOFT_HLUTNM = "soft_lutpair618" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[122]_i_1__7 
@@ -24082,6 +24239,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(Q[26]),
         .I2(add_const_state_0[25]),
         .O(\state_out_reg[127] [64]));
+  (* SOFT_HLUTNM = "soft_lutpair619" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[123]_i_1__7 
@@ -24089,6 +24247,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(Q[27]),
         .I2(add_const_state_0[26]),
         .O(\state_out_reg[127] [65]));
+  (* SOFT_HLUTNM = "soft_lutpair620" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[124]_i_1__7 
@@ -24096,6 +24255,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(Q[28]),
         .I2(add_const_state_0[27]),
         .O(\state_out_reg[127] [66]));
+  (* SOFT_HLUTNM = "soft_lutpair587" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[125]_i_1__7 
@@ -24103,6 +24263,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(Q[29]),
         .I2(add_const_state_0[28]),
         .O(\state_out_reg[127] [67]));
+  (* SOFT_HLUTNM = "soft_lutpair588" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[126]_i_1__7 
@@ -24110,6 +24271,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(Q[30]),
         .I2(add_const_state_0[29]),
         .O(\state_out_reg[127] [68]));
+  (* SOFT_HLUTNM = "soft_lutpair589" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[127]_i_1__7 
@@ -24117,6 +24279,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(Q[31]),
         .I2(add_const_state_0[30]),
         .O(\state_out_reg[127] [69]));
+  (* SOFT_HLUTNM = "soft_lutpair570" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[12]_i_1__6 
@@ -24124,6 +24287,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(\state_out_reg[28] [39]),
         .I2(add_const_state[39]),
         .O(D[11]));
+  (* SOFT_HLUTNM = "soft_lutpair571" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[13]_i_1__6 
@@ -24131,6 +24295,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(\state_out_reg[28] [40]),
         .I2(add_const_state[40]),
         .O(D[12]));
+  (* SOFT_HLUTNM = "soft_lutpair572" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[14]_i_1__6 
@@ -24138,6 +24303,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(\state_out_reg[28] [41]),
         .I2(add_const_state[41]),
         .O(D[13]));
+  (* SOFT_HLUTNM = "soft_lutpair573" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[15]_i_1__6 
@@ -24145,6 +24311,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(\state_out_reg[28] [42]),
         .I2(add_const_state[42]),
         .O(D[14]));
+  (* SOFT_HLUTNM = "soft_lutpair574" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[16]_i_1__6 
@@ -24152,6 +24319,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(\state_out_reg[28] [43]),
         .I2(add_const_state[43]),
         .O(D[15]));
+  (* SOFT_HLUTNM = "soft_lutpair575" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[17]_i_1__6 
@@ -24159,6 +24327,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(\state_out_reg[28] [44]),
         .I2(add_const_state[44]),
         .O(D[16]));
+  (* SOFT_HLUTNM = "soft_lutpair576" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[18]_i_1__6 
@@ -24166,6 +24335,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(\state_out_reg[28] [45]),
         .I2(add_const_state[45]),
         .O(D[17]));
+  (* SOFT_HLUTNM = "soft_lutpair577" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[19]_i_1__6 
@@ -24173,6 +24343,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(\state_out_reg[28] [46]),
         .I2(add_const_state[46]),
         .O(D[18]));
+  (* SOFT_HLUTNM = "soft_lutpair559" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[1]_i_1__4 
@@ -24180,6 +24351,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(\state_out_reg[28] [28]),
         .I2(add_const_state[28]),
         .O(D[0]));
+  (* SOFT_HLUTNM = "soft_lutpair578" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[20]_i_1__6 
@@ -24187,6 +24359,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(\state_out_reg[28] [47]),
         .I2(add_const_state[47]),
         .O(D[19]));
+  (* SOFT_HLUTNM = "soft_lutpair579" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[21]_i_1__6 
@@ -24194,6 +24367,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(\state_out_reg[28] [48]),
         .I2(add_const_state[48]),
         .O(D[20]));
+  (* SOFT_HLUTNM = "soft_lutpair580" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[22]_i_1__6 
@@ -24201,6 +24375,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(\state_out_reg[28] [49]),
         .I2(add_const_state[49]),
         .O(D[21]));
+  (* SOFT_HLUTNM = "soft_lutpair581" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[23]_i_1__6 
@@ -24208,6 +24383,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(\state_out_reg[28] [50]),
         .I2(add_const_state[50]),
         .O(D[22]));
+  (* SOFT_HLUTNM = "soft_lutpair582" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[24]_i_1__6 
@@ -24215,6 +24391,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(\state_out_reg[28] [51]),
         .I2(add_const_state[51]),
         .O(D[23]));
+  (* SOFT_HLUTNM = "soft_lutpair583" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[25]_i_1__6 
@@ -24222,6 +24399,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(\state_out_reg[28] [52]),
         .I2(add_const_state[52]),
         .O(D[24]));
+  (* SOFT_HLUTNM = "soft_lutpair584" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[26]_i_1__6 
@@ -24229,6 +24407,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(\state_out_reg[28] [53]),
         .I2(add_const_state[53]),
         .O(D[25]));
+  (* SOFT_HLUTNM = "soft_lutpair585" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[27]_i_1__6 
@@ -24236,6 +24415,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(\state_out_reg[28] [54]),
         .I2(add_const_state[54]),
         .O(D[26]));
+  (* SOFT_HLUTNM = "soft_lutpair586" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[28]_i_1__6 
@@ -24243,6 +24423,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(\state_out_reg[28] [55]),
         .I2(add_const_state[55]),
         .O(D[27]));
+  (* SOFT_HLUTNM = "soft_lutpair587" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[29]_i_1__7 
@@ -24250,6 +24431,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(Q[61]),
         .I2(add_const_state_0[60]),
         .O(\state_out_reg[127] [0]));
+  (* SOFT_HLUTNM = "soft_lutpair560" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[2]_i_1__5 
@@ -24257,6 +24439,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(\state_out_reg[28] [29]),
         .I2(add_const_state[29]),
         .O(D[1]));
+  (* SOFT_HLUTNM = "soft_lutpair588" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[30]_i_1__7 
@@ -24264,6 +24447,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(Q[62]),
         .I2(add_const_state_0[61]),
         .O(\state_out_reg[127] [1]));
+  (* SOFT_HLUTNM = "soft_lutpair589" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[31]_i_1__7 
@@ -24271,6 +24455,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(Q[63]),
         .I2(add_const_state_0[62]),
         .O(\state_out_reg[127] [2]));
+  (* SOFT_HLUTNM = "soft_lutpair621" *) 
   LUT3 #(
     .INIT(8'h6A)) 
     \state_out[32]_i_1__7 
@@ -24278,6 +24463,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(\state_out_reg[96] ),
         .I2(Q[0]),
         .O(\state_out_reg[127] [3]));
+  (* SOFT_HLUTNM = "soft_lutpair559" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[33]_i_1__6 
@@ -24285,6 +24471,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state[0]),
         .I2(\state_out_reg[28] [0]),
         .O(D[28]));
+  (* SOFT_HLUTNM = "soft_lutpair560" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[34]_i_1__6 
@@ -24292,6 +24479,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state[1]),
         .I2(\state_out_reg[28] [1]),
         .O(D[29]));
+  (* SOFT_HLUTNM = "soft_lutpair561" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[35]_i_1__6 
@@ -24299,6 +24487,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state[2]),
         .I2(\state_out_reg[28] [2]),
         .O(D[30]));
+  (* SOFT_HLUTNM = "soft_lutpair562" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[36]_i_1__6 
@@ -24306,6 +24495,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state[3]),
         .I2(\state_out_reg[28] [3]),
         .O(D[31]));
+  (* SOFT_HLUTNM = "soft_lutpair563" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[37]_i_1__6 
@@ -24313,6 +24503,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state[4]),
         .I2(\state_out_reg[28] [4]),
         .O(D[32]));
+  (* SOFT_HLUTNM = "soft_lutpair564" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[38]_i_1__6 
@@ -24320,6 +24511,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state[5]),
         .I2(\state_out_reg[28] [5]),
         .O(D[33]));
+  (* SOFT_HLUTNM = "soft_lutpair565" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[39]_i_1__6 
@@ -24327,6 +24519,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state[6]),
         .I2(\state_out_reg[28] [6]),
         .O(D[34]));
+  (* SOFT_HLUTNM = "soft_lutpair561" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[3]_i_1__6 
@@ -24334,6 +24527,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(\state_out_reg[28] [30]),
         .I2(add_const_state[30]),
         .O(D[2]));
+  (* SOFT_HLUTNM = "soft_lutpair566" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[40]_i_1__6 
@@ -24341,6 +24535,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state[7]),
         .I2(\state_out_reg[28] [7]),
         .O(D[35]));
+  (* SOFT_HLUTNM = "soft_lutpair567" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[41]_i_1__6 
@@ -24348,6 +24543,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state[8]),
         .I2(\state_out_reg[28] [8]),
         .O(D[36]));
+  (* SOFT_HLUTNM = "soft_lutpair568" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[42]_i_1__6 
@@ -24355,6 +24551,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state[9]),
         .I2(\state_out_reg[28] [9]),
         .O(D[37]));
+  (* SOFT_HLUTNM = "soft_lutpair569" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[43]_i_1__6 
@@ -24362,6 +24559,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state[10]),
         .I2(\state_out_reg[28] [10]),
         .O(D[38]));
+  (* SOFT_HLUTNM = "soft_lutpair570" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[44]_i_1__6 
@@ -24369,6 +24567,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state[11]),
         .I2(\state_out_reg[28] [11]),
         .O(D[39]));
+  (* SOFT_HLUTNM = "soft_lutpair571" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[45]_i_1__6 
@@ -24376,6 +24575,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state[12]),
         .I2(\state_out_reg[28] [12]),
         .O(D[40]));
+  (* SOFT_HLUTNM = "soft_lutpair572" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[46]_i_1__6 
@@ -24383,6 +24583,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state[13]),
         .I2(\state_out_reg[28] [13]),
         .O(D[41]));
+  (* SOFT_HLUTNM = "soft_lutpair573" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[47]_i_1__6 
@@ -24390,6 +24591,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state[14]),
         .I2(\state_out_reg[28] [14]),
         .O(D[42]));
+  (* SOFT_HLUTNM = "soft_lutpair574" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[48]_i_1__6 
@@ -24397,6 +24599,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state[15]),
         .I2(\state_out_reg[28] [15]),
         .O(D[43]));
+  (* SOFT_HLUTNM = "soft_lutpair575" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[49]_i_1__6 
@@ -24404,6 +24607,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state[16]),
         .I2(\state_out_reg[28] [16]),
         .O(D[44]));
+  (* SOFT_HLUTNM = "soft_lutpair562" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[4]_i_1__5 
@@ -24411,6 +24615,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(\state_out_reg[28] [31]),
         .I2(add_const_state[31]),
         .O(D[3]));
+  (* SOFT_HLUTNM = "soft_lutpair576" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[50]_i_1__6 
@@ -24418,6 +24623,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state[17]),
         .I2(\state_out_reg[28] [17]),
         .O(D[45]));
+  (* SOFT_HLUTNM = "soft_lutpair577" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[51]_i_1__6 
@@ -24425,6 +24631,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state[18]),
         .I2(\state_out_reg[28] [18]),
         .O(D[46]));
+  (* SOFT_HLUTNM = "soft_lutpair578" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[52]_i_1__6 
@@ -24432,6 +24639,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state[19]),
         .I2(\state_out_reg[28] [19]),
         .O(D[47]));
+  (* SOFT_HLUTNM = "soft_lutpair579" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[53]_i_1__6 
@@ -24439,6 +24647,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state[20]),
         .I2(\state_out_reg[28] [20]),
         .O(D[48]));
+  (* SOFT_HLUTNM = "soft_lutpair580" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[54]_i_1__6 
@@ -24446,6 +24655,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state[21]),
         .I2(\state_out_reg[28] [21]),
         .O(D[49]));
+  (* SOFT_HLUTNM = "soft_lutpair581" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[55]_i_1__6 
@@ -24453,6 +24663,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state[22]),
         .I2(\state_out_reg[28] [22]),
         .O(D[50]));
+  (* SOFT_HLUTNM = "soft_lutpair582" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[56]_i_1__6 
@@ -24460,6 +24671,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state[23]),
         .I2(\state_out_reg[28] [23]),
         .O(D[51]));
+  (* SOFT_HLUTNM = "soft_lutpair583" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[57]_i_1__6 
@@ -24467,6 +24679,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state[24]),
         .I2(\state_out_reg[28] [24]),
         .O(D[52]));
+  (* SOFT_HLUTNM = "soft_lutpair584" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[58]_i_1__6 
@@ -24474,6 +24687,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state[25]),
         .I2(\state_out_reg[28] [25]),
         .O(D[53]));
+  (* SOFT_HLUTNM = "soft_lutpair585" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[59]_i_1__6 
@@ -24481,6 +24695,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state[26]),
         .I2(\state_out_reg[28] [26]),
         .O(D[54]));
+  (* SOFT_HLUTNM = "soft_lutpair563" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[5]_i_1__6 
@@ -24488,6 +24703,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(\state_out_reg[28] [32]),
         .I2(add_const_state[32]),
         .O(D[4]));
+  (* SOFT_HLUTNM = "soft_lutpair586" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[60]_i_1__6 
@@ -24495,6 +24711,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state[27]),
         .I2(\state_out_reg[28] [27]),
         .O(D[55]));
+  (* SOFT_HLUTNM = "soft_lutpair590" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[61]_i_1__7 
@@ -24502,6 +24719,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state_0[28]),
         .I2(Q[29]),
         .O(\state_out_reg[127] [4]));
+  (* SOFT_HLUTNM = "soft_lutpair591" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[62]_i_1__7 
@@ -24509,6 +24727,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state_0[29]),
         .I2(Q[30]),
         .O(\state_out_reg[127] [5]));
+  (* SOFT_HLUTNM = "soft_lutpair592" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[63]_i_1__7 
@@ -24516,6 +24735,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state_0[30]),
         .I2(Q[31]),
         .O(\state_out_reg[127] [6]));
+  (* SOFT_HLUTNM = "soft_lutpair593" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[65]_i_1__7 
@@ -24523,6 +24743,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state_0[32]),
         .I2(Q[33]),
         .O(\state_out_reg[127] [7]));
+  (* SOFT_HLUTNM = "soft_lutpair594" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[66]_i_1__7 
@@ -24530,6 +24751,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state_0[33]),
         .I2(Q[34]),
         .O(\state_out_reg[127] [8]));
+  (* SOFT_HLUTNM = "soft_lutpair595" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[67]_i_1__7 
@@ -24537,6 +24759,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state_0[34]),
         .I2(Q[35]),
         .O(\state_out_reg[127] [9]));
+  (* SOFT_HLUTNM = "soft_lutpair596" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[68]_i_1__7 
@@ -24544,6 +24767,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state_0[35]),
         .I2(Q[36]),
         .O(\state_out_reg[127] [10]));
+  (* SOFT_HLUTNM = "soft_lutpair597" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[69]_i_1__7 
@@ -24551,6 +24775,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state_0[36]),
         .I2(Q[37]),
         .O(\state_out_reg[127] [11]));
+  (* SOFT_HLUTNM = "soft_lutpair564" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[6]_i_1__6 
@@ -24558,6 +24783,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(\state_out_reg[28] [33]),
         .I2(add_const_state[33]),
         .O(D[5]));
+  (* SOFT_HLUTNM = "soft_lutpair598" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[70]_i_1__7 
@@ -24565,6 +24791,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state_0[37]),
         .I2(Q[38]),
         .O(\state_out_reg[127] [12]));
+  (* SOFT_HLUTNM = "soft_lutpair599" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[71]_i_1__7 
@@ -24572,6 +24799,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state_0[38]),
         .I2(Q[39]),
         .O(\state_out_reg[127] [13]));
+  (* SOFT_HLUTNM = "soft_lutpair600" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[72]_i_1__7 
@@ -24579,6 +24807,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state_0[39]),
         .I2(Q[40]),
         .O(\state_out_reg[127] [14]));
+  (* SOFT_HLUTNM = "soft_lutpair601" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[73]_i_1__7 
@@ -24586,6 +24815,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state_0[40]),
         .I2(Q[41]),
         .O(\state_out_reg[127] [15]));
+  (* SOFT_HLUTNM = "soft_lutpair602" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[74]_i_1__7 
@@ -24593,6 +24823,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state_0[41]),
         .I2(Q[42]),
         .O(\state_out_reg[127] [16]));
+  (* SOFT_HLUTNM = "soft_lutpair603" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[75]_i_1__7 
@@ -24600,6 +24831,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state_0[42]),
         .I2(Q[43]),
         .O(\state_out_reg[127] [17]));
+  (* SOFT_HLUTNM = "soft_lutpair604" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[76]_i_1__7 
@@ -24607,6 +24839,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state_0[43]),
         .I2(Q[44]),
         .O(\state_out_reg[127] [18]));
+  (* SOFT_HLUTNM = "soft_lutpair605" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[77]_i_1__7 
@@ -24614,6 +24847,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state_0[44]),
         .I2(Q[45]),
         .O(\state_out_reg[127] [19]));
+  (* SOFT_HLUTNM = "soft_lutpair606" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[78]_i_1__7 
@@ -24621,6 +24855,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state_0[45]),
         .I2(Q[46]),
         .O(\state_out_reg[127] [20]));
+  (* SOFT_HLUTNM = "soft_lutpair607" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[79]_i_1__7 
@@ -24628,6 +24863,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state_0[46]),
         .I2(Q[47]),
         .O(\state_out_reg[127] [21]));
+  (* SOFT_HLUTNM = "soft_lutpair565" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[7]_i_1__6 
@@ -24635,6 +24871,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(\state_out_reg[28] [34]),
         .I2(add_const_state[34]),
         .O(D[6]));
+  (* SOFT_HLUTNM = "soft_lutpair608" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[80]_i_1__7 
@@ -24642,6 +24879,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state_0[47]),
         .I2(Q[48]),
         .O(\state_out_reg[127] [22]));
+  (* SOFT_HLUTNM = "soft_lutpair609" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[81]_i_1__7 
@@ -24649,6 +24887,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state_0[48]),
         .I2(Q[49]),
         .O(\state_out_reg[127] [23]));
+  (* SOFT_HLUTNM = "soft_lutpair610" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[82]_i_1__7 
@@ -24656,6 +24895,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state_0[49]),
         .I2(Q[50]),
         .O(\state_out_reg[127] [24]));
+  (* SOFT_HLUTNM = "soft_lutpair611" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[83]_i_1__7 
@@ -24663,6 +24903,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state_0[50]),
         .I2(Q[51]),
         .O(\state_out_reg[127] [25]));
+  (* SOFT_HLUTNM = "soft_lutpair612" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[84]_i_1__7 
@@ -24670,6 +24911,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state_0[51]),
         .I2(Q[52]),
         .O(\state_out_reg[127] [26]));
+  (* SOFT_HLUTNM = "soft_lutpair613" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[85]_i_1__7 
@@ -24677,6 +24919,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state_0[52]),
         .I2(Q[53]),
         .O(\state_out_reg[127] [27]));
+  (* SOFT_HLUTNM = "soft_lutpair614" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[86]_i_1__7 
@@ -24684,6 +24927,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state_0[53]),
         .I2(Q[54]),
         .O(\state_out_reg[127] [28]));
+  (* SOFT_HLUTNM = "soft_lutpair615" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[87]_i_1__7 
@@ -24691,6 +24935,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state_0[54]),
         .I2(Q[55]),
         .O(\state_out_reg[127] [29]));
+  (* SOFT_HLUTNM = "soft_lutpair616" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[88]_i_1__7 
@@ -24698,6 +24943,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state_0[55]),
         .I2(Q[56]),
         .O(\state_out_reg[127] [30]));
+  (* SOFT_HLUTNM = "soft_lutpair617" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[89]_i_1__7 
@@ -24705,6 +24951,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state_0[56]),
         .I2(Q[57]),
         .O(\state_out_reg[127] [31]));
+  (* SOFT_HLUTNM = "soft_lutpair566" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[8]_i_1__6 
@@ -24712,6 +24959,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(\state_out_reg[28] [35]),
         .I2(add_const_state[35]),
         .O(D[7]));
+  (* SOFT_HLUTNM = "soft_lutpair618" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[90]_i_1__7 
@@ -24719,6 +24967,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state_0[57]),
         .I2(Q[58]),
         .O(\state_out_reg[127] [32]));
+  (* SOFT_HLUTNM = "soft_lutpair619" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[91]_i_1__7 
@@ -24726,6 +24975,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state_0[58]),
         .I2(Q[59]),
         .O(\state_out_reg[127] [33]));
+  (* SOFT_HLUTNM = "soft_lutpair620" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[92]_i_1__7 
@@ -24733,6 +24983,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state_0[59]),
         .I2(Q[60]),
         .O(\state_out_reg[127] [34]));
+  (* SOFT_HLUTNM = "soft_lutpair590" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[93]_i_1__7 
@@ -24740,6 +24991,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state_0[60]),
         .I2(Q[61]),
         .O(\state_out_reg[127] [35]));
+  (* SOFT_HLUTNM = "soft_lutpair591" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[94]_i_1__7 
@@ -24747,6 +24999,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state_0[61]),
         .I2(Q[62]),
         .O(\state_out_reg[127] [36]));
+  (* SOFT_HLUTNM = "soft_lutpair592" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[95]_i_1__7 
@@ -24754,6 +25007,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(add_const_state_0[62]),
         .I2(Q[63]),
         .O(\state_out_reg[127] [37]));
+  (* SOFT_HLUTNM = "soft_lutpair621" *) 
   LUT3 #(
     .INIT(8'hA9)) 
     \state_out[96]_i_1__7 
@@ -24761,6 +25015,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(Q[0]),
         .I2(\state_out_reg[96] ),
         .O(\state_out_reg[127] [38]));
+  (* SOFT_HLUTNM = "soft_lutpair593" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[97]_i_1__7 
@@ -24768,6 +25023,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(Q[1]),
         .I2(add_const_state_0[0]),
         .O(\state_out_reg[127] [39]));
+  (* SOFT_HLUTNM = "soft_lutpair594" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[98]_i_1__7 
@@ -24775,6 +25031,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(Q[2]),
         .I2(add_const_state_0[1]),
         .O(\state_out_reg[127] [40]));
+  (* SOFT_HLUTNM = "soft_lutpair595" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[99]_i_1__7 
@@ -24782,6 +25039,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_11
         .I1(Q[3]),
         .I2(add_const_state_0[2]),
         .O(\state_out_reg[127] [41]));
+  (* SOFT_HLUTNM = "soft_lutpair567" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[9]_i_1__6 
@@ -24816,6 +25074,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
   wire [69:0]\state_out_reg[127] ;
   wire [63:0]\state_out_reg[31] ;
 
+  (* SOFT_HLUTNM = "soft_lutpair533" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[100]_i_1__6 
@@ -24823,6 +25082,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(\state_out_reg[31] [4]),
         .I2(add_const_state_0[3]),
         .O(\state_out_reg[127] [42]));
+  (* SOFT_HLUTNM = "soft_lutpair534" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[101]_i_1__6 
@@ -24830,6 +25090,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(\state_out_reg[31] [5]),
         .I2(add_const_state_0[4]),
         .O(\state_out_reg[127] [43]));
+  (* SOFT_HLUTNM = "soft_lutpair535" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[102]_i_1__6 
@@ -24837,6 +25098,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(\state_out_reg[31] [6]),
         .I2(add_const_state_0[5]),
         .O(\state_out_reg[127] [44]));
+  (* SOFT_HLUTNM = "soft_lutpair536" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[103]_i_1__6 
@@ -24844,6 +25106,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(\state_out_reg[31] [7]),
         .I2(add_const_state_0[6]),
         .O(\state_out_reg[127] [45]));
+  (* SOFT_HLUTNM = "soft_lutpair537" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[104]_i_1__6 
@@ -24851,6 +25114,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(\state_out_reg[31] [8]),
         .I2(add_const_state_0[7]),
         .O(\state_out_reg[127] [46]));
+  (* SOFT_HLUTNM = "soft_lutpair538" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[105]_i_1__6 
@@ -24858,6 +25122,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(\state_out_reg[31] [9]),
         .I2(add_const_state_0[8]),
         .O(\state_out_reg[127] [47]));
+  (* SOFT_HLUTNM = "soft_lutpair539" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[106]_i_1__6 
@@ -24865,6 +25130,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(\state_out_reg[31] [10]),
         .I2(add_const_state_0[9]),
         .O(\state_out_reg[127] [48]));
+  (* SOFT_HLUTNM = "soft_lutpair540" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[107]_i_1__6 
@@ -24872,6 +25138,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(\state_out_reg[31] [11]),
         .I2(add_const_state_0[10]),
         .O(\state_out_reg[127] [49]));
+  (* SOFT_HLUTNM = "soft_lutpair541" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[108]_i_1__6 
@@ -24879,6 +25146,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(\state_out_reg[31] [12]),
         .I2(add_const_state_0[11]),
         .O(\state_out_reg[127] [50]));
+  (* SOFT_HLUTNM = "soft_lutpair542" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[109]_i_1__6 
@@ -24886,6 +25154,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(\state_out_reg[31] [13]),
         .I2(add_const_state_0[12]),
         .O(\state_out_reg[127] [51]));
+  (* SOFT_HLUTNM = "soft_lutpair504" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[10]_i_1__5 
@@ -24893,6 +25162,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(Q[36]),
         .I2(add_const_state[36]),
         .O(D[8]));
+  (* SOFT_HLUTNM = "soft_lutpair543" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[110]_i_1__6 
@@ -24900,6 +25170,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(\state_out_reg[31] [14]),
         .I2(add_const_state_0[13]),
         .O(\state_out_reg[127] [52]));
+  (* SOFT_HLUTNM = "soft_lutpair544" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[111]_i_1__6 
@@ -24907,6 +25178,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(\state_out_reg[31] [15]),
         .I2(add_const_state_0[14]),
         .O(\state_out_reg[127] [53]));
+  (* SOFT_HLUTNM = "soft_lutpair545" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[112]_i_1__6 
@@ -24914,6 +25186,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(\state_out_reg[31] [16]),
         .I2(add_const_state_0[15]),
         .O(\state_out_reg[127] [54]));
+  (* SOFT_HLUTNM = "soft_lutpair546" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[113]_i_1__6 
@@ -24921,6 +25194,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(\state_out_reg[31] [17]),
         .I2(add_const_state_0[16]),
         .O(\state_out_reg[127] [55]));
+  (* SOFT_HLUTNM = "soft_lutpair547" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[114]_i_1__6 
@@ -24928,6 +25202,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(\state_out_reg[31] [18]),
         .I2(add_const_state_0[17]),
         .O(\state_out_reg[127] [56]));
+  (* SOFT_HLUTNM = "soft_lutpair548" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[115]_i_1__6 
@@ -24935,6 +25210,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(\state_out_reg[31] [19]),
         .I2(add_const_state_0[18]),
         .O(\state_out_reg[127] [57]));
+  (* SOFT_HLUTNM = "soft_lutpair549" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[116]_i_1__6 
@@ -24942,6 +25218,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(\state_out_reg[31] [20]),
         .I2(add_const_state_0[19]),
         .O(\state_out_reg[127] [58]));
+  (* SOFT_HLUTNM = "soft_lutpair550" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[117]_i_1__6 
@@ -24949,6 +25226,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(\state_out_reg[31] [21]),
         .I2(add_const_state_0[20]),
         .O(\state_out_reg[127] [59]));
+  (* SOFT_HLUTNM = "soft_lutpair551" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[118]_i_1__6 
@@ -24956,6 +25234,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(\state_out_reg[31] [22]),
         .I2(add_const_state_0[21]),
         .O(\state_out_reg[127] [60]));
+  (* SOFT_HLUTNM = "soft_lutpair552" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[119]_i_1__6 
@@ -24963,6 +25242,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(\state_out_reg[31] [23]),
         .I2(add_const_state_0[22]),
         .O(\state_out_reg[127] [61]));
+  (* SOFT_HLUTNM = "soft_lutpair505" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[11]_i_1__5 
@@ -24970,6 +25250,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(Q[37]),
         .I2(add_const_state[37]),
         .O(D[9]));
+  (* SOFT_HLUTNM = "soft_lutpair553" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[120]_i_1__6 
@@ -24977,6 +25258,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(\state_out_reg[31] [24]),
         .I2(add_const_state_0[23]),
         .O(\state_out_reg[127] [62]));
+  (* SOFT_HLUTNM = "soft_lutpair554" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[121]_i_1__6 
@@ -24984,6 +25266,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(\state_out_reg[31] [25]),
         .I2(add_const_state_0[24]),
         .O(\state_out_reg[127] [63]));
+  (* SOFT_HLUTNM = "soft_lutpair555" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[122]_i_1__6 
@@ -24991,6 +25274,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(\state_out_reg[31] [26]),
         .I2(add_const_state_0[25]),
         .O(\state_out_reg[127] [64]));
+  (* SOFT_HLUTNM = "soft_lutpair556" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[123]_i_1__6 
@@ -24998,6 +25282,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(\state_out_reg[31] [27]),
         .I2(add_const_state_0[26]),
         .O(\state_out_reg[127] [65]));
+  (* SOFT_HLUTNM = "soft_lutpair557" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[124]_i_1__6 
@@ -25005,6 +25290,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(\state_out_reg[31] [28]),
         .I2(add_const_state_0[27]),
         .O(\state_out_reg[127] [66]));
+  (* SOFT_HLUTNM = "soft_lutpair524" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[125]_i_1__6 
@@ -25012,6 +25298,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(\state_out_reg[31] [29]),
         .I2(add_const_state_0[28]),
         .O(\state_out_reg[127] [67]));
+  (* SOFT_HLUTNM = "soft_lutpair525" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[126]_i_1__6 
@@ -25019,6 +25306,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(\state_out_reg[31] [30]),
         .I2(add_const_state_0[29]),
         .O(\state_out_reg[127] [68]));
+  (* SOFT_HLUTNM = "soft_lutpair526" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[127]_i_1__6 
@@ -25026,6 +25314,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(\state_out_reg[31] [31]),
         .I2(add_const_state_0[30]),
         .O(\state_out_reg[127] [69]));
+  (* SOFT_HLUTNM = "soft_lutpair506" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[12]_i_1__5 
@@ -25033,6 +25322,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(Q[38]),
         .I2(add_const_state[38]),
         .O(D[10]));
+  (* SOFT_HLUTNM = "soft_lutpair507" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[13]_i_1__5 
@@ -25040,6 +25330,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(Q[39]),
         .I2(add_const_state[39]),
         .O(D[11]));
+  (* SOFT_HLUTNM = "soft_lutpair508" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[14]_i_1__5 
@@ -25047,6 +25338,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(Q[40]),
         .I2(add_const_state[40]),
         .O(D[12]));
+  (* SOFT_HLUTNM = "soft_lutpair509" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[15]_i_1__5 
@@ -25054,6 +25346,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(Q[41]),
         .I2(add_const_state[41]),
         .O(D[13]));
+  (* SOFT_HLUTNM = "soft_lutpair510" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[16]_i_1__5 
@@ -25061,6 +25354,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(Q[42]),
         .I2(add_const_state[42]),
         .O(D[14]));
+  (* SOFT_HLUTNM = "soft_lutpair511" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[17]_i_1__5 
@@ -25068,6 +25362,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(Q[43]),
         .I2(add_const_state[43]),
         .O(D[15]));
+  (* SOFT_HLUTNM = "soft_lutpair512" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[18]_i_1__5 
@@ -25075,6 +25370,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(Q[44]),
         .I2(add_const_state[44]),
         .O(D[16]));
+  (* SOFT_HLUTNM = "soft_lutpair513" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[19]_i_1__5 
@@ -25082,6 +25378,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(Q[45]),
         .I2(add_const_state[45]),
         .O(D[17]));
+  (* SOFT_HLUTNM = "soft_lutpair514" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[20]_i_1__5 
@@ -25089,6 +25386,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(Q[46]),
         .I2(add_const_state[46]),
         .O(D[18]));
+  (* SOFT_HLUTNM = "soft_lutpair515" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[21]_i_1__5 
@@ -25096,6 +25394,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(Q[47]),
         .I2(add_const_state[47]),
         .O(D[19]));
+  (* SOFT_HLUTNM = "soft_lutpair516" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[22]_i_1__5 
@@ -25103,6 +25402,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(Q[48]),
         .I2(add_const_state[48]),
         .O(D[20]));
+  (* SOFT_HLUTNM = "soft_lutpair517" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[23]_i_1__5 
@@ -25110,6 +25410,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(Q[49]),
         .I2(add_const_state[49]),
         .O(D[21]));
+  (* SOFT_HLUTNM = "soft_lutpair518" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[24]_i_1__5 
@@ -25117,6 +25418,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(Q[50]),
         .I2(add_const_state[50]),
         .O(D[22]));
+  (* SOFT_HLUTNM = "soft_lutpair519" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[25]_i_1__5 
@@ -25124,6 +25426,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(Q[51]),
         .I2(add_const_state[51]),
         .O(D[23]));
+  (* SOFT_HLUTNM = "soft_lutpair520" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[26]_i_1__5 
@@ -25131,6 +25434,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(Q[52]),
         .I2(add_const_state[52]),
         .O(D[24]));
+  (* SOFT_HLUTNM = "soft_lutpair521" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[27]_i_1__5 
@@ -25138,6 +25442,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(Q[53]),
         .I2(add_const_state[53]),
         .O(D[25]));
+  (* SOFT_HLUTNM = "soft_lutpair522" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[28]_i_1__5 
@@ -25145,6 +25450,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(Q[54]),
         .I2(add_const_state[54]),
         .O(D[26]));
+  (* SOFT_HLUTNM = "soft_lutpair523" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[29]_i_1__5 
@@ -25152,6 +25458,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(Q[55]),
         .I2(add_const_state[55]),
         .O(D[27]));
+  (* SOFT_HLUTNM = "soft_lutpair524" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[29]_i_1__6 
@@ -25159,6 +25466,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(\state_out_reg[31] [61]),
         .I2(add_const_state_0[60]),
         .O(\state_out_reg[127] [0]));
+  (* SOFT_HLUTNM = "soft_lutpair496" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[2]_i_1__4 
@@ -25166,6 +25474,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(Q[28]),
         .I2(add_const_state[28]),
         .O(D[0]));
+  (* SOFT_HLUTNM = "soft_lutpair525" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[30]_i_1__6 
@@ -25173,6 +25482,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(\state_out_reg[31] [62]),
         .I2(add_const_state_0[61]),
         .O(\state_out_reg[127] [1]));
+  (* SOFT_HLUTNM = "soft_lutpair526" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[31]_i_1__6 
@@ -25180,6 +25490,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(\state_out_reg[31] [63]),
         .I2(add_const_state_0[62]),
         .O(\state_out_reg[127] [2]));
+  (* SOFT_HLUTNM = "soft_lutpair558" *) 
   LUT3 #(
     .INIT(8'h6A)) 
     \state_out[32]_i_1__6 
@@ -25187,6 +25498,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(CO),
         .I2(\state_out_reg[31] [0]),
         .O(\state_out_reg[127] [3]));
+  (* SOFT_HLUTNM = "soft_lutpair496" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[34]_i_1__5 
@@ -25194,6 +25506,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state[0]),
         .I2(Q[0]),
         .O(D[28]));
+  (* SOFT_HLUTNM = "soft_lutpair497" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[35]_i_1__5 
@@ -25201,6 +25514,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state[1]),
         .I2(Q[1]),
         .O(D[29]));
+  (* SOFT_HLUTNM = "soft_lutpair498" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[36]_i_1__5 
@@ -25208,6 +25522,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state[2]),
         .I2(Q[2]),
         .O(D[30]));
+  (* SOFT_HLUTNM = "soft_lutpair499" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[37]_i_1__5 
@@ -25215,6 +25530,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state[3]),
         .I2(Q[3]),
         .O(D[31]));
+  (* SOFT_HLUTNM = "soft_lutpair500" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[38]_i_1__5 
@@ -25222,6 +25538,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state[4]),
         .I2(Q[4]),
         .O(D[32]));
+  (* SOFT_HLUTNM = "soft_lutpair501" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[39]_i_1__5 
@@ -25229,6 +25546,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state[5]),
         .I2(Q[5]),
         .O(D[33]));
+  (* SOFT_HLUTNM = "soft_lutpair497" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[3]_i_1__5 
@@ -25236,6 +25554,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(Q[29]),
         .I2(add_const_state[29]),
         .O(D[1]));
+  (* SOFT_HLUTNM = "soft_lutpair502" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[40]_i_1__5 
@@ -25243,6 +25562,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state[6]),
         .I2(Q[6]),
         .O(D[34]));
+  (* SOFT_HLUTNM = "soft_lutpair503" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[41]_i_1__5 
@@ -25250,6 +25570,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state[7]),
         .I2(Q[7]),
         .O(D[35]));
+  (* SOFT_HLUTNM = "soft_lutpair504" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[42]_i_1__5 
@@ -25257,6 +25578,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state[8]),
         .I2(Q[8]),
         .O(D[36]));
+  (* SOFT_HLUTNM = "soft_lutpair505" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[43]_i_1__5 
@@ -25264,6 +25586,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state[9]),
         .I2(Q[9]),
         .O(D[37]));
+  (* SOFT_HLUTNM = "soft_lutpair506" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[44]_i_1__5 
@@ -25271,6 +25594,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state[10]),
         .I2(Q[10]),
         .O(D[38]));
+  (* SOFT_HLUTNM = "soft_lutpair507" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[45]_i_1__5 
@@ -25278,6 +25602,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state[11]),
         .I2(Q[11]),
         .O(D[39]));
+  (* SOFT_HLUTNM = "soft_lutpair508" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[46]_i_1__5 
@@ -25285,6 +25610,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state[12]),
         .I2(Q[12]),
         .O(D[40]));
+  (* SOFT_HLUTNM = "soft_lutpair509" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[47]_i_1__5 
@@ -25292,6 +25618,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state[13]),
         .I2(Q[13]),
         .O(D[41]));
+  (* SOFT_HLUTNM = "soft_lutpair510" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[48]_i_1__5 
@@ -25299,6 +25626,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state[14]),
         .I2(Q[14]),
         .O(D[42]));
+  (* SOFT_HLUTNM = "soft_lutpair511" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[49]_i_1__5 
@@ -25306,6 +25634,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state[15]),
         .I2(Q[15]),
         .O(D[43]));
+  (* SOFT_HLUTNM = "soft_lutpair498" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[4]_i_1__4 
@@ -25313,6 +25642,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(Q[30]),
         .I2(add_const_state[30]),
         .O(D[2]));
+  (* SOFT_HLUTNM = "soft_lutpair512" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[50]_i_1__5 
@@ -25320,6 +25650,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state[16]),
         .I2(Q[16]),
         .O(D[44]));
+  (* SOFT_HLUTNM = "soft_lutpair513" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[51]_i_1__5 
@@ -25327,6 +25658,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state[17]),
         .I2(Q[17]),
         .O(D[45]));
+  (* SOFT_HLUTNM = "soft_lutpair514" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[52]_i_1__5 
@@ -25334,6 +25666,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state[18]),
         .I2(Q[18]),
         .O(D[46]));
+  (* SOFT_HLUTNM = "soft_lutpair515" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[53]_i_1__5 
@@ -25341,6 +25674,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state[19]),
         .I2(Q[19]),
         .O(D[47]));
+  (* SOFT_HLUTNM = "soft_lutpair516" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[54]_i_1__5 
@@ -25348,6 +25682,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state[20]),
         .I2(Q[20]),
         .O(D[48]));
+  (* SOFT_HLUTNM = "soft_lutpair517" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[55]_i_1__5 
@@ -25355,6 +25690,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state[21]),
         .I2(Q[21]),
         .O(D[49]));
+  (* SOFT_HLUTNM = "soft_lutpair518" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[56]_i_1__5 
@@ -25362,6 +25698,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state[22]),
         .I2(Q[22]),
         .O(D[50]));
+  (* SOFT_HLUTNM = "soft_lutpair519" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[57]_i_1__5 
@@ -25369,6 +25706,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state[23]),
         .I2(Q[23]),
         .O(D[51]));
+  (* SOFT_HLUTNM = "soft_lutpair520" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[58]_i_1__5 
@@ -25376,6 +25714,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state[24]),
         .I2(Q[24]),
         .O(D[52]));
+  (* SOFT_HLUTNM = "soft_lutpair521" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[59]_i_1__5 
@@ -25383,6 +25722,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state[25]),
         .I2(Q[25]),
         .O(D[53]));
+  (* SOFT_HLUTNM = "soft_lutpair499" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[5]_i_1__5 
@@ -25390,6 +25730,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(Q[31]),
         .I2(add_const_state[31]),
         .O(D[3]));
+  (* SOFT_HLUTNM = "soft_lutpair522" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[60]_i_1__5 
@@ -25397,6 +25738,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state[26]),
         .I2(Q[26]),
         .O(D[54]));
+  (* SOFT_HLUTNM = "soft_lutpair523" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[61]_i_1__5 
@@ -25404,6 +25746,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state[27]),
         .I2(Q[27]),
         .O(D[55]));
+  (* SOFT_HLUTNM = "soft_lutpair527" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[61]_i_1__6 
@@ -25411,6 +25754,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state_0[28]),
         .I2(\state_out_reg[31] [29]),
         .O(\state_out_reg[127] [4]));
+  (* SOFT_HLUTNM = "soft_lutpair528" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[62]_i_1__6 
@@ -25418,6 +25762,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state_0[29]),
         .I2(\state_out_reg[31] [30]),
         .O(\state_out_reg[127] [5]));
+  (* SOFT_HLUTNM = "soft_lutpair529" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[63]_i_1__6 
@@ -25425,6 +25770,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state_0[30]),
         .I2(\state_out_reg[31] [31]),
         .O(\state_out_reg[127] [6]));
+  (* SOFT_HLUTNM = "soft_lutpair530" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[65]_i_1__6 
@@ -25432,6 +25778,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state_0[32]),
         .I2(\state_out_reg[31] [33]),
         .O(\state_out_reg[127] [7]));
+  (* SOFT_HLUTNM = "soft_lutpair531" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[66]_i_1__6 
@@ -25439,6 +25786,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state_0[33]),
         .I2(\state_out_reg[31] [34]),
         .O(\state_out_reg[127] [8]));
+  (* SOFT_HLUTNM = "soft_lutpair532" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[67]_i_1__6 
@@ -25446,6 +25794,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state_0[34]),
         .I2(\state_out_reg[31] [35]),
         .O(\state_out_reg[127] [9]));
+  (* SOFT_HLUTNM = "soft_lutpair533" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[68]_i_1__6 
@@ -25453,6 +25802,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state_0[35]),
         .I2(\state_out_reg[31] [36]),
         .O(\state_out_reg[127] [10]));
+  (* SOFT_HLUTNM = "soft_lutpair534" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[69]_i_1__6 
@@ -25460,6 +25810,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state_0[36]),
         .I2(\state_out_reg[31] [37]),
         .O(\state_out_reg[127] [11]));
+  (* SOFT_HLUTNM = "soft_lutpair500" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[6]_i_1__5 
@@ -25467,6 +25818,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(Q[32]),
         .I2(add_const_state[32]),
         .O(D[4]));
+  (* SOFT_HLUTNM = "soft_lutpair535" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[70]_i_1__6 
@@ -25474,6 +25826,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state_0[37]),
         .I2(\state_out_reg[31] [38]),
         .O(\state_out_reg[127] [12]));
+  (* SOFT_HLUTNM = "soft_lutpair536" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[71]_i_1__6 
@@ -25481,6 +25834,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state_0[38]),
         .I2(\state_out_reg[31] [39]),
         .O(\state_out_reg[127] [13]));
+  (* SOFT_HLUTNM = "soft_lutpair537" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[72]_i_1__6 
@@ -25488,6 +25842,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state_0[39]),
         .I2(\state_out_reg[31] [40]),
         .O(\state_out_reg[127] [14]));
+  (* SOFT_HLUTNM = "soft_lutpair538" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[73]_i_1__6 
@@ -25495,6 +25850,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state_0[40]),
         .I2(\state_out_reg[31] [41]),
         .O(\state_out_reg[127] [15]));
+  (* SOFT_HLUTNM = "soft_lutpair539" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[74]_i_1__6 
@@ -25502,6 +25858,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state_0[41]),
         .I2(\state_out_reg[31] [42]),
         .O(\state_out_reg[127] [16]));
+  (* SOFT_HLUTNM = "soft_lutpair540" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[75]_i_1__6 
@@ -25509,6 +25866,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state_0[42]),
         .I2(\state_out_reg[31] [43]),
         .O(\state_out_reg[127] [17]));
+  (* SOFT_HLUTNM = "soft_lutpair541" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[76]_i_1__6 
@@ -25516,6 +25874,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state_0[43]),
         .I2(\state_out_reg[31] [44]),
         .O(\state_out_reg[127] [18]));
+  (* SOFT_HLUTNM = "soft_lutpair542" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[77]_i_1__6 
@@ -25523,6 +25882,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state_0[44]),
         .I2(\state_out_reg[31] [45]),
         .O(\state_out_reg[127] [19]));
+  (* SOFT_HLUTNM = "soft_lutpair543" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[78]_i_1__6 
@@ -25530,6 +25890,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state_0[45]),
         .I2(\state_out_reg[31] [46]),
         .O(\state_out_reg[127] [20]));
+  (* SOFT_HLUTNM = "soft_lutpair544" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[79]_i_1__6 
@@ -25537,6 +25898,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state_0[46]),
         .I2(\state_out_reg[31] [47]),
         .O(\state_out_reg[127] [21]));
+  (* SOFT_HLUTNM = "soft_lutpair501" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[7]_i_1__5 
@@ -25544,6 +25906,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(Q[33]),
         .I2(add_const_state[33]),
         .O(D[5]));
+  (* SOFT_HLUTNM = "soft_lutpair545" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[80]_i_1__6 
@@ -25551,6 +25914,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state_0[47]),
         .I2(\state_out_reg[31] [48]),
         .O(\state_out_reg[127] [22]));
+  (* SOFT_HLUTNM = "soft_lutpair546" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[81]_i_1__6 
@@ -25558,6 +25922,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state_0[48]),
         .I2(\state_out_reg[31] [49]),
         .O(\state_out_reg[127] [23]));
+  (* SOFT_HLUTNM = "soft_lutpair547" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[82]_i_1__6 
@@ -25565,6 +25930,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state_0[49]),
         .I2(\state_out_reg[31] [50]),
         .O(\state_out_reg[127] [24]));
+  (* SOFT_HLUTNM = "soft_lutpair548" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[83]_i_1__6 
@@ -25572,6 +25938,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state_0[50]),
         .I2(\state_out_reg[31] [51]),
         .O(\state_out_reg[127] [25]));
+  (* SOFT_HLUTNM = "soft_lutpair549" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[84]_i_1__6 
@@ -25579,6 +25946,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state_0[51]),
         .I2(\state_out_reg[31] [52]),
         .O(\state_out_reg[127] [26]));
+  (* SOFT_HLUTNM = "soft_lutpair550" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[85]_i_1__6 
@@ -25586,6 +25954,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state_0[52]),
         .I2(\state_out_reg[31] [53]),
         .O(\state_out_reg[127] [27]));
+  (* SOFT_HLUTNM = "soft_lutpair551" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[86]_i_1__6 
@@ -25593,6 +25962,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state_0[53]),
         .I2(\state_out_reg[31] [54]),
         .O(\state_out_reg[127] [28]));
+  (* SOFT_HLUTNM = "soft_lutpair552" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[87]_i_1__6 
@@ -25600,6 +25970,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state_0[54]),
         .I2(\state_out_reg[31] [55]),
         .O(\state_out_reg[127] [29]));
+  (* SOFT_HLUTNM = "soft_lutpair553" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[88]_i_1__6 
@@ -25607,6 +25978,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state_0[55]),
         .I2(\state_out_reg[31] [56]),
         .O(\state_out_reg[127] [30]));
+  (* SOFT_HLUTNM = "soft_lutpair554" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[89]_i_1__6 
@@ -25614,6 +25986,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state_0[56]),
         .I2(\state_out_reg[31] [57]),
         .O(\state_out_reg[127] [31]));
+  (* SOFT_HLUTNM = "soft_lutpair502" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[8]_i_1__5 
@@ -25621,6 +25994,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(Q[34]),
         .I2(add_const_state[34]),
         .O(D[6]));
+  (* SOFT_HLUTNM = "soft_lutpair555" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[90]_i_1__6 
@@ -25628,6 +26002,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state_0[57]),
         .I2(\state_out_reg[31] [58]),
         .O(\state_out_reg[127] [32]));
+  (* SOFT_HLUTNM = "soft_lutpair556" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[91]_i_1__6 
@@ -25635,6 +26010,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state_0[58]),
         .I2(\state_out_reg[31] [59]),
         .O(\state_out_reg[127] [33]));
+  (* SOFT_HLUTNM = "soft_lutpair557" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[92]_i_1__6 
@@ -25642,6 +26018,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state_0[59]),
         .I2(\state_out_reg[31] [60]),
         .O(\state_out_reg[127] [34]));
+  (* SOFT_HLUTNM = "soft_lutpair527" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[93]_i_1__6 
@@ -25649,6 +26026,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state_0[60]),
         .I2(\state_out_reg[31] [61]),
         .O(\state_out_reg[127] [35]));
+  (* SOFT_HLUTNM = "soft_lutpair528" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[94]_i_1__6 
@@ -25656,6 +26034,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state_0[61]),
         .I2(\state_out_reg[31] [62]),
         .O(\state_out_reg[127] [36]));
+  (* SOFT_HLUTNM = "soft_lutpair529" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[95]_i_1__6 
@@ -25663,6 +26042,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(add_const_state_0[62]),
         .I2(\state_out_reg[31] [63]),
         .O(\state_out_reg[127] [37]));
+  (* SOFT_HLUTNM = "soft_lutpair558" *) 
   LUT3 #(
     .INIT(8'hA9)) 
     \state_out[96]_i_1__6 
@@ -25670,6 +26050,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(\state_out_reg[31] [0]),
         .I2(CO),
         .O(\state_out_reg[127] [38]));
+  (* SOFT_HLUTNM = "soft_lutpair530" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[97]_i_1__6 
@@ -25677,6 +26058,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(\state_out_reg[31] [1]),
         .I2(add_const_state_0[0]),
         .O(\state_out_reg[127] [39]));
+  (* SOFT_HLUTNM = "soft_lutpair531" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[98]_i_1__6 
@@ -25684,6 +26066,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(\state_out_reg[31] [2]),
         .I2(add_const_state_0[1]),
         .O(\state_out_reg[127] [40]));
+  (* SOFT_HLUTNM = "soft_lutpair532" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[99]_i_1__6 
@@ -25691,6 +26074,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_13
         .I1(\state_out_reg[31] [3]),
         .I2(add_const_state_0[2]),
         .O(\state_out_reg[127] [41]));
+  (* SOFT_HLUTNM = "soft_lutpair503" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[9]_i_1__5 
@@ -25725,6 +26109,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
   wire [55:0]\state_out_reg[29] ;
   wire [0:0]\state_out_reg[96] ;
 
+  (* SOFT_HLUTNM = "soft_lutpair470" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[100]_i_1__5 
@@ -25732,6 +26117,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(Q[5]),
         .I2(add_const_state_0[2]),
         .O(\state_out_reg[127] [41]));
+  (* SOFT_HLUTNM = "soft_lutpair471" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[101]_i_1__5 
@@ -25739,6 +26125,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(Q[6]),
         .I2(add_const_state_0[3]),
         .O(\state_out_reg[127] [42]));
+  (* SOFT_HLUTNM = "soft_lutpair472" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[102]_i_1__5 
@@ -25746,6 +26133,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(Q[7]),
         .I2(add_const_state_0[4]),
         .O(\state_out_reg[127] [43]));
+  (* SOFT_HLUTNM = "soft_lutpair473" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[103]_i_1__5 
@@ -25753,6 +26141,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(Q[8]),
         .I2(add_const_state_0[5]),
         .O(\state_out_reg[127] [44]));
+  (* SOFT_HLUTNM = "soft_lutpair474" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[104]_i_1__5 
@@ -25760,6 +26149,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(Q[9]),
         .I2(add_const_state_0[6]),
         .O(\state_out_reg[127] [45]));
+  (* SOFT_HLUTNM = "soft_lutpair475" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[105]_i_1__5 
@@ -25767,6 +26157,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(Q[10]),
         .I2(add_const_state_0[7]),
         .O(\state_out_reg[127] [46]));
+  (* SOFT_HLUTNM = "soft_lutpair476" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[106]_i_1__5 
@@ -25774,6 +26165,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(Q[11]),
         .I2(add_const_state_0[8]),
         .O(\state_out_reg[127] [47]));
+  (* SOFT_HLUTNM = "soft_lutpair477" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[107]_i_1__5 
@@ -25781,6 +26173,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(Q[12]),
         .I2(add_const_state_0[9]),
         .O(\state_out_reg[127] [48]));
+  (* SOFT_HLUTNM = "soft_lutpair478" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[108]_i_1__5 
@@ -25788,6 +26181,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(Q[13]),
         .I2(add_const_state_0[10]),
         .O(\state_out_reg[127] [49]));
+  (* SOFT_HLUTNM = "soft_lutpair479" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[109]_i_1__5 
@@ -25795,6 +26189,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(Q[14]),
         .I2(add_const_state_0[11]),
         .O(\state_out_reg[127] [50]));
+  (* SOFT_HLUTNM = "soft_lutpair442" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[10]_i_1__4 
@@ -25802,6 +26197,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(\state_out_reg[29] [36]),
         .I2(add_const_state[36]),
         .O(D[8]));
+  (* SOFT_HLUTNM = "soft_lutpair480" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[110]_i_1__5 
@@ -25809,6 +26205,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(Q[15]),
         .I2(add_const_state_0[12]),
         .O(\state_out_reg[127] [51]));
+  (* SOFT_HLUTNM = "soft_lutpair481" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[111]_i_1__5 
@@ -25816,6 +26213,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(Q[16]),
         .I2(add_const_state_0[13]),
         .O(\state_out_reg[127] [52]));
+  (* SOFT_HLUTNM = "soft_lutpair482" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[112]_i_1__5 
@@ -25823,6 +26221,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(Q[17]),
         .I2(add_const_state_0[14]),
         .O(\state_out_reg[127] [53]));
+  (* SOFT_HLUTNM = "soft_lutpair483" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[113]_i_1__5 
@@ -25830,6 +26229,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(Q[18]),
         .I2(add_const_state_0[15]),
         .O(\state_out_reg[127] [54]));
+  (* SOFT_HLUTNM = "soft_lutpair484" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[114]_i_1__5 
@@ -25837,6 +26237,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(Q[19]),
         .I2(add_const_state_0[16]),
         .O(\state_out_reg[127] [55]));
+  (* SOFT_HLUTNM = "soft_lutpair485" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[115]_i_1__5 
@@ -25844,6 +26245,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(Q[20]),
         .I2(add_const_state_0[17]),
         .O(\state_out_reg[127] [56]));
+  (* SOFT_HLUTNM = "soft_lutpair486" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[116]_i_1__5 
@@ -25851,6 +26253,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(Q[21]),
         .I2(add_const_state_0[18]),
         .O(\state_out_reg[127] [57]));
+  (* SOFT_HLUTNM = "soft_lutpair487" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[117]_i_1__5 
@@ -25858,6 +26261,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(Q[22]),
         .I2(add_const_state_0[19]),
         .O(\state_out_reg[127] [58]));
+  (* SOFT_HLUTNM = "soft_lutpair488" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[118]_i_1__5 
@@ -25865,6 +26269,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(Q[23]),
         .I2(add_const_state_0[20]),
         .O(\state_out_reg[127] [59]));
+  (* SOFT_HLUTNM = "soft_lutpair489" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[119]_i_1__5 
@@ -25872,6 +26277,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(Q[24]),
         .I2(add_const_state_0[21]),
         .O(\state_out_reg[127] [60]));
+  (* SOFT_HLUTNM = "soft_lutpair443" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[11]_i_1__4 
@@ -25879,6 +26285,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(\state_out_reg[29] [37]),
         .I2(add_const_state[37]),
         .O(D[9]));
+  (* SOFT_HLUTNM = "soft_lutpair490" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[120]_i_1__5 
@@ -25886,6 +26293,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(Q[25]),
         .I2(add_const_state_0[22]),
         .O(\state_out_reg[127] [61]));
+  (* SOFT_HLUTNM = "soft_lutpair491" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[121]_i_1__5 
@@ -25893,6 +26301,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(Q[26]),
         .I2(add_const_state_0[23]),
         .O(\state_out_reg[127] [62]));
+  (* SOFT_HLUTNM = "soft_lutpair492" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[122]_i_1__5 
@@ -25900,6 +26309,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(Q[27]),
         .I2(add_const_state_0[24]),
         .O(\state_out_reg[127] [63]));
+  (* SOFT_HLUTNM = "soft_lutpair493" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[123]_i_1__5 
@@ -25907,6 +26317,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(Q[28]),
         .I2(add_const_state_0[25]),
         .O(\state_out_reg[127] [64]));
+  (* SOFT_HLUTNM = "soft_lutpair494" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[124]_i_1__5 
@@ -25914,6 +26325,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(Q[29]),
         .I2(add_const_state_0[26]),
         .O(\state_out_reg[127] [65]));
+  (* SOFT_HLUTNM = "soft_lutpair495" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[125]_i_1__5 
@@ -25921,6 +26333,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(Q[30]),
         .I2(add_const_state_0[27]),
         .O(\state_out_reg[127] [66]));
+  (* SOFT_HLUTNM = "soft_lutpair462" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[126]_i_1__5 
@@ -25928,6 +26341,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(Q[31]),
         .I2(add_const_state_0[28]),
         .O(\state_out_reg[127] [67]));
+  (* SOFT_HLUTNM = "soft_lutpair463" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[127]_i_1__5 
@@ -25935,6 +26349,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(Q[32]),
         .I2(add_const_state_0[29]),
         .O(\state_out_reg[127] [68]));
+  (* SOFT_HLUTNM = "soft_lutpair444" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[12]_i_1__4 
@@ -25942,6 +26357,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(\state_out_reg[29] [38]),
         .I2(add_const_state[38]),
         .O(D[10]));
+  (* SOFT_HLUTNM = "soft_lutpair445" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[13]_i_1__4 
@@ -25949,6 +26365,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(\state_out_reg[29] [39]),
         .I2(add_const_state[39]),
         .O(D[11]));
+  (* SOFT_HLUTNM = "soft_lutpair446" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[14]_i_1__4 
@@ -25956,6 +26373,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(\state_out_reg[29] [40]),
         .I2(add_const_state[40]),
         .O(D[12]));
+  (* SOFT_HLUTNM = "soft_lutpair447" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[15]_i_1__4 
@@ -25963,6 +26381,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(\state_out_reg[29] [41]),
         .I2(add_const_state[41]),
         .O(D[13]));
+  (* SOFT_HLUTNM = "soft_lutpair448" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[16]_i_1__4 
@@ -25970,6 +26389,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(\state_out_reg[29] [42]),
         .I2(add_const_state[42]),
         .O(D[14]));
+  (* SOFT_HLUTNM = "soft_lutpair449" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[17]_i_1__4 
@@ -25977,6 +26397,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(\state_out_reg[29] [43]),
         .I2(add_const_state[43]),
         .O(D[15]));
+  (* SOFT_HLUTNM = "soft_lutpair450" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[18]_i_1__4 
@@ -25984,6 +26405,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(\state_out_reg[29] [44]),
         .I2(add_const_state[44]),
         .O(D[16]));
+  (* SOFT_HLUTNM = "soft_lutpair451" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[19]_i_1__4 
@@ -25991,6 +26413,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(\state_out_reg[29] [45]),
         .I2(add_const_state[45]),
         .O(D[17]));
+  (* SOFT_HLUTNM = "soft_lutpair452" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[20]_i_1__4 
@@ -25998,6 +26421,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(\state_out_reg[29] [46]),
         .I2(add_const_state[46]),
         .O(D[18]));
+  (* SOFT_HLUTNM = "soft_lutpair453" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[21]_i_1__4 
@@ -26005,6 +26429,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(\state_out_reg[29] [47]),
         .I2(add_const_state[47]),
         .O(D[19]));
+  (* SOFT_HLUTNM = "soft_lutpair454" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[22]_i_1__4 
@@ -26012,6 +26437,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(\state_out_reg[29] [48]),
         .I2(add_const_state[48]),
         .O(D[20]));
+  (* SOFT_HLUTNM = "soft_lutpair455" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[23]_i_1__4 
@@ -26019,6 +26445,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(\state_out_reg[29] [49]),
         .I2(add_const_state[49]),
         .O(D[21]));
+  (* SOFT_HLUTNM = "soft_lutpair456" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[24]_i_1__4 
@@ -26026,6 +26453,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(\state_out_reg[29] [50]),
         .I2(add_const_state[50]),
         .O(D[22]));
+  (* SOFT_HLUTNM = "soft_lutpair457" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[25]_i_1__4 
@@ -26033,6 +26461,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(\state_out_reg[29] [51]),
         .I2(add_const_state[51]),
         .O(D[23]));
+  (* SOFT_HLUTNM = "soft_lutpair458" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[26]_i_1__4 
@@ -26040,6 +26469,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(\state_out_reg[29] [52]),
         .I2(add_const_state[52]),
         .O(D[24]));
+  (* SOFT_HLUTNM = "soft_lutpair459" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[27]_i_1__4 
@@ -26047,6 +26477,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(\state_out_reg[29] [53]),
         .I2(add_const_state[53]),
         .O(D[25]));
+  (* SOFT_HLUTNM = "soft_lutpair460" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[28]_i_1__4 
@@ -26054,6 +26485,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(\state_out_reg[29] [54]),
         .I2(add_const_state[54]),
         .O(D[26]));
+  (* SOFT_HLUTNM = "soft_lutpair461" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[29]_i_1__4 
@@ -26061,6 +26493,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(\state_out_reg[29] [55]),
         .I2(add_const_state[55]),
         .O(D[27]));
+  (* SOFT_HLUTNM = "soft_lutpair434" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[2]_i_1__3 
@@ -26068,6 +26501,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(\state_out_reg[29] [28]),
         .I2(add_const_state[28]),
         .O(D[0]));
+  (* SOFT_HLUTNM = "soft_lutpair462" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[30]_i_1__5 
@@ -26075,6 +26509,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(Q[63]),
         .I2(add_const_state_0[60]),
         .O(\state_out_reg[127] [0]));
+  (* SOFT_HLUTNM = "soft_lutpair463" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[31]_i_1__5 
@@ -26082,6 +26517,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(Q[64]),
         .I2(add_const_state_0[61]),
         .O(\state_out_reg[127] [1]));
+  (* SOFT_HLUTNM = "soft_lutpair464" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[32]_i_1__5 
@@ -26089,6 +26525,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(Q[0]),
         .I2(\state_out_reg[96] ),
         .O(\state_out_reg[127] [2]));
+  (* SOFT_HLUTNM = "soft_lutpair467" *) 
   LUT3 #(
     .INIT(8'h6A)) 
     \state_out[33]_i_1__5 
@@ -26096,6 +26533,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(Q[2]),
         .I2(Q[1]),
         .O(\state_out_reg[127] [3]));
+  (* SOFT_HLUTNM = "soft_lutpair434" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[34]_i_1__4 
@@ -26103,6 +26541,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state[0]),
         .I2(\state_out_reg[29] [0]),
         .O(D[28]));
+  (* SOFT_HLUTNM = "soft_lutpair435" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[35]_i_1__4 
@@ -26110,6 +26549,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state[1]),
         .I2(\state_out_reg[29] [1]),
         .O(D[29]));
+  (* SOFT_HLUTNM = "soft_lutpair436" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[36]_i_1__4 
@@ -26117,6 +26557,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state[2]),
         .I2(\state_out_reg[29] [2]),
         .O(D[30]));
+  (* SOFT_HLUTNM = "soft_lutpair437" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[37]_i_1__4 
@@ -26124,6 +26565,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state[3]),
         .I2(\state_out_reg[29] [3]),
         .O(D[31]));
+  (* SOFT_HLUTNM = "soft_lutpair438" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[38]_i_1__4 
@@ -26131,6 +26573,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state[4]),
         .I2(\state_out_reg[29] [4]),
         .O(D[32]));
+  (* SOFT_HLUTNM = "soft_lutpair439" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[39]_i_1__4 
@@ -26138,6 +26581,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state[5]),
         .I2(\state_out_reg[29] [5]),
         .O(D[33]));
+  (* SOFT_HLUTNM = "soft_lutpair435" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[3]_i_1__4 
@@ -26145,6 +26589,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(\state_out_reg[29] [29]),
         .I2(add_const_state[29]),
         .O(D[1]));
+  (* SOFT_HLUTNM = "soft_lutpair440" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[40]_i_1__4 
@@ -26152,6 +26597,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state[6]),
         .I2(\state_out_reg[29] [6]),
         .O(D[34]));
+  (* SOFT_HLUTNM = "soft_lutpair441" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[41]_i_1__4 
@@ -26159,6 +26605,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state[7]),
         .I2(\state_out_reg[29] [7]),
         .O(D[35]));
+  (* SOFT_HLUTNM = "soft_lutpair442" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[42]_i_1__4 
@@ -26166,6 +26613,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state[8]),
         .I2(\state_out_reg[29] [8]),
         .O(D[36]));
+  (* SOFT_HLUTNM = "soft_lutpair443" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[43]_i_1__4 
@@ -26173,6 +26621,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state[9]),
         .I2(\state_out_reg[29] [9]),
         .O(D[37]));
+  (* SOFT_HLUTNM = "soft_lutpair444" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[44]_i_1__4 
@@ -26180,6 +26629,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state[10]),
         .I2(\state_out_reg[29] [10]),
         .O(D[38]));
+  (* SOFT_HLUTNM = "soft_lutpair445" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[45]_i_1__4 
@@ -26187,6 +26637,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state[11]),
         .I2(\state_out_reg[29] [11]),
         .O(D[39]));
+  (* SOFT_HLUTNM = "soft_lutpair446" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[46]_i_1__4 
@@ -26194,6 +26645,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state[12]),
         .I2(\state_out_reg[29] [12]),
         .O(D[40]));
+  (* SOFT_HLUTNM = "soft_lutpair447" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[47]_i_1__4 
@@ -26201,6 +26653,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state[13]),
         .I2(\state_out_reg[29] [13]),
         .O(D[41]));
+  (* SOFT_HLUTNM = "soft_lutpair448" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[48]_i_1__4 
@@ -26208,6 +26661,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state[14]),
         .I2(\state_out_reg[29] [14]),
         .O(D[42]));
+  (* SOFT_HLUTNM = "soft_lutpair449" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[49]_i_1__4 
@@ -26215,6 +26669,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state[15]),
         .I2(\state_out_reg[29] [15]),
         .O(D[43]));
+  (* SOFT_HLUTNM = "soft_lutpair436" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[4]_i_1__3 
@@ -26222,6 +26677,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(\state_out_reg[29] [30]),
         .I2(add_const_state[30]),
         .O(D[2]));
+  (* SOFT_HLUTNM = "soft_lutpair450" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[50]_i_1__4 
@@ -26229,6 +26685,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state[16]),
         .I2(\state_out_reg[29] [16]),
         .O(D[44]));
+  (* SOFT_HLUTNM = "soft_lutpair451" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[51]_i_1__4 
@@ -26236,6 +26693,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state[17]),
         .I2(\state_out_reg[29] [17]),
         .O(D[45]));
+  (* SOFT_HLUTNM = "soft_lutpair452" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[52]_i_1__4 
@@ -26243,6 +26701,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state[18]),
         .I2(\state_out_reg[29] [18]),
         .O(D[46]));
+  (* SOFT_HLUTNM = "soft_lutpair453" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[53]_i_1__4 
@@ -26250,6 +26709,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state[19]),
         .I2(\state_out_reg[29] [19]),
         .O(D[47]));
+  (* SOFT_HLUTNM = "soft_lutpair454" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[54]_i_1__4 
@@ -26257,6 +26717,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state[20]),
         .I2(\state_out_reg[29] [20]),
         .O(D[48]));
+  (* SOFT_HLUTNM = "soft_lutpair455" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[55]_i_1__4 
@@ -26264,6 +26725,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state[21]),
         .I2(\state_out_reg[29] [21]),
         .O(D[49]));
+  (* SOFT_HLUTNM = "soft_lutpair456" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[56]_i_1__4 
@@ -26271,6 +26733,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state[22]),
         .I2(\state_out_reg[29] [22]),
         .O(D[50]));
+  (* SOFT_HLUTNM = "soft_lutpair457" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[57]_i_1__4 
@@ -26278,6 +26741,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state[23]),
         .I2(\state_out_reg[29] [23]),
         .O(D[51]));
+  (* SOFT_HLUTNM = "soft_lutpair458" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[58]_i_1__4 
@@ -26285,6 +26749,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state[24]),
         .I2(\state_out_reg[29] [24]),
         .O(D[52]));
+  (* SOFT_HLUTNM = "soft_lutpair459" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[59]_i_1__4 
@@ -26292,6 +26757,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state[25]),
         .I2(\state_out_reg[29] [25]),
         .O(D[53]));
+  (* SOFT_HLUTNM = "soft_lutpair437" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[5]_i_1__4 
@@ -26299,6 +26765,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(\state_out_reg[29] [31]),
         .I2(add_const_state[31]),
         .O(D[3]));
+  (* SOFT_HLUTNM = "soft_lutpair460" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[60]_i_1__4 
@@ -26306,6 +26773,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state[26]),
         .I2(\state_out_reg[29] [26]),
         .O(D[54]));
+  (* SOFT_HLUTNM = "soft_lutpair461" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[61]_i_1__4 
@@ -26313,6 +26781,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state[27]),
         .I2(\state_out_reg[29] [27]),
         .O(D[55]));
+  (* SOFT_HLUTNM = "soft_lutpair465" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[62]_i_1__5 
@@ -26320,6 +26789,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state_0[28]),
         .I2(Q[31]),
         .O(\state_out_reg[127] [4]));
+  (* SOFT_HLUTNM = "soft_lutpair466" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[63]_i_1__5 
@@ -26327,6 +26797,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state_0[29]),
         .I2(Q[32]),
         .O(\state_out_reg[127] [5]));
+  (* SOFT_HLUTNM = "soft_lutpair467" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[65]_i_1__5 
@@ -26334,6 +26805,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state_0[31]),
         .I2(Q[34]),
         .O(\state_out_reg[127] [6]));
+  (* SOFT_HLUTNM = "soft_lutpair468" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[66]_i_1__5 
@@ -26341,6 +26813,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state_0[32]),
         .I2(Q[35]),
         .O(\state_out_reg[127] [7]));
+  (* SOFT_HLUTNM = "soft_lutpair469" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[67]_i_1__5 
@@ -26348,6 +26821,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state_0[33]),
         .I2(Q[36]),
         .O(\state_out_reg[127] [8]));
+  (* SOFT_HLUTNM = "soft_lutpair470" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[68]_i_1__5 
@@ -26355,6 +26829,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state_0[34]),
         .I2(Q[37]),
         .O(\state_out_reg[127] [9]));
+  (* SOFT_HLUTNM = "soft_lutpair471" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[69]_i_1__5 
@@ -26362,6 +26837,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state_0[35]),
         .I2(Q[38]),
         .O(\state_out_reg[127] [10]));
+  (* SOFT_HLUTNM = "soft_lutpair438" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[6]_i_1__4 
@@ -26369,6 +26845,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(\state_out_reg[29] [32]),
         .I2(add_const_state[32]),
         .O(D[4]));
+  (* SOFT_HLUTNM = "soft_lutpair472" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[70]_i_1__5 
@@ -26376,6 +26853,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state_0[36]),
         .I2(Q[39]),
         .O(\state_out_reg[127] [11]));
+  (* SOFT_HLUTNM = "soft_lutpair473" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[71]_i_1__5 
@@ -26383,6 +26861,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state_0[37]),
         .I2(Q[40]),
         .O(\state_out_reg[127] [12]));
+  (* SOFT_HLUTNM = "soft_lutpair474" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[72]_i_1__5 
@@ -26390,6 +26869,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state_0[38]),
         .I2(Q[41]),
         .O(\state_out_reg[127] [13]));
+  (* SOFT_HLUTNM = "soft_lutpair475" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[73]_i_1__5 
@@ -26397,6 +26877,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state_0[39]),
         .I2(Q[42]),
         .O(\state_out_reg[127] [14]));
+  (* SOFT_HLUTNM = "soft_lutpair476" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[74]_i_1__5 
@@ -26404,6 +26885,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state_0[40]),
         .I2(Q[43]),
         .O(\state_out_reg[127] [15]));
+  (* SOFT_HLUTNM = "soft_lutpair477" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[75]_i_1__5 
@@ -26411,6 +26893,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state_0[41]),
         .I2(Q[44]),
         .O(\state_out_reg[127] [16]));
+  (* SOFT_HLUTNM = "soft_lutpair478" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[76]_i_1__5 
@@ -26418,6 +26901,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state_0[42]),
         .I2(Q[45]),
         .O(\state_out_reg[127] [17]));
+  (* SOFT_HLUTNM = "soft_lutpair479" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[77]_i_1__5 
@@ -26425,6 +26909,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state_0[43]),
         .I2(Q[46]),
         .O(\state_out_reg[127] [18]));
+  (* SOFT_HLUTNM = "soft_lutpair480" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[78]_i_1__5 
@@ -26432,6 +26917,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state_0[44]),
         .I2(Q[47]),
         .O(\state_out_reg[127] [19]));
+  (* SOFT_HLUTNM = "soft_lutpair481" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[79]_i_1__5 
@@ -26439,6 +26925,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state_0[45]),
         .I2(Q[48]),
         .O(\state_out_reg[127] [20]));
+  (* SOFT_HLUTNM = "soft_lutpair439" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[7]_i_1__4 
@@ -26446,6 +26933,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(\state_out_reg[29] [33]),
         .I2(add_const_state[33]),
         .O(D[5]));
+  (* SOFT_HLUTNM = "soft_lutpair482" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[80]_i_1__5 
@@ -26453,6 +26941,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state_0[46]),
         .I2(Q[49]),
         .O(\state_out_reg[127] [21]));
+  (* SOFT_HLUTNM = "soft_lutpair483" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[81]_i_1__5 
@@ -26460,6 +26949,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state_0[47]),
         .I2(Q[50]),
         .O(\state_out_reg[127] [22]));
+  (* SOFT_HLUTNM = "soft_lutpair484" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[82]_i_1__5 
@@ -26467,6 +26957,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state_0[48]),
         .I2(Q[51]),
         .O(\state_out_reg[127] [23]));
+  (* SOFT_HLUTNM = "soft_lutpair485" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[83]_i_1__5 
@@ -26474,6 +26965,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state_0[49]),
         .I2(Q[52]),
         .O(\state_out_reg[127] [24]));
+  (* SOFT_HLUTNM = "soft_lutpair486" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[84]_i_1__5 
@@ -26481,6 +26973,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state_0[50]),
         .I2(Q[53]),
         .O(\state_out_reg[127] [25]));
+  (* SOFT_HLUTNM = "soft_lutpair487" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[85]_i_1__5 
@@ -26488,6 +26981,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state_0[51]),
         .I2(Q[54]),
         .O(\state_out_reg[127] [26]));
+  (* SOFT_HLUTNM = "soft_lutpair488" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[86]_i_1__5 
@@ -26495,6 +26989,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state_0[52]),
         .I2(Q[55]),
         .O(\state_out_reg[127] [27]));
+  (* SOFT_HLUTNM = "soft_lutpair489" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[87]_i_1__5 
@@ -26502,6 +26997,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state_0[53]),
         .I2(Q[56]),
         .O(\state_out_reg[127] [28]));
+  (* SOFT_HLUTNM = "soft_lutpair490" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[88]_i_1__5 
@@ -26509,6 +27005,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state_0[54]),
         .I2(Q[57]),
         .O(\state_out_reg[127] [29]));
+  (* SOFT_HLUTNM = "soft_lutpair491" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[89]_i_1__5 
@@ -26516,6 +27013,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state_0[55]),
         .I2(Q[58]),
         .O(\state_out_reg[127] [30]));
+  (* SOFT_HLUTNM = "soft_lutpair440" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[8]_i_1__4 
@@ -26523,6 +27021,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(\state_out_reg[29] [34]),
         .I2(add_const_state[34]),
         .O(D[6]));
+  (* SOFT_HLUTNM = "soft_lutpair492" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[90]_i_1__5 
@@ -26530,6 +27029,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state_0[56]),
         .I2(Q[59]),
         .O(\state_out_reg[127] [31]));
+  (* SOFT_HLUTNM = "soft_lutpair493" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[91]_i_1__5 
@@ -26537,6 +27037,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state_0[57]),
         .I2(Q[60]),
         .O(\state_out_reg[127] [32]));
+  (* SOFT_HLUTNM = "soft_lutpair494" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[92]_i_1__5 
@@ -26544,6 +27045,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state_0[58]),
         .I2(Q[61]),
         .O(\state_out_reg[127] [33]));
+  (* SOFT_HLUTNM = "soft_lutpair495" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[93]_i_1__5 
@@ -26551,6 +27053,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state_0[59]),
         .I2(Q[62]),
         .O(\state_out_reg[127] [34]));
+  (* SOFT_HLUTNM = "soft_lutpair465" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[94]_i_1__5 
@@ -26558,6 +27061,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state_0[60]),
         .I2(Q[63]),
         .O(\state_out_reg[127] [35]));
+  (* SOFT_HLUTNM = "soft_lutpair466" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[95]_i_1__5 
@@ -26565,6 +27069,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(add_const_state_0[61]),
         .I2(Q[64]),
         .O(\state_out_reg[127] [36]));
+  (* SOFT_HLUTNM = "soft_lutpair464" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[96]_i_1__5 
@@ -26579,6 +27084,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\state_out_reg[127] [38]));
+  (* SOFT_HLUTNM = "soft_lutpair468" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[98]_i_1__5 
@@ -26586,6 +27092,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(Q[3]),
         .I2(add_const_state_0[0]),
         .O(\state_out_reg[127] [39]));
+  (* SOFT_HLUTNM = "soft_lutpair469" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[99]_i_1__5 
@@ -26593,6 +27100,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_15
         .I1(Q[4]),
         .I2(add_const_state_0[1]),
         .O(\state_out_reg[127] [40]));
+  (* SOFT_HLUTNM = "soft_lutpair441" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[9]_i_1__4 
@@ -26627,6 +27135,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
   wire [68:0]\state_out_reg[127] ;
   wire [64:0]\state_out_reg[31] ;
 
+  (* SOFT_HLUTNM = "soft_lutpair408" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[100]_i_1__4 
@@ -26634,6 +27143,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(\state_out_reg[31] [5]),
         .I2(add_const_state_0[2]),
         .O(\state_out_reg[127] [41]));
+  (* SOFT_HLUTNM = "soft_lutpair409" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[101]_i_1__4 
@@ -26641,6 +27151,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(\state_out_reg[31] [6]),
         .I2(add_const_state_0[3]),
         .O(\state_out_reg[127] [42]));
+  (* SOFT_HLUTNM = "soft_lutpair410" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[102]_i_1__4 
@@ -26648,6 +27159,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(\state_out_reg[31] [7]),
         .I2(add_const_state_0[4]),
         .O(\state_out_reg[127] [43]));
+  (* SOFT_HLUTNM = "soft_lutpair411" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[103]_i_1__4 
@@ -26655,6 +27167,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(\state_out_reg[31] [8]),
         .I2(add_const_state_0[5]),
         .O(\state_out_reg[127] [44]));
+  (* SOFT_HLUTNM = "soft_lutpair412" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[104]_i_1__4 
@@ -26662,6 +27175,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(\state_out_reg[31] [9]),
         .I2(add_const_state_0[6]),
         .O(\state_out_reg[127] [45]));
+  (* SOFT_HLUTNM = "soft_lutpair413" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[105]_i_1__4 
@@ -26669,6 +27183,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(\state_out_reg[31] [10]),
         .I2(add_const_state_0[7]),
         .O(\state_out_reg[127] [46]));
+  (* SOFT_HLUTNM = "soft_lutpair414" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[106]_i_1__4 
@@ -26676,6 +27191,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(\state_out_reg[31] [11]),
         .I2(add_const_state_0[8]),
         .O(\state_out_reg[127] [47]));
+  (* SOFT_HLUTNM = "soft_lutpair415" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[107]_i_1__4 
@@ -26683,6 +27199,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(\state_out_reg[31] [12]),
         .I2(add_const_state_0[9]),
         .O(\state_out_reg[127] [48]));
+  (* SOFT_HLUTNM = "soft_lutpair416" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[108]_i_1__4 
@@ -26690,6 +27207,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(\state_out_reg[31] [13]),
         .I2(add_const_state_0[10]),
         .O(\state_out_reg[127] [49]));
+  (* SOFT_HLUTNM = "soft_lutpair417" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[109]_i_1__4 
@@ -26697,6 +27215,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(\state_out_reg[31] [14]),
         .I2(add_const_state_0[11]),
         .O(\state_out_reg[127] [50]));
+  (* SOFT_HLUTNM = "soft_lutpair381" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[10]_i_1__3 
@@ -26704,6 +27223,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(Q[37]),
         .I2(add_const_state[37]),
         .O(D[9]));
+  (* SOFT_HLUTNM = "soft_lutpair418" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[110]_i_1__4 
@@ -26711,6 +27231,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(\state_out_reg[31] [15]),
         .I2(add_const_state_0[12]),
         .O(\state_out_reg[127] [51]));
+  (* SOFT_HLUTNM = "soft_lutpair419" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[111]_i_1__4 
@@ -26718,6 +27239,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(\state_out_reg[31] [16]),
         .I2(add_const_state_0[13]),
         .O(\state_out_reg[127] [52]));
+  (* SOFT_HLUTNM = "soft_lutpair420" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[112]_i_1__4 
@@ -26725,6 +27247,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(\state_out_reg[31] [17]),
         .I2(add_const_state_0[14]),
         .O(\state_out_reg[127] [53]));
+  (* SOFT_HLUTNM = "soft_lutpair421" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[113]_i_1__4 
@@ -26732,6 +27255,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(\state_out_reg[31] [18]),
         .I2(add_const_state_0[15]),
         .O(\state_out_reg[127] [54]));
+  (* SOFT_HLUTNM = "soft_lutpair422" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[114]_i_1__4 
@@ -26739,6 +27263,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(\state_out_reg[31] [19]),
         .I2(add_const_state_0[16]),
         .O(\state_out_reg[127] [55]));
+  (* SOFT_HLUTNM = "soft_lutpair423" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[115]_i_1__4 
@@ -26746,6 +27271,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(\state_out_reg[31] [20]),
         .I2(add_const_state_0[17]),
         .O(\state_out_reg[127] [56]));
+  (* SOFT_HLUTNM = "soft_lutpair424" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[116]_i_1__4 
@@ -26753,6 +27279,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(\state_out_reg[31] [21]),
         .I2(add_const_state_0[18]),
         .O(\state_out_reg[127] [57]));
+  (* SOFT_HLUTNM = "soft_lutpair425" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[117]_i_1__4 
@@ -26760,6 +27287,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(\state_out_reg[31] [22]),
         .I2(add_const_state_0[19]),
         .O(\state_out_reg[127] [58]));
+  (* SOFT_HLUTNM = "soft_lutpair426" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[118]_i_1__4 
@@ -26767,6 +27295,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(\state_out_reg[31] [23]),
         .I2(add_const_state_0[20]),
         .O(\state_out_reg[127] [59]));
+  (* SOFT_HLUTNM = "soft_lutpair427" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[119]_i_1__4 
@@ -26774,6 +27303,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(\state_out_reg[31] [24]),
         .I2(add_const_state_0[21]),
         .O(\state_out_reg[127] [60]));
+  (* SOFT_HLUTNM = "soft_lutpair382" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[11]_i_1__3 
@@ -26781,6 +27311,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(Q[38]),
         .I2(add_const_state[38]),
         .O(D[10]));
+  (* SOFT_HLUTNM = "soft_lutpair428" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[120]_i_1__4 
@@ -26788,6 +27319,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(\state_out_reg[31] [25]),
         .I2(add_const_state_0[22]),
         .O(\state_out_reg[127] [61]));
+  (* SOFT_HLUTNM = "soft_lutpair429" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[121]_i_1__4 
@@ -26795,6 +27327,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(\state_out_reg[31] [26]),
         .I2(add_const_state_0[23]),
         .O(\state_out_reg[127] [62]));
+  (* SOFT_HLUTNM = "soft_lutpair430" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[122]_i_1__4 
@@ -26802,6 +27335,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(\state_out_reg[31] [27]),
         .I2(add_const_state_0[24]),
         .O(\state_out_reg[127] [63]));
+  (* SOFT_HLUTNM = "soft_lutpair431" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[123]_i_1__4 
@@ -26809,6 +27343,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(\state_out_reg[31] [28]),
         .I2(add_const_state_0[25]),
         .O(\state_out_reg[127] [64]));
+  (* SOFT_HLUTNM = "soft_lutpair432" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[124]_i_1__4 
@@ -26816,6 +27351,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(\state_out_reg[31] [29]),
         .I2(add_const_state_0[26]),
         .O(\state_out_reg[127] [65]));
+  (* SOFT_HLUTNM = "soft_lutpair433" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[125]_i_1__4 
@@ -26823,6 +27359,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(\state_out_reg[31] [30]),
         .I2(add_const_state_0[27]),
         .O(\state_out_reg[127] [66]));
+  (* SOFT_HLUTNM = "soft_lutpair400" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[126]_i_1__4 
@@ -26830,6 +27367,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(\state_out_reg[31] [31]),
         .I2(add_const_state_0[28]),
         .O(\state_out_reg[127] [67]));
+  (* SOFT_HLUTNM = "soft_lutpair401" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[127]_i_1__4 
@@ -26837,6 +27375,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(\state_out_reg[31] [32]),
         .I2(add_const_state_0[29]),
         .O(\state_out_reg[127] [68]));
+  (* SOFT_HLUTNM = "soft_lutpair383" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[12]_i_1__3 
@@ -26844,6 +27383,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(Q[39]),
         .I2(add_const_state[39]),
         .O(D[11]));
+  (* SOFT_HLUTNM = "soft_lutpair384" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[13]_i_1__3 
@@ -26851,6 +27391,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(Q[40]),
         .I2(add_const_state[40]),
         .O(D[12]));
+  (* SOFT_HLUTNM = "soft_lutpair385" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[14]_i_1__3 
@@ -26858,6 +27399,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(Q[41]),
         .I2(add_const_state[41]),
         .O(D[13]));
+  (* SOFT_HLUTNM = "soft_lutpair386" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[15]_i_1__3 
@@ -26865,6 +27407,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(Q[42]),
         .I2(add_const_state[42]),
         .O(D[14]));
+  (* SOFT_HLUTNM = "soft_lutpair387" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[16]_i_1__3 
@@ -26872,6 +27415,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(Q[43]),
         .I2(add_const_state[43]),
         .O(D[15]));
+  (* SOFT_HLUTNM = "soft_lutpair388" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[17]_i_1__3 
@@ -26879,6 +27423,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(Q[44]),
         .I2(add_const_state[44]),
         .O(D[16]));
+  (* SOFT_HLUTNM = "soft_lutpair389" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[18]_i_1__3 
@@ -26886,6 +27431,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(Q[45]),
         .I2(add_const_state[45]),
         .O(D[17]));
+  (* SOFT_HLUTNM = "soft_lutpair390" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[19]_i_1__3 
@@ -26893,6 +27439,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(Q[46]),
         .I2(add_const_state[46]),
         .O(D[18]));
+  (* SOFT_HLUTNM = "soft_lutpair372" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[1]_i_1__3 
@@ -26900,6 +27447,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(Q[28]),
         .I2(add_const_state[28]),
         .O(D[0]));
+  (* SOFT_HLUTNM = "soft_lutpair391" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[20]_i_1__3 
@@ -26907,6 +27455,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(Q[47]),
         .I2(add_const_state[47]),
         .O(D[19]));
+  (* SOFT_HLUTNM = "soft_lutpair392" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[21]_i_1__3 
@@ -26914,6 +27463,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(Q[48]),
         .I2(add_const_state[48]),
         .O(D[20]));
+  (* SOFT_HLUTNM = "soft_lutpair393" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[22]_i_1__3 
@@ -26921,6 +27471,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(Q[49]),
         .I2(add_const_state[49]),
         .O(D[21]));
+  (* SOFT_HLUTNM = "soft_lutpair394" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[23]_i_1__3 
@@ -26928,6 +27479,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(Q[50]),
         .I2(add_const_state[50]),
         .O(D[22]));
+  (* SOFT_HLUTNM = "soft_lutpair395" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[24]_i_1__3 
@@ -26935,6 +27487,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(Q[51]),
         .I2(add_const_state[51]),
         .O(D[23]));
+  (* SOFT_HLUTNM = "soft_lutpair396" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[25]_i_1__3 
@@ -26942,6 +27495,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(Q[52]),
         .I2(add_const_state[52]),
         .O(D[24]));
+  (* SOFT_HLUTNM = "soft_lutpair397" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[26]_i_1__3 
@@ -26949,6 +27503,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(Q[53]),
         .I2(add_const_state[53]),
         .O(D[25]));
+  (* SOFT_HLUTNM = "soft_lutpair398" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[27]_i_1__3 
@@ -26956,6 +27511,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(Q[54]),
         .I2(add_const_state[54]),
         .O(D[26]));
+  (* SOFT_HLUTNM = "soft_lutpair399" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[28]_i_1__3 
@@ -26963,6 +27519,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(Q[55]),
         .I2(add_const_state[55]),
         .O(D[27]));
+  (* SOFT_HLUTNM = "soft_lutpair373" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[2]_i_1__2 
@@ -26970,6 +27527,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(Q[29]),
         .I2(add_const_state[29]),
         .O(D[1]));
+  (* SOFT_HLUTNM = "soft_lutpair400" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[30]_i_1__4 
@@ -26977,6 +27535,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(\state_out_reg[31] [63]),
         .I2(add_const_state_0[60]),
         .O(\state_out_reg[127] [0]));
+  (* SOFT_HLUTNM = "soft_lutpair401" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[31]_i_1__4 
@@ -26984,6 +27543,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(\state_out_reg[31] [64]),
         .I2(add_const_state_0[61]),
         .O(\state_out_reg[127] [1]));
+  (* SOFT_HLUTNM = "soft_lutpair402" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[32]_i_1__4 
@@ -26991,6 +27551,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(\state_out_reg[31] [0]),
         .I2(CO),
         .O(\state_out_reg[127] [2]));
+  (* SOFT_HLUTNM = "soft_lutpair372" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[33]_i_1__3 
@@ -26998,6 +27559,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state[0]),
         .I2(Q[0]),
         .O(D[28]));
+  (* SOFT_HLUTNM = "soft_lutpair405" *) 
   LUT3 #(
     .INIT(8'h6A)) 
     \state_out[33]_i_1__4 
@@ -27005,6 +27567,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(\state_out_reg[31] [2]),
         .I2(\state_out_reg[31] [1]),
         .O(\state_out_reg[127] [3]));
+  (* SOFT_HLUTNM = "soft_lutpair373" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[34]_i_1__3 
@@ -27012,6 +27575,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state[1]),
         .I2(Q[1]),
         .O(D[29]));
+  (* SOFT_HLUTNM = "soft_lutpair374" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[35]_i_1__3 
@@ -27019,6 +27583,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state[2]),
         .I2(Q[2]),
         .O(D[30]));
+  (* SOFT_HLUTNM = "soft_lutpair375" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[36]_i_1__3 
@@ -27026,6 +27591,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state[3]),
         .I2(Q[3]),
         .O(D[31]));
+  (* SOFT_HLUTNM = "soft_lutpair376" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[37]_i_1__3 
@@ -27033,6 +27599,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state[4]),
         .I2(Q[4]),
         .O(D[32]));
+  (* SOFT_HLUTNM = "soft_lutpair377" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[38]_i_1__3 
@@ -27040,6 +27607,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state[5]),
         .I2(Q[5]),
         .O(D[33]));
+  (* SOFT_HLUTNM = "soft_lutpair378" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[39]_i_1__3 
@@ -27047,6 +27615,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state[6]),
         .I2(Q[6]),
         .O(D[34]));
+  (* SOFT_HLUTNM = "soft_lutpair374" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[3]_i_1__3 
@@ -27054,6 +27623,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(Q[30]),
         .I2(add_const_state[30]),
         .O(D[2]));
+  (* SOFT_HLUTNM = "soft_lutpair379" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[40]_i_1__3 
@@ -27061,6 +27631,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state[7]),
         .I2(Q[7]),
         .O(D[35]));
+  (* SOFT_HLUTNM = "soft_lutpair380" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[41]_i_1__3 
@@ -27068,6 +27639,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state[8]),
         .I2(Q[8]),
         .O(D[36]));
+  (* SOFT_HLUTNM = "soft_lutpair381" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[42]_i_1__3 
@@ -27075,6 +27647,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state[9]),
         .I2(Q[9]),
         .O(D[37]));
+  (* SOFT_HLUTNM = "soft_lutpair382" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[43]_i_1__3 
@@ -27082,6 +27655,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state[10]),
         .I2(Q[10]),
         .O(D[38]));
+  (* SOFT_HLUTNM = "soft_lutpair383" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[44]_i_1__3 
@@ -27089,6 +27663,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state[11]),
         .I2(Q[11]),
         .O(D[39]));
+  (* SOFT_HLUTNM = "soft_lutpair384" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[45]_i_1__3 
@@ -27096,6 +27671,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state[12]),
         .I2(Q[12]),
         .O(D[40]));
+  (* SOFT_HLUTNM = "soft_lutpair385" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[46]_i_1__3 
@@ -27103,6 +27679,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state[13]),
         .I2(Q[13]),
         .O(D[41]));
+  (* SOFT_HLUTNM = "soft_lutpair386" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[47]_i_1__3 
@@ -27110,6 +27687,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state[14]),
         .I2(Q[14]),
         .O(D[42]));
+  (* SOFT_HLUTNM = "soft_lutpair387" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[48]_i_1__3 
@@ -27117,6 +27695,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state[15]),
         .I2(Q[15]),
         .O(D[43]));
+  (* SOFT_HLUTNM = "soft_lutpair388" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[49]_i_1__3 
@@ -27124,6 +27703,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state[16]),
         .I2(Q[16]),
         .O(D[44]));
+  (* SOFT_HLUTNM = "soft_lutpair375" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[4]_i_1__2 
@@ -27131,6 +27711,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(Q[31]),
         .I2(add_const_state[31]),
         .O(D[3]));
+  (* SOFT_HLUTNM = "soft_lutpair389" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[50]_i_1__3 
@@ -27138,6 +27719,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state[17]),
         .I2(Q[17]),
         .O(D[45]));
+  (* SOFT_HLUTNM = "soft_lutpair390" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[51]_i_1__3 
@@ -27145,6 +27727,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state[18]),
         .I2(Q[18]),
         .O(D[46]));
+  (* SOFT_HLUTNM = "soft_lutpair391" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[52]_i_1__3 
@@ -27152,6 +27735,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state[19]),
         .I2(Q[19]),
         .O(D[47]));
+  (* SOFT_HLUTNM = "soft_lutpair392" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[53]_i_1__3 
@@ -27159,6 +27743,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state[20]),
         .I2(Q[20]),
         .O(D[48]));
+  (* SOFT_HLUTNM = "soft_lutpair393" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[54]_i_1__3 
@@ -27166,6 +27751,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state[21]),
         .I2(Q[21]),
         .O(D[49]));
+  (* SOFT_HLUTNM = "soft_lutpair394" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[55]_i_1__3 
@@ -27173,6 +27759,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state[22]),
         .I2(Q[22]),
         .O(D[50]));
+  (* SOFT_HLUTNM = "soft_lutpair395" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[56]_i_1__3 
@@ -27180,6 +27767,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state[23]),
         .I2(Q[23]),
         .O(D[51]));
+  (* SOFT_HLUTNM = "soft_lutpair396" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[57]_i_1__3 
@@ -27187,6 +27775,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state[24]),
         .I2(Q[24]),
         .O(D[52]));
+  (* SOFT_HLUTNM = "soft_lutpair397" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[58]_i_1__3 
@@ -27194,6 +27783,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state[25]),
         .I2(Q[25]),
         .O(D[53]));
+  (* SOFT_HLUTNM = "soft_lutpair398" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[59]_i_1__3 
@@ -27201,6 +27791,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state[26]),
         .I2(Q[26]),
         .O(D[54]));
+  (* SOFT_HLUTNM = "soft_lutpair376" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[5]_i_1__3 
@@ -27208,6 +27799,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(Q[32]),
         .I2(add_const_state[32]),
         .O(D[4]));
+  (* SOFT_HLUTNM = "soft_lutpair399" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[60]_i_1__3 
@@ -27215,6 +27807,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state[27]),
         .I2(Q[27]),
         .O(D[55]));
+  (* SOFT_HLUTNM = "soft_lutpair403" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[62]_i_1__4 
@@ -27222,6 +27815,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state_0[28]),
         .I2(\state_out_reg[31] [31]),
         .O(\state_out_reg[127] [4]));
+  (* SOFT_HLUTNM = "soft_lutpair404" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[63]_i_1__4 
@@ -27229,6 +27823,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state_0[29]),
         .I2(\state_out_reg[31] [32]),
         .O(\state_out_reg[127] [5]));
+  (* SOFT_HLUTNM = "soft_lutpair405" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[65]_i_1__4 
@@ -27236,6 +27831,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state_0[31]),
         .I2(\state_out_reg[31] [34]),
         .O(\state_out_reg[127] [6]));
+  (* SOFT_HLUTNM = "soft_lutpair406" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[66]_i_1__4 
@@ -27243,6 +27839,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state_0[32]),
         .I2(\state_out_reg[31] [35]),
         .O(\state_out_reg[127] [7]));
+  (* SOFT_HLUTNM = "soft_lutpair407" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[67]_i_1__4 
@@ -27250,6 +27847,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state_0[33]),
         .I2(\state_out_reg[31] [36]),
         .O(\state_out_reg[127] [8]));
+  (* SOFT_HLUTNM = "soft_lutpair408" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[68]_i_1__4 
@@ -27257,6 +27855,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state_0[34]),
         .I2(\state_out_reg[31] [37]),
         .O(\state_out_reg[127] [9]));
+  (* SOFT_HLUTNM = "soft_lutpair409" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[69]_i_1__4 
@@ -27264,6 +27863,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state_0[35]),
         .I2(\state_out_reg[31] [38]),
         .O(\state_out_reg[127] [10]));
+  (* SOFT_HLUTNM = "soft_lutpair377" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[6]_i_1__3 
@@ -27271,6 +27871,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(Q[33]),
         .I2(add_const_state[33]),
         .O(D[5]));
+  (* SOFT_HLUTNM = "soft_lutpair410" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[70]_i_1__4 
@@ -27278,6 +27879,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state_0[36]),
         .I2(\state_out_reg[31] [39]),
         .O(\state_out_reg[127] [11]));
+  (* SOFT_HLUTNM = "soft_lutpair411" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[71]_i_1__4 
@@ -27285,6 +27887,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state_0[37]),
         .I2(\state_out_reg[31] [40]),
         .O(\state_out_reg[127] [12]));
+  (* SOFT_HLUTNM = "soft_lutpair412" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[72]_i_1__4 
@@ -27292,6 +27895,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state_0[38]),
         .I2(\state_out_reg[31] [41]),
         .O(\state_out_reg[127] [13]));
+  (* SOFT_HLUTNM = "soft_lutpair413" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[73]_i_1__4 
@@ -27299,6 +27903,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state_0[39]),
         .I2(\state_out_reg[31] [42]),
         .O(\state_out_reg[127] [14]));
+  (* SOFT_HLUTNM = "soft_lutpair414" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[74]_i_1__4 
@@ -27306,6 +27911,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state_0[40]),
         .I2(\state_out_reg[31] [43]),
         .O(\state_out_reg[127] [15]));
+  (* SOFT_HLUTNM = "soft_lutpair415" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[75]_i_1__4 
@@ -27313,6 +27919,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state_0[41]),
         .I2(\state_out_reg[31] [44]),
         .O(\state_out_reg[127] [16]));
+  (* SOFT_HLUTNM = "soft_lutpair416" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[76]_i_1__4 
@@ -27320,6 +27927,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state_0[42]),
         .I2(\state_out_reg[31] [45]),
         .O(\state_out_reg[127] [17]));
+  (* SOFT_HLUTNM = "soft_lutpair417" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[77]_i_1__4 
@@ -27327,6 +27935,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state_0[43]),
         .I2(\state_out_reg[31] [46]),
         .O(\state_out_reg[127] [18]));
+  (* SOFT_HLUTNM = "soft_lutpair418" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[78]_i_1__4 
@@ -27334,6 +27943,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state_0[44]),
         .I2(\state_out_reg[31] [47]),
         .O(\state_out_reg[127] [19]));
+  (* SOFT_HLUTNM = "soft_lutpair419" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[79]_i_1__4 
@@ -27341,6 +27951,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state_0[45]),
         .I2(\state_out_reg[31] [48]),
         .O(\state_out_reg[127] [20]));
+  (* SOFT_HLUTNM = "soft_lutpair378" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[7]_i_1__3 
@@ -27348,6 +27959,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(Q[34]),
         .I2(add_const_state[34]),
         .O(D[6]));
+  (* SOFT_HLUTNM = "soft_lutpair420" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[80]_i_1__4 
@@ -27355,6 +27967,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state_0[46]),
         .I2(\state_out_reg[31] [49]),
         .O(\state_out_reg[127] [21]));
+  (* SOFT_HLUTNM = "soft_lutpair421" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[81]_i_1__4 
@@ -27362,6 +27975,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state_0[47]),
         .I2(\state_out_reg[31] [50]),
         .O(\state_out_reg[127] [22]));
+  (* SOFT_HLUTNM = "soft_lutpair422" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[82]_i_1__4 
@@ -27369,6 +27983,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state_0[48]),
         .I2(\state_out_reg[31] [51]),
         .O(\state_out_reg[127] [23]));
+  (* SOFT_HLUTNM = "soft_lutpair423" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[83]_i_1__4 
@@ -27376,6 +27991,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state_0[49]),
         .I2(\state_out_reg[31] [52]),
         .O(\state_out_reg[127] [24]));
+  (* SOFT_HLUTNM = "soft_lutpair424" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[84]_i_1__4 
@@ -27383,6 +27999,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state_0[50]),
         .I2(\state_out_reg[31] [53]),
         .O(\state_out_reg[127] [25]));
+  (* SOFT_HLUTNM = "soft_lutpair425" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[85]_i_1__4 
@@ -27390,6 +28007,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state_0[51]),
         .I2(\state_out_reg[31] [54]),
         .O(\state_out_reg[127] [26]));
+  (* SOFT_HLUTNM = "soft_lutpair426" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[86]_i_1__4 
@@ -27397,6 +28015,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state_0[52]),
         .I2(\state_out_reg[31] [55]),
         .O(\state_out_reg[127] [27]));
+  (* SOFT_HLUTNM = "soft_lutpair427" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[87]_i_1__4 
@@ -27404,6 +28023,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state_0[53]),
         .I2(\state_out_reg[31] [56]),
         .O(\state_out_reg[127] [28]));
+  (* SOFT_HLUTNM = "soft_lutpair428" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[88]_i_1__4 
@@ -27411,6 +28031,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state_0[54]),
         .I2(\state_out_reg[31] [57]),
         .O(\state_out_reg[127] [29]));
+  (* SOFT_HLUTNM = "soft_lutpair429" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[89]_i_1__4 
@@ -27418,6 +28039,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state_0[55]),
         .I2(\state_out_reg[31] [58]),
         .O(\state_out_reg[127] [30]));
+  (* SOFT_HLUTNM = "soft_lutpair379" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[8]_i_1__3 
@@ -27425,6 +28047,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(Q[35]),
         .I2(add_const_state[35]),
         .O(D[7]));
+  (* SOFT_HLUTNM = "soft_lutpair430" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[90]_i_1__4 
@@ -27432,6 +28055,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state_0[56]),
         .I2(\state_out_reg[31] [59]),
         .O(\state_out_reg[127] [31]));
+  (* SOFT_HLUTNM = "soft_lutpair431" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[91]_i_1__4 
@@ -27439,6 +28063,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state_0[57]),
         .I2(\state_out_reg[31] [60]),
         .O(\state_out_reg[127] [32]));
+  (* SOFT_HLUTNM = "soft_lutpair432" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[92]_i_1__4 
@@ -27446,6 +28071,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state_0[58]),
         .I2(\state_out_reg[31] [61]),
         .O(\state_out_reg[127] [33]));
+  (* SOFT_HLUTNM = "soft_lutpair433" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[93]_i_1__4 
@@ -27453,6 +28079,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state_0[59]),
         .I2(\state_out_reg[31] [62]),
         .O(\state_out_reg[127] [34]));
+  (* SOFT_HLUTNM = "soft_lutpair403" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[94]_i_1__4 
@@ -27460,6 +28087,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state_0[60]),
         .I2(\state_out_reg[31] [63]),
         .O(\state_out_reg[127] [35]));
+  (* SOFT_HLUTNM = "soft_lutpair404" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[95]_i_1__4 
@@ -27467,6 +28095,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(add_const_state_0[61]),
         .I2(\state_out_reg[31] [64]),
         .O(\state_out_reg[127] [36]));
+  (* SOFT_HLUTNM = "soft_lutpair402" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[96]_i_1__4 
@@ -27481,6 +28110,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(\state_out_reg[31] [1]),
         .I2(\state_out_reg[31] [2]),
         .O(\state_out_reg[127] [38]));
+  (* SOFT_HLUTNM = "soft_lutpair406" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[98]_i_1__4 
@@ -27488,6 +28118,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(\state_out_reg[31] [3]),
         .I2(add_const_state_0[0]),
         .O(\state_out_reg[127] [39]));
+  (* SOFT_HLUTNM = "soft_lutpair407" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[99]_i_1__4 
@@ -27495,6 +28126,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_17
         .I1(\state_out_reg[31] [4]),
         .I2(add_const_state_0[1]),
         .O(\state_out_reg[127] [40]));
+  (* SOFT_HLUTNM = "soft_lutpair380" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[9]_i_1__3 
@@ -27529,6 +28161,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
   wire [55:0]\state_out_reg[28] ;
   wire [0:0]\state_out_reg[96] ;
 
+  (* SOFT_HLUTNM = "soft_lutpair346" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[100]_i_1__3 
@@ -27536,6 +28169,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(Q[4]),
         .I2(add_const_state_0[3]),
         .O(\state_out_reg[127] [42]));
+  (* SOFT_HLUTNM = "soft_lutpair347" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[101]_i_1__3 
@@ -27543,6 +28177,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(Q[5]),
         .I2(add_const_state_0[4]),
         .O(\state_out_reg[127] [43]));
+  (* SOFT_HLUTNM = "soft_lutpair348" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[102]_i_1__3 
@@ -27550,6 +28185,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(Q[6]),
         .I2(add_const_state_0[5]),
         .O(\state_out_reg[127] [44]));
+  (* SOFT_HLUTNM = "soft_lutpair349" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[103]_i_1__3 
@@ -27557,6 +28193,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(Q[7]),
         .I2(add_const_state_0[6]),
         .O(\state_out_reg[127] [45]));
+  (* SOFT_HLUTNM = "soft_lutpair350" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[104]_i_1__3 
@@ -27564,6 +28201,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(Q[8]),
         .I2(add_const_state_0[7]),
         .O(\state_out_reg[127] [46]));
+  (* SOFT_HLUTNM = "soft_lutpair351" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[105]_i_1__3 
@@ -27571,6 +28209,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(Q[9]),
         .I2(add_const_state_0[8]),
         .O(\state_out_reg[127] [47]));
+  (* SOFT_HLUTNM = "soft_lutpair352" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[106]_i_1__3 
@@ -27578,6 +28217,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(Q[10]),
         .I2(add_const_state_0[9]),
         .O(\state_out_reg[127] [48]));
+  (* SOFT_HLUTNM = "soft_lutpair353" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[107]_i_1__3 
@@ -27585,6 +28225,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(Q[11]),
         .I2(add_const_state_0[10]),
         .O(\state_out_reg[127] [49]));
+  (* SOFT_HLUTNM = "soft_lutpair354" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[108]_i_1__3 
@@ -27592,6 +28233,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(Q[12]),
         .I2(add_const_state_0[11]),
         .O(\state_out_reg[127] [50]));
+  (* SOFT_HLUTNM = "soft_lutpair355" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[109]_i_1__3 
@@ -27599,6 +28241,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(Q[13]),
         .I2(add_const_state_0[12]),
         .O(\state_out_reg[127] [51]));
+  (* SOFT_HLUTNM = "soft_lutpair318" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[10]_i_1__2 
@@ -27606,6 +28249,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(\state_out_reg[28] [37]),
         .I2(add_const_state[37]),
         .O(D[9]));
+  (* SOFT_HLUTNM = "soft_lutpair356" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[110]_i_1__3 
@@ -27613,6 +28257,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(Q[14]),
         .I2(add_const_state_0[13]),
         .O(\state_out_reg[127] [52]));
+  (* SOFT_HLUTNM = "soft_lutpair357" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[111]_i_1__3 
@@ -27620,6 +28265,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(Q[15]),
         .I2(add_const_state_0[14]),
         .O(\state_out_reg[127] [53]));
+  (* SOFT_HLUTNM = "soft_lutpair358" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[112]_i_1__3 
@@ -27627,6 +28273,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(Q[16]),
         .I2(add_const_state_0[15]),
         .O(\state_out_reg[127] [54]));
+  (* SOFT_HLUTNM = "soft_lutpair359" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[113]_i_1__3 
@@ -27634,6 +28281,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(Q[17]),
         .I2(add_const_state_0[16]),
         .O(\state_out_reg[127] [55]));
+  (* SOFT_HLUTNM = "soft_lutpair360" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[114]_i_1__3 
@@ -27641,6 +28289,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(Q[18]),
         .I2(add_const_state_0[17]),
         .O(\state_out_reg[127] [56]));
+  (* SOFT_HLUTNM = "soft_lutpair361" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[115]_i_1__3 
@@ -27648,6 +28297,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(Q[19]),
         .I2(add_const_state_0[18]),
         .O(\state_out_reg[127] [57]));
+  (* SOFT_HLUTNM = "soft_lutpair362" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[116]_i_1__3 
@@ -27655,6 +28305,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(Q[20]),
         .I2(add_const_state_0[19]),
         .O(\state_out_reg[127] [58]));
+  (* SOFT_HLUTNM = "soft_lutpair363" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[117]_i_1__3 
@@ -27662,6 +28313,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(Q[21]),
         .I2(add_const_state_0[20]),
         .O(\state_out_reg[127] [59]));
+  (* SOFT_HLUTNM = "soft_lutpair364" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[118]_i_1__3 
@@ -27669,6 +28321,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(Q[22]),
         .I2(add_const_state_0[21]),
         .O(\state_out_reg[127] [60]));
+  (* SOFT_HLUTNM = "soft_lutpair365" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[119]_i_1__3 
@@ -27676,6 +28329,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(Q[23]),
         .I2(add_const_state_0[22]),
         .O(\state_out_reg[127] [61]));
+  (* SOFT_HLUTNM = "soft_lutpair319" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[11]_i_1__2 
@@ -27683,6 +28337,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(\state_out_reg[28] [38]),
         .I2(add_const_state[38]),
         .O(D[10]));
+  (* SOFT_HLUTNM = "soft_lutpair366" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[120]_i_1__3 
@@ -27690,6 +28345,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(Q[24]),
         .I2(add_const_state_0[23]),
         .O(\state_out_reg[127] [62]));
+  (* SOFT_HLUTNM = "soft_lutpair367" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[121]_i_1__3 
@@ -27697,6 +28353,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(Q[25]),
         .I2(add_const_state_0[24]),
         .O(\state_out_reg[127] [63]));
+  (* SOFT_HLUTNM = "soft_lutpair368" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[122]_i_1__3 
@@ -27704,6 +28361,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(Q[26]),
         .I2(add_const_state_0[25]),
         .O(\state_out_reg[127] [64]));
+  (* SOFT_HLUTNM = "soft_lutpair369" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[123]_i_1__3 
@@ -27711,6 +28369,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(Q[27]),
         .I2(add_const_state_0[26]),
         .O(\state_out_reg[127] [65]));
+  (* SOFT_HLUTNM = "soft_lutpair370" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[124]_i_1__3 
@@ -27718,6 +28377,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(Q[28]),
         .I2(add_const_state_0[27]),
         .O(\state_out_reg[127] [66]));
+  (* SOFT_HLUTNM = "soft_lutpair337" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[125]_i_1__3 
@@ -27725,6 +28385,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(Q[29]),
         .I2(add_const_state_0[28]),
         .O(\state_out_reg[127] [67]));
+  (* SOFT_HLUTNM = "soft_lutpair338" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[126]_i_1__3 
@@ -27732,6 +28393,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(Q[30]),
         .I2(add_const_state_0[29]),
         .O(\state_out_reg[127] [68]));
+  (* SOFT_HLUTNM = "soft_lutpair339" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[127]_i_1__3 
@@ -27739,6 +28401,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(Q[31]),
         .I2(add_const_state_0[30]),
         .O(\state_out_reg[127] [69]));
+  (* SOFT_HLUTNM = "soft_lutpair320" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[12]_i_1__2 
@@ -27746,6 +28409,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(\state_out_reg[28] [39]),
         .I2(add_const_state[39]),
         .O(D[11]));
+  (* SOFT_HLUTNM = "soft_lutpair321" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[13]_i_1__2 
@@ -27753,6 +28417,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(\state_out_reg[28] [40]),
         .I2(add_const_state[40]),
         .O(D[12]));
+  (* SOFT_HLUTNM = "soft_lutpair322" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[14]_i_1__2 
@@ -27760,6 +28425,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(\state_out_reg[28] [41]),
         .I2(add_const_state[41]),
         .O(D[13]));
+  (* SOFT_HLUTNM = "soft_lutpair323" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[15]_i_1__2 
@@ -27767,6 +28433,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(\state_out_reg[28] [42]),
         .I2(add_const_state[42]),
         .O(D[14]));
+  (* SOFT_HLUTNM = "soft_lutpair324" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[16]_i_1__2 
@@ -27774,6 +28441,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(\state_out_reg[28] [43]),
         .I2(add_const_state[43]),
         .O(D[15]));
+  (* SOFT_HLUTNM = "soft_lutpair325" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[17]_i_1__2 
@@ -27781,6 +28449,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(\state_out_reg[28] [44]),
         .I2(add_const_state[44]),
         .O(D[16]));
+  (* SOFT_HLUTNM = "soft_lutpair326" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[18]_i_1__2 
@@ -27788,6 +28457,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(\state_out_reg[28] [45]),
         .I2(add_const_state[45]),
         .O(D[17]));
+  (* SOFT_HLUTNM = "soft_lutpair327" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[19]_i_1__2 
@@ -27795,6 +28465,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(\state_out_reg[28] [46]),
         .I2(add_const_state[46]),
         .O(D[18]));
+  (* SOFT_HLUTNM = "soft_lutpair309" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[1]_i_1__2 
@@ -27802,6 +28473,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(\state_out_reg[28] [28]),
         .I2(add_const_state[28]),
         .O(D[0]));
+  (* SOFT_HLUTNM = "soft_lutpair328" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[20]_i_1__2 
@@ -27809,6 +28481,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(\state_out_reg[28] [47]),
         .I2(add_const_state[47]),
         .O(D[19]));
+  (* SOFT_HLUTNM = "soft_lutpair329" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[21]_i_1__2 
@@ -27816,6 +28489,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(\state_out_reg[28] [48]),
         .I2(add_const_state[48]),
         .O(D[20]));
+  (* SOFT_HLUTNM = "soft_lutpair330" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[22]_i_1__2 
@@ -27823,6 +28497,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(\state_out_reg[28] [49]),
         .I2(add_const_state[49]),
         .O(D[21]));
+  (* SOFT_HLUTNM = "soft_lutpair331" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[23]_i_1__2 
@@ -27830,6 +28505,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(\state_out_reg[28] [50]),
         .I2(add_const_state[50]),
         .O(D[22]));
+  (* SOFT_HLUTNM = "soft_lutpair332" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[24]_i_1__2 
@@ -27837,6 +28513,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(\state_out_reg[28] [51]),
         .I2(add_const_state[51]),
         .O(D[23]));
+  (* SOFT_HLUTNM = "soft_lutpair333" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[25]_i_1__2 
@@ -27844,6 +28521,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(\state_out_reg[28] [52]),
         .I2(add_const_state[52]),
         .O(D[24]));
+  (* SOFT_HLUTNM = "soft_lutpair334" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[26]_i_1__2 
@@ -27851,6 +28529,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(\state_out_reg[28] [53]),
         .I2(add_const_state[53]),
         .O(D[25]));
+  (* SOFT_HLUTNM = "soft_lutpair335" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[27]_i_1__2 
@@ -27858,6 +28537,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(\state_out_reg[28] [54]),
         .I2(add_const_state[54]),
         .O(D[26]));
+  (* SOFT_HLUTNM = "soft_lutpair336" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[28]_i_1__2 
@@ -27865,6 +28545,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(\state_out_reg[28] [55]),
         .I2(add_const_state[55]),
         .O(D[27]));
+  (* SOFT_HLUTNM = "soft_lutpair337" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[29]_i_1__3 
@@ -27872,6 +28553,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(Q[61]),
         .I2(add_const_state_0[60]),
         .O(\state_out_reg[127] [0]));
+  (* SOFT_HLUTNM = "soft_lutpair310" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[2]_i_1__1 
@@ -27879,6 +28561,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(\state_out_reg[28] [29]),
         .I2(add_const_state[29]),
         .O(D[1]));
+  (* SOFT_HLUTNM = "soft_lutpair338" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[30]_i_1__3 
@@ -27886,6 +28569,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(Q[62]),
         .I2(add_const_state_0[61]),
         .O(\state_out_reg[127] [1]));
+  (* SOFT_HLUTNM = "soft_lutpair339" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[31]_i_1__3 
@@ -27893,6 +28577,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(Q[63]),
         .I2(add_const_state_0[62]),
         .O(\state_out_reg[127] [2]));
+  (* SOFT_HLUTNM = "soft_lutpair371" *) 
   LUT3 #(
     .INIT(8'h6A)) 
     \state_out[32]_i_1__3 
@@ -27900,6 +28585,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(\state_out_reg[96] ),
         .I2(Q[0]),
         .O(\state_out_reg[127] [3]));
+  (* SOFT_HLUTNM = "soft_lutpair309" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[33]_i_1__2 
@@ -27907,6 +28593,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state[0]),
         .I2(\state_out_reg[28] [0]),
         .O(D[28]));
+  (* SOFT_HLUTNM = "soft_lutpair310" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[34]_i_1__2 
@@ -27914,6 +28601,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state[1]),
         .I2(\state_out_reg[28] [1]),
         .O(D[29]));
+  (* SOFT_HLUTNM = "soft_lutpair311" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[35]_i_1__2 
@@ -27921,6 +28609,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state[2]),
         .I2(\state_out_reg[28] [2]),
         .O(D[30]));
+  (* SOFT_HLUTNM = "soft_lutpair312" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[36]_i_1__2 
@@ -27928,6 +28617,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state[3]),
         .I2(\state_out_reg[28] [3]),
         .O(D[31]));
+  (* SOFT_HLUTNM = "soft_lutpair313" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[37]_i_1__2 
@@ -27935,6 +28625,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state[4]),
         .I2(\state_out_reg[28] [4]),
         .O(D[32]));
+  (* SOFT_HLUTNM = "soft_lutpair314" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[38]_i_1__2 
@@ -27942,6 +28633,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state[5]),
         .I2(\state_out_reg[28] [5]),
         .O(D[33]));
+  (* SOFT_HLUTNM = "soft_lutpair315" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[39]_i_1__2 
@@ -27949,6 +28641,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state[6]),
         .I2(\state_out_reg[28] [6]),
         .O(D[34]));
+  (* SOFT_HLUTNM = "soft_lutpair311" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[3]_i_1__2 
@@ -27956,6 +28649,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(\state_out_reg[28] [30]),
         .I2(add_const_state[30]),
         .O(D[2]));
+  (* SOFT_HLUTNM = "soft_lutpair316" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[40]_i_1__2 
@@ -27963,6 +28657,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state[7]),
         .I2(\state_out_reg[28] [7]),
         .O(D[35]));
+  (* SOFT_HLUTNM = "soft_lutpair317" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[41]_i_1__2 
@@ -27970,6 +28665,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state[8]),
         .I2(\state_out_reg[28] [8]),
         .O(D[36]));
+  (* SOFT_HLUTNM = "soft_lutpair318" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[42]_i_1__2 
@@ -27977,6 +28673,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state[9]),
         .I2(\state_out_reg[28] [9]),
         .O(D[37]));
+  (* SOFT_HLUTNM = "soft_lutpair319" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[43]_i_1__2 
@@ -27984,6 +28681,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state[10]),
         .I2(\state_out_reg[28] [10]),
         .O(D[38]));
+  (* SOFT_HLUTNM = "soft_lutpair320" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[44]_i_1__2 
@@ -27991,6 +28689,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state[11]),
         .I2(\state_out_reg[28] [11]),
         .O(D[39]));
+  (* SOFT_HLUTNM = "soft_lutpair321" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[45]_i_1__2 
@@ -27998,6 +28697,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state[12]),
         .I2(\state_out_reg[28] [12]),
         .O(D[40]));
+  (* SOFT_HLUTNM = "soft_lutpair322" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[46]_i_1__2 
@@ -28005,6 +28705,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state[13]),
         .I2(\state_out_reg[28] [13]),
         .O(D[41]));
+  (* SOFT_HLUTNM = "soft_lutpair323" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[47]_i_1__2 
@@ -28012,6 +28713,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state[14]),
         .I2(\state_out_reg[28] [14]),
         .O(D[42]));
+  (* SOFT_HLUTNM = "soft_lutpair324" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[48]_i_1__2 
@@ -28019,6 +28721,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state[15]),
         .I2(\state_out_reg[28] [15]),
         .O(D[43]));
+  (* SOFT_HLUTNM = "soft_lutpair325" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[49]_i_1__2 
@@ -28026,6 +28729,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state[16]),
         .I2(\state_out_reg[28] [16]),
         .O(D[44]));
+  (* SOFT_HLUTNM = "soft_lutpair312" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[4]_i_1__1 
@@ -28033,6 +28737,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(\state_out_reg[28] [31]),
         .I2(add_const_state[31]),
         .O(D[3]));
+  (* SOFT_HLUTNM = "soft_lutpair326" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[50]_i_1__2 
@@ -28040,6 +28745,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state[17]),
         .I2(\state_out_reg[28] [17]),
         .O(D[45]));
+  (* SOFT_HLUTNM = "soft_lutpair327" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[51]_i_1__2 
@@ -28047,6 +28753,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state[18]),
         .I2(\state_out_reg[28] [18]),
         .O(D[46]));
+  (* SOFT_HLUTNM = "soft_lutpair328" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[52]_i_1__2 
@@ -28054,6 +28761,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state[19]),
         .I2(\state_out_reg[28] [19]),
         .O(D[47]));
+  (* SOFT_HLUTNM = "soft_lutpair329" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[53]_i_1__2 
@@ -28061,6 +28769,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state[20]),
         .I2(\state_out_reg[28] [20]),
         .O(D[48]));
+  (* SOFT_HLUTNM = "soft_lutpair330" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[54]_i_1__2 
@@ -28068,6 +28777,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state[21]),
         .I2(\state_out_reg[28] [21]),
         .O(D[49]));
+  (* SOFT_HLUTNM = "soft_lutpair331" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[55]_i_1__2 
@@ -28075,6 +28785,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state[22]),
         .I2(\state_out_reg[28] [22]),
         .O(D[50]));
+  (* SOFT_HLUTNM = "soft_lutpair332" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[56]_i_1__2 
@@ -28082,6 +28793,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state[23]),
         .I2(\state_out_reg[28] [23]),
         .O(D[51]));
+  (* SOFT_HLUTNM = "soft_lutpair333" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[57]_i_1__2 
@@ -28089,6 +28801,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state[24]),
         .I2(\state_out_reg[28] [24]),
         .O(D[52]));
+  (* SOFT_HLUTNM = "soft_lutpair334" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[58]_i_1__2 
@@ -28096,6 +28809,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state[25]),
         .I2(\state_out_reg[28] [25]),
         .O(D[53]));
+  (* SOFT_HLUTNM = "soft_lutpair335" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[59]_i_1__2 
@@ -28103,6 +28817,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state[26]),
         .I2(\state_out_reg[28] [26]),
         .O(D[54]));
+  (* SOFT_HLUTNM = "soft_lutpair313" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[5]_i_1__2 
@@ -28110,6 +28825,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(\state_out_reg[28] [32]),
         .I2(add_const_state[32]),
         .O(D[4]));
+  (* SOFT_HLUTNM = "soft_lutpair336" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[60]_i_1__2 
@@ -28117,6 +28833,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state[27]),
         .I2(\state_out_reg[28] [27]),
         .O(D[55]));
+  (* SOFT_HLUTNM = "soft_lutpair340" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[61]_i_1__3 
@@ -28124,6 +28841,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state_0[28]),
         .I2(Q[29]),
         .O(\state_out_reg[127] [4]));
+  (* SOFT_HLUTNM = "soft_lutpair341" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[62]_i_1__3 
@@ -28131,6 +28849,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state_0[29]),
         .I2(Q[30]),
         .O(\state_out_reg[127] [5]));
+  (* SOFT_HLUTNM = "soft_lutpair342" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[63]_i_1__3 
@@ -28138,6 +28857,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state_0[30]),
         .I2(Q[31]),
         .O(\state_out_reg[127] [6]));
+  (* SOFT_HLUTNM = "soft_lutpair343" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[65]_i_1__3 
@@ -28145,6 +28865,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state_0[32]),
         .I2(Q[33]),
         .O(\state_out_reg[127] [7]));
+  (* SOFT_HLUTNM = "soft_lutpair344" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[66]_i_1__3 
@@ -28152,6 +28873,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state_0[33]),
         .I2(Q[34]),
         .O(\state_out_reg[127] [8]));
+  (* SOFT_HLUTNM = "soft_lutpair345" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[67]_i_1__3 
@@ -28159,6 +28881,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state_0[34]),
         .I2(Q[35]),
         .O(\state_out_reg[127] [9]));
+  (* SOFT_HLUTNM = "soft_lutpair346" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[68]_i_1__3 
@@ -28166,6 +28889,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state_0[35]),
         .I2(Q[36]),
         .O(\state_out_reg[127] [10]));
+  (* SOFT_HLUTNM = "soft_lutpair347" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[69]_i_1__3 
@@ -28173,6 +28897,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state_0[36]),
         .I2(Q[37]),
         .O(\state_out_reg[127] [11]));
+  (* SOFT_HLUTNM = "soft_lutpair314" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[6]_i_1__2 
@@ -28180,6 +28905,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(\state_out_reg[28] [33]),
         .I2(add_const_state[33]),
         .O(D[5]));
+  (* SOFT_HLUTNM = "soft_lutpair348" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[70]_i_1__3 
@@ -28187,6 +28913,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state_0[37]),
         .I2(Q[38]),
         .O(\state_out_reg[127] [12]));
+  (* SOFT_HLUTNM = "soft_lutpair349" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[71]_i_1__3 
@@ -28194,6 +28921,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state_0[38]),
         .I2(Q[39]),
         .O(\state_out_reg[127] [13]));
+  (* SOFT_HLUTNM = "soft_lutpair350" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[72]_i_1__3 
@@ -28201,6 +28929,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state_0[39]),
         .I2(Q[40]),
         .O(\state_out_reg[127] [14]));
+  (* SOFT_HLUTNM = "soft_lutpair351" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[73]_i_1__3 
@@ -28208,6 +28937,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state_0[40]),
         .I2(Q[41]),
         .O(\state_out_reg[127] [15]));
+  (* SOFT_HLUTNM = "soft_lutpair352" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[74]_i_1__3 
@@ -28215,6 +28945,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state_0[41]),
         .I2(Q[42]),
         .O(\state_out_reg[127] [16]));
+  (* SOFT_HLUTNM = "soft_lutpair353" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[75]_i_1__3 
@@ -28222,6 +28953,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state_0[42]),
         .I2(Q[43]),
         .O(\state_out_reg[127] [17]));
+  (* SOFT_HLUTNM = "soft_lutpair354" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[76]_i_1__3 
@@ -28229,6 +28961,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state_0[43]),
         .I2(Q[44]),
         .O(\state_out_reg[127] [18]));
+  (* SOFT_HLUTNM = "soft_lutpair355" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[77]_i_1__3 
@@ -28236,6 +28969,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state_0[44]),
         .I2(Q[45]),
         .O(\state_out_reg[127] [19]));
+  (* SOFT_HLUTNM = "soft_lutpair356" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[78]_i_1__3 
@@ -28243,6 +28977,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state_0[45]),
         .I2(Q[46]),
         .O(\state_out_reg[127] [20]));
+  (* SOFT_HLUTNM = "soft_lutpair357" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[79]_i_1__3 
@@ -28250,6 +28985,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state_0[46]),
         .I2(Q[47]),
         .O(\state_out_reg[127] [21]));
+  (* SOFT_HLUTNM = "soft_lutpair315" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[7]_i_1__2 
@@ -28257,6 +28993,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(\state_out_reg[28] [34]),
         .I2(add_const_state[34]),
         .O(D[6]));
+  (* SOFT_HLUTNM = "soft_lutpair358" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[80]_i_1__3 
@@ -28264,6 +29001,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state_0[47]),
         .I2(Q[48]),
         .O(\state_out_reg[127] [22]));
+  (* SOFT_HLUTNM = "soft_lutpair359" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[81]_i_1__3 
@@ -28271,6 +29009,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state_0[48]),
         .I2(Q[49]),
         .O(\state_out_reg[127] [23]));
+  (* SOFT_HLUTNM = "soft_lutpair360" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[82]_i_1__3 
@@ -28278,6 +29017,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state_0[49]),
         .I2(Q[50]),
         .O(\state_out_reg[127] [24]));
+  (* SOFT_HLUTNM = "soft_lutpair361" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[83]_i_1__3 
@@ -28285,6 +29025,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state_0[50]),
         .I2(Q[51]),
         .O(\state_out_reg[127] [25]));
+  (* SOFT_HLUTNM = "soft_lutpair362" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[84]_i_1__3 
@@ -28292,6 +29033,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state_0[51]),
         .I2(Q[52]),
         .O(\state_out_reg[127] [26]));
+  (* SOFT_HLUTNM = "soft_lutpair363" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[85]_i_1__3 
@@ -28299,6 +29041,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state_0[52]),
         .I2(Q[53]),
         .O(\state_out_reg[127] [27]));
+  (* SOFT_HLUTNM = "soft_lutpair364" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[86]_i_1__3 
@@ -28306,6 +29049,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state_0[53]),
         .I2(Q[54]),
         .O(\state_out_reg[127] [28]));
+  (* SOFT_HLUTNM = "soft_lutpair365" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[87]_i_1__3 
@@ -28313,6 +29057,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state_0[54]),
         .I2(Q[55]),
         .O(\state_out_reg[127] [29]));
+  (* SOFT_HLUTNM = "soft_lutpair366" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[88]_i_1__3 
@@ -28320,6 +29065,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state_0[55]),
         .I2(Q[56]),
         .O(\state_out_reg[127] [30]));
+  (* SOFT_HLUTNM = "soft_lutpair367" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[89]_i_1__3 
@@ -28327,6 +29073,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state_0[56]),
         .I2(Q[57]),
         .O(\state_out_reg[127] [31]));
+  (* SOFT_HLUTNM = "soft_lutpair316" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[8]_i_1__2 
@@ -28334,6 +29081,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(\state_out_reg[28] [35]),
         .I2(add_const_state[35]),
         .O(D[7]));
+  (* SOFT_HLUTNM = "soft_lutpair368" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[90]_i_1__3 
@@ -28341,6 +29089,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state_0[57]),
         .I2(Q[58]),
         .O(\state_out_reg[127] [32]));
+  (* SOFT_HLUTNM = "soft_lutpair369" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[91]_i_1__3 
@@ -28348,6 +29097,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state_0[58]),
         .I2(Q[59]),
         .O(\state_out_reg[127] [33]));
+  (* SOFT_HLUTNM = "soft_lutpair370" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[92]_i_1__3 
@@ -28355,6 +29105,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state_0[59]),
         .I2(Q[60]),
         .O(\state_out_reg[127] [34]));
+  (* SOFT_HLUTNM = "soft_lutpair340" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[93]_i_1__3 
@@ -28362,6 +29113,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state_0[60]),
         .I2(Q[61]),
         .O(\state_out_reg[127] [35]));
+  (* SOFT_HLUTNM = "soft_lutpair341" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[94]_i_1__3 
@@ -28369,6 +29121,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state_0[61]),
         .I2(Q[62]),
         .O(\state_out_reg[127] [36]));
+  (* SOFT_HLUTNM = "soft_lutpair342" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[95]_i_1__3 
@@ -28376,6 +29129,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(add_const_state_0[62]),
         .I2(Q[63]),
         .O(\state_out_reg[127] [37]));
+  (* SOFT_HLUTNM = "soft_lutpair371" *) 
   LUT3 #(
     .INIT(8'hA9)) 
     \state_out[96]_i_1__3 
@@ -28383,6 +29137,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(Q[0]),
         .I2(\state_out_reg[96] ),
         .O(\state_out_reg[127] [38]));
+  (* SOFT_HLUTNM = "soft_lutpair343" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[97]_i_1__3 
@@ -28390,6 +29145,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(Q[1]),
         .I2(add_const_state_0[0]),
         .O(\state_out_reg[127] [39]));
+  (* SOFT_HLUTNM = "soft_lutpair344" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[98]_i_1__3 
@@ -28397,6 +29153,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(Q[2]),
         .I2(add_const_state_0[1]),
         .O(\state_out_reg[127] [40]));
+  (* SOFT_HLUTNM = "soft_lutpair345" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[99]_i_1__3 
@@ -28404,6 +29161,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_19
         .I1(Q[3]),
         .I2(add_const_state_0[2]),
         .O(\state_out_reg[127] [41]));
+  (* SOFT_HLUTNM = "soft_lutpair317" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[9]_i_1__2 
@@ -28438,6 +29196,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
   wire [69:0]\state_out_reg[127] ;
   wire [63:0]\state_out_reg[31] ;
 
+  (* SOFT_HLUTNM = "soft_lutpair283" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[100]_i_1__2 
@@ -28445,6 +29204,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(\state_out_reg[31] [4]),
         .I2(add_const_state_0[3]),
         .O(\state_out_reg[127] [42]));
+  (* SOFT_HLUTNM = "soft_lutpair284" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[101]_i_1__2 
@@ -28452,6 +29212,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(\state_out_reg[31] [5]),
         .I2(add_const_state_0[4]),
         .O(\state_out_reg[127] [43]));
+  (* SOFT_HLUTNM = "soft_lutpair285" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[102]_i_1__2 
@@ -28459,6 +29220,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(\state_out_reg[31] [6]),
         .I2(add_const_state_0[5]),
         .O(\state_out_reg[127] [44]));
+  (* SOFT_HLUTNM = "soft_lutpair286" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[103]_i_1__2 
@@ -28466,6 +29228,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(\state_out_reg[31] [7]),
         .I2(add_const_state_0[6]),
         .O(\state_out_reg[127] [45]));
+  (* SOFT_HLUTNM = "soft_lutpair287" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[104]_i_1__2 
@@ -28473,6 +29236,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(\state_out_reg[31] [8]),
         .I2(add_const_state_0[7]),
         .O(\state_out_reg[127] [46]));
+  (* SOFT_HLUTNM = "soft_lutpair288" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[105]_i_1__2 
@@ -28480,6 +29244,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(\state_out_reg[31] [9]),
         .I2(add_const_state_0[8]),
         .O(\state_out_reg[127] [47]));
+  (* SOFT_HLUTNM = "soft_lutpair289" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[106]_i_1__2 
@@ -28487,6 +29252,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(\state_out_reg[31] [10]),
         .I2(add_const_state_0[9]),
         .O(\state_out_reg[127] [48]));
+  (* SOFT_HLUTNM = "soft_lutpair290" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[107]_i_1__2 
@@ -28494,6 +29260,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(\state_out_reg[31] [11]),
         .I2(add_const_state_0[10]),
         .O(\state_out_reg[127] [49]));
+  (* SOFT_HLUTNM = "soft_lutpair291" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[108]_i_1__2 
@@ -28501,6 +29268,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(\state_out_reg[31] [12]),
         .I2(add_const_state_0[11]),
         .O(\state_out_reg[127] [50]));
+  (* SOFT_HLUTNM = "soft_lutpair292" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[109]_i_1__2 
@@ -28508,6 +29276,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(\state_out_reg[31] [13]),
         .I2(add_const_state_0[12]),
         .O(\state_out_reg[127] [51]));
+  (* SOFT_HLUTNM = "soft_lutpair255" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[10]_i_1__1 
@@ -28515,6 +29284,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(Q[37]),
         .I2(add_const_state[37]),
         .O(D[9]));
+  (* SOFT_HLUTNM = "soft_lutpair293" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[110]_i_1__2 
@@ -28522,6 +29292,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(\state_out_reg[31] [14]),
         .I2(add_const_state_0[13]),
         .O(\state_out_reg[127] [52]));
+  (* SOFT_HLUTNM = "soft_lutpair294" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[111]_i_1__2 
@@ -28529,6 +29300,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(\state_out_reg[31] [15]),
         .I2(add_const_state_0[14]),
         .O(\state_out_reg[127] [53]));
+  (* SOFT_HLUTNM = "soft_lutpair295" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[112]_i_1__2 
@@ -28536,6 +29308,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(\state_out_reg[31] [16]),
         .I2(add_const_state_0[15]),
         .O(\state_out_reg[127] [54]));
+  (* SOFT_HLUTNM = "soft_lutpair296" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[113]_i_1__2 
@@ -28543,6 +29316,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(\state_out_reg[31] [17]),
         .I2(add_const_state_0[16]),
         .O(\state_out_reg[127] [55]));
+  (* SOFT_HLUTNM = "soft_lutpair297" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[114]_i_1__2 
@@ -28550,6 +29324,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(\state_out_reg[31] [18]),
         .I2(add_const_state_0[17]),
         .O(\state_out_reg[127] [56]));
+  (* SOFT_HLUTNM = "soft_lutpair298" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[115]_i_1__2 
@@ -28557,6 +29332,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(\state_out_reg[31] [19]),
         .I2(add_const_state_0[18]),
         .O(\state_out_reg[127] [57]));
+  (* SOFT_HLUTNM = "soft_lutpair299" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[116]_i_1__2 
@@ -28564,6 +29340,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(\state_out_reg[31] [20]),
         .I2(add_const_state_0[19]),
         .O(\state_out_reg[127] [58]));
+  (* SOFT_HLUTNM = "soft_lutpair300" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[117]_i_1__2 
@@ -28571,6 +29348,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(\state_out_reg[31] [21]),
         .I2(add_const_state_0[20]),
         .O(\state_out_reg[127] [59]));
+  (* SOFT_HLUTNM = "soft_lutpair301" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[118]_i_1__2 
@@ -28578,6 +29356,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(\state_out_reg[31] [22]),
         .I2(add_const_state_0[21]),
         .O(\state_out_reg[127] [60]));
+  (* SOFT_HLUTNM = "soft_lutpair302" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[119]_i_1__2 
@@ -28585,6 +29364,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(\state_out_reg[31] [23]),
         .I2(add_const_state_0[22]),
         .O(\state_out_reg[127] [61]));
+  (* SOFT_HLUTNM = "soft_lutpair256" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[11]_i_1__1 
@@ -28592,6 +29372,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(Q[38]),
         .I2(add_const_state[38]),
         .O(D[10]));
+  (* SOFT_HLUTNM = "soft_lutpair303" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[120]_i_1__2 
@@ -28599,6 +29380,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(\state_out_reg[31] [24]),
         .I2(add_const_state_0[23]),
         .O(\state_out_reg[127] [62]));
+  (* SOFT_HLUTNM = "soft_lutpair304" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[121]_i_1__2 
@@ -28606,6 +29388,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(\state_out_reg[31] [25]),
         .I2(add_const_state_0[24]),
         .O(\state_out_reg[127] [63]));
+  (* SOFT_HLUTNM = "soft_lutpair305" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[122]_i_1__2 
@@ -28613,6 +29396,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(\state_out_reg[31] [26]),
         .I2(add_const_state_0[25]),
         .O(\state_out_reg[127] [64]));
+  (* SOFT_HLUTNM = "soft_lutpair306" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[123]_i_1__2 
@@ -28620,6 +29404,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(\state_out_reg[31] [27]),
         .I2(add_const_state_0[26]),
         .O(\state_out_reg[127] [65]));
+  (* SOFT_HLUTNM = "soft_lutpair307" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[124]_i_1__2 
@@ -28627,6 +29412,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(\state_out_reg[31] [28]),
         .I2(add_const_state_0[27]),
         .O(\state_out_reg[127] [66]));
+  (* SOFT_HLUTNM = "soft_lutpair274" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[125]_i_1__2 
@@ -28634,6 +29420,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(\state_out_reg[31] [29]),
         .I2(add_const_state_0[28]),
         .O(\state_out_reg[127] [67]));
+  (* SOFT_HLUTNM = "soft_lutpair275" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[126]_i_1__2 
@@ -28641,6 +29428,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(\state_out_reg[31] [30]),
         .I2(add_const_state_0[29]),
         .O(\state_out_reg[127] [68]));
+  (* SOFT_HLUTNM = "soft_lutpair276" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[127]_i_1__2 
@@ -28648,6 +29436,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(\state_out_reg[31] [31]),
         .I2(add_const_state_0[30]),
         .O(\state_out_reg[127] [69]));
+  (* SOFT_HLUTNM = "soft_lutpair257" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[12]_i_1__1 
@@ -28655,6 +29444,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(Q[39]),
         .I2(add_const_state[39]),
         .O(D[11]));
+  (* SOFT_HLUTNM = "soft_lutpair258" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[13]_i_1__1 
@@ -28662,6 +29452,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(Q[40]),
         .I2(add_const_state[40]),
         .O(D[12]));
+  (* SOFT_HLUTNM = "soft_lutpair259" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[14]_i_1__1 
@@ -28669,6 +29460,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(Q[41]),
         .I2(add_const_state[41]),
         .O(D[13]));
+  (* SOFT_HLUTNM = "soft_lutpair260" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[15]_i_1__1 
@@ -28676,6 +29468,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(Q[42]),
         .I2(add_const_state[42]),
         .O(D[14]));
+  (* SOFT_HLUTNM = "soft_lutpair261" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[16]_i_1__1 
@@ -28683,6 +29476,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(Q[43]),
         .I2(add_const_state[43]),
         .O(D[15]));
+  (* SOFT_HLUTNM = "soft_lutpair262" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[17]_i_1__1 
@@ -28690,6 +29484,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(Q[44]),
         .I2(add_const_state[44]),
         .O(D[16]));
+  (* SOFT_HLUTNM = "soft_lutpair263" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[18]_i_1__1 
@@ -28697,6 +29492,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(Q[45]),
         .I2(add_const_state[45]),
         .O(D[17]));
+  (* SOFT_HLUTNM = "soft_lutpair264" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[19]_i_1__1 
@@ -28704,6 +29500,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(Q[46]),
         .I2(add_const_state[46]),
         .O(D[18]));
+  (* SOFT_HLUTNM = "soft_lutpair246" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[1]_i_1__1 
@@ -28711,6 +29508,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(Q[28]),
         .I2(add_const_state[28]),
         .O(D[0]));
+  (* SOFT_HLUTNM = "soft_lutpair265" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[20]_i_1__1 
@@ -28718,6 +29516,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(Q[47]),
         .I2(add_const_state[47]),
         .O(D[19]));
+  (* SOFT_HLUTNM = "soft_lutpair266" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[21]_i_1__1 
@@ -28725,6 +29524,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(Q[48]),
         .I2(add_const_state[48]),
         .O(D[20]));
+  (* SOFT_HLUTNM = "soft_lutpair267" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[22]_i_1__1 
@@ -28732,6 +29532,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(Q[49]),
         .I2(add_const_state[49]),
         .O(D[21]));
+  (* SOFT_HLUTNM = "soft_lutpair268" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[23]_i_1__1 
@@ -28739,6 +29540,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(Q[50]),
         .I2(add_const_state[50]),
         .O(D[22]));
+  (* SOFT_HLUTNM = "soft_lutpair269" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[24]_i_1__1 
@@ -28746,6 +29548,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(Q[51]),
         .I2(add_const_state[51]),
         .O(D[23]));
+  (* SOFT_HLUTNM = "soft_lutpair270" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[25]_i_1__1 
@@ -28753,6 +29556,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(Q[52]),
         .I2(add_const_state[52]),
         .O(D[24]));
+  (* SOFT_HLUTNM = "soft_lutpair271" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[26]_i_1__1 
@@ -28760,6 +29564,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(Q[53]),
         .I2(add_const_state[53]),
         .O(D[25]));
+  (* SOFT_HLUTNM = "soft_lutpair272" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[27]_i_1__1 
@@ -28767,6 +29572,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(Q[54]),
         .I2(add_const_state[54]),
         .O(D[26]));
+  (* SOFT_HLUTNM = "soft_lutpair273" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[28]_i_1__1 
@@ -28774,6 +29580,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(Q[55]),
         .I2(add_const_state[55]),
         .O(D[27]));
+  (* SOFT_HLUTNM = "soft_lutpair274" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[29]_i_1__2 
@@ -28781,6 +29588,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(\state_out_reg[31] [61]),
         .I2(add_const_state_0[60]),
         .O(\state_out_reg[127] [0]));
+  (* SOFT_HLUTNM = "soft_lutpair247" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[2]_i_1__0 
@@ -28788,6 +29596,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(Q[29]),
         .I2(add_const_state[29]),
         .O(D[1]));
+  (* SOFT_HLUTNM = "soft_lutpair275" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[30]_i_1__2 
@@ -28795,6 +29604,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(\state_out_reg[31] [62]),
         .I2(add_const_state_0[61]),
         .O(\state_out_reg[127] [1]));
+  (* SOFT_HLUTNM = "soft_lutpair276" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[31]_i_1__2 
@@ -28802,6 +29612,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(\state_out_reg[31] [63]),
         .I2(add_const_state_0[62]),
         .O(\state_out_reg[127] [2]));
+  (* SOFT_HLUTNM = "soft_lutpair308" *) 
   LUT3 #(
     .INIT(8'h6A)) 
     \state_out[32]_i_1__2 
@@ -28809,6 +29620,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(CO),
         .I2(\state_out_reg[31] [0]),
         .O(\state_out_reg[127] [3]));
+  (* SOFT_HLUTNM = "soft_lutpair246" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[33]_i_1__1 
@@ -28816,6 +29628,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state[0]),
         .I2(Q[0]),
         .O(D[28]));
+  (* SOFT_HLUTNM = "soft_lutpair247" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[34]_i_1__1 
@@ -28823,6 +29636,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state[1]),
         .I2(Q[1]),
         .O(D[29]));
+  (* SOFT_HLUTNM = "soft_lutpair248" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[35]_i_1__1 
@@ -28830,6 +29644,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state[2]),
         .I2(Q[2]),
         .O(D[30]));
+  (* SOFT_HLUTNM = "soft_lutpair249" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[36]_i_1__1 
@@ -28837,6 +29652,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state[3]),
         .I2(Q[3]),
         .O(D[31]));
+  (* SOFT_HLUTNM = "soft_lutpair250" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[37]_i_1__1 
@@ -28844,6 +29660,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state[4]),
         .I2(Q[4]),
         .O(D[32]));
+  (* SOFT_HLUTNM = "soft_lutpair251" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[38]_i_1__1 
@@ -28851,6 +29668,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state[5]),
         .I2(Q[5]),
         .O(D[33]));
+  (* SOFT_HLUTNM = "soft_lutpair252" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[39]_i_1__1 
@@ -28858,6 +29676,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state[6]),
         .I2(Q[6]),
         .O(D[34]));
+  (* SOFT_HLUTNM = "soft_lutpair248" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[3]_i_1__1 
@@ -28865,6 +29684,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(Q[30]),
         .I2(add_const_state[30]),
         .O(D[2]));
+  (* SOFT_HLUTNM = "soft_lutpair253" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[40]_i_1__1 
@@ -28872,6 +29692,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state[7]),
         .I2(Q[7]),
         .O(D[35]));
+  (* SOFT_HLUTNM = "soft_lutpair254" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[41]_i_1__1 
@@ -28879,6 +29700,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state[8]),
         .I2(Q[8]),
         .O(D[36]));
+  (* SOFT_HLUTNM = "soft_lutpair255" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[42]_i_1__1 
@@ -28886,6 +29708,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state[9]),
         .I2(Q[9]),
         .O(D[37]));
+  (* SOFT_HLUTNM = "soft_lutpair256" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[43]_i_1__1 
@@ -28893,6 +29716,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state[10]),
         .I2(Q[10]),
         .O(D[38]));
+  (* SOFT_HLUTNM = "soft_lutpair257" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[44]_i_1__1 
@@ -28900,6 +29724,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state[11]),
         .I2(Q[11]),
         .O(D[39]));
+  (* SOFT_HLUTNM = "soft_lutpair258" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[45]_i_1__1 
@@ -28907,6 +29732,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state[12]),
         .I2(Q[12]),
         .O(D[40]));
+  (* SOFT_HLUTNM = "soft_lutpair259" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[46]_i_1__1 
@@ -28914,6 +29740,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state[13]),
         .I2(Q[13]),
         .O(D[41]));
+  (* SOFT_HLUTNM = "soft_lutpair260" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[47]_i_1__1 
@@ -28921,6 +29748,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state[14]),
         .I2(Q[14]),
         .O(D[42]));
+  (* SOFT_HLUTNM = "soft_lutpair261" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[48]_i_1__1 
@@ -28928,6 +29756,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state[15]),
         .I2(Q[15]),
         .O(D[43]));
+  (* SOFT_HLUTNM = "soft_lutpair262" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[49]_i_1__1 
@@ -28935,6 +29764,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state[16]),
         .I2(Q[16]),
         .O(D[44]));
+  (* SOFT_HLUTNM = "soft_lutpair249" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[4]_i_1__0 
@@ -28942,6 +29772,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(Q[31]),
         .I2(add_const_state[31]),
         .O(D[3]));
+  (* SOFT_HLUTNM = "soft_lutpair263" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[50]_i_1__1 
@@ -28949,6 +29780,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state[17]),
         .I2(Q[17]),
         .O(D[45]));
+  (* SOFT_HLUTNM = "soft_lutpair264" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[51]_i_1__1 
@@ -28956,6 +29788,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state[18]),
         .I2(Q[18]),
         .O(D[46]));
+  (* SOFT_HLUTNM = "soft_lutpair265" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[52]_i_1__1 
@@ -28963,6 +29796,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state[19]),
         .I2(Q[19]),
         .O(D[47]));
+  (* SOFT_HLUTNM = "soft_lutpair266" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[53]_i_1__1 
@@ -28970,6 +29804,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state[20]),
         .I2(Q[20]),
         .O(D[48]));
+  (* SOFT_HLUTNM = "soft_lutpair267" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[54]_i_1__1 
@@ -28977,6 +29812,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state[21]),
         .I2(Q[21]),
         .O(D[49]));
+  (* SOFT_HLUTNM = "soft_lutpair268" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[55]_i_1__1 
@@ -28984,6 +29820,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state[22]),
         .I2(Q[22]),
         .O(D[50]));
+  (* SOFT_HLUTNM = "soft_lutpair269" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[56]_i_1__1 
@@ -28991,6 +29828,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state[23]),
         .I2(Q[23]),
         .O(D[51]));
+  (* SOFT_HLUTNM = "soft_lutpair270" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[57]_i_1__1 
@@ -28998,6 +29836,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state[24]),
         .I2(Q[24]),
         .O(D[52]));
+  (* SOFT_HLUTNM = "soft_lutpair271" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[58]_i_1__1 
@@ -29005,6 +29844,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state[25]),
         .I2(Q[25]),
         .O(D[53]));
+  (* SOFT_HLUTNM = "soft_lutpair272" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[59]_i_1__1 
@@ -29012,6 +29852,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state[26]),
         .I2(Q[26]),
         .O(D[54]));
+  (* SOFT_HLUTNM = "soft_lutpair250" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[5]_i_1__1 
@@ -29019,6 +29860,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(Q[32]),
         .I2(add_const_state[32]),
         .O(D[4]));
+  (* SOFT_HLUTNM = "soft_lutpair273" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[60]_i_1__1 
@@ -29026,6 +29868,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state[27]),
         .I2(Q[27]),
         .O(D[55]));
+  (* SOFT_HLUTNM = "soft_lutpair277" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[61]_i_1__2 
@@ -29033,6 +29876,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state_0[28]),
         .I2(\state_out_reg[31] [29]),
         .O(\state_out_reg[127] [4]));
+  (* SOFT_HLUTNM = "soft_lutpair278" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[62]_i_1__2 
@@ -29040,6 +29884,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state_0[29]),
         .I2(\state_out_reg[31] [30]),
         .O(\state_out_reg[127] [5]));
+  (* SOFT_HLUTNM = "soft_lutpair279" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[63]_i_1__2 
@@ -29047,6 +29892,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state_0[30]),
         .I2(\state_out_reg[31] [31]),
         .O(\state_out_reg[127] [6]));
+  (* SOFT_HLUTNM = "soft_lutpair280" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[65]_i_1__2 
@@ -29054,6 +29900,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state_0[32]),
         .I2(\state_out_reg[31] [33]),
         .O(\state_out_reg[127] [7]));
+  (* SOFT_HLUTNM = "soft_lutpair281" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[66]_i_1__2 
@@ -29061,6 +29908,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state_0[33]),
         .I2(\state_out_reg[31] [34]),
         .O(\state_out_reg[127] [8]));
+  (* SOFT_HLUTNM = "soft_lutpair282" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[67]_i_1__2 
@@ -29068,6 +29916,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state_0[34]),
         .I2(\state_out_reg[31] [35]),
         .O(\state_out_reg[127] [9]));
+  (* SOFT_HLUTNM = "soft_lutpair283" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[68]_i_1__2 
@@ -29075,6 +29924,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state_0[35]),
         .I2(\state_out_reg[31] [36]),
         .O(\state_out_reg[127] [10]));
+  (* SOFT_HLUTNM = "soft_lutpair284" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[69]_i_1__2 
@@ -29082,6 +29932,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state_0[36]),
         .I2(\state_out_reg[31] [37]),
         .O(\state_out_reg[127] [11]));
+  (* SOFT_HLUTNM = "soft_lutpair251" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[6]_i_1__1 
@@ -29089,6 +29940,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(Q[33]),
         .I2(add_const_state[33]),
         .O(D[5]));
+  (* SOFT_HLUTNM = "soft_lutpair285" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[70]_i_1__2 
@@ -29096,6 +29948,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state_0[37]),
         .I2(\state_out_reg[31] [38]),
         .O(\state_out_reg[127] [12]));
+  (* SOFT_HLUTNM = "soft_lutpair286" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[71]_i_1__2 
@@ -29103,6 +29956,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state_0[38]),
         .I2(\state_out_reg[31] [39]),
         .O(\state_out_reg[127] [13]));
+  (* SOFT_HLUTNM = "soft_lutpair287" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[72]_i_1__2 
@@ -29110,6 +29964,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state_0[39]),
         .I2(\state_out_reg[31] [40]),
         .O(\state_out_reg[127] [14]));
+  (* SOFT_HLUTNM = "soft_lutpair288" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[73]_i_1__2 
@@ -29117,6 +29972,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state_0[40]),
         .I2(\state_out_reg[31] [41]),
         .O(\state_out_reg[127] [15]));
+  (* SOFT_HLUTNM = "soft_lutpair289" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[74]_i_1__2 
@@ -29124,6 +29980,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state_0[41]),
         .I2(\state_out_reg[31] [42]),
         .O(\state_out_reg[127] [16]));
+  (* SOFT_HLUTNM = "soft_lutpair290" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[75]_i_1__2 
@@ -29131,6 +29988,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state_0[42]),
         .I2(\state_out_reg[31] [43]),
         .O(\state_out_reg[127] [17]));
+  (* SOFT_HLUTNM = "soft_lutpair291" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[76]_i_1__2 
@@ -29138,6 +29996,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state_0[43]),
         .I2(\state_out_reg[31] [44]),
         .O(\state_out_reg[127] [18]));
+  (* SOFT_HLUTNM = "soft_lutpair292" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[77]_i_1__2 
@@ -29145,6 +30004,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state_0[44]),
         .I2(\state_out_reg[31] [45]),
         .O(\state_out_reg[127] [19]));
+  (* SOFT_HLUTNM = "soft_lutpair293" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[78]_i_1__2 
@@ -29152,6 +30012,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state_0[45]),
         .I2(\state_out_reg[31] [46]),
         .O(\state_out_reg[127] [20]));
+  (* SOFT_HLUTNM = "soft_lutpair294" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[79]_i_1__2 
@@ -29159,6 +30020,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state_0[46]),
         .I2(\state_out_reg[31] [47]),
         .O(\state_out_reg[127] [21]));
+  (* SOFT_HLUTNM = "soft_lutpair252" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[7]_i_1__1 
@@ -29166,6 +30028,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(Q[34]),
         .I2(add_const_state[34]),
         .O(D[6]));
+  (* SOFT_HLUTNM = "soft_lutpair295" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[80]_i_1__2 
@@ -29173,6 +30036,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state_0[47]),
         .I2(\state_out_reg[31] [48]),
         .O(\state_out_reg[127] [22]));
+  (* SOFT_HLUTNM = "soft_lutpair296" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[81]_i_1__2 
@@ -29180,6 +30044,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state_0[48]),
         .I2(\state_out_reg[31] [49]),
         .O(\state_out_reg[127] [23]));
+  (* SOFT_HLUTNM = "soft_lutpair297" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[82]_i_1__2 
@@ -29187,6 +30052,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state_0[49]),
         .I2(\state_out_reg[31] [50]),
         .O(\state_out_reg[127] [24]));
+  (* SOFT_HLUTNM = "soft_lutpair298" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[83]_i_1__2 
@@ -29194,6 +30060,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state_0[50]),
         .I2(\state_out_reg[31] [51]),
         .O(\state_out_reg[127] [25]));
+  (* SOFT_HLUTNM = "soft_lutpair299" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[84]_i_1__2 
@@ -29201,6 +30068,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state_0[51]),
         .I2(\state_out_reg[31] [52]),
         .O(\state_out_reg[127] [26]));
+  (* SOFT_HLUTNM = "soft_lutpair300" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[85]_i_1__2 
@@ -29208,6 +30076,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state_0[52]),
         .I2(\state_out_reg[31] [53]),
         .O(\state_out_reg[127] [27]));
+  (* SOFT_HLUTNM = "soft_lutpair301" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[86]_i_1__2 
@@ -29215,6 +30084,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state_0[53]),
         .I2(\state_out_reg[31] [54]),
         .O(\state_out_reg[127] [28]));
+  (* SOFT_HLUTNM = "soft_lutpair302" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[87]_i_1__2 
@@ -29222,6 +30092,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state_0[54]),
         .I2(\state_out_reg[31] [55]),
         .O(\state_out_reg[127] [29]));
+  (* SOFT_HLUTNM = "soft_lutpair303" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[88]_i_1__2 
@@ -29229,6 +30100,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state_0[55]),
         .I2(\state_out_reg[31] [56]),
         .O(\state_out_reg[127] [30]));
+  (* SOFT_HLUTNM = "soft_lutpair304" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[89]_i_1__2 
@@ -29236,6 +30108,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state_0[56]),
         .I2(\state_out_reg[31] [57]),
         .O(\state_out_reg[127] [31]));
+  (* SOFT_HLUTNM = "soft_lutpair253" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[8]_i_1__1 
@@ -29243,6 +30116,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(Q[35]),
         .I2(add_const_state[35]),
         .O(D[7]));
+  (* SOFT_HLUTNM = "soft_lutpair305" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[90]_i_1__2 
@@ -29250,6 +30124,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state_0[57]),
         .I2(\state_out_reg[31] [58]),
         .O(\state_out_reg[127] [32]));
+  (* SOFT_HLUTNM = "soft_lutpair306" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[91]_i_1__2 
@@ -29257,6 +30132,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state_0[58]),
         .I2(\state_out_reg[31] [59]),
         .O(\state_out_reg[127] [33]));
+  (* SOFT_HLUTNM = "soft_lutpair307" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[92]_i_1__2 
@@ -29264,6 +30140,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state_0[59]),
         .I2(\state_out_reg[31] [60]),
         .O(\state_out_reg[127] [34]));
+  (* SOFT_HLUTNM = "soft_lutpair277" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[93]_i_1__2 
@@ -29271,6 +30148,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state_0[60]),
         .I2(\state_out_reg[31] [61]),
         .O(\state_out_reg[127] [35]));
+  (* SOFT_HLUTNM = "soft_lutpair278" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[94]_i_1__2 
@@ -29278,6 +30156,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state_0[61]),
         .I2(\state_out_reg[31] [62]),
         .O(\state_out_reg[127] [36]));
+  (* SOFT_HLUTNM = "soft_lutpair279" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[95]_i_1__2 
@@ -29285,6 +30164,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(add_const_state_0[62]),
         .I2(\state_out_reg[31] [63]),
         .O(\state_out_reg[127] [37]));
+  (* SOFT_HLUTNM = "soft_lutpair308" *) 
   LUT3 #(
     .INIT(8'hA9)) 
     \state_out[96]_i_1__2 
@@ -29292,6 +30172,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(\state_out_reg[31] [0]),
         .I2(CO),
         .O(\state_out_reg[127] [38]));
+  (* SOFT_HLUTNM = "soft_lutpair280" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[97]_i_1__2 
@@ -29299,6 +30180,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(\state_out_reg[31] [1]),
         .I2(add_const_state_0[0]),
         .O(\state_out_reg[127] [39]));
+  (* SOFT_HLUTNM = "soft_lutpair281" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[98]_i_1__2 
@@ -29306,6 +30188,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(\state_out_reg[31] [2]),
         .I2(add_const_state_0[1]),
         .O(\state_out_reg[127] [40]));
+  (* SOFT_HLUTNM = "soft_lutpair282" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[99]_i_1__2 
@@ -29313,6 +30196,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_21
         .I1(\state_out_reg[31] [3]),
         .I2(add_const_state_0[2]),
         .O(\state_out_reg[127] [41]));
+  (* SOFT_HLUTNM = "soft_lutpair254" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[9]_i_1__1 
@@ -29347,6 +30231,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
   wire [47:0]\state_out_reg[28] ;
   wire [0:0]\state_out_reg[96] ;
 
+  (* SOFT_HLUTNM = "soft_lutpair220" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[100]_i_1__1 
@@ -29354,6 +30239,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(Q[4]),
         .I2(add_const_state_0[3]),
         .O(\state_out_reg[127] [42]));
+  (* SOFT_HLUTNM = "soft_lutpair221" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[101]_i_1__1 
@@ -29361,6 +30247,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(Q[5]),
         .I2(add_const_state_0[4]),
         .O(\state_out_reg[127] [43]));
+  (* SOFT_HLUTNM = "soft_lutpair222" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[102]_i_1__1 
@@ -29368,6 +30255,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(Q[6]),
         .I2(add_const_state_0[5]),
         .O(\state_out_reg[127] [44]));
+  (* SOFT_HLUTNM = "soft_lutpair223" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[103]_i_1__1 
@@ -29375,6 +30263,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(Q[7]),
         .I2(add_const_state_0[6]),
         .O(\state_out_reg[127] [45]));
+  (* SOFT_HLUTNM = "soft_lutpair224" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[104]_i_1__1 
@@ -29382,6 +30271,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(Q[8]),
         .I2(add_const_state_0[7]),
         .O(\state_out_reg[127] [46]));
+  (* SOFT_HLUTNM = "soft_lutpair225" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[105]_i_1__1 
@@ -29389,6 +30279,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(Q[9]),
         .I2(add_const_state_0[8]),
         .O(\state_out_reg[127] [47]));
+  (* SOFT_HLUTNM = "soft_lutpair226" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[106]_i_1__1 
@@ -29396,6 +30287,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(Q[10]),
         .I2(add_const_state_0[9]),
         .O(\state_out_reg[127] [48]));
+  (* SOFT_HLUTNM = "soft_lutpair227" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[107]_i_1__1 
@@ -29403,6 +30295,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(Q[11]),
         .I2(add_const_state_0[10]),
         .O(\state_out_reg[127] [49]));
+  (* SOFT_HLUTNM = "soft_lutpair228" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[108]_i_1__1 
@@ -29410,6 +30303,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(Q[12]),
         .I2(add_const_state_0[11]),
         .O(\state_out_reg[127] [50]));
+  (* SOFT_HLUTNM = "soft_lutpair229" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[109]_i_1__1 
@@ -29417,6 +30311,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(Q[13]),
         .I2(add_const_state_0[12]),
         .O(\state_out_reg[127] [51]));
+  (* SOFT_HLUTNM = "soft_lutpair192" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[10]_i_1__0 
@@ -29424,6 +30319,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(\state_out_reg[28] [29]),
         .I2(add_const_state[29]),
         .O(D[5]));
+  (* SOFT_HLUTNM = "soft_lutpair230" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[110]_i_1__1 
@@ -29431,6 +30327,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(Q[14]),
         .I2(add_const_state_0[13]),
         .O(\state_out_reg[127] [52]));
+  (* SOFT_HLUTNM = "soft_lutpair231" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[111]_i_1__1 
@@ -29438,6 +30335,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(Q[15]),
         .I2(add_const_state_0[14]),
         .O(\state_out_reg[127] [53]));
+  (* SOFT_HLUTNM = "soft_lutpair232" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[112]_i_1__1 
@@ -29445,6 +30343,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(Q[16]),
         .I2(add_const_state_0[15]),
         .O(\state_out_reg[127] [54]));
+  (* SOFT_HLUTNM = "soft_lutpair233" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[113]_i_1__1 
@@ -29452,6 +30351,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(Q[17]),
         .I2(add_const_state_0[16]),
         .O(\state_out_reg[127] [55]));
+  (* SOFT_HLUTNM = "soft_lutpair234" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[114]_i_1__1 
@@ -29459,6 +30359,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(Q[18]),
         .I2(add_const_state_0[17]),
         .O(\state_out_reg[127] [56]));
+  (* SOFT_HLUTNM = "soft_lutpair235" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[115]_i_1__1 
@@ -29466,6 +30367,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(Q[19]),
         .I2(add_const_state_0[18]),
         .O(\state_out_reg[127] [57]));
+  (* SOFT_HLUTNM = "soft_lutpair236" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[116]_i_1__1 
@@ -29473,6 +30375,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(Q[20]),
         .I2(add_const_state_0[19]),
         .O(\state_out_reg[127] [58]));
+  (* SOFT_HLUTNM = "soft_lutpair237" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[117]_i_1__1 
@@ -29480,6 +30383,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(Q[21]),
         .I2(add_const_state_0[20]),
         .O(\state_out_reg[127] [59]));
+  (* SOFT_HLUTNM = "soft_lutpair238" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[118]_i_1__1 
@@ -29487,6 +30391,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(Q[22]),
         .I2(add_const_state_0[21]),
         .O(\state_out_reg[127] [60]));
+  (* SOFT_HLUTNM = "soft_lutpair239" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[119]_i_1__1 
@@ -29494,6 +30399,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(Q[23]),
         .I2(add_const_state_0[22]),
         .O(\state_out_reg[127] [61]));
+  (* SOFT_HLUTNM = "soft_lutpair193" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[11]_i_1__0 
@@ -29501,6 +30407,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(\state_out_reg[28] [30]),
         .I2(add_const_state[30]),
         .O(D[6]));
+  (* SOFT_HLUTNM = "soft_lutpair240" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[120]_i_1__1 
@@ -29508,6 +30415,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(Q[24]),
         .I2(add_const_state_0[23]),
         .O(\state_out_reg[127] [62]));
+  (* SOFT_HLUTNM = "soft_lutpair241" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[121]_i_1__1 
@@ -29515,6 +30423,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(Q[25]),
         .I2(add_const_state_0[24]),
         .O(\state_out_reg[127] [63]));
+  (* SOFT_HLUTNM = "soft_lutpair242" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[122]_i_1__1 
@@ -29522,6 +30431,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(Q[26]),
         .I2(add_const_state_0[25]),
         .O(\state_out_reg[127] [64]));
+  (* SOFT_HLUTNM = "soft_lutpair243" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[123]_i_1__1 
@@ -29529,6 +30439,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(Q[27]),
         .I2(add_const_state_0[26]),
         .O(\state_out_reg[127] [65]));
+  (* SOFT_HLUTNM = "soft_lutpair244" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[124]_i_1__1 
@@ -29536,6 +30447,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(Q[28]),
         .I2(add_const_state_0[27]),
         .O(\state_out_reg[127] [66]));
+  (* SOFT_HLUTNM = "soft_lutpair211" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[125]_i_1__1 
@@ -29543,6 +30455,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(Q[29]),
         .I2(add_const_state_0[28]),
         .O(\state_out_reg[127] [67]));
+  (* SOFT_HLUTNM = "soft_lutpair212" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[126]_i_1__1 
@@ -29550,6 +30463,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(Q[30]),
         .I2(add_const_state_0[29]),
         .O(\state_out_reg[127] [68]));
+  (* SOFT_HLUTNM = "soft_lutpair213" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[127]_i_1__1 
@@ -29557,6 +30471,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(Q[31]),
         .I2(add_const_state_0[30]),
         .O(\state_out_reg[127] [69]));
+  (* SOFT_HLUTNM = "soft_lutpair194" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[12]_i_1__0 
@@ -29564,6 +30479,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(\state_out_reg[28] [31]),
         .I2(add_const_state[31]),
         .O(D[7]));
+  (* SOFT_HLUTNM = "soft_lutpair195" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[13]_i_1__0 
@@ -29571,6 +30487,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(\state_out_reg[28] [32]),
         .I2(add_const_state[32]),
         .O(D[8]));
+  (* SOFT_HLUTNM = "soft_lutpair196" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[14]_i_1__0 
@@ -29578,6 +30495,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(\state_out_reg[28] [33]),
         .I2(add_const_state[33]),
         .O(D[9]));
+  (* SOFT_HLUTNM = "soft_lutpair197" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[15]_i_1__0 
@@ -29585,6 +30503,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(\state_out_reg[28] [34]),
         .I2(add_const_state[34]),
         .O(D[10]));
+  (* SOFT_HLUTNM = "soft_lutpair198" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[16]_i_1__0 
@@ -29592,6 +30511,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(\state_out_reg[28] [35]),
         .I2(add_const_state[35]),
         .O(D[11]));
+  (* SOFT_HLUTNM = "soft_lutpair199" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[17]_i_1__0 
@@ -29599,6 +30519,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(\state_out_reg[28] [36]),
         .I2(add_const_state[36]),
         .O(D[12]));
+  (* SOFT_HLUTNM = "soft_lutpair200" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[18]_i_1__0 
@@ -29606,6 +30527,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(\state_out_reg[28] [37]),
         .I2(add_const_state[37]),
         .O(D[13]));
+  (* SOFT_HLUTNM = "soft_lutpair201" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[19]_i_1__0 
@@ -29613,6 +30535,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(\state_out_reg[28] [38]),
         .I2(add_const_state[38]),
         .O(D[14]));
+  (* SOFT_HLUTNM = "soft_lutpair202" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[20]_i_1__0 
@@ -29620,6 +30543,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(\state_out_reg[28] [39]),
         .I2(add_const_state[39]),
         .O(D[15]));
+  (* SOFT_HLUTNM = "soft_lutpair203" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[21]_i_1__0 
@@ -29627,6 +30551,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(\state_out_reg[28] [40]),
         .I2(add_const_state[40]),
         .O(D[16]));
+  (* SOFT_HLUTNM = "soft_lutpair204" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[22]_i_1__0 
@@ -29634,6 +30559,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(\state_out_reg[28] [41]),
         .I2(add_const_state[41]),
         .O(D[17]));
+  (* SOFT_HLUTNM = "soft_lutpair205" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[23]_i_1__0 
@@ -29641,6 +30567,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(\state_out_reg[28] [42]),
         .I2(add_const_state[42]),
         .O(D[18]));
+  (* SOFT_HLUTNM = "soft_lutpair206" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[24]_i_1__0 
@@ -29648,6 +30575,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(\state_out_reg[28] [43]),
         .I2(add_const_state[43]),
         .O(D[19]));
+  (* SOFT_HLUTNM = "soft_lutpair207" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[25]_i_1__0 
@@ -29655,6 +30583,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(\state_out_reg[28] [44]),
         .I2(add_const_state[44]),
         .O(D[20]));
+  (* SOFT_HLUTNM = "soft_lutpair208" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[26]_i_1__0 
@@ -29662,6 +30591,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(\state_out_reg[28] [45]),
         .I2(add_const_state[45]),
         .O(D[21]));
+  (* SOFT_HLUTNM = "soft_lutpair209" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[27]_i_1__0 
@@ -29669,6 +30599,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(\state_out_reg[28] [46]),
         .I2(add_const_state[46]),
         .O(D[22]));
+  (* SOFT_HLUTNM = "soft_lutpair210" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[28]_i_1__0 
@@ -29676,6 +30607,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(\state_out_reg[28] [47]),
         .I2(add_const_state[47]),
         .O(D[23]));
+  (* SOFT_HLUTNM = "soft_lutpair211" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[29]_i_1__1 
@@ -29683,6 +30615,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(Q[61]),
         .I2(add_const_state_0[60]),
         .O(\state_out_reg[127] [0]));
+  (* SOFT_HLUTNM = "soft_lutpair212" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[30]_i_1__1 
@@ -29690,6 +30623,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(Q[62]),
         .I2(add_const_state_0[61]),
         .O(\state_out_reg[127] [1]));
+  (* SOFT_HLUTNM = "soft_lutpair213" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[31]_i_1__1 
@@ -29697,6 +30631,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(Q[63]),
         .I2(add_const_state_0[62]),
         .O(\state_out_reg[127] [2]));
+  (* SOFT_HLUTNM = "soft_lutpair245" *) 
   LUT3 #(
     .INIT(8'h6A)) 
     \state_out[32]_i_1__1 
@@ -29704,6 +30639,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(\state_out_reg[96] ),
         .I2(Q[0]),
         .O(\state_out_reg[127] [3]));
+  (* SOFT_HLUTNM = "soft_lutpair187" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[37]_i_1__0 
@@ -29711,6 +30647,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state[0]),
         .I2(\state_out_reg[28] [0]),
         .O(D[24]));
+  (* SOFT_HLUTNM = "soft_lutpair188" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[38]_i_1__0 
@@ -29718,6 +30655,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state[1]),
         .I2(\state_out_reg[28] [1]),
         .O(D[25]));
+  (* SOFT_HLUTNM = "soft_lutpair189" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[39]_i_1__0 
@@ -29725,6 +30663,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state[2]),
         .I2(\state_out_reg[28] [2]),
         .O(D[26]));
+  (* SOFT_HLUTNM = "soft_lutpair190" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[40]_i_1__0 
@@ -29732,6 +30671,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state[3]),
         .I2(\state_out_reg[28] [3]),
         .O(D[27]));
+  (* SOFT_HLUTNM = "soft_lutpair191" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[41]_i_1__0 
@@ -29739,6 +30679,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state[4]),
         .I2(\state_out_reg[28] [4]),
         .O(D[28]));
+  (* SOFT_HLUTNM = "soft_lutpair192" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[42]_i_1__0 
@@ -29746,6 +30687,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state[5]),
         .I2(\state_out_reg[28] [5]),
         .O(D[29]));
+  (* SOFT_HLUTNM = "soft_lutpair193" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[43]_i_1__0 
@@ -29753,6 +30695,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state[6]),
         .I2(\state_out_reg[28] [6]),
         .O(D[30]));
+  (* SOFT_HLUTNM = "soft_lutpair194" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[44]_i_1__0 
@@ -29760,6 +30703,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state[7]),
         .I2(\state_out_reg[28] [7]),
         .O(D[31]));
+  (* SOFT_HLUTNM = "soft_lutpair195" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[45]_i_1__0 
@@ -29767,6 +30711,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state[8]),
         .I2(\state_out_reg[28] [8]),
         .O(D[32]));
+  (* SOFT_HLUTNM = "soft_lutpair196" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[46]_i_1__0 
@@ -29774,6 +30719,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state[9]),
         .I2(\state_out_reg[28] [9]),
         .O(D[33]));
+  (* SOFT_HLUTNM = "soft_lutpair197" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[47]_i_1__0 
@@ -29781,6 +30727,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state[10]),
         .I2(\state_out_reg[28] [10]),
         .O(D[34]));
+  (* SOFT_HLUTNM = "soft_lutpair198" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[48]_i_1__0 
@@ -29788,6 +30735,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state[11]),
         .I2(\state_out_reg[28] [11]),
         .O(D[35]));
+  (* SOFT_HLUTNM = "soft_lutpair199" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[49]_i_1__0 
@@ -29795,6 +30743,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state[12]),
         .I2(\state_out_reg[28] [12]),
         .O(D[36]));
+  (* SOFT_HLUTNM = "soft_lutpair200" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[50]_i_1__0 
@@ -29802,6 +30751,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state[13]),
         .I2(\state_out_reg[28] [13]),
         .O(D[37]));
+  (* SOFT_HLUTNM = "soft_lutpair201" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[51]_i_1__0 
@@ -29809,6 +30759,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state[14]),
         .I2(\state_out_reg[28] [14]),
         .O(D[38]));
+  (* SOFT_HLUTNM = "soft_lutpair202" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[52]_i_1__0 
@@ -29816,6 +30767,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state[15]),
         .I2(\state_out_reg[28] [15]),
         .O(D[39]));
+  (* SOFT_HLUTNM = "soft_lutpair203" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[53]_i_1__0 
@@ -29823,6 +30775,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state[16]),
         .I2(\state_out_reg[28] [16]),
         .O(D[40]));
+  (* SOFT_HLUTNM = "soft_lutpair204" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[54]_i_1__0 
@@ -29830,6 +30783,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state[17]),
         .I2(\state_out_reg[28] [17]),
         .O(D[41]));
+  (* SOFT_HLUTNM = "soft_lutpair205" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[55]_i_1__0 
@@ -29837,6 +30791,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state[18]),
         .I2(\state_out_reg[28] [18]),
         .O(D[42]));
+  (* SOFT_HLUTNM = "soft_lutpair206" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[56]_i_1__0 
@@ -29844,6 +30799,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state[19]),
         .I2(\state_out_reg[28] [19]),
         .O(D[43]));
+  (* SOFT_HLUTNM = "soft_lutpair207" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[57]_i_1__0 
@@ -29851,6 +30807,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state[20]),
         .I2(\state_out_reg[28] [20]),
         .O(D[44]));
+  (* SOFT_HLUTNM = "soft_lutpair208" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[58]_i_1__0 
@@ -29858,6 +30815,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state[21]),
         .I2(\state_out_reg[28] [21]),
         .O(D[45]));
+  (* SOFT_HLUTNM = "soft_lutpair209" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[59]_i_1__0 
@@ -29865,6 +30823,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state[22]),
         .I2(\state_out_reg[28] [22]),
         .O(D[46]));
+  (* SOFT_HLUTNM = "soft_lutpair187" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[5]_i_1__0 
@@ -29872,6 +30831,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(\state_out_reg[28] [24]),
         .I2(add_const_state[24]),
         .O(D[0]));
+  (* SOFT_HLUTNM = "soft_lutpair210" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[60]_i_1__0 
@@ -29879,6 +30839,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state[23]),
         .I2(\state_out_reg[28] [23]),
         .O(D[47]));
+  (* SOFT_HLUTNM = "soft_lutpair214" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[61]_i_1__1 
@@ -29886,6 +30847,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state_0[28]),
         .I2(Q[29]),
         .O(\state_out_reg[127] [4]));
+  (* SOFT_HLUTNM = "soft_lutpair215" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[62]_i_1__1 
@@ -29893,6 +30855,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state_0[29]),
         .I2(Q[30]),
         .O(\state_out_reg[127] [5]));
+  (* SOFT_HLUTNM = "soft_lutpair216" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[63]_i_1__1 
@@ -29900,6 +30863,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state_0[30]),
         .I2(Q[31]),
         .O(\state_out_reg[127] [6]));
+  (* SOFT_HLUTNM = "soft_lutpair217" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[65]_i_1__1 
@@ -29907,6 +30871,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state_0[32]),
         .I2(Q[33]),
         .O(\state_out_reg[127] [7]));
+  (* SOFT_HLUTNM = "soft_lutpair218" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[66]_i_1__1 
@@ -29914,6 +30879,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state_0[33]),
         .I2(Q[34]),
         .O(\state_out_reg[127] [8]));
+  (* SOFT_HLUTNM = "soft_lutpair219" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[67]_i_1__1 
@@ -29921,6 +30887,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state_0[34]),
         .I2(Q[35]),
         .O(\state_out_reg[127] [9]));
+  (* SOFT_HLUTNM = "soft_lutpair220" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[68]_i_1__1 
@@ -29928,6 +30895,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state_0[35]),
         .I2(Q[36]),
         .O(\state_out_reg[127] [10]));
+  (* SOFT_HLUTNM = "soft_lutpair221" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[69]_i_1__1 
@@ -29935,6 +30903,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state_0[36]),
         .I2(Q[37]),
         .O(\state_out_reg[127] [11]));
+  (* SOFT_HLUTNM = "soft_lutpair188" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[6]_i_1__0 
@@ -29942,6 +30911,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(\state_out_reg[28] [25]),
         .I2(add_const_state[25]),
         .O(D[1]));
+  (* SOFT_HLUTNM = "soft_lutpair222" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[70]_i_1__1 
@@ -29949,6 +30919,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state_0[37]),
         .I2(Q[38]),
         .O(\state_out_reg[127] [12]));
+  (* SOFT_HLUTNM = "soft_lutpair223" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[71]_i_1__1 
@@ -29956,6 +30927,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state_0[38]),
         .I2(Q[39]),
         .O(\state_out_reg[127] [13]));
+  (* SOFT_HLUTNM = "soft_lutpair224" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[72]_i_1__1 
@@ -29963,6 +30935,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state_0[39]),
         .I2(Q[40]),
         .O(\state_out_reg[127] [14]));
+  (* SOFT_HLUTNM = "soft_lutpair225" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[73]_i_1__1 
@@ -29970,6 +30943,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state_0[40]),
         .I2(Q[41]),
         .O(\state_out_reg[127] [15]));
+  (* SOFT_HLUTNM = "soft_lutpair226" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[74]_i_1__1 
@@ -29977,6 +30951,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state_0[41]),
         .I2(Q[42]),
         .O(\state_out_reg[127] [16]));
+  (* SOFT_HLUTNM = "soft_lutpair227" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[75]_i_1__1 
@@ -29984,6 +30959,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state_0[42]),
         .I2(Q[43]),
         .O(\state_out_reg[127] [17]));
+  (* SOFT_HLUTNM = "soft_lutpair228" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[76]_i_1__1 
@@ -29991,6 +30967,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state_0[43]),
         .I2(Q[44]),
         .O(\state_out_reg[127] [18]));
+  (* SOFT_HLUTNM = "soft_lutpair229" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[77]_i_1__1 
@@ -29998,6 +30975,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state_0[44]),
         .I2(Q[45]),
         .O(\state_out_reg[127] [19]));
+  (* SOFT_HLUTNM = "soft_lutpair230" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[78]_i_1__1 
@@ -30005,6 +30983,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state_0[45]),
         .I2(Q[46]),
         .O(\state_out_reg[127] [20]));
+  (* SOFT_HLUTNM = "soft_lutpair231" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[79]_i_1__1 
@@ -30012,6 +30991,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state_0[46]),
         .I2(Q[47]),
         .O(\state_out_reg[127] [21]));
+  (* SOFT_HLUTNM = "soft_lutpair189" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[7]_i_1__0 
@@ -30019,6 +30999,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(\state_out_reg[28] [26]),
         .I2(add_const_state[26]),
         .O(D[2]));
+  (* SOFT_HLUTNM = "soft_lutpair232" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[80]_i_1__1 
@@ -30026,6 +31007,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state_0[47]),
         .I2(Q[48]),
         .O(\state_out_reg[127] [22]));
+  (* SOFT_HLUTNM = "soft_lutpair233" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[81]_i_1__1 
@@ -30033,6 +31015,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state_0[48]),
         .I2(Q[49]),
         .O(\state_out_reg[127] [23]));
+  (* SOFT_HLUTNM = "soft_lutpair234" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[82]_i_1__1 
@@ -30040,6 +31023,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state_0[49]),
         .I2(Q[50]),
         .O(\state_out_reg[127] [24]));
+  (* SOFT_HLUTNM = "soft_lutpair235" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[83]_i_1__1 
@@ -30047,6 +31031,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state_0[50]),
         .I2(Q[51]),
         .O(\state_out_reg[127] [25]));
+  (* SOFT_HLUTNM = "soft_lutpair236" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[84]_i_1__1 
@@ -30054,6 +31039,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state_0[51]),
         .I2(Q[52]),
         .O(\state_out_reg[127] [26]));
+  (* SOFT_HLUTNM = "soft_lutpair237" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[85]_i_1__1 
@@ -30061,6 +31047,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state_0[52]),
         .I2(Q[53]),
         .O(\state_out_reg[127] [27]));
+  (* SOFT_HLUTNM = "soft_lutpair238" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[86]_i_1__1 
@@ -30068,6 +31055,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state_0[53]),
         .I2(Q[54]),
         .O(\state_out_reg[127] [28]));
+  (* SOFT_HLUTNM = "soft_lutpair239" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[87]_i_1__1 
@@ -30075,6 +31063,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state_0[54]),
         .I2(Q[55]),
         .O(\state_out_reg[127] [29]));
+  (* SOFT_HLUTNM = "soft_lutpair240" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[88]_i_1__1 
@@ -30082,6 +31071,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state_0[55]),
         .I2(Q[56]),
         .O(\state_out_reg[127] [30]));
+  (* SOFT_HLUTNM = "soft_lutpair241" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[89]_i_1__1 
@@ -30089,6 +31079,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state_0[56]),
         .I2(Q[57]),
         .O(\state_out_reg[127] [31]));
+  (* SOFT_HLUTNM = "soft_lutpair190" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[8]_i_1__0 
@@ -30096,6 +31087,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(\state_out_reg[28] [27]),
         .I2(add_const_state[27]),
         .O(D[3]));
+  (* SOFT_HLUTNM = "soft_lutpair242" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[90]_i_1__1 
@@ -30103,6 +31095,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state_0[57]),
         .I2(Q[58]),
         .O(\state_out_reg[127] [32]));
+  (* SOFT_HLUTNM = "soft_lutpair243" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[91]_i_1__1 
@@ -30110,6 +31103,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state_0[58]),
         .I2(Q[59]),
         .O(\state_out_reg[127] [33]));
+  (* SOFT_HLUTNM = "soft_lutpair244" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[92]_i_1__1 
@@ -30117,6 +31111,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state_0[59]),
         .I2(Q[60]),
         .O(\state_out_reg[127] [34]));
+  (* SOFT_HLUTNM = "soft_lutpair214" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[93]_i_1__1 
@@ -30124,6 +31119,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state_0[60]),
         .I2(Q[61]),
         .O(\state_out_reg[127] [35]));
+  (* SOFT_HLUTNM = "soft_lutpair215" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[94]_i_1__1 
@@ -30131,6 +31127,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state_0[61]),
         .I2(Q[62]),
         .O(\state_out_reg[127] [36]));
+  (* SOFT_HLUTNM = "soft_lutpair216" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[95]_i_1__1 
@@ -30138,6 +31135,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(add_const_state_0[62]),
         .I2(Q[63]),
         .O(\state_out_reg[127] [37]));
+  (* SOFT_HLUTNM = "soft_lutpair245" *) 
   LUT3 #(
     .INIT(8'hA9)) 
     \state_out[96]_i_1__1 
@@ -30145,6 +31143,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(Q[0]),
         .I2(\state_out_reg[96] ),
         .O(\state_out_reg[127] [38]));
+  (* SOFT_HLUTNM = "soft_lutpair217" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[97]_i_1__1 
@@ -30152,6 +31151,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(Q[1]),
         .I2(add_const_state_0[0]),
         .O(\state_out_reg[127] [39]));
+  (* SOFT_HLUTNM = "soft_lutpair218" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[98]_i_1__1 
@@ -30159,6 +31159,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(Q[2]),
         .I2(add_const_state_0[1]),
         .O(\state_out_reg[127] [40]));
+  (* SOFT_HLUTNM = "soft_lutpair219" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[99]_i_1__1 
@@ -30166,6 +31167,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_23
         .I1(Q[3]),
         .I2(add_const_state_0[2]),
         .O(\state_out_reg[127] [41]));
+  (* SOFT_HLUTNM = "soft_lutpair191" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[9]_i_1__0 
@@ -30203,6 +31205,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
   wire [124:0]state_out0_carry__6;
   wire [2:0]\state_out_reg[98] ;
 
+  (* SOFT_HLUTNM = "soft_lutpair130" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[100]_i_1 
@@ -30217,6 +31220,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[4]),
         .I2(Q[8]),
         .O(D[49]));
+  (* SOFT_HLUTNM = "soft_lutpair131" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[101]_i_1 
@@ -30224,7 +31228,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[66]),
         .I2(add_const_state_0[2]),
         .O(state_out0_carry__6[98]));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair105" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[101]_i_1__0 
@@ -30232,6 +31236,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[9]),
         .I2(add_const_state[0]),
         .O(D[50]));
+  (* SOFT_HLUTNM = "soft_lutpair132" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[102]_i_1 
@@ -30239,7 +31244,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[67]),
         .I2(add_const_state_0[3]),
         .O(state_out0_carry__6[99]));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair106" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[102]_i_1__0 
@@ -30247,6 +31252,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[10]),
         .I2(add_const_state[1]),
         .O(D[51]));
+  (* SOFT_HLUTNM = "soft_lutpair133" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[103]_i_1 
@@ -30254,7 +31260,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[68]),
         .I2(add_const_state_0[4]),
         .O(state_out0_carry__6[100]));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  (* SOFT_HLUTNM = "soft_lutpair107" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[103]_i_1__0 
@@ -30262,6 +31268,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[11]),
         .I2(add_const_state[2]),
         .O(D[52]));
+  (* SOFT_HLUTNM = "soft_lutpair134" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[104]_i_1 
@@ -30269,7 +31276,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[69]),
         .I2(add_const_state_0[5]),
         .O(state_out0_carry__6[101]));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair108" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[104]_i_1__0 
@@ -30277,6 +31284,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[12]),
         .I2(add_const_state[3]),
         .O(D[53]));
+  (* SOFT_HLUTNM = "soft_lutpair135" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[105]_i_1 
@@ -30284,7 +31292,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[70]),
         .I2(add_const_state_0[6]),
         .O(state_out0_carry__6[102]));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair109" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[105]_i_1__0 
@@ -30292,6 +31300,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[13]),
         .I2(add_const_state[4]),
         .O(D[54]));
+  (* SOFT_HLUTNM = "soft_lutpair136" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[106]_i_1 
@@ -30299,7 +31308,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[71]),
         .I2(add_const_state_0[7]),
         .O(state_out0_carry__6[103]));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair110" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[106]_i_1__0 
@@ -30307,6 +31316,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[14]),
         .I2(add_const_state[5]),
         .O(D[55]));
+  (* SOFT_HLUTNM = "soft_lutpair137" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[107]_i_1 
@@ -30314,7 +31324,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[72]),
         .I2(add_const_state_0[8]),
         .O(state_out0_carry__6[104]));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair111" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[107]_i_1__0 
@@ -30322,6 +31332,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[15]),
         .I2(add_const_state[6]),
         .O(D[56]));
+  (* SOFT_HLUTNM = "soft_lutpair138" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[108]_i_1 
@@ -30329,7 +31340,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[73]),
         .I2(add_const_state_0[9]),
         .O(state_out0_carry__6[105]));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair112" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[108]_i_1__0 
@@ -30337,6 +31348,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[16]),
         .I2(add_const_state[7]),
         .O(D[57]));
+  (* SOFT_HLUTNM = "soft_lutpair139" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[109]_i_1 
@@ -30344,7 +31356,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[74]),
         .I2(add_const_state_0[10]),
         .O(state_out0_carry__6[106]));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair113" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[109]_i_1__0 
@@ -30352,6 +31364,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[17]),
         .I2(add_const_state[8]),
         .O(D[58]));
+  (* SOFT_HLUTNM = "soft_lutpair136" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[10]_i_1 
@@ -30359,6 +31372,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[103]),
         .I2(add_const_state_0[39]),
         .O(state_out0_carry__6[8]));
+  (* SOFT_HLUTNM = "soft_lutpair140" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[110]_i_1 
@@ -30366,7 +31380,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[75]),
         .I2(add_const_state_0[11]),
         .O(state_out0_carry__6[107]));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair114" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[110]_i_1__0 
@@ -30374,6 +31388,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[18]),
         .I2(add_const_state[9]),
         .O(D[59]));
+  (* SOFT_HLUTNM = "soft_lutpair141" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[111]_i_1 
@@ -30381,7 +31396,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[76]),
         .I2(add_const_state_0[12]),
         .O(state_out0_carry__6[108]));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair115" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[111]_i_1__0 
@@ -30389,6 +31404,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[19]),
         .I2(add_const_state[10]),
         .O(D[60]));
+  (* SOFT_HLUTNM = "soft_lutpair142" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[112]_i_1 
@@ -30396,7 +31412,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[77]),
         .I2(add_const_state_0[13]),
         .O(state_out0_carry__6[109]));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair116" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[112]_i_1__0 
@@ -30404,6 +31420,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[20]),
         .I2(add_const_state[11]),
         .O(D[61]));
+  (* SOFT_HLUTNM = "soft_lutpair143" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[113]_i_1 
@@ -30411,7 +31428,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[78]),
         .I2(add_const_state_0[14]),
         .O(state_out0_carry__6[110]));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair117" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[113]_i_1__0 
@@ -30419,6 +31436,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[21]),
         .I2(add_const_state[12]),
         .O(D[62]));
+  (* SOFT_HLUTNM = "soft_lutpair144" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[114]_i_1 
@@ -30426,7 +31444,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[79]),
         .I2(add_const_state_0[15]),
         .O(state_out0_carry__6[111]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair118" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[114]_i_1__0 
@@ -30434,6 +31452,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[22]),
         .I2(add_const_state[13]),
         .O(D[63]));
+  (* SOFT_HLUTNM = "soft_lutpair145" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[115]_i_1 
@@ -30441,7 +31460,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[80]),
         .I2(add_const_state_0[16]),
         .O(state_out0_carry__6[112]));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair119" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[115]_i_1__0 
@@ -30449,6 +31468,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[23]),
         .I2(add_const_state[14]),
         .O(D[64]));
+  (* SOFT_HLUTNM = "soft_lutpair146" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[116]_i_1 
@@ -30456,7 +31476,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[81]),
         .I2(add_const_state_0[17]),
         .O(state_out0_carry__6[113]));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair120" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[116]_i_1__0 
@@ -30464,6 +31484,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[24]),
         .I2(add_const_state[15]),
         .O(D[65]));
+  (* SOFT_HLUTNM = "soft_lutpair147" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[117]_i_1 
@@ -30471,7 +31492,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[82]),
         .I2(add_const_state_0[18]),
         .O(state_out0_carry__6[114]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair121" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[117]_i_1__0 
@@ -30479,6 +31500,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[25]),
         .I2(add_const_state[16]),
         .O(D[66]));
+  (* SOFT_HLUTNM = "soft_lutpair148" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[118]_i_1 
@@ -30486,7 +31508,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[83]),
         .I2(add_const_state_0[19]),
         .O(state_out0_carry__6[115]));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair122" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[118]_i_1__0 
@@ -30494,6 +31516,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[26]),
         .I2(add_const_state[17]),
         .O(D[67]));
+  (* SOFT_HLUTNM = "soft_lutpair149" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[119]_i_1 
@@ -30501,7 +31524,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[84]),
         .I2(add_const_state_0[20]),
         .O(state_out0_carry__6[116]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair123" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[119]_i_1__0 
@@ -30509,6 +31532,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[27]),
         .I2(add_const_state[18]),
         .O(D[68]));
+  (* SOFT_HLUTNM = "soft_lutpair137" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[11]_i_1 
@@ -30516,6 +31540,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[104]),
         .I2(add_const_state_0[40]),
         .O(state_out0_carry__6[9]));
+  (* SOFT_HLUTNM = "soft_lutpair150" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[120]_i_1 
@@ -30523,7 +31548,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[85]),
         .I2(add_const_state_0[21]),
         .O(state_out0_carry__6[117]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair124" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[120]_i_1__0 
@@ -30531,6 +31556,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[28]),
         .I2(add_const_state[19]),
         .O(D[69]));
+  (* SOFT_HLUTNM = "soft_lutpair151" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[121]_i_1 
@@ -30538,7 +31564,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[86]),
         .I2(add_const_state_0[22]),
         .O(state_out0_carry__6[118]));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair125" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[121]_i_1__0 
@@ -30546,6 +31572,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[29]),
         .I2(add_const_state[20]),
         .O(D[70]));
+  (* SOFT_HLUTNM = "soft_lutpair152" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[122]_i_1 
@@ -30553,7 +31580,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[87]),
         .I2(add_const_state_0[23]),
         .O(state_out0_carry__6[119]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair126" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[122]_i_1__0 
@@ -30561,6 +31588,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[30]),
         .I2(add_const_state[21]),
         .O(D[71]));
+  (* SOFT_HLUTNM = "soft_lutpair153" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[123]_i_1 
@@ -30568,7 +31596,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[88]),
         .I2(add_const_state_0[24]),
         .O(state_out0_carry__6[120]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair127" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[123]_i_1__0 
@@ -30576,6 +31604,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[31]),
         .I2(add_const_state[22]),
         .O(D[72]));
+  (* SOFT_HLUTNM = "soft_lutpair154" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[124]_i_1 
@@ -30583,7 +31612,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[89]),
         .I2(add_const_state_0[25]),
         .O(state_out0_carry__6[121]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair128" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[124]_i_1__0 
@@ -30591,6 +31620,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[32]),
         .I2(add_const_state[23]),
         .O(D[73]));
+  (* SOFT_HLUTNM = "soft_lutpair155" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[125]_i_1 
@@ -30598,7 +31628,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[90]),
         .I2(add_const_state_0[26]),
         .O(state_out0_carry__6[122]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair94" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[125]_i_1__0 
@@ -30606,6 +31636,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[33]),
         .I2(add_const_state[24]),
         .O(D[74]));
+  (* SOFT_HLUTNM = "soft_lutpair156" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[126]_i_1 
@@ -30613,7 +31644,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[91]),
         .I2(add_const_state_0[27]),
         .O(state_out0_carry__6[123]));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair95" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[126]_i_1__0 
@@ -30621,6 +31652,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[34]),
         .I2(add_const_state[25]),
         .O(D[75]));
+  (* SOFT_HLUTNM = "soft_lutpair157" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[127]_i_1 
@@ -30628,7 +31660,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[92]),
         .I2(add_const_state_0[28]),
         .O(state_out0_carry__6[124]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair96" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[127]_i_1__0 
@@ -30636,6 +31668,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[35]),
         .I2(add_const_state[26]),
         .O(D[76]));
+  (* SOFT_HLUTNM = "soft_lutpair138" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[12]_i_1 
@@ -30643,6 +31676,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[105]),
         .I2(add_const_state_0[41]),
         .O(state_out0_carry__6[10]));
+  (* SOFT_HLUTNM = "soft_lutpair139" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[13]_i_1 
@@ -30650,6 +31684,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[106]),
         .I2(add_const_state_0[42]),
         .O(state_out0_carry__6[11]));
+  (* SOFT_HLUTNM = "soft_lutpair140" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[14]_i_1 
@@ -30657,6 +31692,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[107]),
         .I2(add_const_state_0[43]),
         .O(state_out0_carry__6[12]));
+  (* SOFT_HLUTNM = "soft_lutpair141" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[15]_i_1 
@@ -30664,6 +31700,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[108]),
         .I2(add_const_state_0[44]),
         .O(state_out0_carry__6[13]));
+  (* SOFT_HLUTNM = "soft_lutpair142" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[16]_i_1 
@@ -30671,6 +31708,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[109]),
         .I2(add_const_state_0[45]),
         .O(state_out0_carry__6[14]));
+  (* SOFT_HLUTNM = "soft_lutpair143" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[17]_i_1 
@@ -30678,6 +31716,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[110]),
         .I2(add_const_state_0[46]),
         .O(state_out0_carry__6[15]));
+  (* SOFT_HLUTNM = "soft_lutpair144" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[18]_i_1 
@@ -30685,6 +31724,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[111]),
         .I2(add_const_state_0[47]),
         .O(state_out0_carry__6[16]));
+  (* SOFT_HLUTNM = "soft_lutpair145" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[19]_i_1 
@@ -30692,6 +31732,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[112]),
         .I2(add_const_state_0[48]),
         .O(state_out0_carry__6[17]));
+  (* SOFT_HLUTNM = "soft_lutpair87" *) 
   LUT4 #(
     .INIT(16'h6966)) 
     \state_out[1]_i_1 
@@ -30700,7 +31741,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I2(add_const_state_0[94]),
         .I3(add_const_state_0[30]),
         .O(state_out0_carry__6[0]));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  (* SOFT_HLUTNM = "soft_lutpair91" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[1]_i_1__0 
@@ -30708,6 +31749,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[37]),
         .I2(add_const_state[28]),
         .O(D[0]));
+  (* SOFT_HLUTNM = "soft_lutpair146" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[20]_i_1 
@@ -30715,6 +31757,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[113]),
         .I2(add_const_state_0[49]),
         .O(state_out0_carry__6[18]));
+  (* SOFT_HLUTNM = "soft_lutpair147" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[21]_i_1 
@@ -30722,6 +31765,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[114]),
         .I2(add_const_state_0[50]),
         .O(state_out0_carry__6[19]));
+  (* SOFT_HLUTNM = "soft_lutpair148" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[22]_i_1 
@@ -30729,6 +31773,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[115]),
         .I2(add_const_state_0[51]),
         .O(state_out0_carry__6[20]));
+  (* SOFT_HLUTNM = "soft_lutpair149" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[23]_i_1 
@@ -30736,6 +31781,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[116]),
         .I2(add_const_state_0[52]),
         .O(state_out0_carry__6[21]));
+  (* SOFT_HLUTNM = "soft_lutpair150" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[24]_i_1 
@@ -30743,6 +31789,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[117]),
         .I2(add_const_state_0[53]),
         .O(state_out0_carry__6[22]));
+  (* SOFT_HLUTNM = "soft_lutpair151" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[25]_i_1 
@@ -30750,6 +31797,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[118]),
         .I2(add_const_state_0[54]),
         .O(state_out0_carry__6[23]));
+  (* SOFT_HLUTNM = "soft_lutpair152" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[26]_i_1 
@@ -30757,6 +31805,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[119]),
         .I2(add_const_state_0[55]),
         .O(state_out0_carry__6[24]));
+  (* SOFT_HLUTNM = "soft_lutpair153" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[27]_i_1 
@@ -30764,6 +31813,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[120]),
         .I2(add_const_state_0[56]),
         .O(state_out0_carry__6[25]));
+  (* SOFT_HLUTNM = "soft_lutpair154" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[28]_i_1 
@@ -30771,6 +31821,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[121]),
         .I2(add_const_state_0[57]),
         .O(state_out0_carry__6[26]));
+  (* SOFT_HLUTNM = "soft_lutpair155" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[29]_i_1 
@@ -30778,7 +31829,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[122]),
         .I2(add_const_state_0[58]),
         .O(state_out0_carry__6[27]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair94" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[29]_i_1__0 
@@ -30786,7 +31837,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[65]),
         .I2(add_const_state[56]),
         .O(D[3]));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  (* SOFT_HLUTNM = "soft_lutpair92" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[2]_i_1 
@@ -30794,6 +31845,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[38]),
         .I2(add_const_state[29]),
         .O(D[1]));
+  (* SOFT_HLUTNM = "soft_lutpair156" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[30]_i_1 
@@ -30801,7 +31853,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[123]),
         .I2(add_const_state_0[59]),
         .O(state_out0_carry__6[28]));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair95" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[30]_i_1__0 
@@ -30809,6 +31861,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[66]),
         .I2(add_const_state[57]),
         .O(D[4]));
+  (* SOFT_HLUTNM = "soft_lutpair157" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[31]_i_1 
@@ -30816,7 +31869,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[124]),
         .I2(add_const_state_0[60]),
         .O(state_out0_carry__6[29]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair96" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[31]_i_1__0 
@@ -30824,6 +31877,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[67]),
         .I2(add_const_state[58]),
         .O(D[5]));
+  (* SOFT_HLUTNM = "soft_lutpair88" *) 
   LUT4 #(
     .INIT(16'h69AA)) 
     \state_out[32]_i_1 
@@ -30832,7 +31886,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I2(\state_out_reg[98] [0]),
         .I3(add_const_state_0[61]),
         .O(state_out0_carry__6[30]));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair97" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[32]_i_1__0 
@@ -30840,6 +31894,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[0]),
         .I2(CO),
         .O(D[6]));
+  (* SOFT_HLUTNM = "soft_lutpair89" *) 
   LUT4 #(
     .INIT(16'h69AA)) 
     \state_out[33]_i_1 
@@ -30848,7 +31903,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I2(\state_out_reg[98] [1]),
         .I3(add_const_state_0[62]),
         .O(state_out0_carry__6[31]));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  (* SOFT_HLUTNM = "soft_lutpair98" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[33]_i_1__0 
@@ -30856,6 +31911,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[1]),
         .I2(Q[5]),
         .O(D[7]));
+  (* SOFT_HLUTNM = "soft_lutpair90" *) 
   LUT4 #(
     .INIT(16'hA66A)) 
     \state_out[34]_i_1 
@@ -30864,7 +31920,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I2(plaintext[2]),
         .I3(\state_out_reg[98] [2]),
         .O(state_out0_carry__6[32]));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  (* SOFT_HLUTNM = "soft_lutpair99" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[34]_i_1__0 
@@ -30872,6 +31928,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[2]),
         .I2(Q[6]),
         .O(D[8]));
+  (* SOFT_HLUTNM = "soft_lutpair158" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[35]_i_1 
@@ -30879,7 +31936,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[0]),
         .I2(add_const_state_0[64]),
         .O(state_out0_carry__6[33]));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+  (* SOFT_HLUTNM = "soft_lutpair100" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[35]_i_1__0 
@@ -30887,6 +31944,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[3]),
         .I2(Q[7]),
         .O(D[9]));
+  (* SOFT_HLUTNM = "soft_lutpair159" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[36]_i_1 
@@ -30894,7 +31952,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[1]),
         .I2(add_const_state_0[65]),
         .O(state_out0_carry__6[34]));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  (* SOFT_HLUTNM = "soft_lutpair104" *) 
   LUT3 #(
     .INIT(8'h6A)) 
     \state_out[36]_i_1__0 
@@ -30902,6 +31960,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[8]),
         .I2(Q[4]),
         .O(D[10]));
+  (* SOFT_HLUTNM = "soft_lutpair160" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[37]_i_1 
@@ -30909,6 +31968,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[2]),
         .I2(add_const_state_0[66]),
         .O(state_out0_carry__6[35]));
+  (* SOFT_HLUTNM = "soft_lutpair161" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[38]_i_1 
@@ -30916,6 +31976,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[3]),
         .I2(add_const_state_0[67]),
         .O(state_out0_carry__6[36]));
+  (* SOFT_HLUTNM = "soft_lutpair162" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[39]_i_1 
@@ -30923,6 +31984,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[4]),
         .I2(add_const_state_0[68]),
         .O(state_out0_carry__6[37]));
+  (* SOFT_HLUTNM = "soft_lutpair129" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[3]_i_1 
@@ -30930,7 +31992,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[96]),
         .I2(add_const_state_0[32]),
         .O(state_out0_carry__6[1]));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  (* SOFT_HLUTNM = "soft_lutpair93" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[3]_i_1__0 
@@ -30938,6 +32000,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[39]),
         .I2(add_const_state[30]),
         .O(D[2]));
+  (* SOFT_HLUTNM = "soft_lutpair163" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[40]_i_1 
@@ -30945,6 +32008,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[5]),
         .I2(add_const_state_0[69]),
         .O(state_out0_carry__6[38]));
+  (* SOFT_HLUTNM = "soft_lutpair164" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[41]_i_1 
@@ -30952,6 +32016,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[6]),
         .I2(add_const_state_0[70]),
         .O(state_out0_carry__6[39]));
+  (* SOFT_HLUTNM = "soft_lutpair165" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[42]_i_1 
@@ -30959,6 +32024,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[7]),
         .I2(add_const_state_0[71]),
         .O(state_out0_carry__6[40]));
+  (* SOFT_HLUTNM = "soft_lutpair166" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[43]_i_1 
@@ -30966,6 +32032,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[8]),
         .I2(add_const_state_0[72]),
         .O(state_out0_carry__6[41]));
+  (* SOFT_HLUTNM = "soft_lutpair167" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[44]_i_1 
@@ -30973,6 +32040,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[9]),
         .I2(add_const_state_0[73]),
         .O(state_out0_carry__6[42]));
+  (* SOFT_HLUTNM = "soft_lutpair168" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[45]_i_1 
@@ -30980,6 +32048,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[10]),
         .I2(add_const_state_0[74]),
         .O(state_out0_carry__6[43]));
+  (* SOFT_HLUTNM = "soft_lutpair169" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[46]_i_1 
@@ -30987,6 +32056,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[11]),
         .I2(add_const_state_0[75]),
         .O(state_out0_carry__6[44]));
+  (* SOFT_HLUTNM = "soft_lutpair170" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[47]_i_1 
@@ -30994,6 +32064,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[12]),
         .I2(add_const_state_0[76]),
         .O(state_out0_carry__6[45]));
+  (* SOFT_HLUTNM = "soft_lutpair171" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[48]_i_1 
@@ -31001,6 +32072,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[13]),
         .I2(add_const_state_0[77]),
         .O(state_out0_carry__6[46]));
+  (* SOFT_HLUTNM = "soft_lutpair172" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[49]_i_1 
@@ -31008,6 +32080,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[14]),
         .I2(add_const_state_0[78]),
         .O(state_out0_carry__6[47]));
+  (* SOFT_HLUTNM = "soft_lutpair130" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[4]_i_1 
@@ -31015,6 +32088,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[97]),
         .I2(add_const_state_0[33]),
         .O(state_out0_carry__6[2]));
+  (* SOFT_HLUTNM = "soft_lutpair173" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[50]_i_1 
@@ -31022,6 +32096,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[15]),
         .I2(add_const_state_0[79]),
         .O(state_out0_carry__6[48]));
+  (* SOFT_HLUTNM = "soft_lutpair174" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[51]_i_1 
@@ -31029,6 +32104,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[16]),
         .I2(add_const_state_0[80]),
         .O(state_out0_carry__6[49]));
+  (* SOFT_HLUTNM = "soft_lutpair175" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[52]_i_1 
@@ -31036,6 +32112,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[17]),
         .I2(add_const_state_0[81]),
         .O(state_out0_carry__6[50]));
+  (* SOFT_HLUTNM = "soft_lutpair176" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[53]_i_1 
@@ -31043,6 +32120,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[18]),
         .I2(add_const_state_0[82]),
         .O(state_out0_carry__6[51]));
+  (* SOFT_HLUTNM = "soft_lutpair177" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[54]_i_1 
@@ -31050,6 +32128,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[19]),
         .I2(add_const_state_0[83]),
         .O(state_out0_carry__6[52]));
+  (* SOFT_HLUTNM = "soft_lutpair178" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[55]_i_1 
@@ -31057,6 +32136,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[20]),
         .I2(add_const_state_0[84]),
         .O(state_out0_carry__6[53]));
+  (* SOFT_HLUTNM = "soft_lutpair179" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[56]_i_1 
@@ -31064,6 +32144,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[21]),
         .I2(add_const_state_0[85]),
         .O(state_out0_carry__6[54]));
+  (* SOFT_HLUTNM = "soft_lutpair180" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[57]_i_1 
@@ -31071,6 +32152,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[22]),
         .I2(add_const_state_0[86]),
         .O(state_out0_carry__6[55]));
+  (* SOFT_HLUTNM = "soft_lutpair181" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[58]_i_1 
@@ -31078,6 +32160,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[23]),
         .I2(add_const_state_0[87]),
         .O(state_out0_carry__6[56]));
+  (* SOFT_HLUTNM = "soft_lutpair182" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[59]_i_1 
@@ -31085,6 +32168,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[24]),
         .I2(add_const_state_0[88]),
         .O(state_out0_carry__6[57]));
+  (* SOFT_HLUTNM = "soft_lutpair131" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[5]_i_1 
@@ -31092,6 +32176,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[98]),
         .I2(add_const_state_0[34]),
         .O(state_out0_carry__6[3]));
+  (* SOFT_HLUTNM = "soft_lutpair183" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[60]_i_1 
@@ -31099,6 +32184,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[25]),
         .I2(add_const_state_0[89]),
         .O(state_out0_carry__6[58]));
+  (* SOFT_HLUTNM = "soft_lutpair184" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[61]_i_1 
@@ -31106,7 +32192,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[26]),
         .I2(add_const_state_0[90]),
         .O(state_out0_carry__6[59]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair101" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[61]_i_1__0 
@@ -31114,6 +32200,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state[24]),
         .I2(Q[33]),
         .O(D[11]));
+  (* SOFT_HLUTNM = "soft_lutpair185" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[62]_i_1 
@@ -31121,7 +32208,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[27]),
         .I2(add_const_state_0[91]),
         .O(state_out0_carry__6[60]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair102" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[62]_i_1__0 
@@ -31129,6 +32216,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state[25]),
         .I2(Q[34]),
         .O(D[12]));
+  (* SOFT_HLUTNM = "soft_lutpair186" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[63]_i_1 
@@ -31136,7 +32224,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[28]),
         .I2(add_const_state_0[92]),
         .O(state_out0_carry__6[61]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair103" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[63]_i_1__0 
@@ -31144,6 +32232,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state[26]),
         .I2(Q[35]),
         .O(D[13]));
+  (* SOFT_HLUTNM = "soft_lutpair89" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[65]_i_1 
@@ -31151,7 +32240,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[30]),
         .I2(add_const_state_0[94]),
         .O(state_out0_carry__6[62]));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  (* SOFT_HLUTNM = "soft_lutpair98" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[65]_i_1__0 
@@ -31166,7 +32255,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[31]),
         .I2(add_const_state_0[95]),
         .O(state_out0_carry__6[63]));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  (* SOFT_HLUTNM = "soft_lutpair99" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[66]_i_1__0 
@@ -31174,6 +32263,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state[29]),
         .I2(Q[38]),
         .O(D[15]));
+  (* SOFT_HLUTNM = "soft_lutpair158" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[67]_i_1 
@@ -31181,7 +32271,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[32]),
         .I2(add_const_state_0[96]),
         .O(state_out0_carry__6[64]));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+  (* SOFT_HLUTNM = "soft_lutpair100" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[67]_i_1__0 
@@ -31189,6 +32279,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state[30]),
         .I2(Q[39]),
         .O(D[16]));
+  (* SOFT_HLUTNM = "soft_lutpair159" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[68]_i_1 
@@ -31196,7 +32287,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[33]),
         .I2(add_const_state_0[97]),
         .O(state_out0_carry__6[65]));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  (* SOFT_HLUTNM = "soft_lutpair104" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[68]_i_1__0 
@@ -31204,6 +32295,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state[31]),
         .I2(Q[40]),
         .O(D[17]));
+  (* SOFT_HLUTNM = "soft_lutpair160" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[69]_i_1 
@@ -31211,7 +32303,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[34]),
         .I2(add_const_state_0[98]),
         .O(state_out0_carry__6[66]));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair105" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[69]_i_1__0 
@@ -31219,6 +32311,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state[32]),
         .I2(Q[41]),
         .O(D[18]));
+  (* SOFT_HLUTNM = "soft_lutpair132" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[6]_i_1 
@@ -31226,6 +32319,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[99]),
         .I2(add_const_state_0[35]),
         .O(state_out0_carry__6[4]));
+  (* SOFT_HLUTNM = "soft_lutpair161" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[70]_i_1 
@@ -31233,7 +32327,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[35]),
         .I2(add_const_state_0[99]),
         .O(state_out0_carry__6[67]));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair106" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[70]_i_1__0 
@@ -31241,6 +32335,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state[33]),
         .I2(Q[42]),
         .O(D[19]));
+  (* SOFT_HLUTNM = "soft_lutpair162" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[71]_i_1 
@@ -31248,7 +32343,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[36]),
         .I2(add_const_state_0[100]),
         .O(state_out0_carry__6[68]));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  (* SOFT_HLUTNM = "soft_lutpair107" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[71]_i_1__0 
@@ -31256,6 +32351,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state[34]),
         .I2(Q[43]),
         .O(D[20]));
+  (* SOFT_HLUTNM = "soft_lutpair163" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[72]_i_1 
@@ -31263,7 +32359,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[37]),
         .I2(add_const_state_0[101]),
         .O(state_out0_carry__6[69]));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair108" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[72]_i_1__0 
@@ -31271,6 +32367,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state[35]),
         .I2(Q[44]),
         .O(D[21]));
+  (* SOFT_HLUTNM = "soft_lutpair164" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[73]_i_1 
@@ -31278,7 +32375,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[38]),
         .I2(add_const_state_0[102]),
         .O(state_out0_carry__6[70]));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair109" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[73]_i_1__0 
@@ -31286,6 +32383,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state[36]),
         .I2(Q[45]),
         .O(D[22]));
+  (* SOFT_HLUTNM = "soft_lutpair165" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[74]_i_1 
@@ -31293,7 +32391,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[39]),
         .I2(add_const_state_0[103]),
         .O(state_out0_carry__6[71]));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair110" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[74]_i_1__0 
@@ -31301,6 +32399,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state[37]),
         .I2(Q[46]),
         .O(D[23]));
+  (* SOFT_HLUTNM = "soft_lutpair166" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[75]_i_1 
@@ -31308,7 +32407,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[40]),
         .I2(add_const_state_0[104]),
         .O(state_out0_carry__6[72]));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair111" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[75]_i_1__0 
@@ -31316,6 +32415,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state[38]),
         .I2(Q[47]),
         .O(D[24]));
+  (* SOFT_HLUTNM = "soft_lutpair167" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[76]_i_1 
@@ -31323,7 +32423,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[41]),
         .I2(add_const_state_0[105]),
         .O(state_out0_carry__6[73]));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair112" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[76]_i_1__0 
@@ -31331,6 +32431,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state[39]),
         .I2(Q[48]),
         .O(D[25]));
+  (* SOFT_HLUTNM = "soft_lutpair168" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[77]_i_1 
@@ -31338,7 +32439,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[42]),
         .I2(add_const_state_0[106]),
         .O(state_out0_carry__6[74]));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair113" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[77]_i_1__0 
@@ -31346,6 +32447,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state[40]),
         .I2(Q[49]),
         .O(D[26]));
+  (* SOFT_HLUTNM = "soft_lutpair169" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[78]_i_1 
@@ -31353,7 +32455,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[43]),
         .I2(add_const_state_0[107]),
         .O(state_out0_carry__6[75]));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair114" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[78]_i_1__0 
@@ -31361,6 +32463,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state[41]),
         .I2(Q[50]),
         .O(D[27]));
+  (* SOFT_HLUTNM = "soft_lutpair170" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[79]_i_1 
@@ -31368,7 +32471,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[44]),
         .I2(add_const_state_0[108]),
         .O(state_out0_carry__6[76]));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair115" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[79]_i_1__0 
@@ -31376,6 +32479,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state[42]),
         .I2(Q[51]),
         .O(D[28]));
+  (* SOFT_HLUTNM = "soft_lutpair133" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[7]_i_1 
@@ -31383,6 +32487,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[100]),
         .I2(add_const_state_0[36]),
         .O(state_out0_carry__6[5]));
+  (* SOFT_HLUTNM = "soft_lutpair171" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[80]_i_1 
@@ -31390,7 +32495,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[45]),
         .I2(add_const_state_0[109]),
         .O(state_out0_carry__6[77]));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair116" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[80]_i_1__0 
@@ -31398,6 +32503,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state[43]),
         .I2(Q[52]),
         .O(D[29]));
+  (* SOFT_HLUTNM = "soft_lutpair172" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[81]_i_1 
@@ -31405,7 +32511,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[46]),
         .I2(add_const_state_0[110]),
         .O(state_out0_carry__6[78]));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair117" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[81]_i_1__0 
@@ -31413,6 +32519,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state[44]),
         .I2(Q[53]),
         .O(D[30]));
+  (* SOFT_HLUTNM = "soft_lutpair173" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[82]_i_1 
@@ -31420,7 +32527,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[47]),
         .I2(add_const_state_0[111]),
         .O(state_out0_carry__6[79]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair118" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[82]_i_1__0 
@@ -31428,6 +32535,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state[45]),
         .I2(Q[54]),
         .O(D[31]));
+  (* SOFT_HLUTNM = "soft_lutpair174" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[83]_i_1 
@@ -31435,7 +32543,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[48]),
         .I2(add_const_state_0[112]),
         .O(state_out0_carry__6[80]));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair119" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[83]_i_1__0 
@@ -31443,6 +32551,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state[46]),
         .I2(Q[55]),
         .O(D[32]));
+  (* SOFT_HLUTNM = "soft_lutpair175" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[84]_i_1 
@@ -31450,7 +32559,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[49]),
         .I2(add_const_state_0[113]),
         .O(state_out0_carry__6[81]));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair120" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[84]_i_1__0 
@@ -31458,6 +32567,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state[47]),
         .I2(Q[56]),
         .O(D[33]));
+  (* SOFT_HLUTNM = "soft_lutpair176" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[85]_i_1 
@@ -31465,7 +32575,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[50]),
         .I2(add_const_state_0[114]),
         .O(state_out0_carry__6[82]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair121" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[85]_i_1__0 
@@ -31473,6 +32583,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state[48]),
         .I2(Q[57]),
         .O(D[34]));
+  (* SOFT_HLUTNM = "soft_lutpair177" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[86]_i_1 
@@ -31480,7 +32591,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[51]),
         .I2(add_const_state_0[115]),
         .O(state_out0_carry__6[83]));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair122" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[86]_i_1__0 
@@ -31488,6 +32599,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state[49]),
         .I2(Q[58]),
         .O(D[35]));
+  (* SOFT_HLUTNM = "soft_lutpair178" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[87]_i_1 
@@ -31495,7 +32607,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[52]),
         .I2(add_const_state_0[116]),
         .O(state_out0_carry__6[84]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair123" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[87]_i_1__0 
@@ -31503,6 +32615,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state[50]),
         .I2(Q[59]),
         .O(D[36]));
+  (* SOFT_HLUTNM = "soft_lutpair179" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[88]_i_1 
@@ -31510,7 +32623,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[53]),
         .I2(add_const_state_0[117]),
         .O(state_out0_carry__6[85]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair124" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[88]_i_1__0 
@@ -31518,6 +32631,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state[51]),
         .I2(Q[60]),
         .O(D[37]));
+  (* SOFT_HLUTNM = "soft_lutpair180" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[89]_i_1 
@@ -31525,7 +32639,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[54]),
         .I2(add_const_state_0[118]),
         .O(state_out0_carry__6[86]));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair125" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[89]_i_1__0 
@@ -31533,6 +32647,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state[52]),
         .I2(Q[61]),
         .O(D[38]));
+  (* SOFT_HLUTNM = "soft_lutpair134" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[8]_i_1 
@@ -31540,6 +32655,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[101]),
         .I2(add_const_state_0[37]),
         .O(state_out0_carry__6[6]));
+  (* SOFT_HLUTNM = "soft_lutpair181" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[90]_i_1 
@@ -31547,7 +32663,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[55]),
         .I2(add_const_state_0[119]),
         .O(state_out0_carry__6[87]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair126" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[90]_i_1__0 
@@ -31555,6 +32671,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state[53]),
         .I2(Q[62]),
         .O(D[39]));
+  (* SOFT_HLUTNM = "soft_lutpair182" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[91]_i_1 
@@ -31562,7 +32679,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[56]),
         .I2(add_const_state_0[120]),
         .O(state_out0_carry__6[88]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair127" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[91]_i_1__0 
@@ -31570,6 +32687,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state[54]),
         .I2(Q[63]),
         .O(D[40]));
+  (* SOFT_HLUTNM = "soft_lutpair183" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[92]_i_1 
@@ -31577,7 +32695,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[57]),
         .I2(add_const_state_0[121]),
         .O(state_out0_carry__6[89]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair128" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[92]_i_1__0 
@@ -31585,6 +32703,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state[55]),
         .I2(Q[64]),
         .O(D[41]));
+  (* SOFT_HLUTNM = "soft_lutpair184" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[93]_i_1 
@@ -31592,7 +32711,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[58]),
         .I2(add_const_state_0[122]),
         .O(state_out0_carry__6[90]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair101" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[93]_i_1__0 
@@ -31600,6 +32719,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state[56]),
         .I2(Q[65]),
         .O(D[42]));
+  (* SOFT_HLUTNM = "soft_lutpair185" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[94]_i_1 
@@ -31607,7 +32727,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[59]),
         .I2(add_const_state_0[123]),
         .O(state_out0_carry__6[91]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair102" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[94]_i_1__0 
@@ -31615,6 +32735,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state[57]),
         .I2(Q[66]),
         .O(D[43]));
+  (* SOFT_HLUTNM = "soft_lutpair186" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[95]_i_1 
@@ -31622,7 +32743,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[60]),
         .I2(add_const_state_0[124]),
         .O(state_out0_carry__6[92]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair103" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[95]_i_1__0 
@@ -31630,6 +32751,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state[58]),
         .I2(Q[67]),
         .O(D[44]));
+  (* SOFT_HLUTNM = "soft_lutpair88" *) 
   LUT4 #(
     .INIT(16'hA99A)) 
     \state_out[96]_i_1 
@@ -31638,7 +32760,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I2(plaintext[0]),
         .I3(\state_out_reg[98] [0]),
         .O(state_out0_carry__6[93]));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair97" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[96]_i_1__0 
@@ -31646,6 +32768,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(CO),
         .I2(Q[0]),
         .O(D[45]));
+  (* SOFT_HLUTNM = "soft_lutpair87" *) 
   LUT4 #(
     .INIT(16'hA99A)) 
     \state_out[97]_i_1 
@@ -31654,7 +32777,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I2(plaintext[1]),
         .I3(\state_out_reg[98] [1]),
         .O(state_out0_carry__6[94]));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  (* SOFT_HLUTNM = "soft_lutpair91" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[97]_i_1__0 
@@ -31662,6 +32785,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[5]),
         .I2(Q[1]),
         .O(D[46]));
+  (* SOFT_HLUTNM = "soft_lutpair90" *) 
   LUT4 #(
     .INIT(16'hAA69)) 
     \state_out[98]_i_1 
@@ -31670,7 +32794,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I2(\state_out_reg[98] [2]),
         .I3(add_const_state_0[63]),
         .O(state_out0_carry__6[95]));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  (* SOFT_HLUTNM = "soft_lutpair92" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[98]_i_1__0 
@@ -31678,6 +32802,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[6]),
         .I2(Q[2]),
         .O(D[47]));
+  (* SOFT_HLUTNM = "soft_lutpair129" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[99]_i_1 
@@ -31685,7 +32810,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(add_const_state_0[64]),
         .I2(add_const_state_0[0]),
         .O(state_out0_carry__6[96]));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  (* SOFT_HLUTNM = "soft_lutpair93" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[99]_i_1__0 
@@ -31693,6 +32818,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_25
         .I1(Q[7]),
         .I2(Q[3]),
         .O(D[48]));
+  (* SOFT_HLUTNM = "soft_lutpair135" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[9]_i_1 
@@ -31715,6 +32841,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
   wire [55:0]sbox_state;
   wire [55:0]\state_out_reg[28] ;
 
+  (* SOFT_HLUTNM = "soft_lutpair68" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[10]_i_1__9 
@@ -31722,6 +32849,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(\state_out_reg[28] [37]),
         .I2(add_const_state[37]),
         .O(sbox_state[9]));
+  (* SOFT_HLUTNM = "soft_lutpair69" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[11]_i_1__9 
@@ -31729,6 +32857,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(\state_out_reg[28] [38]),
         .I2(add_const_state[38]),
         .O(sbox_state[10]));
+  (* SOFT_HLUTNM = "soft_lutpair70" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[12]_i_1__9 
@@ -31736,6 +32865,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(\state_out_reg[28] [39]),
         .I2(add_const_state[39]),
         .O(sbox_state[11]));
+  (* SOFT_HLUTNM = "soft_lutpair71" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[13]_i_1__9 
@@ -31743,6 +32873,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(\state_out_reg[28] [40]),
         .I2(add_const_state[40]),
         .O(sbox_state[12]));
+  (* SOFT_HLUTNM = "soft_lutpair72" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[14]_i_1__9 
@@ -31750,6 +32881,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(\state_out_reg[28] [41]),
         .I2(add_const_state[41]),
         .O(sbox_state[13]));
+  (* SOFT_HLUTNM = "soft_lutpair73" *) 
   LUT3 #(
     .INIT(8'h65)) 
     \state_out[15]_inv_i_1 
@@ -31757,6 +32889,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(\state_out_reg[28] [42]),
         .I2(add_const_state[42]),
         .O(sbox_state[14]));
+  (* SOFT_HLUTNM = "soft_lutpair74" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[16]_i_1__9 
@@ -31764,6 +32897,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(\state_out_reg[28] [43]),
         .I2(add_const_state[43]),
         .O(sbox_state[15]));
+  (* SOFT_HLUTNM = "soft_lutpair75" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[17]_i_1__9 
@@ -31771,6 +32905,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(\state_out_reg[28] [44]),
         .I2(add_const_state[44]),
         .O(sbox_state[16]));
+  (* SOFT_HLUTNM = "soft_lutpair76" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[18]_i_1__9 
@@ -31778,6 +32913,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(\state_out_reg[28] [45]),
         .I2(add_const_state[45]),
         .O(sbox_state[17]));
+  (* SOFT_HLUTNM = "soft_lutpair77" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[19]_i_1__9 
@@ -31785,6 +32921,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(\state_out_reg[28] [46]),
         .I2(add_const_state[46]),
         .O(sbox_state[18]));
+  (* SOFT_HLUTNM = "soft_lutpair59" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[1]_i_1__7 
@@ -31792,6 +32929,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(\state_out_reg[28] [28]),
         .I2(add_const_state[28]),
         .O(sbox_state[0]));
+  (* SOFT_HLUTNM = "soft_lutpair78" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[20]_i_1__9 
@@ -31799,6 +32937,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(\state_out_reg[28] [47]),
         .I2(add_const_state[47]),
         .O(sbox_state[19]));
+  (* SOFT_HLUTNM = "soft_lutpair79" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[21]_i_1__9 
@@ -31806,6 +32945,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(\state_out_reg[28] [48]),
         .I2(add_const_state[48]),
         .O(sbox_state[20]));
+  (* SOFT_HLUTNM = "soft_lutpair80" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[22]_i_1__9 
@@ -31813,6 +32953,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(\state_out_reg[28] [49]),
         .I2(add_const_state[49]),
         .O(sbox_state[21]));
+  (* SOFT_HLUTNM = "soft_lutpair81" *) 
   LUT3 #(
     .INIT(8'h65)) 
     \state_out[23]_inv_i_1 
@@ -31820,6 +32961,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(\state_out_reg[28] [50]),
         .I2(add_const_state[50]),
         .O(sbox_state[22]));
+  (* SOFT_HLUTNM = "soft_lutpair82" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[24]_i_1__9 
@@ -31827,6 +32969,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(\state_out_reg[28] [51]),
         .I2(add_const_state[51]),
         .O(sbox_state[23]));
+  (* SOFT_HLUTNM = "soft_lutpair83" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[25]_i_1__9 
@@ -31834,6 +32977,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(\state_out_reg[28] [52]),
         .I2(add_const_state[52]),
         .O(sbox_state[24]));
+  (* SOFT_HLUTNM = "soft_lutpair84" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[26]_i_1__9 
@@ -31841,6 +32985,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(\state_out_reg[28] [53]),
         .I2(add_const_state[53]),
         .O(sbox_state[25]));
+  (* SOFT_HLUTNM = "soft_lutpair85" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[27]_i_1__9 
@@ -31848,6 +32993,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(\state_out_reg[28] [54]),
         .I2(add_const_state[54]),
         .O(sbox_state[26]));
+  (* SOFT_HLUTNM = "soft_lutpair86" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[28]_i_1__9 
@@ -31855,6 +33001,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(\state_out_reg[28] [55]),
         .I2(add_const_state[55]),
         .O(sbox_state[27]));
+  (* SOFT_HLUTNM = "soft_lutpair60" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[2]_i_1__8 
@@ -31862,6 +33009,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(\state_out_reg[28] [29]),
         .I2(add_const_state[29]),
         .O(sbox_state[1]));
+  (* SOFT_HLUTNM = "soft_lutpair59" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[33]_i_1__9 
@@ -31869,6 +33017,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(add_const_state[0]),
         .I2(\state_out_reg[28] [0]),
         .O(sbox_state[28]));
+  (* SOFT_HLUTNM = "soft_lutpair60" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[34]_i_1__9 
@@ -31876,6 +33025,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(add_const_state[1]),
         .I2(\state_out_reg[28] [1]),
         .O(sbox_state[29]));
+  (* SOFT_HLUTNM = "soft_lutpair61" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[35]_i_1__9 
@@ -31883,6 +33033,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(add_const_state[2]),
         .I2(\state_out_reg[28] [2]),
         .O(sbox_state[30]));
+  (* SOFT_HLUTNM = "soft_lutpair62" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[36]_i_1__9 
@@ -31890,6 +33041,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(add_const_state[3]),
         .I2(\state_out_reg[28] [3]),
         .O(sbox_state[31]));
+  (* SOFT_HLUTNM = "soft_lutpair63" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[37]_i_1__9 
@@ -31897,6 +33049,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(add_const_state[4]),
         .I2(\state_out_reg[28] [4]),
         .O(sbox_state[32]));
+  (* SOFT_HLUTNM = "soft_lutpair64" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[38]_i_1__9 
@@ -31904,6 +33057,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(add_const_state[5]),
         .I2(\state_out_reg[28] [5]),
         .O(sbox_state[33]));
+  (* SOFT_HLUTNM = "soft_lutpair65" *) 
   LUT3 #(
     .INIT(8'h65)) 
     \state_out[39]_inv_i_1 
@@ -31911,6 +33065,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(add_const_state[6]),
         .I2(\state_out_reg[28] [6]),
         .O(sbox_state[34]));
+  (* SOFT_HLUTNM = "soft_lutpair61" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[3]_i_1__8 
@@ -31918,6 +33073,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(\state_out_reg[28] [30]),
         .I2(add_const_state[30]),
         .O(sbox_state[2]));
+  (* SOFT_HLUTNM = "soft_lutpair66" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[40]_i_1__9 
@@ -31925,6 +33081,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(add_const_state[7]),
         .I2(\state_out_reg[28] [7]),
         .O(sbox_state[35]));
+  (* SOFT_HLUTNM = "soft_lutpair67" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[41]_i_1__9 
@@ -31932,6 +33089,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(add_const_state[8]),
         .I2(\state_out_reg[28] [8]),
         .O(sbox_state[36]));
+  (* SOFT_HLUTNM = "soft_lutpair68" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[42]_i_1__9 
@@ -31939,6 +33097,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(add_const_state[9]),
         .I2(\state_out_reg[28] [9]),
         .O(sbox_state[37]));
+  (* SOFT_HLUTNM = "soft_lutpair69" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[43]_i_1__9 
@@ -31946,6 +33105,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(add_const_state[10]),
         .I2(\state_out_reg[28] [10]),
         .O(sbox_state[38]));
+  (* SOFT_HLUTNM = "soft_lutpair70" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[44]_i_1__9 
@@ -31953,6 +33113,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(add_const_state[11]),
         .I2(\state_out_reg[28] [11]),
         .O(sbox_state[39]));
+  (* SOFT_HLUTNM = "soft_lutpair71" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[45]_i_1__9 
@@ -31960,6 +33121,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(add_const_state[12]),
         .I2(\state_out_reg[28] [12]),
         .O(sbox_state[40]));
+  (* SOFT_HLUTNM = "soft_lutpair72" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[46]_i_1__9 
@@ -31967,6 +33129,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(add_const_state[13]),
         .I2(\state_out_reg[28] [13]),
         .O(sbox_state[41]));
+  (* SOFT_HLUTNM = "soft_lutpair73" *) 
   LUT3 #(
     .INIT(8'h65)) 
     \state_out[47]_inv_i_1 
@@ -31974,6 +33137,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(add_const_state[14]),
         .I2(\state_out_reg[28] [14]),
         .O(sbox_state[42]));
+  (* SOFT_HLUTNM = "soft_lutpair74" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[48]_i_1__9 
@@ -31981,6 +33145,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(add_const_state[15]),
         .I2(\state_out_reg[28] [15]),
         .O(sbox_state[43]));
+  (* SOFT_HLUTNM = "soft_lutpair75" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[49]_i_1__9 
@@ -31988,6 +33153,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(add_const_state[16]),
         .I2(\state_out_reg[28] [16]),
         .O(sbox_state[44]));
+  (* SOFT_HLUTNM = "soft_lutpair62" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[4]_i_1__8 
@@ -31995,6 +33161,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(\state_out_reg[28] [31]),
         .I2(add_const_state[31]),
         .O(sbox_state[3]));
+  (* SOFT_HLUTNM = "soft_lutpair76" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[50]_i_1__9 
@@ -32002,6 +33169,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(add_const_state[17]),
         .I2(\state_out_reg[28] [17]),
         .O(sbox_state[45]));
+  (* SOFT_HLUTNM = "soft_lutpair77" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[51]_i_1__9 
@@ -32009,6 +33177,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(add_const_state[18]),
         .I2(\state_out_reg[28] [18]),
         .O(sbox_state[46]));
+  (* SOFT_HLUTNM = "soft_lutpair78" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[52]_i_1__9 
@@ -32016,6 +33185,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(add_const_state[19]),
         .I2(\state_out_reg[28] [19]),
         .O(sbox_state[47]));
+  (* SOFT_HLUTNM = "soft_lutpair79" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[53]_i_1__9 
@@ -32023,6 +33193,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(add_const_state[20]),
         .I2(\state_out_reg[28] [20]),
         .O(sbox_state[48]));
+  (* SOFT_HLUTNM = "soft_lutpair80" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[54]_i_1__9 
@@ -32030,6 +33201,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(add_const_state[21]),
         .I2(\state_out_reg[28] [21]),
         .O(sbox_state[49]));
+  (* SOFT_HLUTNM = "soft_lutpair81" *) 
   LUT3 #(
     .INIT(8'h65)) 
     \state_out[55]_inv_i_1 
@@ -32037,6 +33209,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(add_const_state[22]),
         .I2(\state_out_reg[28] [22]),
         .O(sbox_state[50]));
+  (* SOFT_HLUTNM = "soft_lutpair82" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[56]_i_1__9 
@@ -32044,6 +33217,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(add_const_state[23]),
         .I2(\state_out_reg[28] [23]),
         .O(sbox_state[51]));
+  (* SOFT_HLUTNM = "soft_lutpair83" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[57]_i_1__9 
@@ -32051,6 +33225,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(add_const_state[24]),
         .I2(\state_out_reg[28] [24]),
         .O(sbox_state[52]));
+  (* SOFT_HLUTNM = "soft_lutpair84" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[58]_i_1__9 
@@ -32058,6 +33233,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(add_const_state[25]),
         .I2(\state_out_reg[28] [25]),
         .O(sbox_state[53]));
+  (* SOFT_HLUTNM = "soft_lutpair85" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[59]_i_1__9 
@@ -32065,6 +33241,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(add_const_state[26]),
         .I2(\state_out_reg[28] [26]),
         .O(sbox_state[54]));
+  (* SOFT_HLUTNM = "soft_lutpair63" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[5]_i_1__9 
@@ -32072,6 +33249,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(\state_out_reg[28] [32]),
         .I2(add_const_state[32]),
         .O(sbox_state[4]));
+  (* SOFT_HLUTNM = "soft_lutpair86" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[60]_i_1__9 
@@ -32079,6 +33257,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(add_const_state[27]),
         .I2(\state_out_reg[28] [27]),
         .O(sbox_state[55]));
+  (* SOFT_HLUTNM = "soft_lutpair64" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[6]_i_1__9 
@@ -32086,6 +33265,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(\state_out_reg[28] [33]),
         .I2(add_const_state[33]),
         .O(sbox_state[5]));
+  (* SOFT_HLUTNM = "soft_lutpair65" *) 
   LUT3 #(
     .INIT(8'h65)) 
     \state_out[7]_inv_i_1 
@@ -32093,6 +33273,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(\state_out_reg[28] [34]),
         .I2(add_const_state[34]),
         .O(sbox_state[6]));
+  (* SOFT_HLUTNM = "soft_lutpair66" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[8]_i_1__9 
@@ -32100,6 +33281,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_27
         .I1(\state_out_reg[28] [35]),
         .I2(add_const_state[35]),
         .O(sbox_state[7]));
+  (* SOFT_HLUTNM = "soft_lutpair67" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[9]_i_1__9 
@@ -32137,6 +33319,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
   wire [63:0]\state_out_reg[31]_inv ;
   wire [0:0]\state_out_reg[96] ;
 
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[100]_i_1__9 
@@ -32144,6 +33327,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(\state_out_reg[31]_inv [4]),
         .I2(add_const_state_0[3]),
         .O(\state_out_reg[127] [40]));
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[101]_i_1__9 
@@ -32151,6 +33335,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(\state_out_reg[31]_inv [5]),
         .I2(add_const_state_0[4]),
         .O(\state_out_reg[127] [41]));
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[102]_i_1__9 
@@ -32158,6 +33343,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(\state_out_reg[31]_inv [6]),
         .I2(add_const_state_0[5]),
         .O(\state_out_reg[127] [42]));
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[103]_i_1__9 
@@ -32165,6 +33351,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(\state_out_reg[31]_inv [7]),
         .I2(add_const_state_0[6]),
         .O(\state_out_reg[127] [43]));
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[104]_i_1__9 
@@ -32172,6 +33359,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(\state_out_reg[31]_inv [8]),
         .I2(add_const_state_0[7]),
         .O(\state_out_reg[127] [44]));
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[105]_i_1__9 
@@ -32179,6 +33367,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(\state_out_reg[31]_inv [9]),
         .I2(add_const_state_0[8]),
         .O(\state_out_reg[127] [45]));
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[106]_i_1__9 
@@ -32186,6 +33375,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(\state_out_reg[31]_inv [10]),
         .I2(add_const_state_0[9]),
         .O(\state_out_reg[127] [46]));
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[107]_i_1__9 
@@ -32193,6 +33383,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(\state_out_reg[31]_inv [11]),
         .I2(add_const_state_0[10]),
         .O(\state_out_reg[127] [47]));
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[108]_i_1__9 
@@ -32200,6 +33391,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(\state_out_reg[31]_inv [12]),
         .I2(add_const_state_0[11]),
         .O(\state_out_reg[127] [48]));
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[109]_i_1__9 
@@ -32207,6 +33399,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(\state_out_reg[31]_inv [13]),
         .I2(add_const_state_0[12]),
         .O(\state_out_reg[127] [49]));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[10]_i_1__8 
@@ -32214,6 +33407,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(Q[30]),
         .I2(add_const_state[30]),
         .O(D[6]));
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[110]_i_1__9 
@@ -32221,6 +33415,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(\state_out_reg[31]_inv [14]),
         .I2(add_const_state_0[13]),
         .O(\state_out_reg[127] [50]));
+  (* SOFT_HLUTNM = "soft_lutpair44" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[111]_i_1__9 
@@ -32228,6 +33423,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(\state_out_reg[31]_inv [15]),
         .I2(add_const_state_0[14]),
         .O(\state_out_reg[127] [51]));
+  (* SOFT_HLUTNM = "soft_lutpair45" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[112]_i_1__9 
@@ -32235,6 +33431,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(\state_out_reg[31]_inv [16]),
         .I2(add_const_state_0[15]),
         .O(\state_out_reg[127] [52]));
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[113]_i_1__9 
@@ -32242,6 +33439,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(\state_out_reg[31]_inv [17]),
         .I2(add_const_state_0[16]),
         .O(\state_out_reg[127] [53]));
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[114]_i_1__9 
@@ -32249,6 +33447,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(\state_out_reg[31]_inv [18]),
         .I2(add_const_state_0[17]),
         .O(\state_out_reg[127] [54]));
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[115]_i_1__9 
@@ -32256,6 +33455,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(\state_out_reg[31]_inv [19]),
         .I2(add_const_state_0[18]),
         .O(\state_out_reg[127] [55]));
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[116]_i_1__9 
@@ -32263,6 +33463,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(\state_out_reg[31]_inv [20]),
         .I2(add_const_state_0[19]),
         .O(\state_out_reg[127] [56]));
+  (* SOFT_HLUTNM = "soft_lutpair50" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[117]_i_1__9 
@@ -32270,6 +33471,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(\state_out_reg[31]_inv [21]),
         .I2(add_const_state_0[20]),
         .O(\state_out_reg[127] [57]));
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[118]_i_1__9 
@@ -32277,6 +33479,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(\state_out_reg[31]_inv [22]),
         .I2(add_const_state_0[21]),
         .O(\state_out_reg[127] [58]));
+  (* SOFT_HLUTNM = "soft_lutpair52" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[119]_i_1__9 
@@ -32284,6 +33487,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(\state_out_reg[31]_inv [23]),
         .I2(add_const_state_0[22]),
         .O(\state_out_reg[127] [59]));
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[11]_i_1__8 
@@ -32291,6 +33495,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(Q[31]),
         .I2(add_const_state[31]),
         .O(D[7]));
+  (* SOFT_HLUTNM = "soft_lutpair53" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[120]_i_1__9 
@@ -32298,6 +33503,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(\state_out_reg[31]_inv [24]),
         .I2(add_const_state_0[23]),
         .O(\state_out_reg[127] [60]));
+  (* SOFT_HLUTNM = "soft_lutpair54" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[121]_i_1__9 
@@ -32305,6 +33511,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(\state_out_reg[31]_inv [25]),
         .I2(add_const_state_0[24]),
         .O(\state_out_reg[127] [61]));
+  (* SOFT_HLUTNM = "soft_lutpair55" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[122]_i_1__9 
@@ -32312,6 +33519,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(\state_out_reg[31]_inv [26]),
         .I2(add_const_state_0[25]),
         .O(\state_out_reg[127] [62]));
+  (* SOFT_HLUTNM = "soft_lutpair56" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[123]_i_1__9 
@@ -32319,6 +33527,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(\state_out_reg[31]_inv [27]),
         .I2(add_const_state_0[26]),
         .O(\state_out_reg[127] [63]));
+  (* SOFT_HLUTNM = "soft_lutpair57" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[124]_i_1__9 
@@ -32326,6 +33535,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(\state_out_reg[31]_inv [28]),
         .I2(add_const_state_0[27]),
         .O(\state_out_reg[127] [64]));
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[125]_i_1__9 
@@ -32333,6 +33543,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(\state_out_reg[31]_inv [29]),
         .I2(add_const_state_0[28]),
         .O(\state_out_reg[127] [65]));
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[126]_i_1__9 
@@ -32340,6 +33551,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(\state_out_reg[31]_inv [30]),
         .I2(add_const_state_0[29]),
         .O(\state_out_reg[127] [66]));
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[127]_i_1__9 
@@ -32347,6 +33559,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(\state_out_reg[31]_inv [31]),
         .I2(add_const_state_0[30]),
         .O(\state_out_reg[127] [67]));
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[12]_i_1__8 
@@ -32354,6 +33567,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(Q[32]),
         .I2(add_const_state[32]),
         .O(D[8]));
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[13]_i_1__8 
@@ -32361,6 +33575,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(Q[33]),
         .I2(add_const_state[33]),
         .O(D[9]));
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[14]_i_1__8 
@@ -32368,6 +33583,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(Q[34]),
         .I2(add_const_state[34]),
         .O(D[10]));
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[15]_i_1__8 
@@ -32375,6 +33591,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(Q[35]),
         .I2(add_const_state[35]),
         .O(D[11]));
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[16]_i_1__8 
@@ -32382,6 +33599,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(Q[36]),
         .I2(add_const_state[36]),
         .O(D[12]));
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[17]_i_1__8 
@@ -32389,6 +33607,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(Q[37]),
         .I2(add_const_state[37]),
         .O(D[13]));
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[18]_i_1__8 
@@ -32396,6 +33615,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(Q[38]),
         .I2(add_const_state[38]),
         .O(D[14]));
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[19]_i_1__8 
@@ -32403,6 +33623,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(Q[39]),
         .I2(add_const_state[39]),
         .O(D[15]));
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[20]_i_1__8 
@@ -32410,6 +33631,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(Q[40]),
         .I2(add_const_state[40]),
         .O(D[16]));
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[21]_i_1__8 
@@ -32417,6 +33639,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(Q[41]),
         .I2(add_const_state[41]),
         .O(D[17]));
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[22]_i_1__8 
@@ -32424,6 +33647,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(Q[42]),
         .I2(add_const_state[42]),
         .O(D[18]));
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[23]_i_1__8 
@@ -32431,6 +33655,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(Q[43]),
         .I2(add_const_state[43]),
         .O(D[19]));
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[24]_i_1__8 
@@ -32438,6 +33663,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(Q[44]),
         .I2(add_const_state[44]),
         .O(D[20]));
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[25]_i_1__8 
@@ -32445,6 +33671,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(Q[45]),
         .I2(add_const_state[45]),
         .O(D[21]));
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[26]_i_1__8 
@@ -32452,6 +33679,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(Q[46]),
         .I2(add_const_state[46]),
         .O(D[22]));
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[27]_i_1__8 
@@ -32459,6 +33687,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(Q[47]),
         .I2(add_const_state[47]),
         .O(D[23]));
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[29]_i_1__9 
@@ -32466,6 +33695,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(\state_out_reg[31]_inv [61]),
         .I2(add_const_state_0[60]),
         .O(\state_out_reg[127] [0]));
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[30]_i_1__9 
@@ -32473,6 +33703,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(\state_out_reg[31]_inv [62]),
         .I2(add_const_state_0[61]),
         .O(\state_out_reg[127] [1]));
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT3 #(
     .INIT(8'h65)) 
     \state_out[31]_inv_i_1 
@@ -32480,6 +33711,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(\state_out_reg[31]_inv [63]),
         .I2(add_const_state_0[62]),
         .O(sbox_state[0]));
+  (* SOFT_HLUTNM = "soft_lutpair58" *) 
   LUT3 #(
     .INIT(8'h6A)) 
     \state_out[32]_i_1__9 
@@ -32487,6 +33719,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(\state_out_reg[96] ),
         .I2(\state_out_reg[31]_inv [0]),
         .O(\state_out_reg[127] [2]));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[36]_i_1__8 
@@ -32494,6 +33727,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state[0]),
         .I2(Q[0]),
         .O(D[24]));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[37]_i_1__8 
@@ -32501,6 +33735,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state[1]),
         .I2(Q[1]),
         .O(D[25]));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[38]_i_1__8 
@@ -32508,6 +33743,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state[2]),
         .I2(Q[2]),
         .O(D[26]));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[39]_i_1__8 
@@ -32515,6 +33751,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state[3]),
         .I2(Q[3]),
         .O(D[27]));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[40]_i_1__8 
@@ -32522,6 +33759,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state[4]),
         .I2(Q[4]),
         .O(D[28]));
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[41]_i_1__8 
@@ -32529,6 +33767,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state[5]),
         .I2(Q[5]),
         .O(D[29]));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[42]_i_1__8 
@@ -32536,6 +33775,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state[6]),
         .I2(Q[6]),
         .O(D[30]));
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[43]_i_1__8 
@@ -32543,6 +33783,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state[7]),
         .I2(Q[7]),
         .O(D[31]));
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[44]_i_1__8 
@@ -32550,6 +33791,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state[8]),
         .I2(Q[8]),
         .O(D[32]));
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[45]_i_1__8 
@@ -32557,6 +33799,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state[9]),
         .I2(Q[9]),
         .O(D[33]));
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[46]_i_1__8 
@@ -32564,6 +33807,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state[10]),
         .I2(Q[10]),
         .O(D[34]));
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[47]_i_1__8 
@@ -32571,6 +33815,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state[11]),
         .I2(Q[11]),
         .O(D[35]));
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[48]_i_1__8 
@@ -32578,6 +33823,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state[12]),
         .I2(Q[12]),
         .O(D[36]));
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[49]_i_1__8 
@@ -32585,6 +33831,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state[13]),
         .I2(Q[13]),
         .O(D[37]));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[4]_i_1__7 
@@ -32592,6 +33839,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(Q[24]),
         .I2(add_const_state[24]),
         .O(D[0]));
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[50]_i_1__8 
@@ -32599,6 +33847,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state[14]),
         .I2(Q[14]),
         .O(D[38]));
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[51]_i_1__8 
@@ -32606,6 +33855,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state[15]),
         .I2(Q[15]),
         .O(D[39]));
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[52]_i_1__8 
@@ -32613,6 +33863,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state[16]),
         .I2(Q[16]),
         .O(D[40]));
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[53]_i_1__8 
@@ -32620,6 +33871,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state[17]),
         .I2(Q[17]),
         .O(D[41]));
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[54]_i_1__8 
@@ -32627,6 +33879,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state[18]),
         .I2(Q[18]),
         .O(D[42]));
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[55]_i_1__8 
@@ -32634,6 +33887,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state[19]),
         .I2(Q[19]),
         .O(D[43]));
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[56]_i_1__8 
@@ -32641,6 +33895,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state[20]),
         .I2(Q[20]),
         .O(D[44]));
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[57]_i_1__8 
@@ -32648,6 +33903,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state[21]),
         .I2(Q[21]),
         .O(D[45]));
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[58]_i_1__8 
@@ -32655,6 +33911,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state[22]),
         .I2(Q[22]),
         .O(D[46]));
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[59]_i_1__8 
@@ -32662,6 +33919,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state[23]),
         .I2(Q[23]),
         .O(D[47]));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[5]_i_1__8 
@@ -32669,6 +33927,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(Q[25]),
         .I2(add_const_state[25]),
         .O(D[1]));
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[61]_i_1__9 
@@ -32676,6 +33935,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state_0[28]),
         .I2(\state_out_reg[31]_inv [29]),
         .O(\state_out_reg[127] [3]));
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[62]_i_1__9 
@@ -32683,6 +33943,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state_0[29]),
         .I2(\state_out_reg[31]_inv [30]),
         .O(\state_out_reg[127] [4]));
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT3 #(
     .INIT(8'h65)) 
     \state_out[63]_inv_i_1 
@@ -32690,6 +33951,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state_0[30]),
         .I2(\state_out_reg[31]_inv [31]),
         .O(sbox_state[1]));
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[65]_i_1__9 
@@ -32697,6 +33959,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state_0[32]),
         .I2(\state_out_reg[31]_inv [33]),
         .O(\state_out_reg[127] [5]));
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[66]_i_1__9 
@@ -32704,6 +33967,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state_0[33]),
         .I2(\state_out_reg[31]_inv [34]),
         .O(\state_out_reg[127] [6]));
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[67]_i_1__9 
@@ -32711,6 +33975,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state_0[34]),
         .I2(\state_out_reg[31]_inv [35]),
         .O(\state_out_reg[127] [7]));
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[68]_i_1__9 
@@ -32718,6 +33983,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state_0[35]),
         .I2(\state_out_reg[31]_inv [36]),
         .O(\state_out_reg[127] [8]));
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[69]_i_1__9 
@@ -32725,6 +33991,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state_0[36]),
         .I2(\state_out_reg[31]_inv [37]),
         .O(\state_out_reg[127] [9]));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[6]_i_1__8 
@@ -32732,6 +33999,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(Q[26]),
         .I2(add_const_state[26]),
         .O(D[2]));
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[70]_i_1__9 
@@ -32739,6 +34007,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state_0[37]),
         .I2(\state_out_reg[31]_inv [38]),
         .O(\state_out_reg[127] [10]));
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[71]_i_1__9 
@@ -32746,6 +34015,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state_0[38]),
         .I2(\state_out_reg[31]_inv [39]),
         .O(\state_out_reg[127] [11]));
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[72]_i_1__9 
@@ -32753,6 +34023,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state_0[39]),
         .I2(\state_out_reg[31]_inv [40]),
         .O(\state_out_reg[127] [12]));
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[73]_i_1__9 
@@ -32760,6 +34031,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state_0[40]),
         .I2(\state_out_reg[31]_inv [41]),
         .O(\state_out_reg[127] [13]));
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[74]_i_1__9 
@@ -32767,6 +34039,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state_0[41]),
         .I2(\state_out_reg[31]_inv [42]),
         .O(\state_out_reg[127] [14]));
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[75]_i_1__9 
@@ -32774,6 +34047,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state_0[42]),
         .I2(\state_out_reg[31]_inv [43]),
         .O(\state_out_reg[127] [15]));
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[76]_i_1__9 
@@ -32781,6 +34055,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state_0[43]),
         .I2(\state_out_reg[31]_inv [44]),
         .O(\state_out_reg[127] [16]));
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[77]_i_1__9 
@@ -32788,6 +34063,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state_0[44]),
         .I2(\state_out_reg[31]_inv [45]),
         .O(\state_out_reg[127] [17]));
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[78]_i_1__9 
@@ -32795,6 +34071,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state_0[45]),
         .I2(\state_out_reg[31]_inv [46]),
         .O(\state_out_reg[127] [18]));
+  (* SOFT_HLUTNM = "soft_lutpair44" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[79]_i_1__9 
@@ -32802,6 +34079,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state_0[46]),
         .I2(\state_out_reg[31]_inv [47]),
         .O(\state_out_reg[127] [19]));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[7]_i_1__8 
@@ -32809,6 +34087,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(Q[27]),
         .I2(add_const_state[27]),
         .O(D[3]));
+  (* SOFT_HLUTNM = "soft_lutpair45" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[80]_i_1__9 
@@ -32816,6 +34095,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state_0[47]),
         .I2(\state_out_reg[31]_inv [48]),
         .O(\state_out_reg[127] [20]));
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[81]_i_1__9 
@@ -32823,6 +34103,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state_0[48]),
         .I2(\state_out_reg[31]_inv [49]),
         .O(\state_out_reg[127] [21]));
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[82]_i_1__9 
@@ -32830,6 +34111,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state_0[49]),
         .I2(\state_out_reg[31]_inv [50]),
         .O(\state_out_reg[127] [22]));
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[83]_i_1__9 
@@ -32837,6 +34119,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state_0[50]),
         .I2(\state_out_reg[31]_inv [51]),
         .O(\state_out_reg[127] [23]));
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[84]_i_1__9 
@@ -32844,6 +34127,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state_0[51]),
         .I2(\state_out_reg[31]_inv [52]),
         .O(\state_out_reg[127] [24]));
+  (* SOFT_HLUTNM = "soft_lutpair50" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[85]_i_1__9 
@@ -32851,6 +34135,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state_0[52]),
         .I2(\state_out_reg[31]_inv [53]),
         .O(\state_out_reg[127] [25]));
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[86]_i_1__9 
@@ -32858,6 +34143,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state_0[53]),
         .I2(\state_out_reg[31]_inv [54]),
         .O(\state_out_reg[127] [26]));
+  (* SOFT_HLUTNM = "soft_lutpair52" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[87]_i_1__9 
@@ -32865,6 +34151,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state_0[54]),
         .I2(\state_out_reg[31]_inv [55]),
         .O(\state_out_reg[127] [27]));
+  (* SOFT_HLUTNM = "soft_lutpair53" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[88]_i_1__9 
@@ -32872,6 +34159,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state_0[55]),
         .I2(\state_out_reg[31]_inv [56]),
         .O(\state_out_reg[127] [28]));
+  (* SOFT_HLUTNM = "soft_lutpair54" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[89]_i_1__9 
@@ -32879,6 +34167,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state_0[56]),
         .I2(\state_out_reg[31]_inv [57]),
         .O(\state_out_reg[127] [29]));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[8]_i_1__8 
@@ -32886,6 +34175,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(Q[28]),
         .I2(add_const_state[28]),
         .O(D[4]));
+  (* SOFT_HLUTNM = "soft_lutpair55" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[90]_i_1__9 
@@ -32893,6 +34183,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state_0[57]),
         .I2(\state_out_reg[31]_inv [58]),
         .O(\state_out_reg[127] [30]));
+  (* SOFT_HLUTNM = "soft_lutpair56" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[91]_i_1__9 
@@ -32900,6 +34191,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state_0[58]),
         .I2(\state_out_reg[31]_inv [59]),
         .O(\state_out_reg[127] [31]));
+  (* SOFT_HLUTNM = "soft_lutpair57" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[92]_i_1__9 
@@ -32907,6 +34199,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state_0[59]),
         .I2(\state_out_reg[31]_inv [60]),
         .O(\state_out_reg[127] [32]));
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[93]_i_1__9 
@@ -32914,6 +34207,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state_0[60]),
         .I2(\state_out_reg[31]_inv [61]),
         .O(\state_out_reg[127] [33]));
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[94]_i_1__9 
@@ -32921,6 +34215,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state_0[61]),
         .I2(\state_out_reg[31]_inv [62]),
         .O(\state_out_reg[127] [34]));
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[95]_i_1__9 
@@ -32928,6 +34223,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(add_const_state_0[62]),
         .I2(\state_out_reg[31]_inv [63]),
         .O(\state_out_reg[127] [35]));
+  (* SOFT_HLUTNM = "soft_lutpair58" *) 
   LUT3 #(
     .INIT(8'hA9)) 
     \state_out[96]_i_1__9 
@@ -32935,6 +34231,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(\state_out_reg[31]_inv [0]),
         .I2(\state_out_reg[96] ),
         .O(\state_out_reg[127] [36]));
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[97]_i_1__9 
@@ -32942,6 +34239,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(\state_out_reg[31]_inv [1]),
         .I2(add_const_state_0[0]),
         .O(\state_out_reg[127] [37]));
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[98]_i_1__9 
@@ -32949,6 +34247,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(\state_out_reg[31]_inv [2]),
         .I2(add_const_state_0[1]),
         .O(\state_out_reg[127] [38]));
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[99]_i_1__9 
@@ -32956,6 +34255,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ascon_sbox_29
         .I1(\state_out_reg[31]_inv [3]),
         .I2(add_const_state_0[2]),
         .O(\state_out_reg[127] [39]));
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT3 #(
     .INIT(8'h9A)) 
     \state_out[9]_i_1__8 

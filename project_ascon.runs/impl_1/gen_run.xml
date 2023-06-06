@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1685733654">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1686057593">
   <File Type="ROUTE-PWR" Name="design_ascon_wrapper_power_routed.rpt"/>
   <File Type="PA-TCL" Name="design_ascon_wrapper.tcl"/>
   <File Type="ROUTE-PWR-SUM" Name="design_ascon_wrapper_power_summary_routed.pb"/>
@@ -174,14 +174,14 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="$PSRCDIR/constrs_1/new/ascon_top.xdc">
+    <File Path="$PSRCDIR/constrs_1/new/ascon_const.xdc">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
     </File>
     <Config>
-      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/ascon_top.xdc"/>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/ascon_const.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
@@ -215,12 +215,11 @@
   <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_0_3"/>
   <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_3_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_ascon_processing_system7_0_3"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_3_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_4_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_ascon_ascon_core_0_2"/>
   <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_4_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_3_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_3_2"/>
   <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_3_3"/>
   <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_8_0"/>
@@ -232,4 +231,5 @@
   <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_13_2"/>
   <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_13_3"/>
   <BlockFileSet Type="BlockSrcs" Name="design_ascon_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_ascon_ascon_core_0_2"/>
 </GenRun>

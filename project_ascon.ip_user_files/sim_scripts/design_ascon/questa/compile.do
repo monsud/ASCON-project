@@ -9,11 +9,11 @@ vlib questa_lib/msim/processing_system7_vip_v1_0_16
 vlib questa_lib/msim/xil_defaultlib
 vlib questa_lib/msim/lib_cdc_v1_0_2
 vlib questa_lib/msim/proc_sys_reset_v5_0_13
+vlib questa_lib/msim/xlconcat_v2_1_4
+vlib questa_lib/msim/xlslice_v1_0_2
 vlib questa_lib/msim/axi_lite_ipif_v3_0_4
 vlib questa_lib/msim/interrupt_control_v3_1_4
 vlib questa_lib/msim/axi_gpio_v2_0_30
-vlib questa_lib/msim/xlconcat_v2_1_4
-vlib questa_lib/msim/xlslice_v1_0_2
 vlib questa_lib/msim/generic_baseblocks_v2_1_0
 vlib questa_lib/msim/axi_register_slice_v2_1_28
 vlib questa_lib/msim/fifo_generator_v13_2_8
@@ -29,11 +29,11 @@ vmap processing_system7_vip_v1_0_16 questa_lib/msim/processing_system7_vip_v1_0_
 vmap xil_defaultlib questa_lib/msim/xil_defaultlib
 vmap lib_cdc_v1_0_2 questa_lib/msim/lib_cdc_v1_0_2
 vmap proc_sys_reset_v5_0_13 questa_lib/msim/proc_sys_reset_v5_0_13
+vmap xlconcat_v2_1_4 questa_lib/msim/xlconcat_v2_1_4
+vmap xlslice_v1_0_2 questa_lib/msim/xlslice_v1_0_2
 vmap axi_lite_ipif_v3_0_4 questa_lib/msim/axi_lite_ipif_v3_0_4
 vmap interrupt_control_v3_1_4 questa_lib/msim/interrupt_control_v3_1_4
 vmap axi_gpio_v2_0_30 questa_lib/msim/axi_gpio_v2_0_30
-vmap xlconcat_v2_1_4 questa_lib/msim/xlconcat_v2_1_4
-vmap xlslice_v1_0_2 questa_lib/msim/xlslice_v1_0_2
 vmap generic_baseblocks_v2_1_0 questa_lib/msim/generic_baseblocks_v2_1_0
 vmap axi_register_slice_v2_1_28 questa_lib/msim/axi_register_slice_v2_1_28
 vmap fifo_generator_v13_2_8 questa_lib/msim/fifo_generator_v13_2_8
@@ -80,6 +80,34 @@ vcom -work proc_sys_reset_v5_0_13  -93  \
 vcom -work xil_defaultlib  -93  \
 "../../../bd/design_ascon/ip/design_ascon_rst_ps7_0_50M_4/sim/design_ascon_rst_ps7_0_50M_4.vhd" \
 
+vlog -work xlconcat_v2_1_4  -incr -mfcu  "+incdir+../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/ec67/hdl" "+incdir+../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/aed8/hdl" "+incdir+C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v" \
+
+vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/ec67/hdl" "+incdir+../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/aed8/hdl" "+incdir+C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../bd/design_ascon/ip/design_ascon_xlconcat_0_0/sim/design_ascon_xlconcat_0_0.v" \
+"../../../bd/design_ascon/ip/design_ascon_xlconcat_0_1/sim/design_ascon_xlconcat_0_1.v" \
+"../../../bd/design_ascon/ip/design_ascon_xlconcat_1_0/sim/design_ascon_xlconcat_1_0.v" \
+
+vlog -work xlslice_v1_0_2  -incr -mfcu  "+incdir+../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/ec67/hdl" "+incdir+../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/aed8/hdl" "+incdir+C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v" \
+
+vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/ec67/hdl" "+incdir+../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/aed8/hdl" "+incdir+C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../bd/design_ascon/ip/design_ascon_xlslice_0_0/sim/design_ascon_xlslice_0_0.v" \
+"../../../bd/design_ascon/ip/design_ascon_xlslice_0_1/sim/design_ascon_xlslice_0_1.v" \
+"../../../bd/design_ascon/ip/design_ascon_xlslice_0_2/sim/design_ascon_xlslice_0_2.v" \
+"../../../bd/design_ascon/ip/design_ascon_xlslice_0_3/sim/design_ascon_xlslice_0_3.v" \
+
+vlog -work xil_defaultlib  -incr -mfcu  -sv -L axi_vip_v1_1_14 -L processing_system7_vip_v1_0_16 -L xilinx_vip "+incdir+../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/ec67/hdl" "+incdir+../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/aed8/hdl" "+incdir+C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../bd/design_ascon/ipshared/a669/sources_1/new/ascon_add_constant.sv" \
+"../../../bd/design_ascon/ipshared/a669/sources_1/new/ascon_finalization.sv" \
+"../../../bd/design_ascon/ipshared/a669/sources_1/new/ascon_initalization.sv" \
+"../../../bd/design_ascon/ipshared/a669/sources_1/new/ascon_key_schedule.sv" \
+"../../../bd/design_ascon/ipshared/a669/sources_1/new/ascon_linear_diffusion.sv" \
+"../../../bd/design_ascon/ipshared/a669/sources_1/new/ascon_round.sv" \
+"../../../bd/design_ascon/ipshared/a669/sources_1/new/ascon_sbox.sv" \
+"../../../bd/design_ascon/ipshared/a669/sources_1/new/ascon_top.sv" \
+"../../../bd/design_ascon/ip/design_ascon_ascon_core_0_2/sim/design_ascon_ascon_core_0_2.sv" \
+
 vcom -work axi_lite_ipif_v3_0_4  -93  \
 "../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd" \
 
@@ -94,57 +122,19 @@ vcom -work xil_defaultlib  -93  \
 "../../../bd/design_ascon/ip/design_ascon_axi_gpio_0_1/sim/design_ascon_axi_gpio_0_1.vhd" \
 "../../../bd/design_ascon/ip/design_ascon_axi_gpio_0_2/sim/design_ascon_axi_gpio_0_2.vhd" \
 "../../../bd/design_ascon/ip/design_ascon_axi_gpio_0_3/sim/design_ascon_axi_gpio_0_3.vhd" \
-
-vlog -work xlconcat_v2_1_4  -incr -mfcu  "+incdir+../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/ec67/hdl" "+incdir+../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/aed8/hdl" "+incdir+C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
-"../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v" \
-
-vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/ec67/hdl" "+incdir+../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/aed8/hdl" "+incdir+C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
-"../../../bd/design_ascon/ip/design_ascon_xlconcat_0_0/sim/design_ascon_xlconcat_0_0.v" \
-
-vcom -work xil_defaultlib  -93  \
-"../../../bd/design_ascon/ip/design_ascon_axi_gpio_4_0/sim/design_ascon_axi_gpio_4_0.vhd" \
-"../../../bd/design_ascon/ip/design_ascon_axi_gpio_3_0/sim/design_ascon_axi_gpio_3_0.vhd" \
-"../../../bd/design_ascon/ip/design_ascon_axi_gpio_3_1/sim/design_ascon_axi_gpio_3_1.vhd" \
-"../../../bd/design_ascon/ip/design_ascon_axi_gpio_3_2/sim/design_ascon_axi_gpio_3_2.vhd" \
-"../../../bd/design_ascon/ip/design_ascon_axi_gpio_3_3/sim/design_ascon_axi_gpio_3_3.vhd" \
-
-vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/ec67/hdl" "+incdir+../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/aed8/hdl" "+incdir+C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
-"../../../bd/design_ascon/ip/design_ascon_xlconcat_0_1/sim/design_ascon_xlconcat_0_1.v" \
-
-vcom -work xil_defaultlib  -93  \
-"../../../bd/design_ascon/ip/design_ascon_axi_gpio_8_0/sim/design_ascon_axi_gpio_8_0.vhd" \
-"../../../bd/design_ascon/ip/design_ascon_axi_gpio_8_1/sim/design_ascon_axi_gpio_8_1.vhd" \
-"../../../bd/design_ascon/ip/design_ascon_axi_gpio_8_2/sim/design_ascon_axi_gpio_8_2.vhd" \
-"../../../bd/design_ascon/ip/design_ascon_axi_gpio_8_3/sim/design_ascon_axi_gpio_8_3.vhd" \
-
-vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/ec67/hdl" "+incdir+../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/aed8/hdl" "+incdir+C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
-"../../../bd/design_ascon/ip/design_ascon_xlconcat_1_0/sim/design_ascon_xlconcat_1_0.v" \
-
-vlog -work xlslice_v1_0_2  -incr -mfcu  "+incdir+../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/ec67/hdl" "+incdir+../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/aed8/hdl" "+incdir+C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
-"../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v" \
-
-vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/ec67/hdl" "+incdir+../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/aed8/hdl" "+incdir+C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
-"../../../bd/design_ascon/ip/design_ascon_xlslice_0_0/sim/design_ascon_xlslice_0_0.v" \
-"../../../bd/design_ascon/ip/design_ascon_xlslice_0_1/sim/design_ascon_xlslice_0_1.v" \
-"../../../bd/design_ascon/ip/design_ascon_xlslice_0_2/sim/design_ascon_xlslice_0_2.v" \
-"../../../bd/design_ascon/ip/design_ascon_xlslice_0_3/sim/design_ascon_xlslice_0_3.v" \
-
-vcom -work xil_defaultlib  -93  \
 "../../../bd/design_ascon/ip/design_ascon_axi_gpio_13_0/sim/design_ascon_axi_gpio_13_0.vhd" \
 "../../../bd/design_ascon/ip/design_ascon_axi_gpio_13_1/sim/design_ascon_axi_gpio_13_1.vhd" \
 "../../../bd/design_ascon/ip/design_ascon_axi_gpio_13_2/sim/design_ascon_axi_gpio_13_2.vhd" \
 "../../../bd/design_ascon/ip/design_ascon_axi_gpio_13_3/sim/design_ascon_axi_gpio_13_3.vhd" \
-
-vlog -work xil_defaultlib  -incr -mfcu  -sv -L axi_vip_v1_1_14 -L processing_system7_vip_v1_0_16 -L xilinx_vip "+incdir+../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/ec67/hdl" "+incdir+../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/aed8/hdl" "+incdir+C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
-"../../../bd/design_ascon/ipshared/a669/sources_1/new/ascon_add_constant.sv" \
-"../../../bd/design_ascon/ipshared/a669/sources_1/new/ascon_finalization.sv" \
-"../../../bd/design_ascon/ipshared/a669/sources_1/new/ascon_initalization.sv" \
-"../../../bd/design_ascon/ipshared/a669/sources_1/new/ascon_key_schedule.sv" \
-"../../../bd/design_ascon/ipshared/a669/sources_1/new/ascon_linear_diffusion.sv" \
-"../../../bd/design_ascon/ipshared/a669/sources_1/new/ascon_round.sv" \
-"../../../bd/design_ascon/ipshared/a669/sources_1/new/ascon_sbox.sv" \
-"../../../bd/design_ascon/ipshared/a669/sources_1/new/ascon_top.sv" \
-"../../../bd/design_ascon/ip/design_ascon_ascon_core_0_2/sim/design_ascon_ascon_core_0_2.sv" \
+"../../../bd/design_ascon/ip/design_ascon_axi_gpio_3_0/sim/design_ascon_axi_gpio_3_0.vhd" \
+"../../../bd/design_ascon/ip/design_ascon_axi_gpio_3_1/sim/design_ascon_axi_gpio_3_1.vhd" \
+"../../../bd/design_ascon/ip/design_ascon_axi_gpio_3_2/sim/design_ascon_axi_gpio_3_2.vhd" \
+"../../../bd/design_ascon/ip/design_ascon_axi_gpio_3_3/sim/design_ascon_axi_gpio_3_3.vhd" \
+"../../../bd/design_ascon/ip/design_ascon_axi_gpio_4_0/sim/design_ascon_axi_gpio_4_0.vhd" \
+"../../../bd/design_ascon/ip/design_ascon_axi_gpio_8_0/sim/design_ascon_axi_gpio_8_0.vhd" \
+"../../../bd/design_ascon/ip/design_ascon_axi_gpio_8_1/sim/design_ascon_axi_gpio_8_1.vhd" \
+"../../../bd/design_ascon/ip/design_ascon_axi_gpio_8_2/sim/design_ascon_axi_gpio_8_2.vhd" \
+"../../../bd/design_ascon/ip/design_ascon_axi_gpio_8_3/sim/design_ascon_axi_gpio_8_3.vhd" \
 
 vlog -work generic_baseblocks_v2_1_0  -incr -mfcu  "+incdir+../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/ec67/hdl" "+incdir+../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/aed8/hdl" "+incdir+C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
 "../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \

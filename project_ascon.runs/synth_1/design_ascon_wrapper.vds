@@ -3,8 +3,8 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Fri Jun  2 21:21:04 2023
-# Process ID: 4976
+# Start of session at: Tue Jun  6 15:19:58 2023
+# Process ID: 5484
 # Current directory: C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1
 # Command line: vivado.exe -log design_ascon_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_ascon_wrapper.tcl
 # Log file: C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/design_ascon_wrapper.vds
@@ -12,11 +12,11 @@
 # Running On: INSPIRON-7370, OS: Windows, CPU Frequency: 1800 MHz, CPU Physical cores: 2, Host memory: 4294 MB
 #-----------------------------------------------------------
 source design_ascon_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 421.031 ; gain = 164.141
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 422.102 ; gain = 163.043
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/david/Documents/ASCON-project/project_ascon.srcs'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
-add_files: Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 469.234 ; gain = 23.359
+add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 470.105 ; gain = 23.141
 Command: read_checkpoint -auto_incremental -incremental C:/Users/david/Documents/ASCON-project/project_ascon.srcs/utils_1/imports/synth_1/ascon_top.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/david/Documents/ASCON-project/project_ascon.srcs/utils_1/imports/synth_1/ascon_top.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -29,126 +29,126 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 4032
+INFO: [Synth 8-7075] Helper process launched with PID 4628
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 1307.066 ; gain = 410.871
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1307.633 ; gain = 411.777
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_ascon_wrapper' [C:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/hdl/design_ascon_wrapper.v:13]
 INFO: [Synth 8-6157] synthesizing module 'design_ascon' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_ascon_ascon_core_0_2' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_ascon_core_0_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_ascon_ascon_core_0_2' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_ascon_core_0_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_ascon_axi_gpio_13_0' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_axi_gpio_13_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_ascon_axi_gpio_13_0' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_axi_gpio_13_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_ascon_axi_gpio_13_1' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_axi_gpio_13_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_ascon_axi_gpio_13_1' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_axi_gpio_13_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_ascon_axi_gpio_13_2' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_axi_gpio_13_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_ascon_axi_gpio_13_2' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_axi_gpio_13_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_ascon_axi_gpio_13_3' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_axi_gpio_13_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_ascon_axi_gpio_13_3' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_axi_gpio_13_3_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_ascon_axi_gpio_4_0' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_axi_gpio_4_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_ascon_axi_gpio_4_0' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_axi_gpio_4_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_ascon_axi_gpio_0_0' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_ascon_axi_gpio_0_0' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_ascon_axi_gpio_0_1' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_axi_gpio_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_ascon_axi_gpio_0_1' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_axi_gpio_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_ascon_axi_gpio_0_2' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_axi_gpio_0_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_ascon_axi_gpio_0_2' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_axi_gpio_0_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_ascon_axi_gpio_0_3' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_axi_gpio_0_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_ascon_axi_gpio_0_3' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_axi_gpio_0_3_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_ascon_axi_gpio_3_0' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_axi_gpio_3_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_ascon_axi_gpio_3_0' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_axi_gpio_3_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_ascon_axi_gpio_3_1' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_axi_gpio_3_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_ascon_axi_gpio_3_1' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_axi_gpio_3_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_ascon_axi_gpio_3_2' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_axi_gpio_3_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_ascon_axi_gpio_3_2' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_axi_gpio_3_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_ascon_axi_gpio_3_3' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_axi_gpio_3_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_ascon_axi_gpio_3_3' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_axi_gpio_3_3_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_ascon_axi_gpio_8_0' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_axi_gpio_8_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_ascon_axi_gpio_8_0' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_axi_gpio_8_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_ascon_axi_gpio_8_1' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_axi_gpio_8_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_ascon_axi_gpio_8_1' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_axi_gpio_8_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_ascon_axi_gpio_8_2' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_axi_gpio_8_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_ascon_axi_gpio_8_2' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_axi_gpio_8_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_ascon_axi_gpio_8_3' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_axi_gpio_8_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_ascon_axi_gpio_8_3' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_axi_gpio_8_3_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_ascon_processing_system7_0_3' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_processing_system7_0_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_ascon_processing_system7_0_3' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_processing_system7_0_3_stub.v:6]
-WARNING: [Synth 8-7071] port 'TTC0_WAVE0_OUT' of module 'design_ascon_processing_system7_0_3' is unconnected for instance 'processing_system7_0' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:796]
-WARNING: [Synth 8-7071] port 'TTC0_WAVE1_OUT' of module 'design_ascon_processing_system7_0_3' is unconnected for instance 'processing_system7_0' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:796]
-WARNING: [Synth 8-7071] port 'TTC0_WAVE2_OUT' of module 'design_ascon_processing_system7_0_3' is unconnected for instance 'processing_system7_0' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:796]
-WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'design_ascon_processing_system7_0_3' is unconnected for instance 'processing_system7_0' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:796]
-WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'design_ascon_processing_system7_0_3' is unconnected for instance 'processing_system7_0' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:796]
-WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_ascon_processing_system7_0_3' has 68 connections declared, but only 63 given [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:796]
-INFO: [Synth 8-6157] synthesizing module 'design_ascon_ps7_0_axi_periph_0' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:1265]
-INFO: [Synth 8-6157] synthesizing module 'i00_couplers_imp_1KGOKKI' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:4092]
-INFO: [Synth 8-6155] done synthesizing module 'i00_couplers_imp_1KGOKKI' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:4092]
-INFO: [Synth 8-6157] synthesizing module 'i01_couplers_imp_1P4WXR6' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:4238]
-INFO: [Synth 8-6155] done synthesizing module 'i01_couplers_imp_1P4WXR6' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:4238]
-INFO: [Synth 8-6157] synthesizing module 'i02_couplers_imp_1RL9YG2' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:4384]
-INFO: [Synth 8-6155] done synthesizing module 'i02_couplers_imp_1RL9YG2' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:4384]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_192XI7X' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:4530]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_192XI7X' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:4530]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1EB53NH' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:4662]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1EB53NH' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:4662]
-INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_12W12BH' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:4794]
-INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_12W12BH' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:4794]
-INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_170AZB1' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:4926]
-INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_170AZB1' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:4926]
-INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_1YPKTJ1' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:5058]
-INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_1YPKTJ1' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:5058]
-INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_1SWQJZX' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:5190]
-INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_1SWQJZX' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:5190]
-INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_1LUZIM5' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:5322]
-INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_1LUZIM5' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:5322]
-INFO: [Synth 8-6157] synthesizing module 'm07_couplers_imp_1JE12RH' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:5454]
-INFO: [Synth 8-6155] done synthesizing module 'm07_couplers_imp_1JE12RH' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:5454]
-INFO: [Synth 8-6157] synthesizing module 'm08_couplers_imp_7JZON1' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:5586]
-INFO: [Synth 8-6155] done synthesizing module 'm08_couplers_imp_7JZON1' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:5586]
-INFO: [Synth 8-6157] synthesizing module 'm09_couplers_imp_3CLE4D' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:5718]
-INFO: [Synth 8-6155] done synthesizing module 'm09_couplers_imp_3CLE4D' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:5718]
-INFO: [Synth 8-6157] synthesizing module 'm10_couplers_imp_FTR1RD' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:5850]
-INFO: [Synth 8-6155] done synthesizing module 'm10_couplers_imp_FTR1RD' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:5850]
-INFO: [Synth 8-6157] synthesizing module 'm11_couplers_imp_CSTRVT' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:5982]
-INFO: [Synth 8-6155] done synthesizing module 'm11_couplers_imp_CSTRVT' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:5982]
-INFO: [Synth 8-6157] synthesizing module 'm12_couplers_imp_6HA8MH' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:6114]
-INFO: [Synth 8-6155] done synthesizing module 'm12_couplers_imp_6HA8MH' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:6114]
-INFO: [Synth 8-6157] synthesizing module 'm13_couplers_imp_4H52H' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:6246]
-INFO: [Synth 8-6155] done synthesizing module 'm13_couplers_imp_4H52H' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:6246]
-INFO: [Synth 8-6157] synthesizing module 'm14_couplers_imp_S7JXYH' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:6378]
-INFO: [Synth 8-6155] done synthesizing module 'm14_couplers_imp_S7JXYH' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:6378]
-INFO: [Synth 8-6157] synthesizing module 'm15_couplers_imp_VRV0X5' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:6510]
-INFO: [Synth 8-6155] done synthesizing module 'm15_couplers_imp_VRV0X5' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:6510]
-INFO: [Synth 8-6157] synthesizing module 'm16_couplers_imp_L2YGX5' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:6642]
-INFO: [Synth 8-6155] done synthesizing module 'm16_couplers_imp_L2YGX5' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:6642]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1H17FZI' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:6774]
-INFO: [Synth 8-6157] synthesizing module 'design_ascon_auto_pc_0' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_ascon_auto_pc_0' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1H17FZI' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:6774]
-INFO: [Synth 8-6157] synthesizing module 'design_ascon_tier2_xbar_0_0' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_tier2_xbar_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_ascon_tier2_xbar_0_0' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_tier2_xbar_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_ascon_tier2_xbar_0_0' is unconnected for instance 'tier2_xbar_0' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:3932]
-WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_ascon_tier2_xbar_0_0' is unconnected for instance 'tier2_xbar_0' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:3932]
-WARNING: [Synth 8-7023] instance 'tier2_xbar_0' of module 'design_ascon_tier2_xbar_0_0' has 40 connections declared, but only 38 given [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:3932]
-INFO: [Synth 8-6157] synthesizing module 'design_ascon_tier2_xbar_1_0' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_tier2_xbar_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_ascon_tier2_xbar_1_0' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_tier2_xbar_1_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_ascon_tier2_xbar_1_0' is unconnected for instance 'tier2_xbar_1' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:3971]
-WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_ascon_tier2_xbar_1_0' is unconnected for instance 'tier2_xbar_1' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:3971]
-WARNING: [Synth 8-7023] instance 'tier2_xbar_1' of module 'design_ascon_tier2_xbar_1_0' has 40 connections declared, but only 38 given [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:3971]
-INFO: [Synth 8-6157] synthesizing module 'design_ascon_tier2_xbar_2_0' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_tier2_xbar_2_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_ascon_tier2_xbar_2_0' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_tier2_xbar_2_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_ascon_tier2_xbar_2_0' is unconnected for instance 'tier2_xbar_2' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:4010]
-WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_ascon_tier2_xbar_2_0' is unconnected for instance 'tier2_xbar_2' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:4010]
-WARNING: [Synth 8-7023] instance 'tier2_xbar_2' of module 'design_ascon_tier2_xbar_2_0' has 40 connections declared, but only 38 given [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:4010]
-INFO: [Synth 8-6157] synthesizing module 'design_ascon_xbar_0' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_ascon_xbar_0' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_ascon_ps7_0_axi_periph_0' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:1265]
-INFO: [Synth 8-6157] synthesizing module 'design_ascon_rst_ps7_0_50M_4' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_rst_ps7_0_50M_4_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_ascon_rst_ps7_0_50M_4' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-4976-INSPIRON-7370/realtime/design_ascon_rst_ps7_0_50M_4_stub.v:6]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_ascon_rst_ps7_0_50M_4' is unconnected for instance 'rst_ps7_0_50M' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:1226]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_ascon_rst_ps7_0_50M_4' is unconnected for instance 'rst_ps7_0_50M' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:1226]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_ascon_rst_ps7_0_50M_4' is unconnected for instance 'rst_ps7_0_50M' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:1226]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_ascon_rst_ps7_0_50M_4' is unconnected for instance 'rst_ps7_0_50M' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:1226]
-WARNING: [Synth 8-7023] instance 'rst_ps7_0_50M' of module 'design_ascon_rst_ps7_0_50M_4' has 10 connections declared, but only 6 given [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:1226]
+INFO: [Synth 8-6157] synthesizing module 'design_ascon_ascon_core_0_2' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_ascon_core_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_ascon_ascon_core_0_2' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_ascon_core_0_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_ascon_axi_gpio_13_0' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_axi_gpio_13_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_ascon_axi_gpio_13_0' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_axi_gpio_13_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_ascon_axi_gpio_13_1' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_axi_gpio_13_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_ascon_axi_gpio_13_1' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_axi_gpio_13_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_ascon_axi_gpio_13_2' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_axi_gpio_13_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_ascon_axi_gpio_13_2' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_axi_gpio_13_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_ascon_axi_gpio_13_3' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_axi_gpio_13_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_ascon_axi_gpio_13_3' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_axi_gpio_13_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_ascon_axi_gpio_4_0' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_axi_gpio_4_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_ascon_axi_gpio_4_0' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_axi_gpio_4_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_ascon_axi_gpio_0_0' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_ascon_axi_gpio_0_0' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_ascon_axi_gpio_0_1' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_ascon_axi_gpio_0_1' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_ascon_axi_gpio_0_2' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_axi_gpio_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_ascon_axi_gpio_0_2' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_axi_gpio_0_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_ascon_axi_gpio_0_3' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_axi_gpio_0_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_ascon_axi_gpio_0_3' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_axi_gpio_0_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_ascon_axi_gpio_3_0' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_axi_gpio_3_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_ascon_axi_gpio_3_0' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_axi_gpio_3_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_ascon_axi_gpio_3_1' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_axi_gpio_3_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_ascon_axi_gpio_3_1' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_axi_gpio_3_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_ascon_axi_gpio_3_2' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_axi_gpio_3_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_ascon_axi_gpio_3_2' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_axi_gpio_3_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_ascon_axi_gpio_3_3' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_axi_gpio_3_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_ascon_axi_gpio_3_3' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_axi_gpio_3_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_ascon_axi_gpio_8_0' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_axi_gpio_8_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_ascon_axi_gpio_8_0' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_axi_gpio_8_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_ascon_axi_gpio_8_1' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_axi_gpio_8_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_ascon_axi_gpio_8_1' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_axi_gpio_8_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_ascon_axi_gpio_8_2' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_axi_gpio_8_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_ascon_axi_gpio_8_2' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_axi_gpio_8_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_ascon_axi_gpio_8_3' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_axi_gpio_8_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_ascon_axi_gpio_8_3' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_axi_gpio_8_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_ascon_processing_system7_0_3' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_processing_system7_0_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_ascon_processing_system7_0_3' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_processing_system7_0_3_stub.v:6]
+WARNING: [Synth 8-7071] port 'TTC0_WAVE0_OUT' of module 'design_ascon_processing_system7_0_3' is unconnected for instance 'processing_system7_0' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:801]
+WARNING: [Synth 8-7071] port 'TTC0_WAVE1_OUT' of module 'design_ascon_processing_system7_0_3' is unconnected for instance 'processing_system7_0' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:801]
+WARNING: [Synth 8-7071] port 'TTC0_WAVE2_OUT' of module 'design_ascon_processing_system7_0_3' is unconnected for instance 'processing_system7_0' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:801]
+WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'design_ascon_processing_system7_0_3' is unconnected for instance 'processing_system7_0' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:801]
+WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'design_ascon_processing_system7_0_3' is unconnected for instance 'processing_system7_0' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:801]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_ascon_processing_system7_0_3' has 68 connections declared, but only 63 given [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:801]
+INFO: [Synth 8-6157] synthesizing module 'design_ascon_ps7_0_axi_periph_0' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:1270]
+INFO: [Synth 8-6157] synthesizing module 'i00_couplers_imp_1KGOKKI' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:4097]
+INFO: [Synth 8-6155] done synthesizing module 'i00_couplers_imp_1KGOKKI' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:4097]
+INFO: [Synth 8-6157] synthesizing module 'i01_couplers_imp_1P4WXR6' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:4243]
+INFO: [Synth 8-6155] done synthesizing module 'i01_couplers_imp_1P4WXR6' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:4243]
+INFO: [Synth 8-6157] synthesizing module 'i02_couplers_imp_1RL9YG2' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:4389]
+INFO: [Synth 8-6155] done synthesizing module 'i02_couplers_imp_1RL9YG2' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:4389]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_192XI7X' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:4535]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_192XI7X' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:4535]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1EB53NH' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:4667]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1EB53NH' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:4667]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_12W12BH' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:4799]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_12W12BH' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:4799]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_170AZB1' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:4931]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_170AZB1' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:4931]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_1YPKTJ1' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:5063]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_1YPKTJ1' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:5063]
+INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_1SWQJZX' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:5195]
+INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_1SWQJZX' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:5195]
+INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_1LUZIM5' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:5327]
+INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_1LUZIM5' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:5327]
+INFO: [Synth 8-6157] synthesizing module 'm07_couplers_imp_1JE12RH' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:5459]
+INFO: [Synth 8-6155] done synthesizing module 'm07_couplers_imp_1JE12RH' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:5459]
+INFO: [Synth 8-6157] synthesizing module 'm08_couplers_imp_7JZON1' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:5591]
+INFO: [Synth 8-6155] done synthesizing module 'm08_couplers_imp_7JZON1' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:5591]
+INFO: [Synth 8-6157] synthesizing module 'm09_couplers_imp_3CLE4D' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:5723]
+INFO: [Synth 8-6155] done synthesizing module 'm09_couplers_imp_3CLE4D' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:5723]
+INFO: [Synth 8-6157] synthesizing module 'm10_couplers_imp_FTR1RD' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:5855]
+INFO: [Synth 8-6155] done synthesizing module 'm10_couplers_imp_FTR1RD' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:5855]
+INFO: [Synth 8-6157] synthesizing module 'm11_couplers_imp_CSTRVT' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:5987]
+INFO: [Synth 8-6155] done synthesizing module 'm11_couplers_imp_CSTRVT' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:5987]
+INFO: [Synth 8-6157] synthesizing module 'm12_couplers_imp_6HA8MH' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:6119]
+INFO: [Synth 8-6155] done synthesizing module 'm12_couplers_imp_6HA8MH' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:6119]
+INFO: [Synth 8-6157] synthesizing module 'm13_couplers_imp_4H52H' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:6251]
+INFO: [Synth 8-6155] done synthesizing module 'm13_couplers_imp_4H52H' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:6251]
+INFO: [Synth 8-6157] synthesizing module 'm14_couplers_imp_S7JXYH' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:6383]
+INFO: [Synth 8-6155] done synthesizing module 'm14_couplers_imp_S7JXYH' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:6383]
+INFO: [Synth 8-6157] synthesizing module 'm15_couplers_imp_VRV0X5' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:6515]
+INFO: [Synth 8-6155] done synthesizing module 'm15_couplers_imp_VRV0X5' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:6515]
+INFO: [Synth 8-6157] synthesizing module 'm16_couplers_imp_L2YGX5' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:6647]
+INFO: [Synth 8-6155] done synthesizing module 'm16_couplers_imp_L2YGX5' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:6647]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1H17FZI' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:6779]
+INFO: [Synth 8-6157] synthesizing module 'design_ascon_auto_pc_0' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_ascon_auto_pc_0' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1H17FZI' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:6779]
+INFO: [Synth 8-6157] synthesizing module 'design_ascon_tier2_xbar_0_0' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_tier2_xbar_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_ascon_tier2_xbar_0_0' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_tier2_xbar_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_ascon_tier2_xbar_0_0' is unconnected for instance 'tier2_xbar_0' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:3937]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_ascon_tier2_xbar_0_0' is unconnected for instance 'tier2_xbar_0' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:3937]
+WARNING: [Synth 8-7023] instance 'tier2_xbar_0' of module 'design_ascon_tier2_xbar_0_0' has 40 connections declared, but only 38 given [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:3937]
+INFO: [Synth 8-6157] synthesizing module 'design_ascon_tier2_xbar_1_0' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_tier2_xbar_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_ascon_tier2_xbar_1_0' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_tier2_xbar_1_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_ascon_tier2_xbar_1_0' is unconnected for instance 'tier2_xbar_1' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:3976]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_ascon_tier2_xbar_1_0' is unconnected for instance 'tier2_xbar_1' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:3976]
+WARNING: [Synth 8-7023] instance 'tier2_xbar_1' of module 'design_ascon_tier2_xbar_1_0' has 40 connections declared, but only 38 given [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:3976]
+INFO: [Synth 8-6157] synthesizing module 'design_ascon_tier2_xbar_2_0' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_tier2_xbar_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_ascon_tier2_xbar_2_0' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_tier2_xbar_2_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_ascon_tier2_xbar_2_0' is unconnected for instance 'tier2_xbar_2' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:4015]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_ascon_tier2_xbar_2_0' is unconnected for instance 'tier2_xbar_2' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:4015]
+WARNING: [Synth 8-7023] instance 'tier2_xbar_2' of module 'design_ascon_tier2_xbar_2_0' has 40 connections declared, but only 38 given [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:4015]
+INFO: [Synth 8-6157] synthesizing module 'design_ascon_xbar_0' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_ascon_xbar_0' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_ascon_ps7_0_axi_periph_0' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:1270]
+INFO: [Synth 8-6157] synthesizing module 'design_ascon_rst_ps7_0_50M_4' [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_rst_ps7_0_50M_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_ascon_rst_ps7_0_50M_4' (0#1) [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/.Xil/Vivado-5484-INSPIRON-7370/realtime/design_ascon_rst_ps7_0_50M_4_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_ascon_rst_ps7_0_50M_4' is unconnected for instance 'rst_ps7_0_50M' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:1231]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_ascon_rst_ps7_0_50M_4' is unconnected for instance 'rst_ps7_0_50M' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:1231]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_ascon_rst_ps7_0_50M_4' is unconnected for instance 'rst_ps7_0_50M' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:1231]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_ascon_rst_ps7_0_50M_4' is unconnected for instance 'rst_ps7_0_50M' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:1231]
+WARNING: [Synth 8-7023] instance 'rst_ps7_0_50M' of module 'design_ascon_rst_ps7_0_50M_4' has 10 connections declared, but only 6 given [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/synth/design_ascon.v:1231]
 INFO: [Synth 8-6157] synthesizing module 'design_ascon_xlconcat_0_0' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_xlconcat_0_0/synth/design_ascon_xlconcat_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
 INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
@@ -277,18 +277,18 @@ WARNING: [Synth 8-7129] Port Din[125] in module xlslice_v1_0_2_xlslice__paramete
 WARNING: [Synth 8-7129] Port Din[124] in module xlslice_v1_0_2_xlslice__parameterized1 is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1418.047 ; gain = 521.852
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1417.969 ; gain = 522.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1418.047 ; gain = 521.852
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1417.969 ; gain = 522.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1418.047 ; gain = 521.852
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1417.969 ; gain = 522.113
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.184 . Memory (MB): peak = 1418.047 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.211 . Memory (MB): peak = 1417.969 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -297,8 +297,6 @@ Parsing XDC File [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sourc
 Finished Parsing XDC File [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_processing_system7_0_3/design_ascon_processing_system7_0_3/design_ascon_processing_system7_0_3_in_context.xdc] for cell 'design_ascon_i/processing_system7_0'
 Parsing XDC File [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_rst_ps7_0_50M_4/design_ascon_rst_ps7_0_50M_4/design_ascon_rst_ps7_0_50M_4_in_context.xdc] for cell 'design_ascon_i/rst_ps7_0_50M'
 Finished Parsing XDC File [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_rst_ps7_0_50M_4/design_ascon_rst_ps7_0_50M_4/design_ascon_rst_ps7_0_50M_4_in_context.xdc] for cell 'design_ascon_i/rst_ps7_0_50M'
-Parsing XDC File [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_ascon_core_0_2/design_ascon_ascon_core_0_2/design_ascon_ascon_core_0_2_in_context.xdc] for cell 'design_ascon_i/ascon_core_0'
-Finished Parsing XDC File [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_ascon_core_0_2/design_ascon_ascon_core_0_2/design_ascon_ascon_core_0_2_in_context.xdc] for cell 'design_ascon_i/ascon_core_0'
 Parsing XDC File [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_axi_gpio_0_0/design_ascon_axi_gpio_0_0/design_ascon_axi_gpio_0_1_in_context.xdc] for cell 'design_ascon_i/axi_gpio_key_0'
 Finished Parsing XDC File [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_axi_gpio_0_0/design_ascon_axi_gpio_0_0/design_ascon_axi_gpio_0_1_in_context.xdc] for cell 'design_ascon_i/axi_gpio_key_0'
 Parsing XDC File [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_axi_gpio_0_1/design_ascon_axi_gpio_0_1/design_ascon_axi_gpio_0_1_in_context.xdc] for cell 'design_ascon_i/axi_gpio_key_1'
@@ -343,32 +341,35 @@ Parsing XDC File [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sourc
 Finished Parsing XDC File [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_tier2_xbar_2_0/design_ascon_tier2_xbar_2_0/design_ascon_tier2_xbar_2_0_in_context.xdc] for cell 'design_ascon_i/ps7_0_axi_periph/tier2_xbar_2'
 Parsing XDC File [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_auto_pc_0/design_ascon_auto_pc_0/design_ascon_auto_pc_0_in_context.xdc] for cell 'design_ascon_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Finished Parsing XDC File [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_auto_pc_0/design_ascon_auto_pc_0/design_ascon_auto_pc_0_in_context.xdc] for cell 'design_ascon_i/ps7_0_axi_periph/s00_couplers/auto_pc'
-Parsing XDC File [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/constrs_1/new/ascon_top.xdc]
-WARNING: [Vivado 12-584] No ports matched 'clk'. [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/constrs_1/new/ascon_top.xdc:1]
-Finished Parsing XDC File [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/constrs_1/new/ascon_top.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/constrs_1/new/ascon_top.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/design_ascon_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/constrs_1/new/ascon_top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_ascon_wrapper_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/design_ascon_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_ascon_core_0_2/design_ascon_ascon_core_0_2/design_ascon_ascon_core_0_2_in_context.xdc] for cell 'design_ascon_i/ascon_core_0'
+Finished Parsing XDC File [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_ascon_core_0_2/design_ascon_ascon_core_0_2/design_ascon_ascon_core_0_2_in_context.xdc] for cell 'design_ascon_i/ascon_core_0'
+Parsing XDC File [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/constrs_1/new/ascon_const.xdc]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_0'. [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/constrs_1/new/ascon_const.xdc:15]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/constrs_1/new/ascon_const.xdc:15]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_0'. [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/constrs_1/new/ascon_const.xdc:16]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/constrs_1/new/ascon_const.xdc:16]
+Finished Parsing XDC File [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/constrs_1/new/ascon_const.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/david/Documents/ASCON-project/project_ascon.srcs/constrs_1/new/ascon_const.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/design_ascon_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 Parsing XDC File [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1418.047 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1417.969 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 1418.047 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1417.969 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:35 . Memory (MB): peak = 1418.047 ; gain = 521.852
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 1417.969 ; gain = 522.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:35 . Memory (MB): peak = 1418.047 ; gain = 521.852
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 1417.969 ; gain = 522.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -643,7 +644,6 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_ascon_i/xlslice_0. (constr
 Applied set_property KEEP_HIERARCHY = SOFT for design_ascon_i/xlslice_1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_ascon_i/xlslice_2. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_ascon_i/xlslice_3. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_ascon_i/ascon_core_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_ascon_i/axi_gpio_key_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_ascon_i/axi_gpio_key_1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_ascon_i/axi_gpio_key_2. (constraint file  auto generated constraint).
@@ -667,11 +667,12 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_ascon_i/ps7_0_axi_periph/t
 Applied set_property KEEP_HIERARCHY = SOFT for design_ascon_i/ps7_0_axi_periph/tier2_xbar_2. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_ascon_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_ascon_i/ps7_0_axi_periph. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_ascon_i/ascon_core_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:37 . Memory (MB): peak = 1418.047 ; gain = 521.852
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 1417.969 ; gain = 522.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 1418.047 ; gain = 521.852
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 1417.969 ; gain = 522.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -694,25 +695,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:41 . Memory (MB): peak = 1418.047 ; gain = 521.852
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 1417.969 ; gain = 522.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:00:52 . Memory (MB): peak = 1418.047 ; gain = 521.852
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 1417.969 ; gain = 522.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:52 . Memory (MB): peak = 1418.047 ; gain = 521.852
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 1417.969 ; gain = 522.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:53 . Memory (MB): peak = 1418.047 ; gain = 521.852
+Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 1417.969 ; gain = 522.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -730,37 +731,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:54 ; elapsed = 00:01:18 . Memory (MB): peak = 1421.387 ; gain = 525.191
+Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 1420.547 ; gain = 524.691
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:54 ; elapsed = 00:01:18 . Memory (MB): peak = 1421.387 ; gain = 525.191
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 1420.547 ; gain = 524.691
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:54 ; elapsed = 00:01:18 . Memory (MB): peak = 1421.387 ; gain = 525.191
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 1420.547 ; gain = 524.691
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:54 ; elapsed = 00:01:18 . Memory (MB): peak = 1421.387 ; gain = 525.191
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 1420.547 ; gain = 524.691
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:54 ; elapsed = 00:01:18 . Memory (MB): peak = 1421.387 ; gain = 525.191
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 1420.547 ; gain = 524.691
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:54 ; elapsed = 00:01:18 . Memory (MB): peak = 1421.387 ; gain = 525.191
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 1420.547 ; gain = 524.691
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -814,26 +815,27 @@ Report Cell Usage:
 |23    |design_ascon_tier2_xbar_1         |     1|
 |24    |design_ascon_tier2_xbar_2         |     1|
 |25    |design_ascon_xbar                 |     1|
+|26    |IBUF                              |     2|
 +------+----------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:54 ; elapsed = 00:01:18 . Memory (MB): peak = 1421.387 ; gain = 525.191
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 1420.547 ; gain = 524.691
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 421 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:01:12 . Memory (MB): peak = 1421.387 ; gain = 525.191
-Synthesis Optimization Complete : Time (s): cpu = 00:00:54 ; elapsed = 00:01:19 . Memory (MB): peak = 1421.387 ; gain = 525.191
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:45 . Memory (MB): peak = 1420.547 ; gain = 524.691
+Synthesis Optimization Complete : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 1420.547 ; gain = 524.691
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.150 . Memory (MB): peak = 1421.387 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.078 . Memory (MB): peak = 1432.594 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1448.727 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1445.594 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 804e5170
+Synth Design complete | Checksum: 7d75df9e
 INFO: [Common 17-83] Releasing license: Synthesis
-145 Infos, 123 Warnings, 0 Critical Warnings and 0 Errors encountered.
+146 Infos, 124 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:05 ; elapsed = 00:01:34 . Memory (MB): peak = 1454.703 ; gain = 967.609
+synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:01:00 . Memory (MB): peak = 1445.594 ; gain = 958.555
 INFO: [Common 17-1381] The checkpoint 'C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/design_ascon_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_ascon_wrapper_utilization_synth.rpt -pb design_ascon_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Jun  2 21:23:13 2023...
+INFO: [Common 17-206] Exiting Vivado at Tue Jun  6 15:21:18 2023...
