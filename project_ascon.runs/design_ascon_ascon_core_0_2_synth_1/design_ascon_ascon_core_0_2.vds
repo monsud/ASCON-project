@@ -1,0 +1,264 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Sat Jun  3 18:11:28 2023
+# Process ID: 3580
+# Current directory: C:/Users/david/Documents/ASCON-project/project_ascon.runs/design_ascon_ascon_core_0_2_synth_1
+# Command line: vivado.exe -log design_ascon_ascon_core_0_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_ascon_ascon_core_0_2.tcl
+# Log file: C:/Users/david/Documents/ASCON-project/project_ascon.runs/design_ascon_ascon_core_0_2_synth_1/design_ascon_ascon_core_0_2.vds
+# Journal file: C:/Users/david/Documents/ASCON-project/project_ascon.runs/design_ascon_ascon_core_0_2_synth_1\vivado.jou
+# Running On: INSPIRON-7370, OS: Windows, CPU Frequency: 1800 MHz, CPU Physical cores: 2, Host memory: 4294 MB
+#-----------------------------------------------------------
+source design_ascon_ascon_core_0_2.tcl -notrace
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 420.164 ; gain = 164.848
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/david/Documents/ASCON-project/project_ascon.srcs'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_ascon_ascon_core_0_2
+Command: synth_design -top design_ascon_ascon_core_0_2 -part xc7z020clg484-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1800
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 1272.363 ; gain = 409.395
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_ascon_ascon_core_0_2' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_ascon_core_0_2/synth/design_ascon_ascon_core_0_2.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'ascon_top' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/a669/sources_1/new/ascon_top.sv:24]
+INFO: [Synth 8-6157] synthesizing module 'ascon_round' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/a669/sources_1/new/ascon_round.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'ascon_add_constant' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/a669/sources_1/new/ascon_add_constant.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'ascon_add_constant' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/a669/sources_1/new/ascon_add_constant.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'ascon_sbox' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/a669/sources_1/new/ascon_sbox.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'ascon_sbox' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/a669/sources_1/new/ascon_sbox.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'ascon_linear_diffusion' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/a669/sources_1/new/ascon_linear_diffusion.sv:22]
+INFO: [Synth 8-6155] done synthesizing module 'ascon_linear_diffusion' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/a669/sources_1/new/ascon_linear_diffusion.sv:22]
+INFO: [Synth 8-6155] done synthesizing module 'ascon_round' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/a669/sources_1/new/ascon_round.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'ascon_initialization' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/a669/sources_1/new/ascon_initalization.sv:22]
+INFO: [Synth 8-6155] done synthesizing module 'ascon_initialization' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/a669/sources_1/new/ascon_initalization.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'ascon_key_schedule' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/a669/sources_1/new/ascon_key_schedule.sv:22]
+INFO: [Synth 8-6155] done synthesizing module 'ascon_key_schedule' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/a669/sources_1/new/ascon_key_schedule.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'ascon_finalization' [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/a669/sources_1/new/ascon_finalization.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'ascon_finalization' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/a669/sources_1/new/ascon_finalization.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'ascon_top' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ipshared/a669/sources_1/new/ascon_top.sv:24]
+INFO: [Synth 8-6155] done synthesizing module 'design_ascon_ascon_core_0_2' (0#1) [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_ascon_core_0_2/synth/design_ascon_ascon_core_0_2.sv:53]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1368.160 ; gain = 505.191
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1368.160 ; gain = 505.191
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1368.160 ; gain = 505.191
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.261 . Memory (MB): peak = 1368.160 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_ascon_core_0_2/constrs_1/new/ascon_top.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_ascon_core_0_2/constrs_1/new/ascon_top.xdc] for cell 'inst'
+Parsing XDC File [C:/Users/david/Documents/ASCON-project/project_ascon.runs/design_ascon_ascon_core_0_2_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/david/Documents/ASCON-project/project_ascon.runs/design_ascon_ascon_core_0_2_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1468.016 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.154 . Memory (MB): peak = 1469.340 ; gain = 1.324
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 1469.340 ; gain = 606.371
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 1469.340 ; gain = 606.371
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  C:/Users/david/Documents/ASCON-project/project_ascon.runs/design_ascon_ascon_core_0_2_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 1469.340 ; gain = 606.371
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 1469.340 ; gain = 606.371
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input  128 Bit       Adders := 12    
++---XORs : 
+	   2 Input    128 Bit         XORs := 5     
+	   3 Input    128 Bit         XORs := 3     
+	   4 Input    128 Bit         XORs := 1     
+	   4 Input     64 Bit         XORs := 12    
+	   3 Input     64 Bit         XORs := 12    
+	   2 Input     32 Bit         XORs := 48    
++---Registers : 
+	              128 Bit    Registers := 20    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 1469.340 ; gain = 606.371
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 1469.340 ; gain = 606.371
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 1469.340 ; gain = 606.371
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 1469.340 ; gain = 606.371
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 1469.340 ; gain = 606.371
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 1469.340 ; gain = 606.371
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 1469.340 ; gain = 606.371
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 1469.340 ; gain = 606.371
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 1469.340 ; gain = 606.371
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 1469.340 ; gain = 606.371
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+-------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                      | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+-------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|ascon_top   | ks_inst/round_key_reg[4][119] | 5      | 120   | YES          | NO                 | YES               | 120    | 0       | 
+|ascon_top   | ks_inst/temp_reg[127]         | 6      | 8     | YES          | NO                 | YES               | 8      | 0       | 
++------------+-------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |   191|
+|2     |LUT1   |   330|
+|3     |LUT2   |   435|
+|4     |LUT3   |  1378|
+|5     |LUT4   |    18|
+|6     |LUT5   |     1|
+|7     |SRL16E |   128|
+|8     |FDCE   |  1769|
+|9     |FDPE   |     8|
+|10    |FDRE   |   128|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 1469.340 ; gain = 606.371
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:00:55 . Memory (MB): peak = 1469.340 ; gain = 505.191
+Synthesis Optimization Complete : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 1469.340 ; gain = 606.371
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.207 . Memory (MB): peak = 1469.340 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 191 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1469.340 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: d4f0d538
+INFO: [Common 17-83] Releasing license: Synthesis
+37 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:06 ; elapsed = 00:01:12 . Memory (MB): peak = 1469.340 ; gain = 1014.730
+INFO: [Common 17-1381] The checkpoint 'C:/Users/david/Documents/ASCON-project/project_ascon.runs/design_ascon_ascon_core_0_2_synth_1/design_ascon_ascon_core_0_2.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_ascon_ascon_core_0_2, cache-ID = 40b2ad52ef3cb48b
+INFO: [Coretcl 2-1174] Renamed 36 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/david/Documents/ASCON-project/project_ascon.runs/design_ascon_ascon_core_0_2_synth_1/design_ascon_ascon_core_0_2.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_ascon_ascon_core_0_2_utilization_synth.rpt -pb design_ascon_ascon_core_0_2_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Jun  3 18:13:04 2023...

@@ -1,15 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1684596206">
-  <File Type="PA-TCL" Name="ascon_top.tcl"/>
-  <File Type="REPORTS-TCL" Name="ascon_top_reports.tcl"/>
-  <File Type="RDS-RDS" Name="ascon_top.vds"/>
-  <File Type="RDS-UTIL" Name="ascon_top_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="ascon_top_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="ascon_top.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1686057593" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/ascon_top.dcp">
+  <File Type="PA-TCL" Name="design_ascon_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="design_ascon_wrapper_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="design_ascon_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="design_ascon_wrapper.vds"/>
+  <File Type="RDS-UTIL" Name="design_ascon_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="design_ascon_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="design_ascon_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="design_ascon_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="design_ascon_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/design_ascon/design_ascon.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/design_ascon/hdl/design_ascon_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/ascon_add_constant.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -17,6 +35,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/ascon_finalization.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -24,6 +43,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/ascon_initalization.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -31,6 +51,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/ascon_key_schedule.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -38,6 +59,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/ascon_linear_diffusion.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -45,6 +67,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/ascon_round.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -52,13 +75,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/ascon_sbox.sv">
       <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/ascon_truncation.sv">
-      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -66,25 +83,43 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/ascon_top.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/component.xml">
+      <FileInfo SFType="IPXACT"/>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="ascon_top"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="design_ascon_wrapper"/>
     </Config>
   </FileSet>
-  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
     <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/ascon_const.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/ascon_const.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
-  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
     <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/ascon_top.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
@@ -93,4 +128,25 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="design_ascon_rst_ps7_0_50M_4"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_0_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_3_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_ascon_processing_system7_0_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_4_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_3_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_3_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_3_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_8_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_8_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_8_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_8_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_13_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_13_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_13_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_13_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_ascon_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_ascon_ascon_core_0_2"/>
 </GenRun>

@@ -1,0 +1,5 @@
+set_property SRC_FILE_INFO {cfile:C:/Users/david/Documents/ASCON-project/project_ascon.srcs/constrs_1/new/ascon_const.xdc rfile:../../../project_ascon.srcs/constrs_1/new/ascon_const.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:15 export:INPUT save:INPUT read:READ} [current_design]
+set_input_delay -clock [get_clocks clk_fpga_0] -min -add_delay 2.500 [get_ports {push_buttons_tri_i[*]}]
+set_property src_info {type:XDC file:1 line:16 export:INPUT save:INPUT read:READ} [current_design]
+set_input_delay -clock [get_clocks clk_fpga_0] -max -add_delay 7.500 [get_ports {push_buttons_tri_i[*]}]

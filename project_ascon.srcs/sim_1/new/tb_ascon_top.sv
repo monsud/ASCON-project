@@ -22,7 +22,7 @@
 
 module tb_ascon_top();
 
-  reg clk, rst;
+  reg clk, rst, enable;
   reg [127:0] key, nonce, plaintext;
   wire [127:0] ciphertext;
 
@@ -30,6 +30,7 @@ module tb_ascon_top();
   ascon_top dut(
     .clk(clk),
     .rst(rst),
+    .enable(enable),
     .key(key),
     .nonce(nonce),
     .plaintext(plaintext),
@@ -50,6 +51,13 @@ module tb_ascon_top();
     #20;
     rst = 0;
   end
+  
+    // Enable signal on
+  initial begin
+    enable = 0;
+    #20;
+    enable = 1;
+  end
 
   initial begin
     key = 128'h0123456789abcdef0123456789abcdef;
@@ -57,7 +65,7 @@ module tb_ascon_top();
     plaintext = 128'h0123456789abcdef0123456789abcdef;
     #100;
     $display("Ciphertext: %h", ciphertext);
-    // Expected output: 40608000bbbfffee5e0cc79ca5d3b872
+    // Expected output: e5fcffeeba6eab3845b014d713218801
   end
 
 endmodule
