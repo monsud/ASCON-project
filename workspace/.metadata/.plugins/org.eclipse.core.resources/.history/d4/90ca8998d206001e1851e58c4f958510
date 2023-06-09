@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include "xparameters.h"
+#include "platform.h"
+#include "xil_printf.h"
+#include "xgpio.h"
+#include "xil_types.h"
+#include "xil_io.h"
+
+#define ASCON_BASE_ADDR 0x40000000
+
+// ASCON register offsets
+#define ASCON_CTRL_REG_OFFSET 0x00
+#define ASCON_STATUS_REG_OFFSET 0x04
+#define ASCON_KEY_REG_OFFSET 0x4120
+#define ASCON_NONCE_REG_OFFSET 0x4125
+#define ASCON_PLAINTEXT_REG_OFFSET 0x4129
+#define ASCON_CIPHERTEXT_REG_OFFSET 0x412D
+#define ASCON_ENABLE_BIT 0x4124
+
+int main()
+{
+	init_platform();
+
+    // Variables for input and output data
+    u32 key = 0x01234567;
+    u32 nonce = 0x89ABCDEF;
+    u32 plaintext = 0xFEDCBA98;
+    u32 ciphertext;
+
+    // Reset ASCON
+    Xil_Out32((ASCON_BASE_ADDR + ASCON_CTRL_REG_OFFSET), 0x0);
+
+    // Set key, nonce, and plaintext
+    Xil_Out32((ASCON_BASE_ADDR + ASCON_KEY_REG_OFFSET), key);
+    Xil_Out32((ASCON_BASE_ADDR + ASCON_NONCE_REG_OFFSET), nonce);
+    Xil_Out32((ASCON_BASE_ADDR + ASCON_PLAINTEXT_REG_OFFSET), plaintext);
+
+    // Start ASCON encryption
+    Xil_Out32((ASCON_BASE_ADDR + ASCON_CTRL_REG_OFFSET), ASCON_ENABLE_BIT);
+
+    // Wait for ASCON to complete
+    while ((Xil_In32(ASCON_BASE_ADDR + ASCON_STATUS_REG_OFFSET) & ASCON_ENABLE_BIT) != 0)
+    {
+    }
+
+    // Read ciphertext
+    ciphertext = Xil_In32(ASCON_BASE_ADDR + ASCON_CIPHERTEXT_REG_OFFSET);
+
+    // Display the ciphertext
+    xil_printf("Ciphertext: 0x%08X\n", ciphertext);
+
+    cleanup_platform();
+
+    return 0;
+}
+

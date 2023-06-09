@@ -2,73 +2,74 @@
    "ActiveEmotionalView":"Default View",
    "Default View_Layers":"/rst_ps7_0_50M_peripheral_aresetn:true|/processing_system7_0_FCLK_CLK0:true|/processing_system7_0_FCLK_RESET0_N:true|",
    "Default View_ScaleFactor":"0.719744",
-   "Default View_TopLeft":"10,1041",
+   "Default View_TopLeft":"11,1042",
    "Display-PortTypeClock":"true",
    "Display-PortTypeReset":"true",
    "ExpandedHierarchyInLayout":"",
    "Interfaces View_Layers":"/rst_ps7_0_50M_peripheral_aresetn:false|/processing_system7_0_FCLK_CLK0:false|/processing_system7_0_FCLK_RESET0_N:false|",
    "Interfaces View_ScaleFactor":"0.904545",
    "Interfaces View_TopLeft":"-362,0",
-   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 threadsafe
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 7 -x 1990 -y 840 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 7 -x 1990 -y 870 -defaultsOSRD
-preplace port push_buttons -pg 1 -lvl 7 -x 1990 -y 0 -defaultsOSRD
+preplace port DDR -pg 1 -lvl 7 -x 2030 -y 840 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 7 -x 2030 -y 870 -defaultsOSRD
+preplace port push_buttons -pg 1 -lvl 7 -x 2030 -y 0 -defaultsOSRD
 preplace inst processing_system7_0 -pg 1 -lvl 1 -x 230 -y 940 -defaultsOSRD
 preplace inst rst_ps7_0_50M -pg 1 -lvl 1 -x 230 -y 1180 -defaultsOSRD
-preplace inst xlconcat_key -pg 1 -lvl 4 -x 1300 -y 360 -defaultsOSRD
-preplace inst xlconcat_nonce -pg 1 -lvl 4 -x 1300 -y 1120 -defaultsOSRD
-preplace inst xlconcat_plaintext -pg 1 -lvl 4 -x 1300 -y 2120 -defaultsOSRD
-preplace inst xlslice_0 -pg 1 -lvl 6 -x 1830 -y 1050 -defaultsOSRD
-preplace inst xlslice_1 -pg 1 -lvl 6 -x 1830 -y 1150 -defaultsOSRD
-preplace inst xlslice_2 -pg 1 -lvl 6 -x 1830 -y 1250 -defaultsOSRD
-preplace inst xlslice_3 -pg 1 -lvl 6 -x 1830 -y 1350 -defaultsOSRD
-preplace inst axi_gpio_key_0 -pg 1 -lvl 3 -x 1000 -y 80 -defaultsOSRD
-preplace inst axi_gpio_key_1 -pg 1 -lvl 3 -x 1000 -y 220 -defaultsOSRD
-preplace inst axi_gpio_key_2 -pg 1 -lvl 3 -x 1000 -y 360 -defaultsOSRD
-preplace inst axi_gpio_key_3 -pg 1 -lvl 3 -x 1000 -y 500 -defaultsOSRD
-preplace inst axi_gpio_ciphertext_0 -pg 1 -lvl 3 -x 1000 -y 1400 -defaultsOSRD
-preplace inst axi_gpio_ciphertext_1 -pg 1 -lvl 3 -x 1000 -y 1540 -defaultsOSRD
-preplace inst axi_gpio_ciphertext_2 -pg 1 -lvl 3 -x 1000 -y 1680 -defaultsOSRD
-preplace inst axi_gpio_ciphertext_3 -pg 1 -lvl 3 -x 1000 -y 1820 -defaultsOSRD
-preplace inst axi_gpio_nonce_0 -pg 1 -lvl 3 -x 1000 -y 640 -defaultsOSRD
-preplace inst axi_gpio_nonce_1 -pg 1 -lvl 3 -x 1000 -y 780 -defaultsOSRD
-preplace inst axi_gpio_nonce_2 -pg 1 -lvl 3 -x 1000 -y 1120 -defaultsOSRD
-preplace inst axi_gpio_nonce_3 -pg 1 -lvl 3 -x 1000 -y 1260 -defaultsOSRD
-preplace inst axi_gpio_enable -pg 1 -lvl 3 -x 1000 -y 960 -defaultsOSRD
-preplace inst axi_gpio_plaintext_0 -pg 1 -lvl 3 -x 1000 -y 1960 -defaultsOSRD
-preplace inst axi_gpio_plaintext_1 -pg 1 -lvl 3 -x 1000 -y 2100 -defaultsOSRD
-preplace inst axi_gpio_plaintext_2 -pg 1 -lvl 3 -x 1000 -y 2240 -defaultsOSRD
-preplace inst axi_gpio_plaintext_3 -pg 1 -lvl 3 -x 1000 -y 2380 -defaultsOSRD
+preplace inst xlconcat_key -pg 1 -lvl 4 -x 1330 -y 360 -defaultsOSRD
+preplace inst xlconcat_nonce -pg 1 -lvl 4 -x 1330 -y 1120 -defaultsOSRD
+preplace inst xlconcat_plaintext -pg 1 -lvl 4 -x 1330 -y 2120 -defaultsOSRD
+preplace inst xlslice_0 -pg 1 -lvl 6 -x 1870 -y 1050 -defaultsOSRD
+preplace inst xlslice_1 -pg 1 -lvl 6 -x 1870 -y 1150 -defaultsOSRD
+preplace inst xlslice_2 -pg 1 -lvl 6 -x 1870 -y 1250 -defaultsOSRD
+preplace inst xlslice_3 -pg 1 -lvl 6 -x 1870 -y 1350 -defaultsOSRD
+preplace inst axi_gpio_key_0 -pg 1 -lvl 3 -x 1010 -y 80 -defaultsOSRD
+preplace inst axi_gpio_key_1 -pg 1 -lvl 3 -x 1010 -y 220 -defaultsOSRD
+preplace inst axi_gpio_key_2 -pg 1 -lvl 3 -x 1010 -y 360 -defaultsOSRD
+preplace inst axi_gpio_key_3 -pg 1 -lvl 3 -x 1010 -y 500 -defaultsOSRD
+preplace inst axi_gpio_ciphertext_0 -pg 1 -lvl 3 -x 1010 -y 1400 -defaultsOSRD
+preplace inst axi_gpio_ciphertext_1 -pg 1 -lvl 3 -x 1010 -y 1540 -defaultsOSRD
+preplace inst axi_gpio_ciphertext_2 -pg 1 -lvl 3 -x 1010 -y 1680 -defaultsOSRD
+preplace inst axi_gpio_ciphertext_3 -pg 1 -lvl 3 -x 1010 -y 1820 -defaultsOSRD
+preplace inst axi_gpio_nonce_0 -pg 1 -lvl 3 -x 1010 -y 640 -defaultsOSRD
+preplace inst axi_gpio_nonce_1 -pg 1 -lvl 3 -x 1010 -y 780 -defaultsOSRD
+preplace inst axi_gpio_nonce_2 -pg 1 -lvl 3 -x 1010 -y 1120 -defaultsOSRD
+preplace inst axi_gpio_nonce_3 -pg 1 -lvl 3 -x 1010 -y 1260 -defaultsOSRD
+preplace inst axi_gpio_enable -pg 1 -lvl 3 -x 1010 -y 960 -defaultsOSRD
+preplace inst axi_gpio_plaintext_0 -pg 1 -lvl 3 -x 1010 -y 1960 -defaultsOSRD
+preplace inst axi_gpio_plaintext_1 -pg 1 -lvl 3 -x 1010 -y 2100 -defaultsOSRD
+preplace inst axi_gpio_plaintext_2 -pg 1 -lvl 3 -x 1010 -y 2240 -defaultsOSRD
+preplace inst axi_gpio_plaintext_3 -pg 1 -lvl 3 -x 1010 -y 2380 -defaultsOSRD
 preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 600 -y 1310 -defaultsOSRD
-preplace inst ascon_core_0 -pg 1 -lvl 5 -x 1570 -y 1050 -defaultsOSRD
-preplace netloc ascon_core_0_ciphertext 1 5 1 1720 1050n
-preplace netloc axi_gpio_0_gpio_io_o 1 3 1 1190 90n
+preplace inst ascon_core_0 -pg 1 -lvl 5 -x 1610 -y 1050 -defaultsOSRD
+preplace netloc ascon_core_0_ciphertext 1 5 1 1760 1050n
+preplace netloc axi_gpio_0_gpio_io_o 1 3 1 1210 90n
 preplace netloc axi_gpio_10_gpio_io_o 1 3 1 N 2110
-preplace netloc axi_gpio_11_gpio_io_o 1 3 1 1140 2130n
-preplace netloc axi_gpio_12_gpio_io_o 1 3 1 1200 2150n
-preplace netloc axi_gpio_1_gpio_io_o 1 3 1 1160 230n
+preplace netloc axi_gpio_11_gpio_io_o 1 3 1 1160 2130n
+preplace netloc axi_gpio_12_gpio_io_o 1 3 1 1220 2150n
+preplace netloc axi_gpio_1_gpio_io_o 1 3 1 1180 230n
 preplace netloc axi_gpio_2_gpio_io_o 1 3 1 N 370
-preplace netloc axi_gpio_3_gpio_io_o 1 3 1 1140 390n
-preplace netloc axi_gpio_4_gpio_io_o 1 3 2 1180 1020 1400J
-preplace netloc axi_gpio_5_gpio_io_o 1 3 1 1190 650n
-preplace netloc axi_gpio_6_gpio_io_o 1 3 1 1170 790n
+preplace netloc axi_gpio_3_gpio_io_o 1 3 1 1160 390n
+preplace netloc axi_gpio_4_gpio_io_o 1 3 2 1200 1020 1440J
+preplace netloc axi_gpio_5_gpio_io_o 1 3 1 1210 650n
+preplace netloc axi_gpio_6_gpio_io_o 1 3 1 1190 790n
 preplace netloc axi_gpio_7_gpio_io_o 1 3 1 N 1130
-preplace netloc axi_gpio_8_gpio_io_o 1 3 1 1140 1150n
-preplace netloc axi_gpio_9_gpio_io_o 1 3 1 1200 1970n
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 5 20 800 440 800 810 870 NJ 870 1400
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 30 1080 430
-preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 1 4 450 850 820 1040 1200J 1030 1410J
-preplace netloc xlconcat_0_dout 1 4 1 1420 360n
-preplace netloc xlconcat_1_dout 1 4 1 1400 1080n
-preplace netloc xlconcat_2_dout 1 4 1 1420 1100n
-preplace netloc xlslice_0_Dout 1 3 4 NJ 1410 NJ 1410 NJ 1410 1970
-preplace netloc xlslice_1_Dout 1 3 4 NJ 1550 NJ 1550 NJ 1550 1960
-preplace netloc xlslice_2_Dout 1 3 4 NJ 1690 NJ 1690 NJ 1690 1950
-preplace netloc xlslice_3_Dout 1 3 4 NJ 1830 NJ 1830 NJ 1830 1940
-preplace netloc processing_system7_0_DDR 1 1 6 NJ 860 NJ 860 1160J 840 NJ 840 NJ 840 NJ
-preplace netloc processing_system7_0_FIXED_IO 1 1 6 460J 870 750J 880 NJ 880 1410J 870 NJ 870 NJ
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 430 920n
+preplace netloc axi_gpio_8_gpio_io_o 1 3 1 1160 1150n
+preplace netloc axi_gpio_9_gpio_io_o 1 3 1 1220 1970n
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 5 30 800 440 800 810 870 NJ 870 1440
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 40 1080 420
+preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 1 4 450 850 820 1040 1220J 1030 1450J
+preplace netloc xlconcat_0_dout 1 4 1 1460 360n
+preplace netloc xlconcat_1_dout 1 4 1 1440 1080n
+preplace netloc xlconcat_2_dout 1 4 1 1460 1100n
+preplace netloc xlslice_0_Dout 1 3 4 NJ 1410 NJ 1410 NJ 1410 2010
+preplace netloc xlslice_1_Dout 1 3 4 NJ 1550 NJ 1550 NJ 1550 2000
+preplace netloc xlslice_2_Dout 1 3 4 NJ 1690 NJ 1690 NJ 1690 1990
+preplace netloc xlslice_3_Dout 1 3 4 NJ 1830 NJ 1830 NJ 1830 1980
+preplace netloc axi_gpio_enable_GPIO2 1 3 4 1170J 270 NJ 270 NJ 270 2010
+preplace netloc processing_system7_0_DDR 1 1 6 NJ 860 NJ 860 1180J 840 NJ 840 NJ 840 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 1 6 460J 870 750J 880 NJ 880 1450J 870 NJ 870 NJ
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 420 920n
 preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 740 60n
 preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 760 200n
 preplace netloc ps7_0_axi_periph_M02_AXI 1 2 1 770 340n
@@ -86,9 +87,8 @@ preplace netloc ps7_0_axi_periph_M13_AXI 1 2 1 860 1380n
 preplace netloc ps7_0_axi_periph_M14_AXI 1 2 1 800 1430n
 preplace netloc ps7_0_axi_periph_M15_AXI 1 2 1 780 1450n
 preplace netloc ps7_0_axi_periph_M16_AXI 1 2 1 760 1470n
-preplace netloc axi_gpio_enable_GPIO2 1 3 4 1150J 270 NJ 270 NJ 270 1970
-levelinfo -pg 1 0 230 600 1000 1300 1570 1830 1990
-pagesize -pg 1 -db -bbox -sgen 0 -20 2130 2460
+levelinfo -pg 1 0 230 600 1010 1330 1610 1870 2030
+pagesize -pg 1 -db -bbox -sgen 0 -20 2170 2460
 "
 }
 {

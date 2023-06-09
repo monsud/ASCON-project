@@ -3,8 +3,8 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Tue Jun  6 15:19:58 2023
-# Process ID: 5484
+# Start of session at: Fri Jun  9 12:03:09 2023
+# Process ID: 1668
 # Current directory: C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1
 # Command line: vivado.exe -log design_ascon_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_ascon_wrapper.tcl
 # Log file: C:/Users/david/Documents/ASCON-project/project_ascon.runs/synth_1/design_ascon_wrapper.vds
