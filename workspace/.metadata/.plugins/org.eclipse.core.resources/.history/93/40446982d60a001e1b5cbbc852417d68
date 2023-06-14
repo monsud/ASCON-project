@@ -1,0 +1,93 @@
+#include <stdio.h>
+#include <xil_io.h>
+#include "xparameters.h"
+#include "platform.h"
+#include "xil_printf.h"
+#include "xgpio.h"
+#include "xil_types.h"
+#include "xil_io.h"
+#include <stdlib.h>
+#include <unistd.h>
+#include <fcntl.h>
+
+#define BASE_ADDRESS 0x40000000
+#define ENABLE_SWITCH_OFFSET 0x4124
+#define KEY_OFFSET 0x4120
+#define NONCE_OFFSET 0x4125
+#define PLAINTEXT_OFFSET 0x4129
+#define CIPHERTEXT_OFFSET 0x412D
+
+int main() {
+    int fd;
+    void *ptr;
+    volatile unsigned int *reg_enable;
+    volatile unsigned int *reg_key;
+    volatile unsigned int *reg_nonce;
+    volatile unsigned int *reg_plaintext;
+    volatile unsigned int *reg_ciphertext;
+
+    // Open the device memory
+    fd = open("/dev/mem", O_RDWR | O_SYNC);
+    if (fd == -1) {
+        printf("Error: Failed to open /dev/mem\n");
+        return -1;
+    }
+
+    // Map the device memory
+    ptr = mmap(NULL, 0x1000, PROT_READ | PROT_WRITE, MAP_SHARED, fd, BASE_ADDRESS);
+    if (ptr == MAP_FAILED) {
+        printf("Error: Failed to map memory\n");
+        close(fd);
+        return -1;
+    }
+
+    // Get the pointers to the registers
+    reg_enable = (unsigned int *)(ptr + ENABLE_SWITCH_OFFSET);
+    reg_key = (unsigned int *)(ptr + KEY_OFFSET);
+    reg_nonce = (unsigned int *)(ptr + NONCE_OFFSET);
+    reg_plaintext = (unsigned int *)(ptr + PLAINTEXT_OFFSET);
+    reg_ciphertext = (unsigned int *)(ptr + CIPHERTEXT_OFFSET);
+
+    // Define the input values
+    unsigned int key[4] = {0x01234567, 0x89ABCDEF, 0xFEDCBA98, 0x76543210};
+    unsigned int nonce[4] = {0x01234567, 0x89ABCDEF, 0xFEDCBA98, 0x76543210};
+    unsigned int plaintext[4] = {0x01234567, 0x89ABCDEF, 0xFEDCBA98, 0x76543210};
+
+    // Set the enable signal
+    *reg_enable = 1;
+
+    // Write the input values to the registers
+    for (int i = 0; i < 4; i++) {
+        reg_key[i] = key[i];
+        reg_nonce[i] = nonce[i];
+        reg_plaintext[i] = plaintext[i];
+    }
+
+    // Wait for the encryption to complete
+    sleep(1);
+
+    // Read the ciphertext from the register
+    unsigned int ciphertext[4];
+    for (int i = 0; i < 4; i++) {
+        ciphertext[i] = reg_ciphertext[i];
+    }
+
+    // Display the ciphertext
+    printf("Ciphertext:\n");
+    for (int i = 0; i < 4; i++) {
+        printf("0x%08X\n", ciphertext[i]);
+    }
+
+    // Clear the enable signal
+    *reg_enable = 0;
+
+    // Unmap the memory and close the file
+    munmap(ptr, 0x1000);
+    close(fd);
+
+    return 0;
+}
+
+
+
+

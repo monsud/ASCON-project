@@ -1,62 +1,49 @@
 #include <stdio.h>
-#include "xparameters.h"
-#include "platform.h"
-#include "xil_printf.h"
-#include "xgpio.h"
-#include "xil_types.h"
-#include "xil_io.h"
+#include <fcntl.h>
+#include <unistd.h>
 
-#define ASCON_BASE_ADDR 0x4
+#define BASE_ADDRESS 0x40000000
 
-// ASCON register offsets
-#define ASCON_CTRL_REG_OFFSET 0x00
-#define ASCON_STATUS_REG_OFFSET 0x02
-#define ASCON_KEY_REG_OFFSET 0x4120
-#define ASCON_NONCE_REG_OFFSET 0x4125
-#define ASCON_PLAINTEXT_REG_OFFSET 0x4129
-#define ASCON_CIPHERTEXT_REG_OFFSET 0x412D
-#define ASCON_ENABLE_BIT 0x01
+int main() {
+    int fd;
+    unsigned int key[4] = {0x01234567, 0x89ABCDEF, 0x01234567, 0x89ABCDEF};
+    unsigned int nonce[4] = {0x01234567, 0x89ABCDEF, 0x01234567, 0x89ABCDEF};
+    unsigned int plaintext[4] = {0x01234567, 0x89ABCDEF, 0x01234567, 0x89ABCDEF};
+    unsigned int ciphertext[4];
 
-int main()
-{
-	init_platform();
-
-    // Variables for input and output data
-    u32 key[4] = {0x01234567, 0x89ABCDEF, 0x01234567, 0x89ABCDEF};
-    u32 nonce[4] = {0x01234567, 0x89ABCDEF, 0x01234567, 0x89ABCDEF};
-    u32 plaintext[4] = {0x01234567, 0x89ABCDEF, 0x01234567, 0x89ABCDEF};
-    u32 ciphertext[4];
-
-    // Reset ASCON
-    Xil_Out32((ASCON_BASE_ADDR + ASCON_CTRL_REG_OFFSET), 0x0);
-
-    // Load key, nonce, and plaintext
-    for (int i = 0; i < 4; i++) {
-        Xil_Out32((ASCON_BASE_ADDR + ASCON_KEY_REG_OFFSET + i*4), key[i]);
-        Xil_Out32((ASCON_BASE_ADDR + ASCON_NONCE_REG_OFFSET + i*4), nonce[i]);
-        Xil_Out32((ASCON_BASE_ADDR + ASCON_PLAINTEXT_REG_OFFSET + i*4), plaintext[i]);
+    // Open the memory device for register access
+    fd = open("/dev/mem", O_RDWR | O_SYNC);
+    if (fd == -1) {
+        perror("Failed to open /dev/mem");
+        return -1;
     }
 
-    // Start ASCON encryption
-    Xil_Out32((ASCON_BASE_ADDR + ASCON_CTRL_REG_OFFSET), ASCON_ENABLE_BIT);
-
-    // Wait for ASCON to complete
-    while ((Xil_In32(ASCON_BASE_ADDR + ASCON_STATUS_REG_OFFSET) & ASCON_ENABLE_BIT) != 0) {}
-
-    // Read ciphertext
+    // Write key, nonce, and plaintext to the IP registers
     for (int i = 0; i < 4; i++) {
-        ciphertext[i] = Xil_In32(ASCON_BASE_ADDR + ASCON_CIPHERTEXT_REG_OFFSET + i*4);
+        *((volatile unsigned int *)(BASE_ADDRESS + i * 4)) = key[i];
+        *((volatile unsigned int *)(BASE_ADDRESS + (i + 4) * 4)) = nonce[i];
+        *((volatile unsigned int *)(BASE_ADDRESS + (i + 6) * 4)) = plaintext[i];
     }
 
-    // Display the ciphertext
-    for (int i = 0; i < 4; i++) {
-        xil_printf("Ciphertext[%d]: 0x%08X\n", i, ciphertext[i]);
-    }
-    // Expected output: e5fcffeeba6eab3845b014d713218801
+    // Enable the IP core by setting the M15 switch
+    *((volatile unsigned int *)(BASE_ADDRESS + 20 * 4)) = 1;
 
-    cleanup_platform();
+    // Wait for the IP core to finish encryption
+    sleep(1);
+
+    // Read the ciphertext from the IP registers
+    for (int i = 0; i < 4; i++) {
+        ciphertext[i] = *((volatile unsigned int *)(BASE_ADDRESS + (i + 10) * 4));
+    }
+
+    // Print the result
+    printf("Plaintext:  0x%08X%08X%08X%08X\n",
+           plaintext[3], plaintext[2], plaintext[1], plaintext[0]);
+    printf("Ciphertext: 0x%08X%08X%08X%08X\n",
+           ciphertext[3], ciphertext[2], ciphertext[1], ciphertext[0]);
+
+    // Close the memory device
+    close(fd);
 
     return 0;
 }
-
-

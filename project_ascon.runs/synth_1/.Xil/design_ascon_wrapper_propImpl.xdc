@@ -3,3 +3,7 @@ set_property src_info {type:XDC file:1 line:15 export:INPUT save:INPUT read:READ
 set_input_delay -clock [get_clocks clk_fpga_0] -min -add_delay 2.500 [get_ports {push_buttons_tri_i[*]}]
 set_property src_info {type:XDC file:1 line:16 export:INPUT save:INPUT read:READ} [current_design]
 set_input_delay -clock [get_clocks clk_fpga_0] -max -add_delay 7.500 [get_ports {push_buttons_tri_i[*]}]
+set_property src_info {type:XDC file:1 line:20 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN M15 [get_ports {push_buttons_tri_i[1]}]
+set_property src_info {type:XDC file:1 line:21 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN H17 [get_ports {push_buttons_tri_i[0]}]

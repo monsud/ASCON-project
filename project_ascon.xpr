@@ -60,20 +60,20 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="zc702"/>
-    <Option Name="WTXSimLaunchSim" Val="248"/>
+    <Option Name="WTXSimLaunchSim" Val="249"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="6"/>
-    <Option Name="WTModelSimExportSim" Val="6"/>
-    <Option Name="WTQuestaExportSim" Val="6"/>
+    <Option Name="WTXSimExportSim" Val="7"/>
+    <Option Name="WTModelSimExportSim" Val="7"/>
+    <Option Name="WTQuestaExportSim" Val="7"/>
     <Option Name="WTIesExportSim" Val="0"/>
-    <Option Name="WTVcsExportSim" Val="6"/>
-    <Option Name="WTRivieraExportSim" Val="6"/>
-    <Option Name="WTActivehdlExportSim" Val="6"/>
+    <Option Name="WTVcsExportSim" Val="7"/>
+    <Option Name="WTRivieraExportSim" Val="7"/>
+    <Option Name="WTActivehdlExportSim" Val="7"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -97,68 +97,68 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="design_ascon.bd" FileRelPathName="ip/design_ascon_processing_system7_0_3/design_ascon_processing_system7_0_3.xci">
-          <Proxy FileSetName="design_ascon_processing_system7_0_3"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_ascon.bd" FileRelPathName="ip/design_ascon_axi_gpio_8_0/design_ascon_axi_gpio_8_0.xci">
-          <Proxy FileSetName="design_ascon_axi_gpio_8_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_ascon.bd" FileRelPathName="ip/design_ascon_ascon_core_0_2/design_ascon_ascon_core_0_2.xci">
-          <Proxy FileSetName="design_ascon_ascon_core_0_2"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_ascon.bd" FileRelPathName="ip/design_ascon_axi_gpio_3_0/design_ascon_axi_gpio_3_0.xci">
-          <Proxy FileSetName="design_ascon_axi_gpio_3_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_ascon.bd" FileRelPathName="ip/design_ascon_axi_gpio_8_2/design_ascon_axi_gpio_8_2.xci">
-          <Proxy FileSetName="design_ascon_axi_gpio_8_2"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_ascon.bd" FileRelPathName="ip/design_ascon_axi_gpio_0_0/design_ascon_axi_gpio_0_0.xci">
-          <Proxy FileSetName="design_ascon_axi_gpio_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_ascon.bd" FileRelPathName="ip/design_ascon_axi_gpio_13_1/design_ascon_axi_gpio_13_1.xci">
-          <Proxy FileSetName="design_ascon_axi_gpio_13_1"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_ascon.bd" FileRelPathName="ip/design_ascon_axi_gpio_13_2/design_ascon_axi_gpio_13_2.xci">
           <Proxy FileSetName="design_ascon_axi_gpio_13_2"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_ascon.bd" FileRelPathName="ip/design_ascon_axi_gpio_8_1/design_ascon_axi_gpio_8_1.xci">
           <Proxy FileSetName="design_ascon_axi_gpio_8_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_ascon.bd" FileRelPathName="ip/design_ascon_axi_gpio_8_3/design_ascon_axi_gpio_8_3.xci">
-          <Proxy FileSetName="design_ascon_axi_gpio_8_3"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_ascon.bd" FileRelPathName="ip/design_ascon_axi_gpio_0_1/design_ascon_axi_gpio_0_1.xci">
-          <Proxy FileSetName="design_ascon_axi_gpio_0_1"/>
+        <CompFileExtendedInfo CompFileName="design_ascon.bd" FileRelPathName="ip/design_ascon_ascon_core_0_2/design_ascon_ascon_core_0_2.xci">
+          <Proxy FileSetName="design_ascon_ascon_core_0_2"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_ascon.bd" FileRelPathName="ip/design_ascon_axi_gpio_0_2/design_ascon_axi_gpio_0_2.xci">
           <Proxy FileSetName="design_ascon_axi_gpio_0_2"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_ascon.bd" FileRelPathName="ip/design_ascon_axi_gpio_13_3/design_ascon_axi_gpio_13_3.xci">
-          <Proxy FileSetName="design_ascon_axi_gpio_13_3"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_ascon.bd" FileRelPathName="ip/design_ascon_axi_gpio_3_1/design_ascon_axi_gpio_3_1.xci">
-          <Proxy FileSetName="design_ascon_axi_gpio_3_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_ascon.bd" FileRelPathName="ip/design_ascon_axi_gpio_3_3/design_ascon_axi_gpio_3_3.xci">
-          <Proxy FileSetName="design_ascon_axi_gpio_3_3"/>
+        <CompFileExtendedInfo CompFileName="design_ascon.bd" FileRelPathName="ip/design_ascon_axi_gpio_0_0/design_ascon_axi_gpio_0_0.xci">
+          <Proxy FileSetName="design_ascon_axi_gpio_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_ascon.bd" FileRelPathName="ip/design_ascon_rst_ps7_0_50M_4/design_ascon_rst_ps7_0_50M_4.xci">
           <Proxy FileSetName="design_ascon_rst_ps7_0_50M_4"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_ascon.bd" FileRelPathName="ip/design_ascon_xbar_0/design_ascon_xbar_0.xci">
+          <Proxy FileSetName="design_ascon_xbar_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_ascon.bd" FileRelPathName="ip/design_ascon_axi_gpio_3_0/design_ascon_axi_gpio_3_0.xci">
+          <Proxy FileSetName="design_ascon_axi_gpio_3_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_ascon.bd" FileRelPathName="ip/design_ascon_axi_gpio_4_0/design_ascon_axi_gpio_4_0.xci">
+          <Proxy FileSetName="design_ascon_axi_gpio_4_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_ascon.bd" FileRelPathName="ip/design_ascon_axi_gpio_0_3/design_ascon_axi_gpio_0_3.xci">
           <Proxy FileSetName="design_ascon_axi_gpio_0_3"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_ascon.bd" FileRelPathName="ip/design_ascon_processing_system7_0_3/design_ascon_processing_system7_0_3.xci">
+          <Proxy FileSetName="design_ascon_processing_system7_0_3"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_ascon.bd" FileRelPathName="ip/design_ascon_axi_gpio_13_1/design_ascon_axi_gpio_13_1.xci">
+          <Proxy FileSetName="design_ascon_axi_gpio_13_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_ascon.bd" FileRelPathName="ip/design_ascon_axi_gpio_8_0/design_ascon_axi_gpio_8_0.xci">
+          <Proxy FileSetName="design_ascon_axi_gpio_8_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_ascon.bd" FileRelPathName="ip/design_ascon_axi_gpio_3_1/design_ascon_axi_gpio_3_1.xci">
+          <Proxy FileSetName="design_ascon_axi_gpio_3_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_ascon.bd" FileRelPathName="ip/design_ascon_axi_gpio_0_1/design_ascon_axi_gpio_0_1.xci">
+          <Proxy FileSetName="design_ascon_axi_gpio_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_ascon.bd" FileRelPathName="ip/design_ascon_axi_gpio_8_2/design_ascon_axi_gpio_8_2.xci">
+          <Proxy FileSetName="design_ascon_axi_gpio_8_2"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_ascon.bd" FileRelPathName="ip/design_ascon_axi_gpio_13_0/design_ascon_axi_gpio_13_0.xci">
           <Proxy FileSetName="design_ascon_axi_gpio_13_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_ascon.bd" FileRelPathName="ip/design_ascon_xbar_0/design_ascon_xbar_0.xci">
-          <Proxy FileSetName="design_ascon_xbar_0"/>
+        <CompFileExtendedInfo CompFileName="design_ascon.bd" FileRelPathName="ip/design_ascon_axi_gpio_13_3/design_ascon_axi_gpio_13_3.xci">
+          <Proxy FileSetName="design_ascon_axi_gpio_13_3"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_ascon.bd" FileRelPathName="ip/design_ascon_axi_gpio_3_2/design_ascon_axi_gpio_3_2.xci">
           <Proxy FileSetName="design_ascon_axi_gpio_3_2"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_ascon.bd" FileRelPathName="ip/design_ascon_axi_gpio_4_0/design_ascon_axi_gpio_4_0.xci">
-          <Proxy FileSetName="design_ascon_axi_gpio_4_0"/>
+        <CompFileExtendedInfo CompFileName="design_ascon.bd" FileRelPathName="ip/design_ascon_axi_gpio_3_3/design_ascon_axi_gpio_3_3.xci">
+          <Proxy FileSetName="design_ascon_axi_gpio_3_3"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_ascon.bd" FileRelPathName="ip/design_ascon_axi_gpio_8_3/design_ascon_axi_gpio_8_3.xci">
+          <Proxy FileSetName="design_ascon_axi_gpio_8_3"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/design_ascon/hdl/design_ascon_wrapper.v">
@@ -649,7 +649,9 @@
     </Run>
     <Run Id="design_ascon_ascon_core_0_2_synth_1" Type="Ft3:Synth" SrcSet="design_ascon_ascon_core_0_2" Part="xc7z020clg484-1" ConstrsSet="design_ascon_ascon_core_0_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_ascon_ascon_core_0_2_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_ascon_ascon_core_0_2_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_ascon_ascon_core_0_2_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -1017,7 +1019,9 @@
     </Run>
     <Run Id="design_ascon_ascon_core_0_2_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="design_ascon_ascon_core_0_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_ascon_ascon_core_0_2_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_ascon_ascon_core_0_2_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_ascon_ascon_core_0_2_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

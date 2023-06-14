@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Tue Jun  6 14:59:00 2023
+//Date        : Wed Jun 14 18:20:42 2023
 //Host        : INSPIRON-7370 running 64-bit major release  (build 9200)
 //Command     : generate_target design_ascon.bd
 //Design      : design_ascon
@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_ascon,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_ascon,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=54,numReposBlks=32,numNonXlnxBlks=0,numHierBlks=22,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=19,da_clkrst_cnt=15,da_ps7_cnt=4,da_trigger_cnt=5,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_ascon.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_ascon,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_ascon,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=54,numReposBlks=32,numNonXlnxBlks=0,numHierBlks=22,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=19,da_board_cnt=2,da_clkrst_cnt=15,da_ps7_cnt=4,da_trigger_cnt=5,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_ascon.hwdef" *) 
 module design_ascon
    (DDR_addr,
     DDR_ba,

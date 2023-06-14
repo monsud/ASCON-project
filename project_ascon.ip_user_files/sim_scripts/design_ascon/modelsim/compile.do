@@ -97,17 +97,6 @@ vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../project_ascon.gen/s
 "../../../bd/design_ascon/ip/design_ascon_xlslice_0_2/sim/design_ascon_xlslice_0_2.v" \
 "../../../bd/design_ascon/ip/design_ascon_xlslice_0_3/sim/design_ascon_xlslice_0_3.v" \
 
-vlog -work xil_defaultlib  -incr -mfcu  -sv -L axi_vip_v1_1_14 -L processing_system7_vip_v1_0_16 -L xilinx_vip "+incdir+../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/ec67/hdl" "+incdir+../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/aed8/hdl" "+incdir+C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
-"../../../bd/design_ascon/ipshared/a669/sources_1/new/ascon_add_constant.sv" \
-"../../../bd/design_ascon/ipshared/a669/sources_1/new/ascon_finalization.sv" \
-"../../../bd/design_ascon/ipshared/a669/sources_1/new/ascon_initalization.sv" \
-"../../../bd/design_ascon/ipshared/a669/sources_1/new/ascon_key_schedule.sv" \
-"../../../bd/design_ascon/ipshared/a669/sources_1/new/ascon_linear_diffusion.sv" \
-"../../../bd/design_ascon/ipshared/a669/sources_1/new/ascon_round.sv" \
-"../../../bd/design_ascon/ipshared/a669/sources_1/new/ascon_sbox.sv" \
-"../../../bd/design_ascon/ipshared/a669/sources_1/new/ascon_top.sv" \
-"../../../bd/design_ascon/ip/design_ascon_ascon_core_0_2/sim/design_ascon_ascon_core_0_2.sv" \
-
 vcom -work axi_lite_ipif_v3_0_4  -93  \
 "../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd" \
 
@@ -159,6 +148,19 @@ vlog -work axi_crossbar_v2_1_29  -incr -mfcu  "+incdir+../../../../project_ascon
 
 vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/ec67/hdl" "+incdir+../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/aed8/hdl" "+incdir+C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
 "../../../bd/design_ascon/ip/design_ascon_xbar_0/sim/design_ascon_xbar_0.v" \
+
+vlog -work xil_defaultlib  -incr -mfcu  -sv -L axi_vip_v1_1_14 -L processing_system7_vip_v1_0_16 -L xilinx_vip "+incdir+../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/ec67/hdl" "+incdir+../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/aed8/hdl" "+incdir+C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../bd/design_ascon/ipshared/a669/sources_1/new/ascon_add_constant.sv" \
+"../../../bd/design_ascon/ipshared/a669/sources_1/new/ascon_finalization.sv" \
+"../../../bd/design_ascon/ipshared/a669/sources_1/new/ascon_initalization.sv" \
+"../../../bd/design_ascon/ipshared/a669/sources_1/new/ascon_key_schedule.sv" \
+"../../../bd/design_ascon/ipshared/a669/sources_1/new/ascon_linear_diffusion.sv" \
+"../../../bd/design_ascon/ipshared/a669/sources_1/new/ascon_round.sv" \
+"../../../bd/design_ascon/ipshared/a669/sources_1/new/ascon_sbox.sv" \
+"../../../bd/design_ascon/ipshared/a669/sources_1/new/ascon_top.sv" \
+"../../../bd/design_ascon/ip/design_ascon_ascon_core_0_2/sim/design_ascon_ascon_core_0_2.sv" \
+
+vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/ec67/hdl" "+incdir+../../../../project_ascon.gen/sources_1/bd/design_ascon/ipshared/aed8/hdl" "+incdir+C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
 "../../../bd/design_ascon/ip/design_ascon_tier2_xbar_0_0/sim/design_ascon_tier2_xbar_0_0.v" \
 "../../../bd/design_ascon/ip/design_ascon_tier2_xbar_1_0/sim/design_ascon_tier2_xbar_1_0.v" \
 "../../../bd/design_ascon/ip/design_ascon_tier2_xbar_2_0/sim/design_ascon_tier2_xbar_2_0.v" \

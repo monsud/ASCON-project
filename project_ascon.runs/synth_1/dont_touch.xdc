@@ -87,6 +87,12 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_asco
 # IP: bd/design_ascon/ip/design_ascon_xbar_0/design_ascon_xbar_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_ascon_xbar_0 || ORIG_REF_NAME==design_ascon_xbar_0} -quiet] -quiet
 
+# IP: bd/design_ascon/ip/design_ascon_ps7_0_axi_periph_0/design_ascon_ps7_0_axi_periph_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_ascon_ps7_0_axi_periph_0 || ORIG_REF_NAME==design_ascon_ps7_0_axi_periph_0} -quiet] -quiet
+
+# IP: bd/design_ascon/ip/design_ascon_ascon_core_0_2/design_ascon_ascon_core_0_2.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_ascon_ascon_core_0_2 || ORIG_REF_NAME==design_ascon_ascon_core_0_2} -quiet] -quiet
+
 # IP: bd/design_ascon/ip/design_ascon_tier2_xbar_0_0/design_ascon_tier2_xbar_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_ascon_tier2_xbar_0_0 || ORIG_REF_NAME==design_ascon_tier2_xbar_0_0} -quiet] -quiet
 
@@ -98,11 +104,5 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_asco
 
 # IP: bd/design_ascon/ip/design_ascon_auto_pc_0/design_ascon_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_ascon_auto_pc_0 || ORIG_REF_NAME==design_ascon_auto_pc_0} -quiet] -quiet
-
-# IP: bd/design_ascon/ip/design_ascon_ps7_0_axi_periph_0/design_ascon_ps7_0_axi_periph_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_ascon_ps7_0_axi_periph_0 || ORIG_REF_NAME==design_ascon_ps7_0_axi_periph_0} -quiet] -quiet
-
-# IP: bd/design_ascon/ip/design_ascon_ascon_core_0_2/design_ascon_ascon_core_0_2.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_ascon_ascon_core_0_2 || ORIG_REF_NAME==design_ascon_ascon_core_0_2} -quiet] -quiet
 
 # XDC: c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/design_ascon_ooc.xdc

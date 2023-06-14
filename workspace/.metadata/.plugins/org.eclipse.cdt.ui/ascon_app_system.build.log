@@ -1,0 +1,14 @@
+19:22:57 **** Build of configuration Debug for project ascon_app_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 63599 C:/Users/david/Documents/ASCON-project/workspace/design_ascon_wrapper/export/design_ascon_wrapper/design_ascon_wrapper.xpfm standalone_ps7_cortexa9_0 C:/Users/david/Documents/ASCON-project/workspace/ascon_app_system/Debug/system.bif
+ECHO disattivato.
+ECHO disattivato.
+sdcard_gen --xpfm C:/Users/david/Documents/ASCON-project/workspace/design_ascon_wrapper/export/design_ascon_wrapper/design_ascon_wrapper.xpfm --sys_config design_ascon_wrapper --bif C:/Users/david/Documents/ASCON-project/workspace/ascon_app_system/Debug/system.bif --bitstream C:/Users/david/Documents/ASCON-project/workspace/ascon_app/_ide/bitstream/design_ascon_wrapper.bit --elf C:/Users/david/Documents/ASCON-project/workspace/ascon_app/Debug/ascon_app.elf,ps7_cortexa9_0
+ECHO disattivato.
+ECHO disattivato.
+creating BOOT.BIN using C:/Users/david/Documents/ASCON-project/workspace/ascon_app/_ide/bitstream/design_ascon_wrapper.bit
+Running C:/Xilinx/Vitis/2023.1/bin/bootgen  -image C:/Users/david/Documents/ASCON-project/workspace/ascon_app_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+19:23:14 Build Finished (took 17s.212ms)
+

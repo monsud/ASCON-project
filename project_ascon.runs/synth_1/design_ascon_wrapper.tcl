@@ -147,11 +147,11 @@ set_property used_in_implementation false [get_files -all c:/Users/david/Documen
 set_property used_in_implementation false [get_files -all c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_axi_gpio_8_3/design_ascon_axi_gpio_8_3_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_axi_gpio_8_3/design_ascon_axi_gpio_8_3.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_xbar_0/design_ascon_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_ascon_core_0_2/constrs_1/new/ascon_top.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_tier2_xbar_0_0/design_ascon_tier2_xbar_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_tier2_xbar_1_0/design_ascon_tier2_xbar_1_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_tier2_xbar_2_0/design_ascon_tier2_xbar_2_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_auto_pc_0/design_ascon_auto_pc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_ascon_core_0_2/constrs_1/new/ascon_top.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/design_ascon_ooc.xdc]
 
 OPTRACE "Adding files" END { }

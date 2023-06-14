@@ -1,7 +1,7 @@
-Running: xsim.dir/tb_ascon_top_behav/xsimk.exe -simmode gui -wdb tb_ascon_top_behav.wdb -simrunnum 0 -socket 50173
+Running: xsim.dir/tb_ascon_top_behav/xsimk.exe -simmode gui -wdb tb_ascon_top_behav.wdb -simrunnum 0 -socket 50044
 Design successfully loaded
-Design Loading Memory Usage: 7644 KB (Peak: 7644 KB)
+Design Loading Memory Usage: 7632 KB (Peak: 7632 KB)
 Design Loading CPU Usage: 46 ms
 Simulation completed
-Simulation Memory Usage: 8296 KB (Peak: 8296 KB)
-Simulation CPU Usage: 77 ms
+Simulation Memory Usage: 8316 KB (Peak: 8316 KB)
+Simulation CPU Usage: 46 ms

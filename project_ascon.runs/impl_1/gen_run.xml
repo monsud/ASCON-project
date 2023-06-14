@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1686304974">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1686759652">
   <File Type="ROUTE-PWR" Name="design_ascon_wrapper_power_routed.rpt"/>
   <File Type="PA-TCL" Name="design_ascon_wrapper.tcl"/>
   <File Type="ROUTE-PWR-SUM" Name="design_ascon_wrapper_power_summary_routed.pb"/>
@@ -230,6 +230,10 @@
   <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_13_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_13_2"/>
   <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_13_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_ascon_tier2_xbar_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_ascon_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_ascon_ascon_core_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_ascon_tier2_xbar_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_ascon_auto_pc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_ascon_tier2_xbar_1_0"/>
 </GenRun>

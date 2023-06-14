@@ -805,3 +805,224 @@ con
 ----------------End of Script----------------
 
 17:32:56 INFO  : Disconnected from the channel tcfchan#1.
+18:42:46 DEBUG : Logs will be stored at 'C:/Users/david/Documents/ASCON-project/workspace/IDE.log'.
+18:42:48 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\david\Documents\ASCON-project\workspace\temp_xsdb_launch_script.tcl
+18:43:08 INFO  : XSCT server has started successfully.
+18:43:08 INFO  : plnx-install-location is set to ''
+18:43:08 INFO  : Successfully done setting XSCT server connection channel  
+18:43:08 INFO  : Successfully done setting workspace for the tool. 
+18:43:09 INFO  : Registering command handlers for Vitis TCF services
+18:43:10 INFO  : Platform repository initialization has completed.
+18:43:15 INFO  : Successfully done query RDI_DATADIR 
+18:48:03 INFO  : Result from executing command 'getProjects': design_ascon_wrapper
+18:48:03 INFO  : Result from executing command 'getPlatforms': design_ascon_wrapper|C:/Users/david/Documents/ASCON-project/workspace/design_ascon_wrapper/export/design_ascon_wrapper/design_ascon_wrapper.xpfm
+18:48:04 INFO  : Checking for BSP changes to sync application flags for project 'ascon_app'...
+18:48:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:49:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+18:49:06 ERROR : Could not find ARM device on the board for connection 'Local'.
+Check if the target is in:
+1. Split JTAG - No operations are possible with ARM DAP.
+2. Non JTAG bootmode - Bootrom may need time to enable DAP.
+Please try again.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+19:00:49 INFO  : Checking for BSP changes to sync application flags for project 'ascon_app'...
+19:12:36 INFO  : Checking for BSP changes to sync application flags for project 'ascon_app'...
+19:12:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:13:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+19:13:08 ERROR : Could not find ARM device on the board for connection 'Local'.
+Check if the target is in:
+1. Split JTAG - No operations are possible with ARM DAP.
+2. Non JTAG bootmode - Bootrom may need time to enable DAP.
+Please try again.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+19:13:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:13:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+19:13:43 ERROR : Could not find ARM device on the board for connection 'Local'.
+Check if the target is in:
+1. Split JTAG - No operations are possible with ARM DAP.
+2. Non JTAG bootmode - Bootrom may need time to enable DAP.
+Please try again.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+19:17:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:17:46 INFO  : Jtag cable 'Digilent Zed 210248781938' is selected.
+19:17:46 INFO  : 'jtag frequency' command is executed.
+19:17:46 INFO  : Context for 'APU' is selected.
+19:17:46 INFO  : System reset is completed.
+19:17:49 INFO  : 'after 3000' command is executed.
+19:17:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248781938" && level==0 && jtag_device_ctx=="jsn-Zed-210248781938-23727093-0"}' command is executed.
+19:17:52 INFO  : Device configured successfully with "C:/Users/david/Documents/ASCON-project/workspace/ascon_app/_ide/bitstream/design_ascon_wrapper.bit"
+19:17:52 INFO  : Context for 'APU' is selected.
+19:17:53 INFO  : Hardware design and registers information is loaded from 'C:/Users/david/Documents/ASCON-project/workspace/design_ascon_wrapper/export/design_ascon_wrapper/hw/design_ascon_wrapper.xsa'.
+19:17:53 INFO  : 'configparams force-mem-access 1' command is executed.
+19:17:53 INFO  : Context for 'APU' is selected.
+19:17:53 INFO  : Sourcing of 'C:/Users/david/Documents/ASCON-project/workspace/ascon_app/_ide/psinit/ps7_init.tcl' is done.
+19:17:54 INFO  : 'ps7_init' command is executed.
+19:17:54 INFO  : 'ps7_post_config' command is executed.
+19:17:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:17:55 INFO  : The application 'C:/Users/david/Documents/ASCON-project/workspace/ascon_app/Debug/ascon_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:17:55 INFO  : 'configparams force-mem-access 0' command is executed.
+19:17:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248781938" && level==0 && jtag_device_ctx=="jsn-Zed-210248781938-23727093-0"}
+fpga -file C:/Users/david/Documents/ASCON-project/workspace/ascon_app/_ide/bitstream/design_ascon_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/david/Documents/ASCON-project/workspace/design_ascon_wrapper/export/design_ascon_wrapper/hw/design_ascon_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/david/Documents/ASCON-project/workspace/ascon_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/david/Documents/ASCON-project/workspace/ascon_app/Debug/ascon_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:17:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:17:55 INFO  : 'con' command is executed.
+19:17:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:17:55 INFO  : Launch script is exported to file 'C:\Users\david\Documents\ASCON-project\workspace\ascon_app_system\_ide\scripts\debugger_ascon_app-default_1.tcl'
+19:22:13 INFO  : Checking for BSP changes to sync application flags for project 'ascon_app'...
+19:22:54 INFO  : Checking for BSP changes to sync application flags for project 'ascon_app'...
+19:23:20 INFO  : Checking for BSP changes to sync application flags for project 'ascon_app'...
+19:23:31 INFO  : Disconnected from the channel tcfchan#2.
+19:23:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:23:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+19:23:41 ERROR : Could not find ARM device on the board for connection 'Local'.
+Check if the target is in:
+1. Split JTAG - No operations are possible with ARM DAP.
+2. Non JTAG bootmode - Bootrom may need time to enable DAP.
+Please try again.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+19:23:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:23:51 INFO  : Jtag cable 'Digilent Zed 210248781938' is selected.
+19:23:51 INFO  : 'jtag frequency' command is executed.
+19:23:51 INFO  : Context for 'APU' is selected.
+19:23:51 INFO  : System reset is completed.
+19:23:54 INFO  : 'after 3000' command is executed.
+19:23:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248781938" && level==0 && jtag_device_ctx=="jsn-Zed-210248781938-23727093-0"}' command is executed.
+19:23:58 INFO  : Device configured successfully with "C:/Users/david/Documents/ASCON-project/workspace/ascon_app/_ide/bitstream/design_ascon_wrapper.bit"
+19:23:58 INFO  : Context for 'APU' is selected.
+19:23:58 INFO  : Hardware design and registers information is loaded from 'C:/Users/david/Documents/ASCON-project/workspace/design_ascon_wrapper/export/design_ascon_wrapper/hw/design_ascon_wrapper.xsa'.
+19:23:58 INFO  : 'configparams force-mem-access 1' command is executed.
+19:23:58 INFO  : Context for 'APU' is selected.
+19:23:58 INFO  : Sourcing of 'C:/Users/david/Documents/ASCON-project/workspace/ascon_app/_ide/psinit/ps7_init.tcl' is done.
+19:24:00 INFO  : 'ps7_init' command is executed.
+19:24:00 INFO  : 'ps7_post_config' command is executed.
+19:24:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:24:01 INFO  : The application 'C:/Users/david/Documents/ASCON-project/workspace/ascon_app/Debug/ascon_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:24:01 INFO  : 'configparams force-mem-access 0' command is executed.
+19:24:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248781938" && level==0 && jtag_device_ctx=="jsn-Zed-210248781938-23727093-0"}
+fpga -file C:/Users/david/Documents/ASCON-project/workspace/ascon_app/_ide/bitstream/design_ascon_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/david/Documents/ASCON-project/workspace/design_ascon_wrapper/export/design_ascon_wrapper/hw/design_ascon_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/david/Documents/ASCON-project/workspace/ascon_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/david/Documents/ASCON-project/workspace/ascon_app/Debug/ascon_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:24:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:24:01 INFO  : 'con' command is executed.
+19:24:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:24:01 INFO  : Launch script is exported to file 'C:\Users\david\Documents\ASCON-project\workspace\ascon_app_system\_ide\scripts\debugger_ascon_app-default_1.tcl'
+19:36:27 INFO  : Disconnected from the channel tcfchan#4.
+19:36:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:36:28 INFO  : Jtag cable 'Digilent Zed 210248781938' is selected.
+19:36:28 INFO  : 'jtag frequency' command is executed.
+19:36:28 INFO  : Context for 'APU' is selected.
+19:36:28 INFO  : System reset is completed.
+19:36:31 INFO  : 'after 3000' command is executed.
+19:36:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248781938" && level==0 && jtag_device_ctx=="jsn-Zed-210248781938-23727093-0"}' command is executed.
+19:36:34 INFO  : Device configured successfully with "C:/Users/david/Documents/ASCON-project/workspace/ascon_app/_ide/bitstream/design_ascon_wrapper.bit"
+19:36:34 INFO  : Context for 'APU' is selected.
+19:36:34 INFO  : Hardware design and registers information is loaded from 'C:/Users/david/Documents/ASCON-project/workspace/design_ascon_wrapper/export/design_ascon_wrapper/hw/design_ascon_wrapper.xsa'.
+19:36:34 INFO  : 'configparams force-mem-access 1' command is executed.
+19:36:34 INFO  : Context for 'APU' is selected.
+19:36:34 INFO  : Sourcing of 'C:/Users/david/Documents/ASCON-project/workspace/ascon_app/_ide/psinit/ps7_init.tcl' is done.
+19:36:36 INFO  : 'ps7_init' command is executed.
+19:36:36 INFO  : 'ps7_post_config' command is executed.
+19:36:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:36:36 INFO  : The application 'C:/Users/david/Documents/ASCON-project/workspace/ascon_app/Debug/ascon_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:36:36 INFO  : 'configparams force-mem-access 0' command is executed.
+19:36:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248781938" && level==0 && jtag_device_ctx=="jsn-Zed-210248781938-23727093-0"}
+fpga -file C:/Users/david/Documents/ASCON-project/workspace/ascon_app/_ide/bitstream/design_ascon_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/david/Documents/ASCON-project/workspace/design_ascon_wrapper/export/design_ascon_wrapper/hw/design_ascon_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/david/Documents/ASCON-project/workspace/ascon_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/david/Documents/ASCON-project/workspace/ascon_app/Debug/ascon_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:36:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:36:36 INFO  : 'con' command is executed.
+19:36:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:36:36 INFO  : Launch script is exported to file 'C:\Users\david\Documents\ASCON-project\workspace\ascon_app_system\_ide\scripts\systemdebugger_ascon_app_system_standalone.tcl'
+19:37:23 INFO  : Build configuration of 'ascon_app' is updated to 'Release'
+19:37:26 INFO  : Build configuration of 'ascon_app' is updated to 'Debug'
+19:37:51 INFO  : Disconnected from the channel tcfchan#5.

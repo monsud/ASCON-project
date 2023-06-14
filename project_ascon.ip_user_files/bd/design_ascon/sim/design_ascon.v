@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Sat Jun  3 18:11:05 2023
+//Date        : Wed Jun 14 17:55:35 2023
 //Host        : INSPIRON-7370 running 64-bit major release  (build 9200)
 //Command     : generate_target design_ascon.bd
 //Design      : design_ascon
@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_ascon,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_ascon,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=54,numReposBlks=32,numNonXlnxBlks=0,numHierBlks=22,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=19,da_clkrst_cnt=15,da_ps7_cnt=4,da_trigger_cnt=5,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_ascon.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_ascon,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_ascon,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=54,numReposBlks=32,numNonXlnxBlks=0,numHierBlks=22,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=19,da_board_cnt=2,da_clkrst_cnt=15,da_ps7_cnt=4,da_trigger_cnt=5,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_ascon.hwdef" *) 
 module design_ascon
    (DDR_addr,
     DDR_ba,
@@ -32,7 +32,9 @@ module design_ascon
     FIXED_IO_mio,
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
-    FIXED_IO_ps_srstb);
+    FIXED_IO_ps_srstb,
+    push_buttons_tri_i,
+    reset_rtl);
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR BA" *) inout [2:0]DDR_ba;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CAS_N" *) inout DDR_cas_n;
@@ -54,6 +56,8 @@ module design_ascon
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK" *) inout FIXED_IO_ps_clk;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 push_buttons TRI_I" *) input [1:0]push_buttons_tri_i;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RESET_RTL RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESET_RTL, INSERT_VIP 0, POLARITY ACTIVE_HIGH" *) input reset_rtl;
 
   wire [127:0]ascon_core_0_ciphertext;
   wire [31:0]axi_gpio_0_gpio_io_o;
@@ -69,6 +73,7 @@ module design_ascon
   wire [31:0]axi_gpio_7_gpio_io_o;
   wire [31:0]axi_gpio_8_gpio_io_o;
   wire [31:0]axi_gpio_9_gpio_io_o;
+  wire [1:0]axi_gpio_enable_GPIO2_TRI_I;
   wire [14:0]processing_system7_0_DDR_ADDR;
   wire [2:0]processing_system7_0_DDR_BA;
   wire processing_system7_0_DDR_CAS_N;
@@ -428,6 +433,7 @@ module design_ascon
   wire [31:0]xlslice_2_Dout;
   wire [31:0]xlslice_3_Dout;
 
+  assign axi_gpio_enable_GPIO2_TRI_I = push_buttons_tri_i[1:0];
   design_ascon_ascon_core_0_2 ascon_core_0
        (.ciphertext(ascon_core_0_ciphertext),
         .clk(processing_system7_0_FCLK_CLK0),
@@ -521,7 +527,8 @@ module design_ascon
         .s_axi_wstrb(ps7_0_axi_periph_M16_AXI_WSTRB),
         .s_axi_wvalid(ps7_0_axi_periph_M16_AXI_WVALID));
   design_ascon_axi_gpio_4_0 axi_gpio_enable
-       (.gpio_io_o(axi_gpio_4_gpio_io_o),
+       (.gpio2_io_i(axi_gpio_enable_GPIO2_TRI_I),
+        .gpio_io_o(axi_gpio_4_gpio_io_o),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(ps7_0_axi_periph_M04_AXI_ARADDR[8:0]),
         .s_axi_aresetn(rst_ps7_0_50M_peripheral_aresetn),

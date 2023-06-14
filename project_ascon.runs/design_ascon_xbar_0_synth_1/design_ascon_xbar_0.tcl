@@ -91,7 +91,7 @@ set_property ip_output_repo c:/Users/david/Documents/ASCON-project/project_ascon
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet c:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/bd/design_ascon/ip/design_ascon_xbar_0/design_ascon_xbar_0.xci
+read_ip -quiet C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sources_1/bd/design_ascon/ip/design_ascon_xbar_0/design_ascon_xbar_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/david/Documents/ASCON-project/project_ascon.gen/sources_1/bd/design_ascon/ip/design_ascon_xbar_0/design_ascon_xbar_0_ooc.xdc]
 
 OPTRACE "Adding files" END { }

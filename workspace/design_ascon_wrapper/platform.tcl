@@ -20,3 +20,6 @@ domain active {zynq_fsbl}
 domain active {standalone_ps7_cortexa9_0}
 platform generate -quick
 platform generate
+platform generate -domains standalone_ps7_cortexa9_0,zynq_fsbl 
+platform active {design_ascon_wrapper}
+bsp reload
