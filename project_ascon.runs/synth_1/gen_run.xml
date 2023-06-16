@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1686759650" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/ascon_top.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1686844847" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/ascon_top.dcp">
   <File Type="PA-TCL" Name="design_ascon_wrapper.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="design_ascon_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="design_ascon_wrapper_reports.tcl"/>
   <File Type="RDS-RDS" Name="design_ascon_wrapper.vds"/>
   <File Type="RDS-UTIL" Name="design_ascon_wrapper_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="design_ascon_wrapper_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="design_ascon_wrapper.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="design_ascon_wrapper_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="design_ascon_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/design_ascon/design_ascon.bd">
@@ -128,10 +125,10 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="design_ascon_processing_system7_0_3"/>
   <BlockFileSet Type="BlockSrcs" Name="design_ascon_rst_ps7_0_50M_4"/>
   <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_0_3"/>
   <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_3_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_ascon_processing_system7_0_3"/>
   <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_0_2"/>
@@ -147,10 +144,6 @@
   <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_13_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_13_2"/>
   <BlockFileSet Type="BlockSrcs" Name="design_ascon_axi_gpio_13_3"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_ascon_tier2_xbar_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_ascon_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_ascon_ascon_core_0_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_ascon_tier2_xbar_2_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_ascon_auto_pc_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_ascon_tier2_xbar_1_0"/>
 </GenRun>

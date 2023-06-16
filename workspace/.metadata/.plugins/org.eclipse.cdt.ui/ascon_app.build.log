@@ -1,10 +1,56 @@
-19:23:21 **** Incremental Build of configuration Debug for project ascon_app ****
+10:19:04 **** Build of configuration Debug for project ascon_app ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-make[1]: Nothing to be done for 'main-build'.
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/david/Documents/ASCON-project/workspace/design_ascon_wrapper/export/design_ascon_wrapper/sw/design_ascon_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:158:5: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  158 |     for (Delay = 0; Delay < DELAY; Delay++);
+      |     ^~~
+../src/main.c:160:9: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  160 |         a = Xil_In32(0x412D0000);
+      |         ^
+../src/main.c:165:18: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  165 |         printf("%X%X%X%X\n\r",a,b,c,d);
+      |                 ~^            ~
+      |                  |            |
+      |                  unsigned int u32 {aka long unsigned int}
+      |                 %lX
+../src/main.c:165:20: warning: format '%X' expects argument of type 'unsigned int', but argument 3 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  165 |         printf("%X%X%X%X\n\r",a,b,c,d);
+      |                   ~^            ~
+      |                    |            |
+      |                    unsigned int u32 {aka long unsigned int}
+      |                   %lX
+../src/main.c:165:22: warning: format '%X' expects argument of type 'unsigned int', but argument 4 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  165 |         printf("%X%X%X%X\n\r",a,b,c,d);
+      |                     ~^            ~
+      |                      |            |
+      |                      unsigned int u32 {aka long unsigned int}
+      |                     %lX
+../src/main.c:165:24: warning: format '%X' expects argument of type 'unsigned int', but argument 5 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  165 |         printf("%X%X%X%X\n\r",a,b,c,d);
+      |                       ~^            ~
+      |                        |            |
+      |                        unsigned int u32 {aka long unsigned int}
+      |                       %lX
+'Finished building: ../src/main.c'
+' '
+'Building target: ascon_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/david/Documents/ASCON-project/workspace/design_ascon_wrapper/export/design_ascon_wrapper/sw/design_ascon_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "ascon_app.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ascon_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size ascon_app.elf  |tee "ascon_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  50683	   2552	  22648	  75883	  1286b	ascon_app.elf
+'Finished building: ascon_app.elf.size'
+' '
 
-19:23:21 Build Finished (took 755ms)
+10:19:09 Build Finished (took 5s.187ms)
 

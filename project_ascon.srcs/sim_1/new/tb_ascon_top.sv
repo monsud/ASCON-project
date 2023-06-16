@@ -29,7 +29,7 @@ module tb_ascon_top();
   // Instantiate the ascon_top module
   ascon_top dut(
     .clk(clk),
-    .rst(rst),
+    .rst(!rst),
     .enable(enable),
     .key(key),
     .nonce(nonce),

@@ -16,5 +16,3 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/david/Documents/ASCO
 INFO: [VRFC 10-311] analyzing module ascon_top
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/david/Documents/ASCON-project/project_ascon.srcs/sim_1/new/tb_ascon_top.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tb_ascon_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/david/Documents/ASCON-project/project_ascon.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl

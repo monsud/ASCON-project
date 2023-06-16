@@ -23,3 +23,4 @@ platform generate
 platform generate -domains standalone_ps7_cortexa9_0,zynq_fsbl 
 platform active {design_ascon_wrapper}
 bsp reload
+platform generate

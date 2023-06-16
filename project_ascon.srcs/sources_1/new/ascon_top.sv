@@ -39,7 +39,7 @@ module ascon_top (
   // Instantiate initialization module
   ascon_initialization init_inst(
     .clk(clk),
-    .rst(rst),
+    .rst(!rst),
     .enable(),
     .key(key),
     .nonce(nonce),
@@ -49,7 +49,7 @@ module ascon_top (
   // Instantiate key schedule module
   ascon_key_schedule ks_inst(
     .clk(clk),
-    .rst(rst),
+    .rst(!rst),
     .enable(enable),
     .state(initialization_state),
     .key(key),
@@ -63,7 +63,7 @@ module ascon_top (
     for (i = 1; i < ROUNDS; i = i + 1) begin
       ascon_round round_inst (
         .clk(clk),
-        .rst(rst),
+        .rst(!rst),
         .enable(enable),
         .state_in(round_state[i-1]),
         .state_out(round_state[i]),
@@ -75,7 +75,7 @@ module ascon_top (
   // Instantiate finalization module
   ascon_finalization final_inst(
     .clk(clk),
-    .rst(rst),
+    .rst(!rst),
     .enable(enable),
     .state(round_state[11]),
     .state_out(ciphertext)
